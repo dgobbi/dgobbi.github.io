@@ -50,7 +50,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <h1>vtkDICOMDictionary Class Reference</h1>  </div>
@@ -71,19 +70,55 @@ static <a class="el" href="classvtk_d_i_c_o_m_dict_entry.html">vtkDICOMDictEntry
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Find the dictionary entry for the given tag. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvtk_d_i_c_o_m_dict_entry.html">vtkDICOMDictEntry</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_dictionary.html#abe65ecfc06fb21f24d7ac33254ac008a">FindDictEntry</a> (const <a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag, const char *privateDict)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Include a private dictionary when searching for the tag.  <a href="#abe65ecfc06fb21f24d7ac33254ac008a"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="pro-static-methods"></a>
-Static Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d98e2d4e998b3f7ca81eb11b1a6c560"></a><!-- doxytag: member="vtkDICOMDictionary::AddPrivateDictionary" ref="a6d98e2d4e998b3f7ca81eb11b1a6c560" args="(const char *name, vtkDICOMDictEntry::Entry **hashTable)" -->
-static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_dictionary.html#a6d98e2d4e998b3f7ca81eb11b1a6c560">AddPrivateDictionary</a> (const char *name, <a class="el" href="structvtk_d_i_c_o_m_dict_entry_1_1_entry.html">vtkDICOMDictEntry::Entry</a> **hashTable)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called by subclasses to add private dictionaries. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_dictionary.html#a4ae8955ae814d8ba8ceb7169a28495e8">AddPrivateDictionary</a> (const char *name, <a class="el" href="structvtk_d_i_c_o_m_dict_entry_1_1_entry.html">vtkDICOMDictEntry::Entry</a> **hashTable, unsigned int n)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add the hash table for a private dictionary.  <a href="#a4ae8955ae814d8ba8ceb7169a28495e8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6340de6cc5fa06cfbff1e4241bfb11d9"></a><!-- doxytag: member="vtkDICOMDictionary::RemovePrivateDictionary" ref="a6340de6cc5fa06cfbff1e4241bfb11d9" args="(const char *name)" -->
+static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_dictionary.html#a6340de6cc5fa06cfbff1e4241bfb11d9">RemovePrivateDictionary</a> (const char *name)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remove a private dictionary. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41172c51e0f60a5035341ab412b6d06e"></a><!-- doxytag: member="vtkDICOMDictionary::vtkDICOMDictionaryCleanup" ref="a41172c51e0f60a5035341ab412b6d06e" args="" -->
-class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMDictionaryCleanup</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a049d67b1650242b57b24857356663d5e"></a><!-- doxytag: member="vtkDICOMDictionary::vtkDICOMDictionaryInitializer" ref="a049d67b1650242b57b24857356663d5e" args="" -->
+struct&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_dictionary.html#a049d67b1650242b57b24857356663d5e">vtkDICOMDictionaryInitializer</a></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Provide access to the DICOM tag dictionary. </p>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a4ae8955ae814d8ba8ceb7169a28495e8"></a><!-- doxytag: member="vtkDICOMDictionary::AddPrivateDictionary" ref="a4ae8955ae814d8ba8ceb7169a28495e8" args="(const char *name, vtkDICOMDictEntry::Entry **hashTable, unsigned int n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void vtkDICOMDictionary::AddPrivateDictionary </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structvtk_d_i_c_o_m_dict_entry_1_1_entry.html">vtkDICOMDictEntry::Entry</a> **&nbsp;</td>
+          <td class="paramname"> <em>hashTable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&nbsp;</td>
+          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Add the hash table for a private dictionary. </p>
+<p>The name should be the text that appears in the PrivateCreator element of the data set when this dictionary is used. The value of "n" is the size of the provided hash table. </p>
+
+</div>
+</div>
 <a class="anchor" id="abe65ecfc06fb21f24d7ac33254ac008a"></a><!-- doxytag: member="vtkDICOMDictionary::FindDictEntry" ref="abe65ecfc06fb21f24d7ac33254ac008a" args="(const vtkDICOMTag tag, const char *privateDict)" -->
 <div class="memitem">
 <div class="memproto">
@@ -132,7 +167,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMDictionaryCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Feb 17 2014 22:34:25 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Feb 20 2014 23:25:50 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

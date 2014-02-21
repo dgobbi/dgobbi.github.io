@@ -58,7 +58,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h1>vtkDICOMDirectory Class Reference</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="vtkDICOMDirectory" --><!-- doxytag: inherits="vtkObject" -->
+<!-- doxytag: class="vtkDICOMDirectory" --><!-- doxytag: inherits="vtkAlgorithm" -->
 <p>Get information about all DICOM files within a directory.  
 <a href="#_details">More...</a></p>
 
@@ -69,6 +69,7 @@ Inheritance diagram for vtkDICOMDirectory:</div>
  <div class="center">
   <img src="classvtk_d_i_c_o_m_directory.png" usemap="#vtkDICOMDirectory_map" alt=""/>
   <map id="vtkDICOMDirectory_map" name="vtkDICOMDirectory_map">
+<area href="classvtk_algorithm.html" alt="vtkAlgorithm" shape="rect" coords="0,112,123,136"/>
 <area href="classvtk_object.html" alt="vtkObject" shape="rect" coords="0,56,123,80"/>
 <area href="classvtk_object_base.html" alt="vtkObjectBase" shape="rect" coords="0,0,123,24"/>
 </map>
@@ -78,8 +79,8 @@ Inheritance diagram for vtkDICOMDirectory:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c7d75c79c3d5dc2a87cd09260a2ea9e"></a><!-- doxytag: member="vtkDICOMDirectory::Superclass" ref="a2c7d75c79c3d5dc2a87cd09260a2ea9e" args="" -->
-typedef <a class="el" href="classvtk_object.html">vtkObject</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6576b50cb347b2a70ad0da59f264b1a8"></a><!-- doxytag: member="vtkDICOMDirectory::Superclass" ref="a6576b50cb347b2a70ad0da59f264b1a8" args="" -->
+typedef <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a906e14e64903c5ac2d1d5b90d7ae07eb"></a><!-- doxytag: member="vtkDICOMDirectory::GetClassName" ref="a906e14e64903c5ac2d1d5b90d7ae07eb" args="()" -->
@@ -96,6 +97,8 @@ const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetDirectoryN
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetScanDepth</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a043a7da9b287d93c301fde31d9483020">Update</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Update the information about the files.  <a href="#a043a7da9b287d93c301fde31d9483020"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d6cfbba39730ba873952552b7c27852"></a><!-- doxytag: member="vtkDICOMDirectory::Update" ref="a9d6cfbba39730ba873952552b7c27852" args="(int)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>Update</b> (int)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c4fd3ed24389b419cb1c7c84e93093f"></a><!-- doxytag: member="vtkDICOMDirectory::GetNumberOfSeries" ref="a0c4fd3ed24389b419cb1c7c84e93093f" args="()" -->
 int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a0c4fd3ed24389b419cb1c7c84e93093f">GetNumberOfSeries</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the total number of series that were found. <br/></td></tr>
@@ -134,9 +137,6 @@ vtkStringArray *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d05320781fe75734437ddead1aecd09"></a><!-- doxytag: member="vtkDICOMDirectory::GetFileSetID" ref="a7d05320781fe75734437ddead1aecd09" args="()" -->
 const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a7d05320781fe75734437ddead1aecd09">GetFileSetID</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the file set ID. This will be NULL unless a DICOMDIR was found. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc474fa86f3cec63db8397fefd1fb29c"></a><!-- doxytag: member="vtkDICOMDirectory::GetErrorCode" ref="adc474fa86f3cec63db8397fefd1fb29c" args="()" -->
-unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#adc474fa86f3cec63db8397fefd1fb29c">GetErrorCode</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the error code. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24b60acde6febe01e3324d67f9aca237"></a><!-- doxytag: member="vtkDICOMDirectory::GetInternalFileName" ref="a24b60acde6febe01e3324d67f9aca237" args="()" -->
 const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a24b60acde6febe01e3324d67f9aca237">GetInternalFileName</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the filename associated with the error code. <br/></td></tr>
@@ -197,8 +197,6 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>RequirePixelData</b></
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>ScanDepth</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75ac5249ed62b1618284b0e55f34e0aa"></a><!-- doxytag: member="vtkDICOMDirectory::UpdateTime" ref="a75ac5249ed62b1618284b0e55f34e0aa" args="" -->
 vtkTimeStamp&nbsp;</td><td class="memItemRight" valign="bottom"><b>UpdateTime</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0aef314004391d9d10bb21373b0716cc"></a><!-- doxytag: member="vtkDICOMDirectory::ErrorCode" ref="a0aef314004391d9d10bb21373b0716cc" args="" -->
-unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><b>ErrorCode</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a633888dcc95285655b2cbecd8e2bdd1b"></a><!-- doxytag: member="vtkDICOMDirectory::InternalFileName" ref="a633888dcc95285655b2cbecd8e2bdd1b" args="" -->
 char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b></td></tr>
 </table>
@@ -298,7 +296,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 <div class="memdoc">
 <p>Return 1 if this class is the same type of (or a subclass of) the named class. Returns 0 otherwise. This method works in combination with vtkTypeMacro found in vtkSetGet.h. </p>
 
-<p>Reimplemented from <a class="el" href="classvtk_object.html#a831e57b04e46827a7098aa81abadee69">vtkObject</a>.</p>
+<p>Reimplemented from <a class="el" href="classvtk_algorithm.html#a709d7c6da79624190848445a8e27add3">vtkAlgorithm</a>.</p>
 
 </div>
 </div>
@@ -319,7 +317,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 <div class="memdoc">
 <p>Return 1 if this class type is the same type of (or a subclass of) the named class. Returns 0 otherwise. This method works in combination with vtkTypeMacro found in vtkSetGet.h. </p>
 
-<p>Reimplemented from <a class="el" href="classvtk_object.html#ae9548a248bce0f02f73bbcccd0a9489e">vtkObject</a>.</p>
+<p>Reimplemented from <a class="el" href="classvtk_algorithm.html#aed421f193564228ffe93672c9bdfac5b">vtkAlgorithm</a>.</p>
 
 </div>
 </div>
@@ -339,7 +337,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 <div class="memdoc">
 <p>Create an object with Debug turned off, modified time initialized to zero, and reference counting on. </p>
 
-<p>Reimplemented from <a class="el" href="classvtk_object.html#a4d5b227267c076d6f9e38483370b6612">vtkObject</a>.</p>
+<p>Reimplemented from <a class="el" href="classvtk_algorithm.html#a06d80d8d4aa1a4856135fa003845be82">vtkAlgorithm</a>.</p>
 
 </div>
 </div>
@@ -369,7 +367,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 <div class="memdoc">
 <p>Methods invoked by print to print information about the object including superclasses. Typically not called by the user (use <a class="el" href="classvtk_object_base.html#aedadf6378465fd81c2592ef64262e2a5">Print()</a> instead) but used in the hierarchical print process to combine the output of several classes. </p>
 
-<p>Reimplemented from <a class="el" href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">vtkObject</a>.</p>
+<p>Reimplemented from <a class="el" href="classvtk_algorithm.html#a0d96908767dcf284576ebdee795ee23a">vtkAlgorithm</a>.</p>
 
 </div>
 </div>
@@ -475,7 +473,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [inline, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -483,6 +481,8 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 
 <p>Update the information about the files. </p>
 <p>This method causes the directory to be read. It must be called before any of the Get methods. </p>
+
+<p>Reimplemented from <a class="el" href="classvtk_algorithm.html#afa4eff301069b8b47703cd4939aeffa7">vtkAlgorithm</a>.</p>
 
 </div>
 </div>
@@ -504,7 +504,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Feb 17 2014 22:34:26 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Feb 20 2014 23:25:50 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
