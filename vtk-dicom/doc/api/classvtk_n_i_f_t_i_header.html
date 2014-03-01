@@ -364,6 +364,10 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetSRowZ</b> 
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_header.html#ae1147566066cd362823312eb749ebbbe">SetHeader</a> (const nifti_1_header *hdr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9646fec20b1af600498727f3d3d7457a"></a><!-- doxytag: member="vtkNIFTIHeader::GetHeader" ref="a9646fec20b1af600498727f3d3d7457a" args="(nifti_1_header *hdr)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetHeader</b> (nifti_1_header *hdr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe3fb330f92208928e64aed2ef4cc349"></a><!-- doxytag: member="vtkNIFTIHeader::SetHeader" ref="afe3fb330f92208928e64aed2ef4cc349" args="(const nifti_2_header *hdr)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetHeader</b> (const nifti_2_header *hdr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53a5a5d9f6d607f425f0b106c5ea1a22"></a><!-- doxytag: member="vtkNIFTIHeader::GetHeader" ref="a53a5a5d9f6d607f425f0b106c5ea1a22" args="(nifti_2_header *hdr)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetHeader</b> (nifti_2_header *hdr)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29605657ab3924e4be5fbff793626c5e"></a><!-- doxytag: member="vtkNIFTIHeader::SetStringValue" ref="a29605657ab3924e4be5fbff793626c5e" args="(char *x, const char *y, size_t n)" -->
@@ -454,9 +458,9 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Store NIfTI header information. </p>
-<p>This class stores the header of a NIfTI file in a VTK-friendly format. By using this class, it is possible to specify the header information that will be stored in a file written by the <a class="el" href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI medical image files.">vtkNIFTIWriter</a>. Note that the SForm and QForm orientation information in this class will be ignored by the writer if an SForm and QForm have been explicitly set via the writer's SetSForm and SetQForm methods. Also note that all info like Dim, PixDim, DataType, etc. will be ignored by the writer because this information must instead be taken from the vtkImageData information. Finally, note that the <a class="el" href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI medical image files.">vtkNIFTIWriter</a> will ignore the Descrip field, since it has its own SetDescription method. </p>
+<p>This class stores the header of a NIfTI file in a VTK-friendly format. By using this class, it is possible to specify the header information that will be stored in a file written by the <a class="el" href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIWriter</a>. Note that the SForm and QForm orientation information in this class will be ignored by the writer if an SForm and QForm have been explicitly set via the writer's SetSForm and SetQForm methods. Also note that all info like Dim, PixDim, DataType, etc. will be ignored by the writer because this information must instead be taken from the vtkImageData information. Finally, note that the <a class="el" href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIWriter</a> will ignore the Descrip field, since it has its own SetDescription method. </p>
 <dl class="user"><dt><b>Thanks:</b></dt><dd>This class was contributed to VTK by the Calgary Image Processing and Analysis Centre (CIPAC). </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI medical image files.">vtkNIFTIReader</a>, <a class="el" href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI medical image files.">vtkNIFTIWriter</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>, <a class="el" href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIWriter</a> </dd></dl>
 <hr/><h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="abca0012de76963c8fcf088437d684ae2"></a><!-- doxytag: member="vtkNIFTIHeader::IntentCodeEnum" ref="abca0012de76963c8fcf088437d684ae2" args="" -->
 <div class="memitem">
@@ -940,7 +944,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
       </table>
 </div>
 <div class="memdoc">
-<p>Get information about the quaternion transformation. Note that the <a class="el" href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI medical image files.">vtkNIFTIWriter</a> ignores this part of the header if a quaternion has been set via <a class="el" href="classvtk_n_i_f_t_i_writer.html#aadd7536320109cfc2032a8adab7d3154">vtkNIFTIWriter::SetQFormMatrix()</a>. </p>
+<p>Get information about the quaternion transformation. Note that the <a class="el" href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIWriter</a> ignores this part of the header if a quaternion has been set via <a class="el" href="classvtk_n_i_f_t_i_writer.html#aadd7536320109cfc2032a8adab7d3154">vtkNIFTIWriter::SetQFormMatrix()</a>. </p>
 
 </div>
 </div>
@@ -1056,7 +1060,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
       </table>
 </div>
 <div class="memdoc">
-<p>Get information about the matrix transformation. Note that the <a class="el" href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI medical image files.">vtkNIFTIWriter</a> ignores this part of the header if a matrix has been set via <a class="el" href="classvtk_n_i_f_t_i_writer.html#a010778e63feec256530dcb93521ebbaa">vtkNIFTIWriter::SetSFormMatrix()</a>. </p>
+<p>Get information about the matrix transformation. Note that the <a class="el" href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIWriter</a> ignores this part of the header if a matrix has been set via <a class="el" href="classvtk_n_i_f_t_i_writer.html#a010778e63feec256530dcb93521ebbaa">vtkNIFTIWriter::SetSFormMatrix()</a>. </p>
 
 </div>
 </div>
@@ -1097,7 +1101,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Feb 20 2014 23:25:54 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat Mar 1 2014 09:28:10 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

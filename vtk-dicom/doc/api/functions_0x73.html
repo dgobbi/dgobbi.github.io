@@ -294,6 +294,9 @@ Here is a list of all documented class members with links to the class documenta
 <li>SetNIFTIHeader()
 : <a class="el" href="classvtk_n_i_f_t_i_writer.html#a8cc62f853b3cee6bae66f2b0666007af">vtkNIFTIWriter</a>
 </li>
+<li>SetNIFTIVersion()
+: <a class="el" href="classvtk_n_i_f_t_i_writer.html#a9e2e38ffb2c06a4aedec235150ebf12a">vtkNIFTIWriter</a>
+</li>
 <li>SetNthInputConnection()
 : <a class="el" href="classvtk_algorithm.html#a16011f041c4a5127c3fb7ed3a3756ab6">vtkAlgorithm</a>
 </li>
@@ -367,6 +370,9 @@ Here is a list of all documented class members with links to the class documenta
 <li>SetRescaleIntercept()
 : <a class="el" href="classvtk_d_i_c_o_m_generator.html#ab262a97ce820c04203b80200e8f24767">vtkDICOMGenerator</a>
 , <a class="el" href="classvtk_d_i_c_o_m_writer.html#a6105f3a1adceca877a4a53ea0917d531">vtkDICOMWriter</a>
+</li>
+<li>SetRescaleSlope()
+: <a class="el" href="classvtk_n_i_f_t_i_writer.html#a975f665b37ecc0937a452ebe657e6f14">vtkNIFTIWriter</a>
 </li>
 <li>SetScanDepth()
 : <a class="el" href="classvtk_d_i_c_o_m_directory.html#a2566dddffb8b326a4a80337b4047462e">vtkDICOMDirectory</a>
@@ -446,8 +452,8 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classvtk_d_i_c_o_m_v_r.html#a40e983ebf7e6d989a33fbc28991c5b54a1c54b98f636c126e97df5d89ad769a3b">vtkDICOMVR</a>
 </li>
 <li>ShallowCopy()
-: <a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a4b005c947459308d85d0d090c0bb2d47">vtkDICOMMetaData</a>
-, <a class="el" href="classvtk_data_object.html#a04a5fb60bdbc929ce84f0cd14d911dbe">vtkDataObject</a>
+: <a class="el" href="classvtk_data_object.html#a04a5fb60bdbc929ce84f0cd14d911dbe">vtkDataObject</a>
+, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a4b005c947459308d85d0d090c0bb2d47">vtkDICOMMetaData</a>
 </li>
 <li>ShouldIReleaseData()
 : <a class="el" href="classvtk_data_object.html#aafe595f153759be6c7a195cf6b303fe1">vtkDataObject</a>
@@ -485,16 +491,16 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classvtk_d_i_c_o_m_reader.html#a6e9803b636ca4dfc6da70e0cf8adc00b">vtkDICOMReader</a>
 </li>
 <li>Superclass
-: <a class="el" href="classvtk_d_i_c_o_m_parser.html#a9aa0a5c4692b873610b9e386fc9c427a">vtkDICOMParser</a>
-, <a class="el" href="classvtk_d_i_c_o_m_m_r_generator.html#ab491bab557286bd81adde8fa9a2093d2">vtkDICOMMRGenerator</a>
+: <a class="el" href="classvtk_d_i_c_o_m_generator.html#ae5af64a49be132bf90729c77e6f50805">vtkDICOMGenerator</a>
+, <a class="el" href="classvtk_d_i_c_o_m_parser.html#a9aa0a5c4692b873610b9e386fc9c427a">vtkDICOMParser</a>
+, <a class="el" href="classvtk_d_i_c_o_m_compiler.html#a869897b37fea54c7a09019769e375d27">vtkDICOMCompiler</a>
 , <a class="el" href="classvtk_d_i_c_o_m_meta_data.html#ad0361573a23edf721bfa9434b82df7c9">vtkDICOMMetaData</a>
 , <a class="el" href="classvtk_d_i_c_o_m_c_t_generator.html#a3ccfbe8853c1322e058da1689cc8ca89">vtkDICOMCTGenerator</a>
-, <a class="el" href="classvtk_d_i_c_o_m_compiler.html#a869897b37fea54c7a09019769e375d27">vtkDICOMCompiler</a>
-, <a class="el" href="classvtk_d_i_c_o_m_generator.html#ae5af64a49be132bf90729c77e6f50805">vtkDICOMGenerator</a>
 , <a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#aa40feb295e6e858b4e34a720913ebe8b">vtkDICOMSCGenerator</a>
+, <a class="el" href="classvtk_d_i_c_o_m_m_r_generator.html#ab491bab557286bd81adde8fa9a2093d2">vtkDICOMMRGenerator</a>
 </li>
 <li>vtkDICOMSequence()
-: <a class="el" href="classvtk_d_i_c_o_m_sequence.html#a4fbd1fdfbdfc41c356f05170d3fba79f">vtkDICOMSequence</a>
+: <a class="el" href="classvtk_d_i_c_o_m_sequence.html#acebb4bb595ec565c62877c5f675a4bcd">vtkDICOMSequence</a>
 </li>
 </ul>
 </div>
@@ -512,7 +518,7 @@ Here is a list of all documented class members with links to the class documenta
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Feb 20 2014 23:25:47 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat Mar 1 2014 09:28:05 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

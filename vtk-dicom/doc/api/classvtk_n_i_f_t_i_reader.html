@@ -50,13 +50,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <h1>vtkNIFTIReader Class Reference</h1>  </div>
 </div>
 <div class="contents">
 <!-- doxytag: class="vtkNIFTIReader" --><!-- doxytag: inherits="vtkImageReader2" -->
-<p>Read NIfTI medical image files.  
+<p>Read NIfTI-1 and NIfTI-2 medical image files.  
 <a href="#_details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="vtk_n_i_f_t_i_reader_8h_source.html">vtkNIFTIReader.h</a>&gt;</code></p>
@@ -126,6 +127,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_reader.html#a8b96d8dabbee8db7db80350d579d6eb7">RequestData</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_reader.html#a26dc9f1f493359c4af7bcf425f63bea7">CheckNIFTIVersion</a> (const nifti_1_header *hdr)</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -162,10 +164,10 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_reader.html#a15aeb42ed069d797ce2aabe03393c08a">IsA</a> (const char *type)</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>Read NIfTI medical image files. </p>
+<p>Read NIfTI-1 and NIfTI-2 medical image files. </p>
 <p>This class reads NIFTI files, either in .nii format or as separate .img and .hdr files. If the files are gzipped, then they will be decompressed on-the-fly while they are being read. Files that contain complex numbers or vector dimensions will be read as multi-component images. If a NIFTI file has a time dimension, then by default only the first image in the time series will be read, but the TimeAsVector flag can be set to read the time steps as vector components. Files in Analyze 7.5 format are also supported by this reader. </p>
 <dl class="user"><dt><b>Thanks:</b></dt><dd>This class was contributed to VTK by the Calgary Image Processing and Analysis Centre (CIPAC). </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI medical image files.">vtkNIFTIWriter</a>, <a class="el" href="classvtk_n_i_f_t_i_header.html" title="Store NIfTI header information.">vtkNIFTIHeader</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIWriter</a>, <a class="el" href="classvtk_n_i_f_t_i_header.html" title="Store NIfTI header information.">vtkNIFTIHeader</a> </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ac678b4c3d8a3ef5b6341c7483c29d10d"></a><!-- doxytag: member="vtkNIFTIReader::CanReadFile" ref="ac678b4c3d8a3ef5b6341c7483c29d10d" args="(const char *filename)" -->
 <div class="memitem">
@@ -183,6 +185,25 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </div>
 <div class="memdoc">
 <p>Return true if this reader can read the given file. </p>
+
+</div>
+</div>
+<a class="anchor" id="a26dc9f1f493359c4af7bcf425f63bea7"></a><!-- doxytag: member="vtkNIFTIReader::CheckNIFTIVersion" ref="a26dc9f1f493359c4af7bcf425f63bea7" args="(const nifti_1_header *hdr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int vtkNIFTIReader::CheckNIFTIVersion </td>
+          <td>(</td>
+          <td class="paramtype">const nifti_1_header *&nbsp;</td>
+          <td class="paramname"> <em>hdr</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Check the version of the header. </p>
 
 </div>
 </div>
@@ -312,7 +333,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
       </table>
 </div>
 <div class="memdoc">
-<p>Get a matrix that gives the "sform" orientation and offset for the data. If no sform matrix was stored in the file, the return value is NULL. Like the qform matrix, this matrix will transform VTK data coordinates into a NIFTI coordinate system. Unlike the qform matrix, the sform matrix can contain scaling information and can even (rarely) have a negative determinant, i.e. a flip. This matrix is modified slightly as compared to the sform matrix stored in the NIFTI header: the pixdim pixel spacing is factored out. Also, if qform_code is set and QFac is -1, then the VTK slices are in reverse order as compared to the NIFTI slices, hence as compared to the sform matrix stored in the header, the third column of this matrix is multiplied by -1 and the Z offset is shifted to compensate for the fact that the last slice has become the first. </p>
+<p>Get a matrix that gives the "sform" orientation and offset for the data. If no sform matrix was stored in the file, the return value is NULL. Like the qform matrix, this matrix will transform VTK data coordinates into a NIFTI coordinate system. Unlike the qform matrix, the sform matrix can contain scaling information and can even (rarely) have a negative determinant, i.e. a flip. This matrix is modified slightly as compared to the sform matrix stored in the NIFTI header: the pixdim pixel spacing is factored out. Also, if QFac is -1, then the VTK slices are in reverse order as compared to the NIFTI slices, hence as compared to the sform matrix stored in the header, the third column of this matrix is multiplied by -1 and the Z offset is shifted to compensate for the fact that the last slice has become the first. </p>
 
 </div>
 </div>
@@ -667,7 +688,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Feb 20 2014 23:25:54 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat Mar 1 2014 09:28:10 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

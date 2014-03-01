@@ -50,13 +50,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <h1>vtkNIFTIWriter Class Reference</h1>  </div>
 </div>
 <div class="contents">
 <!-- doxytag: class="vtkNIFTIWriter" --><!-- doxytag: inherits="vtkImageWriter" -->
-<p>Write NIfTI medical image files.  
+<p>Write NIfTI-1 and NIfTI-2 medical image files.  
 <a href="#_details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="vtk_n_i_f_t_i_writer_8h_source.html">vtkNIFTIWriter.h</a>&gt;</code></p>
@@ -82,6 +83,12 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#a9e2e38ffb2c06a4aedec235150ebf12a">SetNIFTIVersion</a> (int)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0dfab8d92fcec709a157dc348d0754e8"></a><!-- doxytag: member="vtkNIFTIWriter::GetNIFTIVersion" ref="a0dfab8d92fcec709a157dc348d0754e8" args="()" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetNIFTIVersion</b> ()</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#ae6eeff6b28065cd4efad3e02acaddb09">SetDescription</a> (const char *)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3316d38ddb58e6e74d5275ce82489f1"></a><!-- doxytag: member="vtkNIFTIWriter::GetDescription" ref="ac3316d38ddb58e6e74d5275ce82489f1" args="()" -->
 virtual char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetDescription</b> ()</td></tr>
@@ -95,6 +102,16 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetTimeDimens
 virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetTimeSpacing</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaaa9f080ee4937f974db0400a94932b3"></a><!-- doxytag: member="vtkNIFTIWriter::SetTimeSpacing" ref="aaaa9f080ee4937f974db0400a94932b3" args="(double)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetTimeSpacing</b> (double)</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#a975f665b37ecc0937a452ebe657e6f14">SetRescaleSlope</a> (double)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb330a73d859413e72a74e8e72933e1e"></a><!-- doxytag: member="vtkNIFTIWriter::GetRescaleSlope" ref="adb330a73d859413e72a74e8e72933e1e" args="()" -->
+virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetRescaleSlope</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4200187bb8ba8d77f3438b57fd435b7a"></a><!-- doxytag: member="vtkNIFTIWriter::SetRescaleIntercept" ref="a4200187bb8ba8d77f3438b57fd435b7a" args="(double)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetRescaleIntercept</b> (double)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa082466acda79f84765dfdd947358971"></a><!-- doxytag: member="vtkNIFTIWriter::GetRescaleIntercept" ref="aa082466acda79f84765dfdd947358971" args="()" -->
+virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetRescaleIntercept</b> ()</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -121,6 +138,7 @@ vtkMatrix4x4 *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetSFormMat
 <a class="el" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetNIFTIHeader</b> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#aef551942d548644f2a3f0a4924763490">GenerateHeader</a> (vtkInformation *info, bool singleFile)</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -135,7 +153,6 @@ Static Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#aef5297e5ed45bf54b115ba6049f7faff">QFac</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#a0300b826bbf8dc12048de99f9e05e133">Description</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#acea188ef5d9815fa819b8ddbb86ec9bc">NIFTIHeader</a></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -145,9 +162,23 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>TimeSpacing</b></td
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#ad715047ba4a25b9930064623ade654b2">RescaleIntercept</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37e542063d0ca5c90d5939ec2f9d46ec"></a><!-- doxytag: member="vtkNIFTIWriter::RescaleSlope" ref="a37e542063d0ca5c90d5939ec2f9d46ec" args="" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>RescaleSlope</b></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkMatrix4x4 *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#aa686e64ba23f4f5af3c42e1eb542587e">QFormMatrix</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6cf1946a35c639c91908b177977a2dd"></a><!-- doxytag: member="vtkNIFTIWriter::SFormMatrix" ref="ae6cf1946a35c639c91908b177977a2dd" args="" -->
 vtkMatrix4x4 *&nbsp;</td><td class="memItemRight" valign="bottom"><b>SFormMatrix</b></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#acea188ef5d9815fa819b8ddbb86ec9bc">NIFTIHeader</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56475e3594cd6f662caff98ae46bfd02"></a><!-- doxytag: member="vtkNIFTIWriter::OwnHeader" ref="a56475e3594cd6f662caff98ae46bfd02" args="" -->
+<a class="el" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>OwnHeader</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50062c99d6136d4d174b895f21705fe8"></a><!-- doxytag: member="vtkNIFTIWriter::NIFTIVersion" ref="a50062c99d6136d4d174b895f21705fe8" args="" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><b>NIFTIVersion</b></td></tr>
 <tr><td colspan="2"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 <br/><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8eb001dced537d2ac7536075bc01ec60"></a><!-- doxytag: member="vtkNIFTIWriter::Superclass" ref="a8eb001dced537d2ac7536075bc01ec60" args="" -->
@@ -161,11 +192,39 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#ae09b7625f67ae7e045d29ad4237040fe">IsA</a> (const char *type)</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>Write NIfTI medical image files. </p>
+<p>Write NIfTI-1 and NIfTI-2 medical image files. </p>
 <p>This class writes NIFTI files, either in .nii format or as separate .img and .hdr files. If told to write a file that ends in ".gz", then the writer will automatically compress the file with zlib. Images of type unsigned char that have 3 or 4 scalar components will automatically be written as RGB or RGBA respectively. Images of type float or double that have 2 components will automatically be written as complex values. </p>
 <dl class="user"><dt><b>Thanks:</b></dt><dd>This class was contributed to VTK by the Calgary Image Processing and Analysis Centre (CIPAC). </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI medical image files.">vtkNIFTIReader</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a> </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aef551942d548644f2a3f0a4924763490"></a><!-- doxytag: member="vtkNIFTIWriter::GenerateHeader" ref="aef551942d548644f2a3f0a4924763490" args="(vtkInformation *info, bool singleFile)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int vtkNIFTIWriter::GenerateHeader </td>
+          <td>(</td>
+          <td class="paramtype">vtkInformation *&nbsp;</td>
+          <td class="paramname"> <em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>singleFile</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Generate the header information for the file. </p>
+
+</div>
+</div>
 <a class="anchor" id="aca966ed692713a5603f3369976c3c234"></a><!-- doxytag: member="vtkNIFTIWriter::GetTimeDimension" ref="aca966ed692713a5603f3369976c3c234" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -384,6 +443,25 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
+<a class="anchor" id="a9e2e38ffb2c06a4aedec235150ebf12a"></a><!-- doxytag: member="vtkNIFTIWriter::SetNIFTIVersion" ref="a9e2e38ffb2c06a4aedec235150ebf12a" args="(int)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void vtkNIFTIWriter::SetNIFTIVersion </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Set the version number for the NIfTI file format to use. This can be 1, 2, or 0 (the default). If set to zero, then it will save as NIfTI version 1 unless <a class="el" href="classvtk_n_i_f_t_i_writer.html#a8cc62f853b3cee6bae66f2b0666007af">SetNIFTIHeader()</a> provided header information from a NIfTI version 2 file. </p>
+
+</div>
+</div>
 <a class="anchor" id="a01025fb3fa36021f932b24236d4bcd8d"></a><!-- doxytag: member="vtkNIFTIWriter::SetQFac" ref="a01025fb3fa36021f932b24236d4bcd8d" args="(double)" -->
 <div class="memitem">
 <div class="memproto">
@@ -419,6 +497,25 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </div>
 <div class="memdoc">
 <p>Set the "qform" orientation and offset for the image data. The 3x3 portion of the matrix must be orthonormal and have a positive determinant, it will be used to compute the quaternion. The last column of the matrix will be used for the offset. In the NIFTI header, the qform_code will be set to 1. </p>
+
+</div>
+</div>
+<a class="anchor" id="a975f665b37ecc0937a452ebe657e6f14"></a><!-- doxytag: member="vtkNIFTIWriter::SetRescaleSlope" ref="a975f665b37ecc0937a452ebe657e6f14" args="(double)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void vtkNIFTIWriter::SetRescaleSlope </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Set the slope and intercept for calibrating the scalar values. Other programs that read the NIFTI file can use the equation v = u*RescaleSlope + RescaleIntercept to rescale the data to real values. If both the slope and the intercept are zero, then the SclSlope and SclIntercept in the header info provided via <a class="el" href="classvtk_n_i_f_t_i_writer.html#a8cc62f853b3cee6bae66f2b0666007af">SetNIFTIHeader()</a> are used instead. </p>
 
 </div>
 </div>
@@ -498,6 +595,20 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
+<a class="anchor" id="ad715047ba4a25b9930064623ade654b2"></a><!-- doxytag: member="vtkNIFTIWriter::RescaleIntercept" ref="ad715047ba4a25b9930064623ade654b2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classvtk_n_i_f_t_i_writer.html#ad715047ba4a25b9930064623ade654b2">vtkNIFTIWriter::RescaleIntercept</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Information for rescaling data to quantitative units. </p>
+
+</div>
+</div>
 <a class="anchor" id="a97635531c81966c3a056a8613ba32554"></a><!-- doxytag: member="vtkNIFTIWriter::TimeDimension" ref="a97635531c81966c3a056a8613ba32554" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -530,7 +641,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Feb 20 2014 23:25:54 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat Mar 1 2014 09:28:10 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
