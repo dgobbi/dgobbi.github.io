@@ -107,8 +107,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>TimeAsVectorO
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_reader.html#ad1560fb1b7f999c19e7f8e45e6286714">GetTimeDimension</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1835da16d522712b31db224f5cb167e3"></a><!-- doxytag: member="vtkNIFTIReader::GetTimeSpacing" ref="a1835da16d522712b31db224f5cb167e3" args="()" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetTimeSpacing</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac10fbbc6cba22dc3b1065ee73f4071ca"></a><!-- doxytag: member="vtkNIFTIReader::GetTimeSpacing" ref="ac10fbbc6cba22dc3b1065ee73f4071ca" args="()" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetTimeSpacing</b> ()</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -128,6 +128,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_reader.html#a26dc9f1f493359c4af7bcf425f63bea7">CheckNIFTIVersion</a> (const nifti_1_header *hdr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_reader.html#ac3ad5bafc20f0045a65238aea33e6eb5">CheckAnalyzeHeader</a> (const nifti_1_header *hdr)</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -185,6 +186,25 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </div>
 <div class="memdoc">
 <p>Return true if this reader can read the given file. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac3ad5bafc20f0045a65238aea33e6eb5"></a><!-- doxytag: member="vtkNIFTIReader::CheckAnalyzeHeader" ref="ac3ad5bafc20f0045a65238aea33e6eb5" args="(const nifti_1_header *hdr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool vtkNIFTIReader::CheckAnalyzeHeader </td>
+          <td>(</td>
+          <td class="paramtype">const nifti_1_header *&nbsp;</td>
+          <td class="paramname"> <em>hdr</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Check for Analyze 7.5 header. </p>
 
 </div>
 </div>
@@ -688,7 +708,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Mar 1 2014 09:28:10 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Mar 5 2014 07:11:07 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

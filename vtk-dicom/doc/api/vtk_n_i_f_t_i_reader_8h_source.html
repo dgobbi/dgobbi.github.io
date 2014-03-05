@@ -100,7 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00082"></a>00082 
 <a name="l00084"></a>00084 
 <a name="l00085"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#ad1560fb1b7f999c19e7f8e45e6286714">00085</a>   <span class="keywordtype">int</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html#ad1560fb1b7f999c19e7f8e45e6286714">GetTimeDimension</a>() { <span class="keywordflow">return</span> this-&gt;Dim[4]; }
-<a name="l00086"></a>00086   <span class="keywordtype">int</span> GetTimeSpacing() { <span class="keywordflow">return</span> this-&gt;PixDim[4]; }
+<a name="l00086"></a>00086   <span class="keywordtype">double</span> GetTimeSpacing() { <span class="keywordflow">return</span> this-&gt;PixDim[4]; }
 <a name="l00088"></a>00088 
 <a name="l00090"></a>00090 
 <a name="l00095"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a2b87f4ead9e5a7e6824d37def2508629">00095</a>   <span class="keywordtype">double</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html#a2b87f4ead9e5a7e6824d37def2508629">GetRescaleSlope</a>() { <span class="keywordflow">return</span> this-&gt;RescaleSlope; }
@@ -134,30 +134,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00168"></a>00168 
 <a name="l00170"></a>00170   <span class="keyword">static</span> <span class="keywordtype">int</span> CheckNIFTIVersion(<span class="keyword">const</span> nifti_1_header *hdr);
 <a name="l00171"></a>00171 
-<a name="l00173"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#af801b19bd3485aa90fe57ce8aa801433">00173</a>   <span class="keywordtype">int</span> TimeAsVector;
+<a name="l00173"></a>00173   <span class="keyword">static</span> <span class="keywordtype">bool</span> CheckAnalyzeHeader(<span class="keyword">const</span> nifti_1_header *hdr);
 <a name="l00174"></a>00174 
-<a name="l00176"></a>00176 
-<a name="l00177"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a1a9beac05f7bc52b998c09354f673acb">00177</a>   <span class="keywordtype">double</span> RescaleIntercept;
-<a name="l00178"></a>00178   <span class="keywordtype">double</span> RescaleSlope;
-<a name="l00180"></a>00180 
-<a name="l00182"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a6ac16e7ca664499d386fda231fd004b5">00182</a>   <span class="keywordtype">double</span> QFac;
+<a name="l00176"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#af801b19bd3485aa90fe57ce8aa801433">00176</a>   <span class="keywordtype">int</span> TimeAsVector;
+<a name="l00177"></a>00177 
+<a name="l00179"></a>00179 
+<a name="l00180"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a1a9beac05f7bc52b998c09354f673acb">00180</a>   <span class="keywordtype">double</span> RescaleIntercept;
+<a name="l00181"></a>00181   <span class="keywordtype">double</span> RescaleSlope;
 <a name="l00183"></a>00183 
-<a name="l00185"></a>00185 
-<a name="l00186"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#aca6019641ce51e5a290a5c8c6cc82bb5">00186</a>   vtkMatrix4x4 *QFormMatrix;
-<a name="l00187"></a>00187   vtkMatrix4x4 *SFormMatrix;
-<a name="l00189"></a>00189 
-<a name="l00191"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a8434efdfa5d5a8d131fdbd0f788b5d3e">00191</a>   <span class="keywordtype">int</span> Dim[8];
+<a name="l00185"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a6ac16e7ca664499d386fda231fd004b5">00185</a>   <span class="keywordtype">double</span> QFac;
+<a name="l00186"></a>00186 
+<a name="l00188"></a>00188 
+<a name="l00189"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#aca6019641ce51e5a290a5c8c6cc82bb5">00189</a>   vtkMatrix4x4 *QFormMatrix;
+<a name="l00190"></a>00190   vtkMatrix4x4 *SFormMatrix;
 <a name="l00192"></a>00192 
-<a name="l00194"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#ad9bcaea082976cd19f51894e79179f9f">00194</a>   <span class="keywordtype">double</span> PixDim[8];
+<a name="l00194"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a8434efdfa5d5a8d131fdbd0f788b5d3e">00194</a>   <span class="keywordtype">int</span> Dim[8];
 <a name="l00195"></a>00195 
-<a name="l00197"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a57b806c8cd0c924db8f0c1aa518c1f23">00197</a>   <a class="code" href="classvtk_n_i_f_t_i_header.html" title="Store NIfTI header information.">vtkNIFTIHeader</a> *NIFTIHeader;
+<a name="l00197"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#ad9bcaea082976cd19f51894e79179f9f">00197</a>   <span class="keywordtype">double</span> PixDim[8];
 <a name="l00198"></a>00198 
-<a name="l00199"></a>00199 <span class="keyword">private</span>:
-<a name="l00200"></a>00200   <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00201"></a>00201   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00202"></a>00202 };
-<a name="l00203"></a>00203 
-<a name="l00204"></a>00204 <span class="preprocessor">#endif // __vtkNIFTIReader_h</span>
+<a name="l00200"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a57b806c8cd0c924db8f0c1aa518c1f23">00200</a>   <a class="code" href="classvtk_n_i_f_t_i_header.html" title="Store NIfTI header information.">vtkNIFTIHeader</a> *NIFTIHeader;
+<a name="l00201"></a>00201 
+<a name="l00202"></a>00202 <span class="keyword">private</span>:
+<a name="l00203"></a>00203   <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00204"></a>00204   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00205"></a>00205 };
+<a name="l00206"></a>00206 
+<a name="l00207"></a>00207 <span class="preprocessor">#endif // __vtkNIFTIReader_h</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -174,7 +176,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Mar 1 2014 09:28:05 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Mar 5 2014 07:11:02 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

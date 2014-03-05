@@ -177,6 +177,12 @@ Public Types</h2></td></tr>
 <b>UnitsTime</b> =  56
 <br/>
  }</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_header.html#aa6d951e64d9302bade2dc645dc9cbf1f">HeaderSizeEnum</a> { <b>Nifti1HeaderSize</b> =  348, 
+<b>Nifti2HeaderSize</b> =  540
+ }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_header.html#a0787fdae36b1401086104e168cd4bac4">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
@@ -254,12 +260,12 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetTOffset</b> ()</
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_header.html#aa61db7bbaa00dd59a0a7e5f8971e35f7">SetSliceStart</a> (vtkTypeInt64)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b0956c54d3d4fae69bd3e8b325533ef"></a><!-- doxytag: member="vtkNIFTIHeader::GetSliceStart" ref="a2b0956c54d3d4fae69bd3e8b325533ef" args="()" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetSliceStart</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b0658e2a97506f88bcbe3c6bf5041ad"></a><!-- doxytag: member="vtkNIFTIHeader::GetSliceStart" ref="a5b0658e2a97506f88bcbe3c6bf5041ad" args="()" -->
+vtkTypeInt64&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetSliceStart</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab457dcfe345089eb621aa0c6cf7c353e"></a><!-- doxytag: member="vtkNIFTIHeader::SetSliceEnd" ref="ab457dcfe345089eb621aa0c6cf7c353e" args="(vtkTypeInt64)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetSliceEnd</b> (vtkTypeInt64)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63cedc275badb05c5f289f22d3ebf0c9"></a><!-- doxytag: member="vtkNIFTIHeader::GetSliceEnd" ref="a63cedc275badb05c5f289f22d3ebf0c9" args="()" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetSliceEnd</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d58b9573c593d7a5d23a7ea9eb9bd31"></a><!-- doxytag: member="vtkNIFTIHeader::GetSliceEnd" ref="a6d58b9573c593d7a5d23a7ea9eb9bd31" args="()" -->
+vtkTypeInt64&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetSliceEnd</b> ()</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -462,6 +468,20 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 <dl class="user"><dt><b>Thanks:</b></dt><dd>This class was contributed to VTK by the Calgary Image Processing and Analysis Centre (CIPAC). </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>, <a class="el" href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIWriter</a> </dd></dl>
 <hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="aa6d951e64d9302bade2dc645dc9cbf1f"></a><!-- doxytag: member="vtkNIFTIHeader::HeaderSizeEnum" ref="aa6d951e64d9302bade2dc645dc9cbf1f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classvtk_n_i_f_t_i_header.html#aa6d951e64d9302bade2dc645dc9cbf1f">vtkNIFTIHeader::HeaderSizeEnum</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>NIFTI header sizes. </p>
+
+</div>
+</div>
 <a class="anchor" id="abca0012de76963c8fcf088437d684ae2"></a><!-- doxytag: member="vtkNIFTIHeader::IntentCodeEnum" ref="abca0012de76963c8fcf088437d684ae2" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1101,7 +1121,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Mar 1 2014 09:28:10 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Mar 5 2014 07:11:07 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

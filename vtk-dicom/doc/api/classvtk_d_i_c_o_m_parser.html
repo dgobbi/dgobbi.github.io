@@ -139,8 +139,8 @@ static <a class="el" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a> *&
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#ad1d4e47808644473c3af50a693cd0291">FillBuffer</a> (const unsigned char *&amp;cp, const unsigned char *&amp;ep)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Internal method for filling the buffer.  <a href="#ad1d4e47808644473c3af50a693cd0291"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b4ab3c67cdc4f0ca8c1ecf950899fae"></a><!-- doxytag: member="vtkDICOMParser::GetBytesRemaining" ref="a4b4ab3c67cdc4f0ca8c1ecf950899fae" args="(const unsigned char *cp, const unsigned char *ep)" -->
-virtual std::streamsize&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#a4b4ab3c67cdc4f0ca8c1ecf950899fae">GetBytesRemaining</a> (const unsigned char *cp, const unsigned char *ep)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa53f4413bbc3cacf2fc2c2cd36512931"></a><!-- doxytag: member="vtkDICOMParser::GetBytesRemaining" ref="aa53f4413bbc3cacf2fc2c2cd36512931" args="(const unsigned char *cp, const unsigned char *ep)" -->
+virtual vtkTypeInt64&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#aa53f4413bbc3cacf2fc2c2cd36512931">GetBytesRemaining</a> (const unsigned char *cp, const unsigned char *ep)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the bytes remaining in the file. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a432052c351266287d3484b930b5e904e"></a><!-- doxytag: member="vtkDICOMParser::ParseError" ref="a432052c351266287d3484b930b5e904e" args="(const unsigned char *cp, const unsigned char *ep, const char *message)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#a432052c351266287d3484b930b5e904e">ParseError</a> (const unsigned char *cp, const unsigned char *ep, const char *message)</td></tr>
@@ -157,8 +157,8 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed97482b9ce9eb8d67bdb880e244f63e"></a><!-- doxytag: member="vtkDICOMParser::ReadMetaData" ref="aed97482b9ce9eb8d67bdb880e244f63e" args="(const unsigned char *&amp;cp, const unsigned char *&amp;ep, vtkDICOMMetaData *data, int idx)" -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#aed97482b9ce9eb8d67bdb880e244f63e">ReadMetaData</a> (const unsigned char *&amp;cp, const unsigned char *&amp;ep, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *data, int idx)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Read the meta data following the meta header. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a918f115c355e2f8aa645d19607c8612b"></a><!-- doxytag: member="vtkDICOMParser::GetBytesProcessed" ref="a918f115c355e2f8aa645d19607c8612b" args="(const unsigned char *cp, const unsigned char *ep)" -->
-std::streamsize&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#a918f115c355e2f8aa645d19607c8612b">GetBytesProcessed</a> (const unsigned char *cp, const unsigned char *ep)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee78c79a51ec71057ddc21018e9acd12"></a><!-- doxytag: member="vtkDICOMParser::GetBytesProcessed" ref="aee78c79a51ec71057ddc21018e9acd12" args="(const unsigned char *cp, const unsigned char *ep)" -->
+vtkTypeInt64&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#aee78c79a51ec71057ddc21018e9acd12">GetBytesProcessed</a> (const unsigned char *cp, const unsigned char *ep)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compute the file offset to the current position. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -170,10 +170,10 @@ std::string&nbsp;</td><td class="memItemRight" valign="bottom"><b>TransferSyntax
 <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>MetaData</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a146932124c1a35b586a90959b6c20331"></a><!-- doxytag: member="vtkDICOMParser::Groups" ref="a146932124c1a35b586a90959b6c20331" args="" -->
 vtkUnsignedShortArray *&nbsp;</td><td class="memItemRight" valign="bottom"><b>Groups</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2e800f1bbe92b3d06022860c2544b46"></a><!-- doxytag: member="vtkDICOMParser::InputStream" ref="af2e800f1bbe92b3d06022860c2544b46" args="" -->
-std::istream *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InputStream</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33320bbd78d2376204da3d70fa971b37"></a><!-- doxytag: member="vtkDICOMParser::BytesRead" ref="a33320bbd78d2376204da3d70fa971b37" args="" -->
-std::streamsize&nbsp;</td><td class="memItemRight" valign="bottom"><b>BytesRead</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a7e99831e912267388a62590e3ff6e7"></a><!-- doxytag: member="vtkDICOMParser::InputFile" ref="a6a7e99831e912267388a62590e3ff6e7" args="" -->
+FILE *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InputFile</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a193f3d1bd7e2b20f213c93a8bfa97c"></a><!-- doxytag: member="vtkDICOMParser::BytesRead" ref="a0a193f3d1bd7e2b20f213c93a8bfa97c" args="" -->
+vtkTypeInt64&nbsp;</td><td class="memItemRight" valign="bottom"><b>BytesRead</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40a348fbc1e9264254d2f33a1bcac1ae"></a><!-- doxytag: member="vtkDICOMParser::FileOffset" ref="a40a348fbc1e9264254d2f33a1bcac1ae" args="" -->
 vtkTypeInt64&nbsp;</td><td class="memItemRight" valign="bottom"><b>FileOffset</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1a9bc005236a5c0818c485d43be090b"></a><!-- doxytag: member="vtkDICOMParser::FileSize" ref="aa1a9bc005236a5c0818c485d43be090b" args="" -->
@@ -351,7 +351,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMParserIntern
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Mar 1 2014 09:28:08 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Mar 5 2014 07:11:04 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

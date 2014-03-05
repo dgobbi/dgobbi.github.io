@@ -122,24 +122,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00083"></a>00083 
 <a name="l00085"></a><a class="code" href="classvtk_d_i_c_o_m_v_r.html#ac44afad08e78e978f24df81bedc2aecb">00085</a>   <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_v_r.html#ac44afad08e78e978f24df81bedc2aecb" title="The VRs OB, OF, OW, SQ, UN, UT require a 32-bit VL.">HasLongVL</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (((1 &lt;&lt; this-&gt;Key) &amp; 0x0a08e000) != 0); }
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087   <span class="keywordtype">bool</span> operator==(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key == a.Key); }
-<a name="l00088"></a>00088   <span class="keywordtype">bool</span> operator!=(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key != a.Key); }
-<a name="l00089"></a>00089   <span class="keywordtype">bool</span> operator&lt;=(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt;= a.Key); }
-<a name="l00090"></a>00090   <span class="keywordtype">bool</span> operator&gt;=(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt;= a.Key); }
-<a name="l00091"></a>00091   <span class="keywordtype">bool</span> operator&lt;(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt; a.Key); }
-<a name="l00092"></a>00092   <span class="keywordtype">bool</span> operator&gt;(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt; a.Key); }
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094 <span class="keyword">private</span>:
-<a name="l00095"></a>00095   <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> Key;
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *VRTable[256];
-<a name="l00098"></a>00098   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> TypeTable[32];
-<a name="l00099"></a>00099   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> TextTable[32][4];
-<a name="l00100"></a>00100 };
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 VTK_DICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; o, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a>&amp; a);
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104 <span class="preprocessor">#endif </span><span class="comment">/* __vtkDICOMVR_h */</span>
+<a name="l00088"></a><a class="code" href="classvtk_d_i_c_o_m_v_r.html#ac3b5139d63893c7e14360e0459ab6113">00088</a>   <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_v_r.html#ac3b5139d63893c7e14360e0459ab6113" title="The VRs SH, LO, PN, ST, LT, and UT use SpecificCharacterSet.">HasSpecificCharacterSet</a>()<span class="keyword"> const </span>{
+<a name="l00089"></a>00089     <span class="keywordflow">return</span> (((1 &lt;&lt; this-&gt;Key) &amp; 0x08231800) != 0); }
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091   <span class="keywordtype">bool</span> operator==(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key == a.Key); }
+<a name="l00092"></a>00092   <span class="keywordtype">bool</span> operator!=(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key != a.Key); }
+<a name="l00093"></a>00093   <span class="keywordtype">bool</span> operator&lt;=(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt;= a.Key); }
+<a name="l00094"></a>00094   <span class="keywordtype">bool</span> operator&gt;=(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt;= a.Key); }
+<a name="l00095"></a>00095   <span class="keywordtype">bool</span> operator&lt;(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt; a.Key); }
+<a name="l00096"></a>00096   <span class="keywordtype">bool</span> operator&gt;(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt; a.Key); }
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098 <span class="keyword">private</span>:
+<a name="l00099"></a>00099   <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> Key;
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *VRTable[256];
+<a name="l00102"></a>00102   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> TypeTable[32];
+<a name="l00103"></a>00103   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> TextTable[32][4];
+<a name="l00104"></a>00104 };
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106 VTK_DICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; o, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a>&amp; a);
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 <span class="preprocessor">#endif </span><span class="comment">/* __vtkDICOMVR_h */</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -156,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Mar 1 2014 09:28:05 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Mar 5 2014 07:11:02 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
