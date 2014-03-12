@@ -65,58 +65,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#define __vtkDICOMUtilities_h</span>
 <a name="l00016"></a>00016 <span class="preprocessor"></span>
 <a name="l00017"></a>00017 <span class="preprocessor">#include &lt;vtkSystemIncludes.h&gt;</span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span>
-<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;vtkDICOMTag.h&quot;</span>
-<a name="l00020"></a>00020 
-<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;string&gt;</span>
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="keyword">class </span>vtkStringArray;
-<a name="l00024"></a>00024 
-<a name="l00026"></a><a class="code" href="classvtk_d_i_c_o_m_utilities.html">00026</a> <span class="keyword">class </span>VTK_DICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>
-<a name="l00027"></a>00027 {
-<a name="l00028"></a>00028 <span class="keyword">public</span>:
-<a name="l00029"></a>00029 
-<a name="l00031"></a>00031 
-<a name="l00035"></a>00035   <span class="keyword">static</span> <span class="keywordtype">void</span> SetUIDPrefix(<span class="keyword">const</span> <span class="keywordtype">char</span> *prefix);
-<a name="l00036"></a>00036   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetUIDPrefix();
-<a name="l00037"></a>00037 
-<a name="l00039"></a>00039   <span class="keyword">static</span> std::string GenerateUID(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag);
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;vtkObject.h&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;vtkDICOMTag.h&quot;</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="keyword">class </span>vtkStringArray;
+<a name="l00025"></a>00025 
+<a name="l00027"></a><a class="code" href="classvtk_d_i_c_o_m_utilities.html">00027</a> <span class="keyword">class </span>VTK_DICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a> : <span class="keyword">public</span> <a class="code" href="classvtk_object.html" title="abstract base class for most VTK objects">vtkObject</a>
+<a name="l00028"></a>00028 {
+<a name="l00029"></a>00029 <span class="keyword">public</span>:
+<a name="l00031"></a><a class="code" href="classvtk_d_i_c_o_m_utilities.html#af433c2ef02b27ecd4fef1f78e58d0336">00031</a>   vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>, <a class="code" href="classvtk_object.html" title="abstract base class for most VTK objects">vtkObject</a>);
+<a name="l00032"></a>00032 
+<a name="l00034"></a>00034 
+<a name="l00038"></a>00038   <span class="keyword">static</span> <span class="keywordtype">void</span> SetUIDPrefix(<span class="keyword">const</span> <span class="keywordtype">char</span> *prefix);
+<a name="l00039"></a>00039   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetUIDPrefix();
 <a name="l00040"></a>00040 
-<a name="l00042"></a>00042 
-<a name="l00049"></a>00049   <span class="keyword">static</span> <span class="keywordtype">void</span> GenerateUIDs(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag, vtkStringArray *uids);
-<a name="l00050"></a>00050 
-<a name="l00052"></a>00052   <span class="keyword">static</span> <span class="keywordtype">int</span> CompareUIDs(<span class="keyword">const</span> <span class="keywordtype">char</span> *u1, <span class="keyword">const</span> <span class="keywordtype">char</span> *u2);
+<a name="l00042"></a>00042   <span class="keyword">static</span> std::string GenerateUID(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag);
+<a name="l00043"></a>00043 
+<a name="l00045"></a>00045 
+<a name="l00052"></a>00052   <span class="keyword">static</span> <span class="keywordtype">void</span> GenerateUIDs(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag, vtkStringArray *uids);
 <a name="l00053"></a>00053 
-<a name="l00055"></a>00055 
-<a name="l00060"></a>00060   <span class="keyword">static</span> std::string GenerateDateTime(<span class="keyword">const</span> <span class="keywordtype">char</span> *zone);
-<a name="l00061"></a>00061 
-<a name="l00063"></a>00063 
-<a name="l00068"></a>00068   <span class="keyword">static</span> <span class="keywordtype">bool</span> IsDICOMFile(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename);
-<a name="l00069"></a>00069 
-<a name="l00071"></a>00071   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetImplementationClassUID();
+<a name="l00055"></a>00055   <span class="keyword">static</span> <span class="keywordtype">int</span> CompareUIDs(<span class="keyword">const</span> <span class="keywordtype">char</span> *u1, <span class="keyword">const</span> <span class="keywordtype">char</span> *u2);
+<a name="l00056"></a>00056 
+<a name="l00058"></a>00058 
+<a name="l00063"></a>00063   <span class="keyword">static</span> std::string GenerateDateTime(<span class="keyword">const</span> <span class="keywordtype">char</span> *zone);
+<a name="l00064"></a>00064 
+<a name="l00066"></a>00066 
+<a name="l00071"></a>00071   <span class="keyword">static</span> <span class="keywordtype">bool</span> IsDICOMFile(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename);
 <a name="l00072"></a>00072 
-<a name="l00074"></a>00074 
-<a name="l00079"></a>00079   <span class="keyword">static</span> <span class="keywordtype">void</span> SetImplementationClassUID(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);
-<a name="l00080"></a>00080 
-<a name="l00082"></a>00082   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetImplementationVersionName();
+<a name="l00074"></a>00074   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetImplementationClassUID();
+<a name="l00075"></a>00075 
+<a name="l00077"></a>00077 
+<a name="l00082"></a>00082   <span class="keyword">static</span> <span class="keywordtype">void</span> SetImplementationClassUID(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);
 <a name="l00083"></a>00083 
-<a name="l00085"></a>00085 
-<a name="l00090"></a>00090   <span class="keyword">static</span> <span class="keywordtype">void</span> SetImplementationVersionName(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092 <span class="keyword">protected</span>:
-<a name="l00093"></a>00093   <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>();
-<a name="l00094"></a>00094   ~<a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>();
-<a name="l00095"></a>00095 
-<a name="l00096"></a>00096   <span class="keyword">static</span> <span class="keywordtype">char</span> UIDPrefix[64];
-<a name="l00097"></a>00097   <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationClassUID[65];
-<a name="l00098"></a>00098   <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationVersionName[17];
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100 <span class="keyword">private</span>:
-<a name="l00101"></a>00101   <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00102"></a>00102   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00103"></a>00103 };
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105 <span class="preprocessor">#endif </span><span class="comment">/* __vtkDICOMUtilities_h */</span>
+<a name="l00085"></a>00085   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetImplementationVersionName();
+<a name="l00086"></a>00086 
+<a name="l00088"></a>00088 
+<a name="l00093"></a>00093   <span class="keyword">static</span> <span class="keywordtype">void</span> SetImplementationVersionName(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 <span class="keyword">protected</span>:
+<a name="l00096"></a>00096   <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>();
+<a name="l00097"></a>00097   ~<a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>();
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099   <span class="keyword">static</span> <span class="keywordtype">char</span> UIDPrefix[64];
+<a name="l00100"></a>00100   <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationClassUID[65];
+<a name="l00101"></a>00101   <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationVersionName[17];
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 <span class="keyword">private</span>:
+<a name="l00104"></a>00104   <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00105"></a>00105   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00106"></a>00106 };
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 <span class="preprocessor">#endif </span><span class="comment">/* __vtkDICOMUtilities_h */</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -133,7 +135,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Mar 5 2014 07:11:02 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 11 2014 21:28:51 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

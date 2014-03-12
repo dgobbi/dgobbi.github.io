@@ -144,6 +144,9 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetAttributeValue</b>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a318015a44a4aefab9f1e1c7b14f790e8"></a><!-- doxytag: member="vtkDICOMMetaData::FindDictVR" ref="a318015a44a4aefab9f1e1c7b14f790e8" args="(int idx, vtkDICOMTag tag)" -->
 <a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a318015a44a4aefab9f1e1c7b14f790e8">FindDictVR</a> (int idx, <a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Use the dictionary to get the VR, return UN if not found. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a320d0c845abef48f652666db30a95785"></a><!-- doxytag: member="vtkDICOMMetaData::MakeValueWithSpecificCharacterSet" ref="a320d0c845abef48f652666db30a95785" args="(vtkDICOMVR vr, const std::string &amp;v)" -->
+<a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a320d0c845abef48f652666db30a95785">MakeValueWithSpecificCharacterSet</a> (<a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> vr, const std::string &amp;v)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a value from text in a specific character set. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a2876e23617baf9f1cce36c6420fe896f">CopyAttributes</a> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Copy all the attributes from another MetaData object.  <a href="#a2876e23617baf9f1cce36c6420fe896f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b005c947459308d85d0d090c0bb2d47"></a><!-- doxytag: member="vtkDICOMMetaData::ShallowCopy" ref="a4b005c947459308d85d0d090c0bb2d47" args="(vtkDataObject *source)" -->
@@ -170,13 +173,6 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81a9b58e1b6a5ee427b7911c4438b475"></a><!-- doxytag: member="vtkDICOMMetaData::FindAttributeValue" ref="a81a9b58e1b6a5ee427b7911c4438b475" args="(int idx, vtkDICOMTag tag)" -->
 const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a81a9b58e1b6a5ee427b7911c4438b475">FindAttributeValue</a> (int idx, <a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Find the attribute value for the specified image index. <br/></td></tr>
-<tr><td class="memTemplParams" colspan="2"><a class="anchor" id="a339c420671ce14aacccc3f5868a42054"></a><!-- doxytag: member="vtkDICOMMetaData::SetAttributeValueT" ref="a339c420671ce14aacccc3f5868a42054" args="(vtkDICOMTag tag, T v)" -->
-template&lt;class T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a339c420671ce14aacccc3f5868a42054">SetAttributeValueT</a> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag, T v)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Internal templated SetAttributeValue method. <br/></td></tr>
-<tr><td class="memTemplParams" colspan="2"><a class="anchor" id="a62cf16d496a32f94d7cd31b30e276bae"></a><!-- doxytag: member="vtkDICOMMetaData::SetAttributeValueT" ref="a62cf16d496a32f94d7cd31b30e276bae" args="(int idx, vtkDICOMTag tag, T v)" -->
-template&lt;class T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&nbsp;</td><td class="memTemplItemRight" valign="bottom"><b>SetAttributeValueT</b> (int idx, <a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag, T v)</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>A container class for DICOM metadata. </p>
@@ -266,36 +262,6 @@ template&lt;class T &gt; </td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aeb79b9578e7efc2f43479cc536a9c35d"></a><!-- doxytag: member="vtkDICOMMetaData::GetAttributeValue" ref="aeb79b9578e7efc2f43479cc536a9c35d" args="(int idx, vtkDICOMTag tag)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a>&amp; vtkDICOMMetaData::GetAttributeValue </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>idx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td>
-          <td class="paramname"> <em>tag</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get an attribute value for the specified file index. </p>
-<p>If this meta data object is used to hold the meta data for multiple image instances, then use this method to get an attribute value for a specific instance. If the attribute is not present, the value will be invalid, i.e. v.IsValid() will be false. </p>
-
-</div>
-</div>
 <a class="anchor" id="aa99a1f1a996e9e2acce8bc134f472ac0"></a><!-- doxytag: member="vtkDICOMMetaData::GetAttributeValue" ref="aa99a1f1a996e9e2acce8bc134f472ac0" args="(int idx, int frame, vtkDICOMTag tag)" -->
 <div class="memitem">
 <div class="memproto">
@@ -329,6 +295,36 @@ template&lt;class T &gt; </td></tr>
 
 <p>Get an attribute value for the specified file and frame index. </p>
 <p>For enhanced multi-frame DICOM files, much of the meta data is stored per-frame. This method will search for the attribute in the PerFrameFunctionGroupSequence first, then in the SharedFunctionalGroupsSequence, and finally in the root. It can be used on either multi-frame or single-frame files. The frame index is counted from zero to NumberOfFrames-1. </p>
+
+</div>
+</div>
+<a class="anchor" id="aeb79b9578e7efc2f43479cc536a9c35d"></a><!-- doxytag: member="vtkDICOMMetaData::GetAttributeValue" ref="aeb79b9578e7efc2f43479cc536a9c35d" args="(int idx, vtkDICOMTag tag)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a>&amp; vtkDICOMMetaData::GetAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td>
+          <td class="paramname"> <em>tag</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get an attribute value for the specified file index. </p>
+<p>If this meta data object is used to hold the meta data for multiple image instances, then use this method to get an attribute value for a specific instance. If the attribute is not present, the value will be invalid, i.e. v.IsValid() will be false. </p>
 
 </div>
 </div>
@@ -446,7 +442,7 @@ template&lt;class T &gt; </td></tr>
 <div class="memdoc">
 
 <p>Set an attribute value for the image at file index "idx". </p>
-<p>Except for the method that takes a <a class="el" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a>, these methods will use the dictionary to find the VR for the attribute, and will attempt to convert the input data to the correct VR. Strings and doubles will be converted to integer values where necessary, and numeric values will be converted to strings where necessary. </p>
+<p>Except for the method that takes a <a class="el" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a>, these methods will use the dictionary to find the VR for the attribute, and will attempt to convert the input data to the correct VR. Strings and doubles will be converted to integer values where necessary, and numeric values will be converted to strings where necessary. Note that if you specify a string value, it must either be an ASCII string, or it must be encoded in the SpecificCharacterSet for this data set. </p>
 
 </div>
 </div>
@@ -468,7 +464,7 @@ template&lt;class T &gt; </td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Mar 5 2014 07:11:04 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 11 2014 21:28:53 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

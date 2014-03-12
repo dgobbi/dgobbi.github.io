@@ -199,6 +199,7 @@ This is the complete list of members for <a class="el" href="classvtk_d_i_c_o_m_
   <tr bgcolor="#f0f0f0"><td><b>InvokeEvent</b>(const char *event) (defined in <a class="el" href="classvtk_object.html">vtkObject</a>)</td><td><a class="el" href="classvtk_object.html">vtkObject</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#ad4d5b56f23bb837d8c124b3dc324fd13">IsA</a>(const char *type)</td><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#aa75018cb9ec299e4b5dcf93ab728ef60">IsTypeOf</a>(const char *type)</td><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a320d0c845abef48f652666db30a95785">MakeValueWithSpecificCharacterSet</a>(vtkDICOMVR vr, const std::string &amp;v)</td><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_object.html#a8586479b9d204cf0a45fb693d4281354">Modified</a>()</td><td><a class="el" href="classvtk_object.html">vtkObject</a></td><td><code> [virtual]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>MTime</b> (defined in <a class="el" href="classvtk_object.html">vtkObject</a>)</td><td><a class="el" href="classvtk_object.html">vtkObject</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a9e1742e41a805e1aab83e3587f25ccaa">New</a>()</td><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></td><td><code> [static]</code></td></tr>
@@ -248,8 +249,6 @@ This is the complete list of members for <a class="el" href="classvtk_d_i_c_o_m_
   <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a0e21071c49963d69ea9a387249b0636e">SetAttributeValue</a>(vtkDICOMTag tag, const vtkDICOMValue &amp;v)</td><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>SetAttributeValue</b>(vtkDICOMTag tag, double v) (defined in <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>)</td><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>SetAttributeValue</b>(vtkDICOMTag tag, const std::string &amp;v) (defined in <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>)</td><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a339c420671ce14aacccc3f5868a42054">SetAttributeValueT</a>(vtkDICOMTag tag, T v)</td><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></td><td><code> [protected]</code></td></tr>
-  <tr bgcolor="#f0f0f0"><td><b>SetAttributeValueT</b>(int idx, vtkDICOMTag tag, T v) (defined in <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>)</td><td><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_object.html#a40f50a156c39f1aab672d42255f5314a">SetDebug</a>(unsigned char debugFlag)</td><td><a class="el" href="classvtk_object.html">vtkObject</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_data_object.html#aa9952fcc0ca5585757d2270ab62ef23c">SetExtentTranslator</a>(vtkExtentTranslator *translator)</td><td><a class="el" href="classvtk_data_object.html">vtkDataObject</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_data_object.html#ae20049ae4de96b695ffbbfe80f21ff68">SetFieldData</a>(vtkFieldData *)</td><td><a class="el" href="classvtk_data_object.html">vtkDataObject</a></td><td><code> [virtual]</code></td></tr>
@@ -319,7 +318,7 @@ This is the complete list of members for <a class="el" href="classvtk_d_i_c_o_m_
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Mar 5 2014 07:11:04 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 11 2014 21:28:53 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
