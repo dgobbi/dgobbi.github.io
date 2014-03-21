@@ -96,6 +96,10 @@ Public Member Functions</h2></td></tr>
 &nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValue</b> (<a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> vr, const double *data, const double *end)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2bef9a8b3b517feb2fa3988234c51ae"></a><!-- doxytag: member="vtkDICOMValue::vtkDICOMValue" ref="aa2bef9a8b3b517feb2fa3988234c51ae" args="(vtkDICOMVR vr, const vtkDICOMTag *data, const vtkDICOMTag *end)" -->
 &nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValue</b> (<a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> vr, const <a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> *data, const <a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> *end)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#a26ae7f4716b6eb3d9c4ac69bf10be129">vtkDICOMValue</a> (<a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> vr, <a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> cs, const std::string &amp;v)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct a string value with a specific character set.  <a href="#a26ae7f4716b6eb3d9c4ac69bf10be129"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad94c7e5110955be0afec3e66fa3dd19a"></a><!-- doxytag: member="vtkDICOMValue::vtkDICOMValue" ref="ad94c7e5110955be0afec3e66fa3dd19a" args="(vtkDICOMVR vr, vtkDICOMCharacterSet cs, const char *data, const char *end)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValue</b> (<a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> vr, <a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> cs, const char *data, const char *end)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab67f4ef87398bb61003d03e1564fd6fc"></a><!-- doxytag: member="vtkDICOMValue::vtkDICOMValue" ref="ab67f4ef87398bb61003d03e1564fd6fc" args="(vtkDICOMVR vr)" -->
 &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#ab67f4ef87398bb61003d03e1564fd6fc">vtkDICOMValue</a> (<a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> vr)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create an emtpy value. <br/></td></tr>
@@ -207,10 +211,10 @@ const <a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> *&nbsp;</
 const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetSequenceData</b> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac366db33ebfb18643215f6c63cbaaa8a"></a><!-- doxytag: member="vtkDICOMValue::GetMultiplexData" ref="ac366db33ebfb18643215f6c63cbaaa8a" args="() const " -->
 const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetMultiplexData</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dd087cfac89cdba494f286263db6f5a"></a><!-- doxytag: member="vtkDICOMValue::GetMultiplexData" ref="a6dd087cfac89cdba494f286263db6f5a" args="()" -->
-<a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetMultiplexData</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#a32061d20e8214fd3f77d744c7e49109c">AllocateCharData</a> (<a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> vr, unsigned int vn)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Allocate space within a value object.  <a href="#a32061d20e8214fd3f77d744c7e49109c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40c5ca0a815c1cf8a2acf388817228ee"></a><!-- doxytag: member="vtkDICOMValue::AllocateCharData" ref="a40c5ca0a815c1cf8a2acf388817228ee" args="(vtkDICOMVR vr, vtkDICOMCharacterSet cs, unsigned int vn)" -->
+char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>AllocateCharData</b> (<a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> vr, <a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> cs, unsigned int vn)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a301dace18d01e3d45e51578ec31c59ec"></a><!-- doxytag: member="vtkDICOMValue::AllocateUnsignedCharData" ref="a301dace18d01e3d45e51578ec31c59ec" args="(vtkDICOMVR vr, unsigned int vn)" -->
 unsigned char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>AllocateUnsignedCharData</b> (<a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> vr, unsigned int vn)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac78d0cbba395977b7337875db552e0a5"></a><!-- doxytag: member="vtkDICOMValue::AllocateShortData" ref="ac78d0cbba395977b7337875db552e0a5" args="(vtkDICOMVR vr, unsigned int vn)" -->
@@ -231,8 +235,6 @@ double *&nbsp;</td><td class="memItemRight" valign="bottom"><b>AllocateDoubleDat
 <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>AllocateSequenceData</b> (<a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> vr, unsigned int vn)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac18a81cdbb250c1e6789942ef291e5c3"></a><!-- doxytag: member="vtkDICOMValue::AllocateMultiplexData" ref="ac18a81cdbb250c1e6789942ef291e5c3" args="(vtkDICOMVR vr, unsigned int vn)" -->
 <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>AllocateMultiplexData</b> (<a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> vr, unsigned int vn)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#ac999d783819df0cc4cc248b53c325d00">SetCharacterSetForCharData</a> (<a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> s)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the character set for char data.  <a href="#ac999d783819df0cc4cc248b53c325d00"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#a6bc987ee5eaf288c873dbe009ee28bb7">ComputeNumberOfValuesForCharData</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compute the number of backslash-separated string values.  <a href="#a6bc987ee5eaf288c873dbe009ee28bb7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#a3c94820abf5ed60f3d8735aebd62309c">ReallocateUnsignedCharData</a> (unsigned int vn)</td></tr>
@@ -257,6 +259,8 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86a31efad1225c2c0a1449770f9250fb"></a><!-- doxytag: member="vtkDICOMValue::vtkDICOMSequence" ref="a86a31efad1225c2c0a1449770f9250fb" args="" -->
 class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#a86a31efad1225c2c0a1449770f9250fb">vtkDICOMSequence</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54cf4de17317a61369ffa3ac849a3be1"></a><!-- doxytag: member="vtkDICOMValue::vtkDICOMValueFriendMetaData" ref="a54cf4de17317a61369ffa3ac849a3be1" args="" -->
+class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValueFriendMetaData</b></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>A class to store attribute values for DICOM metadata. </p>
@@ -296,6 +300,42 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <li>AT, use an array of <a class="el" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> values.</li>
 <li>SQ, use an array of <a class="el" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a> values. </li>
 </ul>
+
+</div>
+</div>
+<a class="anchor" id="a26ae7f4716b6eb3d9c4ac69bf10be129"></a><!-- doxytag: member="vtkDICOMValue::vtkDICOMValue" ref="a26ae7f4716b6eb3d9c4ac69bf10be129" args="(vtkDICOMVR vr, vtkDICOMCharacterSet cs, const std::string &amp;v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vtkDICOMValue::vtkDICOMValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a>&nbsp;</td>
+          <td class="paramname"> <em>vr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>&nbsp;</td>
+          <td class="paramname"> <em>cs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>v</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Construct a string value with a specific character set. </p>
+<p>This will set the character set that will be used to interpret the data inside the string value. The character set parameter will be ignored unless the the VR is PN, SH, LO, ST, LT, or UT, since all other VRs are restricted to ASCII. </p>
 
 </div>
 </div>
@@ -396,7 +436,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <div class="memdoc">
 
 <p>Compute the number of backslash-separated string values. </p>
-<p>After calling AllocateCharData and writing text into the allocated space, this must be called to set the NumberOfValues according to the number of backslash-separated string values that are present. If the text is not ASCII, this should be called after calling <a class="el" href="classvtk_d_i_c_o_m_value.html#ac999d783819df0cc4cc248b53c325d00" title="Set the character set for char data.">SetCharacterSetForCharData()</a>. </p>
+<p>After calling AllocateCharData and writing text into the allocated space, this must be called to set the NumberOfValues according to the number of backslash-separated string values that are present. </p>
 
 </div>
 </div>
@@ -546,27 +586,6 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 
 </div>
 </div>
-<a class="anchor" id="ac999d783819df0cc4cc248b53c325d00"></a><!-- doxytag: member="vtkDICOMValue::SetCharacterSetForCharData" ref="ac999d783819df0cc4cc248b53c325d00" args="(vtkDICOMCharacterSet s)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void vtkDICOMValue::SetCharacterSetForCharData </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>&nbsp;</td>
-          <td class="paramname"> <em>s</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Set the character set for char data. </p>
-<p>This will set the character set that will be used to interpret the data inside a string value. This method has no effect unless the VR is PN, SH, LO, ST, LT, or UT. </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="vtk_d_i_c_o_m_value_8h_source.html">vtkDICOMValue.h</a></li>
 </ul>
@@ -585,7 +604,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 11 2014 21:28:55 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Mar 21 2014 00:15:01 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
