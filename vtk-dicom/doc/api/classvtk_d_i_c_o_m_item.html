@@ -96,6 +96,12 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetAttributeValue</b> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag, double v)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e4a345e0fec8e87e6ab50c7b5726f07"></a><!-- doxytag: member="vtkDICOMItem::SetAttributeValue" ref="a2e4a345e0fec8e87e6ab50c7b5726f07" args="(vtkDICOMTag tag, const std::string &amp;v)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetAttributeValue</b> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag, const std::string &amp;v)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#a124d1ccdbf3af21311298d01915bfd75">SetAttributeValue</a> (const <a class="el" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a> &amp;tag, const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;v)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add a data element at the specified path.  <a href="#a124d1ccdbf3af21311298d01915bfd75"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a709b3829ce445ffb91982fb1a8fdc83d"></a><!-- doxytag: member="vtkDICOMItem::SetAttributeValue" ref="a709b3829ce445ffb91982fb1a8fdc83d" args="(const vtkDICOMTagPath &amp;tag, double v)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetAttributeValue</b> (const <a class="el" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a> &amp;tag, double v)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3f57fa239a22a80172801ca428878df"></a><!-- doxytag: member="vtkDICOMItem::SetAttributeValue" ref="aa3f57fa239a22a80172801ca428878df" args="(const vtkDICOMTagPath &amp;tag, const std::string &amp;v)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetAttributeValue</b> (const <a class="el" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a> &amp;tag, const std::string &amp;v)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b389464f62adb2043313d3f3b99216f"></a><!-- doxytag: member="vtkDICOMItem::GetAttributeValue" ref="a2b389464f62adb2043313d3f3b99216f" args="(vtkDICOMTag tag) const " -->
 const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#a2b389464f62adb2043313d3f3b99216f">GetAttributeValue</a> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get a data element from this item. <br/></td></tr>
@@ -170,6 +176,36 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 
 </div>
 </div>
+<a class="anchor" id="a124d1ccdbf3af21311298d01915bfd75"></a><!-- doxytag: member="vtkDICOMItem::SetAttributeValue" ref="a124d1ccdbf3af21311298d01915bfd75" args="(const vtkDICOMTagPath &amp;tag, const vtkDICOMValue &amp;v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMItem::SetAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>v</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Add a data element at the specified path. </p>
+<p>The data element is inserted at the tail of the given path. If the path lies within a sequence that does not yet exist, then the sequence will be created. If an item index in the path points to an item that does not exist, then that item will be created. </p>
+
+</div>
+</div>
 <a class="anchor" id="ab06bc968b5f20314fb99ca3db49f1b4b"></a><!-- doxytag: member="vtkDICOMItem::SetAttributeValue" ref="ab06bc968b5f20314fb99ca3db49f1b4b" args="(vtkDICOMTag tag, const vtkDICOMValue &amp;v)" -->
 <div class="memitem">
 <div class="memproto">
@@ -196,7 +232,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 <div class="memdoc">
 
 <p>Add a data element to this item. </p>
-<p>This method can only be used before the item has been added to a sequence. After the item has become part of a sequence, it is frozen and cannot be modified. Note that if you specify a string value, it must either be an ASCII string, or it must be encoded in the SpecificCharacterSet for this item. </p>
+<p>If you specify a string, it must either be an ASCII string, or it must be encoded in the SpecificCharacterSet for this item. </p>
 
 </div>
 </div>
@@ -218,7 +254,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Fri Mar 21 2014 00:14:59 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 3 2014 10:20:23 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

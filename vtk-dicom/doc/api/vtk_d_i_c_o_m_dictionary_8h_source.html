@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00043"></a>00043 
 <a name="l00045"></a>00045 
 <a name="l00050"></a>00050   <span class="keyword">static</span> <span class="keywordtype">void</span> AddPrivateDictionary(
-<a name="l00051"></a>00051     <span class="keyword">const</span> <span class="keywordtype">char</span> *name, <a class="code" href="structvtk_d_i_c_o_m_dict_entry_1_1_entry.html">vtkDICOMDictEntry::Entry</a> **hashTable, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n);
+<a name="l00051"></a>00051     <span class="keyword">const</span> <span class="keywordtype">char</span> *name, <a class="code" href="structvtk_d_i_c_o_m_dict_entry_1_1_entry.html" title="A struct to statically store DICOM dictionary entries.">vtkDICOMDictEntry::Entry</a> **hashTable, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n);
 <a name="l00052"></a>00052 
 <a name="l00054"></a>00054   <span class="keyword">static</span> <span class="keywordtype">void</span> RemovePrivateDictionary(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);
 <a name="l00055"></a>00055 
@@ -95,19 +95,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00065"></a>00065   <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> HashLongString(<span class="keyword">const</span> <span class="keywordtype">char</span> *lo, <span class="keywordtype">char</span> stripped[64]);
 <a name="l00066"></a>00066 
 <a name="l00068"></a>00068 
-<a name="l00072"></a>00072   <span class="keyword">static</span> <a class="code" href="structvtk_d_i_c_o_m_dict_entry_1_1_entry.html">vtkDICOMDictEntry::Entry</a> **FindPrivateDict(
+<a name="l00072"></a>00072   <span class="keyword">static</span> <a class="code" href="structvtk_d_i_c_o_m_dict_entry_1_1_entry.html" title="A struct to statically store DICOM dictionary entries.">vtkDICOMDictEntry::Entry</a> **FindPrivateDict(
 <a name="l00073"></a>00073     <span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *tableSizePtr);
 <a name="l00074"></a>00074 
-<a name="l00076"></a>00076   <span class="keyword">static</span> <a class="code" href="structvtk_d_i_c_o_m_dict_entry_1_1_entry.html">vtkDICOMDictEntry::Entry</a> *DictHashTable[DICT_HASH_TABLE_SIZE];
+<a name="l00076"></a>00076   <span class="keyword">static</span> <a class="code" href="structvtk_d_i_c_o_m_dict_entry_1_1_entry.html" title="A struct to statically store DICOM dictionary entries.">vtkDICOMDictEntry::Entry</a> *DictHashTable[DICT_HASH_TABLE_SIZE];
 <a name="l00077"></a>00077 
 <a name="l00079"></a>00079   <span class="keyword">static</span> PrivateDict *PrivateDictTable[DICT_PRIVATE_TABLE_SIZE];
 <a name="l00080"></a>00080 };
 <a name="l00081"></a>00081 
 <a name="l00083"></a>00083 
-<a name="l00087"></a><a class="code" href="structvtk_d_i_c_o_m_dictionary_initializer.html">00087</a> <span class="keyword">struct </span><a class="code" href="structvtk_d_i_c_o_m_dictionary_initializer.html" title="Initializer (Schwarz counter).">vtkDICOMDictionaryInitializer</a>
+<a name="l00087"></a><a class="code" href="structvtk_d_i_c_o_m_dictionary_initializer.html">00087</a> <span class="keyword">struct </span>VTK_DICOM_EXPORT <a class="code" href="structvtk_d_i_c_o_m_dictionary_initializer.html" title="Initializer (Schwarz counter).">vtkDICOMDictionaryInitializer</a>
 <a name="l00088"></a>00088 {
 <a name="l00089"></a>00089   <a class="code" href="structvtk_d_i_c_o_m_dictionary_initializer.html" title="Initializer (Schwarz counter).">vtkDICOMDictionaryInitializer</a>();
-<a name="l00090"></a>00090   ~<a class="code" href="structvtk_d_i_c_o_m_dictionary_initializer.html" title="Initializer (Schwarz counter).">vtkDICOMDictionaryInitializer</a>();
+<a name="l00090"></a>00090   ~vtkDICOMDictionaryInitializer();
 <a name="l00091"></a>00091 };
 <a name="l00092"></a>00092 
 <a name="l00093"></a>00093 <span class="keyword">static</span> <a class="code" href="structvtk_d_i_c_o_m_dictionary_initializer.html" title="Initializer (Schwarz counter).">vtkDICOMDictionaryInitializer</a> vtkDICOMDictionaryInitializerInstance;
@@ -129,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Fri Mar 21 2014 00:14:57 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 3 2014 10:20:19 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
