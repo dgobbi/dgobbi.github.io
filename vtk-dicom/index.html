@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+  <title>vtk-dicom</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body bgcolor="#ffffff">
+
+<h1 class="title">DICOM for VTK</h1>
+
+<p>The vtk-dicom project started in 2012 in response to the need for DICOM readers and writers for VTK that:</p>
+<ol>
+<li>Provide easy access to all of the per-slice DICOM meta data</li>
+<li>Generate VTK data sets with complete geometric fidelity</li>
+</ol>
+<p>This was achieved through the creation of three core C++ classes: a <a href="doc/api/classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a>, a <a href="doc/api/classvtk_d_i_c_o_m_writer.html">vtkDICOMWriter</a>, and a <a href="doc/api/classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> class that provides full access to the meta data.</p>
+
+<h2>Useful Links:</h2>
+<ul>
+<li><a href="http://github.com/dgobbi/vtk-dicom/">Source code repository (Github)</a></li>
+<li><a href="doc/api/index.html">API documentation (Doxygen)</a></li>
+<li><a href="doc/vtk-dicom.pdf" type="application/pdf">PDF documentation (LaTeX)</a></li>
+<li><a href="http://my.cdash.org/index.php?project=vtk-dicom">Testing dashboard (CDash)</a></li>
+</ul>
+
+<h2>Q and A Summary:</h2>
+
+<h3>What modalities are supported?</h3>
+<p>All modalities can be read. Writing is currently limitied to CT, MR, and secondary capture.</p>
+<h3>Why is writing limited to MR, CT, and Secondary Capture?</h3>
+<p>The DICOM standard has very strict rules for both the structure and the content of DICOM files, and many of the rules are modality-specific.  We therefore decided to focus our initial efforts CT and MR.  Support for additional modalities will be added in the future.</p>
+<h3>Are compressed files supported?</h3>
+<p>Yes, but only for reading, not for writing.</p>
+<h3>What is per-slice meta-data?</h3>
+<p>DICOM data is usually stored as one file per slice, and each file has specific information relating to position, time, etc.  The vtkDICOMMetaData class makes it easy to access the meta data for each individual slice.</p>
+<h3>What is per-frame meta-data?</h3>
+<p>The DICOM 2004 standard introduced enhanced multi-frame data sets, which allow multiple slices CT or MR to be stored in a single file.</p>
+<h3>Are enhanced multi-frame files supported?</h3>
+<p>They can be read, but cannot yet be written.</p>
+<h3>Is internationalization supported?</h3>
+<p>Yes.  All text encodings listed in the DICOM 2011 standard are handled, and are converted to utf-8 on demand.</p>
+<h3>Are DICOMDIR files supported?</h3>
+<p>They can be read via the <a href="doc/api/classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a> class.  They cannot yet be written.</p>
+<h3>What wrapper languages are supported?</h3>
+<p>Python and Java. Only the reader and writer are fully wrapped in Java, so access to meta-data is limited. Python wrapping is complete, except for the enum types.</p>
+<h3>What DICOM libraries are used?</h3>
+<p>The vtk-dicom library has its own native code for parsing DICOM files.  For compressed files, GDCM and DCMTK are used to perform the decompression.</p>
+
+</body>
+
+</html>
