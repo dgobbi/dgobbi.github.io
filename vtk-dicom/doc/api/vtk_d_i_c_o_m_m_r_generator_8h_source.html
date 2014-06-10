@@ -77,26 +77,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00036"></a>00036   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#a0c71a0eed9a91d45cdbdfff2b4882f2b" title="Print information about this object.">PrintSelf</a>(ostream&amp; os, vtkIndent indent);
 <a name="l00037"></a>00037 
 <a name="l00039"></a>00039 
-<a name="l00044"></a>00044   <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#aac2713195d062e1fc0a4caca0e6eb5e1" title="Generate an instance of one of the supported classes.">GenerateInstance</a>(
-<a name="l00045"></a>00045     vtkInformation *info, <a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *meta);
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="keyword">protected</span>:
-<a name="l00048"></a>00048   <a class="code" href="classvtk_d_i_c_o_m_m_r_generator.html" title="Generate DICOM data objects for MR images.">vtkDICOMMRGenerator</a>();
-<a name="l00049"></a>00049   ~<a class="code" href="classvtk_d_i_c_o_m_m_r_generator.html" title="Generate DICOM data objects for MR images.">vtkDICOMMRGenerator</a>();
-<a name="l00050"></a>00050 
-<a name="l00052"></a>00052   <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateMRSeriesModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *meta);
-<a name="l00053"></a>00053 
-<a name="l00055"></a>00055   <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateMRImageModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *meta);
-<a name="l00056"></a>00056 
-<a name="l00058"></a>00058   <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateMRInstance(
-<a name="l00059"></a>00059     vtkInformation *info, <a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *meta);
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 <span class="keyword">private</span>:
-<a name="l00062"></a>00062   <a class="code" href="classvtk_d_i_c_o_m_m_r_generator.html" title="Generate DICOM data objects for MR images.">vtkDICOMMRGenerator</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_m_r_generator.html" title="Generate DICOM data objects for MR images.">vtkDICOMMRGenerator</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00063"></a>00063   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_m_r_generator.html" title="Generate DICOM data objects for MR images.">vtkDICOMMRGenerator</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00064"></a>00064 };
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 <span class="preprocessor">#endif // __vtkDICOMMRGenerator_h</span>
+<a name="l00044"></a>00044   <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#adbaf3403e23e59c853be70ef06d43be8" title="Generate an instance of one of the supported classes.">GenerateInstance</a>(vtkInformation *info);
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="keyword">protected</span>:
+<a name="l00047"></a>00047   <a class="code" href="classvtk_d_i_c_o_m_m_r_generator.html" title="Generate DICOM data objects for MR images.">vtkDICOMMRGenerator</a>();
+<a name="l00048"></a>00048   ~<a class="code" href="classvtk_d_i_c_o_m_m_r_generator.html" title="Generate DICOM data objects for MR images.">vtkDICOMMRGenerator</a>();
+<a name="l00049"></a>00049 
+<a name="l00051"></a>00051   <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateMRSeriesModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *source);
+<a name="l00052"></a>00052 
+<a name="l00054"></a>00054   <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateMRImageModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *source);
+<a name="l00055"></a>00055 
+<a name="l00057"></a>00057   <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateMRInstance(vtkInformation *info);
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="keyword">private</span>:
+<a name="l00060"></a>00060   <a class="code" href="classvtk_d_i_c_o_m_m_r_generator.html" title="Generate DICOM data objects for MR images.">vtkDICOMMRGenerator</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_m_r_generator.html" title="Generate DICOM data objects for MR images.">vtkDICOMMRGenerator</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00061"></a>00061   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_m_r_generator.html" title="Generate DICOM data objects for MR images.">vtkDICOMMRGenerator</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00062"></a>00062 };
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="preprocessor">#endif // __vtkDICOMMRGenerator_h</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -113,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 3 2014 10:20:19 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jun 9 2014 22:45:27 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

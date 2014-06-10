@@ -84,9 +84,15 @@ Public Types</h2></td></tr>
 <b>TopDown</b>, 
 <b>BottomUp</b>
  }</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#ad82363f9569123ee046cb32d391bd09b">SliceOrder</a> { <b>RHR</b>, 
+<b>LHR</b>, 
+<b>Same</b>, 
+<b>Reverse</b>
+ }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#aaa788486f0b21c7f648db0f53eb2e47d">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a62fe760178ffc0b9a12560e02851a9fd">Write</a> ()</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -152,6 +158,22 @@ const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetMemoryRowO
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a5b154f1ed9558b21b32edee64e9348d0">SetFileSliceOrder</a> (int order)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea32e4d415c5365a586cacb6ddbd2889"></a><!-- doxytag: member="vtkDICOMWriter::SetFileSliceOrderToRHR" ref="aea32e4d415c5365a586cacb6ddbd2889" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetFileSliceOrderToRHR</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56fa4cd83bcbdf127ff16a6222ab90ba"></a><!-- doxytag: member="vtkDICOMWriter::SetFileSliceOrderToLHR" ref="a56fa4cd83bcbdf127ff16a6222ab90ba" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetFileSliceOrderToLHR</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc466745d5f6e36f3a58aa5c7f7ef83f"></a><!-- doxytag: member="vtkDICOMWriter::SetFileSliceOrderToSame" ref="afc466745d5f6e36f3a58aa5c7f7ef83f" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetFileSliceOrderToSame</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bae072b7920c73612d1e496d309477f"></a><!-- doxytag: member="vtkDICOMWriter::SetFileSliceOrderToReverse" ref="a4bae072b7920c73612d1e496d309477f" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetFileSliceOrderToReverse</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c4db95d6a6b5608e5150fb0fb08d4af"></a><!-- doxytag: member="vtkDICOMWriter::GetFileSliceOrder" ref="a1c4db95d6a6b5608e5150fb0fb08d4af" args="()" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetFileSliceOrder</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6440b0e75893368801300d05c891619"></a><!-- doxytag: member="vtkDICOMWriter::GetFileSliceOrderAsString" ref="ad6440b0e75893368801300d05c891619" args="()" -->
+const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetFileSliceOrderAsString</b> ()</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a9741809ff92921c7feca93256aaee92d">SetMetaData</a> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a720402dec8eb87532ce282fd3be18102"></a><!-- doxytag: member="vtkDICOMWriter::GetMetaData" ref="a720402dec8eb87532ce282fd3be18102" args="()" -->
 <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetMetaData</b> ()</td></tr>
@@ -161,13 +183,26 @@ const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetMemoryRowO
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a76cdac25f77a95d367b22c799f262858">SetGenerator</a> (<a class="el" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a> *)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa17bc8f50bdab21abf6f5e11567f5167"></a><!-- doxytag: member="vtkDICOMWriter::GetGenerator" ref="aa17bc8f50bdab21abf6f5e11567f5167" args="()" -->
 <a class="el" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetGenerator</b> ()</td></tr>
-<tr><td colspan="2"><h2><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a6d715f5c521fc747d3c552b536934321">ComputeInternalFileName</a> (int slice)</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#af45a67999d2c6b85202ea8fe869e6115">GenerateMetaData</a> (vtkInformation *info, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a839d6003dfb9e71b39a3a6d34cd723af">SetTransferSyntaxUID</a> (const char *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a395514fa8622ad2c307aa72a9b0eceb4"></a><!-- doxytag: member="vtkDICOMWriter::GetTransferSyntaxUID" ref="a395514fa8622ad2c307aa72a9b0eceb4" args="()" -->
+virtual char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetTransferSyntaxUID</b> ()</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#ac6777ce1cbb205ec7ddf2de0e4d81853">SetStreaming</a> (int)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c6d845e0bbd7418bf88efc80a71a64c"></a><!-- doxytag: member="vtkDICOMWriter::GetStreaming" ref="a4c6d845e0bbd7418bf88efc80a71a64c" args="()" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetStreaming</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20675d1b73bdbea62931183542a98b84"></a><!-- doxytag: member="vtkDICOMWriter::StreamingOn" ref="a20675d1b73bdbea62931183542a98b84" args="()" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>StreamingOn</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3db7e6e259f50441875449dcf2215943"></a><!-- doxytag: member="vtkDICOMWriter::StreamingOff" ref="a3db7e6e259f50441875449dcf2215943" args="()" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>StreamingOff</b> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a6d715f5c521fc747d3c552b536934321">ComputeInternalFileName</a> (int slice)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a1bc5c43b9f8308e5a1202f7b084c447c">GenerateMetaData</a> (vtkInformation *info)</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -175,12 +210,16 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#ae1c539f5b1483fa73b4715987edcd95f">MetaData</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#acb09226ec00ede9db7b5a723ccf18596">GeneratedMetaData</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#ad4cb6a444aebfc79094529d70f5958ca">Generator</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a9b7183f5d0029602170183b4a450cca9">TimeAsVector</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkMatrix4x4 *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a98323f7eeb7077e931ee525656c13aa8">PatientMatrix</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#acc4216b2ff7972a3b72a699378e5fc3b">SeriesDescription</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#abbc62ddceb7e87bea465657b3ee70f97">TransferSyntaxUID</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a8f14de5b6a2d4f9dffc434a9ee0d3cac">ImageType</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a814536875fae68cc6c31f301c3a8558e">MemoryRowOrder</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#ab0d92d4d5419610591c43626fb5f75ee">FileSliceOrder</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a3e9bbfb4f936e7b5224a6388bec801af">Streaming</a></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -224,6 +263,20 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
+<a class="anchor" id="ad82363f9569123ee046cb32d391bd09b"></a><!-- doxytag: member="vtkDICOMWriter::SliceOrder" ref="ad82363f9569123ee046cb32d391bd09b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classvtk_d_i_c_o_m_writer.html#ad82363f9569123ee046cb32d391bd09b">vtkDICOMWriter::SliceOrder</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Enumeration for file order. </p>
+
+</div>
+</div>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a6d715f5c521fc747d3c552b536934321"></a><!-- doxytag: member="vtkDICOMWriter::ComputeInternalFileName" ref="a6d715f5c521fc747d3c552b536934321" args="(int slice)" -->
 <div class="memitem">
@@ -244,7 +297,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
-<a class="anchor" id="af45a67999d2c6b85202ea8fe869e6115"></a><!-- doxytag: member="vtkDICOMWriter::GenerateMetaData" ref="af45a67999d2c6b85202ea8fe869e6115" args="(vtkInformation *info, vtkDICOMMetaData *meta)" -->
+<a class="anchor" id="a1bc5c43b9f8308e5a1202f7b084c447c"></a><!-- doxytag: member="vtkDICOMWriter::GenerateMetaData" ref="a1bc5c43b9f8308e5a1202f7b084c447c" args="(vtkInformation *info)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -252,18 +305,9 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
           <td class="memname">virtual int vtkDICOMWriter::GenerateMetaData </td>
           <td>(</td>
           <td class="paramtype">vtkInformation *&nbsp;</td>
-          <td class="paramname"> <em>info</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td>
-          <td class="paramname"> <em>meta</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [protected, virtual]</code></td>
+          <td class="paramname"> <em>info</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -400,6 +444,25 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
+<a class="anchor" id="a5b154f1ed9558b21b32edee64e9348d0"></a><!-- doxytag: member="vtkDICOMWriter::SetFileSliceOrder" ref="a5b154f1ed9558b21b32edee64e9348d0" args="(int order)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMWriter::SetFileSliceOrder </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>order</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Set the slice ordering of the files to be written. The default is RHR (right-hand-rule), which means that if your right thumb points along an image row, and your index finger points down a row (starting at the top left of the image), then a bent middle finger points in the direction of increasing slice index. LHR is the reverse of this. Same keeps files in the same order as VTK slices. </p>
+
+</div>
+</div>
 <a class="anchor" id="a76cdac25f77a95d367b22c799f262858"></a><!-- doxytag: member="vtkDICOMWriter::SetGenerator" ref="a76cdac25f77a95d367b22c799f262858" args="(vtkDICOMGenerator *)" -->
 <div class="memitem">
 <div class="memproto">
@@ -533,6 +596,25 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
+<a class="anchor" id="ac6777ce1cbb205ec7ddf2de0e4d81853"></a><!-- doxytag: member="vtkDICOMWriter::SetStreaming" ref="ac6777ce1cbb205ec7ddf2de0e4d81853" args="(int)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void vtkDICOMWriter::SetStreaming </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Turn on streaming, to pass one slice though the pipeline at a time. Streaming decreases memory usage for images with a large number of slices, since only one slice will have to be in memory at a time. However, streaming can be slower (sometimes much slower) than reading and processing all of the slices at once. </p>
+
+</div>
+</div>
 <a class="anchor" id="aa517807fa13b5aafc907d660d67c1c79"></a><!-- doxytag: member="vtkDICOMWriter::SetTimeAsVector" ref="aa517807fa13b5aafc907d660d67c1c79" args="(int)" -->
 <div class="memitem">
 <div class="memproto">
@@ -571,7 +653,74 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
+<a class="anchor" id="a839d6003dfb9e71b39a3a6d34cd723af"></a><!-- doxytag: member="vtkDICOMWriter::SetTransferSyntaxUID" ref="a839d6003dfb9e71b39a3a6d34cd723af" args="(const char *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void vtkDICOMWriter::SetTransferSyntaxUID </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Set the Transfer Syntax UID. Setting the transfer syntax is an experimental feature. If not set, the transfer syntax will be 1.2.840.10008.1.2.1 (uncompressed little-endian with explicit VR). </p>
+
+</div>
+</div>
+<a class="anchor" id="a62fe760178ffc0b9a12560e02851a9fd"></a><!-- doxytag: member="vtkDICOMWriter::Write" ref="a62fe760178ffc0b9a12560e02851a9fd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void vtkDICOMWriter::Write </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Write the file to disk. </p>
+
+<p>Reimplemented from <a class="el" href="classvtk_image_writer.html#aa506c6123cfc0f77b425dd269fcefeea">vtkImageWriter</a>.</p>
+
+</div>
+</div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="ab0d92d4d5419610591c43626fb5f75ee"></a><!-- doxytag: member="vtkDICOMWriter::FileSliceOrder" ref="ab0d92d4d5419610591c43626fb5f75ee" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classvtk_d_i_c_o_m_writer.html#ab0d92d4d5419610591c43626fb5f75ee">vtkDICOMWriter::FileSliceOrder</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The slice order to use when writing the files to disk. </p>
+
+</div>
+</div>
+<a class="anchor" id="acb09226ec00ede9db7b5a723ccf18596"></a><!-- doxytag: member="vtkDICOMWriter::GeneratedMetaData" ref="acb09226ec00ede9db7b5a723ccf18596" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>* <a class="el" href="classvtk_d_i_c_o_m_writer.html#acb09226ec00ede9db7b5a723ccf18596">vtkDICOMWriter::GeneratedMetaData</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The meta data generated by the generator. </p>
+
+</div>
+</div>
 <a class="anchor" id="ad4cb6a444aebfc79094529d70f5958ca"></a><!-- doxytag: member="vtkDICOMWriter::Generator" ref="ad4cb6a444aebfc79094529d70f5958ca" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -624,7 +773,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
       </table>
 </div>
 <div class="memdoc">
-<p>The meta data. </p>
+<p>The meta data set by the user. </p>
 
 </div>
 </div>
@@ -670,6 +819,20 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
+<a class="anchor" id="a3e9bbfb4f936e7b5224a6388bec801af"></a><!-- doxytag: member="vtkDICOMWriter::Streaming" ref="a3e9bbfb4f936e7b5224a6388bec801af" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classvtk_d_i_c_o_m_writer.html#a3e9bbfb4f936e7b5224a6388bec801af">vtkDICOMWriter::Streaming</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Whether to stream the data and write one file at a time. </p>
+
+</div>
+</div>
 <a class="anchor" id="a9b7183f5d0029602170183b4a450cca9"></a><!-- doxytag: member="vtkDICOMWriter::TimeAsVector" ref="a9b7183f5d0029602170183b4a450cca9" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -698,6 +861,20 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
+<a class="anchor" id="abbc62ddceb7e87bea465657b3ee70f97"></a><!-- doxytag: member="vtkDICOMWriter::TransferSyntaxUID" ref="abbc62ddceb7e87bea465657b3ee70f97" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* <a class="el" href="classvtk_d_i_c_o_m_writer.html#abbc62ddceb7e87bea465657b3ee70f97">vtkDICOMWriter::TransferSyntaxUID</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The transfer syntax to use when writing the data. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="vtk_d_i_c_o_m_writer_8h_source.html">vtkDICOMWriter.h</a></li>
 </ul>
@@ -716,7 +893,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 3 2014 10:20:25 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jun 9 2014 22:45:32 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

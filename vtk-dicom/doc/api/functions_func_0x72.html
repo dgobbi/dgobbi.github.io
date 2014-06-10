@@ -85,11 +85,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 &nbsp;
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
-<li>ReadCompressedFile()
-: <a class="el" href="classvtk_d_i_c_o_m_reader.html#a18a13f75df51bed5a4e77443aa0f6178">vtkDICOMReader</a>
+<li>Read()
+: <a class="el" href="classvtk_d_i_c_o_m_file.html#a735f95b23cfeb697af72079d88a175df">vtkDICOMFile</a>
 </li>
 <li>ReadFile()
 : <a class="el" href="classvtk_d_i_c_o_m_parser.html#a069a92fbea380873c7c24efb8b91c0fd">vtkDICOMParser</a>
+</li>
+<li>ReadFileDelegated()
+: <a class="el" href="classvtk_d_i_c_o_m_reader.html#a05e7529fa7f78428eff9ab7b3b99771c">vtkDICOMReader</a>
+</li>
+<li>ReadFileNative()
+: <a class="el" href="classvtk_d_i_c_o_m_reader.html#a9ebe0f28a99ecb101459c05333e1e244">vtkDICOMReader</a>
 </li>
 <li>ReadMetaData()
 : <a class="el" href="classvtk_d_i_c_o_m_parser.html#aed97482b9ce9eb8d67bdb880e244f63e">vtkDICOMParser</a>
@@ -98,13 +104,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classvtk_d_i_c_o_m_parser.html#a62272cc85d6396c5ae4ba9236b043dff">vtkDICOMParser</a>
 </li>
 <li>ReadOneFile()
-: <a class="el" href="classvtk_d_i_c_o_m_reader.html#accd83f5945ca9f459559a5b6d9b87637">vtkDICOMReader</a>
-</li>
-<li>ReadUncompressedFile()
-: <a class="el" href="classvtk_d_i_c_o_m_reader.html#a810f1659e8324bd3b31bbe45ed5075e7">vtkDICOMReader</a>
+: <a class="el" href="classvtk_d_i_c_o_m_reader.html#aae132f17eb3bbc754f181d2cc2c3160e">vtkDICOMReader</a>
 </li>
 <li>ReallocateUnsignedCharData()
-: <a class="el" href="classvtk_d_i_c_o_m_value.html#a3c94820abf5ed60f3d8735aebd62309c">vtkDICOMValue</a>
+: <a class="el" href="classvtk_d_i_c_o_m_value.html#ae50506d2d070e62938dc1ac02ede6376">vtkDICOMValue</a>
 </li>
 <li>Register()
 : <a class="el" href="classvtk_algorithm.html#afcae2f95370dd41d3afcda4f5c993ab6">vtkAlgorithm</a>
@@ -118,6 +121,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>ReleaseData()
 : <a class="el" href="classvtk_data_object.html#a505ad3440d4b5c2e32df452901ff47ab">vtkDataObject</a>
+</li>
+<li>Remove()
+: <a class="el" href="classvtk_d_i_c_o_m_file.html#a1a106e8ce71ecf6c930fecc98840fb69">vtkDICOMFile</a>
 </li>
 <li>RemoveAllInputs()
 : <a class="el" href="classvtk_algorithm.html#afeafda097c201b04a74d9bf2edfaadb3">vtkAlgorithm</a>
@@ -139,12 +145,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classvtk_n_i_f_t_i_writer.html#a844b891d386fe1ccfbcaa24badbce383">vtkNIFTIWriter</a>
 </li>
 <li>RequestData()
-: <a class="el" href="classvtk_n_i_f_t_i_writer.html#a84b6e02c187621e8e261d4f7b274abd3">vtkNIFTIWriter</a>
+: <a class="el" href="classvtk_image_writer.html#a0e35dd1e061cdbf32da22d94fd89eac6">vtkImageWriter</a>
+, <a class="el" href="classvtk_image_algorithm.html#addc9f91ebe9386c31617c3e12166e10e">vtkImageAlgorithm</a>
+, <a class="el" href="classvtk_n_i_f_t_i_writer.html#a84b6e02c187621e8e261d4f7b274abd3">vtkNIFTIWriter</a>
 , <a class="el" href="classvtk_d_i_c_o_m_reader.html#aafba2d5da6c972d396fd185ac59f4ed0">vtkDICOMReader</a>
 , <a class="el" href="classvtk_d_i_c_o_m_writer.html#a664ddeef8b9289b9cceb9dfcf5e1793c">vtkDICOMWriter</a>
 , <a class="el" href="classvtk_n_i_f_t_i_reader.html#a8b96d8dabbee8db7db80350d579d6eb7">vtkNIFTIReader</a>
-, <a class="el" href="classvtk_image_algorithm.html#addc9f91ebe9386c31617c3e12166e10e">vtkImageAlgorithm</a>
-, <a class="el" href="classvtk_image_writer.html#a0e35dd1e061cdbf32da22d94fd89eac6">vtkImageWriter</a>
 </li>
 <li>RequestInformation()
 : <a class="el" href="classvtk_n_i_f_t_i_reader.html#a4dbb993f0a3ed100c3bab75aeff39288">vtkNIFTIReader</a>
@@ -152,6 +158,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>RescaleBuffer()
 : <a class="el" href="classvtk_d_i_c_o_m_reader.html#aa3b353aa870b63b44b0128b3e761d86e">vtkDICOMReader</a>
+</li>
+<li>ResolvePrivateTag()
+: <a class="el" href="classvtk_d_i_c_o_m_meta_data.html#abee072ea5f551227696b581fcb6dd7a4">vtkDICOMMetaData</a>
+, <a class="el" href="classvtk_d_i_c_o_m_item.html#a459b23211d67498d390746e39e7ce7e0">vtkDICOMItem</a>
+</li>
+<li>ResolvePrivateTagForWriting()
+: <a class="el" href="classvtk_d_i_c_o_m_item.html#a4101eb0c31177585e42f245ac6d19eaf">vtkDICOMItem</a>
+, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a656c9b01c4aa9e80601162c27bcad7ff">vtkDICOMMetaData</a>
 </li>
 </ul>
 </div>
@@ -169,7 +183,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 3 2014 10:20:19 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jun 9 2014 22:45:27 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -141,14 +141,16 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetBufferSize</b> ()</
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70bd0f342f376a1ec5c0c1c70de1e6c6"></a><!-- doxytag: member="vtkDICOMCompiler::WriteHeader" ref="a70bd0f342f376a1ec5c0c1c70de1e6c6" args="()" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#a70bd0f342f376a1ec5c0c1c70de1e6c6">WriteHeader</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Write the metadata to the file. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#aa1b352f9c0df95a8ea1cf5985e032548">WritePixelData</a> (const char *cp, vtkIdType size)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Write all of the pixel data in one go.  <a href="#aa1b352f9c0df95a8ea1cf5985e032548"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac91d9c23fc050ea02bee31a558af5e5a"></a><!-- doxytag: member="vtkDICOMCompiler::WriteFrame" ref="ac91d9c23fc050ea02bee31a558af5e5a" args="(const char *cp, vtkIdType size)" -->
-virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#ac91d9c23fc050ea02bee31a558af5e5a">WriteFrame</a> (const char *cp, vtkIdType size)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#a4be9a45e6c8515606da89725f1f681d5">WritePixelData</a> (const unsigned char *cp, vtkIdType size)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Write all of the pixel data in one go.  <a href="#a4be9a45e6c8515606da89725f1f681d5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e6c570507d184c1b48934c948e6a0e5"></a><!-- doxytag: member="vtkDICOMCompiler::WriteFrame" ref="a0e6c570507d184c1b48934c948e6a0e5" args="(const unsigned char *cp, vtkIdType size)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#a0e6c570507d184c1b48934c948e6a0e5">WriteFrame</a> (const unsigned char *cp, vtkIdType size)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Write one frame to the end of the file. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02acfb029938bdfca30fb6714c6fc484"></a><!-- doxytag: member="vtkDICOMCompiler::Close" ref="a02acfb029938bdfca30fb6714c6fc484" args="()" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#a02acfb029938bdfca30fb6714c6fc484">Close</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Close the file. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#a6db45552e148d80c011fb6a2da8b26d8">CloseAndRemove</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Close the file and delete it.  <a href="#a6db45552e148d80c011fb6a2da8b26d8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a165e291c1f2b1aa8338855f8ff87ef8e"></a><!-- doxytag: member="vtkDICOMCompiler::GetErrorCode" ref="a165e291c1f2b1aa8338855f8ff87ef8e" args="()" -->
 unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#a165e291c1f2b1aa8338855f8ff87ef8e">GetErrorCode</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the IO error code. <br/></td></tr>
@@ -177,6 +179,9 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c15870128c07adbda6423eebd884d0e"></a><!-- doxytag: member="vtkDICOMCompiler::CompileError" ref="a3c15870128c07adbda6423eebd884d0e" args="(const char *message)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#a3c15870128c07adbda6423eebd884d0e">CompileError</a> (const char *message)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Report an error while compiling the file. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a910f117aed45be91f8332f51ae13b8ff"></a><!-- doxytag: member="vtkDICOMCompiler::DiskFullError" ref="a910f117aed45be91f8332f51ae13b8ff" args="()" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#a910f117aed45be91f8332f51ae13b8ff">DiskFullError</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">React to "disk full" by deleting file and reporting error. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d90d62bcf924226210d908e743408dd"></a><!-- doxytag: member="vtkDICOMCompiler::SetErrorCode" ref="a6d90d62bcf924226210d908e743408dd" args="(unsigned long e)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#a6d90d62bcf924226210d908e743408dd">SetErrorCode</a> (unsigned long e)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the error code. <br/></td></tr>
@@ -189,6 +194,12 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6e585d88fc23f4ec3efc397c386ec49"></a><!-- doxytag: member="vtkDICOMCompiler::WriteMetaData" ref="ad6e585d88fc23f4ec3efc397c386ec49" args="(unsigned char *&amp;cp, unsigned char *&amp;ep, vtkDICOMMetaData *data, int idx)" -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#ad6e585d88fc23f4ec3efc397c386ec49">WriteMetaData</a> (unsigned char *&amp;cp, unsigned char *&amp;ep, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *data, int idx)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Write the meta data following the meta header. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2d28e0b0bdaac2f6e383cf79d859fc5"></a><!-- doxytag: member="vtkDICOMCompiler::WriteFragments" ref="ad2d28e0b0bdaac2f6e383cf79d859fc5" args="()" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#ad2d28e0b0bdaac2f6e383cf79d859fc5">WriteFragments</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Write the fragments of the compressed data. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac32aca4e8d6f49fec26acb2f80e89a20"></a><!-- doxytag: member="vtkDICOMCompiler::FreeFragments" ref="ac32aca4e8d6f49fec26acb2f80e89a20" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#ac32aca4e8d6f49fec26acb2f80e89a20">FreeFragments</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Free any fragments that are stored in memory. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c7baaad645e0ab5116c6ada6bfdbf6f"></a><!-- doxytag: member="vtkDICOMCompiler::ComputePixelDataSize" ref="a4c7baaad645e0ab5116c6ada6bfdbf6f" args="()" -->
 unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_compiler.html#a4c7baaad645e0ab5116c6ada6bfdbf6f">ComputePixelDataSize</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compute the size of the pixel data (0xffffffff if compressed). <br/></td></tr>
@@ -214,24 +225,28 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>TransferSyntaxUID</
 <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>MetaData</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac64ec951a496da18963e6542c1923a56"></a><!-- doxytag: member="vtkDICOMCompiler::SeriesUIDs" ref="ac64ec951a496da18963e6542c1923a56" args="" -->
 vtkStringArray *&nbsp;</td><td class="memItemRight" valign="bottom"><b>SeriesUIDs</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88cf3749de3955ca18b51f7a7fc7dbd1"></a><!-- doxytag: member="vtkDICOMCompiler::OutputFile" ref="a88cf3749de3955ca18b51f7a7fc7dbd1" args="" -->
-FILE *&nbsp;</td><td class="memItemRight" valign="bottom"><b>OutputFile</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc0b569a1b50caa2a3c64c4f020e597d"></a><!-- doxytag: member="vtkDICOMCompiler::Buffer" ref="adc0b569a1b50caa2a3c64c4f020e597d" args="" -->
-char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>Buffer</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65d8deb2e339bbf45b788ed656915117"></a><!-- doxytag: member="vtkDICOMCompiler::OutputFile" ref="a65d8deb2e339bbf45b788ed656915117" args="" -->
+<a class="el" href="classvtk_d_i_c_o_m_file.html">vtkDICOMFile</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>OutputFile</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9faa2157a4b852d36c4349fe9c4dfdd"></a><!-- doxytag: member="vtkDICOMCompiler::Buffer" ref="ad9faa2157a4b852d36c4349fe9c4dfdd" args="" -->
+unsigned char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>Buffer</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fbda26ae17a79282fcd422ca96fa650"></a><!-- doxytag: member="vtkDICOMCompiler::FrameData" ref="a3fbda26ae17a79282fcd422ca96fa650" args="" -->
+unsigned char **&nbsp;</td><td class="memItemRight" valign="bottom"><b>FrameData</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f6f0cf85f36eec6bf49fdc6655c4077"></a><!-- doxytag: member="vtkDICOMCompiler::FrameLength" ref="a4f6f0cf85f36eec6bf49fdc6655c4077" args="" -->
+unsigned int *&nbsp;</td><td class="memItemRight" valign="bottom"><b>FrameLength</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af074407fa28d261235ad0af0ea359514"></a><!-- doxytag: member="vtkDICOMCompiler::FrameCounter" ref="af074407fa28d261235ad0af0ea359514" args="" -->
+unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><b>FrameCounter</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac18e06afe323fc0b65bfe873dd8ea456"></a><!-- doxytag: member="vtkDICOMCompiler::BufferSize" ref="ac18e06afe323fc0b65bfe873dd8ea456" args="" -->
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>BufferSize</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad94b873606fcaa575c125fbb22125e6f"></a><!-- doxytag: member="vtkDICOMCompiler::ChunkSize" ref="ad94b873606fcaa575c125fbb22125e6f" args="" -->
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>ChunkSize</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fadb535b840e0da6408aabeb2e72b6b"></a><!-- doxytag: member="vtkDICOMCompiler::Index" ref="a9fadb535b840e0da6408aabeb2e72b6b" args="" -->
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>Index</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae97e10b2a05b17ec2a2cc246693e15b5"></a><!-- doxytag: member="vtkDICOMCompiler::FrameCounter" ref="ae97e10b2a05b17ec2a2cc246693e15b5" args="" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>FrameCounter</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a932956bb9c68e5b3f0bb3498e0673a41"></a><!-- doxytag: member="vtkDICOMCompiler::BigEndian" ref="a932956bb9c68e5b3f0bb3498e0673a41" args="" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>BigEndian</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0517e663c89d08cf324afde83f41019a"></a><!-- doxytag: member="vtkDICOMCompiler::Compressed" ref="a0517e663c89d08cf324afde83f41019a" args="" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>Compressed</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1bd0fba34123f752550b663ac3651a0"></a><!-- doxytag: member="vtkDICOMCompiler::KeepOriginalPixelDataVR" ref="aa1bd0fba34123f752550b663ac3651a0" args="" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>KeepOriginalPixelDataVR</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f60d2286b9bfc7d20a7320d58544144"></a><!-- doxytag: member="vtkDICOMCompiler::BigEndian" ref="a8f60d2286b9bfc7d20a7320d58544144" args="" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>BigEndian</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66de6b10fa6f6fe48c153ede9571ec90"></a><!-- doxytag: member="vtkDICOMCompiler::Compressed" ref="a66de6b10fa6f6fe48c153ede9571ec90" args="" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>Compressed</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89a3a1ab8caaeba8050b6d068e8be35d"></a><!-- doxytag: member="vtkDICOMCompiler::KeepOriginalPixelDataVR" ref="a89a3a1ab8caaeba8050b6d068e8be35d" args="" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>KeepOriginalPixelDataVR</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b99e9d4bf20e251d9b2daf0dafe7cfd"></a><!-- doxytag: member="vtkDICOMCompiler::ErrorCode" ref="a2b99e9d4bf20e251d9b2daf0dafe7cfd" args="" -->
 unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><b>ErrorCode</b></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-attribs"></a>
@@ -247,6 +262,26 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMCompilerInte
 <p>A writer for DICOM meta data. </p>
 <p>This class provides routines for compiling a <a class="el" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> object into a DICOM file. </p>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a6db45552e148d80c011fb6a2da8b26d8"></a><!-- doxytag: member="vtkDICOMCompiler::CloseAndRemove" ref="a6db45552e148d80c011fb6a2da8b26d8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void vtkDICOMCompiler::CloseAndRemove </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Close the file and delete it. </p>
+<p>This method should be called if, for any reason, the writing of the file could not be completed. </p>
+
+</div>
+</div>
 <a class="anchor" id="a3f8cd40370435ef0b09c68eac6c76224"></a><!-- doxytag: member="vtkDICOMCompiler::FlushBuffer" ref="a3f8cd40370435ef0b09c68eac6c76224" args="(unsigned char *&amp;cp, unsigned char *&amp;ep)" -->
 <div class="memitem">
 <div class="memproto">
@@ -528,14 +563,14 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMCompilerInte
 
 </div>
 </div>
-<a class="anchor" id="aa1b352f9c0df95a8ea1cf5985e032548"></a><!-- doxytag: member="vtkDICOMCompiler::WritePixelData" ref="aa1b352f9c0df95a8ea1cf5985e032548" args="(const char *cp, vtkIdType size)" -->
+<a class="anchor" id="a4be9a45e6c8515606da89725f1f681d5"></a><!-- doxytag: member="vtkDICOMCompiler::WritePixelData" ref="a4be9a45e6c8515606da89725f1f681d5" args="(const unsigned char *cp, vtkIdType size)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void vtkDICOMCompiler::WritePixelData </td>
           <td>(</td>
-          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramtype">const unsigned char *&nbsp;</td>
           <td class="paramname"> <em>cp</em>, </td>
         </tr>
         <tr>
@@ -576,7 +611,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMCompilerInte
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 3 2014 10:20:22 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jun 9 2014 22:45:28 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -89,8 +89,8 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64a70fd3902b432b9d8a70cb7a59ba38"></a><!-- doxytag: member="vtkDICOMSCGenerator::PrintSelf" ref="a64a70fd3902b432b9d8a70cb7a59ba38" args="(ostream &amp;os, vtkIndent indent)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#a64a70fd3902b432b9d8a70cb7a59ba38">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Print information about this object. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#a015fcb49d3e13506f44646914de31682">GenerateInstance</a> (vtkInformation *info, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Generate an instance of one of the supported classes.  <a href="#a015fcb49d3e13506f44646914de31682"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#a8c72d5fc7c023b1b370d90cc4dda43ff">GenerateInstance</a> (vtkInformation *info)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Generate an instance of one of the supported classes.  <a href="#a8c72d5fc7c023b1b370d90cc4dda43ff"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa936b618c74e6bbd3c16678803f8ef47"></a><!-- doxytag: member="vtkDICOMSCGenerator::New" ref="aa936b618c74e6bbd3c16678803f8ef47" args="()" -->
@@ -101,20 +101,20 @@ static <a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html">vtkDICOMSCGene
 static <a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html">vtkDICOMSCGenerator</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>SafeDownCast</b> (<a class="el" href="classvtk_object.html">vtkObject</a> *o)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e0873e6cbcefdd59f2730c7509dfc6b"></a><!-- doxytag: member="vtkDICOMSCGenerator::GenerateSCEquipmentModule" ref="a9e0873e6cbcefdd59f2730c7509dfc6b" args="(vtkDICOMMetaData *meta)" -->
-virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#a9e0873e6cbcefdd59f2730c7509dfc6b">GenerateSCEquipmentModule</a> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a676cc2be41aa11cde4faf363deb69e5b"></a><!-- doxytag: member="vtkDICOMSCGenerator::GenerateSCEquipmentModule" ref="a676cc2be41aa11cde4faf363deb69e5b" args="(vtkDICOMMetaData *source)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#a676cc2be41aa11cde4faf363deb69e5b">GenerateSCEquipmentModule</a> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Generate the SC Equipment Module. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a137fc05bb4470541a76d61e6c1822624"></a><!-- doxytag: member="vtkDICOMSCGenerator::GenerateSCImageModule" ref="a137fc05bb4470541a76d61e6c1822624" args="(vtkDICOMMetaData *meta)" -->
-virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#a137fc05bb4470541a76d61e6c1822624">GenerateSCImageModule</a> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9b2bb4e9a6ea2896fcbf406d88cb2f8"></a><!-- doxytag: member="vtkDICOMSCGenerator::GenerateSCImageModule" ref="ae9b2bb4e9a6ea2896fcbf406d88cb2f8" args="(vtkDICOMMetaData *source)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#ae9b2bb4e9a6ea2896fcbf406d88cb2f8">GenerateSCImageModule</a> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Generate the SC Image Module. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab39400a86fc4be6fbbf35c4a0118305b"></a><!-- doxytag: member="vtkDICOMSCGenerator::GenerateSCMultiFrameImageModule" ref="ab39400a86fc4be6fbbf35c4a0118305b" args="(vtkDICOMMetaData *meta)" -->
-virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#ab39400a86fc4be6fbbf35c4a0118305b">GenerateSCMultiFrameImageModule</a> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acfcf371ac07ec7bb1cbc46d6e7a05568"></a><!-- doxytag: member="vtkDICOMSCGenerator::GenerateSCMultiFrameImageModule" ref="acfcf371ac07ec7bb1cbc46d6e7a05568" args="(vtkDICOMMetaData *source)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#acfcf371ac07ec7bb1cbc46d6e7a05568">GenerateSCMultiFrameImageModule</a> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Generate the SC Multi-Frame Image Module. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed35af2b84517b8375634e0361892d72"></a><!-- doxytag: member="vtkDICOMSCGenerator::GenerateSCInstance" ref="aed35af2b84517b8375634e0361892d72" args="(vtkInformation *info, vtkDICOMMetaData *meta)" -->
-virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#aed35af2b84517b8375634e0361892d72">GenerateSCInstance</a> (vtkInformation *info, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38f2c6ed5597231acb901824860823f6"></a><!-- doxytag: member="vtkDICOMSCGenerator::GenerateSCInstance" ref="a38f2c6ed5597231acb901824860823f6" args="(vtkInformation *info)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#a38f2c6ed5597231acb901824860823f6">GenerateSCInstance</a> (vtkInformation *info)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Instantiate a DICOM Secondary Capture Image object. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d8241a6c5b43436c1b1ef7b05c76a03"></a><!-- doxytag: member="vtkDICOMSCGenerator::GenerateSCMultiFrameInstance" ref="a5d8241a6c5b43436c1b1ef7b05c76a03" args="(vtkInformation *info, vtkDICOMMetaData *meta)" -->
-virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#a5d8241a6c5b43436c1b1ef7b05c76a03">GenerateSCMultiFrameInstance</a> (vtkInformation *info, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fb6c387e4f85c418c0ca634892075cb"></a><!-- doxytag: member="vtkDICOMSCGenerator::GenerateSCMultiFrameInstance" ref="a2fb6c387e4f85c418c0ca634892075cb" args="(vtkInformation *info)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#a2fb6c387e4f85c418c0ca634892075cb">GenerateSCMultiFrameInstance</a> (vtkInformation *info)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Instantiate a DICOM Secondary Capture Image object. <br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
@@ -127,7 +127,7 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <li>Multi-frame True Color SC, 1.2.840.10008.5.1.4.1.1.7.4 </li>
 </ul>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a015fcb49d3e13506f44646914de31682"></a><!-- doxytag: member="vtkDICOMSCGenerator::GenerateInstance" ref="a015fcb49d3e13506f44646914de31682" args="(vtkInformation *info, vtkDICOMMetaData *meta)" -->
+<a class="anchor" id="a8c72d5fc7c023b1b370d90cc4dda43ff"></a><!-- doxytag: member="vtkDICOMSCGenerator::GenerateInstance" ref="a8c72d5fc7c023b1b370d90cc4dda43ff" args="(vtkInformation *info)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -135,18 +135,9 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
           <td class="memname">virtual bool vtkDICOMSCGenerator::GenerateInstance </td>
           <td>(</td>
           <td class="paramtype">vtkInformation *&nbsp;</td>
-          <td class="paramname"> <em>info</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td>
-          <td class="paramname"> <em>meta</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [virtual]</code></td>
+          <td class="paramname"> <em>info</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -155,7 +146,7 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <p>Generate an instance of one of the supported classes. </p>
 <p>This is the primary interface method of this class. Given the information for a vtkImageData object, it will populate the attributes of the supplied <a class="el" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> object. </p>
 
-<p>Implements <a class="el" href="classvtk_d_i_c_o_m_generator.html#aac2713195d062e1fc0a4caca0e6eb5e1">vtkDICOMGenerator</a>.</p>
+<p>Implements <a class="el" href="classvtk_d_i_c_o_m_generator.html#adbaf3403e23e59c853be70ef06d43be8">vtkDICOMGenerator</a>.</p>
 
 </div>
 </div>
@@ -219,7 +210,7 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 3 2014 10:20:24 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jun 9 2014 22:45:31 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -93,6 +93,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkIntArray *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a02ff963c54b4b882137540677ec1f1c9">GetFrameIndexArray</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aebb691281854d0482ba86da37c9bd4c0">GetMetaData</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkMatrix4x4 *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ae6546e91e4207dc28ceff4cc18a57be6">GetPatientMatrix</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vtkMedicalImageProperties *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aefd549842f49ddaa9889c4e50cb7e1c7">GetMedicalImageProperties</a> ()</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -164,6 +165,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a4362c72dd9e1525b6992851101488db0">RelayError</a> (<a class="el" href="classvtk_object.html">vtkObject</a> *o, unsigned long e, void *data)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a23e52a2f940e80b1fb2273ecc091c155">SortFiles</a> (vtkIntArray *fileArray, vtkIntArray *frameArray)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a25accaaedc66a143b742dcd5ef773cde">NoSortFiles</a> (vtkIntArray *fileArray, vtkIntArray *frameArray)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a166ae74aa498f303046379d11bacaf21">UpdateMedicalImageProperties</a> ()</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -175,7 +177,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#accd83f5945ca9f459559a5b6d9b87637">ReadOneFile</a> (const char *filename, int idx, char *buffer, vtkIdType bufferSize)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aae132f17eb3bbc754f181d2cc2c3160e">ReadOneFile</a> (const char *filename, int idx, unsigned char *buffer, vtkIdType bufferSize)</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -183,11 +185,11 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a810f1659e8324bd3b31bbe45ed5075e7">ReadUncompressedFile</a> (const char *filename, int idx, char *buffer, vtkIdType bufferSize)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a9ebe0f28a99ecb101459c05333e1e244">ReadFileNative</a> (const char *filename, int idx, unsigned char *buffer, vtkIdType bufferSize)</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a18a13f75df51bed5a4e77443aa0f6178">ReadCompressedFile</a> (const char *filename, int idx, char *buffer, vtkIdType bufferSize)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a05e7529fa7f78428eff9ab7b3b99771c">ReadFileDelegated</a> (const char *filename, int idx, unsigned char *buffer, vtkIdType bufferSize)</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -197,6 +199,7 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a53ca548d12d84f57617e6643a97570c9">Sorting</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkMatrix4x4 *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a5e535ea392ecc5b92820b062cbf42164">PatientMatrix</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a26fb321168b0b82e563a7126d0bdb2a3">MetaData</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vtkMedicalImageProperties *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aa9beca5b23166a25ddc6495d82080f88">MedicalImageProperties</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ac630b32e1434f020bc06c7c1707aa90e">Parser</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkTypeInt64Array *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a224ba3ac24d715dfb73de4e6288b07f6">FileOffsetArray</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkIntArray *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a0fe92515c92e0e93a546bc6b416400fb">FileIndexArray</a></td></tr>
@@ -347,6 +350,24 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </div>
 <div class="memdoc">
 <p>Get an array that converts slice index to frame index. The purpose of this array is to identify individual frames in multi-frame DICOM files. The dimensions of this array are identical to the FileIndexArray. Use FileIndexArray to identify the file, then use FrameIndexArray to identify the frame within that file. </p>
+
+</div>
+</div>
+<a class="anchor" id="aefd549842f49ddaa9889c4e50cb7e1c7"></a><!-- doxytag: member="vtkDICOMReader::GetMedicalImageProperties" ref="aefd549842f49ddaa9889c4e50cb7e1c7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vtkMedicalImageProperties* vtkDICOMReader::GetMedicalImageProperties </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Get a MedicalImageProperties object for this file. </p>
 
 </div>
 </div>
@@ -596,12 +617,12 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
-<a class="anchor" id="a18a13f75df51bed5a4e77443aa0f6178"></a><!-- doxytag: member="vtkDICOMReader::ReadCompressedFile" ref="a18a13f75df51bed5a4e77443aa0f6178" args="(const char *filename, int idx, char *buffer, vtkIdType bufferSize)" -->
+<a class="anchor" id="a05e7529fa7f78428eff9ab7b3b99771c"></a><!-- doxytag: member="vtkDICOMReader::ReadFileDelegated" ref="a05e7529fa7f78428eff9ab7b3b99771c" args="(const char *filename, int idx, unsigned char *buffer, vtkIdType bufferSize)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool vtkDICOMReader::ReadCompressedFile </td>
+          <td class="memname">virtual bool vtkDICOMReader::ReadFileDelegated </td>
           <td>(</td>
           <td class="paramtype">const char *&nbsp;</td>
           <td class="paramname"> <em>filename</em>, </td>
@@ -615,7 +636,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramtype">unsigned char *&nbsp;</td>
           <td class="paramname"> <em>buffer</em>, </td>
         </tr>
         <tr>
@@ -632,11 +653,51 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
       </table>
 </div>
 <div class="memdoc">
-<p>Read a compressed DICOM file. </p>
+<p>Read a DICOM file via DCMTK or GDCM. </p>
 
 </div>
 </div>
-<a class="anchor" id="accd83f5945ca9f459559a5b6d9b87637"></a><!-- doxytag: member="vtkDICOMReader::ReadOneFile" ref="accd83f5945ca9f459559a5b6d9b87637" args="(const char *filename, int idx, char *buffer, vtkIdType bufferSize)" -->
+<a class="anchor" id="a9ebe0f28a99ecb101459c05333e1e244"></a><!-- doxytag: member="vtkDICOMReader::ReadFileNative" ref="a9ebe0f28a99ecb101459c05333e1e244" args="(const char *filename, int idx, unsigned char *buffer, vtkIdType bufferSize)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool vtkDICOMReader::ReadFileNative </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&nbsp;</td>
+          <td class="paramname"> <em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vtkIdType&nbsp;</td>
+          <td class="paramname"> <em>bufferSize</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Read an DICOM file directly. </p>
+
+</div>
+</div>
+<a class="anchor" id="aae132f17eb3bbc754f181d2cc2c3160e"></a><!-- doxytag: member="vtkDICOMReader::ReadOneFile" ref="aae132f17eb3bbc754f181d2cc2c3160e" args="(const char *filename, int idx, unsigned char *buffer, vtkIdType bufferSize)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -655,7 +716,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramtype">unsigned char *&nbsp;</td>
           <td class="paramname"> <em>buffer</em>, </td>
         </tr>
         <tr>
@@ -673,46 +734,6 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </div>
 <div class="memdoc">
 <p>Read one file. Specify the offset to the PixelData. </p>
-
-</div>
-</div>
-<a class="anchor" id="a810f1659e8324bd3b31bbe45ed5075e7"></a><!-- doxytag: member="vtkDICOMReader::ReadUncompressedFile" ref="a810f1659e8324bd3b31bbe45ed5075e7" args="(const char *filename, int idx, char *buffer, vtkIdType bufferSize)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool vtkDICOMReader::ReadUncompressedFile </td>
-          <td>(</td>
-          <td class="paramtype">const char *&nbsp;</td>
-          <td class="paramname"> <em>filename</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>idx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&nbsp;</td>
-          <td class="paramname"> <em>buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkIdType&nbsp;</td>
-          <td class="paramname"> <em>bufferSize</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Read an uncompressed DICOM file. </p>
 
 </div>
 </div>
@@ -981,6 +1002,24 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
+<a class="anchor" id="a166ae74aa498f303046379d11bacaf21"></a><!-- doxytag: member="vtkDICOMReader::UpdateMedicalImageProperties" ref="a166ae74aa498f303046379d11bacaf21" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void vtkDICOMReader::UpdateMedicalImageProperties </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Update the medical image properties; </p>
+
+</div>
+</div>
 <hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="a1b8a445cd18daf939fb0b65342f0803b"></a><!-- doxytag: member="vtkDICOMReader::DesiredStackID" ref="a1b8a445cd18daf939fb0b65342f0803b" args="[20]" -->
 <div class="memitem">
@@ -1035,6 +1074,20 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </div>
 <div class="memdoc">
 <p>An array to convert slice indices to input frames </p>
+
+</div>
+</div>
+<a class="anchor" id="aa9beca5b23166a25ddc6495d82080f88"></a><!-- doxytag: member="vtkDICOMReader::MedicalImageProperties" ref="aa9beca5b23166a25ddc6495d82080f88" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vtkMedicalImageProperties* <a class="el" href="classvtk_d_i_c_o_m_reader.html#aa9beca5b23166a25ddc6495d82080f88">vtkDICOMReader::MedicalImageProperties</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The MedicalImageProperties, for compatibility with other readers. </p>
 
 </div>
 </div>
@@ -1210,7 +1263,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 3 2014 10:20:24 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jun 9 2014 22:45:30 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

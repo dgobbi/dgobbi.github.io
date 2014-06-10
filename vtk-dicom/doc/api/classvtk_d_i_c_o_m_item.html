@@ -118,6 +118,10 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a185d883870bf10ad8c844ad551cdfe53"></a><!-- doxytag: member="vtkDICOMItem::End" ref="a185d883870bf10ad8c844ad551cdfe53" args="() const " -->
 <a class="el" href="classvtk_d_i_c_o_m_data_element_iterator.html">vtkDICOMDataElementIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#a185d883870bf10ad8c844ad551cdfe53">End</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get an end iterator for the list of data elements. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#a459b23211d67498d390746e39e7ce7e0">ResolvePrivateTag</a> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> ptag, const std::string &amp;creator) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Resolve a private tag, or return (ffff,ffff) if not resolved.  <a href="#a459b23211d67498d390746e39e7ce7e0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#a4101eb0c31177585e42f245ac6d19eaf">ResolvePrivateTagForWriting</a> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> ptag, const std::string &amp;creator)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Resolve a private tag, and add the creator to the data set.  <a href="#a4101eb0c31177585e42f245ac6d19eaf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_dict_entry.html">vtkDICOMDictEntry</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#ab421c9c2d93d8bda10863628a92ebd1d">FindDictEntry</a> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Look up a tag in the DICOM dictionary.  <a href="#ab421c9c2d93d8bda10863628a92ebd1d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08abc8da950c5de1447eb87ae2af9fba"></a><!-- doxytag: member="vtkDICOMItem::FindDictVR" ref="a08abc8da950c5de1447eb87ae2af9fba" args="(vtkDICOMTag tag) const " -->
@@ -173,6 +177,66 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 
 <p>Get the offset of this item from the beginning of the file. </p>
 <p>Some DICOM files, such as DICOMDIR files, index into sequences via byte offsets into the file. Because of this, it is necessary to know the byte offset of each item in the sequence. </p>
+
+</div>
+</div>
+<a class="anchor" id="a459b23211d67498d390746e39e7ce7e0"></a><!-- doxytag: member="vtkDICOMItem::ResolvePrivateTag" ref="a459b23211d67498d390746e39e7ce7e0" args="(vtkDICOMTag ptag, const std::string &amp;creator) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> vtkDICOMItem::ResolvePrivateTag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td>
+          <td class="paramname"> <em>ptag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>creator</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Resolve a private tag, or return (ffff,ffff) if not resolved. </p>
+<p>Private data elements are mobile, which means that different data sets might store them at different locations. Given a private data element which has a tag of (gggg,xxee) according to its dictionary, the first two element digits "xx" can change from one data set to the next, and the data set must have a "Creator Element" at (gggg,00xx) to allow the digits of "xx" to be resolved. Please read DICOM Part 5 Section 7.8 for additional information. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4101eb0c31177585e42f245ac6d19eaf"></a><!-- doxytag: member="vtkDICOMItem::ResolvePrivateTagForWriting" ref="a4101eb0c31177585e42f245ac6d19eaf" args="(vtkDICOMTag ptag, const std::string &amp;creator)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> vtkDICOMItem::ResolvePrivateTagForWriting </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td>
+          <td class="paramname"> <em>ptag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>creator</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Resolve a private tag, and add the creator to the data set. </p>
+<p>This method works like ResolvePrivateTag, except that if the creator is not found in the data set, it will be added. It should be used to resolve private tags that you plan to write to the data set. The returned tag will be (ffff,ffff) if there are no empty slots available for the creator. Every private group has 240 available slots. </p>
 
 </div>
 </div>
@@ -254,7 +318,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 3 2014 10:20:23 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jun 9 2014 22:45:29 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

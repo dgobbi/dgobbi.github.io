@@ -105,20 +105,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00088"></a>00088 
 <a name="l00093"></a>00093   <span class="keyword">static</span> <span class="keywordtype">void</span> SetImplementationVersionName(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);
 <a name="l00094"></a>00094 
-<a name="l00095"></a>00095 <span class="keyword">protected</span>:
-<a name="l00096"></a>00096   <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>();
-<a name="l00097"></a>00097   ~<a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>();
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099   <span class="keyword">static</span> <span class="keywordtype">char</span> UIDPrefix[64];
-<a name="l00100"></a>00100   <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationClassUID[65];
-<a name="l00101"></a>00101   <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationVersionName[17];
+<a name="l00096"></a>00096 
+<a name="l00100"></a><a class="code" href="classvtk_d_i_c_o_m_utilities.html#ae6e5cb3c6e0c8009c1d1d740c365cb12">00100</a>   <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html#ae6e5cb3c6e0c8009c1d1d740c365cb12" title="Unpack one little-endian int from a stream of bytes.">UnpackUnsignedInt</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp) {
+<a name="l00101"></a>00101     <span class="keywordflow">return</span> cp[0] + (cp[1] &lt;&lt; 8) + (cp[2] &lt;&lt; 16) + (cp[3] &lt;&lt; 24); }
 <a name="l00102"></a>00102 
-<a name="l00103"></a>00103 <span class="keyword">private</span>:
-<a name="l00104"></a>00104   <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00105"></a>00105   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00106"></a>00106 };
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 <span class="preprocessor">#endif </span><span class="comment">/* __vtkDICOMUtilities_h */</span>
+<a name="l00104"></a>00104 
+<a name="l00108"></a><a class="code" href="classvtk_d_i_c_o_m_utilities.html#a43acf23027f948bb0e1d64c8c6657a08">00108</a>   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html#a43acf23027f948bb0e1d64c8c6657a08" title="Pack one little-endian int into a stream of bytes.">PackUnsignedInt</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp) {
+<a name="l00109"></a>00109     cp[0] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i);
+<a name="l00110"></a>00110     cp[1] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 8);
+<a name="l00111"></a>00111     cp[2] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 16);
+<a name="l00112"></a>00112     cp[3] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 24); }
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114 <span class="keyword">protected</span>:
+<a name="l00115"></a>00115   <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>();
+<a name="l00116"></a>00116   ~<a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>();
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118   <span class="keyword">static</span> <span class="keywordtype">char</span> UIDPrefix[64];
+<a name="l00119"></a>00119   <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationClassUID[65];
+<a name="l00120"></a>00120   <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationVersionName[17];
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122 <span class="keyword">private</span>:
+<a name="l00123"></a>00123   <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00124"></a>00124   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00125"></a>00125 };
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127 <span class="preprocessor">#endif </span><span class="comment">/* __vtkDICOMUtilities_h */</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -135,7 +146,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 3 2014 10:20:19 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jun 9 2014 22:45:27 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

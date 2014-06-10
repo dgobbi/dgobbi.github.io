@@ -152,6 +152,10 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetAttributeValue</b> (const <a class="el" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a> &amp;tag, double v)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af12093339430b8225059adab6a153c52"></a><!-- doxytag: member="vtkDICOMMetaData::SetAttributeValue" ref="af12093339430b8225059adab6a153c52" args="(const vtkDICOMTagPath &amp;tag, const std::string &amp;v)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetAttributeValue</b> (const <a class="el" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a> &amp;tag, const std::string &amp;v)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#abee072ea5f551227696b581fcb6dd7a4">ResolvePrivateTag</a> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> ptag, const std::string &amp;creator)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Resolve a private tag, or return (ffff,ffff) if not resolved.  <a href="#abee072ea5f551227696b581fcb6dd7a4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a656c9b01c4aa9e80601162c27bcad7ff">ResolvePrivateTagForWriting</a> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> ptag, const std::string &amp;creator)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Resolve a private tag, and add the creator to the data set.  <a href="#a656c9b01c4aa9e80601162c27bcad7ff"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_dict_entry.html">vtkDICOMDictEntry</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a4fb9bac8bb3aede014177887ed64c5d5">FindDictEntry</a> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Look up a tag in the DICOM dictionary.  <a href="#a4fb9bac8bb3aede014177887ed64c5d5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a318015a44a4aefab9f1e1c7b14f790e8"></a><!-- doxytag: member="vtkDICOMMetaData::FindDictVR" ref="a318015a44a4aefab9f1e1c7b14f790e8" args="(int idx, vtkDICOMTag tag)" -->
@@ -260,6 +264,27 @@ const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *&nbs
 
 </div>
 </div>
+<a class="anchor" id="a23f0032350e10fe80f446f4e3885ffff"></a><!-- doxytag: member="vtkDICOMMetaData::GetAttributeValue" ref="a23f0032350e10fe80f446f4e3885ffff" args="(vtkDICOMTag tag)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a>&amp; vtkDICOMMetaData::GetAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td>
+          <td class="paramname"> <em>tag</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get an attribute value. </p>
+<p>The tag will usually be specified in one of these two ways: GetAttributeValue(vtkDICOMTag(0x0008,0x1030)) or, using the dictionary enum type, GetAttributeValue(DC::StudyDescription). If the attribute is not present, then the returned value will be invalid, i.e. v.IsValid() will be false. </p>
+
+</div>
+</div>
 <a class="anchor" id="aeb79b9578e7efc2f43479cc536a9c35d"></a><!-- doxytag: member="vtkDICOMMetaData::GetAttributeValue" ref="aeb79b9578e7efc2f43479cc536a9c35d" args="(int idx, vtkDICOMTag tag)" -->
 <div class="memitem">
 <div class="memproto">
@@ -287,27 +312,6 @@ const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *&nbs
 
 <p>Get an attribute value for the specified file index. </p>
 <p>If this meta data object is used to hold the meta data for multiple image instances, then use this method to get an attribute value for a specific instance. If the attribute is not present, the value will be invalid, i.e. v.IsValid() will be false. </p>
-
-</div>
-</div>
-<a class="anchor" id="a23f0032350e10fe80f446f4e3885ffff"></a><!-- doxytag: member="vtkDICOMMetaData::GetAttributeValue" ref="a23f0032350e10fe80f446f4e3885ffff" args="(vtkDICOMTag tag)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a>&amp; vtkDICOMMetaData::GetAttributeValue </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td>
-          <td class="paramname"> <em>tag</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get an attribute value. </p>
-<p>The tag will usually be specified in one of these two ways: GetAttributeValue(vtkDICOMTag(0x0008,0x1030)) or, using the dictionary enum type, GetAttributeValue(DC::StudyDescription). If the attribute is not present, then the returned value will be invalid, i.e. v.IsValid() will be false. </p>
 
 </div>
 </div>
@@ -429,27 +433,21 @@ const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *&nbs
 
 </div>
 </div>
-<a class="anchor" id="a8115e49580d8103f42adf0ecffc7c307"></a><!-- doxytag: member="vtkDICOMMetaData::SetAttributeValue" ref="a8115e49580d8103f42adf0ecffc7c307" args="(int idx, vtkDICOMTag tag, const vtkDICOMValue &amp;v)" -->
+<a class="anchor" id="abee072ea5f551227696b581fcb6dd7a4"></a><!-- doxytag: member="vtkDICOMMetaData::ResolvePrivateTag" ref="abee072ea5f551227696b581fcb6dd7a4" args="(vtkDICOMTag ptag, const std::string &amp;creator)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void vtkDICOMMetaData::SetAttributeValue </td>
+          <td class="memname"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> vtkDICOMMetaData::ResolvePrivateTag </td>
           <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>idx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td>
-          <td class="paramname"> <em>tag</em>, </td>
+          <td class="paramname"> <em>ptag</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em></td><td>&nbsp;</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>creator</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -460,8 +458,38 @@ const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *&nbs
 </div>
 <div class="memdoc">
 
-<p>Set an attribute value for the image at file index "idx". </p>
-<p>Except for the method that takes a <a class="el" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a>, these methods will use the dictionary to find the VR for the attribute, and will attempt to convert the input data to the correct VR. Strings and doubles will be converted to integer values where necessary, and numeric values will be converted to strings where necessary. Note that if you specify a string value, it must either be an ASCII string, or it must be encoded in the SpecificCharacterSet for this data set. </p>
+<p>Resolve a private tag, or return (ffff,ffff) if not resolved. </p>
+<p>Private data elements are mobile, which means that different data sets might store them at different locations. Given a private data element which has a tag of (gggg,xxee) according to its dictionary, the first two element digits "xx" can change from one data set to the next, and the data set must have a "Creator Element" at (gggg,00xx) to allow the digits of "xx" to be resolved. Please read DICOM Part 5 Section 7.8 for additional information. </p>
+
+</div>
+</div>
+<a class="anchor" id="a656c9b01c4aa9e80601162c27bcad7ff"></a><!-- doxytag: member="vtkDICOMMetaData::ResolvePrivateTagForWriting" ref="a656c9b01c4aa9e80601162c27bcad7ff" args="(vtkDICOMTag ptag, const std::string &amp;creator)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> vtkDICOMMetaData::ResolvePrivateTagForWriting </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td>
+          <td class="paramname"> <em>ptag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>creator</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Resolve a private tag, and add the creator to the data set. </p>
+<p>This method works like ResolvePrivateTag, except that if the creator is not found in the data set, it will be added. It should be used to resolve private tags that you plan to write to the data set. The returned tag will be (ffff,ffff) if there are no empty slots available for the creator. Every private group has 240 available slots. </p>
 
 </div>
 </div>
@@ -501,6 +529,42 @@ const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *&nbs
 
 </div>
 </div>
+<a class="anchor" id="a8115e49580d8103f42adf0ecffc7c307"></a><!-- doxytag: member="vtkDICOMMetaData::SetAttributeValue" ref="a8115e49580d8103f42adf0ecffc7c307" args="(int idx, vtkDICOMTag tag, const vtkDICOMValue &amp;v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMMetaData::SetAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td>
+          <td class="paramname"> <em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>v</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set an attribute value for the image at file index "idx". </p>
+<p>Except for the method that takes a <a class="el" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a>, these methods will use the dictionary to find the VR for the attribute, and will attempt to convert the input data to the correct VR. Strings and doubles will be converted to integer values where necessary, and numeric values will be converted to strings where necessary. Note that if you specify a string value, it must either be an ASCII string, or it must be encoded in the SpecificCharacterSet for this data set. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="vtk_d_i_c_o_m_meta_data_8h_source.html">vtkDICOMMetaData.h</a></li>
 </ul>
@@ -519,7 +583,7 @@ const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *&nbs
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 3 2014 10:20:23 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jun 9 2014 22:45:30 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
