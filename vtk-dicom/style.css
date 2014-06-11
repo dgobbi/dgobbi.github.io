@@ -105,6 +105,14 @@ p a {
 p a:hover {
 	color : #294A9B;
 }
+table {
+	color : #000000;
+	margin-top : 5px;
+	padding-bottom : 5px;
+	margin-bottom : 0px;
+	margin-left : 20px;
+	margin-right : 20px;
+}
 ul {
         color : #000000;
         margin-top : 5px;

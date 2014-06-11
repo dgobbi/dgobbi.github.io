@@ -14,8 +14,9 @@
 <ol>
 <li>Provide easy access to all of the per-slice DICOM meta data</li>
 <li>Generate VTK data sets with complete geometric fidelity</li>
+<li>Is efficient</li>
 </ol>
-<p>This was achieved through the creation of three core C++ classes: a <a href="doc/api/classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a>, a <a href="doc/api/classvtk_d_i_c_o_m_writer.html">vtkDICOMWriter</a>, and a <a href="doc/api/classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> class that provides full access to the meta data.</p>
+<p>This was achieved through the creation of three core C++ classes: a <a href="doc/api/classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a>, a <a href="doc/api/classvtk_d_i_c_o_m_writer.html">vtkDICOMWriter</a>, and a <a href="doc/api/classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> class that provides full access to the meta data.  The meta data and the DICOM dictionaries (standard and private) are stored in hash tables for efficient access.</p>
 
 <h2>Useful Links:</h2>
 <ul>
@@ -24,6 +25,120 @@
 <li><a href="doc/vtk-dicom.pdf" type="application/pdf">PDF documentation (LaTeX)</a></li>
 <li><a href="http://my.cdash.org/index.php?project=vtk-dicom">Testing dashboard (CDash)</a></li>
 </ul>
+
+<h2>Feature Table:</h2>
+
+<table width="689" border="1" cellspacing="0">
+<tbody>
+<tr>
+<th bgcolor="#efefef">File Feature</th>
+<th bgcolor="#efefef">Read</th>
+<th bgcolor="#efefef">Write</th>
+</tr>
+<tr>
+<td>Secondary Capture</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>Enhanced Secondary Capture</td> <td>Yes</td> <td>Soon</td>
+</tr>
+<tr>
+<td>MR</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>Enhanced MR</td> <td>Yes</td> <td>Soon</td>
+</tr>
+<tr>
+<td>CT</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>Enhanced CT</td> <td>Yes</td> <td>Soon</td>
+</tr>
+<tr>
+<td>PET</td> <td>Yes</td> <td>No</td>
+</tr>
+<tr>
+<td>Enhanced PET</td> <td>Yes</td> <td>No</td>
+</tr>
+<tr>
+<td>Ultrasound</td> <td>Yes</td> <td>No</td>
+</tr>
+<tr>
+<td>Radiography</td> <td>Yes</td> <td>No</td>
+</tr>
+<tr>
+<td>Nuclear Medicine</td> <td>Yes</td> <td>No</td>
+</tr>
+<tr>
+<td>Radiotherapy</td> <td>Partial</td> <td>No</td>
+</tr>
+<tr>
+<td>Multi-Frame</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>CINE</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>Cardiac</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>DICOMDIR</td> <td>Yes</td> <td>No</td>
+</tr>
+<tr>
+<td>Orientation/Position</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>Lookup Tables</td> <td>Soon</td> <td>Soon</td>
+</tr>
+<tr>
+<td>Overlays</td> <td>No</td> <td>No</td>
+</tr>
+<tr>
+<td>RLE Compression</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>JPEG Compression</td> <td>Via GDCM/DCMTK</td> <td>No</td>
+</tr>
+<tr>
+<td>JPEG-LS Compression</td> <td>Via GDCM/DCMTK</td> <td>No</td>
+</tr>
+<tr>
+<td>JPEG 2000</td> <td>Via GDCM</td> <td>No</td>
+</tr>
+<tr>
+<td>DICOM 2013 Dictionary</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>Private Dictionaries</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>ISO-8859 Character Sets</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>ISO-2022-jp (Japanese) </td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>ISO-2022-jp-2 (Japanese) </td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>ISO-2022-kr (Korean) </td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>UTF-8 (Unicode)</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>GB18030 (Chinese)</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>UUID Generation</td> <td>N/A</td> <td>Yes</td>
+</tr>
+<tr>
+<td>UID From Prefix</td> <td>N/A</td> <td>Yes</td>
+</tr>
+<tr>
+<td>Anonymization</td> <td>N/A</td> <td>No</td>
+</tr>
+</tbody>
+</table>
 
 <h2>Q and A Summary:</h2>
 
