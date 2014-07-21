@@ -209,6 +209,9 @@ Here is a list of all documented class members with links to the class documenta
 <li>SetFileSliceOrder()
 : <a class="el" href="classvtk_d_i_c_o_m_writer.html#a5b154f1ed9558b21b32edee64e9348d0">vtkDICOMWriter</a>
 </li>
+<li>SetFindQuery()
+: <a class="el" href="classvtk_d_i_c_o_m_directory.html#a1de28d3cd885574c26681bc29e7df949">vtkDICOMDirectory</a>
+</li>
 <li>SetGenerator()
 : <a class="el" href="classvtk_d_i_c_o_m_writer.html#a76cdac25f77a95d367b22c799f262858">vtkDICOMWriter</a>
 </li>
@@ -274,7 +277,7 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classvtk_d_i_c_o_m_sequence.html#a31c1bc44e27bc33086c82e2b39e18ab4">vtkDICOMSequence</a>
 </li>
 <li>SetKeepOriginalPixelDataVR()
-: <a class="el" href="classvtk_d_i_c_o_m_compiler.html#abd63abfd94722b41472901dccc0c0a06">vtkDICOMCompiler</a>
+: <a class="el" href="classvtk_d_i_c_o_m_compiler.html#aa70e91c4b14bd34d66290c1bc8961c2b">vtkDICOMCompiler</a>
 </li>
 <li>SetMaximumNumberOfPieces()
 : <a class="el" href="classvtk_data_object.html#ab24324d01c147b61d1b940a971d04156">vtkDataObject</a>
@@ -346,6 +349,9 @@ Here is a list of all documented class members with links to the class documenta
 </li>
 <li>SetQuaternB()
 : <a class="el" href="classvtk_n_i_f_t_i_header.html#a374586e8e2733d076b986bede41bd689">vtkNIFTIHeader</a>
+</li>
+<li>SetQuery()
+: <a class="el" href="classvtk_d_i_c_o_m_parser.html#a208ad790aa89b14b830fc81c26645c01">vtkDICOMParser</a>
 </li>
 <li>SetRASMatrix()
 : <a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a30fb2ab9d129befb6da4ba99e957c47b">vtkDICOMToRAS</a>
@@ -426,8 +432,8 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classvtk_image_reader2.html#a9cf169b147c5e5caba3d8587e578030f">vtkImageReader2</a>
 </li>
 <li>SetTimeAsVector()
-: <a class="el" href="classvtk_d_i_c_o_m_writer.html#aa517807fa13b5aafc907d660d67c1c79">vtkDICOMWriter</a>
-, <a class="el" href="classvtk_d_i_c_o_m_generator.html#a35c7fce8d2d4842fff3eb4ddf481818e">vtkDICOMGenerator</a>
+: <a class="el" href="classvtk_d_i_c_o_m_generator.html#a35c7fce8d2d4842fff3eb4ddf481818e">vtkDICOMGenerator</a>
+, <a class="el" href="classvtk_d_i_c_o_m_writer.html#aa517807fa13b5aafc907d660d67c1c79">vtkDICOMWriter</a>
 </li>
 <li>SetTimeDimension()
 : <a class="el" href="classvtk_d_i_c_o_m_generator.html#a76d7025ac7d8cf660a632cbc2ee97557">vtkDICOMGenerator</a>
@@ -441,7 +447,7 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classvtk_d_i_c_o_m_utilities.html#a72df4ba84aa87c437f9a32f3240a9cd4">vtkDICOMUtilities</a>
 </li>
 <li>SetUpdateExtent()
-: <a class="el" href="classvtk_data_object.html#aa8b26c7085450ed19506bc9dc2669c5e">vtkDataObject</a>
+: <a class="el" href="classvtk_data_object.html#ae83673454fa6ed024de8b72281a0a07d">vtkDataObject</a>
 </li>
 <li>SetUpdateExtentToWholeExtent()
 : <a class="el" href="classvtk_data_object.html#a60c5144107a2e788cdd3390e60f3c8eb">vtkDataObject</a>
@@ -465,8 +471,8 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classvtk_d_i_c_o_m_v_r.html#a40e983ebf7e6d989a33fbc28991c5b54a1c54b98f636c126e97df5d89ad769a3b">vtkDICOMVR</a>
 </li>
 <li>ShallowCopy()
-: <a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a4b005c947459308d85d0d090c0bb2d47">vtkDICOMMetaData</a>
-, <a class="el" href="classvtk_data_object.html#a04a5fb60bdbc929ce84f0cd14d911dbe">vtkDataObject</a>
+: <a class="el" href="classvtk_data_object.html#a04a5fb60bdbc929ce84f0cd14d911dbe">vtkDataObject</a>
+, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a4b005c947459308d85d0d090c0bb2d47">vtkDICOMMetaData</a>
 </li>
 <li>ShouldIReleaseData()
 : <a class="el" href="classvtk_data_object.html#aafe595f153759be6c7a195cf6b303fe1">vtkDataObject</a>
@@ -516,17 +522,17 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classvtk_d_i_c_o_m_writer.html#a3e9bbfb4f936e7b5224a6388bec801af">vtkDICOMWriter</a>
 </li>
 <li>Superclass
-: <a class="el" href="classvtk_d_i_c_o_m_generator.html#ae5af64a49be132bf90729c77e6f50805">vtkDICOMGenerator</a>
-, <a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#aa40feb295e6e858b4e34a720913ebe8b">vtkDICOMSCGenerator</a>
+: <a class="el" href="classvtk_d_i_c_o_m_compiler.html#a869897b37fea54c7a09019769e375d27">vtkDICOMCompiler</a>
 , <a class="el" href="classvtk_d_i_c_o_m_utilities.html#af433c2ef02b27ecd4fef1f78e58d0336">vtkDICOMUtilities</a>
-, <a class="el" href="classvtk_d_i_c_o_m_c_t_generator.html#a3ccfbe8853c1322e058da1689cc8ca89">vtkDICOMCTGenerator</a>
-, <a class="el" href="classvtk_d_i_c_o_m_m_r_generator.html#ab491bab557286bd81adde8fa9a2093d2">vtkDICOMMRGenerator</a>
-, <a class="el" href="classvtk_d_i_c_o_m_compiler.html#a869897b37fea54c7a09019769e375d27">vtkDICOMCompiler</a>
-, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html#ad0361573a23edf721bfa9434b82df7c9">vtkDICOMMetaData</a>
 , <a class="el" href="classvtk_d_i_c_o_m_parser.html#a9aa0a5c4692b873610b9e386fc9c427a">vtkDICOMParser</a>
+, <a class="el" href="classvtk_d_i_c_o_m_s_c_generator.html#aa40feb295e6e858b4e34a720913ebe8b">vtkDICOMSCGenerator</a>
+, <a class="el" href="classvtk_d_i_c_o_m_m_r_generator.html#ab491bab557286bd81adde8fa9a2093d2">vtkDICOMMRGenerator</a>
+, <a class="el" href="classvtk_d_i_c_o_m_generator.html#ae5af64a49be132bf90729c77e6f50805">vtkDICOMGenerator</a>
+, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html#ad0361573a23edf721bfa9434b82df7c9">vtkDICOMMetaData</a>
+, <a class="el" href="classvtk_d_i_c_o_m_c_t_generator.html#a3ccfbe8853c1322e058da1689cc8ca89">vtkDICOMCTGenerator</a>
 </li>
 <li>vtkDICOMSequence()
-: <a class="el" href="classvtk_d_i_c_o_m_sequence.html#a4fbd1fdfbdfc41c356f05170d3fba79f">vtkDICOMSequence</a>
+: <a class="el" href="classvtk_d_i_c_o_m_sequence.html#a41bf4a59ae3a0731c5c4442618602da3">vtkDICOMSequence</a>
 </li>
 </ul>
 </div>
@@ -544,7 +550,7 @@ Here is a list of all documented class members with links to the class documenta
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Jun 11 2014 09:34:36 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Jul 20 2014 21:14:18 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

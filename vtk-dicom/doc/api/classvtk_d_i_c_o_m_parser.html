@@ -105,10 +105,17 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the instance index to use when storing metadata. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa33e7e80a44c2dadce77877f37386a05"></a><!-- doxytag: member="vtkDICOMParser::GetIndex" ref="aa33e7e80a44c2dadce77877f37386a05" args="()" -->
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetIndex</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#a208ad790aa89b14b830fc81c26645c01">SetQuery</a> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *query)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set a query. Only matching data will be retrieved.  <a href="#a208ad790aa89b14b830fc81c26645c01"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a436bc6d24ab93a4df6148ac093e4f1b1"></a><!-- doxytag: member="vtkDICOMParser::GetQuery" ref="a436bc6d24ab93a4df6148ac093e4f1b1" args="()" -->
+<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetQuery</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#a4d218f0fdd562b4947751f31db4e58b3">SetGroups</a> (vtkUnsignedShortArray *groups)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set specific metadata groups to read.  <a href="#a4d218f0fdd562b4947751f31db4e58b3"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set specific metadata groups to read (obsolete).  <a href="#a4d218f0fdd562b4947751f31db4e58b3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af17370c3311f448ae544ae8d64b892b4"></a><!-- doxytag: member="vtkDICOMParser::GetGroups" ref="af17370c3311f448ae544ae8d64b892b4" args="()" -->
 vtkUnsignedShortArray *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetGroups</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6ddd4f93d7b4231b92d83dfe2dc064a"></a><!-- doxytag: member="vtkDICOMParser::GetQueryMatched" ref="af6ddd4f93d7b4231b92d83dfe2dc064a" args="()" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#af6ddd4f93d7b4231b92d83dfe2dc064a">GetQueryMatched</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This is true only if the file matched the query. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9804112ef6aa24f373fc83127a698c12"></a><!-- doxytag: member="vtkDICOMParser::GetPixelDataFound" ref="a9804112ef6aa24f373fc83127a698c12" args="()" -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#a9804112ef6aa24f373fc83127a698c12">GetPixelDataFound</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This is true only if PixelData was found in the file. <br/></td></tr>
@@ -168,6 +175,8 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>FileName</b></td></
 std::string&nbsp;</td><td class="memItemRight" valign="bottom"><b>TransferSyntax</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefb6a3aef868b4a99a6f17361864fddf"></a><!-- doxytag: member="vtkDICOMParser::MetaData" ref="aefb6a3aef868b4a99a6f17361864fddf" args="" -->
 <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>MetaData</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca448c9f15f7fc2fe4ef1f3e32cb3fe8"></a><!-- doxytag: member="vtkDICOMParser::Query" ref="aca448c9f15f7fc2fe4ef1f3e32cb3fe8" args="" -->
+<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>Query</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a146932124c1a35b586a90959b6c20331"></a><!-- doxytag: member="vtkDICOMParser::Groups" ref="a146932124c1a35b586a90959b6c20331" args="" -->
 vtkUnsignedShortArray *&nbsp;</td><td class="memItemRight" valign="bottom"><b>Groups</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac57b62dd9e0fe32f45559f816b7e96bf"></a><!-- doxytag: member="vtkDICOMParser::InputFile" ref="ac57b62dd9e0fe32f45559f816b7e96bf" args="" -->
@@ -190,6 +199,8 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>Index</b></td></tr>
 unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><b>ErrorCode</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3687693523af51300c4535ebe4a4fa7"></a><!-- doxytag: member="vtkDICOMParser::PixelDataFound" ref="ac3687693523af51300c4535ebe4a4fa7" args="" -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>PixelDataFound</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea9782fb1e768eec86717b570223d07a"></a><!-- doxytag: member="vtkDICOMParser::QueryMatched" ref="aea9782fb1e768eec86717b570223d07a" args="" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>QueryMatched</b></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a340d220183deb30825d7fc77523b8ad3"></a><!-- doxytag: member="vtkDICOMParser::vtkDICOMParserInternalFriendship" ref="a340d220183deb30825d7fc77523b8ad3" args="" -->
@@ -328,8 +339,29 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMParserIntern
 </div>
 <div class="memdoc">
 
-<p>Set specific metadata groups to read. </p>
-<p>If group 0x0002 is present in the file, it will always be read. </p>
+<p>Set specific metadata groups to read (obsolete). </p>
+<p>This method is obsolete, the <a class="el" href="classvtk_d_i_c_o_m_parser.html#a208ad790aa89b14b830fc81c26645c01" title="Set a query. Only matching data will be retrieved.">SetQuery()</a> method should be used instead. </p>
+
+</div>
+</div>
+<a class="anchor" id="a208ad790aa89b14b830fc81c26645c01"></a><!-- doxytag: member="vtkDICOMParser::SetQuery" ref="a208ad790aa89b14b830fc81c26645c01" args="(vtkDICOMMetaData *query)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMParser::SetQuery </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td>
+          <td class="paramname"> <em>query</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set a query. Only matching data will be retrieved. </p>
+<p>This can be used to scan a file for data that matches a given query. For more information on how matching is done, see the <a class="el" href="classvtk_d_i_c_o_m_value.html#ad3e040ab7b4eb75f422411c54b35f94b" title="Check if the value matches the specified find query value.">vtkDICOMValue::Matches()</a> method. </p>
 
 </div>
 </div>
@@ -351,7 +383,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMParserIntern
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Jun 11 2014 09:34:41 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Jul 20 2014 21:14:25 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

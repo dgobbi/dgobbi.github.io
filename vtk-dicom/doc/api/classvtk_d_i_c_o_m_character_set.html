@@ -110,6 +110,8 @@ unsigned char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the numerical code for this character set object. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_character_set.html#a048b2be7f1c8cc757d0db38c53c895b9">ConvertToUTF8</a> (const char *text, size_t l) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Convert text from this encoding to UTF-8.  <a href="#a048b2be7f1c8cc757d0db38c53c895b9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_character_set.html#ac7013877ffdfbefdc96eba999a6c7f38">CaseFoldedUTF8</a> (const char *text, size_t l) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Convert text into a form suitable for case-insensitive matching.  <a href="#ac7013877ffdfbefdc96eba999a6c7f38"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_character_set.html#a46215dba161c427fb5e95884e694a7ec">IsBiDirectional</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check for bidirectional character sets.  <a href="#a46215dba161c427fb5e95884e694a7ec"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_character_set.html#af08ab4cd91581f820b6e0152ce483859">CountBackslashes</a> (const char *text, size_t l) const </td></tr>
@@ -176,6 +178,36 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ac7013877ffdfbefdc96eba999a6c7f38"></a><!-- doxytag: member="vtkDICOMCharacterSet::CaseFoldedUTF8" ref="ac7013877ffdfbefdc96eba999a6c7f38" args="(const char *text, size_t l) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string vtkDICOMCharacterSet::CaseFoldedUTF8 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>l</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Convert text into a form suitable for case-insensitive matching. </p>
+<p>This function will perform case normalization on a string by converting it to lowercase, and by normalizing the forms of lowercase characters that do not have an exact uppercase equivalent. In some cases, it might increase the length of the string. It covers modern European scripts (including Greek and Cyrillic) and latin characters used in East Asian languages. </p>
+
+</div>
+</div>
 <a class="anchor" id="a048b2be7f1c8cc757d0db38c53c895b9"></a><!-- doxytag: member="vtkDICOMCharacterSet::ConvertToUTF8" ref="a048b2be7f1c8cc757d0db38c53c895b9" args="(const char *text, size_t l) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +304,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 <div class="memdoc">
 
 <p>Check for bidirectional character sets. </p>
-<p>This is used to check for character sets that are likely to contain characters that print right-to-left, specifically Hebrew and Arabic. Note that even though some parts of unaicode fall into this category, this flag is off for unicode and GB18030. </p>
+<p>This is used to check for character sets that are likely to contain characters that print right-to-left, specifically Hebrew and Arabic. Note that even though some parts of unicode fall into this category, this flag is off for unicode and GB18030. </p>
 
 </div>
 </div>
@@ -324,7 +356,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Jun 11 2014 09:34:39 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Jul 20 2014 21:14:23 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

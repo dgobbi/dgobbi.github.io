@@ -139,49 +139,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00121"></a><a class="code" href="classvtk_d_i_c_o_m_item.html#a185d883870bf10ad8c844ad551cdfe53">00121</a>   <a class="code" href="classvtk_d_i_c_o_m_data_element_iterator.html" title="A const iterator for a vtkDataElement list.">vtkDICOMDataElementIterator</a> <a class="code" href="classvtk_d_i_c_o_m_item.html#a185d883870bf10ad8c844ad551cdfe53" title="Get an end iterator for the list of data elements.">End</a>()<span class="keyword"> const </span>{
 <a name="l00122"></a>00122     <span class="keywordflow">return</span> (this-&gt;L ? &amp;this-&gt;L-&gt;Tail : 0); }
 <a name="l00123"></a>00123 
-<a name="l00125"></a>00125 
-<a name="l00134"></a>00134   <a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> ResolvePrivateTag(
-<a name="l00135"></a>00135     <a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> ptag, <span class="keyword">const</span> std::string&amp; creator) <span class="keyword">const</span>;
-<a name="l00136"></a>00136 
-<a name="l00138"></a>00138 
-<a name="l00145"></a>00145   <a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> ResolvePrivateTagForWriting(
-<a name="l00146"></a>00146     <a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> ptag, <span class="keyword">const</span> std::string&amp; creator);
-<a name="l00147"></a>00147 
-<a name="l00149"></a>00149 
-<a name="l00154"></a>00154   <a class="code" href="classvtk_d_i_c_o_m_dict_entry.html" title="An entry in the DICOM dictionary.">vtkDICOMDictEntry</a> FindDictEntry(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag) <span class="keyword">const</span>;
-<a name="l00155"></a>00155 
-<a name="l00157"></a>00157   <a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> FindDictVR(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag) <span class="keyword">const</span>;
+<a name="l00125"></a>00125   <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a> Query(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a>&amp; query) <span class="keyword">const</span>;
+<a name="l00126"></a>00126 
+<a name="l00128"></a>00128 
+<a name="l00137"></a>00137   <a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> ResolvePrivateTag(
+<a name="l00138"></a>00138     <a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> ptag, <span class="keyword">const</span> std::string&amp; creator) <span class="keyword">const</span>;
+<a name="l00139"></a>00139 
+<a name="l00141"></a>00141 
+<a name="l00148"></a>00148   <a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> ResolvePrivateTagForWriting(
+<a name="l00149"></a>00149     <a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> ptag, <span class="keyword">const</span> std::string&amp; creator);
+<a name="l00150"></a>00150 
+<a name="l00152"></a>00152 
+<a name="l00157"></a>00157   <a class="code" href="classvtk_d_i_c_o_m_dict_entry.html" title="An entry in the DICOM dictionary.">vtkDICOMDictEntry</a> FindDictEntry(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag) <span class="keyword">const</span>;
 <a name="l00158"></a>00158 
-<a name="l00159"></a>00159   <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a>&amp; o) <span class="keyword">const</span>;
-<a name="l00160"></a>00160   <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a>&amp; o)<span class="keyword"> const </span>{
-<a name="l00161"></a>00161     <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == o); }
-<a name="l00162"></a>00162 
-<a name="l00164"></a><a class="code" href="classvtk_d_i_c_o_m_item.html#aa50cb3d61cfc3fa65d44024ad9874089">00164</a>   <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a> &amp;<a class="code" href="classvtk_d_i_c_o_m_item.html#aa50cb3d61cfc3fa65d44024ad9874089" title="Assignment operator does reference counting.">operator=</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a> &amp;o) {
-<a name="l00165"></a>00165     <span class="keywordflow">if</span> (this-&gt;L != o.L) {
-<a name="l00166"></a>00166       <span class="keywordflow">if</span> (o.L) { ++(o.L-&gt;ReferenceCount); }
-<a name="l00167"></a>00167       <span class="keywordflow">if</span> (this-&gt;L &amp;&amp; --(this-&gt;L-&gt;ReferenceCount) == 0) { this-&gt;FreeList(); }
-<a name="l00168"></a>00168       this-&gt;L = o.L; }
-<a name="l00169"></a>00169     <span class="keywordflow">return</span> *<span class="keyword">this</span>; }
-<a name="l00170"></a>00170 
-<a name="l00171"></a>00171 <span class="keyword">private</span>:
-<a name="l00172"></a>00172   <span class="keywordtype">void</span> FreeList();
-<a name="l00173"></a>00173   <a class="code" href="classvtk_d_i_c_o_m_data_element.html" title="A data element in a DICOM data set.">vtkDICOMDataElement</a> *NewDataElement(<a class="code" href="classvtk_d_i_c_o_m_data_element.html" title="A data element in a DICOM data set.">vtkDICOMDataElement</a> **iter);
-<a name="l00174"></a>00174   <span class="keyword">static</span> <span class="keywordtype">void</span> CopyList(<span class="keyword">const</span> List *o, List *t);
-<a name="l00175"></a>00175   <span class="keyword">static</span> <span class="keywordtype">void</span> CopyDataElements(
-<a name="l00176"></a>00176     <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_data_element.html" title="A data element in a DICOM data set.">vtkDICOMDataElement</a> *begin, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_data_element.html" title="A data element in a DICOM data set.">vtkDICOMDataElement</a> *end,
-<a name="l00177"></a>00177     List *t);
-<a name="l00178"></a>00178 
-<a name="l00180"></a>00180   <a class="code" href="classvtk_d_i_c_o_m_data_element.html" title="A data element in a DICOM data set.">vtkDICOMDataElement</a> *FindDataElementOrInsert(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag);
+<a name="l00160"></a>00160   <a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> FindDictVR(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag) <span class="keyword">const</span>;
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162   <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a>&amp; o) <span class="keyword">const</span>;
+<a name="l00163"></a>00163   <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a>&amp; o)<span class="keyword"> const </span>{
+<a name="l00164"></a>00164     <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == o); }
+<a name="l00165"></a>00165 
+<a name="l00167"></a><a class="code" href="classvtk_d_i_c_o_m_item.html#aa50cb3d61cfc3fa65d44024ad9874089">00167</a>   <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a> &amp;<a class="code" href="classvtk_d_i_c_o_m_item.html#aa50cb3d61cfc3fa65d44024ad9874089" title="Assignment operator does reference counting.">operator=</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a> &amp;o) {
+<a name="l00168"></a>00168     <span class="keywordflow">if</span> (this-&gt;L != o.L) {
+<a name="l00169"></a>00169       <span class="keywordflow">if</span> (o.L) { ++(o.L-&gt;ReferenceCount); }
+<a name="l00170"></a>00170       <span class="keywordflow">if</span> (this-&gt;L &amp;&amp; --(this-&gt;L-&gt;ReferenceCount) == 0) { this-&gt;FreeList(); }
+<a name="l00171"></a>00171       this-&gt;L = o.L; }
+<a name="l00172"></a>00172     <span class="keywordflow">return</span> *<span class="keyword">this</span>; }
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174 <span class="keyword">private</span>:
+<a name="l00175"></a>00175   <span class="keywordtype">void</span> FreeList();
+<a name="l00176"></a>00176   <a class="code" href="classvtk_d_i_c_o_m_data_element.html" title="A data element in a DICOM data set.">vtkDICOMDataElement</a> *NewDataElement(<a class="code" href="classvtk_d_i_c_o_m_data_element.html" title="A data element in a DICOM data set.">vtkDICOMDataElement</a> **iter);
+<a name="l00177"></a>00177   <span class="keyword">static</span> <span class="keywordtype">void</span> CopyList(<span class="keyword">const</span> List *o, List *t);
+<a name="l00178"></a>00178   <span class="keyword">static</span> <span class="keywordtype">void</span> CopyDataElements(
+<a name="l00179"></a>00179     <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_data_element.html" title="A data element in a DICOM data set.">vtkDICOMDataElement</a> *begin, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_data_element.html" title="A data element in a DICOM data set.">vtkDICOMDataElement</a> *end,
+<a name="l00180"></a>00180     List *t);
 <a name="l00181"></a>00181 
-<a name="l00183"></a>00183   <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a> *FindItemOrInsert(
-<a name="l00184"></a>00184     <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html" title="A tag path for digging values out of sequence items.">vtkDICOMTagPath</a>&amp; tagpath, <a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> *tagptr);
-<a name="l00185"></a>00185 
-<a name="l00187"></a>00187   <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a> InvalidValue;
+<a name="l00183"></a>00183   <a class="code" href="classvtk_d_i_c_o_m_data_element.html" title="A data element in a DICOM data set.">vtkDICOMDataElement</a> *FindDataElementOrInsert(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag);
+<a name="l00184"></a>00184 
+<a name="l00186"></a>00186   <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a> *FindItemOrInsert(
+<a name="l00187"></a>00187     <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html" title="A tag path for digging values out of sequence items.">vtkDICOMTagPath</a>&amp; tagpath, <a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> *tagptr);
 <a name="l00188"></a>00188 
-<a name="l00190"></a>00190   List *L;
-<a name="l00191"></a>00191 };
-<a name="l00192"></a>00192 
-<a name="l00193"></a>00193 <span class="preprocessor">#endif </span><span class="comment">/* __vtkDICOMItem_h */</span>
+<a name="l00190"></a>00190   <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a> InvalidValue;
+<a name="l00191"></a>00191 
+<a name="l00193"></a>00193   List *L;
+<a name="l00194"></a>00194 };
+<a name="l00195"></a>00195 
+<a name="l00196"></a>00196 <span class="preprocessor">#endif </span><span class="comment">/* __vtkDICOMItem_h */</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -198,7 +200,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Jun 11 2014 09:34:36 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Jul 20 2014 21:14:18 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -244,6 +244,8 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Append value "i" to the supplied UTF8 string. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#a89a93f77023c1c24243b37d1eaf7522e">AppendValueToString</a> (std::string &amp;str, size_t i) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Append value "i" to the supplied string.  <a href="#a89a93f77023c1c24243b37d1eaf7522e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#ad3e040ab7b4eb75f422411c54b35f94b">Matches</a> (const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;value) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if the value matches the specified find query value.  <a href="#ad3e040ab7b4eb75f422411c54b35f94b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8980dbd6b9856cf71ba1e03c85a69d3"></a><!-- doxytag: member="vtkDICOMValue::operator=" ref="af8980dbd6b9856cf71ba1e03c85a69d3" args="(const vtkDICOMValue &amp;o)" -->
 <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#af8980dbd6b9856cf71ba1e03c85a69d3">operator=</a> (const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;o)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Override assignment operator for reference counting. <br/></td></tr>
@@ -503,7 +505,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValueFriendM
 <li>for binary numerical data (FL, FD, SS, US, SL, UL, OF, OW, OB) the number of binary values will be returned.</li>
 <li>for UN, the number of bytes will be returned.</li>
 <li>for attribute tags (VR is AT) the number of tags will be returned.</li>
-<li>for sequences (SQ and XQ) the number of items in the sequence, excluding any delimeters, will be returned. </li>
+<li>for sequences (SQ) the number of items in the sequence, excluding any delimeters, will be returned. </li>
 </ul>
 
 </div>
@@ -565,6 +567,27 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValueFriendM
 
 </div>
 </div>
+<a class="anchor" id="ad3e040ab7b4eb75f422411c54b35f94b"></a><!-- doxytag: member="vtkDICOMValue::Matches" ref="ad3e040ab7b4eb75f422411c54b35f94b" args="(const vtkDICOMValue &amp;value) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vtkDICOMValue::Matches </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>value</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if the value matches the specified find query value. </p>
+<p>This method is used to during "find" requests, according to the rules of DICOM Part 4.C.2.2.2 Attribute Matching. The standard wildcards "*" and "?" are supported, as well numeric ranges (for times and dates) through the use of two values separated by "-". Matches are case sensitive, except when the VR is PN. If the value has multiplicity, then the match will succeed if any of the values match. </p>
+
+</div>
+</div>
 <a class="anchor" id="ae50506d2d070e62938dc1ac02ede6376"></a><!-- doxytag: member="vtkDICOMValue::ReallocateUnsignedCharData" ref="ae50506d2d070e62938dc1ac02ede6376" args="(size_t vn)" -->
 <div class="memitem">
 <div class="memproto">
@@ -604,7 +627,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValueFriendM
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Jun 11 2014 09:34:42 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Jul 20 2014 21:14:26 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

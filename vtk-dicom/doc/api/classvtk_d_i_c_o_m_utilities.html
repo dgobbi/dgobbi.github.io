@@ -104,6 +104,12 @@ static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Numerically compare two UIDs, returns -1, 0, or +1. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a27acf7fab59b6eaee845af2750ec36a3">GenerateDateTime</a> (const char *zone)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Generate a DICOM date time string in the given timezone.  <a href="#a27acf7fab59b6eaee845af2750ec36a3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a35869117df85dcf4d3697b74e9384c18">GenerateDateTime</a> (long long microsecs, const char *zone)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Generate a DICOM date time string from long integer.  <a href="#a35869117df85dcf4d3697b74e9384c18"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static long long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a127e5cb8469ba6c9ebcbb46d6123d509">ConvertDateTime</a> (const char *datetime)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Convert a DICOM data time string into a long integer.  <a href="#a127e5cb8469ba6c9ebcbb46d6123d509"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static long long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#ad9e2475e8fa0b143b9903b7ae159db20">GetUTC</a> (long long *offset)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the current UTC time in microseconds and an offset to localtime.  <a href="#ad9e2475e8fa0b143b9903b7ae159db20"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a64dd7b8583e564152067a70325c041a6">IsDICOMFile</a> (const char *filename)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if the specified file is a DICOM file.  <a href="#a64dd7b8583e564152067a70325c041a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a572e89352ff50aa68ab2a74dae3277ea"></a><!-- doxytag: member="vtkDICOMUtilities::GetImplementationClassUID" ref="a572e89352ff50aa68ab2a74dae3277ea" args="()" -->
@@ -132,6 +138,27 @@ static char&nbsp;</td><td class="memItemRight" valign="bottom"><b>Implementation
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Utility functions for use with DICOM classes. </p>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a127e5cb8469ba6c9ebcbb46d6123d509"></a><!-- doxytag: member="vtkDICOMUtilities::ConvertDateTime" ref="a127e5cb8469ba6c9ebcbb46d6123d509" args="(const char *datetime)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long long vtkDICOMUtilities::ConvertDateTime </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>datetime</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Convert a DICOM data time string into a long integer. </p>
+<p>Given a DICOM date time string, generate a long integer that counts microseconds since the UNIX epoch (00:00:00 UTC on 1 Jan 1970). If the datetime string contains a timezone offset, then that timezone is used to convert the time to UTC. Otherwise, the local timezone (according to the computer's timezone preferences) is used to convert the time to UTC. The return value is always intended to be interpreted as a UTC time. </p>
+
+</div>
+</div>
 <a class="anchor" id="a27acf7fab59b6eaee845af2750ec36a3"></a><!-- doxytag: member="vtkDICOMUtilities::GenerateDateTime" ref="a27acf7fab59b6eaee845af2750ec36a3" args="(const char *zone)" -->
 <div class="memitem">
 <div class="memproto">
@@ -149,7 +176,37 @@ static char&nbsp;</td><td class="memItemRight" valign="bottom"><b>Implementation
 <div class="memdoc">
 
 <p>Generate a DICOM date time string in the given timezone. </p>
-<p>The time zone is to be given in the DICOM format of +HHMM or -HHMM where HH is the hour offset and MM is the minute offset. The sign is mandatory and cannot be omitted. </p>
+<p>The time zone is to be given in the DICOM format of +HHMM or -HHMM where HH is the hour offset and MM is the minute offset. If no time zone is given, then local time is used (according to the computer's time zone preferences). </p>
+
+</div>
+</div>
+<a class="anchor" id="a35869117df85dcf4d3697b74e9384c18"></a><!-- doxytag: member="vtkDICOMUtilities::GenerateDateTime" ref="a35869117df85dcf4d3697b74e9384c18" args="(long long microsecs, const char *zone)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string vtkDICOMUtilities::GenerateDateTime </td>
+          <td>(</td>
+          <td class="paramtype">long long&nbsp;</td>
+          <td class="paramname"> <em>microsecs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>zone</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Generate a DICOM date time string from long integer. </p>
+<p>Given an integer number of microseconds since the UNIX epoch (00:00:00 UTC on 1 Jan 1970), return a DICOM date time string for the given time zone. The time zone should be given in the format +HHMM or -HHMM. If no time zone is given, then the local zone is used (according to the computer's time zone preferences). </p>
 
 </div>
 </div>
@@ -180,6 +237,27 @@ static char&nbsp;</td><td class="memItemRight" valign="bottom"><b>Implementation
 
 <p>Generate a series of UIDs, sorted from low to high. </p>
 <p>Before passing the string array, call SetNumberOfValues() on the array to specify the number of UIDs that you want to be stored in it. The stored UIDs will be sorted, low to high. Generating a batch of UIDs is more efficient than calling <a class="el" href="classvtk_d_i_c_o_m_utilities.html#acf140f75ddcb750a99776700c87a0574" title="Generate a UID for the provided tag.">GenerateUID()</a> repeatedly. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad9e2475e8fa0b143b9903b7ae159db20"></a><!-- doxytag: member="vtkDICOMUtilities::GetUTC" ref="ad9e2475e8fa0b143b9903b7ae159db20" args="(long long *offset)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long long vtkDICOMUtilities::GetUTC </td>
+          <td>(</td>
+          <td class="paramtype">long long *&nbsp;</td>
+          <td class="paramname"> <em>offset</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the current UTC time in microseconds and an offset to localtime. </p>
+<p>The time is in microseconds since the UNIX epoch (00:00:00 UTC on 1 Jan 1970). The offset can be added to the returned UTC time in order to get the local time. If you do not need the offset, you can pass a null pointer. </p>
 
 </div>
 </div>
@@ -378,7 +456,7 @@ static char&nbsp;</td><td class="memItemRight" valign="bottom"><b>Implementation
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Jun 11 2014 09:34:42 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Jul 20 2014 21:14:26 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
