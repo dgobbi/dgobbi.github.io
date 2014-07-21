@@ -106,9 +106,6 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19c506e4a5d0ea4d102e186b5b6a323a"></a><!-- doxytag: member="vtkDICOMMetaData::End" ref="a19c506e4a5d0ea4d102e186b5b6a323a" args="()" -->
 <a class="el" href="classvtk_d_i_c_o_m_data_element_iterator.html">vtkDICOMDataElementIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a19c506e4a5d0ea4d102e186b5b6a323a">End</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get an end iterator for the list of data elements. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b1a79de21c1b47c123ea012a1c33fd9"></a><!-- doxytag: member="vtkDICOMMetaData::Query" ref="a9b1a79de21c1b47c123ea012a1c33fd9" args="(const vtkDICOMItem &amp;query)" -->
-<a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a9b1a79de21c1b47c123ea012a1c33fd9">Query</a> (const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;query)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">If this item matches the query, return matching attributes. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_data_element_iterator.html">vtkDICOMDataElementIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a82a038e0770cf0e3b65a0d8e6d85c5dc">Find</a> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the iterator for a specific data element.  <a href="#a82a038e0770cf0e3b65a0d8e6d85c5dc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1c6577c43a4c68414752cbb48e51f48"></a><!-- doxytag: member="vtkDICOMMetaData::HasAttribute" ref="aa1c6577c43a4c68414752cbb48e51f48" args="(vtkDICOMTag tag)" -->
@@ -496,42 +493,6 @@ const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *&nbs
 
 </div>
 </div>
-<a class="anchor" id="a8115e49580d8103f42adf0ecffc7c307"></a><!-- doxytag: member="vtkDICOMMetaData::SetAttributeValue" ref="a8115e49580d8103f42adf0ecffc7c307" args="(int idx, vtkDICOMTag tag, const vtkDICOMValue &amp;v)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void vtkDICOMMetaData::SetAttributeValue </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>idx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td>
-          <td class="paramname"> <em>tag</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Set an attribute value for the image at file index "idx". </p>
-<p>Except for the method that takes a <a class="el" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a>, these methods will use the dictionary to find the VR for the attribute, and will attempt to convert the input data to the correct VR. Strings and doubles will be converted to integer values where necessary, and numeric values will be converted to strings where necessary. Note that if you specify a string value, it must either be an ASCII string, or it must be encoded in the SpecificCharacterSet for this data set. </p>
-
-</div>
-</div>
 <a class="anchor" id="a75d51f949515cf20ddac0b3590c85f1a"></a><!-- doxytag: member="vtkDICOMMetaData::SetAttributeValue" ref="a75d51f949515cf20ddac0b3590c85f1a" args="(int idx, const vtkDICOMTagPath &amp;tag, const vtkDICOMValue &amp;v)" -->
 <div class="memitem">
 <div class="memproto">
@@ -568,6 +529,42 @@ const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *&nbs
 
 </div>
 </div>
+<a class="anchor" id="a8115e49580d8103f42adf0ecffc7c307"></a><!-- doxytag: member="vtkDICOMMetaData::SetAttributeValue" ref="a8115e49580d8103f42adf0ecffc7c307" args="(int idx, vtkDICOMTag tag, const vtkDICOMValue &amp;v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMMetaData::SetAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td>
+          <td class="paramname"> <em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>v</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set an attribute value for the image at file index "idx". </p>
+<p>Except for the method that takes a <a class="el" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a>, these methods will use the dictionary to find the VR for the attribute, and will attempt to convert the input data to the correct VR. Strings and doubles will be converted to integer values where necessary, and numeric values will be converted to strings where necessary. Note that if you specify a string value, it must either be an ASCII string, or it must be encoded in the SpecificCharacterSet for this data set. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="vtk_d_i_c_o_m_meta_data_8h_source.html">vtkDICOMMetaData.h</a></li>
 </ul>
@@ -586,7 +583,7 @@ const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *&nbs
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sun Jul 20 2014 21:14:24 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jul 21 2014 07:47:15 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

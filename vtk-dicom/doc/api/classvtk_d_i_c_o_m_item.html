@@ -118,9 +118,6 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a185d883870bf10ad8c844ad551cdfe53"></a><!-- doxytag: member="vtkDICOMItem::End" ref="a185d883870bf10ad8c844ad551cdfe53" args="() const " -->
 <a class="el" href="classvtk_d_i_c_o_m_data_element_iterator.html">vtkDICOMDataElementIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#a185d883870bf10ad8c844ad551cdfe53">End</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get an end iterator for the list of data elements. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2777ed658b1c6fc95c10deccf098f5fc"></a><!-- doxytag: member="vtkDICOMItem::Query" ref="a2777ed658b1c6fc95c10deccf098f5fc" args="(const vtkDICOMItem &amp;query) const " -->
-<a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#a2777ed658b1c6fc95c10deccf098f5fc">Query</a> (const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;query) const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">If this item matches the query, return matching attributes. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#a459b23211d67498d390746e39e7ce7e0">ResolvePrivateTag</a> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> ptag, const std::string &amp;creator) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Resolve a private tag, or return (ffff,ffff) if not resolved.  <a href="#a459b23211d67498d390746e39e7ce7e0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#a4101eb0c31177585e42f245ac6d19eaf">ResolvePrivateTagForWriting</a> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> ptag, const std::string &amp;creator)</td></tr>
@@ -243,36 +240,6 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 
 </div>
 </div>
-<a class="anchor" id="ab06bc968b5f20314fb99ca3db49f1b4b"></a><!-- doxytag: member="vtkDICOMItem::SetAttributeValue" ref="ab06bc968b5f20314fb99ca3db49f1b4b" args="(vtkDICOMTag tag, const vtkDICOMValue &amp;v)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void vtkDICOMItem::SetAttributeValue </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td>
-          <td class="paramname"> <em>tag</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Add a data element to this item. </p>
-<p>If you specify a string, it must either be an ASCII string, or it must be encoded in the SpecificCharacterSet for this item. </p>
-
-</div>
-</div>
 <a class="anchor" id="a124d1ccdbf3af21311298d01915bfd75"></a><!-- doxytag: member="vtkDICOMItem::SetAttributeValue" ref="a124d1ccdbf3af21311298d01915bfd75" args="(const vtkDICOMTagPath &amp;tag, const vtkDICOMValue &amp;v)" -->
 <div class="memitem">
 <div class="memproto">
@@ -303,6 +270,36 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 
 </div>
 </div>
+<a class="anchor" id="ab06bc968b5f20314fb99ca3db49f1b4b"></a><!-- doxytag: member="vtkDICOMItem::SetAttributeValue" ref="ab06bc968b5f20314fb99ca3db49f1b4b" args="(vtkDICOMTag tag, const vtkDICOMValue &amp;v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMItem::SetAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a>&nbsp;</td>
+          <td class="paramname"> <em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>v</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Add a data element to this item. </p>
+<p>If you specify a string, it must either be an ASCII string, or it must be encoded in the SpecificCharacterSet for this item. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="vtk_d_i_c_o_m_item_8h_source.html">vtkDICOMItem.h</a></li>
 </ul>
@@ -321,7 +318,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sun Jul 20 2014 21:14:24 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jul 21 2014 07:47:15 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
