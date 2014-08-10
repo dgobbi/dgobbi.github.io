@@ -202,6 +202,7 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>StreamingOff<
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a6d715f5c521fc747d3c552b536934321">ComputeInternalFileName</a> (int slice)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a0f707e5609adacbcde863cca36b5aaf9">FreeInternalFileName</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_writer.html#a1bc5c43b9f8308e5a1202f7b084c447c">GenerateMetaData</a> (vtkInformation *info)</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
@@ -294,6 +295,24 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </div>
 <div class="memdoc">
 <p>Compute the name of one of the output files. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0f707e5609adacbcde863cca36b5aaf9"></a><!-- doxytag: member="vtkDICOMWriter::FreeInternalFileName" ref="a0f707e5609adacbcde863cca36b5aaf9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMWriter::FreeInternalFileName </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Free the filename created by ComputeInternalFileName. </p>
 
 </div>
 </div>
@@ -893,7 +912,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Jul 21 2014 07:47:17 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Aug 10 2014 16:45:52 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

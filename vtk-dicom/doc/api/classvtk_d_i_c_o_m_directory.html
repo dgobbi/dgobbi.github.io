@@ -95,6 +95,9 @@ const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetDirectoryN
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the scan depth to use when no DICOMDIR is found.  <a href="#a2566dddffb8b326a4a80337b4047462e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b4948348ac3194437e540cb4b070012"></a><!-- doxytag: member="vtkDICOMDirectory::GetScanDepth" ref="a0b4948348ac3194437e540cb4b070012" args="()" -->
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetScanDepth</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1de28d3cd885574c26681bc29e7df949"></a><!-- doxytag: member="vtkDICOMDirectory::SetFindQuery" ref="a1de28d3cd885574c26681bc29e7df949" args="(const vtkDICOMItem &amp;query)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a1de28d3cd885574c26681bc29e7df949">SetFindQuery</a> (const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;query)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Specify a find query. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a043a7da9b287d93c301fde31d9483020">Update</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Update the information about the files.  <a href="#a043a7da9b287d93c301fde31d9483020"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d6cfbba39730ba873952552b7c27852"></a><!-- doxytag: member="vtkDICOMDirectory::Update" ref="a9d6cfbba39730ba873952552b7c27852" args="(int)" -->
@@ -119,12 +122,9 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a283986a8cfddbd34c8a34962475556ec"></a><!-- doxytag: member="vtkDICOMDirectory::GetPatientRecord" ref="a283986a8cfddbd34c8a34962475556ec" args="(int patient)" -->
 const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a283986a8cfddbd34c8a34962475556ec">GetPatientRecord</a> (int patient)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the directory attributes for a patient. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6698546ca3257e17d8acc04e0c06e3b3"></a><!-- doxytag: member="vtkDICOMDirectory::GetFirstStudyForPatient" ref="a6698546ca3257e17d8acc04e0c06e3b3" args="(int patient)" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a6698546ca3257e17d8acc04e0c06e3b3">GetFirstStudyForPatient</a> (int patient)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the first study for the patient. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a7617a885adfdd6a174fcb7ccde06eb"></a><!-- doxytag: member="vtkDICOMDirectory::GetLastStudyForPatient" ref="a9a7617a885adfdd6a174fcb7ccde06eb" args="(int patient)" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a9a7617a885adfdd6a174fcb7ccde06eb">GetLastStudyForPatient</a> (int patient)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the last study for a patient. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d37b9d12127878f9b4b5cb84814517d"></a><!-- doxytag: member="vtkDICOMDirectory::GetStudiesForPatient" ref="a4d37b9d12127878f9b4b5cb84814517d" args="(int patient)" -->
+vtkIntArray *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a4d37b9d12127878f9b4b5cb84814517d">GetStudiesForPatient</a> (int patient)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the studies for this patient. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee98647d6d8757b515dc069662352b9a"></a><!-- doxytag: member="vtkDICOMDirectory::GetFirstSeriesForStudy" ref="aee98647d6d8757b515dc069662352b9a" args="(int study)" -->
 int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#aee98647d6d8757b515dc069662352b9a">GetFirstSeriesForStudy</a> (int study)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the first series in a particular study. <br/></td></tr>
@@ -504,7 +504,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Jul 21 2014 07:47:15 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Aug 10 2014 16:45:49 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
