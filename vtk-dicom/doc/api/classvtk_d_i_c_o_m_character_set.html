@@ -84,14 +84,15 @@ Public Types</h2></td></tr>
 &nbsp;&nbsp;<b>ISO_IR_14</b> =  12, 
 <b>ISO_IR_192</b> =  13, 
 <b>GB18030</b> =  14, 
-<b>ISO_2022_OTHER</b> =  16, 
+<b>GBK</b> =  15, 
 <br/>
-&nbsp;&nbsp;<b>ISO_2022_IR_87</b> =  32, 
+&nbsp;&nbsp;<b>ISO_2022_IR_58</b> =  16, 
+<b>ISO_2022_IR_87</b> =  32, 
 <b>ISO_2022_IR_159</b> =  64, 
 <b>ISO_2022_IR_149</b> =  128, 
-<b>ISO_2022</b> =  240, 
 <br/>
-&nbsp;&nbsp;<b>Unknown</b> =  255
+&nbsp;&nbsp;<b>ISO_2022</b> =  240, 
+<b>Unknown</b> =  255
 <br/>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -133,7 +134,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Character sets. </p>
-<p>DICOM supports a fairly small number of single-byte and multi-byte character sets. The only VRs that support these character sets are PN, LO, SH, ST, LT, and ST (all other text VRs must be ASCII). In total, there is one 7-bit encoding (ASCII), eleven 8-bit single-byte encodings, two unicode multi-byte ecodings (UTF-8 and GB18030), and three iso-2022 multi-byte encodings. It is possible to use iso-2022 escape codes to switch between any encodings except for UTF-8 and GB18030, although only a subset of the iso-2022 escape codes are supported by DICOM. </p>
+<p>DICOM supports a fairly small number of single-byte and multi-byte character sets. The only VRs that support these character sets are PN, LO, SH, ST, LT, and ST (all other text VRs must be ASCII). In total, there is one 7-bit encoding (ASCII), eleven 8-bit single-byte encodings, three variable-length encodings (UTF-8, GB18030, GBK), and three iso-2022 multi-byte encodings. It is possible to use iso-2022 escape codes to switch between any encodings except for UTF-8 and GB18030/GBK, although only a subset of the iso-2022 escape codes are supported by DICOM. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8164a351dae05a37e7f7277a30602e57"></a><!-- doxytag: member="vtkDICOMCharacterSet::vtkDICOMCharacterSet" ref="a8164a351dae05a37e7f7277a30602e57" args="(int k)" -->
 <div class="memitem">
@@ -152,7 +153,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 <div class="memdoc">
 
 <p>Construct a character set object from a given code. </p>
-<p>The code can be any of the enumerated code values. The ISO_2022 codes are a bitfield and they can be combined with most other codes, but they cannot be combined with ISO_IR_192 or GB18030. </p>
+<p>The code can be any of the enumerated code values. The ISO 2022 codes are a bitfield and they can be combined with most other codes, but they cannot be combined with ISO_IR_192, GB18030, or GBK. </p>
 
 </div>
 </div>
@@ -304,7 +305,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 <div class="memdoc">
 
 <p>Check for bidirectional character sets. </p>
-<p>This is used to check for character sets that are likely to contain characters that print right-to-left, specifically Hebrew and Arabic. Note that even though some parts of unicode fall into this category, this flag is off for unicode and GB18030. </p>
+<p>This is used to check for character sets that are likely to contain characters that print right-to-left, specifically Hebrew and Arabic. Note that even though some parts of unicode fall into this category, this flag is off for unicode and GB18030/GBK. </p>
 
 </div>
 </div>
@@ -356,7 +357,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Aug 19 2014 12:06:16 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 29 2015 21:56:21 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

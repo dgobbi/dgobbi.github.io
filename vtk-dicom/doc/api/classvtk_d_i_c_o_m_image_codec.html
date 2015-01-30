@@ -110,11 +110,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct a codec object from the given code.  <a href="#ae60f5de1fba8c5121b1b56ee9363e26f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_image_codec.html#a9769f9f3b23296484bbf218af0ab3d7e">vtkDICOMImageCodec</a> (const std::string &amp;syntax)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get a codec for the specified transfer syntax UID.  <a href="#a9769f9f3b23296484bbf218af0ab3d7e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade5f0f064af2e9f1fd5a4ab4f10474c3"></a><!-- doxytag: member="vtkDICOMImageCodec::GetTransferSyntaxUID" ref="ade5f0f064af2e9f1fd5a4ab4f10474c3" args="() const " -->
-std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_image_codec.html#ade5f0f064af2e9f1fd5a4ab4f10474c3">GetTransferSyntaxUID</a> () const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the transfer syntax for this codec. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">unsigned char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_image_codec.html#a42482ef95f14ed1cf68fa0a91d5dc550">GetKey</a> () const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the numerical identifier for this codec.  <a href="#a42482ef95f14ed1cf68fa0a91d5dc550"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_image_codec.html#ade5f0f064af2e9f1fd5a4ab4f10474c3">GetTransferSyntaxUID</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the transfer syntax for this codec.  <a href="#ade5f0f064af2e9f1fd5a4ab4f10474c3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42482ef95f14ed1cf68fa0a91d5dc550"></a><!-- doxytag: member="vtkDICOMImageCodec::GetKey" ref="a42482ef95f14ed1cf68fa0a91d5dc550" args="() const " -->
+unsigned char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_image_codec.html#a42482ef95f14ed1cf68fa0a91d5dc550">GetKey</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the numerical identifier for this codec. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_image_codec.html#a57a24dd41cf7f6efc9ee880c6a4df456">Decode</a> (const <a class="el" href="structvtk_d_i_c_o_m_image_codec_1_1_image_format.html">ImageFormat</a> &amp;image, const unsigned char *source, size_t sourceSize, unsigned char *dest, size_t destSize) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Decode a compressed image into the given destination buffer.  <a href="#a57a24dd41cf7f6efc9ee880c6a4df456"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_image_codec.html#a238027354e08e91cfdde704adcc09248">Encode</a> (const <a class="el" href="structvtk_d_i_c_o_m_image_codec_1_1_image_format.html">ImageFormat</a> &amp;image, const unsigned char *source, size_t sourceSize, unsigned char **dest, size_t *destSize) const </td></tr>
@@ -275,22 +275,22 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 
 </div>
 </div>
-<a class="anchor" id="a42482ef95f14ed1cf68fa0a91d5dc550"></a><!-- doxytag: member="vtkDICOMImageCodec::GetKey" ref="a42482ef95f14ed1cf68fa0a91d5dc550" args="() const " -->
+<a class="anchor" id="ade5f0f064af2e9f1fd5a4ab4f10474c3"></a><!-- doxytag: member="vtkDICOMImageCodec::GetTransferSyntaxUID" ref="ade5f0f064af2e9f1fd5a4ab4f10474c3" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char vtkDICOMImageCodec::GetKey </td>
+          <td class="memname">std::string vtkDICOMImageCodec::GetTransferSyntaxUID </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [inline]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Get the numerical identifier for this codec. </p>
+<p>Get the transfer syntax for this codec. </p>
 <p>If the object is invalid, then an empty string is returned. </p>
 
 </div>
@@ -313,7 +313,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Aug 19 2014 12:06:18 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 29 2015 21:56:22 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

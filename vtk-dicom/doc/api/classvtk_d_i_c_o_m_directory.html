@@ -91,6 +91,14 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the input directory.  <a href="#ae9846c44efbc8ef69b1bd049ba65f70b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10faa0bb1a7d769aebc042ae27b671c2"></a><!-- doxytag: member="vtkDICOMDirectory::GetDirectoryName" ref="a10faa0bb1a7d769aebc042ae27b671c2" args="()" -->
 const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetDirectoryName</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a0ece7976e8aa32f1d05959225a95d0ed">SetInputFileNames</a> (vtkStringArray *sa)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set a list of filenames (or files and directories) to read.  <a href="#a0ece7976e8aa32f1d05959225a95d0ed"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a66c1f1f751453a1a5fdcef41d815fe"></a><!-- doxytag: member="vtkDICOMDirectory::GetInputFileNames" ref="a6a66c1f1f751453a1a5fdcef41d815fe" args="()" -->
+vtkStringArray *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetInputFileNames</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a77a749813a4b5270fafafc25c936ba62">SetFilePattern</a> (const char *pattern)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set a pattern to match for the filenames.  <a href="#a77a749813a4b5270fafafc25c936ba62"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8051e1626d7a5fd61eb947a4b7c1bb2"></a><!-- doxytag: member="vtkDICOMDirectory::GetFilePattern" ref="ac8051e1626d7a5fd61eb947a4b7c1bb2" args="()" -->
+const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetFilePattern</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a2566dddffb8b326a4a80337b4047462e">SetScanDepth</a> (int)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the scan depth to use when no DICOMDIR is found.  <a href="#a2566dddffb8b326a4a80337b4047462e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b4948348ac3194437e540cb4b070012"></a><!-- doxytag: member="vtkDICOMDirectory::GetScanDepth" ref="a0b4948348ac3194437e540cb4b070012" args="()" -->
@@ -148,6 +156,15 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>RequirePixelD
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>RequirePixelDataOff</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0cf6df0d46eb0617588c73ac142b289"></a><!-- doxytag: member="vtkDICOMDirectory::GetRequirePixelData" ref="ad0cf6df0d46eb0617588c73ac142b289" args="()" -->
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetRequirePixelData</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1679be1bb5cd23cd485db10d93d1d279"></a><!-- doxytag: member="vtkDICOMDirectory::SetFollowSymlinks" ref="a1679be1bb5cd23cd485db10d93d1d279" args="(int)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a1679be1bb5cd23cd485db10d93d1d279">SetFollowSymlinks</a> (int)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">If On (the default), symbolic links will not be followed. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fa781f2fb4e4cfb38cb8596fc17fd90"></a><!-- doxytag: member="vtkDICOMDirectory::FollowSymlinksOn" ref="a9fa781f2fb4e4cfb38cb8596fc17fd90" args="()" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>FollowSymlinksOn</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75ba10a49b1a2bacb1558e095628bb91"></a><!-- doxytag: member="vtkDICOMDirectory::FollowSymlinksOff" ref="a75ba10a49b1a2bacb1558e095628bb91" args="()" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>FollowSymlinksOff</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10b492d5d0cc3eb61418532d51f792d3"></a><!-- doxytag: member="vtkDICOMDirectory::GetFollowSymlinks" ref="a10b492d5d0cc3eb61418532d51f792d3" args="()" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetFollowSymlinks</b> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#ae7b25cc39d22f7bd96fe94227bc4d613">IsTypeOf</a> (const char *type)</td></tr>
@@ -182,8 +199,8 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c696f37e4ee08f632fc1913c22e6ebc"></a><!-- doxytag: member="vtkDICOMDirectory::SetErrorCode" ref="a4c696f37e4ee08f632fc1913c22e6ebc" args="(unsigned long e)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a4c696f37e4ee08f632fc1913c22e6ebc">SetErrorCode</a> (unsigned long e)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the error code. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a97b07b94e194d1373a0d3aebc14759b1">ProcessDirectoryFile</a> (const char *dirname, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add all of the series listed in a DICOMDIR file.  <a href="#a97b07b94e194d1373a0d3aebc14759b1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a12d5ea5e7993e23bfe6a911612459211">ProcessDirectoryFile</a> (const char *dirname, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta, vtkStringArray *files)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add all of the series listed in a DICOMDIR file.  <a href="#a12d5ea5e7993e23bfe6a911612459211"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1d7b4ffb052959fc7f75d73ae557c6e"></a><!-- doxytag: member="vtkDICOMDirectory::ProcessDirectory" ref="af1d7b4ffb052959fc7f75d73ae557c6e" args="(const char *dirname, int depth, vtkStringArray *files)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#af1d7b4ffb052959fc7f75d73ae557c6e">ProcessDirectory</a> (const char *dirname, int depth, vtkStringArray *files)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Process a directory, and subdirs to the specified depth. <br/></td></tr>
@@ -191,8 +208,14 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad07eedf5de49e3ebeab368336ac7a414"></a><!-- doxytag: member="vtkDICOMDirectory::DirectoryName" ref="ad07eedf5de49e3ebeab368336ac7a414" args="" -->
 const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>DirectoryName</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d70319ff27ab79a77f56c8d8840d876"></a><!-- doxytag: member="vtkDICOMDirectory::InputFileNames" ref="a8d70319ff27ab79a77f56c8d8840d876" args="" -->
+vtkStringArray *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InputFileNames</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac03f6e005dcc0a305118a7880216e95"></a><!-- doxytag: member="vtkDICOMDirectory::FilePattern" ref="aac03f6e005dcc0a305118a7880216e95" args="" -->
+const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>FilePattern</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bc08fd57831e3d9bc7436da24b586a1"></a><!-- doxytag: member="vtkDICOMDirectory::RequirePixelData" ref="a2bc08fd57831e3d9bc7436da24b586a1" args="" -->
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>RequirePixelData</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae54ba27fe3103e52b22b7e82c14d1e23"></a><!-- doxytag: member="vtkDICOMDirectory::FollowSymlinks" ref="ae54ba27fe3103e52b22b7e82c14d1e23" args="" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><b>FollowSymlinks</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf557bc15375020f0659435d662d1c64"></a><!-- doxytag: member="vtkDICOMDirectory::ScanDepth" ref="abf557bc15375020f0659435d662d1c64" args="" -->
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>ScanDepth</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75ac5249ed62b1618284b0e55f34e0aa"></a><!-- doxytag: member="vtkDICOMDirectory::UpdateTime" ref="a75ac5249ed62b1618284b0e55f34e0aa" args="" -->
@@ -371,7 +394,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 
 </div>
 </div>
-<a class="anchor" id="a97b07b94e194d1373a0d3aebc14759b1"></a><!-- doxytag: member="vtkDICOMDirectory::ProcessDirectoryFile" ref="a97b07b94e194d1373a0d3aebc14759b1" args="(const char *dirname, vtkDICOMMetaData *meta)" -->
+<a class="anchor" id="a12d5ea5e7993e23bfe6a911612459211"></a><!-- doxytag: member="vtkDICOMDirectory::ProcessDirectoryFile" ref="a12d5ea5e7993e23bfe6a911612459211" args="(const char *dirname, vtkDICOMMetaData *meta, vtkStringArray *files)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -385,7 +408,13 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td>
-          <td class="paramname"> <em>meta</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>meta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vtkStringArray *&nbsp;</td>
+          <td class="paramname"> <em>files</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -419,6 +448,48 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 
 <p>Set the input directory. </p>
 <p>Set the input directory. If it has a DICOMDIR file, then that file will be scanned to get info about the directory. Otherwise, the directory will be scanned for DICOM files. The depth of the scan (how many subdirectories deep) can be controlled with the <a class="el" href="classvtk_d_i_c_o_m_directory.html#a2566dddffb8b326a4a80337b4047462e" title="Set the scan depth to use when no DICOMDIR is found.">SetScanDepth()</a> method. </p>
+
+</div>
+</div>
+<a class="anchor" id="a77a749813a4b5270fafafc25c936ba62"></a><!-- doxytag: member="vtkDICOMDirectory::SetFilePattern" ref="a77a749813a4b5270fafafc25c936ba62" args="(const char *pattern)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMDirectory::SetFilePattern </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>pattern</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set a pattern to match for the filenames. </p>
+<p>For example "*.dcm" will match files ending with ".dcm". The two wildcards that are supported are "*" and "?". </p>
+
+</div>
+</div>
+<a class="anchor" id="a0ece7976e8aa32f1d05959225a95d0ed"></a><!-- doxytag: member="vtkDICOMDirectory::SetInputFileNames" ref="a0ece7976e8aa32f1d05959225a95d0ed" args="(vtkStringArray *sa)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMDirectory::SetInputFileNames </td>
+          <td>(</td>
+          <td class="paramtype">vtkStringArray *&nbsp;</td>
+          <td class="paramname"> <em>sa</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set a list of filenames (or files and directories) to read. </p>
+<p>This can be used as alternative to setting a single input directory. </p>
 
 </div>
 </div>
@@ -504,7 +575,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Aug 19 2014 12:06:18 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 29 2015 21:56:21 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

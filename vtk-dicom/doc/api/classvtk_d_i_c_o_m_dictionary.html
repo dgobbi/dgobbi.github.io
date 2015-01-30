@@ -49,6 +49,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#friends">Friends</a>  </div>
   <div class="headertitle">
@@ -63,15 +64,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><a href="classvtk_d_i_c_o_m_dictionary-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvtk_d_i_c_o_m_dictionary_1_1_dict.html">Dict</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65fd33cca2c85a1d6e8dcc0d6f99c93b"></a><!-- doxytag: member="vtkDICOMDictionary::FindDictEntry" ref="a65fd33cca2c85a1d6e8dcc0d6f99c93b" args="(const vtkDICOMTag tag)" -->
 static <a class="el" href="classvtk_d_i_c_o_m_dict_entry.html">vtkDICOMDictEntry</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_dictionary.html#a65fd33cca2c85a1d6e8dcc0d6f99c93b">FindDictEntry</a> (const <a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Find the dictionary entry for the given tag. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa40a97a4fb39286e92da5c7e05a9b652"></a><!-- doxytag: member="vtkDICOMDictionary::FindDictEntry" ref="aa40a97a4fb39286e92da5c7e05a9b652" args="(const char *key)" -->
+static <a class="el" href="classvtk_d_i_c_o_m_dict_entry.html">vtkDICOMDictEntry</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_dictionary.html#aa40a97a4fb39286e92da5c7e05a9b652">FindDictEntry</a> (const char *key)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Find the dictionary for the given key. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvtk_d_i_c_o_m_dict_entry.html">vtkDICOMDictEntry</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_dictionary.html#abe65ecfc06fb21f24d7ac33254ac008a">FindDictEntry</a> (const <a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag, const char *privateDict)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Include a private dictionary when searching for the tag.  <a href="#abe65ecfc06fb21f24d7ac33254ac008a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_dictionary.html#a4ae8955ae814d8ba8ceb7169a28495e8">AddPrivateDictionary</a> (const char *name, <a class="el" href="structvtk_d_i_c_o_m_dict_entry_1_1_entry.html">vtkDICOMDictEntry::Entry</a> **hashTable, unsigned int n)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add the hash table for a private dictionary.  <a href="#a4ae8955ae814d8ba8ceb7169a28495e8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvtk_d_i_c_o_m_dict_entry.html">vtkDICOMDictEntry</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_dictionary.html#a8c5f9182cd641ccb5ac6023cf9a3d2ca">FindDictEntry</a> (const char *key, const char *privateDict)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Search for a private dictionary entry by key.  <a href="#a8c5f9182cd641ccb5ac6023cf9a3d2ca"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_dictionary.html#ac73b01d8101a675fa35f36a9bbc42cae">AddPrivateDictionary</a> (<a class="el" href="structvtk_d_i_c_o_m_dictionary_1_1_dict.html">Dict</a> *dict)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add the hash table for a private dictionary.  <a href="#ac73b01d8101a675fa35f36a9bbc42cae"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6340de6cc5fa06cfbff1e4241bfb11d9"></a><!-- doxytag: member="vtkDICOMDictionary::RemovePrivateDictionary" ref="a6340de6cc5fa06cfbff1e4241bfb11d9" args="(const char *name)" -->
 static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_dictionary.html#a6340de6cc5fa06cfbff1e4241bfb11d9">RemovePrivateDictionary</a> (const char *name)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remove a private dictionary. <br/></td></tr>
@@ -83,27 +92,42 @@ struct&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Provide access to the DICOM tag dictionary. </p>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a4ae8955ae814d8ba8ceb7169a28495e8"></a><!-- doxytag: member="vtkDICOMDictionary::AddPrivateDictionary" ref="a4ae8955ae814d8ba8ceb7169a28495e8" args="(const char *name, vtkDICOMDictEntry::Entry **hashTable, unsigned int n)" -->
+<a class="anchor" id="ac73b01d8101a675fa35f36a9bbc42cae"></a><!-- doxytag: member="vtkDICOMDictionary::AddPrivateDictionary" ref="ac73b01d8101a675fa35f36a9bbc42cae" args="(Dict *dict)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">static void vtkDICOMDictionary::AddPrivateDictionary </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="structvtk_d_i_c_o_m_dictionary_1_1_dict.html">Dict</a> *&nbsp;</td>
+          <td class="paramname"> <em>dict</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Add the hash table for a private dictionary. </p>
+<p>The name should be the text that appears in the PrivateCreator element of the data set when this dictionary is used. The value of "n" is the size of the provided hash table. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8c5f9182cd641ccb5ac6023cf9a3d2ca"></a><!-- doxytag: member="vtkDICOMDictionary::FindDictEntry" ref="a8c5f9182cd641ccb5ac6023cf9a3d2ca" args="(const char *key, const char *privateDict)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classvtk_d_i_c_o_m_dict_entry.html">vtkDICOMDictEntry</a> vtkDICOMDictionary::FindDictEntry </td>
+          <td>(</td>
           <td class="paramtype">const char *&nbsp;</td>
-          <td class="paramname"> <em>name</em>, </td>
+          <td class="paramname"> <em>key</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structvtk_d_i_c_o_m_dict_entry_1_1_entry.html">vtkDICOMDictEntry::Entry</a> **&nbsp;</td>
-          <td class="paramname"> <em>hashTable</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&nbsp;</td>
-          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>privateDict</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -114,8 +138,8 @@ struct&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </div>
 <div class="memdoc">
 
-<p>Add the hash table for a private dictionary. </p>
-<p>The name should be the text that appears in the PrivateCreator element of the data set when this dictionary is used. The value of "n" is the size of the provided hash table. </p>
+<p>Search for a private dictionary entry by key. </p>
+<p>Warning: not all private dictionaries have normatively defined keys associated with the tags they use. Even for those that do, the keys used by this library might not be accurate because it relies on information collected from third parties. </p>
 
 </div>
 </div>
@@ -167,7 +191,7 @@ struct&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Aug 19 2014 12:06:17 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 29 2015 21:56:21 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

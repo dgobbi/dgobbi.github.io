@@ -121,6 +121,12 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SortingOff</b
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a988466cdcf6fead4235880454c00226a">SetSorter</a> (<a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a> *sorter)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b52cac19bdcbad3379d36221aa7644a"></a><!-- doxytag: member="vtkDICOMReader::GetSorter" ref="a8b52cac19bdcbad3379d36221aa7644a" args="()" -->
+<a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetSorter</b> ()</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#af6ebe011729bb860ad99fa11f83e795d">GetTimeAsVector</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35b03ed6f3c810a50dbd31b81ee95c72"></a><!-- doxytag: member="vtkDICOMReader::SetTimeAsVector" ref="a35b03ed6f3c810a50dbd31b81ee95c72" args="(int)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetTimeAsVector</b> (int)</td></tr>
@@ -201,6 +207,7 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a26fb321168b0b82e563a7126d0bdb2a3">MetaData</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkMedicalImageProperties *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aa9beca5b23166a25ddc6495d82080f88">MedicalImageProperties</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ac630b32e1434f020bc06c7c1707aa90e">Parser</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a1aa1b96a6a1466431101c7fe25d29343">Sorter</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkTypeInt64Array *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a224ba3ac24d715dfb73de4e6288b07f6">FileOffsetArray</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkIntArray *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a0fe92515c92e0e93a546bc6b416400fb">FileIndexArray</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkIntArray *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a500ced64b38d6dfad27f4335add48219">FrameIndexArray</a></td></tr>
@@ -934,6 +941,25 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
+<a class="anchor" id="a988466cdcf6fead4235880454c00226a"></a><!-- doxytag: member="vtkDICOMReader::SetSorter" ref="a988466cdcf6fead4235880454c00226a" args="(vtkDICOMSliceSorter *sorter)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMReader::SetSorter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a> *&nbsp;</td>
+          <td class="paramname"> <em>sorter</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Set a custom sorter to be used to sort files and frames into slices. The default sorter uses the attributes "ImagePositionPatient" and "ImageOrientationPatient" to spatially arrange the slices. </p>
+
+</div>
+</div>
 <a class="anchor" id="a23e52a2f940e80b1fb2273ecc091c155"></a><!-- doxytag: member="vtkDICOMReader::SortFiles" ref="a23e52a2f940e80b1fb2273ecc091c155" args="(vtkIntArray *fileArray, vtkIntArray *frameArray)" -->
 <div class="memitem">
 <div class="memproto">
@@ -1203,6 +1229,20 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
+<a class="anchor" id="a1aa1b96a6a1466431101c7fe25d29343"></a><!-- doxytag: member="vtkDICOMReader::Sorter" ref="a1aa1b96a6a1466431101c7fe25d29343" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>* <a class="el" href="classvtk_d_i_c_o_m_reader.html#a1aa1b96a6a1466431101c7fe25d29343">vtkDICOMReader::Sorter</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The sorter that orders the slices within the volume. </p>
+
+</div>
+</div>
 <a class="anchor" id="a53ca548d12d84f57617e6643a97570c9"></a><!-- doxytag: member="vtkDICOMReader::Sorting" ref="a53ca548d12d84f57617e6643a97570c9" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1263,7 +1303,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Aug 19 2014 12:06:19 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 29 2015 21:56:23 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
