@@ -10,7 +10,7 @@
 
 <h1 class="title">Command-line tools provided with vtk-dicom:</h1>
 
-<h4> <span class="mw-headline" id="dicomtonifti"> dicomtonifti </span></h4>
+<h3> <span id="dicomtonifti"> dicomtonifti </span></h3>
 <pre>
 usage:
   dicomtonifti -o file.nii file1.dcm [file2.dcm ...]
@@ -68,7 +68,7 @@ directory:
 <pre>
 bin/dicomtonifti -brz -o . /path/to/dicom/files
 </pre>
-<h4> <span class="mw-headline" id="niftitodicom"> niftitodicom </span></h4>
+<h3> <span id="niftitodicom"> niftitodicom </span></h3>
 <pre>
 usage:
   niftitodicom -o directory file.nii [file.dcm ...]
@@ -105,7 +105,7 @@ large to fit into 16 bits, then all the data will be scaled down.  If
 the data values all have a magnitude smaller than 2.05, then all the
 data will be scaled up by a factor of 1000.
 </p>
-<h4> <span class="mw-headline" id="dicomtodicom"> dicomtodicom </span></h4>
+<h3> <span id="dicomtodicom"> dicomtodicom </span></h3>
 <pre>
 usage:
   dicomtodicom -o directory file.dcm ...
@@ -143,7 +143,7 @@ that might be more compatible with other software.
 This is an experimental feature and causes much of the per-instance
 meta data to be discarded.
 </p>
-<h4> <span class="mw-headline" id="dicomfind"> dicomfind </span></h4>
+<h3> <span id="dicomfind"> dicomfind </span></h3>
 <pre>
 usage:
   dicomfind [options] &lt;directory&gt; ...
@@ -185,7 +185,7 @@ files in the series.  The "-execdir" argument is similar, except that
 it runs the program from within the directory of the file (or files),
 and {} is replaced by just the filenames instead of with the full paths.
 </p>
-<h4> <span class="mw-headline" id="dicomtocsv"> dicomtocsv </span></h4>
+<h3> <span id="dicomtocsv"> dicomtocsv </span></h3>
 <pre>
 usage:
   dicomtocsv [options] &lt;directory&gt;
@@ -225,7 +225,7 @@ ReferencedFileID        # 0004,1500
 <pre>
 0040,0260\0008,0100    # PerformedProtocolCodeSequence\CodeValue
 </pre>
-<h4> <span class="mw-headline" id="dicomdump"> dicomdump </span></h4>
+<h3> <span id="dicomdump"> dicomdump </span></h3>
 <pre>
 usage:
   dicomdump file1.dcm [file2.dcm ...]
@@ -246,7 +246,7 @@ Attributes nested within sequences can be specified by giving a tag
 path e.g. "-k Tag1/Tag2/Tag3".  Either a forward slash or a backslash
 can be used to separate the components of the path.
 </p>
-<h4> <span class="mw-headline" id="niftidump"> niftidump </span></h4>
+<h3> <span id="niftidump"> niftidump </span></h3>
 <pre>
 usage:
   niftidump file.nii[.gz]
