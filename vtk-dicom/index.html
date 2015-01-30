@@ -41,6 +41,9 @@
 <td>Enhanced Secondary Capture</td> <td>Yes</td> <td>Soon</td>
 </tr>
 <tr>
+<td>Functional Maps (float, double)</td> <td>Yes</td> <td>Soon</td>
+</tr>
+<tr>
 <td>MR</td> <td>Yes</td> <td>Yes</td>
 </tr>
 <tr>
@@ -92,7 +95,7 @@
 <td colspan="3"></td>
 </tr>
 <tr>
-<td>DICOM 2013 Dictionary</td> <td>Yes</td> <td>Yes</td>
+<td>DICOM 2014c Dictionary</td> <td>Yes</td> <td>Yes</td>
 </tr>
 <tr>
 <td>Private Dictionaries</td> <td>Yes</td> <td>Yes</td>
@@ -119,19 +122,25 @@
 <td>ISO-8859 Character Sets</td> <td>Yes</td> <td>Yes</td>
 </tr>
 <tr>
-<td>ISO-2022-jp (Japanese) </td> <td>Yes</td> <td>Yes</td>
+<td>GB2312 (Chinese)</td> <td>Yes</td> <td>Yes</td>
 </tr>
 <tr>
-<td>ISO-2022-jp-2 (Japanese) </td> <td>Yes</td> <td>Yes</td>
+<td>JIS X 0208 (Japanese) </td> <td>Yes</td> <td>Yes</td>
 </tr>
 <tr>
-<td>ISO-2022-kr (Korean) </td> <td>Yes</td> <td>Yes</td>
+<td>JIS X 0212 (Japanese) </td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>KS X 1001 (Korean) </td> <td>Yes</td> <td>Yes</td>
 </tr>
 <tr>
 <td>UTF-8 (Unicode)</td> <td>Yes</td> <td>Yes</td>
 </tr>
 <tr>
 <td>GB18030 (Chinese)</td> <td>Yes</td> <td>Yes</td>
+</tr>
+<tr>
+<td>GBK (Chinese)</td> <td>Yes</td> <td>Yes</td>
 </tr>
 <tr>
 <td colspan="3"></td>
@@ -156,6 +165,8 @@
 <p>The DICOM standard has very strict rules for both the structure and the content of DICOM files, and many of the rules are modality-specific.  We therefore decided to focus our initial efforts CT and MR.  Support for additional modalities will be added in the future.</p>
 <h3>Are compressed files supported?</h3>
 <p>Yes, but only for reading, not for writing.</p>
+<h3>Is floating-poing data supported?</h3>
+<p>Yes, FloatPixelData and DoubleFloatPixelData can be read. But not written (yet).</p>
 <h3>What is per-slice meta-data?</h3>
 <p>DICOM data is usually stored as one file per slice, and each file has specific information relating to position, time, etc.  The vtkDICOMMetaData class makes it easy to access the meta data for each individual slice.</p>
 <h3>What is per-frame meta-data?</h3>
