@@ -246,6 +246,10 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Append value "i" to the supplied string.  <a href="#a89a93f77023c1c24243b37d1eaf7522e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#ad3e040ab7b4eb75f422411c54b35f94b">Matches</a> (const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;value) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if the value matches the specified find query value.  <a href="#ad3e040ab7b4eb75f422411c54b35f94b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#aafbcb0c12080d6c8208b363dded6c11b">Matches</a> (const std::string &amp;v) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if the value is equal to the specified string.  <a href="#aafbcb0c12080d6c8208b363dded6c11b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#ae795ecc6909e64064554430b8e017670">Matches</a> (double v) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if the value is the specified numeric value.  <a href="#ae795ecc6909e64064554430b8e017670"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8980dbd6b9856cf71ba1e03c85a69d3"></a><!-- doxytag: member="vtkDICOMValue::operator=" ref="af8980dbd6b9856cf71ba1e03c85a69d3" args="(const vtkDICOMValue &amp;o)" -->
 <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#af8980dbd6b9856cf71ba1e03c85a69d3">operator=</a> (const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;o)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Override assignment operator for reference counting. <br/></td></tr>
@@ -567,6 +571,48 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValueFriendM
 
 </div>
 </div>
+<a class="anchor" id="ae795ecc6909e64064554430b8e017670"></a><!-- doxytag: member="vtkDICOMValue::Matches" ref="ae795ecc6909e64064554430b8e017670" args="(double v) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vtkDICOMValue::Matches </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>v</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if the value is the specified numeric value. </p>
+<p>This will return true only if the value has a numeric representation (e.g. has a VR of IS, DS, US, UL, SS, SL, FL, FD) and is equal to the specified number. If the value multiplicity is greater than one, then the match is true if at least one value matches. </p>
+
+</div>
+</div>
+<a class="anchor" id="aafbcb0c12080d6c8208b363dded6c11b"></a><!-- doxytag: member="vtkDICOMValue::Matches" ref="aafbcb0c12080d6c8208b363dded6c11b" args="(const std::string &amp;v) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vtkDICOMValue::Matches </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>v</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if the value is equal to the specified string. </p>
+<p>Note that matches to an empty string will always succeed due to the universal matching rule. To check if a value is empty, you should instead check to see if its VL is zero. Padding spaces will automatically be stripped before the comparison is done. The character set of the string is assumed to be the same as the character set of the value that is being matched. This method can be used to match numerical values in addition to text values. </p>
+
+</div>
+</div>
 <a class="anchor" id="ad3e040ab7b4eb75f422411c54b35f94b"></a><!-- doxytag: member="vtkDICOMValue::Matches" ref="ad3e040ab7b4eb75f422411c54b35f94b" args="(const vtkDICOMValue &amp;value) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -627,7 +673,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValueFriendM
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 29 2015 21:56:24 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Wed Feb 4 2015 06:54:19 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
