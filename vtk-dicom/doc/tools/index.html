@@ -10,6 +10,70 @@
 
 <h1 class="title">Command-line tools provided with vtk-dicom:</h1>
 
+<h3> <span id="dicomdump"> dicomdump </span></h3>
+<pre>
+usage:
+  dicomdump file1.dcm [file2.dcm ...]
+
+options:
+  -k tag          Provide a key to be printed.
+  -q &lt;query.txt&gt;  Provide a file that lists which elements to print.
+  --help          Print a brief help message.
+  --version       Print the software version.
+</pre>
+<p>Dump the metadata from a DICOM series as text.  If only a few
+attributes are to be dumped, then their tags can be given with "-k"
+(the "-k" option can be repeated as many times as needed).  Tags can
+given in hexadecimal GGGG,EEEE format, or in text format as specified
+in the DICOM dictionary.  Alternately, the tags can be listed in a
+query file given with the "-q" option (one tag per line).
+Attributes nested within sequences can be specified by giving a tag
+path e.g. "-k Tag1/Tag2/Tag3".  Either a forward slash or a backslash
+can be used to separate the components of the path.
+</p>
+<h3> <span id="dicomfind"> dicomfind </span></h3>
+<pre>
+usage:
+  dicomfind [options] &lt;directory&gt; ...
+
+options:
+  -L              Follow symbolic links (default).
+  -P              Do not follow symbolic links.
+  -k tag=value    Provide an attribute to be queried and matched.
+  -q &lt;query.txt&gt;  Provide a file to describe the find query.
+  -maxdepth n     Set the maximum directory depth.
+  -name pattern   Set a pattern to match (with &quot;*&quot; or &quot;?&quot;).
+  -image          Restrict the search to files with PixelData.
+  -series         Find all files in series if even one file matches.
+  -print          Print the filenames of all matched files (default).
+  -print0         Print the filenames with terminating null, for xargs.
+  -exec ... +     Execute the given command for every series matched.
+  -exec ... \;    Execute the given command for every file matched.
+  -execdir ... +  Go to directory and execute command on every series.
+  -execdir ... \; Go to directory and execute command on every file.
+  --help          Print a brief help message.
+  --version       Print the software version.
+</pre>
+<p>This command can be used to locate DICOM files.  It shares many
+features with the UNIX "find" command.  When searching for files
+with a specific attribute (with "-k"), the tag can be specified
+in the form GGGG,EEEE or with its canonical name e.g. Modality=MR
+from the DICOM dictionary.  Alternately, the tags can be listed in a
+query file given with the "-q" option (one tag per line).
+Attributes nested within sequences can be specified by giving a tag
+path e.g. "-k Tag1/Tag2/Tag3".  Either a forward slash or a backslash
+can be used to separate the components of the path.  Private tags
+should be preceded by the private dictionary name in square brackets.
+</p><p>The "-exec" and "-execdir" arguments cause dicomfind to run the
+specified program on the found files.  For example, to dump each file
+one would use "-exec dicomdump {} \;" where each instance of {} will
+be replaced by a found file, and ";" indicates the end of the args
+to dicomdump.  Alternately, if "+" is used to end the args, then the
+program will be run on each DICOM series and {} will be replaced by all
+files in the series.  The "-execdir" argument is similar, except that
+it runs the program from within the directory of the file (or files),
+and {} is replaced by just the filenames instead of with the full paths.
+</p>
 <h3> <span id="dicomtonifti"> dicomtonifti </span></h3>
 <pre>
 usage:
@@ -143,49 +207,6 @@ that might be more compatible with other software.
 This is an experimental feature and causes much of the per-instance
 meta data to be discarded.
 </p>
-<h3> <span id="dicomfind"> dicomfind </span></h3>
-<pre>
-usage:
-  dicomfind [options] &lt;directory&gt; ...
-
-options:
-  -L              Follow symbolic links (default).
-  -P              Do not follow symbolic links.
-  -k tag=value    Provide an attribute to be queried and matched.
-  -q &lt;query.txt&gt;  Provide a file to describe the find query.
-  -maxdepth n     Set the maximum directory depth.
-  -name pattern   Set a pattern to match (with &quot;*&quot; or &quot;?&quot;).
-  -image          Restrict the search to files with PixelData.
-  -series         Find all files in series if even one file matches.
-  -print          Print the filenames of all matched files (default).
-  -print0         Print the filenames with terminating null, for xargs.
-  -exec ... +     Execute the given command for every series matched.
-  -exec ... \;    Execute the given command for every file matched.
-  -execdir ... +  Go to directory and execute command on every series.
-  -execdir ... \; Go to directory and execute command on every file.
-  --help          Print a brief help message.
-  --version       Print the software version.
-</pre>
-<p>This command can be used to locate DICOM files.  It shares many
-features with the UNIX "find" command.  When searching for files
-with a specific attribute (with "-k"), the tag can be specified
-in the form GGGG,EEEE or with its canonical name e.g. Modality=MR
-from the DICOM dictionary.  Alternately, the tags can be listed in a
-query file given with the "-q" option (one tag per line).
-Attributes nested within sequences can be specified by giving a tag
-path e.g. "-k Tag1/Tag2/Tag3".  Either a forward slash or a backslash
-can be used to separate the components of the path.  Private tags
-should be preceded by the private dictionary name in square brackets.
-</p><p>The "-exec" and "-execdir" arguments cause dicomfind to run the
-specified program on the found files.  For example, to dump each file
-one would use "-exec dicomdump {} \;" where each instance of {} will
-be replaced by a found file, and ";" indicates the end of the args
-to dicomdump.  Alternately, if "+" is used to end the args, then the
-program will be run on each DICOM series and {} will be replaced by all
-files in the series.  The "-execdir" argument is similar, except that
-it runs the program from within the directory of the file (or files),
-and {} is replaced by just the filenames instead of with the full paths.
-</p>
 <h3> <span id="dicomtocsv"> dicomtocsv </span></h3>
 <pre>
 usage:
@@ -226,27 +247,6 @@ ReferencedFileID        # 0004,1500
 <pre>
 0040,0260\0008,0100    # PerformedProtocolCodeSequence\CodeValue
 </pre>
-<h3> <span id="dicomdump"> dicomdump </span></h3>
-<pre>
-usage:
-  dicomdump file1.dcm [file2.dcm ...]
-
-options:
-  -k tag          Provide a key to be printed.
-  -q &lt;query.txt&gt;  Provide a file that lists which elements to print.
-  --help          Print a brief help message.
-  --version       Print the software version.
-</pre>
-<p>Dump the metadata from a DICOM series as text.  If only a few
-attributes are to be dumped, then their tags can be given with "-k"
-(the "-k" option can be repeated as many times as needed).  Tags can
-given in hexadecimal GGGG,EEEE format, or in text format as specified
-in the DICOM dictionary.  Alternately, the tags can be listed in a
-query file given with the "-q" option (one tag per line).
-Attributes nested within sequences can be specified by giving a tag
-path e.g. "-k Tag1/Tag2/Tag3".  Either a forward slash or a backslash
-can be used to separate the components of the path.
-</p>
 <h3> <span id="niftidump"> niftidump </span></h3>
 <pre>
 usage:
