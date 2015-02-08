@@ -79,6 +79,17 @@ Inheritance diagram for vtkDICOMDirectory:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom">{ <br/>
+&nbsp;&nbsp;<b>PATIENT</b>, 
+<b>STUDY</b>, 
+<b>SERIES</b>, 
+<b>IMAGE</b>, 
+<br/>
+&nbsp;&nbsp;<b>FRAME</b>
+<br/>
+ }</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><p>Levels within the DICOM information model. </p>
+<br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6576b50cb347b2a70ad0da59f264b1a8"></a><!-- doxytag: member="vtkDICOMDirectory::Superclass" ref="a6576b50cb347b2a70ad0da59f264b1a8" args="" -->
 typedef <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -106,6 +117,14 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetScanDepth</b> ()</t
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1de28d3cd885574c26681bc29e7df949"></a><!-- doxytag: member="vtkDICOMDirectory::SetFindQuery" ref="a1de28d3cd885574c26681bc29e7df949" args="(const vtkDICOMItem &amp;query)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a1de28d3cd885574c26681bc29e7df949">SetFindQuery</a> (const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;query)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Specify a find query. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a97fbc535aef382c77fc17ccc901b4fea">SetFindLevel</a> (int level)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Specify the find level.  <a href="#a97fbc535aef382c77fc17ccc901b4fea"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaac690e2a4be49058caaea9737bcd8a6"></a><!-- doxytag: member="vtkDICOMDirectory::SetFindLevelToImage" ref="aaac690e2a4be49058caaea9737bcd8a6" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetFindLevelToImage</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b164a5166072fe10ef7ef25df134dbc"></a><!-- doxytag: member="vtkDICOMDirectory::SetFindLevelToSeries" ref="a9b164a5166072fe10ef7ef25df134dbc" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetFindLevelToSeries</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a323a32d8622054399c6091ef385fd2cd"></a><!-- doxytag: member="vtkDICOMDirectory::GetFindLevel" ref="a323a32d8622054399c6091ef385fd2cd" args="()" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetFindLevel</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a043a7da9b287d93c301fde31d9483020">Update</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Update the information about the files.  <a href="#a043a7da9b287d93c301fde31d9483020"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d6cfbba39730ba873952552b7c27852"></a><!-- doxytag: member="vtkDICOMDirectory::Update" ref="a9d6cfbba39730ba873952552b7c27852" args="(int)" -->
@@ -472,6 +491,27 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 
 </div>
 </div>
+<a class="anchor" id="a97fbc535aef382c77fc17ccc901b4fea"></a><!-- doxytag: member="vtkDICOMDirectory::SetFindLevel" ref="a97fbc535aef382c77fc17ccc901b4fea" args="(int level)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMDirectory::SetFindLevel </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>level</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Specify the find level. </p>
+<p>If this is Series, then the whole series will be found if a single file in the series matches the query. Only IMAGE and SERIES are allowed. Note that IMAGE is inclusive of any single file, whether or not the contained data is an image. </p>
+
+</div>
+</div>
 <a class="anchor" id="a0ece7976e8aa32f1d05959225a95d0ed"></a><!-- doxytag: member="vtkDICOMDirectory::SetInputFileNames" ref="a0ece7976e8aa32f1d05959225a95d0ed" args="(vtkStringArray *sa)" -->
 <div class="memitem">
 <div class="memproto">
@@ -575,7 +615,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Feb 4 2015 06:54:17 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 8 2015 10:09:00 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

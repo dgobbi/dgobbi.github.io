@@ -199,7 +199,11 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aa3b353aa870b63b44b0128b3e761d86e">RescaleBuffer</a> (int idx, void *buffer, vtkIdType bufferSize)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a4e3af334e0f8389d22ff3c01768090d7">RescaleBuffer</a> (int fileIdx, int frameIdx, void *buffer, vtkIdType bufferSize)</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a579168cb66061a889577e9a061ffb655">ValidateStructure</a> (vtkIntArray *fileArray, vtkIntArray *frameArray)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a53ca548d12d84f57617e6643a97570c9">Sorting</a></td></tr>
@@ -850,7 +854,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
-<a class="anchor" id="aa3b353aa870b63b44b0128b3e761d86e"></a><!-- doxytag: member="vtkDICOMReader::RescaleBuffer" ref="aa3b353aa870b63b44b0128b3e761d86e" args="(int idx, void *buffer, vtkIdType bufferSize)" -->
+<a class="anchor" id="a4e3af334e0f8389d22ff3c01768090d7"></a><!-- doxytag: member="vtkDICOMReader::RescaleBuffer" ref="a4e3af334e0f8389d22ff3c01768090d7" args="(int fileIdx, int frameIdx, void *buffer, vtkIdType bufferSize)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -858,7 +862,13 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
           <td class="memname">virtual void vtkDICOMReader::RescaleBuffer </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>idx</em>, </td>
+          <td class="paramname"> <em>fileIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>frameIdx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1043,6 +1053,34 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </div>
 <div class="memdoc">
 <p>Update the medical image properties; </p>
+
+</div>
+</div>
+<a class="anchor" id="a579168cb66061a889577e9a061ffb655"></a><!-- doxytag: member="vtkDICOMReader::ValidateStructure" ref="a579168cb66061a889577e9a061ffb655" args="(vtkIntArray *fileArray, vtkIntArray *frameArray)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool vtkDICOMReader::ValidateStructure </td>
+          <td>(</td>
+          <td class="paramtype">vtkIntArray *&nbsp;</td>
+          <td class="paramname"> <em>fileArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vtkIntArray *&nbsp;</td>
+          <td class="paramname"> <em>frameArray</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Verify that the files can be composed into a volume. This is called after SortFiles has been called. It should invoke an error event and return zero upon failure. </p>
 
 </div>
 </div>
@@ -1303,7 +1341,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Feb 4 2015 06:54:18 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 8 2015 10:09:01 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

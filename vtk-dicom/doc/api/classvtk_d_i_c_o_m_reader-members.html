@@ -291,7 +291,7 @@ This is the complete list of members for <a class="el" href="classvtk_d_i_c_o_m_
   <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_reader.html#aafba2d5da6c972d396fd185ac59f4ed0">RequestData</a>(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td><td><a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a></td><td><code> [protected, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_reader.html#a080432d95f7bc2cbca515653813fd01b">RequestInformation</a>(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td><td><a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a></td><td><code> [protected, virtual]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>RequestUpdateExtent</b>(vtkInformation *, vtkInformationVector **, vtkInformationVector *) (defined in <a class="el" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a>)</td><td><a class="el" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a></td><td><code> [protected, virtual]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_reader.html#aa3b353aa870b63b44b0128b3e761d86e">RescaleBuffer</a>(int idx, void *buffer, vtkIdType bufferSize)</td><td><a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a></td><td><code> [protected, virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_reader.html#a4e3af334e0f8389d22ff3c01768090d7">RescaleBuffer</a>(int fileIdx, int frameIdx, void *buffer, vtkIdType bufferSize)</td><td><a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a></td><td><code> [protected, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_reader.html#a5c265c897e0d5c70819ab1c1cf0fa2b3">RescaleIntercept</a></td><td><a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a></td><td><code> [protected]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>RescaleSlope</b> (defined in <a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a>)</td><td><a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_reader.html#aedb7a78d4131ab1a23f4c54b2da1b993">RowOrder</a> enum name</td><td><a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a></td><td></td></tr>
@@ -387,6 +387,7 @@ This is the complete list of members for <a class="el" href="classvtk_d_i_c_o_m_
   <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_reader.html#a166ae74aa498f303046379d11bacaf21">UpdateMedicalImageProperties</a>()</td><td><a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a></td><td><code> [protected, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_algorithm.html#a01d3abfac738c7ccf01548ae6833d8d3">UpdateProgress</a>(double amount)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_algorithm.html#aab591f3a34e99d0f7d89b019c485e66c">UpdateWholeExtent</a>()</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td><code> [virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classvtk_d_i_c_o_m_reader.html#a579168cb66061a889577e9a061ffb655">ValidateStructure</a>(vtkIntArray *fileArray, vtkIntArray *frameArray)</td><td><a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a></td><td><code> [protected, virtual]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>vtkAlgorithm</b>() (defined in <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a>)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td><code> [protected]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>vtkDICOMReader</b>() (defined in <a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a>)</td><td><a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a></td><td><code> [protected]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>vtkImageAlgorithm</b>() (defined in <a class="el" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a>)</td><td><a class="el" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a></td><td><code> [protected]</code></td></tr>
@@ -416,7 +417,7 @@ This is the complete list of members for <a class="el" href="classvtk_d_i_c_o_m_
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Feb 4 2015 06:54:18 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 8 2015 10:09:01 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

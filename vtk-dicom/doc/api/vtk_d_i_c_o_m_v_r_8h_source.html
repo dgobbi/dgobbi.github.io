@@ -131,12 +131,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00095"></a>00095     <span class="keywordflow">return</span> (((1 &lt;&lt; this-&gt;Key) &amp; 0x29c61cf6) != 0); }
 <a name="l00096"></a>00096 
 <a name="l00098"></a>00098 
-<a name="l00103"></a><a class="code" href="classvtk_d_i_c_o_m_v_r.html#a9674d112dfae81865a072d61fe9334b7">00103</a>   <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_v_r.html#a9674d112dfae81865a072d61fe9334b7" title="The VRs ST, LT, and UT carry only one value.">HasSingleValue</a>()<span class="keyword"> const </span>{
-<a name="l00104"></a>00104     <span class="keywordflow">return</span> (((1 &lt;&lt; this-&gt;Key) &amp; 0x20401000) != 0); }
-<a name="l00105"></a>00105 
-<a name="l00107"></a>00107 
-<a name="l00111"></a><a class="code" href="classvtk_d_i_c_o_m_v_r.html#adbcdf66073d2fc3e411e73574ccb1e00">00111</a>   <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_v_r.html#adbcdf66073d2fc3e411e73574ccb1e00" title="AE, AS, CS, DA, DS, DT, IS, LO, PN, SH, TM, UI, UR are padded.">HasPadding</a>()<span class="keyword"> const </span>{
-<a name="l00112"></a>00112     <span class="keywordflow">return</span> (((1 &lt;&lt; this-&gt;Key) &amp; 0x09860cf6) != 0); }
+<a name="l00102"></a><a class="code" href="classvtk_d_i_c_o_m_v_r.html#aff74c9a4e451f3669d4e2a144a879ba4">00102</a>   <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_v_r.html#aff74c9a4e451f3669d4e2a144a879ba4" title="This is true for for all VRs that store numbers.">HasNumericValue</a>()<span class="keyword"> const </span>{
+<a name="l00103"></a>00103     <span class="keywordflow">return</span> (((1 &lt;&lt; this-&gt;Key) &amp; 0x12280740) != 0); }
+<a name="l00104"></a>00104 
+<a name="l00106"></a>00106 
+<a name="l00111"></a><a class="code" href="classvtk_d_i_c_o_m_v_r.html#a9674d112dfae81865a072d61fe9334b7">00111</a>   <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_v_r.html#a9674d112dfae81865a072d61fe9334b7" title="The VRs ST, LT, and UT carry only one value.">HasSingleValue</a>()<span class="keyword"> const </span>{
+<a name="l00112"></a>00112     <span class="keywordflow">return</span> (((1 &lt;&lt; this-&gt;Key) &amp; 0x20401000) != 0); }
 <a name="l00113"></a>00113 
 <a name="l00114"></a>00114   <span class="keywordtype">bool</span> operator==(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key == a.Key); }
 <a name="l00115"></a>00115   <span class="keywordtype">bool</span> operator!=(<a class="code" href="classvtk_d_i_c_o_m_v_r.html" title="VRs (Value Representations).">vtkDICOMVR</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key != a.Key); }
@@ -172,7 +172,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Feb 4 2015 06:54:13 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 8 2015 10:08:57 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

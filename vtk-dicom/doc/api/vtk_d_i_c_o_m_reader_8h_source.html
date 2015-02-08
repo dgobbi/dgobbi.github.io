@@ -186,62 +186,66 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00226"></a>00226 
 <a name="l00228"></a>00228 
 <a name="l00229"></a>00229   <span class="keyword">virtual</span> <span class="keywordtype">void</span> RescaleBuffer(
-<a name="l00230"></a>00230     <span class="keywordtype">int</span> idx, <span class="keywordtype">void</span> *buffer, vtkIdType bufferSize);
+<a name="l00230"></a>00230     <span class="keywordtype">int</span> fileIdx, <span class="keywordtype">int</span> frameIdx, <span class="keywordtype">void</span> *buffer, vtkIdType bufferSize);
 <a name="l00232"></a>00232 
 <a name="l00234"></a>00234   <span class="keywordtype">void</span> RelayError(<a class="code" href="classvtk_object.html" title="abstract base class for most VTK objects">vtkObject</a> *o, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> e, <span class="keywordtype">void</span> *data);
 <a name="l00235"></a>00235 
-<a name="l00237"></a>00237   <span class="keyword">virtual</span> <span class="keywordtype">void</span> SortFiles(vtkIntArray *fileArray, vtkIntArray *frameArray);
-<a name="l00238"></a>00238 
-<a name="l00240"></a>00240   <span class="keywordtype">void</span> NoSortFiles(vtkIntArray *fileArray, vtkIntArray *frameArray);
-<a name="l00241"></a>00241 
-<a name="l00243"></a>00243   <span class="keyword">virtual</span> <span class="keywordtype">void</span> UpdateMedicalImageProperties();
-<a name="l00244"></a>00244 
-<a name="l00246"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a53ca548d12d84f57617e6643a97570c9">00246</a>   <span class="keywordtype">int</span> Sorting;
-<a name="l00247"></a>00247 
+<a name="l00237"></a>00237 
+<a name="l00240"></a>00240   <span class="keyword">virtual</span> <span class="keywordtype">bool</span> ValidateStructure(
+<a name="l00241"></a>00241     vtkIntArray *fileArray, vtkIntArray *frameArray);
+<a name="l00243"></a>00243 
+<a name="l00245"></a>00245   <span class="keyword">virtual</span> <span class="keywordtype">void</span> SortFiles(vtkIntArray *fileArray, vtkIntArray *frameArray);
+<a name="l00246"></a>00246 
+<a name="l00248"></a>00248   <span class="keywordtype">void</span> NoSortFiles(vtkIntArray *fileArray, vtkIntArray *frameArray);
 <a name="l00249"></a>00249 
-<a name="l00250"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a5c265c897e0d5c70819ab1c1cf0fa2b3">00250</a>   <span class="keywordtype">double</span> RescaleIntercept;
-<a name="l00251"></a>00251   <span class="keywordtype">double</span> RescaleSlope;
-<a name="l00253"></a>00253 
-<a name="l00255"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a5e535ea392ecc5b92820b062cbf42164">00255</a>   vtkMatrix4x4 *PatientMatrix;
-<a name="l00256"></a>00256 
-<a name="l00258"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a26fb321168b0b82e563a7126d0bdb2a3">00258</a>   <a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *MetaData;
-<a name="l00259"></a>00259 
-<a name="l00261"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#aa9beca5b23166a25ddc6495d82080f88">00261</a>   vtkMedicalImageProperties *MedicalImageProperties;
-<a name="l00262"></a>00262 
-<a name="l00264"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#ac630b32e1434f020bc06c7c1707aa90e">00264</a>   <a class="code" href="classvtk_d_i_c_o_m_parser.html" title="A meta data reader for DICOM data.">vtkDICOMParser</a> *Parser;
-<a name="l00265"></a>00265 
-<a name="l00267"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a1aa1b96a6a1466431101c7fe25d29343">00267</a>   <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html" title="Index a DICOM series to allow proper dimensional ordering.">vtkDICOMSliceSorter</a> *Sorter;
-<a name="l00268"></a>00268 
-<a name="l00270"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a224ba3ac24d715dfb73de4e6288b07f6">00270</a>   vtkTypeInt64Array *FileOffsetArray;
-<a name="l00271"></a>00271 
-<a name="l00273"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a0fe92515c92e0e93a546bc6b416400fb">00273</a>   vtkIntArray *FileIndexArray;
-<a name="l00274"></a>00274 
-<a name="l00276"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a500ced64b38d6dfad27f4335add48219">00276</a>   vtkIntArray *FrameIndexArray;
-<a name="l00277"></a>00277 
-<a name="l00279"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a6e9803b636ca4dfc6da70e0cf8adc00b">00279</a>   vtkStringArray *StackIDs;
-<a name="l00280"></a>00280 
-<a name="l00282"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a697be818a1ce198a8b76968aea41dbe3">00282</a>   <span class="keywordtype">int</span> MemoryRowOrder;
-<a name="l00283"></a>00283 
-<a name="l00285"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a917163b716f4cef772cb9df50628d0bb">00285</a>   <span class="keywordtype">int</span> NeedsRescale;
-<a name="l00286"></a>00286 
-<a name="l00289"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a22098d7c30354a020965452d14337144">00289</a>   <span class="keywordtype">int</span> NumberOfPackedComponents;
-<a name="l00290"></a>00290 
-<a name="l00292"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a321e97b5d997209c88dbd554813d1dc0">00292</a>   <span class="keywordtype">int</span> NumberOfPlanarComponents;
-<a name="l00293"></a>00293 
-<a name="l00295"></a>00295 
-<a name="l00296"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#aab7fff12608f9c817598be53eb163804">00296</a>   <span class="keywordtype">int</span> TimeAsVector;
-<a name="l00297"></a>00297   <span class="keywordtype">int</span> TimeDimension;
-<a name="l00298"></a>00298   <span class="keywordtype">int</span> DesiredTimeIndex;
-<a name="l00299"></a>00299   <span class="keywordtype">double</span> TimeSpacing;
+<a name="l00251"></a>00251   <span class="keyword">virtual</span> <span class="keywordtype">void</span> UpdateMedicalImageProperties();
+<a name="l00252"></a>00252 
+<a name="l00254"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a53ca548d12d84f57617e6643a97570c9">00254</a>   <span class="keywordtype">int</span> Sorting;
+<a name="l00255"></a>00255 
+<a name="l00257"></a>00257 
+<a name="l00258"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a5c265c897e0d5c70819ab1c1cf0fa2b3">00258</a>   <span class="keywordtype">double</span> RescaleIntercept;
+<a name="l00259"></a>00259   <span class="keywordtype">double</span> RescaleSlope;
+<a name="l00261"></a>00261 
+<a name="l00263"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a5e535ea392ecc5b92820b062cbf42164">00263</a>   vtkMatrix4x4 *PatientMatrix;
+<a name="l00264"></a>00264 
+<a name="l00266"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a26fb321168b0b82e563a7126d0bdb2a3">00266</a>   <a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *MetaData;
+<a name="l00267"></a>00267 
+<a name="l00269"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#aa9beca5b23166a25ddc6495d82080f88">00269</a>   vtkMedicalImageProperties *MedicalImageProperties;
+<a name="l00270"></a>00270 
+<a name="l00272"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#ac630b32e1434f020bc06c7c1707aa90e">00272</a>   <a class="code" href="classvtk_d_i_c_o_m_parser.html" title="A meta data reader for DICOM data.">vtkDICOMParser</a> *Parser;
+<a name="l00273"></a>00273 
+<a name="l00275"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a1aa1b96a6a1466431101c7fe25d29343">00275</a>   <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html" title="Index a DICOM series to allow proper dimensional ordering.">vtkDICOMSliceSorter</a> *Sorter;
+<a name="l00276"></a>00276 
+<a name="l00278"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a224ba3ac24d715dfb73de4e6288b07f6">00278</a>   vtkTypeInt64Array *FileOffsetArray;
+<a name="l00279"></a>00279 
+<a name="l00281"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a0fe92515c92e0e93a546bc6b416400fb">00281</a>   vtkIntArray *FileIndexArray;
+<a name="l00282"></a>00282 
+<a name="l00284"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a500ced64b38d6dfad27f4335add48219">00284</a>   vtkIntArray *FrameIndexArray;
+<a name="l00285"></a>00285 
+<a name="l00287"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a6e9803b636ca4dfc6da70e0cf8adc00b">00287</a>   vtkStringArray *StackIDs;
+<a name="l00288"></a>00288 
+<a name="l00290"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a697be818a1ce198a8b76968aea41dbe3">00290</a>   <span class="keywordtype">int</span> MemoryRowOrder;
+<a name="l00291"></a>00291 
+<a name="l00293"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a917163b716f4cef772cb9df50628d0bb">00293</a>   <span class="keywordtype">int</span> NeedsRescale;
+<a name="l00294"></a>00294 
+<a name="l00297"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a22098d7c30354a020965452d14337144">00297</a>   <span class="keywordtype">int</span> NumberOfPackedComponents;
+<a name="l00298"></a>00298 
+<a name="l00300"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a321e97b5d997209c88dbd554813d1dc0">00300</a>   <span class="keywordtype">int</span> NumberOfPlanarComponents;
 <a name="l00301"></a>00301 
-<a name="l00303"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a1b8a445cd18daf939fb0b65342f0803b">00303</a>   <span class="keywordtype">char</span> DesiredStackID[20];
-<a name="l00304"></a>00304 
-<a name="l00305"></a>00305 <span class="keyword">private</span>:
-<a name="l00306"></a>00306   <a class="code" href="classvtk_d_i_c_o_m_reader.html" title="Read DICOM image files.">vtkDICOMReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_reader.html" title="Read DICOM image files.">vtkDICOMReader</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00307"></a>00307   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_reader.html" title="Read DICOM image files.">vtkDICOMReader</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00308"></a>00308 };
+<a name="l00303"></a>00303 
+<a name="l00304"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#aab7fff12608f9c817598be53eb163804">00304</a>   <span class="keywordtype">int</span> TimeAsVector;
+<a name="l00305"></a>00305   <span class="keywordtype">int</span> TimeDimension;
+<a name="l00306"></a>00306   <span class="keywordtype">int</span> DesiredTimeIndex;
+<a name="l00307"></a>00307   <span class="keywordtype">double</span> TimeSpacing;
 <a name="l00309"></a>00309 
-<a name="l00310"></a>00310 <span class="preprocessor">#endif // vtkDICOMReader_h</span>
+<a name="l00311"></a><a class="code" href="classvtk_d_i_c_o_m_reader.html#a1b8a445cd18daf939fb0b65342f0803b">00311</a>   <span class="keywordtype">char</span> DesiredStackID[20];
+<a name="l00312"></a>00312 
+<a name="l00313"></a>00313 <span class="keyword">private</span>:
+<a name="l00314"></a>00314   <a class="code" href="classvtk_d_i_c_o_m_reader.html" title="Read DICOM image files.">vtkDICOMReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_reader.html" title="Read DICOM image files.">vtkDICOMReader</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00315"></a>00315   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_reader.html" title="Read DICOM image files.">vtkDICOMReader</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00316"></a>00316 };
+<a name="l00317"></a>00317 
+<a name="l00318"></a>00318 <span class="preprocessor">#endif // vtkDICOMReader_h</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -258,7 +262,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Feb 4 2015 06:54:13 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 8 2015 10:08:57 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -141,10 +141,10 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa44496e4f364def514338ecfc3a4af90"></a><!-- doxytag: member="vtkDICOMVR::HasTextValue" ref="aa44496e4f364def514338ecfc3a4af90" args="() const " -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_v_r.html#aa44496e4f364def514338ecfc3a4af90">HasTextValue</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This is true for all VRs whose value is stored as text. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_v_r.html#aff74c9a4e451f3669d4e2a144a879ba4">HasNumericValue</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This is true for for all VRs that store numbers.  <a href="#aff74c9a4e451f3669d4e2a144a879ba4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_v_r.html#a9674d112dfae81865a072d61fe9334b7">HasSingleValue</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The VRs ST, LT, and UT carry only one value.  <a href="#a9674d112dfae81865a072d61fe9334b7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_v_r.html#adbcdf66073d2fc3e411e73574ccb1e00">HasPadding</a> () const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">AE, AS, CS, DA, DS, DT, IS, LO, PN, SH, TM, UI, UR are padded.  <a href="#adbcdf66073d2fc3e411e73574ccb1e00"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b6bdfa2c564c4a16c37c6b0746d6312"></a><!-- doxytag: member="vtkDICOMVR::operator==" ref="a7b6bdfa2c564c4a16c37c6b0746d6312" args="(vtkDICOMVR a) const " -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> a) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9bc12ed38d7e96ab2f1d694c7ad84de"></a><!-- doxytag: member="vtkDICOMVR::operator!=" ref="af9bc12ed38d7e96ab2f1d694c7ad84de" args="(vtkDICOMVR a) const " -->
@@ -278,12 +278,12 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="adbcdf66073d2fc3e411e73574ccb1e00"></a><!-- doxytag: member="vtkDICOMVR::HasPadding" ref="adbcdf66073d2fc3e411e73574ccb1e00" args="() const " -->
+<a class="anchor" id="aff74c9a4e451f3669d4e2a144a879ba4"></a><!-- doxytag: member="vtkDICOMVR::HasNumericValue" ref="aff74c9a4e451f3669d4e2a144a879ba4" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vtkDICOMVR::HasPadding </td>
+          <td class="memname">bool vtkDICOMVR::HasNumericValue </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
@@ -293,8 +293,8 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </div>
 <div class="memdoc">
 
-<p>AE, AS, CS, DA, DS, DT, IS, LO, PN, SH, TM, UI, UR are padded. </p>
-<p>These VRs might have padding that is removed before they are converted into a string. </p>
+<p>This is true for for all VRs that store numbers. </p>
+<p>The VRs included are IS, DS, US, UL, SS, SL, FL, FD. The VRs OB, OW, OF, and OD are not included. </p>
 
 </div>
 </div>
@@ -336,7 +336,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Feb 4 2015 06:54:19 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 8 2015 10:09:03 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
