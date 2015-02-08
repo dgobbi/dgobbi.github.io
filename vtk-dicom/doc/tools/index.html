@@ -74,6 +74,46 @@ files in the series.  The "-execdir" argument is similar, except that
 it runs the program from within the directory of the file (or files),
 and {} is replaced by just the filenames instead of with the full paths.
 </p>
+<h3> <span id="dicomtocsv"> dicomtocsv </span></h3>
+<pre>
+usage:
+  dicomtocsv [options] &lt;directory&gt;
+
+options:
+  -k tag=value    Provide a key to be queried and matched.
+  -q &lt;query.txt&gt;  Provide a file to describe the find query.
+  -o &lt;data.csv&gt;   Provide a file for the query results.
+  --help          Print a brief help message.
+  --version       Print the software version.
+</pre>
+<p>Dump the requested metadata as a csv file, with one line in the csv file for each DICOM series that matched the query, and one column in the csv file for each attribute listed in the query file.
+</p><p>This is a powerful program that will scan a directory, recursively searching for DICOM series that match a given query, and will then dump the requested DICOM attributes to a csv file that can be imported into a database.  An example query file is as follows:
+</p>
+<pre>
+# This is my query file
+SeriesDate=2011-2014    # date range
+SeriesTime
+SeriesDescription=&quot;*T1*&quot;
+PatientName
+[GEMS_ACQU_01]0019,1084:DS # PeakSAR private tag with VR of DS
+NumberOfReferences      # 0004,1600
+ReferencedFileID        # 0004,1500
+</pre>
+<p>The query file consists of one attribute tag per line (in hexadecimal), along with the allowed values of the attribute and an optional comment.  If the attribute is private, then it must be preceded by the name of its private dictionary in square brackets.  There are two special attributes, NumberOfReferences (0004,1600) and ReferencedFileID (0004,1500), that must be included in the query in order to output the number of files in the series and the first filename in the series to the csv file.
+</p><p>Attribute tags in the query file that are followed by "=" and a value are used to select which DICOM files to include in the output.  For example, <b>SeriesDate=2011-2014</b> means that the SeriesDate must be between 2011-Jan-01 and 2014-Dec-31 inclusive.  And <b>SeriesDescription="*T1*"</b> means that the SeriesDescription must contain the text "T1".  Attribute matching follows these rules:
+</p>
+<ol><li> Date, Time, and DateTime attributes can specify a range by using a hyphen.
+</li><li> Other text attributes can be matched with a wildcard string, where "*" and "?" are the wildcards.
+</li><li> If no wildcards are present, the match must be exact.
+</li><li> Patient name matching does not require case (i.e. capitalization) to match.
+</li><li> All text matching is done in utf-8 (non-utf8 text is converted to utf8 for matching).
+</li><li> If the attribute is multi-valued, then it matches as long as one value matches.
+</li></ol>
+<p>If a desired attribute is buried within a sequence, then it can be specified as follows:
+</p>
+<pre>
+0040,0260\0008,0100    # PerformedProtocolCodeSequence\CodeValue
+</pre>
 <h3> <span id="dicomtonifti"> dicomtonifti </span></h3>
 <pre>
 usage:
@@ -207,46 +247,6 @@ that might be more compatible with other software.
 This is an experimental feature and causes much of the per-instance
 meta data to be discarded.
 </p>
-<h3> <span id="dicomtocsv"> dicomtocsv </span></h3>
-<pre>
-usage:
-  dicomtocsv [options] &lt;directory&gt;
-
-options:
-  -k tag=value    Provide a key to be queried and matched.
-  -q &lt;query.txt&gt;  Provide a file to describe the find query.
-  -o &lt;data.csv&gt;   Provide a file for the query results.
-  --help          Print a brief help message.
-  --version       Print the software version.
-</pre>
-<p>Dump the requested metadata as a csv file, with one line in the csv file for each DICOM series that matched the query, and one column in the csv file for each attribute listed in the query file.
-</p><p>This is a powerful program that will scan a directory, recursively searching for DICOM series that match a given query, and will then dump the requested DICOM attributes to a csv file that can be imported into a database.  An example query file is as follows:
-</p>
-<pre>
-# This is my query file
-SeriesDate=2011-2014    # date range
-SeriesTime
-SeriesDescription=&quot;*T1*&quot;
-PatientName
-[GEMS_ACQU_01]0019,1084:DS # PeakSAR private tag with VR of DS
-NumberOfReferences      # 0004,1600
-ReferencedFileID        # 0004,1500
-</pre>
-<p>The query file consists of one attribute tag per line (in hexadecimal), along with the allowed values of the attribute and an optional comment.  If the attribute is private, then it must be preceded by the name of its private dictionary in square brackets.  There are two special attributes, NumberOfReferences (0004,1600) and ReferencedFileID (0004,1500), that must be included in the query in order to output the number of files in the series and the first filename in the series to the csv file.
-</p><p>Attribute tags in the query file that are followed by "=" and a value are used to select which DICOM files to include in the output.  For example, <b>SeriesDate=2011-2014</b> means that the SeriesDate must be between 2011-Jan-01 and 2014-Dec-31 inclusive.  And <b>SeriesDescription="*T1*"</b> means that the SeriesDescription must contain the text "T1".  Attribute matching follows these rules:
-</p>
-<ol><li> Date, Time, and DateTime attributes can specify a range by using a hyphen.
-</li><li> Other text attributes can be matched with a wildcard string, where "*" and "?" are the wildcards.
-</li><li> If no wildcards are present, the match must be exact.
-</li><li> Patient name matching does not require case (i.e. capitalization) to match.
-</li><li> All text matching is done in utf-8 (non-utf8 text is converted to utf8 for matching).
-</li><li> If the attribute is multi-valued, then it matches as long as one value matches.
-</li></ol>
-<p>If a desired attribute is buried within a sequence, then it can be specified as follows:
-</p>
-<pre>
-0040,0260\0008,0100    # PerformedProtocolCodeSequence\CodeValue
-</pre>
 <h3> <span id="niftidump"> niftidump </span></h3>
 <pre>
 usage:
