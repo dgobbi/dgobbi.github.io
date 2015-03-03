@@ -50,6 +50,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <h1>vtkDICOMAlgorithm Class Reference</h1>  </div>
@@ -60,18 +61,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#_details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="vtk_d_i_c_o_m_algorithm_8h_source.html">vtkDICOMAlgorithm.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for vtkDICOMAlgorithm:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classvtk_d_i_c_o_m_algorithm.png" usemap="#vtkDICOMAlgorithm_map" alt=""/>
+  <map id="vtkDICOMAlgorithm_map" name="vtkDICOMAlgorithm_map">
+<area href="classvtk_d_i_c_o_m_apply_palette.html" alt="vtkDICOMApplyPalette" shape="rect" coords="0,56,141,80"/>
+<area href="classvtk_d_i_c_o_m_c_t_rectifier.html" alt="vtkDICOMCTRectifier" shape="rect" coords="151,56,292,80"/>
+</map>
+</div>
 
 <p><a href="classvtk_d_i_c_o_m_algorithm-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#ab1f236fc066202fe082d35c5d6af07ae">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <br class="typebreak"/>
+vtkInformationDataObjectKey *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a06c949127dd79ad704f3be7a6b41f0e1">META_DATA</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <br class="typebreak"/>
+vtkInformationDoubleVectorKey *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#ad4e811b9fb601e1b5713705178c751ba">PATIENT_MATRIX</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52b6e7964041b2b11b8b5e65e3861f4a"></a><!-- doxytag: member="vtkDICOMAlgorithm::GetMetaDataFromInputConnection" ref="a52b6e7964041b2b11b8b5e65e3861f4a" args="(vtkInformationVector **inputVector, int inputPort, int inputConnection)" -->
-<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetMetaDataFromInputConnection</b> (vtkInformationVector **inputVector, int inputPort, int inputConnection)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af98d8c59652397a1862602d8fdda596e"></a><!-- doxytag: member="vtkDICOMAlgorithm::RequestInformation" ref="af98d8c59652397a1862602d8fdda596e" args="(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)" -->
-*virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>RequestInformation</b> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32520ca5f0efdadc38d0cafe52ec9304"></a><!-- doxytag: member="vtkDICOMAlgorithm::RequestInformation" ref="a32520ca5f0efdadc38d0cafe52ec9304" args="(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>RequestInformation</b> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bac022812eebdeeac1abc0240e6f42f"></a><!-- doxytag: member="vtkDICOMAlgorithm::RequestData" ref="a7bac022812eebdeeac1abc0240e6f42f" args="(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)" -->
 virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>RequestData</b> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4dc0593fe7dfd1d38b07cbb35e1ae878"></a><!-- doxytag: member="vtkDICOMAlgorithm::ThreadedRequestData" ref="a4dc0593fe7dfd1d38b07cbb35e1ae878" args="(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector, vtkImageData ***inData, vtkImageData **outData, int ext[6], int id)" -->
@@ -88,10 +103,6 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>ThreadedReque
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#ad43466b6776ff5ddd7d5f53aace2d986">CopyMetaDataToOutputData</a> (vtkInformation *outInfo, <a class="el" href="classvtk_data_object.html">vtkDataObject</a> *outData)</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
-</div></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const double *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a7b83d8c701008fc94594c220c851925b">GetMatrixElementsFromInputConnection</a> (vtkInformationVector **inputVector, int inputPort, int inputConnection)</td></tr>
 <tr><td colspan="2"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 <br/><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbd7532beee034f7d49c9f46537efaed"></a><!-- doxytag: member="vtkDICOMAlgorithm::Superclass" ref="acbd7532beee034f7d49c9f46537efaed" args="" -->
@@ -134,7 +145,7 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
       </table>
 </div>
 <div class="memdoc">
-<p>Copy the meta data from the output information to the output data. If you override RequestData in your own subclasses, then your RequestData method must call this method. </p>
+<p>Copy the meta data from the output information to the output data. This is called by RequestData. </p>
 
 </div>
 </div>
@@ -180,41 +191,7 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
       </table>
 </div>
 <div class="memdoc">
-<p>Copy the meta data from an input connection to an output port. If you override RequestInformation in your own subclasses, then your RequestData method must call this method. To copy the meta data to all output ports, use "-1" as the output port. </p>
-
-</div>
-</div>
-<a class="anchor" id="a7b83d8c701008fc94594c220c851925b"></a><!-- doxytag: member="vtkDICOMAlgorithm::GetMatrixElementsFromInputConnection" ref="a7b83d8c701008fc94594c220c851925b" args="(vtkInformationVector **inputVector, int inputPort, int inputConnection)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const double* vtkDICOMAlgorithm::GetMatrixElementsFromInputConnection </td>
-          <td>(</td>
-          <td class="paramtype">vtkInformationVector **&nbsp;</td>
-          <td class="paramname"> <em>inputVector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>inputPort</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>inputConnection</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Get the patient matrix for an input connection as an array of sixteen values. You must check whether it is NULL before using it to create a vtkMatrix4x4. </p>
+<p>Copy the meta data from an input connection to an output port. This is called by RequestInformation. To copy the meta data to all output ports, use "-1" as the output port. </p>
 
 </div>
 </div>
@@ -248,7 +225,25 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
       </table>
 </div>
 <div class="memdoc">
-<p>Get the information that holds the meta data for the given input. </p>
+<p>Get the information object that holds the meta data for the given input. </p>
+
+</div>
+</div>
+<a class="anchor" id="a06c949127dd79ad704f3be7a6b41f0e1"></a><!-- doxytag: member="vtkDICOMAlgorithm::META_DATA" ref="a06c949127dd79ad704f3be7a6b41f0e1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static vtkInformationDataObjectKey* vtkDICOMAlgorithm::META_DATA </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The information key for the meta data. </p>
 
 </div>
 </div>
@@ -267,6 +262,26 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
 </div>
 <div class="memdoc">
 <p>Static method for construction. </p>
+
+<p>Reimplemented in <a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#a237d8d0f01749f502176773d943b6696">vtkDICOMApplyPalette</a>, and <a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#a6d0614996dfefe158fc774c1f87ae7b1">vtkDICOMCTRectifier</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4e811b9fb601e1b5713705178c751ba"></a><!-- doxytag: member="vtkDICOMAlgorithm::PATIENT_MATRIX" ref="ad4e811b9fb601e1b5713705178c751ba" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static vtkInformationDoubleVectorKey* vtkDICOMAlgorithm::PATIENT_MATRIX </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>A key to get the patient matrix from the VTK pipeline. </p>
 
 </div>
 </div>
@@ -296,6 +311,8 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
 <div class="memdoc">
 <p>Print information about this object. </p>
 
+<p>Reimplemented in <a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#accfef299361d09288f04a91419e68804">vtkDICOMApplyPalette</a>, and <a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#a00288fd4edaa988f52412a2bc5cf00ab">vtkDICOMCTRectifier</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -316,7 +333,7 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Feb 26 2015 10:21:46 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 3 2015 03:28:59 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

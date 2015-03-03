@@ -121,6 +121,9 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9804112ef6aa24f373fc83127a698c12"></a><!-- doxytag: member="vtkDICOMParser::GetPixelDataFound" ref="a9804112ef6aa24f373fc83127a698c12" args="()" -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#a9804112ef6aa24f373fc83127a698c12">GetPixelDataFound</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This is true only if PixelData was found in the file. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a98c0b47650cc19f6c1a1573e427071"></a><!-- doxytag: member="vtkDICOMParser::GetPixelDataVL" ref="a1a98c0b47650cc19f6c1a1573e427071" args="()" -->
+unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#a1a98c0b47650cc19f6c1a1573e427071">GetPixelDataVL</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the VL for the PixelData, will be 0xffffffff if compressed. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkTypeInt64&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#a5d56adc9dfbdd7996f297c9733e94233">GetFileOffset</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the byte offset to the end of the metadata.  <a href="#a5d56adc9dfbdd7996f297c9733e94233"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3de770d2d4d53e706a38bafd027df260"></a><!-- doxytag: member="vtkDICOMParser::GetFileSize" ref="a3de770d2d4d53e706a38bafd027df260" args="()" -->
@@ -199,12 +202,14 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>BufferSize</b></td></t
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>ChunkSize</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6fe064fb6d5218a01248ae757ffc79d"></a><!-- doxytag: member="vtkDICOMParser::Index" ref="ae6fe064fb6d5218a01248ae757ffc79d" args="" -->
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>Index</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa009db86537829be89add58e43cf6815"></a><!-- doxytag: member="vtkDICOMParser::ErrorCode" ref="aa009db86537829be89add58e43cf6815" args="" -->
-unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><b>ErrorCode</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bbdaac1f69c4f3725f51959ac5f43c3"></a><!-- doxytag: member="vtkDICOMParser::PixelDataVL" ref="a9bbdaac1f69c4f3725f51959ac5f43c3" args="" -->
+unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><b>PixelDataVL</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3687693523af51300c4535ebe4a4fa7"></a><!-- doxytag: member="vtkDICOMParser::PixelDataFound" ref="ac3687693523af51300c4535ebe4a4fa7" args="" -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>PixelDataFound</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea9782fb1e768eec86717b570223d07a"></a><!-- doxytag: member="vtkDICOMParser::QueryMatched" ref="aea9782fb1e768eec86717b570223d07a" args="" -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>QueryMatched</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa009db86537829be89add58e43cf6815"></a><!-- doxytag: member="vtkDICOMParser::ErrorCode" ref="aa009db86537829be89add58e43cf6815" args="" -->
+unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><b>ErrorCode</b></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a340d220183deb30825d7fc77523b8ad3"></a><!-- doxytag: member="vtkDICOMParser::vtkDICOMParserInternalFriendship" ref="a340d220183deb30825d7fc77523b8ad3" args="" -->
@@ -408,7 +413,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMParserIntern
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Feb 26 2015 10:21:48 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 3 2015 03:29:02 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -85,6 +85,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affb30945627e683e83aa6d5ad62c525c"></a><!-- doxytag: member="vtkDICOMUtilities::GetClassName" ref="affb30945627e683e83aa6d5ad62c525c" args="()" -->
 virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetClassName</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a7afbc11cddb6de14840d499ec9f64de2">IsA</a> (const char *type)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3efc60dbe1ec12e841cea96340fe637e"></a><!-- doxytag: member="vtkDICOMUtilities::GetCIDFromUID" ref="a3efc60dbe1ec12e841cea96340fe637e" args="(const char *uid)" -->
+unsigned short&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a3efc60dbe1ec12e841cea96340fe637e">GetCIDFromUID</a> (const char *uid)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the CID from the UID. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#ab7dd5b8b31e23fc80ddaa66352d2bd59">IsTypeOf</a> (const char *type)</td></tr>
@@ -131,6 +134,9 @@ static const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class=
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab529b9919e14784c5fc744972b15f288"></a><!-- doxytag: member="vtkDICOMUtilities::PatternMatches" ref="ab529b9919e14784c5fc744972b15f288" args="(const char *pattern, size_t pl, const char *val, size_t vl)" -->
 static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#ab529b9919e14784c5fc744972b15f288">PatternMatches</a> (const char *pattern, size_t pl, const char *val, size_t vl)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Match patterns on non-terminated strings. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d1efbf622e2b2c28a3182176e919d4f"></a><!-- doxytag: member="vtkDICOMUtilities::GetUIDName" ref="a5d1efbf622e2b2c28a3182176e919d4f" args="(const char *uid)" -->
+static const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a5d1efbf622e2b2c28a3182176e919d4f">GetUIDName</a> (const char *uid)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the name associated with the given UID. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a091ee885ffe2d5e265a173e92b9ac94b"></a><!-- doxytag: member="vtkDICOMUtilities::UIDPrefix" ref="a091ee885ffe2d5e265a173e92b9ac94b" args="[64]" -->
@@ -491,7 +497,7 @@ static char&nbsp;</td><td class="memItemRight" valign="bottom"><b>Implementation
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Feb 26 2015 10:21:50 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 3 2015 03:29:03 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

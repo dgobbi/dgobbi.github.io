@@ -57,11 +57,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h1>vtkDICOMCTRectifier Class Reference</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="vtkDICOMCTRectifier" -->
+<!-- doxytag: class="vtkDICOMCTRectifier" --><!-- doxytag: inherits="vtkDICOMAlgorithm" -->
 <p>Prepare a CT for 3D processing.  
 <a href="#_details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="vtk_d_i_c_o_m_c_t_rectifier_8h_source.html">vtkDICOMCTRectifier.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for vtkDICOMCTRectifier:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classvtk_d_i_c_o_m_c_t_rectifier.png" usemap="#vtkDICOMCTRectifier_map" alt=""/>
+  <map id="vtkDICOMCTRectifier_map" name="vtkDICOMCTRectifier_map">
+<area href="classvtk_d_i_c_o_m_algorithm.html" alt="vtkDICOMAlgorithm" shape="rect" coords="0,0,133,24"/>
+</map>
+</div>
 
 <p><a href="classvtk_d_i_c_o_m_c_t_rectifier-members.html">List of all members.</a></p>
 <table class="memberdecls">
@@ -91,7 +100,6 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#a96a0b2d1f0467fcb87471cb6411e751d">GetGantryDetectorTilt</a> (vtkMatrix4x4 *volumeMatrix)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#a93fc289ca0dd371b1b2df43072ba850c">ComputeMatrix</a> (int extent[6], double spacing[3], double origin[3])</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2021dabfd5dfb9d86ceac43dff031d0"></a><!-- doxytag: member="vtkDICOMCTRectifier::RequestInformation" ref="ad2021dabfd5dfb9d86ceac43dff031d0" args="(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)" -->
 virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>RequestInformation</b> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c110a30bf3a0136cc892eea18e3c113"></a><!-- doxytag: member="vtkDICOMCTRectifier::RequestUpdateExtent" ref="a3c110a30bf3a0136cc892eea18e3c113" args="(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)" -->
@@ -100,6 +108,10 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>RequestUpdateE
 virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>RequestData</b> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e4be8c677a573c54dfb3ff336fac934"></a><!-- doxytag: member="vtkDICOMCTRectifier::ThreadedRequestData" ref="a4e4be8c677a573c54dfb3ff336fac934" args="(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector, vtkImageData ***inData, vtkImageData **outData, int ext[6], int id)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>ThreadedRequestData</b> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector, vtkImageData ***inData, vtkImageData **outData, int ext[6], int id)</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#ae9e935d5cca29fae209e047ca025fa39">ComputeMatrix</a> (const double matrix[16], const int extent[6], double spacing[3], double origin[3])</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad440f7783b643d7d81bf50833abc4e63"></a><!-- doxytag: member="vtkDICOMCTRectifier::VolumeMatrix" ref="ad440f7783b643d7d81bf50833abc4e63" args="" -->
@@ -112,8 +124,8 @@ vtkMatrix4x4 *&nbsp;</td><td class="memItemRight" valign="bottom"><b>Matrix</b><
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>Reverse</b></td></tr>
 <tr><td colspan="2"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 <br/><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab57d474bdc951ad685e7b1dea3521584"></a><!-- doxytag: member="vtkDICOMCTRectifier::Superclass" ref="ab57d474bdc951ad685e7b1dea3521584" args="" -->
-typedef vtkThreadedImageAlgorithm&nbsp;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7047edd1dc2d463524af760186d997d"></a><!-- doxytag: member="vtkDICOMCTRectifier::Superclass" ref="ac7047edd1dc2d463524af760186d997d" args="" -->
+typedef <a class="el" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#a6d0614996dfefe158fc774c1f87ae7b1">New</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ffcb0bfc61a1aa3a1711c98791181e1"></a><!-- doxytag: member="vtkDICOMCTRectifier::IsTypeOf" ref="a5ffcb0bfc61a1aa3a1711c98791181e1" args="(const char *type)" -->
 static int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsTypeOf</b> (const char *type)</td></tr>
@@ -128,14 +140,20 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
 <p>Prepare a CT for 3D processing. </p>
 <p>This class will identify gantry-tilted CT images and resample them into a rectangular volume. This is often a necessary step prior to volume rendering or other forms of 3D rendering. </p>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a93fc289ca0dd371b1b2df43072ba850c"></a><!-- doxytag: member="vtkDICOMCTRectifier::ComputeMatrix" ref="a93fc289ca0dd371b1b2df43072ba850c" args="(int extent[6], double spacing[3], double origin[3])" -->
+<a class="anchor" id="ae9e935d5cca29fae209e047ca025fa39"></a><!-- doxytag: member="vtkDICOMCTRectifier::ComputeMatrix" ref="ae9e935d5cca29fae209e047ca025fa39" args="(const double matrix[16], const int extent[6], double spacing[3], double origin[3])" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void vtkDICOMCTRectifier::ComputeMatrix </td>
           <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
+          <td class="paramtype">const double&nbsp;</td>
+          <td class="paramname"> <em>matrix</em>[16], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&nbsp;</td>
           <td class="paramname"> <em>extent</em>[6], </td>
         </tr>
         <tr>
@@ -158,7 +176,7 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
       </table>
 </div>
 <div class="memdoc">
-<p>Compute the rectified matrix. </p>
+<p>Compute the rectified matrix from the given volume matrix. The extent, spacing, and origin of the image must also be given, and they will be adjusted as necessary. </p>
 
 </div>
 </div>
@@ -215,6 +233,8 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
 <div class="memdoc">
 <p>Static method for construction. </p>
 
+<p>Reimplemented from <a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a96ebe31ff8cbe5dd86303883d83380ac">vtkDICOMAlgorithm</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a00288fd4edaa988f52412a2bc5cf00ab"></a><!-- doxytag: member="vtkDICOMCTRectifier::PrintSelf" ref="a00288fd4edaa988f52412a2bc5cf00ab" args="(ostream &amp;os, vtkIndent indent)" -->
@@ -242,6 +262,8 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
 </div>
 <div class="memdoc">
 <p>Print information about this object. </p>
+
+<p>Reimplemented from <a class="el" href="classvtk_d_i_c_o_m_algorithm.html#ab1f236fc066202fe082d35c5d6af07ae">vtkDICOMAlgorithm</a>.</p>
 
 </div>
 </div>
@@ -319,7 +341,7 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Feb 26 2015 10:21:47 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 3 2015 03:29:00 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
