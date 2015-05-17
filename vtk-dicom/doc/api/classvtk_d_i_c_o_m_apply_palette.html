@@ -76,12 +76,6 @@ Inheritance diagram for vtkDICOMApplyPalette:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#accfef299361d09288f04a91419e68804">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
-<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
-</div></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#a3d4e716b8605704e9b0a779a339f5a6b">FillLookupTable</a> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta, int fileIndex, vtkLookupTable *table)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24a7b667bd9ef26beeb70cecbc6272bc"></a><!-- doxytag: member="vtkDICOMApplyPalette::RequestInformation" ref="a24a7b667bd9ef26beeb70cecbc6272bc" args="(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)" -->
@@ -93,6 +87,7 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>ThreadedReque
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkDICOMPerFilePalette *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#abba8c97a9a224af3d4b6f427a8800d64">Palette</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#adb8d43ba34fb2d16b165d70a97bb5a31">IsSupplemental</a></td></tr>
 <tr><td colspan="2"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 <br/><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cad608c8f384abce3a36fdf9bb05eae"></a><!-- doxytag: member="vtkDICOMApplyPalette::Superclass" ref="a7cad608c8f384abce3a36fdf9bb05eae" args="" -->
@@ -109,41 +104,8 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Apply palette to PALETTE_COLOR images. </p>
+<p>If an image contains a palette LUT, then this filter will apply that LUT to the image and produce an RGB image. Images without a palette LUT will pass through unchanged. If the image uses a supplemental palette that only applies to a specific range of pixel values, then pixel values outside of that range will be mapped to greyscale via the WindowWidth and WindowCenter specified in the image. </p>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a3d4e716b8605704e9b0a779a339f5a6b"></a><!-- doxytag: member="vtkDICOMApplyPalette::FillLookupTable" ref="a3d4e716b8605704e9b0a779a339f5a6b" args="(vtkDICOMMetaData *meta, int fileIndex, vtkLookupTable *table)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void vtkDICOMApplyPalette::FillLookupTable </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td>
-          <td class="paramname"> <em>meta</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>fileIndex</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkLookupTable *&nbsp;</td>
-          <td class="paramname"> <em>table</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Generate the lookup table for the specified image in the series. Usually, it will be the same for all images. </p>
-
-</div>
-</div>
 <a class="anchor" id="a237d8d0f01749f502176773d943b6696"></a><!-- doxytag: member="vtkDICOMApplyPalette::New" ref="a237d8d0f01749f502176773d943b6696" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -195,6 +157,20 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="adb8d43ba34fb2d16b165d70a97bb5a31"></a><!-- doxytag: member="vtkDICOMApplyPalette::IsSupplemental" ref="adb8d43ba34fb2d16b165d70a97bb5a31" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#adb8d43ba34fb2d16b165d70a97bb5a31">vtkDICOMApplyPalette::IsSupplemental</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>True if palette is supplemental. </p>
+
+</div>
+</div>
 <a class="anchor" id="abba8c97a9a224af3d4b6f427a8800d64"></a><!-- doxytag: member="vtkDICOMApplyPalette::Palette" ref="abba8c97a9a224af3d4b6f427a8800d64" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -227,7 +203,7 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 3 2015 03:28:59 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:57 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

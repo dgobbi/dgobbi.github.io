@@ -104,30 +104,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00078"></a><a class="code" href="classvtk_d_i_c_o_m_sequence.html#aa424363dd7fa2d75f74d02d44ed3a6fd">00078</a>   <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a> *<a class="code" href="classvtk_d_i_c_o_m_sequence.html#aa424363dd7fa2d75f74d02d44ed3a6fd" title="Get a pointer to the items in the sequence.">GetSequenceData</a>()<span class="keyword"> const </span>{
 <a name="l00079"></a>00079     <span class="keywordflow">return</span> this-&gt;V.GetSequenceData(); }
 <a name="l00080"></a>00080 
-<a name="l00082"></a><a class="code" href="classvtk_d_i_c_o_m_sequence.html#acebb4bb595ec565c62877c5f675a4bcd">00082</a>   <a class="code" href="classvtk_d_i_c_o_m_sequence.html#acebb4bb595ec565c62877c5f675a4bcd" title="Copy constructor.">vtkDICOMSequence</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html" title="A sequence of items according to the SQ representation.">vtkDICOMSequence</a>&amp; o) : V(o.V) {}
-<a name="l00083"></a>00083 
-<a name="l00085"></a><a class="code" href="classvtk_d_i_c_o_m_sequence.html#a681e75e2c8e31f4dc00aecea8827dde1">00085</a>   <a class="code" href="classvtk_d_i_c_o_m_sequence.html#a681e75e2c8e31f4dc00aecea8827dde1" title="Conversion from value to sequence is type checked.">vtkDICOMSequence</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a>&amp; o) : V(o) {
-<a name="l00086"></a>00086     <span class="keywordflow">if</span> (o.<a class="code" href="classvtk_d_i_c_o_m_value.html#a27fec3da99035be2cda28863d121d7e5" title="Get the VR, the representation of the data values.">GetVR</a>() != vtkDICOMVR::SQ) { this-&gt;V.Clear(); } }
+<a name="l00082"></a><a class="code" href="classvtk_d_i_c_o_m_sequence.html#a50087df5b219fd4adc4c9c429d0c26cf">00082</a>   <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html#a50087df5b219fd4adc4c9c429d0c26cf" title="Check that the sequence was constructed from a valid value.">IsValid</a>()<span class="keyword"> const </span>{
+<a name="l00083"></a>00083     <span class="keywordflow">return</span> this-&gt;V.IsValid(); }
+<a name="l00084"></a>00084 
+<a name="l00086"></a><a class="code" href="classvtk_d_i_c_o_m_sequence.html#acebb4bb595ec565c62877c5f675a4bcd">00086</a>   <a class="code" href="classvtk_d_i_c_o_m_sequence.html#acebb4bb595ec565c62877c5f675a4bcd" title="Copy constructor.">vtkDICOMSequence</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html" title="A sequence of items according to the SQ representation.">vtkDICOMSequence</a>&amp; o) : V(o.V) {}
 <a name="l00087"></a>00087 
-<a name="l00089"></a><a class="code" href="classvtk_d_i_c_o_m_sequence.html#ab85bceb8e62b190a17e3297830506a32">00089</a>   <a class="code" href="classvtk_d_i_c_o_m_sequence.html" title="A sequence of items according to the SQ representation.">vtkDICOMSequence</a>&amp; <a class="code" href="classvtk_d_i_c_o_m_sequence.html#ab85bceb8e62b190a17e3297830506a32" title="Assignment operator.">operator=</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html" title="A sequence of items according to the SQ representation.">vtkDICOMSequence</a>&amp; o) {
-<a name="l00090"></a>00090     this-&gt;V = o.V; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }
+<a name="l00089"></a><a class="code" href="classvtk_d_i_c_o_m_sequence.html#a681e75e2c8e31f4dc00aecea8827dde1">00089</a>   <a class="code" href="classvtk_d_i_c_o_m_sequence.html#a681e75e2c8e31f4dc00aecea8827dde1" title="Conversion from value to sequence is type checked.">vtkDICOMSequence</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a>&amp; o) : V(o) {
+<a name="l00090"></a>00090     <span class="keywordflow">if</span> (o.<a class="code" href="classvtk_d_i_c_o_m_value.html#a27fec3da99035be2cda28863d121d7e5" title="Get the VR, the representation of the data values.">GetVR</a>() != vtkDICOMVR::SQ) { this-&gt;V.Clear(); } }
 <a name="l00091"></a>00091 
-<a name="l00093"></a><a class="code" href="classvtk_d_i_c_o_m_sequence.html#aab099b344e6f8d816c3cca7ee3f87cf2">00093</a>   <a class="code" href="classvtk_d_i_c_o_m_sequence.html" title="A sequence of items according to the SQ representation.">vtkDICOMSequence</a>&amp; <a class="code" href="classvtk_d_i_c_o_m_sequence.html#aab099b344e6f8d816c3cca7ee3f87cf2" title="Assignment from value to sequence is type checked.">operator=</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a>&amp; o) {
-<a name="l00094"></a>00094     <span class="keywordflow">if</span> (o.<a class="code" href="classvtk_d_i_c_o_m_value.html#a27fec3da99035be2cda28863d121d7e5" title="Get the VR, the representation of the data values.">GetVR</a>() == vtkDICOMVR::SQ) { this-&gt;V = o; }
-<a name="l00095"></a>00095     <span class="keywordflow">else</span> { this-&gt;V.<a class="code" href="classvtk_d_i_c_o_m_value.html#aaee19a00d54536adb0668807e1e86a1a" title="Clear the value, the result is an invalid value.">Clear</a>(); } <span class="keywordflow">return</span> *<span class="keyword">this</span>; }
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097 <span class="keyword">private</span>:
-<a name="l00098"></a>00098   <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a>;
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100   <a class="code" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a> V;
-<a name="l00101"></a>00101 
-<a name="l00103"></a>00103   <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a> InvalidValue;
-<a name="l00105"></a>00105   <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a> EmptyItem;
-<a name="l00106"></a>00106 };
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 VTK_DICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html" title="A sequence of items according to the SQ representation.">vtkDICOMSequence</a>&amp; v);
-<a name="l00109"></a>00109 
-<a name="l00110"></a>00110 <span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMSequence_h */</span>
+<a name="l00093"></a><a class="code" href="classvtk_d_i_c_o_m_sequence.html#ab85bceb8e62b190a17e3297830506a32">00093</a>   <a class="code" href="classvtk_d_i_c_o_m_sequence.html" title="A sequence of items according to the SQ representation.">vtkDICOMSequence</a>&amp; <a class="code" href="classvtk_d_i_c_o_m_sequence.html#ab85bceb8e62b190a17e3297830506a32" title="Assignment operator.">operator=</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html" title="A sequence of items according to the SQ representation.">vtkDICOMSequence</a>&amp; o) {
+<a name="l00094"></a>00094     this-&gt;V = o.V; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }
+<a name="l00095"></a>00095 
+<a name="l00097"></a><a class="code" href="classvtk_d_i_c_o_m_sequence.html#aab099b344e6f8d816c3cca7ee3f87cf2">00097</a>   <a class="code" href="classvtk_d_i_c_o_m_sequence.html" title="A sequence of items according to the SQ representation.">vtkDICOMSequence</a>&amp; <a class="code" href="classvtk_d_i_c_o_m_sequence.html#aab099b344e6f8d816c3cca7ee3f87cf2" title="Assignment from value to sequence is type checked.">operator=</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a>&amp; o) {
+<a name="l00098"></a>00098     <span class="keywordflow">if</span> (o.<a class="code" href="classvtk_d_i_c_o_m_value.html#a27fec3da99035be2cda28863d121d7e5" title="Get the VR, the representation of the data values.">GetVR</a>() == vtkDICOMVR::SQ) { this-&gt;V = o; }
+<a name="l00099"></a>00099     <span class="keywordflow">else</span> { this-&gt;V.<a class="code" href="classvtk_d_i_c_o_m_value.html#aaee19a00d54536adb0668807e1e86a1a" title="Clear the value, the result is an invalid value.">Clear</a>(); } <span class="keywordflow">return</span> *<span class="keyword">this</span>; }
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 <span class="keyword">private</span>:
+<a name="l00102"></a>00102   <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a>;
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104   <a class="code" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a> V;
+<a name="l00105"></a>00105 
+<a name="l00107"></a>00107   <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata.">vtkDICOMValue</a> InvalidValue;
+<a name="l00109"></a>00109   <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a> EmptyItem;
+<a name="l00110"></a>00110 };
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112 VTK_DICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html" title="A sequence of items according to the SQ representation.">vtkDICOMSequence</a>&amp; v);
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114 <span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMSequence_h */</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -144,7 +147,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 3 2015 03:28:58 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:56 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

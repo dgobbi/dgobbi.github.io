@@ -436,7 +436,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValueFriendM
 <div class="memdoc">
 
 <p>Get the value as a scalar, string, tag, or item. </p>
-<p>The value is converted to the desired type, if possible, and returned. Otherwise the return value is zero (or an empty string). Conversion to string always produces an empty string for values of type UN, SQ, OB, OW, and OF. </p>
+<p>The value is converted to the desired type, if possible, and returned. Otherwise the return value is zero (or an empty string). Conversion to string always produces an empty string for values of type UN, SQ, OB, OW, and OF. Trailing spaces are always removed from strings. Leading spaces are removed unless the VR is ST, LT, or UT. </p>
 
 </div>
 </div>
@@ -545,7 +545,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValueFriendM
 <div class="memdoc">
 
 <p>Get one scalar, string, tag or item from the value. </p>
-<p>Convert the i'th value to the desired type, if possible, and return it. If the value is invalid, or conversion is not possible, or the index is out of range, then the return value will be zero (or an empty string). </p>
+<p>Convert the i'th value to the desired type, if possible, and return it. If the value is invalid, or conversion is not possible, or the index is out of range, then the return value will be zero (or an empty string). Trailing spaces are always removed from strings. Leading spaces are removed unless the VR is ST, LT, or UT. </p>
 
 </div>
 </div>
@@ -687,7 +687,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValueFriendM
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 3 2015 03:29:03 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:57 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

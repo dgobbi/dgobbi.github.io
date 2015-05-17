@@ -161,6 +161,8 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92091ec6cda73294d913553129a4821a"></a><!-- doxytag: member="vtkDICOMDirectory::GetFileNamesForSeries" ref="a92091ec6cda73294d913553129a4821a" args="(int i)" -->
 vtkStringArray *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a92091ec6cda73294d913553129a4821a">GetFileNamesForSeries</a> (int i)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the file names for a specific series. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a5f3ef401f853ef95944e9a7aba42e37c">GetMetaDataForSeries</a> (int i)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the meta data for a specific series.  <a href="#a5f3ef401f853ef95944e9a7aba42e37c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d05320781fe75734437ddead1aecd09"></a><!-- doxytag: member="vtkDICOMDirectory::GetFileSetID" ref="a7d05320781fe75734437ddead1aecd09" args="()" -->
 const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a7d05320781fe75734437ddead1aecd09">GetFileSetID</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the file set ID. This will be NULL unless a DICOMDIR was found. <br/></td></tr>
@@ -195,6 +197,9 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d48a5bd7729ef9e962789c933cb9a56"></a><!-- doxytag: member="vtkDICOMDirectory::Execute" ref="a3d48a5bd7729ef9e962789c933cb9a56" args="()" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a3d48a5bd7729ef9e962789c933cb9a56">Execute</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fill the output filename array. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bffad555f3821decc914dd696475e91"></a><!-- doxytag: member="vtkDICOMDirectory::FillImageRecord" ref="a0bffad555f3821decc914dd696475e91" args="(vtkDICOMItem *item, vtkDICOMMetaData *meta)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a0bffad555f3821decc914dd696475e91">FillImageRecord</a> (<a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *item, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fill image info from image metadata. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad71116c4c85626cd0157cb79168d7d44"></a><!-- doxytag: member="vtkDICOMDirectory::FillSeriesRecord" ref="ad71116c4c85626cd0157cb79168d7d44" args="(vtkDICOMItem *item, vtkDICOMMetaData *meta)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#ad71116c4c85626cd0157cb79168d7d44">FillSeriesRecord</a> (<a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *item, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fill series info from image metadata. <br/></td></tr>
@@ -207,8 +212,15 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acfac2838d727a663a3e974928ad4d69b"></a><!-- doxytag: member="vtkDICOMDirectory::SortFiles" ref="acfac2838d727a663a3e974928ad4d69b" args="(vtkStringArray *input)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#acfac2838d727a663a3e974928ad4d69b">SortFiles</a> (vtkStringArray *input)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sort the input string array. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a38e4bde091e6179e4e1e9252c046c387">AddSeriesFileNames</a> (int patient, int study, vtkStringArray *files, const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;patientRecord, const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;studyRecord, const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;seriesRecord)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add a sorted series to output.  <a href="#a38e4bde091e6179e4e1e9252c046c387"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a527531feccb61cfd1b2b94f073008bb8">AddSeriesFileNames</a> (int patient, int study, vtkStringArray *files, const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;patientRecord, const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;studyRecord, const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;seriesRecord, const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *imageRecords[])</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add a sorted series to output.  <a href="#a527531feccb61cfd1b2b94f073008bb8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0b4ceeadac9be379116c54a1d1ba43e"></a><!-- doxytag: member="vtkDICOMDirectory::AddSeriesWithQuery" ref="ad0b4ceeadac9be379116c54a1d1ba43e" args="(int patient, int study, vtkStringArray *files, const vtkDICOMItem &amp;patientRecord, const vtkDICOMItem &amp;studyRecord, const vtkDICOMItem &amp;seriesRecord, const vtkDICOMItem *imageRecords[])" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#ad0b4ceeadac9be379116c54a1d1ba43e">AddSeriesWithQuery</a> (int patient, int study, vtkStringArray *files, const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;patientRecord, const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;studyRecord, const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;seriesRecord, const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *imageRecords[])</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add files only if they match the query. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a21c608d2a13cd0a6be7053c675432da6">MatchesQuery</a> (const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;record, <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;result)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns false if the record doesn't match the query.  <a href="#a21c608d2a13cd0a6be7053c675432da6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a432217dc7a3ad8ac80b22b642f626870">MatchesImageQuery</a> (const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;record, const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;result)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Perform query on image record, given results from previous levels.  <a href="#a432217dc7a3ad8ac80b22b642f626870"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab88dae84eba95506217858690c05ed17"></a><!-- doxytag: member="vtkDICOMDirectory::RelayError" ref="ab88dae84eba95506217858690c05ed17" args="(vtkObject *o, unsigned long e, void *data)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#ab88dae84eba95506217858690c05ed17">RelayError</a> (<a class="el" href="classvtk_object.html">vtkObject</a> *o, unsigned long e, void *data)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Convert parser errors into sorter errors. <br/></td></tr>
@@ -218,11 +230,17 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c696f37e4ee08f632fc1913c22e6ebc"></a><!-- doxytag: member="vtkDICOMDirectory::SetErrorCode" ref="a4c696f37e4ee08f632fc1913c22e6ebc" args="(unsigned long e)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a4c696f37e4ee08f632fc1913c22e6ebc">SetErrorCode</a> (unsigned long e)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the error code. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a12d5ea5e7993e23bfe6a911612459211">ProcessDirectoryFile</a> (const char *dirname, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta, vtkStringArray *files)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add all of the series listed in a DICOMDIR file.  <a href="#a12d5ea5e7993e23bfe6a911612459211"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a97b07b94e194d1373a0d3aebc14759b1">ProcessDirectoryFile</a> (const char *dirname, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add all of the series listed in a DICOMDIR file.  <a href="#a97b07b94e194d1373a0d3aebc14759b1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1d7b4ffb052959fc7f75d73ae557c6e"></a><!-- doxytag: member="vtkDICOMDirectory::ProcessDirectory" ref="af1d7b4ffb052959fc7f75d73ae557c6e" args="(const char *dirname, int depth, vtkStringArray *files)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#af1d7b4ffb052959fc7f75d73ae557c6e">ProcessDirectory</a> (const char *dirname, int depth, vtkStringArray *files)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Process a directory, and subdirs to the specified depth. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02e8ead0c561acadbd496b6bd5a9a118"></a><!-- doxytag: member="vtkDICOMDirectory::ProcessOsirixDatabase" ref="a02e8ead0c561acadbd496b6bd5a9a118" args="(const char *fname)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a02e8ead0c561acadbd496b6bd5a9a118">ProcessOsirixDatabase</a> (const char *fname)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Process an OsiriX sqlite database file. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab18dac14f4cb5348bca98867d3383ec1"></a><!-- doxytag: member="vtkDICOMDirectory::CopyRecord" ref="ab18dac14f4cb5348bca98867d3383ec1" args="(vtkDICOMMetaData *meta, const vtkDICOMItem *item, int instance)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#ab18dac14f4cb5348bca98867d3383ec1">CopyRecord</a> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta, const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *item, int instance)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Copy attributes into a meta data object. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad07eedf5de49e3ebeab368336ac7a414"></a><!-- doxytag: member="vtkDICOMDirectory::DirectoryName" ref="ad07eedf5de49e3ebeab368336ac7a414" args="" -->
@@ -246,7 +264,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 <p>Get information about all DICOM files within a directory. </p>
 <p>Given a directory, search for a DICOMDIR file, and if no DICOMDIR is found, directly search for DICOM files within the directory. Provide a list of DICOM file names as output, sorted by patient, study, series, and image. </p>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a38e4bde091e6179e4e1e9252c046c387"></a><!-- doxytag: member="vtkDICOMDirectory::AddSeriesFileNames" ref="a38e4bde091e6179e4e1e9252c046c387" args="(int patient, int study, vtkStringArray *files, const vtkDICOMItem &amp;patientRecord, const vtkDICOMItem &amp;studyRecord, const vtkDICOMItem &amp;seriesRecord)" -->
+<a class="anchor" id="a527531feccb61cfd1b2b94f073008bb8"></a><!-- doxytag: member="vtkDICOMDirectory::AddSeriesFileNames" ref="a527531feccb61cfd1b2b94f073008bb8" args="(int patient, int study, vtkStringArray *files, const vtkDICOMItem &amp;patientRecord, const vtkDICOMItem &amp;studyRecord, const vtkDICOMItem &amp;seriesRecord, const vtkDICOMItem *imageRecords[])" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -284,7 +302,13 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>seriesRecord</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>seriesRecord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *&nbsp;</td>
+          <td class="paramname"> <em>imageRecords</em>[]</td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -297,6 +321,27 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 
 <p>Add a sorted series to output. </p>
 <p>This method is called from SortFiles to provide the files that make up one series. The study that the files belong to must also be provided, as a number that starts at zero and monotonically increases. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5f3ef401f853ef95944e9a7aba42e37c"></a><!-- doxytag: member="vtkDICOMDirectory::GetMetaDataForSeries" ref="a5f3ef401f853ef95944e9a7aba42e37c" args="(int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>* vtkDICOMDirectory::GetMetaDataForSeries </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the meta data for a specific series. </p>
+<p>This provides a subset of the meta data of each file in the series. To be specific, it contains all the information from the patient, study, and, at the very minimum, the SOPClassUID, SOPInstanceUID, and InstanceNumber for each file. </p>
 
 </div>
 </div>
@@ -363,6 +408,66 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 
 </div>
 </div>
+<a class="anchor" id="a432217dc7a3ad8ac80b22b642f626870"></a><!-- doxytag: member="vtkDICOMDirectory::MatchesImageQuery" ref="a432217dc7a3ad8ac80b22b642f626870" args="(const vtkDICOMItem &amp;record, const vtkDICOMItem &amp;result)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int vtkDICOMDirectory::MatchesImageQuery </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>record</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>result</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Perform query on image record, given results from previous levels. </p>
+<p>This method requires that <a class="el" href="classvtk_d_i_c_o_m_directory.html#a21c608d2a13cd0a6be7053c675432da6" title="Returns false if the record doesn&#39;t match the query.">MatchesQuery()</a> was already called on the patient, study, and series records. It has three possible return values. If all remaining query attributes were matched by the image record, then 0 is returned. If any of the remaining query attributes mis-matches with the image record, then -1 is returned. If the query contains tags that weren't in the patient, study, series, or image record, then 1 is returned to indicate that the match is inconclusive. </p>
+
+</div>
+</div>
+<a class="anchor" id="a21c608d2a13cd0a6be7053c675432da6"></a><!-- doxytag: member="vtkDICOMDirectory::MatchesQuery" ref="a21c608d2a13cd0a6be7053c675432da6" args="(const vtkDICOMItem &amp;record, vtkDICOMItem &amp;result)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vtkDICOMDirectory::MatchesQuery </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>record</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>result</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns false if the record doesn't match the query. </p>
+<p>Matching values are placed into the result parameter. </p>
+
+</div>
+</div>
 <a class="anchor" id="a7f504797b5933a222455fd75fc830583"></a><!-- doxytag: member="vtkDICOMDirectory::New" ref="a7f504797b5933a222455fd75fc830583" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -413,7 +518,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 
 </div>
 </div>
-<a class="anchor" id="a12d5ea5e7993e23bfe6a911612459211"></a><!-- doxytag: member="vtkDICOMDirectory::ProcessDirectoryFile" ref="a12d5ea5e7993e23bfe6a911612459211" args="(const char *dirname, vtkDICOMMetaData *meta, vtkStringArray *files)" -->
+<a class="anchor" id="a97b07b94e194d1373a0d3aebc14759b1"></a><!-- doxytag: member="vtkDICOMDirectory::ProcessDirectoryFile" ref="a97b07b94e194d1373a0d3aebc14759b1" args="(const char *dirname, vtkDICOMMetaData *meta)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -427,13 +532,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td>
-          <td class="paramname"> <em>meta</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkStringArray *&nbsp;</td>
-          <td class="paramname"> <em>files</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>meta</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -615,7 +714,7 @@ char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>InternalFileName</b
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 3 2015 03:29:00 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:57 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

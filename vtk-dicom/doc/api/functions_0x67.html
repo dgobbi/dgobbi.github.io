@@ -232,6 +232,9 @@ Here is a list of all documented class members with links to the class documenta
 , <a class="el" href="classvtk_d_i_c_o_m_meta_data_adapter.html#adcd817b2af704d6b21e0c651e419962d">vtkDICOMMetaDataAdapter</a>
 , <a class="el" href="classvtk_d_i_c_o_m_sequence.html#ab8e49926f575e8c9d581949a5a748e28">vtkDICOMSequence</a>
 </li>
+<li>GetAutoRescale()
+: <a class="el" href="classvtk_d_i_c_o_m_reader.html#a03074bb370bd9c2f19b44cd792f1b6f4">vtkDICOMReader</a>
+</li>
 <li>GetBitPix()
 : <a class="el" href="classvtk_n_i_f_t_i_header.html#ac4b95a92b78ee1531d60bc7a574b5cdd">vtkNIFTIHeader</a>
 </li>
@@ -430,8 +433,8 @@ Here is a list of all documented class members with links to the class documenta
 , <a class="el" href="classvtk_d_i_c_o_m_image_codec.html#a42482ef95f14ed1cf68fa0a91d5dc550">vtkDICOMImageCodec</a>
 </li>
 <li>GetLastSeriesForStudy()
-: <a class="el" href="classvtk_d_i_c_o_m_file_sorter.html#a08433d4b9fd0d3c3b5cfa547626cdc26">vtkDICOMFileSorter</a>
-, <a class="el" href="classvtk_d_i_c_o_m_directory.html#a61479b59e0083e8d39369c84c6a9889d">vtkDICOMDirectory</a>
+: <a class="el" href="classvtk_d_i_c_o_m_directory.html#a61479b59e0083e8d39369c84c6a9889d">vtkDICOMDirectory</a>
+, <a class="el" href="classvtk_d_i_c_o_m_file_sorter.html#a08433d4b9fd0d3c3b5cfa547626cdc26">vtkDICOMFileSorter</a>
 </li>
 <li>GetMagic()
 : <a class="el" href="classvtk_n_i_f_t_i_header.html#a6d913a49c9a7a727564f56def7a334a3">vtkNIFTIHeader</a>
@@ -448,6 +451,9 @@ Here is a list of all documented class members with links to the class documenta
 <li>GetMetaData()
 : <a class="el" href="classvtk_d_i_c_o_m_generator.html#a3f7494b40d3ec038c1589c477396be15">vtkDICOMGenerator</a>
 , <a class="el" href="classvtk_d_i_c_o_m_reader.html#aebb691281854d0482ba86da37c9bd4c0">vtkDICOMReader</a>
+</li>
+<li>GetMetaDataForSeries()
+: <a class="el" href="classvtk_d_i_c_o_m_directory.html#a5f3ef401f853ef95944e9a7aba42e37c">vtkDICOMDirectory</a>
 </li>
 <li>GetMetaDataInformation()
 : <a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a51aee3e5074f395388c91a700c396b71">vtkDICOMAlgorithm</a>
@@ -478,8 +484,8 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classvtk_n_i_f_t_i_reader.html#ab46bb07e73d28306e33031a570e1c018">vtkNIFTIReader</a>
 </li>
 <li>GetNumberOfDataElements()
-: <a class="el" href="classvtk_d_i_c_o_m_item.html#ac528dfb8cb39b1156fdaf130af3a96c6">vtkDICOMItem</a>
-, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a02f50a2a0b4505a84307f88f956e24d5">vtkDICOMMetaData</a>
+: <a class="el" href="classvtk_d_i_c_o_m_meta_data.html#a02f50a2a0b4505a84307f88f956e24d5">vtkDICOMMetaData</a>
+, <a class="el" href="classvtk_d_i_c_o_m_item.html#ac528dfb8cb39b1156fdaf130af3a96c6">vtkDICOMItem</a>
 </li>
 <li>GetNumberOfElements()
 : <a class="el" href="classvtk_data_object.html#af311080483d6601def20279a4c50d8a3">vtkDataObject</a>
@@ -492,8 +498,8 @@ Here is a list of all documented class members with links to the class documenta
 </li>
 <li>GetNumberOfInstances()
 : <a class="el" href="classvtk_d_i_c_o_m_data_element.html#a366de204dcf694210ff68a1742ba2e01">vtkDICOMDataElement</a>
-, <a class="el" href="classvtk_d_i_c_o_m_meta_data_adapter.html#a3b5101593e3713760e866f0f32e4eca0">vtkDICOMMetaDataAdapter</a>
 , <a class="el" href="classvtk_d_i_c_o_m_meta_data.html#ae1c81ebbc7da3d84adafebf0ed43f549">vtkDICOMMetaData</a>
+, <a class="el" href="classvtk_d_i_c_o_m_meta_data_adapter.html#a3b5101593e3713760e866f0f32e4eca0">vtkDICOMMetaDataAdapter</a>
 </li>
 <li>GetNumberOfItems()
 : <a class="el" href="classvtk_d_i_c_o_m_sequence.html#aa55e90a4f12da1e12b68208f172d4d0d">vtkDICOMSequence</a>
@@ -598,8 +604,8 @@ Here is a list of all documented class members with links to the class documenta
 </li>
 <li>GetRescaleSlope()
 : <a class="el" href="classvtk_d_i_c_o_m_reader.html#ac1392c3f86335e3a1ce93e8067142d43">vtkDICOMReader</a>
-, <a class="el" href="classvtk_n_i_f_t_i_reader.html#a2b87f4ead9e5a7e6824d37def2508629">vtkNIFTIReader</a>
 , <a class="el" href="classvtk_scanco_c_t_reader.html#abcf245bcb0a0e9168e1696cc13f5d3b7">vtkScancoCTReader</a>
+, <a class="el" href="classvtk_n_i_f_t_i_reader.html#a2b87f4ead9e5a7e6824d37def2508629">vtkNIFTIReader</a>
 </li>
 <li>GetRescaleType()
 : <a class="el" href="classvtk_scanco_c_t_reader.html#a0214afd1528e45f5d0d01302b15130d3">vtkScancoCTReader</a>
@@ -685,8 +691,8 @@ Here is a list of all documented class members with links to the class documenta
 , <a class="el" href="classvtk_d_i_c_o_m_reader.html#af6ebe011729bb860ad99fa11f83e795d">vtkDICOMReader</a>
 </li>
 <li>GetTimeDimension()
-: <a class="el" href="classvtk_n_i_f_t_i_writer.html#aca966ed692713a5603f3369976c3c234">vtkNIFTIWriter</a>
-, <a class="el" href="classvtk_n_i_f_t_i_reader.html#ad1560fb1b7f999c19e7f8e45e6286714">vtkNIFTIReader</a>
+: <a class="el" href="classvtk_n_i_f_t_i_reader.html#ad1560fb1b7f999c19e7f8e45e6286714">vtkNIFTIReader</a>
+, <a class="el" href="classvtk_n_i_f_t_i_writer.html#aca966ed692713a5603f3369976c3c234">vtkNIFTIWriter</a>
 , <a class="el" href="classvtk_d_i_c_o_m_reader.html#a5c8b6ee757ac137ec02b6188c8310d04">vtkDICOMReader</a>
 </li>
 <li>GetTotalNumberOfInputConnections()
@@ -711,7 +717,7 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classvtk_d_i_c_o_m_value.html#a533afbacaceb75e489371025b0ea96ee">vtkDICOMValue</a>
 </li>
 <li>GetValue()
-: <a class="el" href="classvtk_d_i_c_o_m_data_element.html#adfa867402de8bff0adac9ed1258616a2">vtkDICOMDataElement</a>
+: <a class="el" href="classvtk_d_i_c_o_m_data_element.html#a9c7d00c6bb71101d337f61ac1ecb29a8">vtkDICOMDataElement</a>
 </li>
 <li>GetValues()
 : <a class="el" href="classvtk_d_i_c_o_m_value.html#ac42eaefbe6861caa32cfdb40a71806ec">vtkDICOMValue</a>
@@ -729,9 +735,9 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classvtk_n_i_f_t_i_header.html#a89adb791f4caf3e4ca0bbd310fcc634b">vtkNIFTIHeader</a>
 </li>
 <li>GetVR()
-: <a class="el" href="classvtk_d_i_c_o_m_dict_entry.html#a04f301c021dfb8d6a39232d25d75e2d9">vtkDICOMDictEntry</a>
+: <a class="el" href="classvtk_d_i_c_o_m_value.html#a27fec3da99035be2cda28863d121d7e5">vtkDICOMValue</a>
+, <a class="el" href="classvtk_d_i_c_o_m_dict_entry.html#a04f301c021dfb8d6a39232d25d75e2d9">vtkDICOMDictEntry</a>
 , <a class="el" href="classvtk_d_i_c_o_m_data_element.html#afaaf69a7b95f46e7a2f7b4133a11be06">vtkDICOMDataElement</a>
-, <a class="el" href="classvtk_d_i_c_o_m_value.html#a27fec3da99035be2cda28863d121d7e5">vtkDICOMValue</a>
 </li>
 <li>GetZPosition()
 : <a class="el" href="classvtk_scanco_c_t_reader.html#a7f9373053e8507e5c6a0066e459a4090">vtkScancoCTReader</a>
@@ -752,7 +758,7 @@ Here is a list of all documented class members with links to the class documenta
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 3 2015 03:28:58 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:56 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

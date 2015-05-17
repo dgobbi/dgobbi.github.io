@@ -72,9 +72,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac726b1aa6707a7aed03ed91f484038ea"></a><!-- doxytag: member="vtkDICOMItem::vtkDICOMItem" ref="ac726b1aa6707a7aed03ed91f484038ea" args="()" -->
 &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#ac726b1aa6707a7aed03ed91f484038ea">vtkDICOMItem</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Default constructor creates an empty item. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeac747edf634f1747b8e44158a89fb13"></a><!-- doxytag: member="vtkDICOMItem::vtkDICOMItem" ref="aeac747edf634f1747b8e44158a89fb13" args="(int delimited, unsigned int byteOffset=0)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#aeac747edf634f1747b8e44158a89fb13">vtkDICOMItem</a> (int delimited, unsigned int byteOffset=0)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor with flag for delimited item. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#ac28022361244939a39b430d990a67c07">vtkDICOMItem</a> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor that takes certain properties from the data set.  <a href="#ac28022361244939a39b430d990a67c07"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#aa12b9966bb145d90c01af3e99fd07f92">vtkDICOMItem</a> (<a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> cs, <a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> vrForXS, int delimited=0, unsigned int byteOffset=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor with flag for delimitation and offset.  <a href="#aa12b9966bb145d90c01af3e99fd07f92"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06646685690e7e3090e2f59c5e62741d"></a><!-- doxytag: member="vtkDICOMItem::vtkDICOMItem" ref="a06646685690e7e3090e2f59c5e62741d" args="(const vtkDICOMItem &amp;o)" -->
 &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_item.html#a06646685690e7e3090e2f59c5e62741d">vtkDICOMItem</a> (const <a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> &amp;o)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Copy constructor does reference counting. <br/></td></tr>
@@ -138,6 +139,70 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>An item in a DICOM sequence (type SQ). </p>
 <p>A DICOM sequence is a list of items, where each item is essentially a data set of its own. An item consists of zero or more data elements, each with a tag and value. </p>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ac28022361244939a39b430d990a67c07"></a><!-- doxytag: member="vtkDICOMItem::vtkDICOMItem" ref="ac28022361244939a39b430d990a67c07" args="(vtkDICOMMetaData *meta)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vtkDICOMItem::vtkDICOMItem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td>
+          <td class="paramname"> <em>meta</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Constructor that takes certain properties from the data set. </p>
+<p>Specifically, this checks the values of SpecificCharacterSet (so that the item knows what character set to use), of PixelRepresentation (so that the item knows whether to resolve a VR of XS to US or SS, and of BitsAllocated (so that the item knows whether to resolve a VR of OX to OB or OW). This is the preferred constructor for <a class="el" href="classvtk_d_i_c_o_m_item.html" title="An item in a DICOM sequence (type SQ).">vtkDICOMItem</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa12b9966bb145d90c01af3e99fd07f92"></a><!-- doxytag: member="vtkDICOMItem::vtkDICOMItem" ref="aa12b9966bb145d90c01af3e99fd07f92" args="(vtkDICOMCharacterSet cs, vtkDICOMVR vrForXS, int delimited=0, unsigned int byteOffset=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vtkDICOMItem::vtkDICOMItem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>&nbsp;</td>
+          <td class="paramname"> <em>cs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a>&nbsp;</td>
+          <td class="paramname"> <em>vrForXS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>delimited</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&nbsp;</td>
+          <td class="paramname"> <em>byteOffset</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Constructor with flag for delimitation and offset. </p>
+<p>This constructor is used by the parser to record where the item was in the file, whether the item was delimited, and what the character set and default VR for XS are. </p>
+
+</div>
+</div>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ab421c9c2d93d8bda10863628a92ebd1d"></a><!-- doxytag: member="vtkDICOMItem::FindDictEntry" ref="ab421c9c2d93d8bda10863628a92ebd1d" args="(vtkDICOMTag tag) const " -->
 <div class="memitem">
@@ -318,7 +383,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Mar 3 2015 03:29:01 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:57 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

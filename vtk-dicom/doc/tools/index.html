@@ -74,20 +74,75 @@ files in the series.  The "-execdir" argument is similar, except that
 it runs the program from within the directory of the file (or files),
 and {} is replaced by just the filenames instead of with the full paths.
 </p>
+<h3> <span id="dicompull"> dicompull </span></h3>
+<pre>
+usage:
+  dicompull [options] &lt;directory&gt; ...
+
+options:
+  -L              Follow symbolic links (default).
+  -P              Do not follow symbolic links.
+  -k tag=value    Provide an attribute to be queried and matched.
+  -q &lt;query.txt&gt;  Provide a file to describe the find query.
+  -o &lt;directory&gt;  Directory to place the files into.
+  -maxdepth n     Set the maximum directory depth.
+  -name pattern   Set a pattern to match (with &quot;*&quot; or &quot;?&quot;).
+  -image          Restrict the search to files with PixelData.
+  -series         Find all files in series if even one file matches.
+  --silent        Do not report any progress information.
+  --help          Print a brief help message.
+  --version       Print the software version.
+</pre>
+<p>Find dicom files in one directory and copy them to a new directory.
+</p><p>The output directory given with &quot;-o&quot; can use DICOM attributes,
+by naming those attributes within curly braces.  For example, consider
+&quot;{PatientID}/{StudyDescription}/{SeriesDescription}-{SeriesNumber}&quot;
+or something similar to produce a hierarchichal directory structure.
+The attributes used in the path should be from the following list:</p>
+<pre>
+  PatientID, PatientName, PatientBirthDate, PatientSex,
+  StudyID, StudyDescription, StudyDate, StudyTime, StudyInstanceUID,
+  SeriesNumber, SeriesDescription, SeriesInstanceUID,
+  Modality, AccessionNumber.
+</pre>
+<p>The files to be copied are specified with search keys, which take the
+form &quot;-k key=value&quot; where keys can either use the standard names given
+in the DICOM dictionary, e.g. Modality or SeriesDescription, or can be
+in the form GGGG,EEEE with hexadecimal group and element values.  The
+tags can also be listed in a query file with the &quot;-q&quot; option (one tag
+per line). Private tags should be preceded by the private dictionary
+name in square brackets.
+</p><p>The values used for &quot;-k key=value&quot; can use the wildcards *
+and ?, and can also use date ranges of the form &quot;19990103-19990105&quot;.
+</p>
 <h3> <span id="dicomtocsv"> dicomtocsv </span></h3>
 <pre>
 usage:
   dicomtocsv [options] &lt;directory&gt;
 
 options:
-  -k tag=value    Provide a key to be queried and matched.
-  -q &lt;query.txt&gt;  Provide a file to describe the find query.
-  -o &lt;data.csv&gt;   Provide a file for the query results.
-  --help          Print a brief help message.
-  --version       Print the software version.
+  -k tag=value     Provide a key to be queried and matched.
+  -q &lt;query.txt&gt;   Provide a file to describe the find query.
+  -o &lt;data.csv&gt;    Provide a file for the query results.
+  --first-nonzero  Search series for first nonzero value of each key.
+  --directory-only Use directory scan only, do not re-scan files.
+  --study          Print one row for each study.
+  --series         Print one row for each series (default).
+  --image          Print one row for each image.
+  --silent         Do not report any progress information.
+  --help           Print a brief help message.
+  --version        Print the software version.
 </pre>
-<p>Dump the requested metadata as a csv file, with one line in the csv file for each DICOM series that matched the query, and one column in the csv file for each attribute listed in the query file.
-</p><p>This is a powerful program that will scan a directory, recursively searching for DICOM series that match a given query, and will then dump the requested DICOM attributes to a csv file that can be imported into a database.  An example query file is as follows:
+<p>Dump selected metadata from a DICOM directory to a csv file.
+For each attribute to be extracted, the tag can be given with "-k"
+(the "-k" option can be repeated as many times as needed).  Tags can
+given in hexadecimal GGGG,EEEE format, or in text format as specified
+in the DICOM dictionary.  Alternately, the tags can be listed in a
+query file given with the "-q" option (one tag per line).
+Attributes nested within sequences can be specified by giving a tag
+path e.g. "-k Tag1/Tag2/Tag3".  Either a forward slash or a backslash
+can be used to separate the components of the path.  Private tags
+should be preceded by the private dictionary name in square brackets.
 </p>
 <pre>
 # This is my query file
@@ -128,7 +183,7 @@ options:
   -s --silent             Do not echo output filenames.
   -v --verbose            Verbose error reporting.
   -L --follow-symlinks    Follow symbolic links when recursing.
-  --fsl                   Reformat the image for use in FSL.
+  --fsl                   Format axial image for use in FSL.
   --reformat-to-axial     Reformat the image into axial orientation.
   --no-slice-reordering   Never reorder the slices.
   --no-row-reordering     Never reorder the rows.
@@ -137,6 +192,7 @@ options:
   --no-qform              Don't include a qform in the NIFTI file.
   --no-sform              Don't include an sform in the NIFTI file.
   --version               Print the version and exit.
+  --volume N              Set the volume to output (starts at 0).
   --build-version         Print source and build version.
   --help                  Documentation for dicomtonifti.
 </pre>
@@ -146,7 +202,7 @@ information to generate qform and sform entries for the NIfTI header,
 after doing a conversion from the DICOM coordinate system to the NIfTI
 coordinate system.
 </p><p>By default, it will also reorder the columns of the image so that
-columns with higher indices are further to the patient's right (or
+columns with higher indices are further to the patient&apos;s right (or
 in the case of sagittal images, further anterior).  Likewise, rows
 will be rearranged so that rows with higher indices are superior (or
 anterior for axial images).  Finally, it will reorder the slices
@@ -162,15 +218,24 @@ FSL orientation: axial images with the slices arranged from inferior to
 superior, column number increasing from right to left, and row number
 increasing from posterior to anterior.  This will also convert the data
 type from unsigned 16-bit to signed 16-bit if necessary.
-</p><p>If batch mode is enabled, then the filenames will automatically be
-generated from the series description in the DICOM meta data:
-"PatientName/StudyDescription-ID/SeriesDescription_N.nii.gz".
-</p><p>Here is an example of batch mode that recurses into subdirectories
+</p><p>If batch mode is selected, the output file given with &quot;-o&quot;
+can be constructed from DICOM attributes, by providing the attribute names
+within curly braces.  For example, consider the following:
+&quot;{PatientID}-{StudyDate}/{SeriesDescription}-{SeriesNumber}.nii&quot;
+or something similar to produce a hierarchichal directory structure.
+The attributes used in the path should be from the following list:</p>
+<pre>
+  PatientID, PatientName, PatientBirthDate, PatientSex,
+  StudyID, StudyDescription, StudyDate, StudyTime, StudyInstanceUID,
+  SeriesNumber, SeriesDescription, SeriesInstanceUID,
+  Modality, AccessionNumber.
+</pre>
+<p>Here is an example of batch mode that recurses into subdirectories
 and compresses the output files, putting the results in the current
 directory:
 </p>
 <pre>
-bin/dicomtonifti -brz -o . /path/to/dicom/files
+  dicomtonifti -brz -o {SeriesDescription}-{SeriesNumber}.nii /path/to/dicom/files
 </pre>
 <h3> <span id="niftitodicom"> niftitodicom </span></h3>
 <pre>
