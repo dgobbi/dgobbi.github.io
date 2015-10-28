@@ -115,6 +115,16 @@ virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetRescaleI
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#ac3f38a2824be93446d7ac906c0dcc733">GetPlanarRGB</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a103a91c5fbcf1d140655bea9198bed56"></a><!-- doxytag: member="vtkNIFTIWriter::SetPlanarRGB" ref="a103a91c5fbcf1d140655bea9198bed56" args="(bool)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetPlanarRGB</b> (bool)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42db91ea19d1be953cff3eb8aa964954"></a><!-- doxytag: member="vtkNIFTIWriter::PlanarRGBOn" ref="a42db91ea19d1be953cff3eb8aa964954" args="()" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>PlanarRGBOn</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5e66a5b4427e03297e9fa8984728ee7"></a><!-- doxytag: member="vtkNIFTIWriter::PlanarRGBOff" ref="aa5e66a5b4427e03297e9fa8984728ee7" args="()" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>PlanarRGBOff</b> ()</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#a01025fb3fa36021f932b24236d4bcd8d">SetQFac</a> (double)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a741853ae4890f9b7473cf798fa7dc282"></a><!-- doxytag: member="vtkNIFTIWriter::GetQFac" ref="a741853ae4890f9b7473cf798fa7dc282" args="()" -->
 virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetQFac</b> ()</td></tr>
@@ -153,6 +163,7 @@ Static Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#aef5297e5ed45bf54b115ba6049f7faff">QFac</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#a0300b826bbf8dc12048de99f9e05e133">Description</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#a4c9dc1cca9cedb05dba2c9f7f7bf027a">PlanarRGB</a></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -222,6 +233,24 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </div>
 <div class="memdoc">
 <p>Generate the header information for the file. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac3f38a2824be93446d7ac906c0dcc733"></a><!-- doxytag: member="vtkNIFTIWriter::GetPlanarRGB" ref="ac3f38a2824be93446d7ac906c0dcc733" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool vtkNIFTIWriter::GetPlanarRGB </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Write planar RGB (separate R, G, and B planes), rather than packed RGB. Use this option with extreme caution: the NIFTI standard requires RGB pixels to be packed. The Analyze format, however, was used to store both planar RGB and packed RGB depending on the software, without any indication in the header about which convention was being used. </p>
 
 </div>
 </div>
@@ -567,6 +596,20 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
+<a class="anchor" id="a4c9dc1cca9cedb05dba2c9f7f7bf027a"></a><!-- doxytag: member="vtkNIFTIWriter::PlanarRGB" ref="a4c9dc1cca9cedb05dba2c9f7f7bf027a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classvtk_n_i_f_t_i_writer.html#a4c9dc1cca9cedb05dba2c9f7f7bf027a">vtkNIFTIWriter::PlanarRGB</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Use planar RGB instead of the default (packed). </p>
+
+</div>
+</div>
 <a class="anchor" id="aef5297e5ed45bf54b115ba6049f7faff"></a><!-- doxytag: member="vtkNIFTIWriter::QFac" ref="aef5297e5ed45bf54b115ba6049f7faff" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -641,7 +684,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:58 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 27 2015 23:03:50 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

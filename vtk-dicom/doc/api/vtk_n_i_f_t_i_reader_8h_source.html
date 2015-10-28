@@ -66,7 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00035"></a>00035 <span class="preprocessor"></span><span class="preprocessor">#define vtkNIFTIReader_h</span>
 <a name="l00036"></a>00036 <span class="preprocessor"></span>
 <a name="l00037"></a>00037 <span class="preprocessor">#include &lt;vtkImageReader2.h&gt;</span>
-<a name="l00038"></a>00038 <span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span>
+<a name="l00038"></a>00038 <span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span> <span class="comment">// For export macro</span>
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 <span class="keyword">class </span><a class="code" href="classvtk_n_i_f_t_i_header.html" title="Store NIfTI header information.">vtkNIFTIHeader</a>;
 <a name="l00041"></a>00041 <span class="keyword">class </span>vtkMatrix4x4;
@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00043"></a>00043 <span class="keyword">struct </span>nifti_1_header;
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045 <span class="comment">//----------------------------------------------------------------------------</span>
-<a name="l00046"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html">00046</a> <span class="keyword">class </span>VTK_DICOM_EXPORT <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a> : <span class="keyword">public</span> <a class="code" href="classvtk_image_reader2.html" title="Superclass of binary file readers.">vtkImageReader2</a>
+<a name="l00046"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html">00046</a> <span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a> : <span class="keyword">public</span> <a class="code" href="classvtk_image_reader2.html" title="Superclass of binary file readers.">vtkImageReader2</a>
 <a name="l00047"></a>00047 {
 <a name="l00048"></a>00048 <span class="keyword">public</span>:
 <a name="l00050"></a>00050 
@@ -106,62 +106,69 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00096"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a2b87f4ead9e5a7e6824d37def2508629">00096</a>   <span class="keywordtype">double</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html#a2b87f4ead9e5a7e6824d37def2508629">GetRescaleSlope</a>() { <span class="keywordflow">return</span> this-&gt;RescaleSlope; }
 <a name="l00097"></a>00097   <span class="keywordtype">double</span> GetRescaleIntercept() { <span class="keywordflow">return</span> this-&gt;RescaleIntercept; }
 <a name="l00099"></a>00099 
-<a name="l00108"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a5d98e909c94730c02b02acad6f39b172">00108</a>   <span class="keywordtype">double</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html#a5d98e909c94730c02b02acad6f39b172">GetQFac</a>() { <span class="keywordflow">return</span> this-&gt;QFac; }
-<a name="l00109"></a>00109 
-<a name="l00121"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a8fdc8108080fba73dd919029c0d8b085">00121</a>   vtkMatrix4x4 *<a class="code" href="classvtk_n_i_f_t_i_reader.html#a8fdc8108080fba73dd919029c0d8b085">GetQFormMatrix</a>() { <span class="keywordflow">return</span> this-&gt;QFormMatrix; }
-<a name="l00122"></a>00122 
-<a name="l00136"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#af2a9341ab7c929dcab4616dd0ea5dd9f">00136</a>   vtkMatrix4x4 *<a class="code" href="classvtk_n_i_f_t_i_reader.html#af2a9341ab7c929dcab4616dd0ea5dd9f">GetSFormMatrix</a>() { <span class="keywordflow">return</span> this-&gt;SFormMatrix; }
-<a name="l00137"></a>00137 
-<a name="l00139"></a>00139   <a class="code" href="classvtk_n_i_f_t_i_header.html" title="Store NIfTI header information.">vtkNIFTIHeader</a> *GetNIFTIHeader();
-<a name="l00140"></a>00140 
-<a name="l00141"></a>00141 <span class="keyword">protected</span>:
-<a name="l00142"></a>00142   <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>();
-<a name="l00143"></a>00143   ~<a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>();
-<a name="l00144"></a>00144 
-<a name="l00146"></a>00146 
-<a name="l00147"></a>00147   <span class="keyword">virtual</span> <span class="keywordtype">int</span> RequestInformation(
-<a name="l00148"></a>00148     vtkInformation* request, vtkInformationVector** inputVector,
-<a name="l00149"></a>00149     vtkInformationVector* outputVector);
-<a name="l00151"></a>00151 
-<a name="l00153"></a>00153 
-<a name="l00154"></a>00154   <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_image_algorithm.html#addc9f91ebe9386c31617c3e12166e10e">RequestData</a>(
-<a name="l00155"></a>00155     vtkInformation* request, vtkInformationVector** inputVector,
-<a name="l00156"></a>00156     vtkInformationVector* outputVector);
+<a name="l00101"></a>00101 
+<a name="l00107"></a>00107   vtkGetMacro(PlanarRGB, <span class="keywordtype">bool</span>);
+<a name="l00108"></a>00108   vtkSetMacro(PlanarRGB, <span class="keywordtype">bool</span>);
+<a name="l00109"></a>00109   vtkBooleanMacro(PlanarRGB, <span class="keywordtype">bool</span>);
+<a name="l00111"></a>00111 
+<a name="l00120"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a5d98e909c94730c02b02acad6f39b172">00120</a>   <span class="keywordtype">double</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html#a5d98e909c94730c02b02acad6f39b172">GetQFac</a>() { <span class="keywordflow">return</span> this-&gt;QFac; }
+<a name="l00121"></a>00121 
+<a name="l00133"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a8fdc8108080fba73dd919029c0d8b085">00133</a>   vtkMatrix4x4 *<a class="code" href="classvtk_n_i_f_t_i_reader.html#a8fdc8108080fba73dd919029c0d8b085">GetQFormMatrix</a>() { <span class="keywordflow">return</span> this-&gt;QFormMatrix; }
+<a name="l00134"></a>00134 
+<a name="l00148"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#af2a9341ab7c929dcab4616dd0ea5dd9f">00148</a>   vtkMatrix4x4 *<a class="code" href="classvtk_n_i_f_t_i_reader.html#af2a9341ab7c929dcab4616dd0ea5dd9f">GetSFormMatrix</a>() { <span class="keywordflow">return</span> this-&gt;SFormMatrix; }
+<a name="l00149"></a>00149 
+<a name="l00151"></a>00151   <a class="code" href="classvtk_n_i_f_t_i_header.html" title="Store NIfTI header information.">vtkNIFTIHeader</a> *GetNIFTIHeader();
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153 <span class="keyword">protected</span>:
+<a name="l00154"></a>00154   <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>();
+<a name="l00155"></a>00155   ~<a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>();
+<a name="l00156"></a>00156 
 <a name="l00158"></a>00158 
-<a name="l00162"></a>00162   <span class="keyword">static</span> <span class="keywordtype">bool</span> CheckExtension(<span class="keyword">const</span> <span class="keywordtype">char</span> *fname, <span class="keyword">const</span> <span class="keywordtype">char</span> *ext);
+<a name="l00159"></a>00159   <span class="keyword">virtual</span> <span class="keywordtype">int</span> RequestInformation(
+<a name="l00160"></a>00160     vtkInformation* request, vtkInformationVector** inputVector,
+<a name="l00161"></a>00161     vtkInformationVector* outputVector);
 <a name="l00163"></a>00163 
 <a name="l00165"></a>00165 
-<a name="l00171"></a>00171   <span class="keyword">static</span> <span class="keywordtype">char</span> *ReplaceExtension(
-<a name="l00172"></a>00172     <span class="keyword">const</span> <span class="keywordtype">char</span> *fname, <span class="keyword">const</span> <span class="keywordtype">char</span> *ext1, <span class="keyword">const</span> <span class="keywordtype">char</span> *ext2);
-<a name="l00174"></a>00174 
-<a name="l00176"></a>00176   <span class="keyword">static</span> <span class="keywordtype">int</span> CheckNIFTIVersion(<span class="keyword">const</span> nifti_1_header *hdr);
+<a name="l00166"></a>00166   <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_image_algorithm.html#addc9f91ebe9386c31617c3e12166e10e">RequestData</a>(
+<a name="l00167"></a>00167     vtkInformation* request, vtkInformationVector** inputVector,
+<a name="l00168"></a>00168     vtkInformationVector* outputVector);
+<a name="l00170"></a>00170 
+<a name="l00174"></a>00174   <span class="keyword">static</span> <span class="keywordtype">bool</span> CheckExtension(<span class="keyword">const</span> <span class="keywordtype">char</span> *fname, <span class="keyword">const</span> <span class="keywordtype">char</span> *ext);
+<a name="l00175"></a>00175 
 <a name="l00177"></a>00177 
-<a name="l00179"></a>00179   <span class="keyword">static</span> <span class="keywordtype">bool</span> CheckAnalyzeHeader(<span class="keyword">const</span> nifti_1_header *hdr);
-<a name="l00180"></a>00180 
-<a name="l00182"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#af801b19bd3485aa90fe57ce8aa801433">00182</a>   <span class="keywordtype">int</span> TimeAsVector;
-<a name="l00183"></a>00183 
-<a name="l00185"></a>00185 
-<a name="l00186"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a1a9beac05f7bc52b998c09354f673acb">00186</a>   <span class="keywordtype">double</span> RescaleIntercept;
-<a name="l00187"></a>00187   <span class="keywordtype">double</span> RescaleSlope;
+<a name="l00183"></a>00183   <span class="keyword">static</span> <span class="keywordtype">char</span> *ReplaceExtension(
+<a name="l00184"></a>00184     <span class="keyword">const</span> <span class="keywordtype">char</span> *fname, <span class="keyword">const</span> <span class="keywordtype">char</span> *ext1, <span class="keyword">const</span> <span class="keywordtype">char</span> *ext2);
+<a name="l00186"></a>00186 
+<a name="l00188"></a>00188   <span class="keyword">static</span> <span class="keywordtype">int</span> CheckNIFTIVersion(<span class="keyword">const</span> nifti_1_header *hdr);
 <a name="l00189"></a>00189 
-<a name="l00191"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a6ac16e7ca664499d386fda231fd004b5">00191</a>   <span class="keywordtype">double</span> QFac;
+<a name="l00191"></a>00191   <span class="keyword">static</span> <span class="keywordtype">bool</span> CheckAnalyzeHeader(<span class="keyword">const</span> nifti_1_header *hdr);
 <a name="l00192"></a>00192 
-<a name="l00194"></a>00194 
-<a name="l00195"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#aca6019641ce51e5a290a5c8c6cc82bb5">00195</a>   vtkMatrix4x4 *QFormMatrix;
-<a name="l00196"></a>00196   vtkMatrix4x4 *SFormMatrix;
-<a name="l00198"></a>00198 
-<a name="l00200"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a8434efdfa5d5a8d131fdbd0f788b5d3e">00200</a>   <span class="keywordtype">int</span> Dim[8];
+<a name="l00194"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#af801b19bd3485aa90fe57ce8aa801433">00194</a>   <span class="keywordtype">int</span> TimeAsVector;
+<a name="l00195"></a>00195 
+<a name="l00197"></a>00197 
+<a name="l00198"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a1a9beac05f7bc52b998c09354f673acb">00198</a>   <span class="keywordtype">double</span> RescaleIntercept;
+<a name="l00199"></a>00199   <span class="keywordtype">double</span> RescaleSlope;
 <a name="l00201"></a>00201 
-<a name="l00203"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#ad9bcaea082976cd19f51894e79179f9f">00203</a>   <span class="keywordtype">double</span> PixDim[8];
+<a name="l00203"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a6ac16e7ca664499d386fda231fd004b5">00203</a>   <span class="keywordtype">double</span> QFac;
 <a name="l00204"></a>00204 
-<a name="l00206"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a57b806c8cd0c924db8f0c1aa518c1f23">00206</a>   <a class="code" href="classvtk_n_i_f_t_i_header.html" title="Store NIfTI header information.">vtkNIFTIHeader</a> *NIFTIHeader;
-<a name="l00207"></a>00207 
-<a name="l00208"></a>00208 <span class="keyword">private</span>:
-<a name="l00209"></a>00209   <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00210"></a>00210   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00211"></a>00211 };
-<a name="l00212"></a>00212 
-<a name="l00213"></a>00213 <span class="preprocessor">#endif // vtkNIFTIReader_h</span>
+<a name="l00206"></a>00206 
+<a name="l00207"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#aca6019641ce51e5a290a5c8c6cc82bb5">00207</a>   vtkMatrix4x4 *QFormMatrix;
+<a name="l00208"></a>00208   vtkMatrix4x4 *SFormMatrix;
+<a name="l00210"></a>00210 
+<a name="l00212"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a8434efdfa5d5a8d131fdbd0f788b5d3e">00212</a>   <span class="keywordtype">int</span> Dim[8];
+<a name="l00213"></a>00213 
+<a name="l00215"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#ad9bcaea082976cd19f51894e79179f9f">00215</a>   <span class="keywordtype">double</span> PixDim[8];
+<a name="l00216"></a>00216 
+<a name="l00218"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a57b806c8cd0c924db8f0c1aa518c1f23">00218</a>   <a class="code" href="classvtk_n_i_f_t_i_header.html" title="Store NIfTI header information.">vtkNIFTIHeader</a> *NIFTIHeader;
+<a name="l00219"></a>00219 
+<a name="l00221"></a><a class="code" href="classvtk_n_i_f_t_i_reader.html#a78bd8ca621289c27a948573f282fdfc3">00221</a>   <span class="keywordtype">bool</span> PlanarRGB;
+<a name="l00222"></a>00222 
+<a name="l00223"></a>00223 <span class="keyword">private</span>:
+<a name="l00224"></a>00224   <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00225"></a>00225   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html" title="Read NIfTI-1 and NIfTI-2 medical image files.">vtkNIFTIReader</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00226"></a>00226 };
+<a name="l00227"></a>00227 
+<a name="l00228"></a>00228 <span class="preprocessor">#endif // vtkNIFTIReader_h</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -178,7 +185,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:56 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 27 2015 23:03:49 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

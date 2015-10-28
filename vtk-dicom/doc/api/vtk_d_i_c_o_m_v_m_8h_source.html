@@ -65,9 +65,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#define vtkDICOMVM_h</span>
 <a name="l00016"></a>00016 <span class="preprocessor"></span>
 <a name="l00017"></a>00017 <span class="preprocessor">#include &lt;vtkSystemIncludes.h&gt;</span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span> <span class="comment">// For export macro</span>
 <a name="l00019"></a>00019 
-<a name="l00021"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html">00021</a> <span class="keyword">class </span>VTK_DICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a>
+<a name="l00021"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html">00021</a> <span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a>
 <a name="l00022"></a>00022 {
 <a name="l00023"></a>00023 <span class="keyword">public</span>:
 <a name="l00024"></a>00024   <span class="keyword">enum</span> EnumType
@@ -467,51 +467,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00418"></a>00418     M99   = 0x6363,
 <a name="l00419"></a>00419     M99TN = 0x63FF,
 <a name="l00420"></a>00420     M100  = 0x6464,
-<a name="l00421"></a>00421     M127  = 0x7F7F,
-<a name="l00422"></a>00422     M128  = 0x8080,
-<a name="l00423"></a>00423     M255  = 0x80FF,
-<a name="l00424"></a>00424     M256  = 0x8100,
-<a name="l00425"></a>00425     M511  = 0x81FF,
-<a name="l00426"></a>00426     M512  = 0x8200,
-<a name="l00427"></a>00427     M768  = 0x8300,
-<a name="l00428"></a>00428     M1024 = 0x8400,
-<a name="l00429"></a>00429     M2048 = 0x8800,
-<a name="l00430"></a>00430     M4096 = 0x9000,
-<a name="l00431"></a>00431     M8192 = 0xA000
-<a name="l00432"></a>00432   };
-<a name="l00433"></a>00433 
-<a name="l00435"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html#a3de6147ce1f4d0c8d64253f3da016843">00435</a>   <a class="code" href="classvtk_d_i_c_o_m_v_m.html#a3de6147ce1f4d0c8d64253f3da016843" title="Construct an empty, invalid VM.">vtkDICOMVM</a>() : Key(0) {}
-<a name="l00436"></a>00436 
-<a name="l00438"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html#ad716e9f9932845494c248e3f006c7f95">00438</a>   <a class="code" href="classvtk_d_i_c_o_m_v_m.html#ad716e9f9932845494c248e3f006c7f95" title="Construct a VM from a VM enum constant.">vtkDICOMVM</a>(EnumType vm) : Key(static_cast&lt;unsigned short&gt;(vm)) {}
-<a name="l00439"></a>00439 
-<a name="l00441"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html#aefabb0c24b53f2918ecd365de8fa6a5b">00441</a>   <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_v_m.html#aefabb0c24b53f2918ecd365de8fa6a5b" title="Check validity of this VM.">IsValid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key != 0); }
-<a name="l00442"></a>00442 
-<a name="l00444"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html#a8f59d758cce743078057e876b4290fbb">00444</a>   <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_v_m.html#a8f59d758cce743078057e876b4290fbb" title="Get the minimum allowed number of values.">GetMin</a>()<span class="keyword"> const </span>{
-<a name="l00445"></a>00445     <span class="keywordflow">if</span> ((this-&gt;Key &amp; 0x8000) != 0) { <span class="keywordflow">return</span> (this-&gt;Key &amp; 0x7fff); }
-<a name="l00446"></a>00446     <span class="keywordflow">else</span> { <span class="keywordflow">return</span> (this-&gt;Key &gt;&gt; 8); } }
-<a name="l00447"></a>00447 
-<a name="l00449"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html#a7ad0186c9aa08c4bbe084f72bb048577">00449</a>   <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_v_m.html#a7ad0186c9aa08c4bbe084f72bb048577" title="Get the maximum allowed number of values, -1 if unlimited.">GetMax</a>()<span class="keyword"> const </span>{
-<a name="l00450"></a>00450     <span class="keywordflow">if</span> ((this-&gt;Key &amp; 0x8000) != 0) { <span class="keywordflow">return</span> (this-&gt;Key &amp; 0x7fff); }
-<a name="l00451"></a>00451     <span class="keywordflow">else</span> { <span class="keywordflow">return</span> ((this-&gt;Key &amp; 0x80) == 0 ? (this-&gt;Key &amp; 0xff) : -1); } }
-<a name="l00452"></a>00452 
-<a name="l00454"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html#a5ccbfd28bb4119d09b44bf77d85d5b0e">00454</a>   <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_v_m.html#a5ccbfd28bb4119d09b44bf77d85d5b0e" title="Get the step between allowed values.">GetStep</a>()<span class="keyword"> const </span>{
-<a name="l00455"></a>00455     <span class="keywordflow">if</span> ((this-&gt;Key &amp; 0x8000) != 0) { <span class="keywordflow">return</span> 1; }
-<a name="l00456"></a>00456     <span class="keywordflow">else</span> { <span class="keywordflow">return</span> ((this-&gt;Key &amp; 0x80) == 0 ? 1 : ((-this-&gt;Key) &amp; 0xff)); } }
-<a name="l00457"></a>00457 
-<a name="l00458"></a>00458   <span class="keywordtype">bool</span> operator==(<a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a> b)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key == b.Key); }
-<a name="l00459"></a>00459   <span class="keywordtype">bool</span> operator!=(<a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a> b)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key != b.Key); }
-<a name="l00460"></a>00460   <span class="keywordtype">bool</span> operator&lt;=(<a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt;= a.Key); }
-<a name="l00461"></a>00461   <span class="keywordtype">bool</span> operator&gt;=(<a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt;= a.Key); }
-<a name="l00462"></a>00462   <span class="keywordtype">bool</span> operator&lt;(<a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt; a.Key); }
-<a name="l00463"></a>00463   <span class="keywordtype">bool</span> operator&gt;(<a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt; a.Key); }
-<a name="l00464"></a>00464 
-<a name="l00465"></a>00465 <span class="keyword">private</span>:
-<a name="l00466"></a>00466   <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> Key;
-<a name="l00467"></a>00467 };
-<a name="l00468"></a>00468 
-<a name="l00469"></a>00469 VTK_DICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; o, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a>&amp; a);
-<a name="l00470"></a>00470 
-<a name="l00471"></a>00471 <span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMVM_h */</span>
+<a name="l00421"></a>00421     M110  = 0x6E6E,
+<a name="l00422"></a>00422     M127  = 0x7F7F,
+<a name="l00423"></a>00423     M128  = 0x8080,
+<a name="l00424"></a>00424     M255  = 0x80FF,
+<a name="l00425"></a>00425     M256  = 0x8100,
+<a name="l00426"></a>00426     M511  = 0x81FF,
+<a name="l00427"></a>00427     M512  = 0x8200,
+<a name="l00428"></a>00428     M768  = 0x8300,
+<a name="l00429"></a>00429     M1024 = 0x8400,
+<a name="l00430"></a>00430     M2048 = 0x8800,
+<a name="l00431"></a>00431     M4096 = 0x9000,
+<a name="l00432"></a>00432     M8192 = 0xA000
+<a name="l00433"></a>00433   };
+<a name="l00434"></a>00434 
+<a name="l00436"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html#a3de6147ce1f4d0c8d64253f3da016843">00436</a>   <a class="code" href="classvtk_d_i_c_o_m_v_m.html#a3de6147ce1f4d0c8d64253f3da016843" title="Construct an empty, invalid VM.">vtkDICOMVM</a>() : Key(0) {}
+<a name="l00437"></a>00437 
+<a name="l00439"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html#ad716e9f9932845494c248e3f006c7f95">00439</a>   <a class="code" href="classvtk_d_i_c_o_m_v_m.html#ad716e9f9932845494c248e3f006c7f95" title="Construct a VM from a VM enum constant.">vtkDICOMVM</a>(EnumType vm) : Key(static_cast&lt;unsigned short&gt;(vm)) {}
+<a name="l00440"></a>00440 
+<a name="l00442"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html#aefabb0c24b53f2918ecd365de8fa6a5b">00442</a>   <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_v_m.html#aefabb0c24b53f2918ecd365de8fa6a5b" title="Check validity of this VM.">IsValid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key != 0); }
+<a name="l00443"></a>00443 
+<a name="l00445"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html#a8f59d758cce743078057e876b4290fbb">00445</a>   <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_v_m.html#a8f59d758cce743078057e876b4290fbb" title="Get the minimum allowed number of values.">GetMin</a>()<span class="keyword"> const </span>{
+<a name="l00446"></a>00446     <span class="keywordflow">if</span> ((this-&gt;Key &amp; 0x8000) != 0) { <span class="keywordflow">return</span> (this-&gt;Key &amp; 0x7fff); }
+<a name="l00447"></a>00447     <span class="keywordflow">else</span> { <span class="keywordflow">return</span> (this-&gt;Key &gt;&gt; 8); } }
+<a name="l00448"></a>00448 
+<a name="l00450"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html#a7ad0186c9aa08c4bbe084f72bb048577">00450</a>   <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_v_m.html#a7ad0186c9aa08c4bbe084f72bb048577" title="Get the maximum allowed number of values, -1 if unlimited.">GetMax</a>()<span class="keyword"> const </span>{
+<a name="l00451"></a>00451     <span class="keywordflow">if</span> ((this-&gt;Key &amp; 0x8000) != 0) { <span class="keywordflow">return</span> (this-&gt;Key &amp; 0x7fff); }
+<a name="l00452"></a>00452     <span class="keywordflow">else</span> { <span class="keywordflow">return</span> ((this-&gt;Key &amp; 0x80) == 0 ? (this-&gt;Key &amp; 0xff) : -1); } }
+<a name="l00453"></a>00453 
+<a name="l00455"></a><a class="code" href="classvtk_d_i_c_o_m_v_m.html#a5ccbfd28bb4119d09b44bf77d85d5b0e">00455</a>   <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_v_m.html#a5ccbfd28bb4119d09b44bf77d85d5b0e" title="Get the step between allowed values.">GetStep</a>()<span class="keyword"> const </span>{
+<a name="l00456"></a>00456     <span class="keywordflow">if</span> ((this-&gt;Key &amp; 0x8000) != 0) { <span class="keywordflow">return</span> 1; }
+<a name="l00457"></a>00457     <span class="keywordflow">else</span> { <span class="keywordflow">return</span> ((this-&gt;Key &amp; 0x80) == 0 ? 1 : ((-this-&gt;Key) &amp; 0xff)); } }
+<a name="l00458"></a>00458 
+<a name="l00459"></a>00459   <span class="keywordtype">bool</span> operator==(<a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a> b)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key == b.Key); }
+<a name="l00460"></a>00460   <span class="keywordtype">bool</span> operator!=(<a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a> b)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key != b.Key); }
+<a name="l00461"></a>00461   <span class="keywordtype">bool</span> operator&lt;=(<a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt;= a.Key); }
+<a name="l00462"></a>00462   <span class="keywordtype">bool</span> operator&gt;=(<a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt;= a.Key); }
+<a name="l00463"></a>00463   <span class="keywordtype">bool</span> operator&lt;(<a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt; a.Key); }
+<a name="l00464"></a>00464   <span class="keywordtype">bool</span> operator&gt;(<a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt; a.Key); }
+<a name="l00465"></a>00465 
+<a name="l00466"></a>00466 <span class="keyword">private</span>:
+<a name="l00467"></a>00467   <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> Key;
+<a name="l00468"></a>00468 };
+<a name="l00469"></a>00469 
+<a name="l00470"></a>00470 VTKDICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; o, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_v_m.html" title="VMs (Value Multiplicities).">vtkDICOMVM</a>&amp; a);
+<a name="l00471"></a>00471 
+<a name="l00472"></a>00472 <span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMVM_h */</span>
+<a name="l00473"></a>00473 <span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMVM.h</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -528,7 +530,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:56 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 27 2015 23:03:49 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

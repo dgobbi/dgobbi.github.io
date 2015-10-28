@@ -183,6 +183,7 @@ This is the complete list of members for <a class="el" href="classvtk_n_i_f_t_i_
   <tr class="memlist"><td><a class="el" href="classvtk_algorithm.html#ae2e0966d617f3427db432006b7c2b273">GetOutputPort</a>(int index)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>GetOutputPort</b>() (defined in <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a>)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_algorithm.html#a342e87719da784ccd7da759952c5d194">GetOutputPortInformation</a>(int port)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classvtk_n_i_f_t_i_reader.html#aa51f05d6bb6785de78feb1e3c62c162b">GetPlanarRGB</a>()</td><td><a class="el" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a></td><td><code> [virtual]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>GetProgress</b>() (defined in <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a>)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td><code> [virtual]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>GetProgressText</b>() (defined in <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a>)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_n_i_f_t_i_reader.html#a5d98e909c94730c02b02acad6f39b172">GetQFac</a>()</td><td><a class="el" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a></td><td><code> [inline]</code></td></tr>
@@ -235,6 +236,9 @@ This is the complete list of members for <a class="el" href="classvtk_n_i_f_t_i_
   <tr bgcolor="#f0f0f0"><td><b>operator=</b>(const vtkObjectBase &amp;) (defined in <a class="el" href="classvtk_object_base.html">vtkObjectBase</a>)</td><td><a class="el" href="classvtk_object_base.html">vtkObjectBase</a></td><td><code> [inline, protected]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>OutputPortIndexInRange</b>(int index, const char *action) (defined in <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a>)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_n_i_f_t_i_reader.html#ad9bcaea082976cd19f51894e79179f9f">PixDim</a></td><td><a class="el" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classvtk_n_i_f_t_i_reader.html#a78bd8ca621289c27a948573f282fdfc3">PlanarRGB</a></td><td><a class="el" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a></td><td><code> [protected]</code></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>PlanarRGBOff</b>() (defined in <a class="el" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>)</td><td><a class="el" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a></td><td><code> [virtual]</code></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>PlanarRGBOn</b>() (defined in <a class="el" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>)</td><td><a class="el" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a></td><td><code> [virtual]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>PORT_REQUIREMENTS_FILLED</b>() (defined in <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a>)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td><code> [protected, static]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>PRESERVES_ATTRIBUTES</b>() (defined in <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a>)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td><code> [static]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>PRESERVES_BOUNDS</b>() (defined in <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a>)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td><code> [static]</code></td></tr>
@@ -325,6 +329,7 @@ This is the complete list of members for <a class="el" href="classvtk_n_i_f_t_i_
   <tr class="memlist"><td><a class="el" href="classvtk_algorithm.html#a1340409c00cd82921d45d7f5fdf50b4c">SetNumberOfOutputPorts</a>(int n)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td><code> [protected, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_image_reader2.html#ac81bed4b56cd7b89eae6a0764b746d4c">SetNumberOfScalarComponents</a>(int)</td><td><a class="el" href="classvtk_image_reader2.html">vtkImageReader2</a></td><td><code> [virtual]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>SetOutput</b>(vtkDataObject *d) (defined in <a class="el" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a>)</td><td><a class="el" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a></td><td><code> [virtual]</code></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>SetPlanarRGB</b>(bool) (defined in <a class="el" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>)</td><td><a class="el" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_algorithm.html#ae6d1c7cdbf466fc5498b18d715cb5044">SetProgress</a>(double)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_algorithm.html#ab8320d0e72262c08d5191563033dcc13">SetProgressText</a>(const char *ptext)</td><td><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classvtk_object_base.html#a5c3b4d4eac99a29065906edacaa82471">SetReferenceCount</a>(int)</td><td><a class="el" href="classvtk_object_base.html">vtkObjectBase</a></td><td></td></tr>
@@ -377,7 +382,7 @@ This is the complete list of members for <a class="el" href="classvtk_n_i_f_t_i_
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:58 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 27 2015 23:03:50 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

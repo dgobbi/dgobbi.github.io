@@ -85,11 +85,17 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affb30945627e683e83aa6d5ad62c525c"></a><!-- doxytag: member="vtkDICOMUtilities::GetClassName" ref="affb30945627e683e83aa6d5ad62c525c" args="()" -->
 virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetClassName</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a7afbc11cddb6de14840d499ec9f64de2">IsA</a> (const char *type)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c0178519124e6426fb2f643a26e7dba"></a><!-- doxytag: member="vtkDICOMUtilities::PrintSelf" ref="a1c0178519124e6426fb2f643a26e7dba" args="(ostream &amp;os, vtkIndent indent)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a1c0178519124e6426fb2f643a26e7dba">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Print a summary of the contents of this object. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3efc60dbe1ec12e841cea96340fe637e"></a><!-- doxytag: member="vtkDICOMUtilities::GetCIDFromUID" ref="a3efc60dbe1ec12e841cea96340fe637e" args="(const char *uid)" -->
 unsigned short&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a3efc60dbe1ec12e841cea96340fe637e">GetCIDFromUID</a> (const char *uid)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the CID from the UID. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78efd4feee97da3a329688ddcce71503"></a><!-- doxytag: member="vtkDICOMUtilities::New" ref="a78efd4feee97da3a329688ddcce71503" args="()" -->
+static <a class="el" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a78efd4feee97da3a329688ddcce71503">New</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">VTK new method (for Java and Tcl wrappers). <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#ab7dd5b8b31e23fc80ddaa66352d2bd59">IsTypeOf</a> (const char *type)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09e4b169ca2c12c398d4c925899de667"></a><!-- doxytag: member="vtkDICOMUtilities::SafeDownCast" ref="a09e4b169ca2c12c398d4c925899de667" args="(vtkObject *o)" -->
 static <a class="el" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>SafeDownCast</b> (<a class="el" href="classvtk_object.html">vtkObject</a> *o)</td></tr>
@@ -170,27 +176,6 @@ static char&nbsp;</td><td class="memItemRight" valign="bottom"><b>Implementation
 
 </div>
 </div>
-<a class="anchor" id="a27acf7fab59b6eaee845af2750ec36a3"></a><!-- doxytag: member="vtkDICOMUtilities::GenerateDateTime" ref="a27acf7fab59b6eaee845af2750ec36a3" args="(const char *zone)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">static std::string vtkDICOMUtilities::GenerateDateTime </td>
-          <td>(</td>
-          <td class="paramtype">const char *&nbsp;</td>
-          <td class="paramname"> <em>zone</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Generate a DICOM date time string in the given timezone. </p>
-<p>The time zone is to be given in the DICOM format of +HHMM or -HHMM where HH is the hour offset and MM is the minute offset. If no time zone is given, then local time is used (according to the computer's time zone preferences). </p>
-
-</div>
-</div>
 <a class="anchor" id="a35869117df85dcf4d3697b74e9384c18"></a><!-- doxytag: member="vtkDICOMUtilities::GenerateDateTime" ref="a35869117df85dcf4d3697b74e9384c18" args="(long long microsecs, const char *zone)" -->
 <div class="memitem">
 <div class="memproto">
@@ -218,6 +203,27 @@ static char&nbsp;</td><td class="memItemRight" valign="bottom"><b>Implementation
 
 <p>Generate a DICOM date time string from long integer. </p>
 <p>Given an integer number of microseconds since the UNIX epoch (00:00:00 UTC on 1 Jan 1970), return a DICOM date time string for the given time zone. The time zone should be given in the format +HHMM or -HHMM. If no time zone is given, then the local zone is used (according to the computer's time zone preferences). </p>
+
+</div>
+</div>
+<a class="anchor" id="a27acf7fab59b6eaee845af2750ec36a3"></a><!-- doxytag: member="vtkDICOMUtilities::GenerateDateTime" ref="a27acf7fab59b6eaee845af2750ec36a3" args="(const char *zone)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string vtkDICOMUtilities::GenerateDateTime </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>zone</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Generate a DICOM date time string in the given timezone. </p>
+<p>The time zone is to be given in the DICOM format of +HHMM or -HHMM where HH is the hour offset and MM is the minute offset. If no time zone is given, then local time is used (according to the computer's time zone preferences). </p>
 
 </div>
 </div>
@@ -497,7 +503,7 @@ static char&nbsp;</td><td class="memItemRight" valign="bottom"><b>Implementation
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:57 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 27 2015 23:03:50 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

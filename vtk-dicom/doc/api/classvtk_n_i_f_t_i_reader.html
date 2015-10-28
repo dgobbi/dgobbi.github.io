@@ -115,6 +115,16 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetTimeSpacing</b> 
 <tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_reader.html#a2b87f4ead9e5a7e6824d37def2508629">GetRescaleSlope</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae15cea2a75438087b3d7f99a1149a2af"></a><!-- doxytag: member="vtkNIFTIReader::GetRescaleIntercept" ref="ae15cea2a75438087b3d7f99a1149a2af" args="()" -->
 double&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetRescaleIntercept</b> ()</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_reader.html#aa51f05d6bb6785de78feb1e3c62c162b">GetPlanarRGB</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4dacd8e5e08d1b51c79c1563d89754c"></a><!-- doxytag: member="vtkNIFTIReader::SetPlanarRGB" ref="aa4dacd8e5e08d1b51c79c1563d89754c" args="(bool)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetPlanarRGB</b> (bool)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af21a141ab2318831e2c35d112398304b"></a><!-- doxytag: member="vtkNIFTIReader::PlanarRGBOn" ref="af21a141ab2318831e2c35d112398304b" args="()" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>PlanarRGBOn</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cd3e28a8715c79d6e2a94cf7936aaef"></a><!-- doxytag: member="vtkNIFTIReader::PlanarRGBOff" ref="a9cd3e28a8715c79d6e2a94cf7936aaef" args="()" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>PlanarRGBOff</b> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
@@ -141,6 +151,7 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_reader.html#a8434efdfa5d5a8d131fdbd0f788b5d3e">Dim</a> [8]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_reader.html#ad9bcaea082976cd19f51894e79179f9f">PixDim</a> [8]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_reader.html#a57b806c8cd0c924db8f0c1aa518c1f23">NIFTIHeader</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_reader.html#a78bd8ca621289c27a948573f282fdfc3">PlanarRGB</a></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
@@ -311,6 +322,24 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </div>
 <div class="memdoc">
 <p>Get the raw header information from the NIfTI file. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa51f05d6bb6785de78feb1e3c62c162b"></a><!-- doxytag: member="vtkNIFTIReader::GetPlanarRGB" ref="aa51f05d6bb6785de78feb1e3c62c162b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool vtkNIFTIReader::GetPlanarRGB </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Read planar RGB (separate R, G, and B planes), rather than packed RGB. The NIFTI format should always use packed RGB. The Analyze format, however, was used to store both planar RGB and packed RGB depending on the software, without any indication in the header about which convention was being used. Use this if you have a planar RGB file. </p>
 
 </div>
 </div>
@@ -663,6 +692,20 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 
 </div>
 </div>
+<a class="anchor" id="a78bd8ca621289c27a948573f282fdfc3"></a><!-- doxytag: member="vtkNIFTIReader::PlanarRGB" ref="a78bd8ca621289c27a948573f282fdfc3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classvtk_n_i_f_t_i_reader.html#a78bd8ca621289c27a948573f282fdfc3">vtkNIFTIReader::PlanarRGB</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Use planar RGB instead of the default (packed). </p>
+
+</div>
+</div>
 <a class="anchor" id="a6ac16e7ca664499d386fda231fd004b5"></a><!-- doxytag: member="vtkNIFTIReader::QFac" ref="a6ac16e7ca664499d386fda231fd004b5" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -737,7 +780,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:58 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 27 2015 23:03:50 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

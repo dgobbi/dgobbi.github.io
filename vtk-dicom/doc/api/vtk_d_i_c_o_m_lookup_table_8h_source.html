@@ -65,12 +65,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00023"></a>00023 <span class="preprocessor"></span><span class="preprocessor">#define vtkDICOMLookupTable_h</span>
 <a name="l00024"></a>00024 <span class="preprocessor"></span>
 <a name="l00025"></a>00025 <span class="preprocessor">#include &lt;vtkLookupTable.h&gt;</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span> <span class="comment">// For export macro</span>
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 <span class="keyword">class </span><a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a>;
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 <span class="comment">//----------------------------------------------------------------------------</span>
-<a name="l00031"></a><a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">00031</a> <span class="keyword">class </span>VTK_DICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html" title="Lookup tables from DICOM data.">vtkDICOMLookupTable</a> : <span class="keyword">public</span> vtkLookupTable
+<a name="l00031"></a><a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">00031</a> <span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html" title="Lookup tables from DICOM data.">vtkDICOMLookupTable</a> : <span class="keyword">public</span> vtkLookupTable
 <a name="l00032"></a>00032 {
 <a name="l00033"></a>00033 <span class="keyword">public</span>:
 <a name="l00035"></a>00035 
@@ -109,7 +109,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:56 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 27 2015 23:03:49 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

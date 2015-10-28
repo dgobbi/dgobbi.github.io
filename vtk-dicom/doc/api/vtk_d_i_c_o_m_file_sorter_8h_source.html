@@ -65,14 +65,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#define vtkDICOMFileSorter_h</span>
 <a name="l00016"></a>00016 <span class="preprocessor"></span>
 <a name="l00017"></a>00017 <span class="preprocessor">#include &lt;vtkObject.h&gt;</span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span> <span class="comment">// For export macro</span>
 <a name="l00019"></a>00019 
 <a name="l00020"></a>00020 <span class="keyword">class </span>vtkStringArray;
 <a name="l00021"></a>00021 <span class="keyword">class </span>vtkIntArray;
 <a name="l00022"></a>00022 <span class="keyword">class </span><a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a>;
 <a name="l00023"></a>00023 
 <a name="l00025"></a>00025 
-<a name="l00032"></a><a class="code" href="classvtk_d_i_c_o_m_file_sorter.html">00032</a> <span class="keyword">class </span>VTK_DICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_file_sorter.html" title="Sort DICOM files and group them by study and series.">vtkDICOMFileSorter</a> : <span class="keyword">public</span> <a class="code" href="classvtk_object.html" title="abstract base class for most VTK objects">vtkObject</a>
+<a name="l00032"></a><a class="code" href="classvtk_d_i_c_o_m_file_sorter.html">00032</a> <span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_file_sorter.html" title="Sort DICOM files and group them by study and series.">vtkDICOMFileSorter</a> : <span class="keyword">public</span> <a class="code" href="classvtk_object.html" title="abstract base class for most VTK objects">vtkObject</a>
 <a name="l00033"></a>00033 {
 <a name="l00034"></a>00034 <span class="keyword">public</span>:
 <a name="l00035"></a>00035   vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_file_sorter.html" title="Sort DICOM files and group them by study and series.">vtkDICOMFileSorter</a>,<a class="code" href="classvtk_object.html" title="abstract base class for most VTK objects">vtkObject</a>);
@@ -170,7 +170,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat May 16 2015 20:27:56 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 27 2015 23:03:49 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
