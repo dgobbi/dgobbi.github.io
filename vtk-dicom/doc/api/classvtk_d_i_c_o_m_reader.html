@@ -51,6 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
@@ -84,8 +85,13 @@ Public Types</h2></td></tr>
 <b>TopDown</b>, 
 <b>BottomUp</b>
  }</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6412e437bb61c7d180fe9d648af1764d"></a><!-- doxytag: member="vtkDICOMReader::Superclass" ref="a6412e437bb61c7d180fe9d648af1764d" args="" -->
+typedef <a class="el" href="classvtk_image_reader2.html">vtkImageReader2</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adafcc54bf9e7b4614f6456c979a8d03d"></a><!-- doxytag: member="vtkDICOMReader::GetClassName" ref="adafcc54bf9e7b4614f6456c979a8d03d" args="()" -->
+virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetClassName</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a38dace6edc5e58e6902473095a65350b">IsA</a> (const char *type)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ac60ea7eb94a7e5cf0c05b21d54b90d5f">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ab5554749a8f35c1e74bfccf1337d8571">CanReadFile</a> (const char *filename)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vtkStringArray *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a827a7f235ca20200f49492dc55dab931">GetStackIDs</a> ()</td></tr>
@@ -176,6 +182,12 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetMemoryRowOrderToBo
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetMemoryRowOrder</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a574b947c17a91cc9b0192a7ae455e290"></a><!-- doxytag: member="vtkDICOMReader::GetMemoryRowOrderAsString" ref="a574b947c17a91cc9b0192a7ae455e290" args="()" -->
 const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetMemoryRowOrderAsString</b> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a7b91b6f65ac5931559e1c502e9d497be">IsTypeOf</a> (const char *type)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad39135596aad9a1a3b06ef8beec26b02"></a><!-- doxytag: member="vtkDICOMReader::SafeDownCast" ref="ad39135596aad9a1a3b06ef8beec26b02" args="(vtkObject *o)" -->
+static <a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>SafeDownCast</b> (<a class="el" href="classvtk_object.html">vtkObject</a> *o)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a9835c02670303cbe1aa3ee9341067b7c">New</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a4362c72dd9e1525b6992851101488db0">RelayError</a> (<a class="el" href="classvtk_object.html">vtkObject</a> *o, unsigned long e, void *data)</td></tr>
@@ -252,17 +264,6 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>TimeDimension</b></td>
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>DesiredTimeIndex</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34b75ce1528ef302224136d11a6c4b92"></a><!-- doxytag: member="vtkDICOMReader::TimeSpacing" ref="a34b75ce1528ef302224136d11a6c4b92" args="" -->
 double&nbsp;</td><td class="memItemRight" valign="bottom"><b>TimeSpacing</b></td></tr>
-<tr><td colspan="2"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
-<br/><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6412e437bb61c7d180fe9d648af1764d"></a><!-- doxytag: member="vtkDICOMReader::Superclass" ref="a6412e437bb61c7d180fe9d648af1764d" args="" -->
-typedef <a class="el" href="classvtk_image_reader2.html">vtkImageReader2</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a9835c02670303cbe1aa3ee9341067b7c">New</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a7b91b6f65ac5931559e1c502e9d497be">IsTypeOf</a> (const char *type)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad39135596aad9a1a3b06ef8beec26b02"></a><!-- doxytag: member="vtkDICOMReader::SafeDownCast" ref="ad39135596aad9a1a3b06ef8beec26b02" args="(vtkObject *o)" -->
-static <a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>SafeDownCast</b> (<a class="el" href="classvtk_object.html">vtkObject</a> *o)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adafcc54bf9e7b4614f6456c979a8d03d"></a><!-- doxytag: member="vtkDICOMReader::GetClassName" ref="adafcc54bf9e7b4614f6456c979a8d03d" args="()" -->
-virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetClassName</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a38dace6edc5e58e6902473095a65350b">IsA</a> (const char *type)</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Read DICOM image files. </p>
@@ -1373,7 +1374,7 @@ virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCl
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 16 2015 21:26:19 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Dec 10 2015 18:44:25 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

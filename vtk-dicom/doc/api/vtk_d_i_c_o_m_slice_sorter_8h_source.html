@@ -79,130 +79,98 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00034"></a>00034   <span class="keywordtype">void</span> <a class="code" href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">PrintSelf</a>(ostream&amp; os, vtkIndent indent);
 <a name="l00035"></a>00035   <span class="keyword">static</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html" title="Index a DICOM series to allow proper dimensional ordering.">vtkDICOMSliceSorter</a> *<a class="code" href="classvtk_object.html#a4d5b227267c076d6f9e38483370b6612">New</a>();
 <a name="l00036"></a>00036 
-<a name="l00037"></a>00037   <span class="comment">// Description:</span>
-<a name="l00038"></a>00038   <span class="comment">// Set the Stack ID of the stack to use, for named stacks.</span>
-<a name="l00039"></a>00039   <span class="comment">// If the series has multiple stacks, then by default only the</span>
-<a name="l00040"></a>00040   <span class="comment">// first stack will be used.  This method allows you to select</span>
-<a name="l00041"></a>00041   <span class="comment">// a different stack, if you know the DICOM StackID for the stack.</span>
-<a name="l00042"></a>00042   <span class="keywordtype">void</span> SetDesiredStackID(<span class="keyword">const</span> <span class="keywordtype">char</span> *stackId);
-<a name="l00043"></a>00043   <span class="keyword">const</span> <span class="keywordtype">char</span> *GetDesiredStackID() { <span class="keywordflow">return</span> this-&gt;DesiredStackID; }
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045   <span class="comment">// Description:</span>
-<a name="l00046"></a>00046   <span class="comment">// Get a list of the stacks that are present.</span>
-<a name="l00047"></a>00047   <span class="comment">// A stack is a contiguous array of slices that form a volume.</span>
-<a name="l00048"></a>00048   vtkStringArray *GetStackIDs() { <span class="keywordflow">return</span> this-&gt;StackIDs; }
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050   <span class="comment">// Description:</span>
-<a name="l00051"></a>00051   <span class="comment">// Get an array that converts slice index to input file index.</span>
-<a name="l00052"></a>00052   <span class="comment">// The array can be two-dimensional and calling array-&gt;GetComponent(i,j)</span>
-<a name="l00053"></a>00053   <span class="comment">// will return the file index for slice i and scalar component j</span>
-<a name="l00054"></a>00054   <span class="comment">// for monochrome images, or for slice i and scalar component 3*j</span>
-<a name="l00055"></a>00055   <span class="comment">// for RGB images (or more precisely, at scalar component N*j where</span>
-<a name="l00056"></a>00056   <span class="comment">// N is the SamplesPerPixel value from the DICOM metadata).  If the</span>
-<a name="l00057"></a>00057   <span class="comment">// data has just one component, then use j=0.  Use this array to index</span>
-<a name="l00058"></a>00058   <span class="comment">// into the MetaData object to get the metadata for a particular slice.</span>
-<a name="l00059"></a>00059   vtkIntArray *GetFileIndexArray() { <span class="keywordflow">return</span> this-&gt;FileIndexArray; }
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061   <span class="comment">// Description:</span>
-<a name="l00062"></a>00062   <span class="comment">// Get an array that converts slice index to frame index.</span>
-<a name="l00063"></a>00063   <span class="comment">// The purpose of this array is to identify individual frames in</span>
-<a name="l00064"></a>00064   <span class="comment">// multi-frame DICOM files.  The dimensions of this array are identical</span>
-<a name="l00065"></a>00065   <span class="comment">// to the FileIndexArray.  Use FileIndexArray to identify the file,</span>
-<a name="l00066"></a>00066   <span class="comment">// then use FrameIndexArray to identify the frame within that file.</span>
-<a name="l00067"></a>00067   vtkIntArray *GetFrameIndexArray() { <span class="keywordflow">return</span> this-&gt;FrameIndexArray; }
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 
+<a name="l00044"></a>00044   <span class="keywordtype">void</span> SetDesiredStackID(<span class="keyword">const</span> <span class="keywordtype">char</span> *stackId);
+<a name="l00045"></a>00045   <span class="keyword">const</span> <span class="keywordtype">char</span> *GetDesiredStackID() { <span class="keywordflow">return</span> this-&gt;DesiredStackID; }
+<a name="l00046"></a>00046 
+<a name="l00048"></a>00048 
+<a name="l00051"></a><a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html#a045487a1e31d2809fdd56462209aacdd">00051</a>   vtkStringArray *<a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html#a045487a1e31d2809fdd56462209aacdd" title="Get a list of the stacks that are present.">GetStackIDs</a>() { <span class="keywordflow">return</span> this-&gt;StackIDs; }
+<a name="l00053"></a>00053 
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 
+<a name="l00065"></a><a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html#ab97a628f6df50a71422cfaa1b797f998">00065</a>   vtkIntArray *<a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html#ab97a628f6df50a71422cfaa1b797f998" title="Get an array that converts slice index to input file index.">GetFileIndexArray</a>() { <span class="keywordflow">return</span> this-&gt;FileIndexArray; }
+<a name="l00066"></a>00066 
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069   <span class="comment">// Description:</span>
-<a name="l00070"></a>00070   <span class="comment">// Set the meta data for the DICOM files.</span>
-<a name="l00071"></a>00071   <span class="comment">// The GetAttributeValue() method of vtkDICOMMetaData takes optional</span>
-<a name="l00072"></a>00072   <span class="comment">// file and frame indices, which specify the file and the frame within</span>
-<a name="l00073"></a>00073   <span class="comment">// that file to get the attribute from.  If you have a slice index rather</span>
-<a name="l00074"></a>00074   <span class="comment">// than a file index and frame index, then use the FileIndexArray and</span>
-<a name="l00075"></a>00075   <span class="comment">// FrameIndexArray to convert the slice index into file and frame indices.</span>
-<a name="l00076"></a>00076   <span class="keywordtype">void</span> SetMetaData(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *meta);
-<a name="l00077"></a>00077   <a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *GetMetaData() { <span class="keywordflow">return</span> this-&gt;MetaData; }
+<a name="l00074"></a><a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html#a21f64d6026ec81ee7cb3d1e959b35f95">00074</a>   vtkIntArray *<a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html#a21f64d6026ec81ee7cb3d1e959b35f95" title="Get an array that converts slice index to frame index.">GetFrameIndexArray</a>() { <span class="keywordflow">return</span> this-&gt;FrameIndexArray; }
+<a name="l00076"></a>00076 
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079   <span class="comment">// Description:</span>
-<a name="l00080"></a>00080   <span class="comment">// Read the time dimension as scalar components (default: Off).</span>
-<a name="l00081"></a>00081   <span class="comment">// If this is on, then each time point will be stored as a scalar</span>
-<a name="l00082"></a>00082   <span class="comment">// component in the image data.  If the data has both a time dimension</span>
-<a name="l00083"></a>00083   <span class="comment">// and a vector dimension, then the number of components will be the</span>
-<a name="l00084"></a>00084   <span class="comment">// product of these two dimensions, i.e. the components will store</span>
-<a name="l00085"></a>00085   <span class="comment">// a sequence of vectors, one vector for each time point.</span>
-<a name="l00086"></a>00086   vtkGetMacro(TimeAsVector, <span class="keywordtype">int</span>);
-<a name="l00087"></a>00087   vtkSetMacro(TimeAsVector, <span class="keywordtype">int</span>);
-<a name="l00088"></a>00088   vtkBooleanMacro(TimeAsVector, <span class="keywordtype">int</span>);
+<a name="l00079"></a>00079 
+<a name="l00086"></a>00086   <span class="keywordtype">void</span> SetMetaData(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *meta);
+<a name="l00087"></a>00087   <a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *GetMetaData() { <span class="keywordflow">return</span> this-&gt;MetaData; }
 <a name="l00089"></a>00089 
-<a name="l00090"></a>00090   <span class="comment">// Description:</span>
-<a name="l00091"></a>00091   <span class="comment">// Get the time dimension if the DICOM series has one.</span>
-<a name="l00092"></a>00092   <span class="keywordtype">int</span> GetTimeDimension() { <span class="keywordflow">return</span> this-&gt;TimeDimension; }
-<a name="l00093"></a>00093   <span class="keywordtype">double</span> GetTimeSpacing() { <span class="keywordflow">return</span> this-&gt;TimeSpacing; }
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095   <span class="comment">// Description:</span>
-<a name="l00096"></a>00096   <span class="comment">// Set the desired time index (set to -1 for all).</span>
-<a name="l00097"></a>00097   vtkSetMacro(DesiredTimeIndex, <span class="keywordtype">int</span>);
-<a name="l00098"></a>00098   vtkGetMacro(DesiredTimeIndex, <span class="keywordtype">int</span>);
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100   <span class="comment">// Description:</span>
-<a name="l00101"></a>00101   <span class="comment">// Set whether to reverse the slice order.</span>
-<a name="l00102"></a>00102   <span class="comment">// This is desired if the images are to be flipped.</span>
-<a name="l00103"></a>00103   vtkGetMacro(ReverseSlices, <span class="keywordtype">int</span>);
-<a name="l00104"></a>00104   vtkSetMacro(ReverseSlices, <span class="keywordtype">int</span>);
-<a name="l00105"></a>00105   vtkBooleanMacro(ReverseSlices, <span class="keywordtype">int</span>);
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107   <span class="comment">// Description:</span>
-<a name="l00108"></a>00108   <span class="comment">// Get the slice spacing for the volume.</span>
-<a name="l00109"></a>00109   <span class="keywordtype">double</span> GetSliceSpacing() { <span class="keywordflow">return</span> this-&gt;SliceSpacing; }
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111   <span class="comment">// Description:</span>
-<a name="l00112"></a>00112   <span class="comment">// Update the arrays.</span>
-<a name="l00113"></a>00113   <span class="keywordtype">void</span> Update();
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115 <span class="keyword">protected</span>:
-<a name="l00116"></a>00116   <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html" title="Index a DICOM series to allow proper dimensional ordering.">vtkDICOMSliceSorter</a>();
-<a name="l00117"></a>00117   ~<a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html" title="Index a DICOM series to allow proper dimensional ordering.">vtkDICOMSliceSorter</a>();
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 
+<a name="l00099"></a>00099   vtkGetMacro(TimeAsVector, <span class="keywordtype">int</span>);
+<a name="l00100"></a>00100   vtkSetMacro(TimeAsVector, <span class="keywordtype">int</span>);
+<a name="l00101"></a>00101   vtkBooleanMacro(TimeAsVector, <span class="keywordtype">int</span>);
+<a name="l00103"></a>00103 
+<a name="l00105"></a>00105 
+<a name="l00106"></a><a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html#a4b29ef6c33302d58a8de5b490507e38a">00106</a>   <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html#a4b29ef6c33302d58a8de5b490507e38a" title="Get the time dimension if the DICOM series has one.">GetTimeDimension</a>() { <span class="keywordflow">return</span> this-&gt;TimeDimension; }
+<a name="l00107"></a>00107   <span class="keywordtype">double</span> GetTimeSpacing() { <span class="keywordflow">return</span> this-&gt;TimeSpacing; }
+<a name="l00109"></a>00109 
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112   vtkSetMacro(DesiredTimeIndex, <span class="keywordtype">int</span>);
+<a name="l00113"></a>00113   vtkGetMacro(DesiredTimeIndex, <span class="keywordtype">int</span>);
+<a name="l00115"></a>00115 
+<a name="l00117"></a>00117 
 <a name="l00118"></a>00118 
-<a name="l00119"></a>00119   <span class="comment">// Description:</span>
-<a name="l00120"></a>00120   <span class="comment">// Sort the input files, put the sort in the supplied arrays.</span>
-<a name="l00121"></a>00121   <span class="keyword">virtual</span> <span class="keywordtype">void</span> SortFiles(vtkIntArray *fileArray, vtkIntArray *frameArray);
-<a name="l00122"></a>00122 
-<a name="l00123"></a>00123   <span class="comment">// Description:</span>
-<a name="l00124"></a>00124   <span class="comment">// The meta data for the image.</span>
-<a name="l00125"></a>00125   <a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *MetaData;
-<a name="l00126"></a>00126 
-<a name="l00127"></a>00127   <span class="comment">// Description:</span>
-<a name="l00128"></a>00128   <span class="comment">// An array to convert slice indices to input files</span>
-<a name="l00129"></a>00129   vtkIntArray *FileIndexArray;
+<a name="l00121"></a>00121   vtkGetMacro(ReverseSlices, <span class="keywordtype">int</span>);
+<a name="l00122"></a>00122   vtkSetMacro(ReverseSlices, <span class="keywordtype">int</span>);
+<a name="l00123"></a>00123   vtkBooleanMacro(ReverseSlices, <span class="keywordtype">int</span>);
+<a name="l00125"></a>00125 
+<a name="l00127"></a>00127 
+<a name="l00128"></a><a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html#a3fb82358dd5e56abf2405bbd006094ef">00128</a>   <span class="keywordtype">double</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html#a3fb82358dd5e56abf2405bbd006094ef" title="Get the slice spacing for the volume.">GetSliceSpacing</a>() { <span class="keywordflow">return</span> this-&gt;SliceSpacing; }
 <a name="l00130"></a>00130 
-<a name="l00131"></a>00131   <span class="comment">// Description:</span>
-<a name="l00132"></a>00132   <span class="comment">// An array to convert slice indices to input frames</span>
-<a name="l00133"></a>00133   vtkIntArray *FrameIndexArray;
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135   <span class="comment">// Description:</span>
-<a name="l00136"></a>00136   <span class="comment">// An array that holds the stack IDs.</span>
-<a name="l00137"></a>00137   vtkStringArray *StackIDs;
-<a name="l00138"></a>00138 
-<a name="l00139"></a>00139   <span class="comment">// Description:</span>
-<a name="l00140"></a>00140   <span class="comment">// Time dimension variables.</span>
-<a name="l00141"></a>00141   <span class="keywordtype">int</span> TimeAsVector;
-<a name="l00142"></a>00142   <span class="keywordtype">int</span> TimeDimension;
-<a name="l00143"></a>00143   <span class="keywordtype">int</span> DesiredTimeIndex;
-<a name="l00144"></a>00144   <span class="keywordtype">double</span> TimeSpacing;
-<a name="l00145"></a>00145 
-<a name="l00146"></a>00146   <span class="comment">// Description:</span>
-<a name="l00147"></a>00147   <span class="comment">// The stack to load.</span>
-<a name="l00148"></a>00148   <span class="keywordtype">char</span> DesiredStackID[20];
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150   <span class="comment">// Description:</span>
-<a name="l00151"></a>00151   <span class="comment">// Whether to reverse the slice order.</span>
-<a name="l00152"></a>00152   <span class="keywordtype">int</span> ReverseSlices;
-<a name="l00153"></a>00153   <span class="keywordtype">double</span> SliceSpacing;
-<a name="l00154"></a>00154 
-<a name="l00155"></a>00155 <span class="keyword">private</span>:
-<a name="l00156"></a>00156   <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html" title="Index a DICOM series to allow proper dimensional ordering.">vtkDICOMSliceSorter</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html" title="Index a DICOM series to allow proper dimensional ordering.">vtkDICOMSliceSorter</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00157"></a>00157   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html" title="Index a DICOM series to allow proper dimensional ordering.">vtkDICOMSliceSorter</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00158"></a>00158 };
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133   <span class="keywordtype">void</span> Update();
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136 <span class="keyword">protected</span>:
+<a name="l00137"></a>00137   <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html" title="Index a DICOM series to allow proper dimensional ordering.">vtkDICOMSliceSorter</a>();
+<a name="l00138"></a>00138   ~<a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html" title="Index a DICOM series to allow proper dimensional ordering.">vtkDICOMSliceSorter</a>();
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140   <span class="comment">// Description:</span>
+<a name="l00141"></a>00141   <span class="comment">// Sort the input files, put the sort in the supplied arrays.</span>
+<a name="l00142"></a>00142   <span class="keyword">virtual</span> <span class="keywordtype">void</span> SortFiles(vtkIntArray *fileArray, vtkIntArray *frameArray);
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144   <span class="comment">// Description:</span>
+<a name="l00145"></a>00145   <span class="comment">// The meta data for the image.</span>
+<a name="l00146"></a>00146   <a class="code" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> *MetaData;
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148   <span class="comment">// Description:</span>
+<a name="l00149"></a>00149   <span class="comment">// An array to convert slice indices to input files</span>
+<a name="l00150"></a>00150   vtkIntArray *FileIndexArray;
+<a name="l00151"></a>00151 
+<a name="l00152"></a>00152   <span class="comment">// Description:</span>
+<a name="l00153"></a>00153   <span class="comment">// An array to convert slice indices to input frames</span>
+<a name="l00154"></a>00154   vtkIntArray *FrameIndexArray;
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156   <span class="comment">// Description:</span>
+<a name="l00157"></a>00157   <span class="comment">// An array that holds the stack IDs.</span>
+<a name="l00158"></a>00158   vtkStringArray *StackIDs;
 <a name="l00159"></a>00159 
-<a name="l00160"></a>00160 <span class="preprocessor">#endif</span>
+<a name="l00160"></a>00160   <span class="comment">// Description:</span>
+<a name="l00161"></a>00161   <span class="comment">// Time dimension variables.</span>
+<a name="l00162"></a>00162   <span class="keywordtype">int</span> TimeAsVector;
+<a name="l00163"></a>00163   <span class="keywordtype">int</span> TimeDimension;
+<a name="l00164"></a>00164   <span class="keywordtype">int</span> DesiredTimeIndex;
+<a name="l00165"></a>00165   <span class="keywordtype">double</span> TimeSpacing;
+<a name="l00166"></a>00166 
+<a name="l00167"></a>00167   <span class="comment">// Description:</span>
+<a name="l00168"></a>00168   <span class="comment">// The stack to load.</span>
+<a name="l00169"></a>00169   <span class="keywordtype">char</span> DesiredStackID[20];
+<a name="l00170"></a>00170 
+<a name="l00171"></a>00171   <span class="comment">// Description:</span>
+<a name="l00172"></a>00172   <span class="comment">// Whether to reverse the slice order.</span>
+<a name="l00173"></a>00173   <span class="keywordtype">int</span> ReverseSlices;
+<a name="l00174"></a>00174   <span class="keywordtype">double</span> SliceSpacing;
+<a name="l00175"></a>00175 
+<a name="l00176"></a>00176 <span class="keyword">private</span>:
+<a name="l00177"></a>00177   <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html" title="Index a DICOM series to allow proper dimensional ordering.">vtkDICOMSliceSorter</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html" title="Index a DICOM series to allow proper dimensional ordering.">vtkDICOMSliceSorter</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00178"></a>00178   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html" title="Index a DICOM series to allow proper dimensional ordering.">vtkDICOMSliceSorter</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00179"></a>00179 };
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -219,7 +187,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 16 2015 21:26:18 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Dec 10 2015 18:44:24 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -49,9 +49,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
+<a href="#pub-types">Public Types</a>  </div>
   <div class="headertitle">
 <h1>vtkDICOMFile Class Reference</h1>  </div>
 </div>
@@ -73,11 +71,11 @@ Public Types</h2></td></tr>
 <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file.html#a593dde9104005d032a74ca1b857356df">Code</a> { <br/>
 &nbsp;&nbsp;<b>Good</b>, 
-<b>Bad</b>, 
+<b>UnknownError</b>, 
 <b>AccessDenied</b>, 
-<b>IsDirectory</b>, 
+<b>FileIsDirectory</b>, 
 <br/>
-&nbsp;&nbsp;<b>DirectoryNotFound</b>, 
+&nbsp;&nbsp;<b>ImpossiblePath</b>, 
 <b>FileNotFound</b>, 
 <b>OutOfSpace</b>
 <br/>
@@ -89,11 +87,17 @@ typedef unsigned long long&nbsp;</td><td class="memItemRight" valign="bottom"><a
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Typedef for a file size. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file.html#a77bd59a652f87f4fb46439f121ef1d4a">vtkDICOMFile</a> (const char *filename, <a class="el" href="classvtk_d_i_c_o_m_file.html#afa1c612f270f39ea2fc7ec4fa128a915">Mode</a> mode)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct the file object.  <a href="#a77bd59a652f87f4fb46439f121ef1d4a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4040cd2f7614cb7867c0d3db7961cc0"></a><!-- doxytag: member="vtkDICOMFile::~vtkDICOMFile" ref="ac4040cd2f7614cb7867c0d3db7961cc0" args="()" -->
 &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file.html#ac4040cd2f7614cb7867c0d3db7961cc0">~vtkDICOMFile</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruct the object and close the file. <br/></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88f096689e9c5b029f28a9fe56ccb2fc"></a><!-- doxytag: member="vtkDICOMFile::Close" ref="a88f096689e9c5b029f28a9fe56ccb2fc" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file.html#a88f096689e9c5b029f28a9fe56ccb2fc">Close</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Close a file. <br/></td></tr>
@@ -114,8 +118,15 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return an error indicator (zero if no error). <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file.html#a83fe652b89e57a2ce7fc72ce9a0e2c01">Access</a> (const char *filename, <a class="el" href="classvtk_d_i_c_o_m_file.html#afa1c612f270f39ea2fc7ec4fa128a915">Mode</a> mode)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Test the specified file for accessibility (static method).  <a href="#a83fe652b89e57a2ce7fc72ce9a0e2c01"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file.html#a1a106e8ce71ecf6c930fecc98840fb69">Remove</a> (const char *filename)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Delete the specified file (static method).  <a href="#a1a106e8ce71ecf6c930fecc98840fb69"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file.html#a1b6a49ce224c9f772a49c50eda1db6ff">SameFile</a> (const char *file1, const char *file2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if two files are the same.  <a href="#a1b6a49ce224c9f772a49c50eda1db6ff"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>A class that provides basic input/output operations. </p>
@@ -152,6 +163,36 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a83fe652b89e57a2ce7fc72ce9a0e2c01"></a><!-- doxytag: member="vtkDICOMFile::Access" ref="a83fe652b89e57a2ce7fc72ce9a0e2c01" args="(const char *filename, Mode mode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int vtkDICOMFile::Access </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_file.html#afa1c612f270f39ea2fc7ec4fa128a915">Mode</a>&nbsp;</td>
+          <td class="paramname"> <em>mode</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Test the specified file for accessibility (static method). </p>
+<p>The mode should be "In" or "Out" to indicate how you intend to use the file. The return value will be zero (for an ordinary file) or one of the codes returned by GetError. </p>
+
+</div>
+</div>
 <a class="anchor" id="a735f95b23cfeb697af72079d88a175df"></a><!-- doxytag: member="vtkDICOMFile::Read" ref="a735f95b23cfeb697af72079d88a175df" args="(unsigned char *data, size_t size)" -->
 <div class="memitem">
 <div class="memproto">
@@ -200,6 +241,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Delete the specified file (static method). </p>
 <p>The return value is zero if successful, otherwise an error code is returned. This can be called on a file that is still open, in which case the file will be deleted when closed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1b6a49ce224c9f772a49c50eda1db6ff"></a><!-- doxytag: member="vtkDICOMFile::SameFile" ref="a1b6a49ce224c9f772a49c50eda1db6ff" args="(const char *file1, const char *file2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool vtkDICOMFile::SameFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>file1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>file2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if two files are the same. </p>
+<p>This does not check that the filenames are the same. Instead, it checks to see if the two filenames point to the same actual disk file. If either file does not exist or is otherwise not accessible, then it returns false. </p>
 
 </div>
 </div>
@@ -272,7 +343,7 @@ Static Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 16 2015 21:26:18 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Dec 10 2015 18:44:25 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

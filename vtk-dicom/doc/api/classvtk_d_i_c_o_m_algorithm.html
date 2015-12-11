@@ -49,6 +49,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
@@ -75,11 +76,24 @@ Inheritance diagram for vtkDICOMAlgorithm:</div>
 
 <p><a href="classvtk_d_i_c_o_m_algorithm-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbd7532beee034f7d49c9f46537efaed"></a><!-- doxytag: member="vtkDICOMAlgorithm::Superclass" ref="acbd7532beee034f7d49c9f46537efaed" args="" -->
+typedef vtkThreadedImageAlgorithm&nbsp;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff8416a27ef7dac3c0d69a1908d5aa45"></a><!-- doxytag: member="vtkDICOMAlgorithm::GetClassName" ref="aff8416a27ef7dac3c0d69a1908d5aa45" args="()" -->
+virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetClassName</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62e97f0f6c949a6411cabdf39c559280"></a><!-- doxytag: member="vtkDICOMAlgorithm::IsA" ref="a62e97f0f6c949a6411cabdf39c559280" args="(const char *type)" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const char *type)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#ab1f236fc066202fe082d35c5d6af07ae">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66bee31172c45c7bc31923c8e50fb48a"></a><!-- doxytag: member="vtkDICOMAlgorithm::IsTypeOf" ref="a66bee31172c45c7bc31923c8e50fb48a" args="(const char *type)" -->
+static int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsTypeOf</b> (const char *type)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5923aedacbb4307d0cbcae4f68632ad4"></a><!-- doxytag: member="vtkDICOMAlgorithm::SafeDownCast" ref="a5923aedacbb4307d0cbcae4f68632ad4" args="(vtkObject *o)" -->
+static <a class="el" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>SafeDownCast</b> (<a class="el" href="classvtk_object.html">vtkObject</a> *o)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a96ebe31ff8cbe5dd86303883d83380ac">New</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <br class="typebreak"/>
 vtkInformationDataObjectKey *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a06c949127dd79ad704f3be7a6b41f0e1">META_DATA</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <br class="typebreak"/>
@@ -104,19 +118,6 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>ThreadedReque
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 </div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#ad43466b6776ff5ddd7d5f53aace2d986">CopyMetaDataToOutputData</a> (vtkInformation *outInfo, <a class="el" href="classvtk_data_object.html">vtkDataObject</a> *outData)</td></tr>
-<tr><td colspan="2"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
-<br/><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbd7532beee034f7d49c9f46537efaed"></a><!-- doxytag: member="vtkDICOMAlgorithm::Superclass" ref="acbd7532beee034f7d49c9f46537efaed" args="" -->
-typedef vtkThreadedImageAlgorithm&nbsp;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a96ebe31ff8cbe5dd86303883d83380ac">New</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66bee31172c45c7bc31923c8e50fb48a"></a><!-- doxytag: member="vtkDICOMAlgorithm::IsTypeOf" ref="a66bee31172c45c7bc31923c8e50fb48a" args="(const char *type)" -->
-static int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsTypeOf</b> (const char *type)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5923aedacbb4307d0cbcae4f68632ad4"></a><!-- doxytag: member="vtkDICOMAlgorithm::SafeDownCast" ref="a5923aedacbb4307d0cbcae4f68632ad4" args="(vtkObject *o)" -->
-static <a class="el" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>SafeDownCast</b> (<a class="el" href="classvtk_object.html">vtkObject</a> *o)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff8416a27ef7dac3c0d69a1908d5aa45"></a><!-- doxytag: member="vtkDICOMAlgorithm::GetClassName" ref="aff8416a27ef7dac3c0d69a1908d5aa45" args="()" -->
-virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetClassName</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62e97f0f6c949a6411cabdf39c559280"></a><!-- doxytag: member="vtkDICOMAlgorithm::IsA" ref="a62e97f0f6c949a6411cabdf39c559280" args="(const char *type)" -->
-virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const char *type)</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Base class for DICOM image filters. </p>
@@ -334,7 +335,7 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsA</b> (const
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 16 2015 21:26:18 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Dec 10 2015 18:44:25 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

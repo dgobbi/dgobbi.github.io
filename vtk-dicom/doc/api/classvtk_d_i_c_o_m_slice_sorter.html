@@ -86,48 +86,79 @@ Public Member Functions</h2></td></tr>
 virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetClassName</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#a78e2d02c122fa172fabb0efee13e81d4">IsA</a> (const char *type)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#a8f29ff2a7631fd5fec7d83f4019d9b1a">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b8a7b601ec340c142b98f0db779f966"></a><!-- doxytag: member="vtkDICOMSliceSorter::SetDesiredStackID" ref="a2b8a7b601ec340c142b98f0db779f966" args="(const char *stackId)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetDesiredStackID</b> (const char *stackId)</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#a2b8a7b601ec340c142b98f0db779f966">SetDesiredStackID</a> (const char *stackId)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the Stack ID of the stack to use, for named stacks.  <a href="#a2b8a7b601ec340c142b98f0db779f966"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a103910025acfb769796d7f3ce4c4c7b4"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetDesiredStackID" ref="a103910025acfb769796d7f3ce4c4c7b4" args="()" -->
 const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetDesiredStackID</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a045487a1e31d2809fdd56462209aacdd"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetStackIDs" ref="a045487a1e31d2809fdd56462209aacdd" args="()" -->
-vtkStringArray *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetStackIDs</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab97a628f6df50a71422cfaa1b797f998"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetFileIndexArray" ref="ab97a628f6df50a71422cfaa1b797f998" args="()" -->
-vtkIntArray *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetFileIndexArray</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21f64d6026ec81ee7cb3d1e959b35f95"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetFrameIndexArray" ref="a21f64d6026ec81ee7cb3d1e959b35f95" args="()" -->
-vtkIntArray *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetFrameIndexArray</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1123650071f5bc96d1801fcfc9fdb42f"></a><!-- doxytag: member="vtkDICOMSliceSorter::SetMetaData" ref="a1123650071f5bc96d1801fcfc9fdb42f" args="(vtkDICOMMetaData *meta)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetMetaData</b> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vtkStringArray *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#a045487a1e31d2809fdd56462209aacdd">GetStackIDs</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get a list of the stacks that are present.  <a href="#a045487a1e31d2809fdd56462209aacdd"></a><br/></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vtkIntArray *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#ab97a628f6df50a71422cfaa1b797f998">GetFileIndexArray</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get an array that converts slice index to input file index.  <a href="#ab97a628f6df50a71422cfaa1b797f998"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vtkIntArray *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#a21f64d6026ec81ee7cb3d1e959b35f95">GetFrameIndexArray</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get an array that converts slice index to frame index.  <a href="#a21f64d6026ec81ee7cb3d1e959b35f95"></a><br/></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#a1123650071f5bc96d1801fcfc9fdb42f">SetMetaData</a> (<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the meta data for the DICOM files.  <a href="#a1123650071f5bc96d1801fcfc9fdb42f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7191f0023c70e62d49745ca741a3dd29"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetMetaData" ref="a7191f0023c70e62d49745ca741a3dd29" args="()" -->
 <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetMetaData</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05fa9f49791e2a88e91727cd10eaae40"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetTimeAsVector" ref="a05fa9f49791e2a88e91727cd10eaae40" args="()" -->
-virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetTimeAsVector</b> ()</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#a05fa9f49791e2a88e91727cd10eaae40">GetTimeAsVector</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Read the time dimension as scalar components (default: Off).  <a href="#a05fa9f49791e2a88e91727cd10eaae40"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd1f67371eaef54343306104a556b685"></a><!-- doxytag: member="vtkDICOMSliceSorter::SetTimeAsVector" ref="acd1f67371eaef54343306104a556b685" args="(int)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetTimeAsVector</b> (int)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38de2833c915dd2f9d4a330987ca8fb6"></a><!-- doxytag: member="vtkDICOMSliceSorter::TimeAsVectorOn" ref="a38de2833c915dd2f9d4a330987ca8fb6" args="()" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>TimeAsVectorOn</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab575ccc773351d6dd13dfd956c948c94"></a><!-- doxytag: member="vtkDICOMSliceSorter::TimeAsVectorOff" ref="ab575ccc773351d6dd13dfd956c948c94" args="()" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>TimeAsVectorOff</b> ()</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b29ef6c33302d58a8de5b490507e38a"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetTimeDimension" ref="a4b29ef6c33302d58a8de5b490507e38a" args="()" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetTimeDimension</b> ()</td></tr>
+int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#a4b29ef6c33302d58a8de5b490507e38a">GetTimeDimension</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the time dimension if the DICOM series has one. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd08600d9cc57a17df08d3224e67d120"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetTimeSpacing" ref="afd08600d9cc57a17df08d3224e67d120" args="()" -->
 double&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetTimeSpacing</b> ()</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28e3d1ac582b8a1a24059c13a67d04ec"></a><!-- doxytag: member="vtkDICOMSliceSorter::SetDesiredTimeIndex" ref="a28e3d1ac582b8a1a24059c13a67d04ec" args="(int)" -->
-virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetDesiredTimeIndex</b> (int)</td></tr>
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#a28e3d1ac582b8a1a24059c13a67d04ec">SetDesiredTimeIndex</a> (int)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the desired time index (set to -1 for all). <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd828a74481deb9c4bc8f88a04698332"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetDesiredTimeIndex" ref="acd828a74481deb9c4bc8f88a04698332" args="()" -->
 virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetDesiredTimeIndex</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad791711a5e589898e14639f60e2d8d70"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetReverseSlices" ref="ad791711a5e589898e14639f60e2d8d70" args="()" -->
-virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetReverseSlices</b> ()</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#ad791711a5e589898e14639f60e2d8d70">GetReverseSlices</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set whether to reverse the slice order.  <a href="#ad791711a5e589898e14639f60e2d8d70"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e38b9097736df2616f151b919a01c1a"></a><!-- doxytag: member="vtkDICOMSliceSorter::SetReverseSlices" ref="a1e38b9097736df2616f151b919a01c1a" args="(int)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetReverseSlices</b> (int)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92f9d346a92ca912c4a62f3f55a797ca"></a><!-- doxytag: member="vtkDICOMSliceSorter::ReverseSlicesOn" ref="a92f9d346a92ca912c4a62f3f55a797ca" args="()" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>ReverseSlicesOn</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4e51776b0853327da7fe218a62ffc64"></a><!-- doxytag: member="vtkDICOMSliceSorter::ReverseSlicesOff" ref="ae4e51776b0853327da7fe218a62ffc64" args="()" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>ReverseSlicesOff</b> ()</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fb82358dd5e56abf2405bbd006094ef"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetSliceSpacing" ref="a3fb82358dd5e56abf2405bbd006094ef" args="()" -->
-double&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetSliceSpacing</b> ()</td></tr>
+double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#a3fb82358dd5e56abf2405bbd006094ef">GetSliceSpacing</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the slice spacing for the volume. <br/></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
+</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7a3058f73feb0663939da00c0e16f06"></a><!-- doxytag: member="vtkDICOMSliceSorter::Update" ref="af7a3058f73feb0663939da00c0e16f06" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#af7a3058f73feb0663939da00c0e16f06">Update</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Update the arrays. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html#a78537822a7e84e6268a512799a05e505">IsTypeOf</a> (const char *type)</td></tr>
@@ -167,6 +198,106 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>SliceSpacing</b></t
 <p>Index a DICOM series to allow proper dimensional ordering. </p>
 <p>Given a <a class="el" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> object for a DICOM series, this class will index the files and frames in the series so that they can be sorted into a multi-dimensional volume. </p>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ab97a628f6df50a71422cfaa1b797f998"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetFileIndexArray" ref="ab97a628f6df50a71422cfaa1b797f998" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vtkIntArray* vtkDICOMSliceSorter::GetFileIndexArray </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get an array that converts slice index to input file index. </p>
+<p>The array can be two-dimensional and calling array-&gt;GetComponent(i,j) will return the file index for slice i and scalar component j for monochrome images, or for slice i and scalar component 3*j for RGB images (or more precisely, at scalar component N*j where N is the SamplesPerPixel value from the DICOM metadata). If the data has just one component, then use j=0. Use this array to index into the MetaData object to get the metadata for a particular slice. </p>
+
+</div>
+</div>
+<a class="anchor" id="a21f64d6026ec81ee7cb3d1e959b35f95"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetFrameIndexArray" ref="a21f64d6026ec81ee7cb3d1e959b35f95" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vtkIntArray* vtkDICOMSliceSorter::GetFrameIndexArray </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get an array that converts slice index to frame index. </p>
+<p>The purpose of this array is to identify individual frames in multi-frame DICOM files. The dimensions of this array are identical to the FileIndexArray. Use FileIndexArray to identify the file, then use FrameIndexArray to identify the frame within that file. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad791711a5e589898e14639f60e2d8d70"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetReverseSlices" ref="ad791711a5e589898e14639f60e2d8d70" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int vtkDICOMSliceSorter::GetReverseSlices </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set whether to reverse the slice order. </p>
+<p>This is desired if the images are to be flipped. </p>
+
+</div>
+</div>
+<a class="anchor" id="a045487a1e31d2809fdd56462209aacdd"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetStackIDs" ref="a045487a1e31d2809fdd56462209aacdd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vtkStringArray* vtkDICOMSliceSorter::GetStackIDs </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get a list of the stacks that are present. </p>
+<p>A stack is a contiguous array of slices that form a volume. </p>
+
+</div>
+</div>
+<a class="anchor" id="a05fa9f49791e2a88e91727cd10eaae40"></a><!-- doxytag: member="vtkDICOMSliceSorter::GetTimeAsVector" ref="a05fa9f49791e2a88e91727cd10eaae40" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int vtkDICOMSliceSorter::GetTimeAsVector </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Read the time dimension as scalar components (default: Off). </p>
+<p>If this is on, then each time point will be stored as a scalar component in the image data. If the data has both a time dimension and a vector dimension, then the number of components will be the product of these two dimensions, i.e. the components will store a sequence of vectors, one vector for each time point. </p>
+
+</div>
+</div>
 <a class="anchor" id="a78e2d02c122fa172fabb0efee13e81d4"></a><!-- doxytag: member="vtkDICOMSliceSorter::IsA" ref="a78e2d02c122fa172fabb0efee13e81d4" args="(const char *type)" -->
 <div class="memitem">
 <div class="memproto">
@@ -259,6 +390,48 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>SliceSpacing</b></t
 
 </div>
 </div>
+<a class="anchor" id="a2b8a7b601ec340c142b98f0db779f966"></a><!-- doxytag: member="vtkDICOMSliceSorter::SetDesiredStackID" ref="a2b8a7b601ec340c142b98f0db779f966" args="(const char *stackId)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMSliceSorter::SetDesiredStackID </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>stackId</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the Stack ID of the stack to use, for named stacks. </p>
+<p>If the series has multiple stacks, then by default only the first stack will be used. This method allows you to select a different stack, if you know the DICOM StackID for the stack. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1123650071f5bc96d1801fcfc9fdb42f"></a><!-- doxytag: member="vtkDICOMSliceSorter::SetMetaData" ref="a1123650071f5bc96d1801fcfc9fdb42f" args="(vtkDICOMMetaData *meta)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMSliceSorter::SetMetaData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&nbsp;</td>
+          <td class="paramname"> <em>meta</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the meta data for the DICOM files. </p>
+<p>The GetAttributeValue() method of <a class="el" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata.">vtkDICOMMetaData</a> takes optional file and frame indices, which specify the file and the frame within that file to get the attribute from. If you have a slice index rather than a file index and frame index, then use the FileIndexArray and FrameIndexArray to convert the slice index into file and frame indices. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="vtk_d_i_c_o_m_slice_sorter_8h_source.html">vtkDICOMSliceSorter.h</a></li>
 </ul>
@@ -277,7 +450,7 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>SliceSpacing</b></t
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 16 2015 21:26:19 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Dec 10 2015 18:44:25 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

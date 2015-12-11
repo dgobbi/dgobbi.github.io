@@ -74,83 +74,92 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00025"></a><a class="code" href="classvtk_d_i_c_o_m_utilities.html">00025</a> <span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a> : <span class="keyword">public</span> <a class="code" href="classvtk_object.html" title="abstract base class for most VTK objects">vtkObject</a>
 <a name="l00026"></a>00026 {
 <a name="l00027"></a>00027 <span class="keyword">public</span>:
-<a name="l00029"></a>00029   <span class="keyword">static</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a> *<a class="code" href="classvtk_object.html#a4d5b227267c076d6f9e38483370b6612">New</a>();
-<a name="l00030"></a>00030 
-<a name="l00032"></a><a class="code" href="classvtk_d_i_c_o_m_utilities.html#af433c2ef02b27ecd4fef1f78e58d0336">00032</a>   vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>, <a class="code" href="classvtk_object.html" title="abstract base class for most VTK objects">vtkObject</a>);
-<a name="l00033"></a>00033 
-<a name="l00035"></a>00035   <span class="keywordtype">void</span> <a class="code" href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">PrintSelf</a>(ostream&amp; os, vtkIndent indent);
-<a name="l00036"></a>00036 
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030   <span class="keyword">static</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a> *<a class="code" href="classvtk_object.html#a4d5b227267c076d6f9e38483370b6612">New</a>();
+<a name="l00031"></a>00031 
+<a name="l00033"></a><a class="code" href="classvtk_d_i_c_o_m_utilities.html#af433c2ef02b27ecd4fef1f78e58d0336">00033</a>   vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>, <a class="code" href="classvtk_object.html" title="abstract base class for most VTK objects">vtkObject</a>);
+<a name="l00034"></a>00034 
+<a name="l00036"></a>00036   <span class="keywordtype">void</span> <a class="code" href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">PrintSelf</a>(ostream&amp; os, vtkIndent indent);
 <a name="l00038"></a>00038 
-<a name="l00042"></a>00042   <span class="keyword">static</span> <span class="keywordtype">void</span> SetUIDPrefix(<span class="keyword">const</span> <span class="keywordtype">char</span> *prefix);
-<a name="l00043"></a>00043   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetUIDPrefix();
-<a name="l00044"></a>00044 
-<a name="l00046"></a>00046   <span class="keyword">static</span> std::string GenerateUID(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag);
-<a name="l00047"></a>00047 
-<a name="l00049"></a>00049 
-<a name="l00056"></a>00056   <span class="keyword">static</span> <span class="keywordtype">void</span> GenerateUIDs(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag, vtkStringArray *uids);
-<a name="l00057"></a>00057 
-<a name="l00059"></a>00059   <span class="keyword">static</span> <span class="keywordtype">int</span> CompareUIDs(<span class="keyword">const</span> <span class="keywordtype">char</span> *u1, <span class="keyword">const</span> <span class="keywordtype">char</span> *u2);
-<a name="l00060"></a>00060 
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 
+<a name="l00045"></a>00045   <span class="keyword">static</span> <span class="keywordtype">void</span> SetUIDPrefix(<span class="keyword">const</span> <span class="keywordtype">char</span> *prefix);
+<a name="l00046"></a>00046   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetUIDPrefix();
+<a name="l00048"></a>00048 
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051   <span class="keyword">static</span> std::string GenerateUID(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag);
+<a name="l00052"></a>00052 
+<a name="l00054"></a>00054 
+<a name="l00061"></a>00061   <span class="keyword">static</span> <span class="keywordtype">void</span> GenerateUIDs(<a class="code" href="classvtk_d_i_c_o_m_tag.html" title="A (group,element) identifier tag for DICOM attributes.">vtkDICOMTag</a> tag, vtkStringArray *uids);
 <a name="l00062"></a>00062 
-<a name="l00068"></a>00068   <span class="keyword">static</span> std::string GenerateDateTime(<span class="keyword">const</span> <span class="keywordtype">char</span> *zone);
+<a name="l00064"></a>00064   <span class="keyword">static</span> <span class="keywordtype">int</span> CompareUIDs(<span class="keyword">const</span> <span class="keywordtype">char</span> *u1, <span class="keyword">const</span> <span class="keywordtype">char</span> *u2);
+<a name="l00066"></a>00066 
+<a name="l00068"></a>00068 
 <a name="l00069"></a>00069 
-<a name="l00071"></a>00071 
-<a name="l00078"></a>00078   <span class="keyword">static</span> std::string GenerateDateTime(<span class="keywordtype">long</span> <span class="keywordtype">long</span> microsecs, <span class="keyword">const</span> <span class="keywordtype">char</span> *zone);
-<a name="l00079"></a>00079 
-<a name="l00081"></a>00081 
-<a name="l00090"></a>00090   <span class="keyword">static</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> ConvertDateTime(<span class="keyword">const</span> <span class="keywordtype">char</span> *datetime);
-<a name="l00091"></a>00091 
-<a name="l00093"></a>00093 
-<a name="l00099"></a>00099   <span class="keyword">static</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> GetUTC(<span class="keywordtype">long</span> <span class="keywordtype">long</span> *offset);
+<a name="l00075"></a>00075   <span class="keyword">static</span> std::string GenerateDateTime(<span class="keyword">const</span> <span class="keywordtype">char</span> *zone);
+<a name="l00076"></a>00076 
+<a name="l00078"></a>00078 
+<a name="l00085"></a>00085   <span class="keyword">static</span> std::string GenerateDateTime(<span class="keywordtype">long</span> <span class="keywordtype">long</span> microsecs, <span class="keyword">const</span> <span class="keywordtype">char</span> *zone);
+<a name="l00086"></a>00086 
+<a name="l00088"></a>00088 
+<a name="l00097"></a>00097   <span class="keyword">static</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> ConvertDateTime(<span class="keyword">const</span> <span class="keywordtype">char</span> *datetime);
+<a name="l00098"></a>00098 
 <a name="l00100"></a>00100 
-<a name="l00102"></a>00102 
-<a name="l00107"></a>00107   <span class="keyword">static</span> <span class="keywordtype">bool</span> IsDICOMFile(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename);
+<a name="l00106"></a>00106   <span class="keyword">static</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> GetUTC(<span class="keywordtype">long</span> <span class="keywordtype">long</span> *offset);
 <a name="l00108"></a>00108 
-<a name="l00110"></a>00110   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetImplementationClassUID();
+<a name="l00110"></a>00110 
 <a name="l00111"></a>00111 
-<a name="l00113"></a>00113 
-<a name="l00118"></a>00118   <span class="keyword">static</span> <span class="keywordtype">void</span> SetImplementationClassUID(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);
-<a name="l00119"></a>00119 
-<a name="l00121"></a>00121   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetImplementationVersionName();
+<a name="l00116"></a>00116   <span class="keyword">static</span> <span class="keywordtype">bool</span> IsDICOMFile(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename);
+<a name="l00118"></a>00118 
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetImplementationClassUID();
 <a name="l00122"></a>00122 
 <a name="l00124"></a>00124 
-<a name="l00129"></a>00129   <span class="keyword">static</span> <span class="keywordtype">void</span> SetImplementationVersionName(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);
+<a name="l00129"></a>00129   <span class="keyword">static</span> <span class="keywordtype">void</span> SetImplementationClassUID(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);
 <a name="l00130"></a>00130 
-<a name="l00132"></a>00132 
-<a name="l00136"></a><a class="code" href="classvtk_d_i_c_o_m_utilities.html#ae6e5cb3c6e0c8009c1d1d740c365cb12">00136</a>   <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html#ae6e5cb3c6e0c8009c1d1d740c365cb12" title="Unpack one little-endian int from a stream of bytes.">UnpackUnsignedInt</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp) {
-<a name="l00137"></a>00137     <span class="keywordflow">return</span> cp[0] + (cp[1] &lt;&lt; 8) + (cp[2] &lt;&lt; 16) + (cp[3] &lt;&lt; 24); }
-<a name="l00138"></a>00138 
-<a name="l00140"></a>00140 
-<a name="l00144"></a><a class="code" href="classvtk_d_i_c_o_m_utilities.html#a43acf23027f948bb0e1d64c8c6657a08">00144</a>   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html#a43acf23027f948bb0e1d64c8c6657a08" title="Pack one little-endian int into a stream of bytes.">PackUnsignedInt</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp) {
-<a name="l00145"></a>00145     cp[0] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i);
-<a name="l00146"></a>00146     cp[1] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 8);
-<a name="l00147"></a>00147     cp[2] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 16);
-<a name="l00148"></a>00148     cp[3] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 24); }
-<a name="l00149"></a>00149 
+<a name="l00132"></a>00132   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetImplementationVersionName();
+<a name="l00133"></a>00133 
+<a name="l00135"></a>00135 
+<a name="l00140"></a>00140   <span class="keyword">static</span> <span class="keywordtype">void</span> SetImplementationVersionName(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);
+<a name="l00142"></a>00142 
+<a name="l00144"></a>00144 
+<a name="l00145"></a>00145 
+<a name="l00149"></a><a class="code" href="classvtk_d_i_c_o_m_utilities.html#ae6e5cb3c6e0c8009c1d1d740c365cb12">00149</a>   <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html#ae6e5cb3c6e0c8009c1d1d740c365cb12" title="Unpack one little-endian int from a stream of bytes.">UnpackUnsignedInt</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp) {
+<a name="l00150"></a>00150     <span class="keywordflow">return</span> cp[0] + (cp[1] &lt;&lt; 8) + (cp[2] &lt;&lt; 16) + (cp[3] &lt;&lt; 24); }
 <a name="l00151"></a>00151 
-<a name="l00156"></a>00156   <span class="keyword">static</span> <span class="keywordtype">bool</span> PatternMatches(<span class="keyword">const</span> <span class="keywordtype">char</span> *pattern, <span class="keyword">const</span> <span class="keywordtype">char</span> *val);
-<a name="l00157"></a>00157 
-<a name="l00159"></a>00159   <span class="keyword">static</span> <span class="keywordtype">bool</span> PatternMatches(
-<a name="l00160"></a>00160     <span class="keyword">const</span> <span class="keywordtype">char</span> *pattern, <span class="keywordtype">size_t</span> pl, <span class="keyword">const</span> <span class="keywordtype">char</span> *val, <span class="keywordtype">size_t</span> vl);
-<a name="l00161"></a>00161 
-<a name="l00163"></a>00163   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetUIDName(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);
-<a name="l00164"></a>00164 
-<a name="l00166"></a>00166   <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> GetCIDFromUID(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);
-<a name="l00167"></a>00167 
-<a name="l00168"></a>00168 <span class="keyword">protected</span>:
-<a name="l00169"></a>00169   <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>() {}
-<a name="l00170"></a>00170   ~<a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>() {}
-<a name="l00171"></a>00171 
-<a name="l00172"></a>00172   <span class="keyword">static</span> <span class="keywordtype">char</span> UIDPrefix[64];
-<a name="l00173"></a>00173   <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationClassUID[65];
-<a name="l00174"></a>00174   <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationVersionName[17];
-<a name="l00175"></a>00175 
-<a name="l00176"></a>00176 <span class="keyword">private</span>:
-<a name="l00177"></a>00177   <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00178"></a>00178   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00179"></a>00179 };
-<a name="l00180"></a>00180 
-<a name="l00181"></a>00181 <span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMUtilities_h */</span>
+<a name="l00153"></a>00153 
+<a name="l00157"></a><a class="code" href="classvtk_d_i_c_o_m_utilities.html#a43acf23027f948bb0e1d64c8c6657a08">00157</a>   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html#a43acf23027f948bb0e1d64c8c6657a08" title="Pack one little-endian int into a stream of bytes.">PackUnsignedInt</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp) {
+<a name="l00158"></a>00158     cp[0] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i);
+<a name="l00159"></a>00159     cp[1] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 8);
+<a name="l00160"></a>00160     cp[2] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 16);
+<a name="l00161"></a>00161     cp[3] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 24); }
+<a name="l00163"></a>00163 
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166 
+<a name="l00171"></a>00171   <span class="keyword">static</span> <span class="keywordtype">bool</span> PatternMatches(<span class="keyword">const</span> <span class="keywordtype">char</span> *pattern, <span class="keyword">const</span> <span class="keywordtype">char</span> *val);
+<a name="l00172"></a>00172 
+<a name="l00174"></a>00174   <span class="keyword">static</span> <span class="keywordtype">bool</span> PatternMatches(
+<a name="l00175"></a>00175     <span class="keyword">const</span> <span class="keywordtype">char</span> *pattern, <span class="keywordtype">size_t</span> pl, <span class="keyword">const</span> <span class="keywordtype">char</span> *val, <span class="keywordtype">size_t</span> vl);
+<a name="l00177"></a>00177 
+<a name="l00179"></a>00179 
+<a name="l00180"></a>00180   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetUIDName(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);
+<a name="l00181"></a>00181 
+<a name="l00183"></a>00183   <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> GetCIDFromUID(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);
+<a name="l00185"></a>00185 
+<a name="l00186"></a>00186 <span class="keyword">protected</span>:
+<a name="l00187"></a>00187   <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>() {}
+<a name="l00188"></a>00188   ~<a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>() {}
+<a name="l00189"></a>00189 
+<a name="l00190"></a>00190   <span class="keyword">static</span> <span class="keywordtype">char</span> UIDPrefix[64];
+<a name="l00191"></a>00191   <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationClassUID[65];
+<a name="l00192"></a>00192   <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationVersionName[17];
+<a name="l00193"></a>00193 
+<a name="l00194"></a>00194 <span class="keyword">private</span>:
+<a name="l00195"></a>00195   <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00196"></a>00196   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html" title="Utility functions for use with DICOM classes.">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00197"></a>00197 };
+<a name="l00198"></a>00198 
+<a name="l00199"></a>00199 <span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMUtilities_h */</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -167,7 +176,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 16 2015 21:26:18 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Dec 10 2015 18:44:24 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

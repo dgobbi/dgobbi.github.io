@@ -69,24 +69,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00020"></a><a class="code" href="classvtk_d_i_c_o_m_sorter.html">00020</a> <span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a> : <span class="keyword">public</span> <a class="code" href="classvtk_d_i_c_o_m_file_sorter.html" title="Sort DICOM files and group them by study and series.">vtkDICOMFileSorter</a>
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00023"></a>00023   vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a>,<a class="code" href="classvtk_d_i_c_o_m_file_sorter.html" title="Sort DICOM files and group them by study and series.">vtkDICOMFileSorter</a>);
-<a name="l00024"></a>00024   <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_file_sorter.html#a6c8e2c9c97afd11144a421aa9e3b1c79">PrintSelf</a>(ostream&amp; os, vtkIndent indent);
-<a name="l00025"></a>00025   <span class="keyword">static</span> <a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a> *<a class="code" href="classvtk_d_i_c_o_m_file_sorter.html#a7632b3338c2b92e9784d77ec9f799f0d">New</a>();
-<a name="l00026"></a>00026 
-<a name="l00028"></a>00028   <span class="keywordtype">int</span> GetFirstSeriesInStudy(<span class="keywordtype">int</span> study);
-<a name="l00029"></a>00029 
-<a name="l00031"></a>00031   <span class="keywordtype">int</span> GetNumberOfSeriesInStudy(<span class="keywordtype">int</span> study);
+<a name="l00024"></a>00024   vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a>,<a class="code" href="classvtk_d_i_c_o_m_file_sorter.html" title="Sort DICOM files and group them by study and series.">vtkDICOMFileSorter</a>);
+<a name="l00025"></a>00025   <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_file_sorter.html#a6c8e2c9c97afd11144a421aa9e3b1c79">PrintSelf</a>(ostream&amp; os, vtkIndent indent);
+<a name="l00026"></a>00026   <span class="keyword">static</span> <a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a> *<a class="code" href="classvtk_d_i_c_o_m_file_sorter.html#a7632b3338c2b92e9784d77ec9f799f0d">New</a>();
+<a name="l00028"></a>00028 
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031   <span class="keywordtype">int</span> GetFirstSeriesInStudy(<span class="keywordtype">int</span> study);
 <a name="l00032"></a>00032 
-<a name="l00033"></a>00033 <span class="keyword">protected</span>:
-<a name="l00034"></a>00034   <a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a>();
-<a name="l00035"></a>00035   ~<a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a>();
+<a name="l00034"></a>00034   <span class="keywordtype">int</span> GetNumberOfSeriesInStudy(<span class="keywordtype">int</span> study);
 <a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="keyword">private</span>:
-<a name="l00038"></a>00038   <a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00039"></a>00039   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a>&amp;);  <span class="comment">// Not implemented.</span>
-<a name="l00040"></a>00040 };
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 <span class="preprocessor">#endif</span>
+<a name="l00037"></a>00037 <span class="keyword">protected</span>:
+<a name="l00038"></a>00038   <a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a>();
+<a name="l00039"></a>00039   ~<a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a>();
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 <span class="keyword">private</span>:
+<a name="l00042"></a>00042   <a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00043"></a>00043   <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead.">vtkDICOMSorter</a>&amp;);  <span class="comment">// Not implemented.</span>
+<a name="l00044"></a>00044 };
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -103,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 16 2015 21:26:18 for vtk-dicom by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Dec 10 2015 18:44:24 for vtk-dicom by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
