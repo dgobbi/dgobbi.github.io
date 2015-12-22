@@ -10,5 +10,6 @@ var searchData=
   ['updatematrix',['UpdateMatrix',['../classvtk_d_i_c_o_m_c_t_rectifier.html#adca5e36b9bf4ca863c5794db099b5479',1,'vtkDICOMCTRectifier::UpdateMatrix()'],['../classvtk_d_i_c_o_m_to_r_a_s.html#a4bb7a00efd76a79d50fba0a91b0a5b35',1,'vtkDICOMToRAS::UpdateMatrix()']]],
   ['updatemedicalimageproperties',['UpdateMedicalImageProperties',['../classvtk_d_i_c_o_m_reader.html#a166ae74aa498f303046379d11bacaf21',1,'vtkDICOMReader']]],
   ['updateprogress',['UpdateProgress',['../classvtk_algorithm.html#a01d3abfac738c7ccf01548ae6833d8d3',1,'vtkAlgorithm']]],
-  ['updatewholeextent',['UpdateWholeExtent',['../classvtk_algorithm.html#aab591f3a34e99d0f7d89b019c485e66c',1,'vtkAlgorithm']]]
+  ['updatewholeextent',['UpdateWholeExtent',['../classvtk_algorithm.html#aab591f3a34e99d0f7d89b019c485e66c',1,'vtkAlgorithm']]],
+  ['usinglogscale',['UsingLogScale',['../classvtk_lookup_table.html#a72cf759accd067baee7fc905be7459b9',1,'vtkLookupTable::UsingLogScale()'],['../classvtk_scalars_to_colors.html#a5d69196de595f9e7d710b0c2fc9b4de4',1,'vtkScalarsToColors::UsingLogScale()']]]
 ];

@@ -111,14 +111,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_lookup_table.html">   31</a></span>&#160;<span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a> : <span class="keyword">public</span> vtkLookupTable</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_lookup_table.html">   31</a></span>&#160;<span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a> : <span class="keyword">public</span> <a class="code" href="classvtk_lookup_table.html">vtkLookupTable</a></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">static</span> <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a> *New();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>, vtkLookupTable);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">static</span> <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a> *<a class="code" href="classvtk_lookup_table.html#a1eea7c622851eac321b3b6bc4e7adb77">New</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>, <a class="code" href="classvtk_lookup_table.html">vtkLookupTable</a>);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrintSelf(ostream&amp; os, vtkIndent indent);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classvtk_lookup_table.html#a457e9ddfba867130538e1a3b32cc537f">PrintSelf</a>(ostream&amp; os, vtkIndent indent);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">void</span> BuildStandardPalette(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
@@ -134,12 +134,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif // vtkDICOMLookupTable_h</span></div>
+<div class="ttc" id="classvtk_lookup_table_html_a1eea7c622851eac321b3b6bc4e7adb77"><div class="ttname"><a href="classvtk_lookup_table.html#a1eea7c622851eac321b3b6bc4e7adb77">vtkLookupTable::New</a></div><div class="ttdeci">static vtkLookupTable * New()</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_meta_data_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></div><div class="ttdoc">A container class for DICOM metadata. </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaData.h:32</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_lookup_table_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a></div><div class="ttdoc">Lookup tables from DICOM data. </div><div class="ttdef"><b>Definition:</b> vtkDICOMLookupTable.h:31</div></div>
+<div class="ttc" id="classvtk_lookup_table_html"><div class="ttname"><a href="classvtk_lookup_table.html">vtkLookupTable</a></div><div class="ttdoc">map scalar values into colors via a lookup table </div><div class="ttdef"><b>Definition:</b> vtkLookupTable.h:44</div></div>
+<div class="ttc" id="classvtk_lookup_table_html_a457e9ddfba867130538e1a3b32cc537f"><div class="ttname"><a href="classvtk_lookup_table.html#a457e9ddfba867130538e1a3b32cc537f">vtkLookupTable::PrintSelf</a></div><div class="ttdeci">void PrintSelf(ostream &amp;os, vtkIndent indent)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 22 2015 13:58:06 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 22 2015 15:05:45 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

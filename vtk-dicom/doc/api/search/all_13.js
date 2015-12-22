@@ -18,5 +18,6 @@ var searchData=
   ['updatewholeextent',['UpdateWholeExtent',['../classvtk_algorithm.html#aab591f3a34e99d0f7d89b019c485e66c',1,'vtkAlgorithm']]],
   ['ur',['UR',['../classvtk_d_i_c_o_m_v_r.html#a40e983ebf7e6d989a33fbc28991c5b54a948b027e8313787ce75ad0d79ad151d0',1,'vtkDICOMVR']]],
   ['us',['US',['../classvtk_d_i_c_o_m_v_r.html#a40e983ebf7e6d989a33fbc28991c5b54aa84f57cb548cc046dace5ad57c7ebe69',1,'vtkDICOMVR']]],
+  ['usinglogscale',['UsingLogScale',['../classvtk_lookup_table.html#a72cf759accd067baee7fc905be7459b9',1,'vtkLookupTable::UsingLogScale()'],['../classvtk_scalars_to_colors.html#a5d69196de595f9e7d710b0c2fc9b4de4',1,'vtkScalarsToColors::UsingLogScale()']]],
   ['ut',['UT',['../classvtk_d_i_c_o_m_v_r.html#a40e983ebf7e6d989a33fbc28991c5b54af93d9b48fe17610d56a7cb8eae6f22f0',1,'vtkDICOMVR']]]
 ];

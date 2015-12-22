@@ -28,6 +28,7 @@ var searchData=
   ['convertdatetime',['ConvertDateTime',['../classvtk_d_i_c_o_m_utilities.html#a127e5cb8469ba6c9ebcbb46d6123d509',1,'vtkDICOMUtilities']]],
   ['converttotalinputtoportconnection',['ConvertTotalInputToPortConnection',['../classvtk_algorithm.html#ab16e630b688571869d1d3cf5672d0a13',1,'vtkAlgorithm']]],
   ['converttoutf8',['ConvertToUTF8',['../classvtk_d_i_c_o_m_character_set.html#a048b2be7f1c8cc757d0db38c53c895b9',1,'vtkDICOMCharacterSet']]],
+  ['convertunsignedchartorgba',['ConvertUnsignedCharToRGBA',['../classvtk_scalars_to_colors.html#a5a273622a4374fbaaabc990e29793413',1,'vtkScalarsToColors']]],
   ['copyattributes',['CopyAttributes',['../classvtk_d_i_c_o_m_meta_data.html#a2876e23617baf9f1cce36c6420fe896f',1,'vtkDICOMMetaData']]],
   ['copyinformation',['CopyInformation',['../classvtk_data_object.html#abc080c7f6df0c6e91111e22f86f3cce5',1,'vtkDataObject']]],
   ['copyinformationfrompipeline',['CopyInformationFromPipeline',['../classvtk_data_object.html#a704506723e143fd29ed4ecce817ef160',1,'vtkDataObject']]],

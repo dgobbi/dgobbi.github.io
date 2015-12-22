@@ -8,9 +8,11 @@ var searchData=
   ['addprivatedictionary',['AddPrivateDictionary',['../classvtk_d_i_c_o_m_dictionary.html#ac73b01d8101a675fa35f36a9bbc42cae',1,'vtkDICOMDictionary']]],
   ['addseriesfilenames',['AddSeriesFileNames',['../classvtk_d_i_c_o_m_directory.html#a527531feccb61cfd1b2b94f073008bb8',1,'vtkDICOMDirectory::AddSeriesFileNames()'],['../classvtk_d_i_c_o_m_file_sorter.html#a39b7cce0d129adbd4f14ed80add86009',1,'vtkDICOMFileSorter::AddSeriesFileNames()']]],
   ['addserieswithquery',['AddSeriesWithQuery',['../classvtk_d_i_c_o_m_directory.html#ad0b4ceeadac9be379116c54a1d1ba43e',1,'vtkDICOMDirectory']]],
+  ['allocate',['Allocate',['../classvtk_lookup_table.html#a60b7ec3cd36b94a67915cae2a6687bab',1,'vtkLookupTable']]],
   ['allocatechardata',['AllocateCharData',['../classvtk_d_i_c_o_m_value.html#a3b5ab85fb43febe0c4acced5adc45c06',1,'vtkDICOMValue']]],
   ['appendvaluetostring',['AppendValueToString',['../classvtk_d_i_c_o_m_value.html#a89a93f77023c1c24243b37d1eaf7522e',1,'vtkDICOMValue']]],
   ['appendvaluetoutf8string',['AppendValueToUTF8String',['../classvtk_d_i_c_o_m_value.html#a270aa4624f48b8af255d6f493f72dec5',1,'vtkDICOMValue']]],
+  ['applylogscale',['ApplyLogScale',['../classvtk_lookup_table.html#ad65b4b7693dc6e039abe1863641f81da',1,'vtkLookupTable']]],
   ['asstring',['AsString',['../classvtk_d_i_c_o_m_file_path.html#a2ba6cdd8d937b1902e39de9e2c8082fc',1,'vtkDICOMFilePath']]],
   ['asutf8string',['AsUTF8String',['../classvtk_d_i_c_o_m_value.html#aa3a11566c4a3264f80061094314cc35d',1,'vtkDICOMValue']]]
 ];

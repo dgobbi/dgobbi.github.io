@@ -7,5 +7,6 @@ var searchData=
   ['writeheader',['WriteHeader',['../classvtk_d_i_c_o_m_compiler.html#a70bd0f342f376a1ec5c0c1c70de1e6c6',1,'vtkDICOMCompiler']]],
   ['writemetadata',['WriteMetaData',['../classvtk_d_i_c_o_m_compiler.html#ad6e585d88fc23f4ec3efc397c386ec49',1,'vtkDICOMCompiler']]],
   ['writemetaheader',['WriteMetaHeader',['../classvtk_d_i_c_o_m_compiler.html#a4ca377846c9e0214d3f8d54a6391c91d',1,'vtkDICOMCompiler']]],
-  ['writepixeldata',['WritePixelData',['../classvtk_d_i_c_o_m_compiler.html#a4be9a45e6c8515606da89725f1f681d5',1,'vtkDICOMCompiler']]]
+  ['writepixeldata',['WritePixelData',['../classvtk_d_i_c_o_m_compiler.html#a4be9a45e6c8515606da89725f1f681d5',1,'vtkDICOMCompiler']]],
+  ['writepointer',['WritePointer',['../classvtk_lookup_table.html#a5d9f449a35f87d9d6fec19290b8b1a70',1,'vtkLookupTable']]]
 ];
