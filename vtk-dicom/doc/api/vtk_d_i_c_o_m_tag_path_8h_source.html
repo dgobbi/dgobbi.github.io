@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.6</span>
+   &#160;<span id="projectnumber">0.7.7</span>
    </div>
   </td>
  </tr>
@@ -137,18 +137,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_tag_path.html#a4b3bc6cf0baa34e029784899af0809d5">   62</a></span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html#a4b3bc6cf0baa34e029784899af0809d5">GetTail</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a>(this-&gt;Tail, this-&gt;Index2, this-&gt;Tail2); }</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> Head;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Index;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> Tail;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Index2;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> Tail2;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;VTKDICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; o, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a>&amp; a);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMTagPath_h */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMTagPath.h</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a>&amp; b) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a>&amp; b) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">bool</span> operator&lt;=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a>&amp; b) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">bool</span> operator&gt;=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a>&amp; b) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a>&amp; b) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">bool</span> operator&gt;(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a>&amp; b) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> Head;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Index;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> Tail;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Index2;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> Tail2;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;VTKDICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; o, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a>&amp; a);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMTagPath_h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMTagPath.h</span></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_tag_path_html_a983a24c0ae2addc98eed4940c372b24c"><div class="ttname"><a href="classvtk_d_i_c_o_m_tag_path.html#a983a24c0ae2addc98eed4940c372b24c">vtkDICOMTagPath::vtkDICOMTagPath</a></div><div class="ttdeci">vtkDICOMTagPath(vtkDICOMTag seqTag, unsigned int i, vtkDICOMTag tag)</div><div class="ttdoc">Construct a tag path from a sequence tag, item index, and item tag. </div><div class="ttdef"><b>Definition:</b> vtkDICOMTagPath.h:35</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_tag_path_html_a1aa8f0374593e71ecd45cab3bd08459e"><div class="ttname"><a href="classvtk_d_i_c_o_m_tag_path.html#a1aa8f0374593e71ecd45cab3bd08459e">vtkDICOMTagPath::GetIndex</a></div><div class="ttdeci">unsigned int GetIndex() const </div><div class="ttdoc">Get the index of the item within the sequence. </div><div class="ttdef"><b>Definition:</b> vtkDICOMTagPath.h:58</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_tag_path_html_a8963f887bf39bb1a55d80f073de4a89a"><div class="ttname"><a href="classvtk_d_i_c_o_m_tag_path.html#a8963f887bf39bb1a55d80f073de4a89a">vtkDICOMTagPath::vtkDICOMTagPath</a></div><div class="ttdeci">vtkDICOMTagPath(vtkDICOMTag seqTag, unsigned int i, vtkDICOMTag tag, unsigned int j, vtkDICOMTag tag2)</div><div class="ttdoc">Construct a tag path that goes two levels deep. </div><div class="ttdef"><b>Definition:</b> vtkDICOMTagPath.h:39</div></div>
@@ -160,7 +167,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 24 2016 10:31:49 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 20 2016 20:44:48 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
