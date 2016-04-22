@@ -41,6 +41,7 @@ options:
   -P              Do not follow symbolic links.
   -k tag=value    Provide an attribute to be queried and matched.
   -q &lt;query.txt&gt;  Provide a file to describe the find query.
+  -u &lt;uids.txt&gt;   Provide a file that contains a list of UIDs.
   -maxdepth n     Set the maximum directory depth.
   -name pattern   Set a pattern to match (with &quot;*&quot; or &quot;?&quot;).
   -image          Restrict the search to files with PixelData.
@@ -84,6 +85,7 @@ options:
   -P              Do not follow symbolic links.
   -k tag=value    Provide an attribute to be queried and matched.
   -q &lt;query.txt&gt;  Provide a file to describe the find query.
+  -u &lt;uids.txt&gt;   Provide a file that contains a list of UIDs.
   -o &lt;directory&gt;  Directory to place the files into.
   -maxdepth n     Set the maximum directory depth.
   -name pattern   Set a pattern to match (with &quot;*&quot; or &quot;?&quot;).
@@ -114,6 +116,12 @@ per line). Private tags should be preceded by the private dictionary
 name in square brackets.
 </p><p>The values used for &quot;-k key=value&quot; can use the wildcards *
 and ?, and can also use date ranges of the form &quot;19990103-19990105&quot;.
+</p><p>The values used for "-k key=value" can use the wildcards * and ?, and
+can also use date ranges of the form "19990103-19990105".
+</p><p>
+The "-u" option can be used to provide a list of UIDs.  Provide a file
+where the first line of the file is the key (e.g. SeriesInstanceUID) and
+the rest of the file is the UIDs to match, one UID per line.
 </p>
 <h3> <span id="dicomtocsv"> dicomtocsv </span></h3>
 <pre>
@@ -123,6 +131,7 @@ usage:
 options:
   -k tag=value     Provide a key to be queried and matched.
   -q &lt;query.txt&gt;   Provide a file to describe the find query.
+  -u &lt;uids.txt&gt;    Provide a file that contains a list of UIDs.
   -o &lt;data.csv&gt;    Provide a file for the query results.
   --first-nonzero  Search series for first nonzero value of each key.
   --directory-only Use directory scan only, do not re-scan files.
@@ -143,6 +152,13 @@ Attributes nested within sequences can be specified by giving a tag
 path e.g. "-k Tag1/Tag2/Tag3".  Either a forward slash or a backslash
 can be used to separate the components of the path.  Private tags
 should be preceded by the private dictionary name in square brackets.
+</p><p>
+If the same tag is given more than once with "-k" (or if the tag is
+listed multiple times in the query file, or appears in both the query
+file and as a "-k" option), then its first appearance will set the
+column number that it appears in.  Also, with regards to the search,
+the value specified in the final appearance of the tag as an option
+will be the value used for the search.
 </p>
 <pre>
 # This is my query file
@@ -222,7 +238,7 @@ type from unsigned 16-bit to signed 16-bit if necessary.
 can be constructed from DICOM attributes, by providing the attribute names
 within curly braces.  For example, consider the following:
 &quot;{PatientID}-{StudyDate}/{SeriesDescription}-{SeriesNumber}.nii&quot;
-or something similar to produce a hierarchichal directory structure.
+or something similar to produce a hierarchical directory structure.
 The attributes used in the path should be from the following list:</p>
 <pre>
   PatientID, PatientName, PatientBirthDate, PatientSex,
