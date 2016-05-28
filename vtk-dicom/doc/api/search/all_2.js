@@ -25,6 +25,7 @@ var searchData=
   ['computepixelvaluerange',['ComputePixelValueRange',['../classvtk_d_i_c_o_m_generator.html#ace9daeae46e213bb45a540b62457b2c8',1,'vtkDICOMGenerator']]],
   ['computepositionandorientation',['ComputePositionAndOrientation',['../classvtk_d_i_c_o_m_generator.html#adbab3ef11cf0dc4ff0a94e23061f3e16',1,'vtkDICOMGenerator']]],
   ['computepriority',['ComputePriority',['../classvtk_algorithm.html#a0082c05f864570911f92a82236ae4b08',1,'vtkAlgorithm']]],
+  ['constructionhelper',['ConstructionHelper',['../classvtk_d_i_c_o_m_meta_data_adapter.html#a58d57d41d4abd5f65b608b114680e744',1,'vtkDICOMMetaDataAdapter']]],
   ['convertdatetime',['ConvertDateTime',['../classvtk_d_i_c_o_m_utilities.html#a127e5cb8469ba6c9ebcbb46d6123d509',1,'vtkDICOMUtilities']]],
   ['converttotalinputtoportconnection',['ConvertTotalInputToPortConnection',['../classvtk_algorithm.html#ab16e630b688571869d1d3cf5672d0a13',1,'vtkAlgorithm']]],
   ['converttoutf8',['ConvertToUTF8',['../classvtk_d_i_c_o_m_character_set.html#a048b2be7f1c8cc757d0db38c53c895b9',1,'vtkDICOMCharacterSet']]],

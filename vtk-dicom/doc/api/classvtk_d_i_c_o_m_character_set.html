@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.7</span>
+   &#160;<span id="projectnumber">0.7.8</span>
    </div>
   </td>
  </tr>
@@ -149,7 +149,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3bc9e26f35fa2b2890ad71ceaeb6ad6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ae0be1e39df9c50da9019587c60ab7b9f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_character_set.html#ae0be1e39df9c50da9019587c60ab7b9f">GetCharacterSetString</a> () const </td></tr>
-<tr class="memdesc:ae0be1e39df9c50da9019587c60ab7b9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a SpecificCharacterSet value.  <a href="#ae0be1e39df9c50da9019587c60ab7b9f">More...</a><br /></td></tr>
+<tr class="memdesc:ae0be1e39df9c50da9019587c60ab7b9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate SpecificCharacterSet code values (diagnostic only).  <a href="#ae0be1e39df9c50da9019587c60ab7b9f">More...</a><br /></td></tr>
 <tr class="separator:ae0be1e39df9c50da9019587c60ab7b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7758ac72d406ce04bb28a2519e09f5d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7758ac72d406ce04bb28a2519e09f5d3"></a>
 unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">GetKey</a> () const </td></tr>
@@ -351,8 +351,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
       </table>
 </div><div class="memdoc">
 
-<p>Generate a SpecificCharacterSet value. </p>
-<p>The result is given as a set of backslash-separated values if more than one encoding is present. The first value may be empty to indicate that it is ASCII. Since this class uses an unsigned char for storage, the only secondary and tertiary values that can be represented are the three multi-byte ISO 2022 character sets. Therefore, if the condition "if ((GetKey() &amp; ISO_2022_OTHER) != 0)" is true, then the string returned by this method will be incomplete and only the first character set will be listed. </p>
+<p>Generate SpecificCharacterSet code values (diagnostic only). </p>
+<p>Attempt to generate SpecificCharacterSet code values. If ISO 2022 encoding is not used, then a single code value is returned. If ISO 2022 encoding is used with the single-byte character sets, then only the code value for first character set will be returned (due to limitations in the way this class stores the information). A simple way to check whether such incomplete information will be returned is to check if "((GetKey() &amp; ISO_2022) == ISO_2022)" is true. However, if ISO 2022 encoding is used with one or more multi-byte character sets, the result is a set of backslash-separated code values, where the first value will be empty if the initial coding is ASCII. </p>
 
 </div>
 </div>
@@ -417,7 +417,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 20 2016 20:44:49 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri May 27 2016 21:47:41 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

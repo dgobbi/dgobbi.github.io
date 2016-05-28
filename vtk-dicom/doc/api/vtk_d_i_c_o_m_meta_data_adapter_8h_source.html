@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.7</span>
+   &#160;<span id="projectnumber">0.7.8</span>
    </div>
   </td>
  </tr>
@@ -115,40 +115,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_meta_data_adapter.html">   32</a></span>&#160;<span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_meta_data_adapter.html">vtkDICOMMetaDataAdapter</a></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data_adapter.html">vtkDICOMMetaDataAdapter</a>(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  ~<a class="code" href="classvtk_d_i_c_o_m_meta_data_adapter.html">vtkDICOMMetaDataAdapter</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data_adapter.html">vtkDICOMMetaDataAdapter</a>(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_meta_data_adapter.html#a3b5101593e3713760e866f0f32e4eca0">   50</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_meta_data_adapter.html#a3b5101593e3713760e866f0f32e4eca0">GetNumberOfInstances</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;NumberOfInstances; }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">bool</span> HasAttribute(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;GetAttributeValue(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;GetAttributeValue(<span class="keywordtype">int</span> idx, <a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data_adapter.html">vtkDICOMMetaDataAdapter</a>(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta, <span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  ~<a class="code" href="classvtk_d_i_c_o_m_meta_data_adapter.html">vtkDICOMMetaDataAdapter</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_meta_data_adapter.html#a3b5101593e3713760e866f0f32e4eca0">   63</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_meta_data_adapter.html#a3b5101593e3713760e866f0f32e4eca0">GetNumberOfInstances</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;NumberOfInstances; }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">bool</span> HasAttribute(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> ResolvePrivateTag(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> ptag, <span class="keyword">const</span> std::string&amp; creator);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_meta_data_adapter.html">vtkDICOMMetaDataAdapter</a>* operator-&gt;()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data_adapter.html">vtkDICOMMetaDataAdapter</a>* operator-&gt;() { <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;GetAttributeValue(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;GetAttributeValue(<span class="keywordtype">int</span> idx, <a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *Meta;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *PerFrame;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *Shared;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *NullValue;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">int</span> NumberOfInstances;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMMetaDataAdapter_h */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMMetaDataAdapter.h</span></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_meta_data_adapter_html_a3b5101593e3713760e866f0f32e4eca0"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data_adapter.html#a3b5101593e3713760e866f0f32e4eca0">vtkDICOMMetaDataAdapter::GetNumberOfInstances</a></div><div class="ttdeci">int GetNumberOfInstances() const </div><div class="ttdoc">Get the number of instances (i.e. files). </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaDataAdapter.h:50</div></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> ResolvePrivateTag(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> ptag, <span class="keyword">const</span> std::string&amp; creator);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_meta_data_adapter.html">vtkDICOMMetaDataAdapter</a>* operator-&gt;()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data_adapter.html">vtkDICOMMetaDataAdapter</a>* operator-&gt;() { <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">void</span> ConstructionHelper(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta, <span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *Meta;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *PerFrame;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *Shared;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> *NullValue;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordtype">int</span> NumberOfInstances;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordtype">int</span> MetaInstance;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMMetaDataAdapter_h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMMetaDataAdapter.h</span></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_meta_data_adapter_html_a3b5101593e3713760e866f0f32e4eca0"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data_adapter.html#a3b5101593e3713760e866f0f32e4eca0">vtkDICOMMetaDataAdapter::GetNumberOfInstances</a></div><div class="ttdeci">int GetNumberOfInstances() const </div><div class="ttdoc">Get the number of instances (i.e. files). </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaDataAdapter.h:63</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_meta_data_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></div><div class="ttdoc">A container class for DICOM metadata. </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaData.h:32</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_meta_data_adapter_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data_adapter.html">vtkDICOMMetaDataAdapter</a></div><div class="ttdoc">An adapter to make multi-frame data look like multi-file data. </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaDataAdapter.h:32</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_tag_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a></div><div class="ttdoc">A (group,element) identifier tag for DICOM attributes. </div><div class="ttdef"><b>Definition:</b> vtkDICOMTag.h:22</div></div>
@@ -156,7 +164,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 20 2016 20:44:48 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri May 27 2016 21:47:40 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

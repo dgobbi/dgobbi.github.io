@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.7</span>
+   &#160;<span id="projectnumber">0.7.8</span>
    </div>
   </td>
  </tr>
@@ -152,52 +152,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    this-&gt;Key = KeyFromString(name, nl); }</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  std::string GetCharacterSetString() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">  101</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">GetKey</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;Key; }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  std::string GetCharacterSetString() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">  103</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">GetKey</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;Key; }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  std::string ConvertToUTF8(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  std::string ConvertToUTF8(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  std::string CaseFoldedUTF8(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  std::string CaseFoldedUTF8(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#a46215dba161c427fb5e95884e694a7ec">  133</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html#a46215dba161c427fb5e95884e694a7ec">IsBiDirectional</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">return</span> (this-&gt;Key == ISO_IR_127 || this-&gt;Key == ISO_IR_138); }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#a46215dba161c427fb5e95884e694a7ec">  135</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html#a46215dba161c427fb5e95884e694a7ec">IsBiDirectional</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">return</span> (this-&gt;Key == ISO_IR_127 || this-&gt;Key == ISO_IR_138); }</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> CountBackslashes(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> CountBackslashes(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordtype">size_t</span> NextBackslash(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keyword">const</span> <span class="keywordtype">char</span> *end) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordtype">bool</span> operator==(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> b)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key == b.Key); }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordtype">bool</span> operator!=(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> b)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key != b.Key); }</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordtype">bool</span> operator&lt;=(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt;= a.Key); }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordtype">bool</span> operator&gt;=(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt;= a.Key); }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordtype">bool</span> operator&lt;(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt; a.Key); }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordtype">bool</span> operator&gt;(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt; a.Key); }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> KeyFromString(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">size_t</span> nl);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> Key;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;};</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;VTKDICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; o, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>&amp; a);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">size_t</span> NextBackslash(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keyword">const</span> <span class="keywordtype">char</span> *end) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordtype">bool</span> operator==(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> b)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key == b.Key); }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordtype">bool</span> operator!=(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> b)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key != b.Key); }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordtype">bool</span> operator&lt;=(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt;= a.Key); }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordtype">bool</span> operator&gt;=(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt;= a.Key); }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordtype">bool</span> operator&lt;(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt; a.Key); }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keywordtype">bool</span> operator&gt;(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt; a.Key); }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> KeyFromString(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">size_t</span> nl);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> Key;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;};</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMCharacterSet_h */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMCharacterSet.h</span></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a7758ac72d406ce04bb28a2519e09f5d3"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">vtkDICOMCharacterSet::GetKey</a></div><div class="ttdeci">unsigned char GetKey() const </div><div class="ttdoc">Get the numerical code for this character set object. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:101</div></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;VTKDICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; o, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>&amp; a);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMCharacterSet_h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMCharacterSet.h</span></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a7758ac72d406ce04bb28a2519e09f5d3"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">vtkDICOMCharacterSet::GetKey</a></div><div class="ttdeci">unsigned char GetKey() const </div><div class="ttdoc">Get the numerical code for this character set object. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:103</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_character_set_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a></div><div class="ttdoc">Character sets. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:34</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a46215dba161c427fb5e95884e694a7ec"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a46215dba161c427fb5e95884e694a7ec">vtkDICOMCharacterSet::IsBiDirectional</a></div><div class="ttdeci">bool IsBiDirectional() const </div><div class="ttdoc">Check for bidirectional character sets. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:133</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a46215dba161c427fb5e95884e694a7ec"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a46215dba161c427fb5e95884e694a7ec">vtkDICOMCharacterSet::IsBiDirectional</a></div><div class="ttdeci">bool IsBiDirectional() const </div><div class="ttdoc">Check for bidirectional character sets. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:135</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a68c32c7b9d47ba8274577bccacb75f9a"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a68c32c7b9d47ba8274577bccacb75f9a">vtkDICOMCharacterSet::vtkDICOMCharacterSet</a></div><div class="ttdeci">vtkDICOMCharacterSet(const std::string &amp;name)</div><div class="ttdoc">Construct a character set object from a SpecificCharacterSet value. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:80</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a8164a351dae05a37e7f7277a30602e57"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a8164a351dae05a37e7f7277a30602e57">vtkDICOMCharacterSet::vtkDICOMCharacterSet</a></div><div class="ttdeci">vtkDICOMCharacterSet(int k)</div><div class="ttdoc">Construct a character set object from a given code. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:73</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 20 2016 20:44:48 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri May 27 2016 21:47:40 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
