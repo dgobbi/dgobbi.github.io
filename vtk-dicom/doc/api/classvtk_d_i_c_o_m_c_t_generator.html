@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.8</span>
+   &#160;<span id="projectnumber">0.7.9</span>
    </div>
   </td>
  </tr>
@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -216,6 +217,12 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetReverseSlic
 <tr class="memitem:a25640ea79e89ba101e44929e1d98fa98 inherit pub_methods_classvtk_d_i_c_o_m_generator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25640ea79e89ba101e44929e1d98fa98"></a>
 <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSourceMetaData</b> ()</td></tr>
 <tr class="separator:a25640ea79e89ba101e44929e1d98fa98 inherit pub_methods_classvtk_d_i_c_o_m_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a7892410912f9a44fd5b58d154cce64 inherit pub_methods_classvtk_d_i_c_o_m_generator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#a2a7892410912f9a44fd5b58d154cce64">SetUIDGenerator</a> (<a class="el" href="classvtk_d_i_c_o_m_u_i_d_generator.html">vtkDICOMUIDGenerator</a> *)</td></tr>
+<tr class="memdesc:a2a7892410912f9a44fd5b58d154cce64 inherit pub_methods_classvtk_d_i_c_o_m_generator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the UID generator, for generating unique IDs.  <a href="#a2a7892410912f9a44fd5b58d154cce64">More...</a><br /></td></tr>
+<tr class="separator:a2a7892410912f9a44fd5b58d154cce64 inherit pub_methods_classvtk_d_i_c_o_m_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50268902ecfc62d31cdede9ac9be4e27 inherit pub_methods_classvtk_d_i_c_o_m_generator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50268902ecfc62d31cdede9ac9be4e27"></a>
+<a class="el" href="classvtk_d_i_c_o_m_u_i_d_generator.html">vtkDICOMUIDGenerator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetUIDGenerator</b> ()</td></tr>
+<tr class="separator:a50268902ecfc62d31cdede9ac9be4e27 inherit pub_methods_classvtk_d_i_c_o_m_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02be8e09e6a84e4aec627cf0a53ee04b inherit pub_methods_classvtk_d_i_c_o_m_generator"><td class="memItemLeft" align="right" valign="top">vtkIntArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#a02be8e09e6a84e4aec627cf0a53ee04b">GetSliceIndexArray</a> ()</td></tr>
 <tr class="memdesc:a02be8e09e6a84e4aec627cf0a53ee04b inherit pub_methods_classvtk_d_i_c_o_m_generator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an array that maps file and frame to slice.  <a href="#a02be8e09e6a84e4aec627cf0a53ee04b">More...</a><br /></td></tr>
 <tr class="separator:a02be8e09e6a84e4aec627cf0a53ee04b inherit pub_methods_classvtk_d_i_c_o_m_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -389,6 +396,13 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#abec07087797f7aba1182852744465fcf">vtkDICOMGenerator</a> ()</td></tr>
 <tr class="memdesc:abec07087797f7aba1182852744465fcf inherit pro_methods_classvtk_d_i_c_o_m_generator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected constructor method. <br /></td></tr>
 <tr class="separator:abec07087797f7aba1182852744465fcf inherit pro_methods_classvtk_d_i_c_o_m_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f3dc1bc7dcbc581f59a86e7f6387a53 inherit pro_methods_classvtk_d_i_c_o_m_generator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f3dc1bc7dcbc581f59a86e7f6387a53"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#a2f3dc1bc7dcbc581f59a86e7f6387a53">GenerateUID</a> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag)</td></tr>
+<tr class="memdesc:a2f3dc1bc7dcbc581f59a86e7f6387a53 inherit pro_methods_classvtk_d_i_c_o_m_generator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a UID for the provided tag. <br /></td></tr>
+<tr class="separator:a2f3dc1bc7dcbc581f59a86e7f6387a53 inherit pro_methods_classvtk_d_i_c_o_m_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa848664b113cebb473955bd1ab96512 inherit pro_methods_classvtk_d_i_c_o_m_generator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#afa848664b113cebb473955bd1ab96512">GenerateUIDs</a> (<a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag, vtkStringArray *uids)</td></tr>
+<tr class="memdesc:afa848664b113cebb473955bd1ab96512 inherit pro_methods_classvtk_d_i_c_o_m_generator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a series of UIDs, sorted from low to high.  <a href="#afa848664b113cebb473955bd1ab96512">More...</a><br /></td></tr>
+<tr class="separator:afa848664b113cebb473955bd1ab96512 inherit pro_methods_classvtk_d_i_c_o_m_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1353be15d9e22353fbcfbd8e4457eb2 inherit pro_methods_classvtk_d_i_c_o_m_generator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1353be15d9e22353fbcfbd8e4457eb2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#ad1353be15d9e22353fbcfbd8e4457eb2">SetPixelRestrictions</a> (unsigned int pixelRepresentation, unsigned int bitsStored, int colorComponents)</td></tr>
 <tr class="memdesc:ad1353be15d9e22353fbcfbd8e4457eb2 inherit pro_methods_classvtk_d_i_c_o_m_generator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by subclasses to place restrictions on the pixel type. <br /></td></tr>
@@ -554,6 +568,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#a50120ac3d84bd94ec6f60d069aa23b17">SourceMetaData</a></td></tr>
 <tr class="memdesc:a50120ac3d84bd94ec6f60d069aa23b17 inherit pro_attribs_classvtk_d_i_c_o_m_generator"><td class="mdescLeft">&#160;</td><td class="mdescRight">The source meta data. <br /></td></tr>
 <tr class="separator:a50120ac3d84bd94ec6f60d069aa23b17 inherit pro_attribs_classvtk_d_i_c_o_m_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba64b9a8bf9efac2a12bd2296c4d619 inherit pro_attribs_classvtk_d_i_c_o_m_generator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ba64b9a8bf9efac2a12bd2296c4d619"></a>
+<a class="el" href="classvtk_d_i_c_o_m_u_i_d_generator.html">vtkDICOMUIDGenerator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#a0ba64b9a8bf9efac2a12bd2296c4d619">UIDGenerator</a></td></tr>
+<tr class="memdesc:a0ba64b9a8bf9efac2a12bd2296c4d619 inherit pro_attribs_classvtk_d_i_c_o_m_generator"><td class="mdescLeft">&#160;</td><td class="mdescRight">The UID generator. <br /></td></tr>
+<tr class="separator:a0ba64b9a8bf9efac2a12bd2296c4d619 inherit pro_attribs_classvtk_d_i_c_o_m_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a260c33807bead8e1f9d39309ccc06941 inherit pro_attribs_classvtk_d_i_c_o_m_generator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a260c33807bead8e1f9d39309ccc06941"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#a260c33807bead8e1f9d39309ccc06941">MultiFrame</a></td></tr>
 <tr class="memdesc:a260c33807bead8e1f9d39309ccc06941 inherit pro_attribs_classvtk_d_i_c_o_m_generator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to prefer multi-frame files over single-frame. <br /></td></tr>
@@ -718,7 +736,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 27 2016 21:47:41 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 12 2016 21:55:03 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

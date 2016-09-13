@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.8</span>
+   &#160;<span id="projectnumber">0.7.9</span>
    </div>
   </td>
  </tr>
@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -103,8 +104,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">     PURPOSE.  See the above copyright notice for more information.</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">=========================================================================*/</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifndef __vtkThreadedImageAlgorithm_h</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define __vtkThreadedImageAlgorithm_h</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifndef vtkThreadedImageAlgorithm_h</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define vtkThreadedImageAlgorithm_h</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;vtkImageAlgorithm.h&quot;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
@@ -118,25 +119,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_image_algorithm.html#a24f67bbfad1ac731eb64f5172cf30af3">PrintSelf</a>(ostream&amp; os, vtkIndent indent);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> ThreadedRequestData(vtkInformation *request, </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                   vtkInformationVector **inputVector, </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> ThreadedRequestData(vtkInformation *request,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                   vtkInformationVector **inputVector,</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                   vtkInformationVector *outputVector,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                   vtkImageData ***inData, </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                   vtkImageData ***inData,</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                   vtkImageData **outData,</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                   <span class="keywordtype">int</span> extent[6], <span class="keywordtype">int</span> threadId);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="comment">// also support the old signature</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> ThreadedExecute(vtkImageData *inData, </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> ThreadedExecute(vtkImageData *inData,</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                               vtkImageData *outData,</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                               <span class="keywordtype">int</span> extent[6], <span class="keywordtype">int</span> threadId);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  vtkSetClampMacro( NumberOfThreads, <span class="keywordtype">int</span>, 1, VTK_MAX_THREADS );</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  vtkGetMacro( NumberOfThreads, <span class="keywordtype">int</span> );</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> SplitExtent(<span class="keywordtype">int</span> splitExt[6], <span class="keywordtype">int</span> startExt[6], </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                          <span class="keywordtype">int</span> num, <span class="keywordtype">int</span> total); </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> SplitExtent(<span class="keywordtype">int</span> splitExt[6], <span class="keywordtype">int</span> startExt[6],</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                          <span class="keywordtype">int</span> num, <span class="keywordtype">int</span> total);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="classvtk_threaded_image_algorithm.html">vtkThreadedImageAlgorithm</a>();</div>
@@ -144,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  vtkMultiThreader *Threader;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">int</span> NumberOfThreads;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_image_algorithm.html#addc9f91ebe9386c31617c3e12166e10e">RequestData</a>(vtkInformation* request,</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                          vtkInformationVector** inputVector,</div>
@@ -156,13 +157,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
 <div class="ttc" id="classvtk_image_algorithm_html_a24f67bbfad1ac731eb64f5172cf30af3"><div class="ttname"><a href="classvtk_image_algorithm.html#a24f67bbfad1ac731eb64f5172cf30af3">vtkImageAlgorithm::PrintSelf</a></div><div class="ttdeci">void PrintSelf(ostream &amp;os, vtkIndent indent)</div></div>
 <div class="ttc" id="classvtk_threaded_image_algorithm_html"><div class="ttname"><a href="classvtk_threaded_image_algorithm.html">vtkThreadedImageAlgorithm</a></div><div class="ttdoc">Generic filter that has one input.. </div><div class="ttdef"><b>Definition:</b> vtkThreadedImageAlgorithm.h:35</div></div>
 <div class="ttc" id="classvtk_image_algorithm_html"><div class="ttname"><a href="classvtk_image_algorithm.html">vtkImageAlgorithm</a></div><div class="ttdoc">Generic algorithm superclass for image algs. </div><div class="ttdef"><b>Definition:</b> vtkImageAlgorithm.h:35</div></div>
@@ -170,7 +164,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 27 2016 21:47:40 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 12 2016 21:55:03 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

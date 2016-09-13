@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.8</span>
+   &#160;<span id="projectnumber">0.7.9</span>
    </div>
   </td>
  </tr>
@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -103,8 +104,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">     PURPOSE.  See the above copyright notice for more information.</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">=========================================================================*/</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifndef __vtkImageAlgorithm_h</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define __vtkImageAlgorithm_h</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifndef vtkImageAlgorithm_h</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define vtkImageAlgorithm_h</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;vtkAlgorithm.h&quot;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
@@ -158,43 +159,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> CopyInputArrayAttributesToOutput(vtkInformation* request,</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                                vtkInformationVector** inputVector,</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                                vtkInformationVector* outputVector);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> RequestData(vtkInformation *request,</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                          vtkInformationVector** inputVector,</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                          vtkInformationVector* outputVector);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> ExecuteData(<a class="code" href="classvtk_data_object.html">vtkDataObject</a> *output);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Execute();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="comment">// just allocate the output data</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> AllocateOutputData(vtkImageData *out, </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                  <span class="keywordtype">int</span> *uExtent);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keyword">virtual</span> vtkImageData *AllocateOutputData(<a class="code" href="classvtk_data_object.html">vtkDataObject</a> *out);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="comment">// copy the other point and cell data</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> CopyAttributeData(vtkImageData *in, vtkImageData *out,</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                                 vtkInformationVector** inputVector);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="comment">// see algorithm for more info</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_algorithm.html#a278ce83f371e6a398cf46f4600108d3e">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation* info);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_algorithm.html#aaad069877868b9c2e8035a946a5d0538">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation* info);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <a class="code" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a>(<span class="keyword">const</span> <a class="code" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a>&amp;);  <span class="comment">// Not implemented.</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a>&amp;);  <span class="comment">// Not implemented.</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;};</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> RequestData(vtkInformation *request,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                          vtkInformationVector** inputVector,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                          vtkInformationVector* outputVector);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> ExecuteData(<a class="code" href="classvtk_data_object.html">vtkDataObject</a> *output);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Execute();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="comment">// just allocate the output data</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> AllocateOutputData(vtkImageData *out,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                                  <span class="keywordtype">int</span> *uExtent);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keyword">virtual</span> vtkImageData *AllocateOutputData(<a class="code" href="classvtk_data_object.html">vtkDataObject</a> *out);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="comment">// copy the other point and cell data</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> CopyAttributeData(vtkImageData *in, vtkImageData *out,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                                 vtkInformationVector** inputVector);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="comment">// see algorithm for more info</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_algorithm.html#a278ce83f371e6a398cf46f4600108d3e">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation* info);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_algorithm.html#aaad069877868b9c2e8035a946a5d0538">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation* info);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <a class="code" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a>(<span class="keyword">const</span> <a class="code" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a>&amp;);  <span class="comment">// Not implemented.</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a>&amp;);  <span class="comment">// Not implemented.</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;};</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classvtk_algorithm_html"><div class="ttname"><a href="classvtk_algorithm.html">vtkAlgorithm</a></div><div class="ttdoc">Superclass for all sources, filters, and sinks in VTK. </div><div class="ttdef"><b>Definition:</b> vtkAlgorithm.h:50</div></div>
 <div class="ttc" id="classvtk_image_algorithm_html"><div class="ttname"><a href="classvtk_image_algorithm.html">vtkImageAlgorithm</a></div><div class="ttdoc">Generic algorithm superclass for image algs. </div><div class="ttdef"><b>Definition:</b> vtkImageAlgorithm.h:35</div></div>
 <div class="ttc" id="classvtk_algorithm_html_a99651784a97d309c0cc90072dca29542"><div class="ttname"><a href="classvtk_algorithm.html#a99651784a97d309c0cc90072dca29542">vtkAlgorithm::ProcessRequest</a></div><div class="ttdeci">virtual int ProcessRequest(vtkInformation *request, vtkInformationVector **inInfo, vtkInformationVector *outInfo)</div></div>
@@ -205,7 +198,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 27 2016 21:47:40 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 12 2016 21:55:03 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

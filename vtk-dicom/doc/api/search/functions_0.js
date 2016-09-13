@@ -3,6 +3,7 @@ var searchData=
   ['access',['Access',['../classvtk_d_i_c_o_m_file.html#a83fe652b89e57a2ce7fc72ce9a0e2c01',1,'vtkDICOMFile']]],
   ['addinput',['AddInput',['../classvtk_image_algorithm.html#a52460aa045057a4e6be265468936bb2d',1,'vtkImageAlgorithm']]],
   ['addinputconnection',['AddInputConnection',['../classvtk_algorithm.html#afea437e12d98e7745874708990d1dee0',1,'vtkAlgorithm']]],
+  ['addinputfilenames',['AddInputFileNames',['../classvtk_d_i_c_o_m_directory.html#a2ebbf833cb5a5172584abdfb88218229',1,'vtkDICOMDirectory']]],
   ['additem',['AddItem',['../classvtk_d_i_c_o_m_sequence.html#af50a356a03c138dba9dc865848f11099',1,'vtkDICOMSequence']]],
   ['addobserver',['AddObserver',['../classvtk_object.html#aa9f4bcd0e0052a2ea4347f62ed0a5156',1,'vtkObject::AddObserver(unsigned long event, vtkCommand *, float priority=0.0f)'],['../classvtk_object.html#aec704289c64588ced0080580a28b8456',1,'vtkObject::AddObserver(unsigned long event, U observer, void(T::*callback)(), float priority=0.0f)'],['../classvtk_object.html#a1db1923a39a8bb7c816bb14c2c675828',1,'vtkObject::AddObserver(unsigned long event, U observer, bool(T::*callback)(vtkObject *, unsigned long, void *), float priority=0.0f)']]],
   ['addprivatedictionary',['AddPrivateDictionary',['../classvtk_d_i_c_o_m_dictionary.html#ac73b01d8101a675fa35f36a9bbc42cae',1,'vtkDICOMDictionary']]],

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.8</span>
+   &#160;<span id="projectnumber">0.7.9</span>
    </div>
   </td>
  </tr>
@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -93,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  Program: DICOM for VTK</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  Copyright (c) 2012-2015 David Gobbi</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  Copyright (c) 2012-2016 David Gobbi</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  All rights reserved.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  See Copyright.txt or http://dgobbi.github.io/bsd3.txt for details.</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span></div>
@@ -121,49 +122,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>, <a class="code" href="classvtk_threaded_image_algorithm.html">vtkThreadedImageAlgorithm</a>);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">static</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a> *New();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classvtk_threaded_image_algorithm.html#a53dc14a03ab6cffae0ca5cadb2c6d172">PrintSelf</a>(ostream&amp; os, vtkIndent indent);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">static</span> vtkInformationDataObjectKey *META_DATA();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">static</span> vtkInformationDoubleVectorKey *PATIENT_MATRIX();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classvtk_threaded_image_algorithm.html#a53dc14a03ab6cffae0ca5cadb2c6d172">PrintSelf</a>(ostream&amp; os, vtkIndent indent);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">static</span> vtkInformationDataObjectKey *META_DATA();</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  ~<a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">static</span> vtkInformationDoubleVectorKey *PATIENT_MATRIX();</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  vtkInformation *GetMetaDataInformation(</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    vtkInformationVector** inputVector, <span class="keywordtype">int</span> inputPort, <span class="keywordtype">int</span> inputConnection);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  ~<a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  vtkInformation *GetMetaDataInformation(</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    vtkInformationVector** inputVector, <span class="keywordtype">int</span> inputPort, <span class="keywordtype">int</span> inputConnection);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> CopyMetaDataToOutputInformation(</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    vtkInformationVector** inputVector, <span class="keywordtype">int</span> inputPort, <span class="keywordtype">int</span> inputConnection,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    vtkInformationVector* outputVector, <span class="keywordtype">int</span> outputPort);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> CopyMetaDataToOutputInformation(</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    vtkInformationVector** inputVector, <span class="keywordtype">int</span> inputPort, <span class="keywordtype">int</span> inputConnection,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    vtkInformationVector* outputVector, <span class="keywordtype">int</span> outputPort);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> CopyMetaDataToOutputData(</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    vtkInformation *outInfo, <a class="code" href="classvtk_data_object.html">vtkDataObject</a> *outData);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> RequestInformation(</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    vtkInformationVector* outputVector);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_threaded_image_algorithm.html#acb47f24e52706df6a7d2ded8266d2b23">RequestData</a>(</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    vtkInformationVector* outputVector);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classvtk_threaded_image_algorithm.html#adda52b8ad4b703ee11c76b916accbb42">ThreadedRequestData</a>(</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    vtkInformation *request, vtkInformationVector **inputVector,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    vtkInformationVector *outputVector, vtkImageData ***inData,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    vtkImageData **outData, <span class="keywordtype">int</span> ext[6], <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>&amp;);  <span class="comment">// Not implemented.</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>&amp;);  <span class="comment">// Not implemented.</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif // vtkDICOMAlgorithm_h</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> CopyMetaDataToOutputData(</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    vtkInformation *outInfo, <a class="code" href="classvtk_data_object.html">vtkDataObject</a> *outData);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> RequestInformation(</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    vtkInformationVector* outputVector);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_threaded_image_algorithm.html#acb47f24e52706df6a7d2ded8266d2b23">RequestData</a>(</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    vtkInformationVector* outputVector);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classvtk_threaded_image_algorithm.html#adda52b8ad4b703ee11c76b916accbb42">ThreadedRequestData</a>(</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    vtkInformation *request, vtkInformationVector **inputVector,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    vtkInformationVector *outputVector, vtkImageData ***inData,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    vtkImageData **outData, <span class="keywordtype">int</span> ext[6], <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>&amp;);  <span class="comment">// Not implemented.</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>&amp;);  <span class="comment">// Not implemented.</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif // vtkDICOMAlgorithm_h</span></div>
 <div class="ttc" id="classvtk_threaded_image_algorithm_html"><div class="ttname"><a href="classvtk_threaded_image_algorithm.html">vtkThreadedImageAlgorithm</a></div><div class="ttdoc">Generic filter that has one input.. </div><div class="ttdef"><b>Definition:</b> vtkThreadedImageAlgorithm.h:35</div></div>
 <div class="ttc" id="classvtk_threaded_image_algorithm_html_a53dc14a03ab6cffae0ca5cadb2c6d172"><div class="ttname"><a href="classvtk_threaded_image_algorithm.html#a53dc14a03ab6cffae0ca5cadb2c6d172">vtkThreadedImageAlgorithm::PrintSelf</a></div><div class="ttdeci">void PrintSelf(ostream &amp;os, vtkIndent indent)</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_meta_data_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></div><div class="ttdoc">A container class for DICOM metadata. </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaData.h:32</div></div>
@@ -171,11 +171,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classvtk_threaded_image_algorithm_html_acb47f24e52706df6a7d2ded8266d2b23"><div class="ttname"><a href="classvtk_threaded_image_algorithm.html#acb47f24e52706df6a7d2ded8266d2b23">vtkThreadedImageAlgorithm::RequestData</a></div><div class="ttdeci">virtual int RequestData(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</div></div>
 <div class="ttc" id="classvtk_data_object_html"><div class="ttname"><a href="classvtk_data_object.html">vtkDataObject</a></div><div class="ttdoc">general representation of visualization data </div><div class="ttdef"><b>Definition:</b> vtkDataObject.h:64</div></div>
 <div class="ttc" id="classvtk_lookup_table_html"><div class="ttname"><a href="classvtk_lookup_table.html">vtkLookupTable</a></div><div class="ttdoc">map scalar values into colors via a lookup table </div><div class="ttdef"><b>Definition:</b> vtkLookupTable.h:44</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_algorithm_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a></div><div class="ttdoc">Base class for DICOM image filters. </div><div class="ttdef"><b>Definition:</b> vtkDICOMAlgorithm.h:36</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_algorithm_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a></div><div class="ttdoc">Superclass for DICOM image filters. </div><div class="ttdef"><b>Definition:</b> vtkDICOMAlgorithm.h:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 27 2016 21:47:40 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 12 2016 21:55:02 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

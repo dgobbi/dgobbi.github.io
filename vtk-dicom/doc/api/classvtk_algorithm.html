@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.8</span>
+   &#160;<span id="projectnumber">0.7.9</span>
    </div>
   </td>
  </tr>
@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -121,9 +122,9 @@ Inheritance diagram for vtkAlgorithm:</div>
 <area href="classvtk_scanco_c_t_reader.html" title="Read SCANCO ISQ and AIM medical image files. " alt="vtkScancoCTReader" shape="rect" coords="356,280,524,304"/>
 <area href="classvtk_d_i_c_o_m_writer.html" title="Write DICOM image files. " alt="vtkDICOMWriter" shape="rect" coords="534,280,702,304"/>
 <area href="classvtk_n_i_f_t_i_writer.html" title="Write NIfTI-1 and NIfTI-2 medical image files. " alt="vtkNIFTIWriter" shape="rect" coords="712,280,880,304"/>
-<area href="classvtk_d_i_c_o_m_algorithm.html" title="Base class for DICOM image filters. " alt="vtkDICOMAlgorithm" shape="rect" coords="890,280,1058,304"/>
+<area href="classvtk_d_i_c_o_m_algorithm.html" title="Superclass for DICOM image filters. " alt="vtkDICOMAlgorithm" shape="rect" coords="890,280,1058,304"/>
 <area href="classvtk_d_i_c_o_m_to_r_a_s.html" title="Convert DICOM orientation to RAS orientation. " alt="vtkDICOMToRAS" shape="rect" coords="1068,280,1236,304"/>
-<area href="classvtk_d_i_c_o_m_apply_palette.html" title="Apply palette to PALETTE_COLOR images. " alt="vtkDICOMApplyPalette" shape="rect" coords="712,336,880,360"/>
+<area href="classvtk_d_i_c_o_m_apply_palette.html" title="Apply palette to PALETTE COLOR images. " alt="vtkDICOMApplyPalette" shape="rect" coords="712,336,880,360"/>
 <area href="classvtk_d_i_c_o_m_apply_rescale.html" title="Convert pixels to real-world values. " alt="vtkDICOMApplyRescale" shape="rect" coords="890,336,1058,360"/>
 <area href="classvtk_d_i_c_o_m_c_t_rectifier.html" title="Prepare a CT for 3D processing. " alt="vtkDICOMCTRectifier" shape="rect" coords="1068,336,1236,360"/>
 </map>
@@ -148,63 +149,36 @@ virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetCl
 <tr class="separator:a709d7c6da79624190848445a8e27add3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d96908767dcf284576ebdee795ee23a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a0d96908767dcf284576ebdee795ee23a">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
 <tr class="separator:a0d96908767dcf284576ebdee795ee23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ae23c4e7904215d278035c9b9f27479f5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ae23c4e7904215d278035c9b9f27479f5">HasExecutive</a> ()</td></tr>
 <tr class="separator:ae23c4e7904215d278035c9b9f27479f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b2c4340fdcbd6c2d28b245c759e61a3"><td class="memItemLeft" align="right" valign="top">vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a8b2c4340fdcbd6c2d28b245c759e61a3">GetExecutive</a> ()</td></tr>
 <tr class="separator:a8b2c4340fdcbd6c2d28b245c759e61a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2089b787731c4f03aba50a2a734f656"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ab2089b787731c4f03aba50a2a734f656">SetExecutive</a> (vtkExecutive *executive)</td></tr>
 <tr class="separator:ab2089b787731c4f03aba50a2a734f656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a99651784a97d309c0cc90072dca29542"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a99651784a97d309c0cc90072dca29542">ProcessRequest</a> (vtkInformation *request, vtkInformationVector **inInfo, vtkInformationVector *outInfo)</td></tr>
+<tr class="separator:a99651784a97d309c0cc90072dca29542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03dbe47dd59c5052803c011c30b26ac"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#af03dbe47dd59c5052803c011c30b26ac">ComputePipelineMTime</a> (vtkInformation *request, vtkInformationVector **inInfoVec, vtkInformationVector *outInfoVec, int requestFromOutputPort, unsigned long *mtime)</td></tr>
+<tr class="separator:af03dbe47dd59c5052803c011c30b26ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46fd9e0fd66e763aab2be5ded6e38de6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a46fd9e0fd66e763aab2be5ded6e38de6">ModifyRequest</a> (vtkInformation *request, int when)</td></tr>
 <tr class="separator:a46fd9e0fd66e763aab2be5ded6e38de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ac2b9a560188f0ac46ce5a0b8afa8c11e"><td class="memItemLeft" align="right" valign="top">vtkInformation *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ac2b9a560188f0ac46ce5a0b8afa8c11e">GetInputPortInformation</a> (int port)</td></tr>
 <tr class="separator:ac2b9a560188f0ac46ce5a0b8afa8c11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a342e87719da784ccd7da759952c5d194"><td class="memItemLeft" align="right" valign="top">vtkInformation *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a342e87719da784ccd7da759952c5d194">GetOutputPortInformation</a> (int port)</td></tr>
 <tr class="separator:a342e87719da784ccd7da759952c5d194"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a498b9d2d20ed53b0f26627103f8ad6ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a498b9d2d20ed53b0f26627103f8ad6ba">GetNumberOfInputPorts</a> ()</td></tr>
-<tr class="separator:a498b9d2d20ed53b0f26627103f8ad6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a465ef0b066c4f54d5e994c0d7b6b3fbc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a465ef0b066c4f54d5e994c0d7b6b3fbc">GetNumberOfOutputPorts</a> ()</td></tr>
-<tr class="separator:a465ef0b066c4f54d5e994c0d7b6b3fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01d3abfac738c7ccf01548ae6833d8d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a01d3abfac738c7ccf01548ae6833d8d3">UpdateProgress</a> (double amount)</td></tr>
-<tr class="separator:a01d3abfac738c7ccf01548ae6833d8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0cc0648b1360510fe3ff33270bfef2c"><td class="memItemLeft" align="right" valign="top">vtkInformation *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ad0cc0648b1360510fe3ff33270bfef2c">GetInputArrayInformation</a> (int idx)</td></tr>
-<tr class="separator:ad0cc0648b1360510fe3ff33270bfef2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afeafda097c201b04a74d9bf2edfaadb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#afeafda097c201b04a74d9bf2edfaadb3">RemoveAllInputs</a> ()</td></tr>
-<tr class="separator:afeafda097c201b04a74d9bf2edfaadb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cb9f809072a01646f39a168db7a5b5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_data_object.html">vtkDataObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a4cb9f809072a01646f39a168db7a5b5e">GetOutputDataObject</a> (int port)</td></tr>
-<tr class="separator:a4cb9f809072a01646f39a168db7a5b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d3aa5ee8ea54ee3c26beba2eb45e158"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a0d3aa5ee8ea54ee3c26beba2eb45e158">RemoveInputConnection</a> (int port, vtkAlgorithmOutput *input)</td></tr>
-<tr class="separator:a0d3aa5ee8ea54ee3c26beba2eb45e158"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab48ec0abd024002fb2b61aa8d7c231ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ab48ec0abd024002fb2b61aa8d7c231ba">GetNumberOfInputConnections</a> (int port)</td></tr>
-<tr class="separator:ab48ec0abd024002fb2b61aa8d7c231ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaccc64bf1e8d7392f7fb66b7744954b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#aaccc64bf1e8d7392f7fb66b7744954b2">GetTotalNumberOfInputConnections</a> ()</td></tr>
-<tr class="separator:aaccc64bf1e8d7392f7fb66b7744954b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32cd1b58fcd2dc4d021fc4050a2c1a62"><td class="memItemLeft" align="right" valign="top">vtkAlgorithmOutput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a32cd1b58fcd2dc4d021fc4050a2c1a62">GetInputConnection</a> (int port, int index)</td></tr>
-<tr class="separator:a32cd1b58fcd2dc4d021fc4050a2c1a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa4eff301069b8b47703cd4939aeffa7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#afa4eff301069b8b47703cd4939aeffa7">Update</a> ()</td></tr>
-<tr class="separator:afa4eff301069b8b47703cd4939aeffa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae634c0e86b774bfcfa3ac2794e98e3d3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ae634c0e86b774bfcfa3ac2794e98e3d3">UpdateInformation</a> ()</td></tr>
-<tr class="separator:ae634c0e86b774bfcfa3ac2794e98e3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab591f3a34e99d0f7d89b019c485e66c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#aab591f3a34e99d0f7d89b019c485e66c">UpdateWholeExtent</a> ()</td></tr>
-<tr class="separator:aab591f3a34e99d0f7d89b019c485e66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab16e630b688571869d1d3cf5672d0a13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ab16e630b688571869d1d3cf5672d0a13">ConvertTotalInputToPortConnection</a> (int ind, int &amp;port, int &amp;conn)</td></tr>
-<tr class="separator:ab16e630b688571869d1d3cf5672d0a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0082c05f864570911f92a82236ae4b08"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a0082c05f864570911f92a82236ae4b08">ComputePriority</a> ()</td></tr>
-<tr class="separator:a0082c05f864570911f92a82236ae4b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a99651784a97d309c0cc90072dca29542"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a99651784a97d309c0cc90072dca29542">ProcessRequest</a> (vtkInformation *request, vtkInformationVector **inInfo, vtkInformationVector *outInfo)</td></tr>
-<tr class="separator:a99651784a97d309c0cc90072dca29542"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:adc01b61fdafe4877e6940819aa27650e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#adc01b61fdafe4877e6940819aa27650e">ProcessRequest</a> (vtkInformation *request, vtkCollection *inInfo, vtkInformationVector *outInfo)</td></tr>
-<tr class="separator:adc01b61fdafe4877e6940819aa27650e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:af03dbe47dd59c5052803c011c30b26ac"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#af03dbe47dd59c5052803c011c30b26ac">ComputePipelineMTime</a> (vtkInformation *request, vtkInformationVector **inInfoVec, vtkInformationVector *outInfoVec, int requestFromOutputPort, unsigned long *mtime)</td></tr>
-<tr class="separator:af03dbe47dd59c5052803c011c30b26ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a8cce6ffadddcae243e653e32627853b4"><td class="memItemLeft" align="right" valign="top">virtual vtkInformation *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a8cce6ffadddcae243e653e32627853b4">GetInformation</a> ()</td></tr>
 <tr class="separator:a8cce6ffadddcae243e653e32627853b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af95b034845055d465db468101b985696"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af95b034845055d465db468101b985696"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetInformation</b> (vtkInformation *)</td></tr>
 <tr class="separator:af95b034845055d465db468101b985696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a498b9d2d20ed53b0f26627103f8ad6ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a498b9d2d20ed53b0f26627103f8ad6ba">GetNumberOfInputPorts</a> ()</td></tr>
+<tr class="separator:a498b9d2d20ed53b0f26627103f8ad6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a465ef0b066c4f54d5e994c0d7b6b3fbc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a465ef0b066c4f54d5e994c0d7b6b3fbc">GetNumberOfOutputPorts</a> ()</td></tr>
+<tr class="separator:a465ef0b066c4f54d5e994c0d7b6b3fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:afcae2f95370dd41d3afcda4f5c993ab6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#afcae2f95370dd41d3afcda4f5c993ab6">Register</a> (<a class="el" href="classvtk_object_base.html">vtkObjectBase</a> *o)</td></tr>
 <tr class="separator:afcae2f95370dd41d3afcda4f5c993ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -228,6 +202,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>AbortExecuteO
 <tr class="memitem:ac52beefa5da632479cc2c7c663adc3b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac52beefa5da632479cc2c7c663adc3b5"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>GetProgress</b> ()</td></tr>
 <tr class="separator:ac52beefa5da632479cc2c7c663adc3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d3abfac738c7ccf01548ae6833d8d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a01d3abfac738c7ccf01548ae6833d8d3">UpdateProgress</a> (double amount)</td></tr>
+<tr class="separator:a01d3abfac738c7ccf01548ae6833d8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ab8320d0e72262c08d5191563033dcc13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ab8320d0e72262c08d5191563033dcc13">SetProgressText</a> (const char *ptext)</td></tr>
 <tr class="separator:ab8320d0e72262c08d5191563033dcc13"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,6 +226,13 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetInputArray
 <tr class="memitem:a42a55ca2c277aecc909ad592d12978aa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a42a55ca2c277aecc909ad592d12978aa">SetInputArrayToProcess</a> (int idx, int port, int connection, const char *fieldAssociation, const char *attributeTypeorName)</td></tr>
 <tr class="separator:a42a55ca2c277aecc909ad592d12978aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ad0cc0648b1360510fe3ff33270bfef2c"><td class="memItemLeft" align="right" valign="top">vtkInformation *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ad0cc0648b1360510fe3ff33270bfef2c">GetInputArrayInformation</a> (int idx)</td></tr>
+<tr class="separator:ad0cc0648b1360510fe3ff33270bfef2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeafda097c201b04a74d9bf2edfaadb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#afeafda097c201b04a74d9bf2edfaadb3">RemoveAllInputs</a> ()</td></tr>
+<tr class="separator:afeafda097c201b04a74d9bf2edfaadb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a4cb9f809072a01646f39a168db7a5b5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_data_object.html">vtkDataObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a4cb9f809072a01646f39a168db7a5b5e">GetOutputDataObject</a> (int port)</td></tr>
+<tr class="separator:a4cb9f809072a01646f39a168db7a5b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a010eebbcaf538cdab81f5f8e1c65bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_data_object.html">vtkDataObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a0a010eebbcaf538cdab81f5f8e1c65bc">GetInputDataObject</a> (int port, int connection)</td></tr>
 <tr class="separator:a0a010eebbcaf538cdab81f5f8e1c65bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
@@ -264,12 +247,30 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetInputConne
 <tr class="memitem:a30aac19509f98af140dacdc577c7ef61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30aac19509f98af140dacdc577c7ef61"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>AddInputConnection</b> (vtkAlgorithmOutput *input)</td></tr>
 <tr class="separator:a30aac19509f98af140dacdc577c7ef61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a0d3aa5ee8ea54ee3c26beba2eb45e158"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a0d3aa5ee8ea54ee3c26beba2eb45e158">RemoveInputConnection</a> (int port, vtkAlgorithmOutput *input)</td></tr>
+<tr class="separator:a0d3aa5ee8ea54ee3c26beba2eb45e158"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2e0966d617f3427db432006b7c2b273"><td class="memItemLeft" align="right" valign="top">vtkAlgorithmOutput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ae2e0966d617f3427db432006b7c2b273">GetOutputPort</a> (int index)</td></tr>
 <tr class="separator:ae2e0966d617f3427db432006b7c2b273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfa9d3f45a8d2d7ad861c23aa47be8eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfa9d3f45a8d2d7ad861c23aa47be8eb"></a>
 vtkAlgorithmOutput *&#160;</td><td class="memItemRight" valign="bottom"><b>GetOutputPort</b> ()</td></tr>
 <tr class="separator:abfa9d3f45a8d2d7ad861c23aa47be8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ab48ec0abd024002fb2b61aa8d7c231ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ab48ec0abd024002fb2b61aa8d7c231ba">GetNumberOfInputConnections</a> (int port)</td></tr>
+<tr class="separator:ab48ec0abd024002fb2b61aa8d7c231ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaccc64bf1e8d7392f7fb66b7744954b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#aaccc64bf1e8d7392f7fb66b7744954b2">GetTotalNumberOfInputConnections</a> ()</td></tr>
+<tr class="separator:aaccc64bf1e8d7392f7fb66b7744954b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32cd1b58fcd2dc4d021fc4050a2c1a62"><td class="memItemLeft" align="right" valign="top">vtkAlgorithmOutput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a32cd1b58fcd2dc4d021fc4050a2c1a62">GetInputConnection</a> (int port, int index)</td></tr>
+<tr class="separator:a32cd1b58fcd2dc4d021fc4050a2c1a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:afa4eff301069b8b47703cd4939aeffa7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#afa4eff301069b8b47703cd4939aeffa7">Update</a> ()</td></tr>
+<tr class="separator:afa4eff301069b8b47703cd4939aeffa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae634c0e86b774bfcfa3ac2794e98e3d3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ae634c0e86b774bfcfa3ac2794e98e3d3">UpdateInformation</a> ()</td></tr>
+<tr class="separator:ae634c0e86b774bfcfa3ac2794e98e3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab591f3a34e99d0f7d89b019c485e66c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#aab591f3a34e99d0f7d89b019c485e66c">UpdateWholeExtent</a> ()</td></tr>
+<tr class="separator:aab591f3a34e99d0f7d89b019c485e66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ab16e630b688571869d1d3cf5672d0a13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ab16e630b688571869d1d3cf5672d0a13">ConvertTotalInputToPortConnection</a> (int ind, int &amp;port, int &amp;conn)</td></tr>
+<tr class="separator:ab16e630b688571869d1d3cf5672d0a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ac3621620321c01db44f8b60a164ce576"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ac3621620321c01db44f8b60a164ce576">SetReleaseDataFlag</a> (int)</td></tr>
 <tr class="separator:ac3621620321c01db44f8b60a164ce576"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -288,6 +289,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ReleaseDataFlagOff</b
 <tr class="memitem:a1d5e5ee55c85ee5b17f86de74c8c3ad3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d5e5ee55c85ee5b17f86de74c8c3ad3"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateExtentIsEmpty</b> (vtkInformation *pinfo, int extentType)</td></tr>
 <tr class="separator:a1d5e5ee55c85ee5b17f86de74c8c3ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a0082c05f864570911f92a82236ae4b08"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a0082c05f864570911f92a82236ae4b08">ComputePriority</a> ()</td></tr>
+<tr class="separator:a0082c05f864570911f92a82236ae4b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvtk_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvtk_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvtk_object.html">vtkObject</a></td></tr>
 <tr class="memitem:a083bc71e5bde4b3235ed1b7b88aba9af inherit pub_methods_classvtk_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_object.html#a083bc71e5bde4b3235ed1b7b88aba9af">DebugOn</a> ()</td></tr>
 <tr class="separator:a083bc71e5bde4b3235ed1b7b88aba9af inherit pub_methods_classvtk_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -396,8 +400,6 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>IsTypeOf</b> (c
 <tr class="memitem:a4b63a5eaf85e94bbf58840916d170ef4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b63a5eaf85e94bbf58840916d170ef4"></a>
 static <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>SafeDownCast</b> (<a class="el" href="classvtk_object.html">vtkObject</a> *o)</td></tr>
 <tr class="separator:a4b63a5eaf85e94bbf58840916d170ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d11b08561cb92fdf118e49d028cd0ee"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a7d11b08561cb92fdf118e49d028cd0ee">SetDefaultExecutivePrototype</a> (vtkExecutive *proto)</td></tr>
-<tr class="separator:a7d11b08561cb92fdf118e49d028cd0ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a2b45e1a940a5d223abe9f6f471639629"><td class="memItemLeft" align="right" valign="top">static vtkInformationIntegerKey *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a2b45e1a940a5d223abe9f6f471639629">INPUT_IS_OPTIONAL</a> ()</td></tr>
 <tr class="separator:a2b45e1a940a5d223abe9f6f471639629"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -419,6 +421,9 @@ static vtkInformationIntegerKey *&#160;</td><td class="memItemRight" valign="bot
 <tr class="memitem:a3cd7565bee2fd717c01fd360355b3289"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cd7565bee2fd717c01fd360355b3289"></a>
 static vtkInformationIntegerKey *&#160;</td><td class="memItemRight" valign="bottom"><b>INPUT_CONNECTION</b> ()</td></tr>
 <tr class="separator:a3cd7565bee2fd717c01fd360355b3289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a7d11b08561cb92fdf118e49d028cd0ee"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a7d11b08561cb92fdf118e49d028cd0ee">SetDefaultExecutivePrototype</a> (vtkExecutive *proto)</td></tr>
+<tr class="separator:a7d11b08561cb92fdf118e49d028cd0ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a27cf98b8f2f4b69b34dcb869cbb9168b"><td class="memItemLeft" align="right" valign="top">static vtkInformationIntegerKey *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a27cf98b8f2f4b69b34dcb869cbb9168b">PRESERVES_DATASET</a> ()</td></tr>
 <tr class="separator:a27cf98b8f2f4b69b34dcb869cbb9168b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1460,7 +1465,7 @@ unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorCode</b
 
 <p>Reimplemented from <a class="el" href="classvtk_object.html#a831e57b04e46827a7098aa81abadee69">vtkObject</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classvtk_image_reader2.html#af767a1c18bcff32c317788bbeecabeba">vtkImageReader2</a>, <a class="el" href="classvtk_n_i_f_t_i_reader.html#a15aeb42ed069d797ce2aabe03393c08a">vtkNIFTIReader</a>, <a class="el" href="classvtk_n_i_f_t_i_writer.html#ae09b7625f67ae7e045d29ad4237040fe">vtkNIFTIWriter</a>, <a class="el" href="classvtk_scanco_c_t_reader.html#a2cfda030dd07dcece53c64d1b80acc42">vtkScancoCTReader</a>, <a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#adea9cc10aa877095b0a52bbb2f8b6fc9">vtkDICOMToRAS</a>, <a class="el" href="classvtk_d_i_c_o_m_reader.html#a38dace6edc5e58e6902473095a65350b">vtkDICOMReader</a>, <a class="el" href="classvtk_d_i_c_o_m_writer.html#a232da01101ffb395675a057129e332ae">vtkDICOMWriter</a>, <a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a62e97f0f6c949a6411cabdf39c559280">vtkDICOMAlgorithm</a>, <a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#a69a82ee736d83121e3d63869802e9f0b">vtkDICOMApplyPalette</a>, <a class="el" href="classvtk_d_i_c_o_m_apply_rescale.html#aba936df79b62c16b0e4421e08d0d0fca">vtkDICOMApplyRescale</a>, <a class="el" href="classvtk_image_algorithm.html#a572ad8603a8e0e66eb95362fc3c7f970">vtkImageAlgorithm</a>, <a class="el" href="classvtk_threaded_image_algorithm.html#a250ac29fa902a270b6f94702f7f24e9b">vtkThreadedImageAlgorithm</a>, <a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#ab5f104fac260d8bae905ee7e25142f6d">vtkDICOMCTRectifier</a>, <a class="el" href="classvtk_d_i_c_o_m_directory.html#a144b151649df288f3ed0f20479946702">vtkDICOMDirectory</a>, and <a class="el" href="classvtk_image_writer.html#a74ee6ec43cb11c5fe41c8837e9588001">vtkImageWriter</a>.</p>
+<p>Reimplemented in <a class="el" href="classvtk_image_reader2.html#af767a1c18bcff32c317788bbeecabeba">vtkImageReader2</a>, <a class="el" href="classvtk_n_i_f_t_i_reader.html#a15aeb42ed069d797ce2aabe03393c08a">vtkNIFTIReader</a>, <a class="el" href="classvtk_n_i_f_t_i_writer.html#ae09b7625f67ae7e045d29ad4237040fe">vtkNIFTIWriter</a>, <a class="el" href="classvtk_scanco_c_t_reader.html#a2cfda030dd07dcece53c64d1b80acc42">vtkScancoCTReader</a>, <a class="el" href="classvtk_d_i_c_o_m_reader.html#a38dace6edc5e58e6902473095a65350b">vtkDICOMReader</a>, <a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#adea9cc10aa877095b0a52bbb2f8b6fc9">vtkDICOMToRAS</a>, <a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a62e97f0f6c949a6411cabdf39c559280">vtkDICOMAlgorithm</a>, <a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#a69a82ee736d83121e3d63869802e9f0b">vtkDICOMApplyPalette</a>, <a class="el" href="classvtk_d_i_c_o_m_apply_rescale.html#aba936df79b62c16b0e4421e08d0d0fca">vtkDICOMApplyRescale</a>, <a class="el" href="classvtk_d_i_c_o_m_writer.html#a232da01101ffb395675a057129e332ae">vtkDICOMWriter</a>, <a class="el" href="classvtk_image_algorithm.html#a572ad8603a8e0e66eb95362fc3c7f970">vtkImageAlgorithm</a>, <a class="el" href="classvtk_threaded_image_algorithm.html#a250ac29fa902a270b6f94702f7f24e9b">vtkThreadedImageAlgorithm</a>, <a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#ab5f104fac260d8bae905ee7e25142f6d">vtkDICOMCTRectifier</a>, <a class="el" href="classvtk_d_i_c_o_m_directory.html#a144b151649df288f3ed0f20479946702">vtkDICOMDirectory</a>, and <a class="el" href="classvtk_image_writer.html#a74ee6ec43cb11c5fe41c8837e9588001">vtkImageWriter</a>.</p>
 
 </div>
 </div>
@@ -1558,7 +1563,7 @@ unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorCode</b
 
 <p>Reimplemented from <a class="el" href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">vtkObject</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classvtk_n_i_f_t_i_reader.html#ad9730a3a065d8898e195759d87417d7d">vtkNIFTIReader</a>, <a class="el" href="classvtk_image_reader2.html#a75a81a26827763bb51f81dbc643da687">vtkImageReader2</a>, <a class="el" href="classvtk_n_i_f_t_i_writer.html#adc0c1ed568e88e4cb14a23c4ac1811d9">vtkNIFTIWriter</a>, <a class="el" href="classvtk_scanco_c_t_reader.html#a8f6af863c5339a7df8bfc88e575b9e37">vtkScancoCTReader</a>, <a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a143f01ac9065e85023a6a38bbc424efe">vtkDICOMToRAS</a>, <a class="el" href="classvtk_d_i_c_o_m_reader.html#ac60ea7eb94a7e5cf0c05b21d54b90d5f">vtkDICOMReader</a>, <a class="el" href="classvtk_d_i_c_o_m_writer.html#aaa788486f0b21c7f648db0f53eb2e47d">vtkDICOMWriter</a>, <a class="el" href="classvtk_d_i_c_o_m_algorithm.html#ab1f236fc066202fe082d35c5d6af07ae">vtkDICOMAlgorithm</a>, <a class="el" href="classvtk_d_i_c_o_m_apply_rescale.html#afff7868240d5d77794b000831c786a44">vtkDICOMApplyRescale</a>, <a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#accfef299361d09288f04a91419e68804">vtkDICOMApplyPalette</a>, <a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#a00288fd4edaa988f52412a2bc5cf00ab">vtkDICOMCTRectifier</a>, <a class="el" href="classvtk_image_algorithm.html#a24f67bbfad1ac731eb64f5172cf30af3">vtkImageAlgorithm</a>, <a class="el" href="classvtk_threaded_image_algorithm.html#a53dc14a03ab6cffae0ca5cadb2c6d172">vtkThreadedImageAlgorithm</a>, <a class="el" href="classvtk_d_i_c_o_m_directory.html#a891fe222fbbe15bb5c252050dc6120b1">vtkDICOMDirectory</a>, and <a class="el" href="classvtk_image_writer.html#a9af63bfc6f3d3f46be94ac4e57478447">vtkImageWriter</a>.</p>
+<p>Reimplemented in <a class="el" href="classvtk_image_reader2.html#a75a81a26827763bb51f81dbc643da687">vtkImageReader2</a>, <a class="el" href="classvtk_n_i_f_t_i_reader.html#ad9730a3a065d8898e195759d87417d7d">vtkNIFTIReader</a>, <a class="el" href="classvtk_n_i_f_t_i_writer.html#adc0c1ed568e88e4cb14a23c4ac1811d9">vtkNIFTIWriter</a>, <a class="el" href="classvtk_scanco_c_t_reader.html#a8f6af863c5339a7df8bfc88e575b9e37">vtkScancoCTReader</a>, <a class="el" href="classvtk_d_i_c_o_m_algorithm.html#ab1f236fc066202fe082d35c5d6af07ae">vtkDICOMAlgorithm</a>, <a class="el" href="classvtk_d_i_c_o_m_reader.html#ac60ea7eb94a7e5cf0c05b21d54b90d5f">vtkDICOMReader</a>, <a class="el" href="classvtk_d_i_c_o_m_apply_rescale.html#afff7868240d5d77794b000831c786a44">vtkDICOMApplyRescale</a>, <a class="el" href="classvtk_d_i_c_o_m_writer.html#aaa788486f0b21c7f648db0f53eb2e47d">vtkDICOMWriter</a>, <a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a143f01ac9065e85023a6a38bbc424efe">vtkDICOMToRAS</a>, <a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#accfef299361d09288f04a91419e68804">vtkDICOMApplyPalette</a>, <a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#a00288fd4edaa988f52412a2bc5cf00ab">vtkDICOMCTRectifier</a>, <a class="el" href="classvtk_image_algorithm.html#a24f67bbfad1ac731eb64f5172cf30af3">vtkImageAlgorithm</a>, <a class="el" href="classvtk_threaded_image_algorithm.html#a53dc14a03ab6cffae0ca5cadb2c6d172">vtkThreadedImageAlgorithm</a>, <a class="el" href="classvtk_d_i_c_o_m_directory.html#a891fe222fbbe15bb5c252050dc6120b1">vtkDICOMDirectory</a>, and <a class="el" href="classvtk_image_writer.html#a9af63bfc6f3d3f46be94ac4e57478447">vtkImageWriter</a>.</p>
 
 </div>
 </div>
@@ -1602,39 +1607,6 @@ unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorCode</b
 <p>Upstream/Downstream requests form the generalized interface through which executives invoke a algorithm's functionality. Upstream requests correspond to information flow from the algorithm's outputs to its inputs. Downstream requests correspond to information flow from the algorithm's inputs to its outputs. A downstream request is defined by the contents of the request information object. The input to the request is stored in the input information vector passed to ProcessRequest. The results of an downstream request are stored in the output information vector passed to ProcessRequest. An upstream request is defined by the contents of the request information object. The input to the request is stored in the output information vector passed to ProcessRequest. The results of an upstream request are stored in the input information vector passed to ProcessRequest. It returns the boolean status of the pipeline (false means failure). </p>
 
 <p>Reimplemented in <a class="el" href="classvtk_image_algorithm.html#ac11b54dc03a47a1eac8e5513b5159793">vtkImageAlgorithm</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="adc01b61fdafe4877e6940819aa27650e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int vtkAlgorithm::ProcessRequest </td>
-          <td>(</td>
-          <td class="paramtype">vtkInformation *&#160;</td>
-          <td class="paramname"><em>request</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkCollection *&#160;</td>
-          <td class="paramname"><em>inInfo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkInformationVector *&#160;</td>
-          <td class="paramname"><em>outInfo</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Version of <a class="el" href="classvtk_algorithm.html#a99651784a97d309c0cc90072dca29542">ProcessRequest()</a> that is wrapped. This converts the collection to an array and calls the other version. </p>
 
 </div>
 </div>
@@ -2298,7 +2270,7 @@ vtkDataSetAttributes::TENSORS </pre><p> If the last argument is not an attribute
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 27 2016 21:47:40 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 12 2016 21:55:03 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

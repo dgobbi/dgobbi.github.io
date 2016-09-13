@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.8</span>
+   &#160;<span id="projectnumber">0.7.9</span>
    </div>
   </td>
  </tr>
@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -147,7 +148,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> RemovePrivateDictionary(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classvtk_d_i_c_o_m_dictionary_initializer.html">vtkDICOMDictionaryInitializer</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span>vtkDICOMDictionaryInitializer;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> HashLongString(<span class="keyword">const</span> <span class="keywordtype">char</span> *lo, <span class="keywordtype">char</span> stripped[64]);</div>
@@ -160,23 +161,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keyword">static</span> DictHashEntry *PrivateDictTable[DICT_PRIVATE_TABLE_SIZE];</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;};</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_dictionary_initializer.html">  117</a></span>&#160;<span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_dictionary_initializer.html">vtkDICOMDictionaryInitializer</a></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_dictionary_initializer.html">vtkDICOMDictionaryInitializer</a>();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  ~<a class="code" href="classvtk_d_i_c_o_m_dictionary_initializer.html">vtkDICOMDictionaryInitializer</a>();</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_dictionary_initializer.html">vtkDICOMDictionaryInitializer</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_dictionary_initializer.html">vtkDICOMDictionaryInitializer</a>&amp;);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_dictionary_initializer.html">vtkDICOMDictionaryInitializer</a>&amp; operator=(</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_dictionary_initializer.html">vtkDICOMDictionaryInitializer</a>&amp;);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;};</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">static</span> <a class="code" href="classvtk_d_i_c_o_m_dictionary_initializer.html">vtkDICOMDictionaryInitializer</a> vtkDICOMDictionaryInitializerInstance;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMDictionary_h */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMDictionary.h</span></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_dictionary_initializer_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_dictionary_initializer.html">vtkDICOMDictionaryInitializer</a></div><div class="ttdoc">Initializer (Schwarz counter). </div><div class="ttdef"><b>Definition:</b> vtkDICOMDictionary.h:117</div></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">class </span>VTKDICOM_EXPORT vtkDICOMDictionaryInitializer</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  vtkDICOMDictionaryInitializer();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  ~vtkDICOMDictionaryInitializer();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  vtkDICOMDictionaryInitializer(<span class="keyword">const</span> vtkDICOMDictionaryInitializer&amp;);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  vtkDICOMDictionaryInitializer&amp; operator=(</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">const</span> vtkDICOMDictionaryInitializer&amp;);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;};</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">static</span> vtkDICOMDictionaryInitializer vtkDICOMDictionaryInitializerInstance;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMDictionary_h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMDictionary.h</span></div>
 <div class="ttc" id="structvtk_d_i_c_o_m_dict_entry_1_1_entry_html"><div class="ttname"><a href="structvtk_d_i_c_o_m_dict_entry_1_1_entry.html">vtkDICOMDictEntry::Entry</a></div><div class="ttdoc">A struct to statically store DICOM dictionary entries. </div><div class="ttdef"><b>Definition:</b> vtkDICOMDictEntry.h:27</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_tag_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a></div><div class="ttdoc">A (group,element) identifier tag for DICOM attributes. </div><div class="ttdef"><b>Definition:</b> vtkDICOMTag.h:22</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_dictionary_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_dictionary.html">vtkDICOMDictionary</a></div><div class="ttdoc">Provide access to the DICOM tag dictionary. </div><div class="ttdef"><b>Definition:</b> vtkDICOMDictionary.h:26</div></div>
@@ -187,7 +187,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 27 2016 21:47:40 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 12 2016 21:55:03 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

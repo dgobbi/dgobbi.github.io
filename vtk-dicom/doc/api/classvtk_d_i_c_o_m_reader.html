@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.8</span>
+   &#160;<span id="projectnumber">0.7.9</span>
    </div>
   </td>
  </tr>
@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -88,7 +89,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classvtk_d_i_c_o_m_reader-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -116,10 +116,11 @@ Inheritance diagram for vtkDICOMReader:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aedb7a78d4131ab1a23f4c54b2da1b993"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aedb7a78d4131ab1a23f4c54b2da1b993">RowOrder</a> { <b>FileNative</b>, 
+<tr class="memitem:aedb7a78d4131ab1a23f4c54b2da1b993"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedb7a78d4131ab1a23f4c54b2da1b993"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aedb7a78d4131ab1a23f4c54b2da1b993">RowOrder</a> { <b>FileNative</b>, 
 <b>TopDown</b>, 
 <b>BottomUp</b>
- }<tr class="separator:aedb7a78d4131ab1a23f4c54b2da1b993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ }<tr class="memdesc:aedb7a78d4131ab1a23f4c54b2da1b993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration for top-down vs. bottom-up ordering. <br /></td></tr>
+<tr class="separator:aedb7a78d4131ab1a23f4c54b2da1b993"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 <tr class="memitem:a6412e437bb61c7d180fe9d648af1764d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6412e437bb61c7d180fe9d648af1764d"></a>
 typedef <a class="el" href="classvtk_image_reader2.html">vtkImageReader2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
@@ -148,36 +149,48 @@ virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetCl
 <tr class="separator:adafcc54bf9e7b4614f6456c979a8d03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38dace6edc5e58e6902473095a65350b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a38dace6edc5e58e6902473095a65350b">IsA</a> (const char *type)</td></tr>
 <tr class="separator:a38dace6edc5e58e6902473095a65350b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac60ea7eb94a7e5cf0c05b21d54b90d5f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ac60ea7eb94a7e5cf0c05b21d54b90d5f">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
+<tr class="memitem:ac60ea7eb94a7e5cf0c05b21d54b90d5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac60ea7eb94a7e5cf0c05b21d54b90d5f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ac60ea7eb94a7e5cf0c05b21d54b90d5f">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
+<tr class="memdesc:ac60ea7eb94a7e5cf0c05b21d54b90d5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object. <br /></td></tr>
 <tr class="separator:ac60ea7eb94a7e5cf0c05b21d54b90d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5554749a8f35c1e74bfccf1337d8571"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ab5554749a8f35c1e74bfccf1337d8571">CanReadFile</a> (const char *filename)</td></tr>
-<tr class="separator:ab5554749a8f35c1e74bfccf1337d8571"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a827a7f235ca20200f49492dc55dab931"><td class="memItemLeft" align="right" valign="top">vtkStringArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a827a7f235ca20200f49492dc55dab931">GetStackIDs</a> ()</td></tr>
-<tr class="separator:a827a7f235ca20200f49492dc55dab931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2add60b93133cbf076c90f2c70c36fed"><td class="memItemLeft" align="right" valign="top">vtkIntArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a2add60b93133cbf076c90f2c70c36fed">GetFileIndexArray</a> ()</td></tr>
-<tr class="separator:a2add60b93133cbf076c90f2c70c36fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02ff963c54b4b882137540677ec1f1c9"><td class="memItemLeft" align="right" valign="top">vtkIntArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a02ff963c54b4b882137540677ec1f1c9">GetFrameIndexArray</a> ()</td></tr>
-<tr class="separator:a02ff963c54b4b882137540677ec1f1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebb691281854d0482ba86da37c9bd4c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aebb691281854d0482ba86da37c9bd4c0">GetMetaData</a> ()</td></tr>
-<tr class="separator:aebb691281854d0482ba86da37c9bd4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6546e91e4207dc28ceff4cc18a57be6"><td class="memItemLeft" align="right" valign="top">vtkMatrix4x4 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ae6546e91e4207dc28ceff4cc18a57be6">GetPatientMatrix</a> ()</td></tr>
-<tr class="separator:ae6546e91e4207dc28ceff4cc18a57be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefd549842f49ddaa9889c4e50cb7e1c7"><td class="memItemLeft" align="right" valign="top">vtkMedicalImageProperties *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aefd549842f49ddaa9889c4e50cb7e1c7">GetMedicalImageProperties</a> ()</td></tr>
-<tr class="separator:aefd549842f49ddaa9889c4e50cb7e1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ad4c827118fbe4ba17d6e36663d812dc0"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ad4c827118fbe4ba17d6e36663d812dc0">GetFileExtensions</a> ()</td></tr>
+<tr class="memitem:ad4c827118fbe4ba17d6e36663d812dc0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4c827118fbe4ba17d6e36663d812dc0"></a>
+virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ad4c827118fbe4ba17d6e36663d812dc0">GetFileExtensions</a> ()</td></tr>
+<tr class="memdesc:ad4c827118fbe4ba17d6e36663d812dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid extensions for this file type. <br /></td></tr>
 <tr class="separator:ad4c827118fbe4ba17d6e36663d812dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:aeadbde83ae2e798f128dc69c99169481"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aeadbde83ae2e798f128dc69c99169481">GetDescriptiveName</a> ()</td></tr>
+<tr class="memitem:aeadbde83ae2e798f128dc69c99169481"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeadbde83ae2e798f128dc69c99169481"></a>
+virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aeadbde83ae2e798f128dc69c99169481">GetDescriptiveName</a> ()</td></tr>
+<tr class="memdesc:aeadbde83ae2e798f128dc69c99169481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a descriptive name that might be useful in a GUI. <br /></td></tr>
 <tr class="separator:aeadbde83ae2e798f128dc69c99169481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5554749a8f35c1e74bfccf1337d8571"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5554749a8f35c1e74bfccf1337d8571"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ab5554749a8f35c1e74bfccf1337d8571">CanReadFile</a> (const char *filename)</td></tr>
+<tr class="memdesc:ab5554749a8f35c1e74bfccf1337d8571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if this reader can read the given file. <br /></td></tr>
+<tr class="separator:ab5554749a8f35c1e74bfccf1337d8571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:aa8c4f902fe5dcfe1bf0e10c4b71b1d05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aa8c4f902fe5dcfe1bf0e10c4b71b1d05">SetDesiredStackID</a> (const char *stackId)</td></tr>
+<tr class="memdesc:aa8c4f902fe5dcfe1bf0e10c4b71b1d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Stack ID of the stack to load, for named stacks.  <a href="#aa8c4f902fe5dcfe1bf0e10c4b71b1d05">More...</a><br /></td></tr>
 <tr class="separator:aa8c4f902fe5dcfe1bf0e10c4b71b1d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ec3c9f0d8407c44ea18ae6fc01bc358"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ec3c9f0d8407c44ea18ae6fc01bc358"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetDesiredStackID</b> ()</td></tr>
 <tr class="separator:a2ec3c9f0d8407c44ea18ae6fc01bc358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827a7f235ca20200f49492dc55dab931"><td class="memItemLeft" align="right" valign="top">vtkStringArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a827a7f235ca20200f49492dc55dab931">GetStackIDs</a> ()</td></tr>
+<tr class="memdesc:a827a7f235ca20200f49492dc55dab931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of the stacks that are present in the input files.  <a href="#a827a7f235ca20200f49492dc55dab931">More...</a><br /></td></tr>
+<tr class="separator:a827a7f235ca20200f49492dc55dab931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a602f0e7aed0bd3e95c02ade8ffb9c0ac"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a602f0e7aed0bd3e95c02ade8ffb9c0ac">GetSorting</a> ()</td></tr>
+<tr class="memitem:a2add60b93133cbf076c90f2c70c36fed"><td class="memItemLeft" align="right" valign="top">vtkIntArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a2add60b93133cbf076c90f2c70c36fed">GetFileIndexArray</a> ()</td></tr>
+<tr class="memdesc:a2add60b93133cbf076c90f2c70c36fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an array that converts slice index to input file index.  <a href="#a2add60b93133cbf076c90f2c70c36fed">More...</a><br /></td></tr>
+<tr class="separator:a2add60b93133cbf076c90f2c70c36fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ff963c54b4b882137540677ec1f1c9"><td class="memItemLeft" align="right" valign="top">vtkIntArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a02ff963c54b4b882137540677ec1f1c9">GetFrameIndexArray</a> ()</td></tr>
+<tr class="memdesc:a02ff963c54b4b882137540677ec1f1c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an array that converts slice index to frame index.  <a href="#a02ff963c54b4b882137540677ec1f1c9">More...</a><br /></td></tr>
+<tr class="separator:a02ff963c54b4b882137540677ec1f1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:aebb691281854d0482ba86da37c9bd4c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aebb691281854d0482ba86da37c9bd4c0">GetMetaData</a> ()</td></tr>
+<tr class="memdesc:aebb691281854d0482ba86da37c9bd4c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the meta data for the DICOM files.  <a href="#aebb691281854d0482ba86da37c9bd4c0">More...</a><br /></td></tr>
+<tr class="separator:aebb691281854d0482ba86da37c9bd4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a602f0e7aed0bd3e95c02ade8ffb9c0ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a602f0e7aed0bd3e95c02ade8ffb9c0ac"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a602f0e7aed0bd3e95c02ade8ffb9c0ac">GetSorting</a> ()</td></tr>
+<tr class="memdesc:a602f0e7aed0bd3e95c02ade8ffb9c0ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the files have been pre-sorted, the sorting can be disabled. <br /></td></tr>
 <tr class="separator:a602f0e7aed0bd3e95c02ade8ffb9c0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9c524764e2c0e896b5cfea08e120caf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9c524764e2c0e896b5cfea08e120caf"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSorting</b> (int)</td></tr>
@@ -190,12 +203,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SortingOff</b
 <tr class="separator:a23539f8c46c408c9291da35c7e7f1574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a988466cdcf6fead4235880454c00226a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a988466cdcf6fead4235880454c00226a">SetSorter</a> (<a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a> *sorter)</td></tr>
+<tr class="memdesc:a988466cdcf6fead4235880454c00226a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a custom sorter to be used to sort files and frames into slices.  <a href="#a988466cdcf6fead4235880454c00226a">More...</a><br /></td></tr>
 <tr class="separator:a988466cdcf6fead4235880454c00226a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b52cac19bdcbad3379d36221aa7644a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b52cac19bdcbad3379d36221aa7644a"></a>
 <a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSorter</b> ()</td></tr>
 <tr class="separator:a8b52cac19bdcbad3379d36221aa7644a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:af6ebe011729bb860ad99fa11f83e795d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#af6ebe011729bb860ad99fa11f83e795d">GetTimeAsVector</a> ()</td></tr>
+<tr class="memdesc:af6ebe011729bb860ad99fa11f83e795d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the time dimension as scalar components (default: Off).  <a href="#af6ebe011729bb860ad99fa11f83e795d">More...</a><br /></td></tr>
 <tr class="separator:af6ebe011729bb860ad99fa11f83e795d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35b03ed6f3c810a50dbd31b81ee95c72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35b03ed6f3c810a50dbd31b81ee95c72"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTimeAsVector</b> (int)</td></tr>
@@ -207,19 +222,37 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>TimeAsVectorO
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>TimeAsVectorOff</b> ()</td></tr>
 <tr class="separator:a65ddb354025f199c5047a626002d9cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a5c8b6ee757ac137ec02b6188c8310d04"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a5c8b6ee757ac137ec02b6188c8310d04">GetTimeDimension</a> ()</td></tr>
+<tr class="memitem:a5c8b6ee757ac137ec02b6188c8310d04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c8b6ee757ac137ec02b6188c8310d04"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a5c8b6ee757ac137ec02b6188c8310d04">GetTimeDimension</a> ()</td></tr>
+<tr class="memdesc:a5c8b6ee757ac137ec02b6188c8310d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the time dimension if the DICOM series has one. <br /></td></tr>
 <tr class="separator:a5c8b6ee757ac137ec02b6188c8310d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad57ccce723320073b7102d8d7db86e95"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad57ccce723320073b7102d8d7db86e95"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>GetTimeSpacing</b> ()</td></tr>
 <tr class="separator:ad57ccce723320073b7102d8d7db86e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a3a8b3556a098b40fc1abed13f5657449"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a3a8b3556a098b40fc1abed13f5657449">SetDesiredTimeIndex</a> (int)</td></tr>
+<tr class="memitem:a3a8b3556a098b40fc1abed13f5657449"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a8b3556a098b40fc1abed13f5657449"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a3a8b3556a098b40fc1abed13f5657449">SetDesiredTimeIndex</a> (int)</td></tr>
+<tr class="memdesc:a3a8b3556a098b40fc1abed13f5657449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the desired time index (set to -1 for all). <br /></td></tr>
 <tr class="separator:a3a8b3556a098b40fc1abed13f5657449"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeec3103db9ca6294549da71e229dc98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaeec3103db9ca6294549da71e229dc98"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetDesiredTimeIndex</b> ()</td></tr>
 <tr class="separator:aaeec3103db9ca6294549da71e229dc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ace3b39139ff2eae93bc31445aaf3ac05"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ace3b39139ff2eae93bc31445aaf3ac05">GetAutoYBRToRGB</a> ()</td></tr>
+<tr class="memdesc:ace3b39139ff2eae93bc31445aaf3ac05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off automatic conversion of YBR images to RGB.  <a href="#ace3b39139ff2eae93bc31445aaf3ac05">More...</a><br /></td></tr>
+<tr class="separator:ace3b39139ff2eae93bc31445aaf3ac05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4119e0ec3e881e6e73d40d8f78593265"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4119e0ec3e881e6e73d40d8f78593265"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAutoYBRToRGB</b> (int)</td></tr>
+<tr class="separator:a4119e0ec3e881e6e73d40d8f78593265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5770dfabca0911699f101bd891dc4f2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5770dfabca0911699f101bd891dc4f2b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>AutoYBRToRGBOn</b> ()</td></tr>
+<tr class="separator:a5770dfabca0911699f101bd891dc4f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7356baffe455631bfa7e67ce008f4652"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7356baffe455631bfa7e67ce008f4652"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>AutoYBRToRGBOff</b> ()</td></tr>
+<tr class="separator:a7356baffe455631bfa7e67ce008f4652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a03074bb370bd9c2f19b44cd792f1b6f4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a03074bb370bd9c2f19b44cd792f1b6f4">GetAutoRescale</a> ()</td></tr>
+<tr class="memdesc:a03074bb370bd9c2f19b44cd792f1b6f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off automatic rescaling of intensity values.  <a href="#a03074bb370bd9c2f19b44cd792f1b6f4">More...</a><br /></td></tr>
 <tr class="separator:a03074bb370bd9c2f19b44cd792f1b6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc719496d24a2ca843c940977fcda538"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc719496d24a2ca843c940977fcda538"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAutoRescale</b> (int)</td></tr>
@@ -232,12 +265,23 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>AutoRescaleOf
 <tr class="separator:ac69113dd2575d501bf37d72ce21ee513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ac1392c3f86335e3a1ce93e8067142d43"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ac1392c3f86335e3a1ce93e8067142d43">GetRescaleSlope</a> ()</td></tr>
+<tr class="memdesc:ac1392c3f86335e3a1ce93e8067142d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the slope and intercept for rescaling the scalar values.  <a href="#ac1392c3f86335e3a1ce93e8067142d43">More...</a><br /></td></tr>
 <tr class="separator:ac1392c3f86335e3a1ce93e8067142d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2bb2cefa625e82042d913b8461222da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2bb2cefa625e82042d913b8461222da"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>GetRescaleIntercept</b> ()</td></tr>
 <tr class="separator:aa2bb2cefa625e82042d913b8461222da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ae6546e91e4207dc28ceff4cc18a57be6"><td class="memItemLeft" align="right" valign="top">vtkMatrix4x4 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ae6546e91e4207dc28ceff4cc18a57be6">GetPatientMatrix</a> ()</td></tr>
+<tr class="memdesc:ae6546e91e4207dc28ceff4cc18a57be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a matrix to place the image within DICOM patient coords.  <a href="#ae6546e91e4207dc28ceff4cc18a57be6">More...</a><br /></td></tr>
+<tr class="separator:ae6546e91e4207dc28ceff4cc18a57be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:aefd549842f49ddaa9889c4e50cb7e1c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefd549842f49ddaa9889c4e50cb7e1c7"></a>
+vtkMedicalImageProperties *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aefd549842f49ddaa9889c4e50cb7e1c7">GetMedicalImageProperties</a> ()</td></tr>
+<tr class="memdesc:aefd549842f49ddaa9889c4e50cb7e1c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a MedicalImageProperties object for this file. <br /></td></tr>
+<tr class="separator:aefd549842f49ddaa9889c4e50cb7e1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:afabce8d41e98dbb687cbc1c115d26a9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#afabce8d41e98dbb687cbc1c115d26a9d">SetMemoryRowOrder</a> (int order)</td></tr>
+<tr class="memdesc:afabce8d41e98dbb687cbc1c115d26a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the ordering of the image rows in memory.  <a href="#afabce8d41e98dbb687cbc1c115d26a9d">More...</a><br /></td></tr>
 <tr class="separator:afabce8d41e98dbb687cbc1c115d26a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa932151a1ed91c1d3712da978bd3431c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa932151a1ed91c1d3712da978bd3431c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMemoryRowOrderToFileNative</b> ()</td></tr>
@@ -472,51 +516,23 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>AddInput</b> 
 <tr class="separator:a8b2c4340fdcbd6c2d28b245c759e61a3 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2089b787731c4f03aba50a2a734f656 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ab2089b787731c4f03aba50a2a734f656">SetExecutive</a> (vtkExecutive *executive)</td></tr>
 <tr class="separator:ab2089b787731c4f03aba50a2a734f656 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03dbe47dd59c5052803c011c30b26ac inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#af03dbe47dd59c5052803c011c30b26ac">ComputePipelineMTime</a> (vtkInformation *request, vtkInformationVector **inInfoVec, vtkInformationVector *outInfoVec, int requestFromOutputPort, unsigned long *mtime)</td></tr>
+<tr class="separator:af03dbe47dd59c5052803c011c30b26ac inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46fd9e0fd66e763aab2be5ded6e38de6 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a46fd9e0fd66e763aab2be5ded6e38de6">ModifyRequest</a> (vtkInformation *request, int when)</td></tr>
 <tr class="separator:a46fd9e0fd66e763aab2be5ded6e38de6 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2b9a560188f0ac46ce5a0b8afa8c11e inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">vtkInformation *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ac2b9a560188f0ac46ce5a0b8afa8c11e">GetInputPortInformation</a> (int port)</td></tr>
 <tr class="separator:ac2b9a560188f0ac46ce5a0b8afa8c11e inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a342e87719da784ccd7da759952c5d194 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">vtkInformation *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a342e87719da784ccd7da759952c5d194">GetOutputPortInformation</a> (int port)</td></tr>
 <tr class="separator:a342e87719da784ccd7da759952c5d194 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a498b9d2d20ed53b0f26627103f8ad6ba inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a498b9d2d20ed53b0f26627103f8ad6ba">GetNumberOfInputPorts</a> ()</td></tr>
-<tr class="separator:a498b9d2d20ed53b0f26627103f8ad6ba inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a465ef0b066c4f54d5e994c0d7b6b3fbc inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a465ef0b066c4f54d5e994c0d7b6b3fbc">GetNumberOfOutputPorts</a> ()</td></tr>
-<tr class="separator:a465ef0b066c4f54d5e994c0d7b6b3fbc inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01d3abfac738c7ccf01548ae6833d8d3 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a01d3abfac738c7ccf01548ae6833d8d3">UpdateProgress</a> (double amount)</td></tr>
-<tr class="separator:a01d3abfac738c7ccf01548ae6833d8d3 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0cc0648b1360510fe3ff33270bfef2c inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">vtkInformation *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ad0cc0648b1360510fe3ff33270bfef2c">GetInputArrayInformation</a> (int idx)</td></tr>
-<tr class="separator:ad0cc0648b1360510fe3ff33270bfef2c inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afeafda097c201b04a74d9bf2edfaadb3 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#afeafda097c201b04a74d9bf2edfaadb3">RemoveAllInputs</a> ()</td></tr>
-<tr class="separator:afeafda097c201b04a74d9bf2edfaadb3 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cb9f809072a01646f39a168db7a5b5e inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_data_object.html">vtkDataObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a4cb9f809072a01646f39a168db7a5b5e">GetOutputDataObject</a> (int port)</td></tr>
-<tr class="separator:a4cb9f809072a01646f39a168db7a5b5e inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d3aa5ee8ea54ee3c26beba2eb45e158 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a0d3aa5ee8ea54ee3c26beba2eb45e158">RemoveInputConnection</a> (int port, vtkAlgorithmOutput *input)</td></tr>
-<tr class="separator:a0d3aa5ee8ea54ee3c26beba2eb45e158 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab48ec0abd024002fb2b61aa8d7c231ba inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ab48ec0abd024002fb2b61aa8d7c231ba">GetNumberOfInputConnections</a> (int port)</td></tr>
-<tr class="separator:ab48ec0abd024002fb2b61aa8d7c231ba inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaccc64bf1e8d7392f7fb66b7744954b2 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#aaccc64bf1e8d7392f7fb66b7744954b2">GetTotalNumberOfInputConnections</a> ()</td></tr>
-<tr class="separator:aaccc64bf1e8d7392f7fb66b7744954b2 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32cd1b58fcd2dc4d021fc4050a2c1a62 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">vtkAlgorithmOutput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a32cd1b58fcd2dc4d021fc4050a2c1a62">GetInputConnection</a> (int port, int index)</td></tr>
-<tr class="separator:a32cd1b58fcd2dc4d021fc4050a2c1a62 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa4eff301069b8b47703cd4939aeffa7 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#afa4eff301069b8b47703cd4939aeffa7">Update</a> ()</td></tr>
-<tr class="separator:afa4eff301069b8b47703cd4939aeffa7 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae634c0e86b774bfcfa3ac2794e98e3d3 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ae634c0e86b774bfcfa3ac2794e98e3d3">UpdateInformation</a> ()</td></tr>
-<tr class="separator:ae634c0e86b774bfcfa3ac2794e98e3d3 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab591f3a34e99d0f7d89b019c485e66c inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#aab591f3a34e99d0f7d89b019c485e66c">UpdateWholeExtent</a> ()</td></tr>
-<tr class="separator:aab591f3a34e99d0f7d89b019c485e66c inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab16e630b688571869d1d3cf5672d0a13 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ab16e630b688571869d1d3cf5672d0a13">ConvertTotalInputToPortConnection</a> (int ind, int &amp;port, int &amp;conn)</td></tr>
-<tr class="separator:ab16e630b688571869d1d3cf5672d0a13 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0082c05f864570911f92a82236ae4b08 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a0082c05f864570911f92a82236ae4b08">ComputePriority</a> ()</td></tr>
-<tr class="separator:a0082c05f864570911f92a82236ae4b08 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc01b61fdafe4877e6940819aa27650e inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#adc01b61fdafe4877e6940819aa27650e">ProcessRequest</a> (vtkInformation *request, vtkCollection *inInfo, vtkInformationVector *outInfo)</td></tr>
-<tr class="separator:adc01b61fdafe4877e6940819aa27650e inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af03dbe47dd59c5052803c011c30b26ac inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#af03dbe47dd59c5052803c011c30b26ac">ComputePipelineMTime</a> (vtkInformation *request, vtkInformationVector **inInfoVec, vtkInformationVector *outInfoVec, int requestFromOutputPort, unsigned long *mtime)</td></tr>
-<tr class="separator:af03dbe47dd59c5052803c011c30b26ac inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cce6ffadddcae243e653e32627853b4 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual vtkInformation *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a8cce6ffadddcae243e653e32627853b4">GetInformation</a> ()</td></tr>
 <tr class="separator:a8cce6ffadddcae243e653e32627853b4 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af95b034845055d465db468101b985696 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af95b034845055d465db468101b985696"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetInformation</b> (vtkInformation *)</td></tr>
 <tr class="separator:af95b034845055d465db468101b985696 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498b9d2d20ed53b0f26627103f8ad6ba inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a498b9d2d20ed53b0f26627103f8ad6ba">GetNumberOfInputPorts</a> ()</td></tr>
+<tr class="separator:a498b9d2d20ed53b0f26627103f8ad6ba inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a465ef0b066c4f54d5e994c0d7b6b3fbc inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a465ef0b066c4f54d5e994c0d7b6b3fbc">GetNumberOfOutputPorts</a> ()</td></tr>
+<tr class="separator:a465ef0b066c4f54d5e994c0d7b6b3fbc inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcae2f95370dd41d3afcda4f5c993ab6 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#afcae2f95370dd41d3afcda4f5c993ab6">Register</a> (<a class="el" href="classvtk_object_base.html">vtkObjectBase</a> *o)</td></tr>
 <tr class="separator:afcae2f95370dd41d3afcda4f5c993ab6 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a117e16ee02b0a44eaab73ac34a68d868 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a117e16ee02b0a44eaab73ac34a68d868">UnRegister</a> (<a class="el" href="classvtk_object_base.html">vtkObjectBase</a> *o)</td></tr>
@@ -537,6 +553,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>AbortExecuteO
 <tr class="memitem:ac52beefa5da632479cc2c7c663adc3b5 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac52beefa5da632479cc2c7c663adc3b5"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>GetProgress</b> ()</td></tr>
 <tr class="separator:ac52beefa5da632479cc2c7c663adc3b5 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d3abfac738c7ccf01548ae6833d8d3 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a01d3abfac738c7ccf01548ae6833d8d3">UpdateProgress</a> (double amount)</td></tr>
+<tr class="separator:a01d3abfac738c7ccf01548ae6833d8d3 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8320d0e72262c08d5191563033dcc13 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ab8320d0e72262c08d5191563033dcc13">SetProgressText</a> (const char *ptext)</td></tr>
 <tr class="separator:ab8320d0e72262c08d5191563033dcc13 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f87b483172be20d188217cd4602c4cd inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f87b483172be20d188217cd4602c4cd"></a>
@@ -554,6 +572,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetInputArray
 <tr class="separator:aa65aa8507386a4dc663e1401b758d8b6 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42a55ca2c277aecc909ad592d12978aa inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a42a55ca2c277aecc909ad592d12978aa">SetInputArrayToProcess</a> (int idx, int port, int connection, const char *fieldAssociation, const char *attributeTypeorName)</td></tr>
 <tr class="separator:a42a55ca2c277aecc909ad592d12978aa inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0cc0648b1360510fe3ff33270bfef2c inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">vtkInformation *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ad0cc0648b1360510fe3ff33270bfef2c">GetInputArrayInformation</a> (int idx)</td></tr>
+<tr class="separator:ad0cc0648b1360510fe3ff33270bfef2c inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeafda097c201b04a74d9bf2edfaadb3 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#afeafda097c201b04a74d9bf2edfaadb3">RemoveAllInputs</a> ()</td></tr>
+<tr class="separator:afeafda097c201b04a74d9bf2edfaadb3 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cb9f809072a01646f39a168db7a5b5e inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_data_object.html">vtkDataObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a4cb9f809072a01646f39a168db7a5b5e">GetOutputDataObject</a> (int port)</td></tr>
+<tr class="separator:a4cb9f809072a01646f39a168db7a5b5e inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a010eebbcaf538cdab81f5f8e1c65bc inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_data_object.html">vtkDataObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a0a010eebbcaf538cdab81f5f8e1c65bc">GetInputDataObject</a> (int port, int connection)</td></tr>
 <tr class="separator:a0a010eebbcaf538cdab81f5f8e1c65bc inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac26b4138f0e8c07e45c74571f2c51a3 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#aac26b4138f0e8c07e45c74571f2c51a3">SetInputConnection</a> (int port, vtkAlgorithmOutput *input)</td></tr>
@@ -566,11 +590,27 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetInputConne
 <tr class="memitem:a30aac19509f98af140dacdc577c7ef61 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30aac19509f98af140dacdc577c7ef61"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>AddInputConnection</b> (vtkAlgorithmOutput *input)</td></tr>
 <tr class="separator:a30aac19509f98af140dacdc577c7ef61 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3aa5ee8ea54ee3c26beba2eb45e158 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a0d3aa5ee8ea54ee3c26beba2eb45e158">RemoveInputConnection</a> (int port, vtkAlgorithmOutput *input)</td></tr>
+<tr class="separator:a0d3aa5ee8ea54ee3c26beba2eb45e158 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2e0966d617f3427db432006b7c2b273 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">vtkAlgorithmOutput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ae2e0966d617f3427db432006b7c2b273">GetOutputPort</a> (int index)</td></tr>
 <tr class="separator:ae2e0966d617f3427db432006b7c2b273 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfa9d3f45a8d2d7ad861c23aa47be8eb inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfa9d3f45a8d2d7ad861c23aa47be8eb"></a>
 vtkAlgorithmOutput *&#160;</td><td class="memItemRight" valign="bottom"><b>GetOutputPort</b> ()</td></tr>
 <tr class="separator:abfa9d3f45a8d2d7ad861c23aa47be8eb inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48ec0abd024002fb2b61aa8d7c231ba inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ab48ec0abd024002fb2b61aa8d7c231ba">GetNumberOfInputConnections</a> (int port)</td></tr>
+<tr class="separator:ab48ec0abd024002fb2b61aa8d7c231ba inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaccc64bf1e8d7392f7fb66b7744954b2 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#aaccc64bf1e8d7392f7fb66b7744954b2">GetTotalNumberOfInputConnections</a> ()</td></tr>
+<tr class="separator:aaccc64bf1e8d7392f7fb66b7744954b2 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32cd1b58fcd2dc4d021fc4050a2c1a62 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">vtkAlgorithmOutput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a32cd1b58fcd2dc4d021fc4050a2c1a62">GetInputConnection</a> (int port, int index)</td></tr>
+<tr class="separator:a32cd1b58fcd2dc4d021fc4050a2c1a62 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa4eff301069b8b47703cd4939aeffa7 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#afa4eff301069b8b47703cd4939aeffa7">Update</a> ()</td></tr>
+<tr class="separator:afa4eff301069b8b47703cd4939aeffa7 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae634c0e86b774bfcfa3ac2794e98e3d3 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ae634c0e86b774bfcfa3ac2794e98e3d3">UpdateInformation</a> ()</td></tr>
+<tr class="separator:ae634c0e86b774bfcfa3ac2794e98e3d3 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab591f3a34e99d0f7d89b019c485e66c inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#aab591f3a34e99d0f7d89b019c485e66c">UpdateWholeExtent</a> ()</td></tr>
+<tr class="separator:aab591f3a34e99d0f7d89b019c485e66c inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab16e630b688571869d1d3cf5672d0a13 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ab16e630b688571869d1d3cf5672d0a13">ConvertTotalInputToPortConnection</a> (int ind, int &amp;port, int &amp;conn)</td></tr>
+<tr class="separator:ab16e630b688571869d1d3cf5672d0a13 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3621620321c01db44f8b60a164ce576 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#ac3621620321c01db44f8b60a164ce576">SetReleaseDataFlag</a> (int)</td></tr>
 <tr class="separator:ac3621620321c01db44f8b60a164ce576 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5312efd911a3fcb351179953afabdcc inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5312efd911a3fcb351179953afabdcc"></a>
@@ -587,6 +627,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ReleaseDataFlagOff</b
 <tr class="memitem:a1d5e5ee55c85ee5b17f86de74c8c3ad3 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d5e5ee55c85ee5b17f86de74c8c3ad3"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateExtentIsEmpty</b> (vtkInformation *pinfo, int extentType)</td></tr>
 <tr class="separator:a1d5e5ee55c85ee5b17f86de74c8c3ad3 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0082c05f864570911f92a82236ae4b08 inherit pub_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a0082c05f864570911f92a82236ae4b08">ComputePriority</a> ()</td></tr>
+<tr class="separator:a0082c05f864570911f92a82236ae4b08 inherit pub_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvtk_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvtk_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvtk_object.html">vtkObject</a></td></tr>
 <tr class="memitem:a083bc71e5bde4b3235ed1b7b88aba9af inherit pub_methods_classvtk_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_object.html#a083bc71e5bde4b3235ed1b7b88aba9af">DebugOn</a> ()</td></tr>
 <tr class="separator:a083bc71e5bde4b3235ed1b7b88aba9af inherit pub_methods_classvtk_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -692,7 +734,9 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>IsTypeOf</b> (c
 <tr class="memitem:ad39135596aad9a1a3b06ef8beec26b02"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad39135596aad9a1a3b06ef8beec26b02"></a>
 static <a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>SafeDownCast</b> (<a class="el" href="classvtk_object.html">vtkObject</a> *o)</td></tr>
 <tr class="separator:ad39135596aad9a1a3b06ef8beec26b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9835c02670303cbe1aa3ee9341067b7c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a9835c02670303cbe1aa3ee9341067b7c">New</a> ()</td></tr>
+<tr class="memitem:a9835c02670303cbe1aa3ee9341067b7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9835c02670303cbe1aa3ee9341067b7c"></a>
+static <a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a9835c02670303cbe1aa3ee9341067b7c">New</a> ()</td></tr>
+<tr class="memdesc:a9835c02670303cbe1aa3ee9341067b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static method for construction. <br /></td></tr>
 <tr class="separator:a9835c02670303cbe1aa3ee9341067b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classvtk_image_reader2"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classvtk_image_reader2')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classvtk_image_reader2.html">vtkImageReader2</a></td></tr>
 <tr class="memitem:a25a0c83fabafbf8a658f7373ee84986b inherit pub_static_methods_classvtk_image_reader2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25a0c83fabafbf8a658f7373ee84986b"></a>
@@ -721,8 +765,6 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>IsTypeOf</b> (c
 <tr class="memitem:a4b63a5eaf85e94bbf58840916d170ef4 inherit pub_static_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b63a5eaf85e94bbf58840916d170ef4"></a>
 static <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>SafeDownCast</b> (<a class="el" href="classvtk_object.html">vtkObject</a> *o)</td></tr>
 <tr class="separator:a4b63a5eaf85e94bbf58840916d170ef4 inherit pub_static_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d11b08561cb92fdf118e49d028cd0ee inherit pub_static_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a7d11b08561cb92fdf118e49d028cd0ee">SetDefaultExecutivePrototype</a> (vtkExecutive *proto)</td></tr>
-<tr class="separator:a7d11b08561cb92fdf118e49d028cd0ee inherit pub_static_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b45e1a940a5d223abe9f6f471639629 inherit pub_static_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">static vtkInformationIntegerKey *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a2b45e1a940a5d223abe9f6f471639629">INPUT_IS_OPTIONAL</a> ()</td></tr>
 <tr class="separator:a2b45e1a940a5d223abe9f6f471639629 inherit pub_static_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad98057ee9e9efe45fc75c8c3d1d9fdd5 inherit pub_static_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad98057ee9e9efe45fc75c8c3d1d9fdd5"></a>
@@ -743,6 +785,8 @@ static vtkInformationIntegerKey *&#160;</td><td class="memItemRight" valign="bot
 <tr class="memitem:a3cd7565bee2fd717c01fd360355b3289 inherit pub_static_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cd7565bee2fd717c01fd360355b3289"></a>
 static vtkInformationIntegerKey *&#160;</td><td class="memItemRight" valign="bottom"><b>INPUT_CONNECTION</b> ()</td></tr>
 <tr class="separator:a3cd7565bee2fd717c01fd360355b3289 inherit pub_static_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d11b08561cb92fdf118e49d028cd0ee inherit pub_static_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a7d11b08561cb92fdf118e49d028cd0ee">SetDefaultExecutivePrototype</a> (vtkExecutive *proto)</td></tr>
+<tr class="separator:a7d11b08561cb92fdf118e49d028cd0ee inherit pub_static_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27cf98b8f2f4b69b34dcb869cbb9168b inherit pub_static_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top">static vtkInformationIntegerKey *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_algorithm.html#a27cf98b8f2f4b69b34dcb869cbb9168b">PRESERVES_DATASET</a> ()</td></tr>
 <tr class="separator:a27cf98b8f2f4b69b34dcb869cbb9168b inherit pub_static_methods_classvtk_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9fe0110a90a7d23b2c182fc79a2973a inherit pub_static_methods_classvtk_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9fe0110a90a7d23b2c182fc79a2973a"></a>
@@ -793,38 +837,63 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalWarnin
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4362c72dd9e1525b6992851101488db0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a4362c72dd9e1525b6992851101488db0">RelayError</a> (<a class="el" href="classvtk_object.html">vtkObject</a> *o, unsigned long e, void *data)</td></tr>
-<tr class="separator:a4362c72dd9e1525b6992851101488db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23e52a2f940e80b1fb2273ecc091c155"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a23e52a2f940e80b1fb2273ecc091c155">SortFiles</a> (vtkIntArray *fileArray, vtkIntArray *frameArray)</td></tr>
-<tr class="separator:a23e52a2f940e80b1fb2273ecc091c155"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25accaaedc66a143b742dcd5ef773cde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a25accaaedc66a143b742dcd5ef773cde">NoSortFiles</a> (vtkIntArray *fileArray, vtkIntArray *frameArray)</td></tr>
-<tr class="separator:a25accaaedc66a143b742dcd5ef773cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a166ae74aa498f303046379d11bacaf21"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a166ae74aa498f303046379d11bacaf21">UpdateMedicalImageProperties</a> ()</td></tr>
-<tr class="separator:a166ae74aa498f303046379d11bacaf21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a080432d95f7bc2cbca515653813fd01b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a080432d95f7bc2cbca515653813fd01b">RequestInformation</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
+<tr class="memitem:a080432d95f7bc2cbca515653813fd01b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a080432d95f7bc2cbca515653813fd01b"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a080432d95f7bc2cbca515653813fd01b">RequestInformation</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
+<tr class="memdesc:a080432d95f7bc2cbca515653813fd01b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the header information. <br /></td></tr>
 <tr class="separator:a080432d95f7bc2cbca515653813fd01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:aafba2d5da6c972d396fd185ac59f4ed0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aafba2d5da6c972d396fd185ac59f4ed0">RequestData</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
+<tr class="memitem:aafba2d5da6c972d396fd185ac59f4ed0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafba2d5da6c972d396fd185ac59f4ed0"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aafba2d5da6c972d396fd185ac59f4ed0">RequestData</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
+<tr class="memdesc:aafba2d5da6c972d396fd185ac59f4ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the voxel data. <br /></td></tr>
 <tr class="separator:aafba2d5da6c972d396fd185ac59f4ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:aae132f17eb3bbc754f181d2cc2c3160e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aae132f17eb3bbc754f181d2cc2c3160e">ReadOneFile</a> (const char *filename, int idx, unsigned char *buffer, vtkIdType bufferSize)</td></tr>
+<tr class="memitem:aae132f17eb3bbc754f181d2cc2c3160e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae132f17eb3bbc754f181d2cc2c3160e"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aae132f17eb3bbc754f181d2cc2c3160e">ReadOneFile</a> (const char *filename, int idx, unsigned char *buffer, vtkIdType bufferSize)</td></tr>
+<tr class="memdesc:aae132f17eb3bbc754f181d2cc2c3160e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read one file. Specify the offset to the PixelData. <br /></td></tr>
 <tr class="separator:aae132f17eb3bbc754f181d2cc2c3160e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a41eaaf398cbd9fdcf3d36ddcce7739cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a41eaaf398cbd9fdcf3d36ddcce7739cd">UnpackBits</a> (const void *source, void *buffer, vtkIdType bufferSize, int bits)</td></tr>
+<tr class="memitem:a41eaaf398cbd9fdcf3d36ddcce7739cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41eaaf398cbd9fdcf3d36ddcce7739cd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a41eaaf398cbd9fdcf3d36ddcce7739cd">UnpackBits</a> (const void *source, void *buffer, vtkIdType bufferSize, int bits)</td></tr>
+<tr class="memdesc:a41eaaf398cbd9fdcf3d36ddcce7739cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpack 1 bit to 8 bits or 12 bits to 16 bits. <br /></td></tr>
 <tr class="separator:a41eaaf398cbd9fdcf3d36ddcce7739cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a9ebe0f28a99ecb101459c05333e1e244"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a9ebe0f28a99ecb101459c05333e1e244">ReadFileNative</a> (const char *filename, int idx, unsigned char *buffer, vtkIdType bufferSize)</td></tr>
+<tr class="memitem:a9ebe0f28a99ecb101459c05333e1e244"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ebe0f28a99ecb101459c05333e1e244"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a9ebe0f28a99ecb101459c05333e1e244">ReadFileNative</a> (const char *filename, int idx, unsigned char *buffer, vtkIdType bufferSize)</td></tr>
+<tr class="memdesc:a9ebe0f28a99ecb101459c05333e1e244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an DICOM file directly. <br /></td></tr>
 <tr class="separator:a9ebe0f28a99ecb101459c05333e1e244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a05e7529fa7f78428eff9ab7b3b99771c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a05e7529fa7f78428eff9ab7b3b99771c">ReadFileDelegated</a> (const char *filename, int idx, unsigned char *buffer, vtkIdType bufferSize)</td></tr>
+<tr class="memitem:a05e7529fa7f78428eff9ab7b3b99771c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05e7529fa7f78428eff9ab7b3b99771c"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a05e7529fa7f78428eff9ab7b3b99771c">ReadFileDelegated</a> (const char *filename, int idx, unsigned char *buffer, vtkIdType bufferSize)</td></tr>
+<tr class="memdesc:a05e7529fa7f78428eff9ab7b3b99771c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a DICOM file via DCMTK or GDCM. <br /></td></tr>
 <tr class="separator:a05e7529fa7f78428eff9ab7b3b99771c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a4e3af334e0f8389d22ff3c01768090d7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a4e3af334e0f8389d22ff3c01768090d7">RescaleBuffer</a> (int fileIdx, int frameIdx, void *buffer, vtkIdType bufferSize)</td></tr>
+<tr class="memitem:a4e3af334e0f8389d22ff3c01768090d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e3af334e0f8389d22ff3c01768090d7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a4e3af334e0f8389d22ff3c01768090d7">RescaleBuffer</a> (int fileIdx, int frameIdx, void *buffer, vtkIdType bufferSize)</td></tr>
+<tr class="memdesc:a4e3af334e0f8389d22ff3c01768090d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rescale the data in the buffer. <br /></td></tr>
 <tr class="separator:a4e3af334e0f8389d22ff3c01768090d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255f5fede1be3f6c2bbb5e90b3781e5e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a255f5fede1be3f6c2bbb5e90b3781e5e"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a255f5fede1be3f6c2bbb5e90b3781e5e">YBRToRGB</a> (int fileIdx, int frameIdx, void *buffer, vtkIdType bufferSize)</td></tr>
+<tr class="memdesc:a255f5fede1be3f6c2bbb5e90b3781e5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert buffer from YUV to RGB. <br /></td></tr>
+<tr class="separator:a255f5fede1be3f6c2bbb5e90b3781e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a4362c72dd9e1525b6992851101488db0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4362c72dd9e1525b6992851101488db0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a4362c72dd9e1525b6992851101488db0">RelayError</a> (<a class="el" href="classvtk_object.html">vtkObject</a> *o, unsigned long e, void *data)</td></tr>
+<tr class="memdesc:a4362c72dd9e1525b6992851101488db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert parser errors into reader errors. <br /></td></tr>
+<tr class="separator:a4362c72dd9e1525b6992851101488db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a579168cb66061a889577e9a061ffb655"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a579168cb66061a889577e9a061ffb655">ValidateStructure</a> (vtkIntArray *fileArray, vtkIntArray *frameArray)</td></tr>
+<tr class="memdesc:a579168cb66061a889577e9a061ffb655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify that the files can be composed into a volume.  <a href="#a579168cb66061a889577e9a061ffb655">More...</a><br /></td></tr>
 <tr class="separator:a579168cb66061a889577e9a061ffb655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e52a2f940e80b1fb2273ecc091c155"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23e52a2f940e80b1fb2273ecc091c155"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a23e52a2f940e80b1fb2273ecc091c155">SortFiles</a> (vtkIntArray *fileArray, vtkIntArray *frameArray)</td></tr>
+<tr class="memdesc:a23e52a2f940e80b1fb2273ecc091c155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort the input files, put the sort in the supplied arrays. <br /></td></tr>
+<tr class="separator:a23e52a2f940e80b1fb2273ecc091c155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25accaaedc66a143b742dcd5ef773cde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25accaaedc66a143b742dcd5ef773cde"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a25accaaedc66a143b742dcd5ef773cde">NoSortFiles</a> (vtkIntArray *fileArray, vtkIntArray *frameArray)</td></tr>
+<tr class="memdesc:a25accaaedc66a143b742dcd5ef773cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do not sort the files, just build the arrays. <br /></td></tr>
+<tr class="separator:a25accaaedc66a143b742dcd5ef773cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a166ae74aa498f303046379d11bacaf21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a166ae74aa498f303046379d11bacaf21"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a166ae74aa498f303046379d11bacaf21">UpdateMedicalImageProperties</a> ()</td></tr>
+<tr class="memdesc:a166ae74aa498f303046379d11bacaf21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the medical image properties;. <br /></td></tr>
+<tr class="separator:a166ae74aa498f303046379d11bacaf21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classvtk_image_reader2"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classvtk_image_reader2')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classvtk_image_reader2.html">vtkImageReader2</a></td></tr>
 <tr class="memitem:ae31d4865f47029d0a63da3716bae2305 inherit pro_methods_classvtk_image_reader2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae31d4865f47029d0a63da3716bae2305"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ExecuteInformation</b> ()</td></tr>
@@ -945,48 +1014,81 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a53ca548d12d84f57617e6643a97570c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a53ca548d12d84f57617e6643a97570c9">Sorting</a></td></tr>
+<tr class="memitem:a53ca548d12d84f57617e6643a97570c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53ca548d12d84f57617e6643a97570c9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a53ca548d12d84f57617e6643a97570c9">Sorting</a></td></tr>
+<tr class="memdesc:a53ca548d12d84f57617e6643a97570c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select whether to sort the files. <br /></td></tr>
 <tr class="separator:a53ca548d12d84f57617e6643a97570c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e535ea392ecc5b92820b062cbf42164"><td class="memItemLeft" align="right" valign="top">vtkMatrix4x4 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a5e535ea392ecc5b92820b062cbf42164">PatientMatrix</a></td></tr>
-<tr class="separator:a5e535ea392ecc5b92820b062cbf42164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26fb321168b0b82e563a7126d0bdb2a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a26fb321168b0b82e563a7126d0bdb2a3">MetaData</a></td></tr>
-<tr class="separator:a26fb321168b0b82e563a7126d0bdb2a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9beca5b23166a25ddc6495d82080f88"><td class="memItemLeft" align="right" valign="top">vtkMedicalImageProperties *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aa9beca5b23166a25ddc6495d82080f88">MedicalImageProperties</a></td></tr>
-<tr class="separator:aa9beca5b23166a25ddc6495d82080f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac630b32e1434f020bc06c7c1707aa90e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ac630b32e1434f020bc06c7c1707aa90e">Parser</a></td></tr>
-<tr class="separator:ac630b32e1434f020bc06c7c1707aa90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aa1b96a6a1466431101c7fe25d29343"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a1aa1b96a6a1466431101c7fe25d29343">Sorter</a></td></tr>
-<tr class="separator:a1aa1b96a6a1466431101c7fe25d29343"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a224ba3ac24d715dfb73de4e6288b07f6"><td class="memItemLeft" align="right" valign="top">vtkTypeInt64Array *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a224ba3ac24d715dfb73de4e6288b07f6">FileOffsetArray</a></td></tr>
-<tr class="separator:a224ba3ac24d715dfb73de4e6288b07f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fe92515c92e0e93a546bc6b416400fb"><td class="memItemLeft" align="right" valign="top">vtkIntArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a0fe92515c92e0e93a546bc6b416400fb">FileIndexArray</a></td></tr>
-<tr class="separator:a0fe92515c92e0e93a546bc6b416400fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a500ced64b38d6dfad27f4335add48219"><td class="memItemLeft" align="right" valign="top">vtkIntArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a500ced64b38d6dfad27f4335add48219">FrameIndexArray</a></td></tr>
-<tr class="separator:a500ced64b38d6dfad27f4335add48219"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e9803b636ca4dfc6da70e0cf8adc00b"><td class="memItemLeft" align="right" valign="top">vtkStringArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a6e9803b636ca4dfc6da70e0cf8adc00b">StackIDs</a></td></tr>
-<tr class="separator:a6e9803b636ca4dfc6da70e0cf8adc00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a697be818a1ce198a8b76968aea41dbe3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a697be818a1ce198a8b76968aea41dbe3">MemoryRowOrder</a></td></tr>
-<tr class="separator:a697be818a1ce198a8b76968aea41dbe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22098d7c30354a020965452d14337144"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a22098d7c30354a020965452d14337144">NumberOfPackedComponents</a></td></tr>
-<tr class="separator:a22098d7c30354a020965452d14337144"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a321e97b5d997209c88dbd554813d1dc0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a321e97b5d997209c88dbd554813d1dc0">NumberOfPlanarComponents</a></td></tr>
-<tr class="separator:a321e97b5d997209c88dbd554813d1dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b8a445cd18daf939fb0b65342f0803b"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a1b8a445cd18daf939fb0b65342f0803b">DesiredStackID</a> [20]</td></tr>
-<tr class="separator:a1b8a445cd18daf939fb0b65342f0803b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a5c265c897e0d5c70819ab1c1cf0fa2b3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a5c265c897e0d5c70819ab1c1cf0fa2b3">RescaleIntercept</a></td></tr>
+<tr class="memitem:a5c265c897e0d5c70819ab1c1cf0fa2b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c265c897e0d5c70819ab1c1cf0fa2b3"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a5c265c897e0d5c70819ab1c1cf0fa2b3">RescaleIntercept</a></td></tr>
+<tr class="memdesc:a5c265c897e0d5c70819ab1c1cf0fa2b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information for rescaling data to quantitative units. <br /></td></tr>
 <tr class="separator:a5c265c897e0d5c70819ab1c1cf0fa2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1202b29cef34c1b76df2a1049fd45405"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1202b29cef34c1b76df2a1049fd45405"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>RescaleSlope</b></td></tr>
 <tr class="separator:a1202b29cef34c1b76df2a1049fd45405"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a917163b716f4cef772cb9df50628d0bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a917163b716f4cef772cb9df50628d0bb">NeedsRescale</a></td></tr>
+<tr class="memitem:a5e535ea392ecc5b92820b062cbf42164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e535ea392ecc5b92820b062cbf42164"></a>
+vtkMatrix4x4 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a5e535ea392ecc5b92820b062cbf42164">PatientMatrix</a></td></tr>
+<tr class="memdesc:a5e535ea392ecc5b92820b062cbf42164"><td class="mdescLeft">&#160;</td><td class="mdescRight">The orientation matrix for the DICOM file. <br /></td></tr>
+<tr class="separator:a5e535ea392ecc5b92820b062cbf42164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26fb321168b0b82e563a7126d0bdb2a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26fb321168b0b82e563a7126d0bdb2a3"></a>
+<a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a26fb321168b0b82e563a7126d0bdb2a3">MetaData</a></td></tr>
+<tr class="memdesc:a26fb321168b0b82e563a7126d0bdb2a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The meta data for the image. <br /></td></tr>
+<tr class="separator:a26fb321168b0b82e563a7126d0bdb2a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9beca5b23166a25ddc6495d82080f88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9beca5b23166a25ddc6495d82080f88"></a>
+vtkMedicalImageProperties *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aa9beca5b23166a25ddc6495d82080f88">MedicalImageProperties</a></td></tr>
+<tr class="memdesc:aa9beca5b23166a25ddc6495d82080f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">The MedicalImageProperties, for compatibility with other readers. <br /></td></tr>
+<tr class="separator:aa9beca5b23166a25ddc6495d82080f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac630b32e1434f020bc06c7c1707aa90e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac630b32e1434f020bc06c7c1707aa90e"></a>
+<a class="el" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ac630b32e1434f020bc06c7c1707aa90e">Parser</a></td></tr>
+<tr class="memdesc:ac630b32e1434f020bc06c7c1707aa90e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parser that is used to read the file. <br /></td></tr>
+<tr class="separator:ac630b32e1434f020bc06c7c1707aa90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa1b96a6a1466431101c7fe25d29343"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1aa1b96a6a1466431101c7fe25d29343"></a>
+<a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a1aa1b96a6a1466431101c7fe25d29343">Sorter</a></td></tr>
+<tr class="memdesc:a1aa1b96a6a1466431101c7fe25d29343"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sorter that orders the slices within the volume. <br /></td></tr>
+<tr class="separator:a1aa1b96a6a1466431101c7fe25d29343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a224ba3ac24d715dfb73de4e6288b07f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a224ba3ac24d715dfb73de4e6288b07f6"></a>
+vtkTypeInt64Array *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a224ba3ac24d715dfb73de4e6288b07f6">FileOffsetArray</a></td></tr>
+<tr class="memdesc:a224ba3ac24d715dfb73de4e6288b07f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The offsets to the pixel data in each file. <br /></td></tr>
+<tr class="separator:a224ba3ac24d715dfb73de4e6288b07f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe92515c92e0e93a546bc6b416400fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fe92515c92e0e93a546bc6b416400fb"></a>
+vtkIntArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a0fe92515c92e0e93a546bc6b416400fb">FileIndexArray</a></td></tr>
+<tr class="memdesc:a0fe92515c92e0e93a546bc6b416400fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array to convert slice indices to input files. <br /></td></tr>
+<tr class="separator:a0fe92515c92e0e93a546bc6b416400fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500ced64b38d6dfad27f4335add48219"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a500ced64b38d6dfad27f4335add48219"></a>
+vtkIntArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a500ced64b38d6dfad27f4335add48219">FrameIndexArray</a></td></tr>
+<tr class="memdesc:a500ced64b38d6dfad27f4335add48219"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array to convert slice indices to input frames. <br /></td></tr>
+<tr class="separator:a500ced64b38d6dfad27f4335add48219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e9803b636ca4dfc6da70e0cf8adc00b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e9803b636ca4dfc6da70e0cf8adc00b"></a>
+vtkStringArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a6e9803b636ca4dfc6da70e0cf8adc00b">StackIDs</a></td></tr>
+<tr class="memdesc:a6e9803b636ca4dfc6da70e0cf8adc00b"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array that holds the stack IDs. <br /></td></tr>
+<tr class="separator:a6e9803b636ca4dfc6da70e0cf8adc00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a697be818a1ce198a8b76968aea41dbe3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a697be818a1ce198a8b76968aea41dbe3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a697be818a1ce198a8b76968aea41dbe3">MemoryRowOrder</a></td></tr>
+<tr class="memdesc:a697be818a1ce198a8b76968aea41dbe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The row order to use when storing the data in memory. <br /></td></tr>
+<tr class="separator:a697be818a1ce198a8b76968aea41dbe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a917163b716f4cef772cb9df50628d0bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a917163b716f4cef772cb9df50628d0bb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a917163b716f4cef772cb9df50628d0bb">NeedsRescale</a></td></tr>
+<tr class="memdesc:a917163b716f4cef772cb9df50628d0bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This indicates that the data must be rescaled. <br /></td></tr>
 <tr class="separator:a917163b716f4cef772cb9df50628d0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74750aa8c36f14ca6ecd80ea98654341"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74750aa8c36f14ca6ecd80ea98654341"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>AutoRescale</b></td></tr>
 <tr class="separator:a74750aa8c36f14ca6ecd80ea98654341"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:aab7fff12608f9c817598be53eb163804"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aab7fff12608f9c817598be53eb163804">TimeAsVector</a></td></tr>
+<tr class="memitem:ab803c1b7b32b95d546eee90064faa2b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab803c1b7b32b95d546eee90064faa2b6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ab803c1b7b32b95d546eee90064faa2b6">NeedsYBRToRGB</a></td></tr>
+<tr class="memdesc:ab803c1b7b32b95d546eee90064faa2b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This indicates that the data must be converted to RGB. <br /></td></tr>
+<tr class="separator:ab803c1b7b32b95d546eee90064faa2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a1c1b9ad77b6d5ed54072ca5809dd13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a1c1b9ad77b6d5ed54072ca5809dd13"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>AutoYBRToRGB</b></td></tr>
+<tr class="separator:a3a1c1b9ad77b6d5ed54072ca5809dd13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22098d7c30354a020965452d14337144"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a22098d7c30354a020965452d14337144">NumberOfPackedComponents</a></td></tr>
+<tr class="memdesc:a22098d7c30354a020965452d14337144"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of packed pixel components in the input file.  <a href="#a22098d7c30354a020965452d14337144">More...</a><br /></td></tr>
+<tr class="separator:a22098d7c30354a020965452d14337144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a321e97b5d997209c88dbd554813d1dc0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a321e97b5d997209c88dbd554813d1dc0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a321e97b5d997209c88dbd554813d1dc0">NumberOfPlanarComponents</a></td></tr>
+<tr class="memdesc:a321e97b5d997209c88dbd554813d1dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of color planes in the file. <br /></td></tr>
+<tr class="separator:a321e97b5d997209c88dbd554813d1dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab7fff12608f9c817598be53eb163804"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab7fff12608f9c817598be53eb163804"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aab7fff12608f9c817598be53eb163804">TimeAsVector</a></td></tr>
+<tr class="memdesc:aab7fff12608f9c817598be53eb163804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time dimension variables. <br /></td></tr>
 <tr class="separator:aab7fff12608f9c817598be53eb163804"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8051395ce3d8b23268c8401f1f2856cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8051395ce3d8b23268c8401f1f2856cb"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>TimeDimension</b></td></tr>
@@ -997,6 +1099,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>DesiredTimeIndex</b></
 <tr class="memitem:a34b75ce1528ef302224136d11a6c4b92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34b75ce1528ef302224136d11a6c4b92"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>TimeSpacing</b></td></tr>
 <tr class="separator:a34b75ce1528ef302224136d11a6c4b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b8a445cd18daf939fb0b65342f0803b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b8a445cd18daf939fb0b65342f0803b"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a1b8a445cd18daf939fb0b65342f0803b">DesiredStackID</a> [20]</td></tr>
+<tr class="memdesc:a1b8a445cd18daf939fb0b65342f0803b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The stack to load. <br /></td></tr>
+<tr class="separator:a1b8a445cd18daf939fb0b65342f0803b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classvtk_image_reader2"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classvtk_image_reader2')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classvtk_image_reader2.html">vtkImageReader2</a></td></tr>
 <tr class="memitem:ada17d24c4e76e2516ce9187ee5605aef inherit pro_attribs_classvtk_image_reader2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada17d24c4e76e2516ce9187ee5605aef"></a>
 vtkStringArray *&#160;</td><td class="memItemRight" valign="bottom"><b>FileNames</b></td></tr>
@@ -1104,38 +1210,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Read DICOM image files. </p>
 <p>This class reads a series of DICOM files into a vtkImageData object, and also provides access to the DICOM meta data for each file. </p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a class="anchor" id="aedb7a78d4131ab1a23f4c54b2da1b993"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classvtk_d_i_c_o_m_reader.html#aedb7a78d4131ab1a23f4c54b2da1b993">vtkDICOMReader::RowOrder</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Enumeration for top-down vs. bottom-up ordering. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab5554749a8f35c1e74bfccf1337d8571"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int vtkDICOMReader::CanReadFile </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Return true if this reader can read the given file. </p>
-
-</div>
-</div>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a03074bb370bd9c2f19b44cd792f1b6f4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1156,11 +1231,13 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Turn off automatic rescaling of intensity values. By default, of the reader sees different RescaleSlope and RescaleIntercept values for different slices, then it will adjust the pixel values so that they can all use the same slope and intercept. This is a lossy process, so you might want to turn it off and use <a class="el" href="classvtk_d_i_c_o_m_apply_rescale.html" title="Convert pixels to real-world values. ">vtkDICOMApplyRescale</a> instead. </p>
+
+<p>Turn off automatic rescaling of intensity values. </p>
+<p>By default, if the RescaleSlope and RescaleIntercept values differ between slices (as occurs for all PET images and some CT images), then the reader will adjust the pixel values for the slices so that the same RescaleSlope and RescaleIntercept can be used for all slices. This adjustment is a lossy process, so a preferable option is to call AutoRescaleOff() and use <a class="el" href="classvtk_d_i_c_o_m_apply_rescale.html" title="Convert pixels to real-world values. ">vtkDICOMApplyRescale</a> to apply the pixel value rescaling instead. </p>
 
 </div>
 </div>
-<a class="anchor" id="aeadbde83ae2e798f128dc69c99169481"></a>
+<a class="anchor" id="ace3b39139ff2eae93bc31445aaf3ac05"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1168,7 +1245,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const char* vtkDICOMReader::GetDescriptiveName </td>
+          <td class="memname">virtual int vtkDICOMReader::GetAutoYBRToRGB </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1176,39 +1253,13 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return a descriptive name that might be useful in a GUI. </p>
 
-<p>Reimplemented from <a class="el" href="classvtk_image_reader2.html#ae83ebabf18c670a314bb32eb50371f61">vtkImageReader2</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad4c827118fbe4ba17d6e36663d812dc0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const char* vtkDICOMReader::GetFileExtensions </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Valid extensions for this file type. </p>
-
-<p>Reimplemented from <a class="el" href="classvtk_image_reader2.html#a2846943a7802b3a62df51e0936542abb">vtkImageReader2</a>.</p>
+<p>Turn off automatic conversion of YBR images to RGB. </p>
+<p>By default, YBR images are always converted to RGB (though the photometric interpretation in the metadata will remain the same). </p>
 
 </div>
 </div>
@@ -1232,7 +1283,9 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get an array that converts slice index to input file index. If the reader has generated scalar components, then this will be a two-dimensional array and calling array-&gt;GetComponent(i,j) will return the file index for slice i and scalar component j for monochrome images, or for slice i and scalar component 3*j for RGB images (or more precisely, at scalar component N*j where N is the SamplesPerPixel value from the DICOM metadata). If the data has just one component, then use j=0. If you used <a class="el" href="classvtk_image_reader2.html#ac084edcfab5d27247a7683892a95617e">SetFileNames()</a> to provide a list of files to the reader, then use this array to find out which file provided which slice, or to index into the MetaData object to get the metadata for a particular slice. </p>
+
+<p>Get an array that converts slice index to input file index. </p>
+<p>If the reader has generated scalar components, then this will be a two-dimensional array and calling array-&gt;GetComponent(i,j) will return the file index for slice i and scalar component j for monochrome images, or for slice i and scalar component 3*j for RGB images (or more precisely, at scalar component N*j where N is the SamplesPerPixel value from the DICOM metadata). If the data has just one component, then use j=0. If you used <a class="el" href="classvtk_image_reader2.html#ac084edcfab5d27247a7683892a95617e">SetFileNames()</a> to provide a list of files to the reader, then use this array to find out which file provided which slice, or to index into the MetaData object to get the metadata for a particular slice. </p>
 
 </div>
 </div>
@@ -1256,23 +1309,9 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get an array that converts slice index to frame index. The purpose of this array is to identify individual frames in multi-frame DICOM files. The dimensions of this array are identical to the FileIndexArray. Use FileIndexArray to identify the file, then use FrameIndexArray to identify the frame within that file. </p>
 
-</div>
-</div>
-<a class="anchor" id="aefd549842f49ddaa9889c4e50cb7e1c7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkMedicalImageProperties* vtkDICOMReader::GetMedicalImageProperties </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Get a MedicalImageProperties object for this file. </p>
+<p>Get an array that converts slice index to frame index. </p>
+<p>The purpose of this array is to identify individual frames in multi-frame DICOM files. The dimensions of this array are identical to the FileIndexArray. Use FileIndexArray to identify the file, then use FrameIndexArray to identify the frame within that file. </p>
 
 </div>
 </div>
@@ -1296,7 +1335,9 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the meta data for the DICOM files. The GetAttributeValue() method of vtkDICOMMataData takes optional file and frame indices, which specify the file and the frame within that file to get the attribute from. If you have a slice index rather than a file index and frame index, then use the FileIndexArray and FrameIndexArray to convert the slice index into file and frame indices. </p>
+
+<p>Get the meta data for the DICOM files. </p>
+<p>The GetAttributeValue() method of vtkDICOMMataData takes optional file and frame indices, which specify the file and the frame within that file to get the attribute from. If you have a slice index rather than a file index and frame index, then use the FileIndexArray and FrameIndexArray to convert the slice index into file and frame indices. </p>
 
 </div>
 </div>
@@ -1320,7 +1361,9 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get a matrix to place the image within DICOM patient coords. This matrix is constructed from the ImageOrientationPatient and ImagePositionPatient meta data attributes. See the SetMemoryRowOrder method for additional information. </p>
+
+<p>Get a matrix to place the image within DICOM patient coords. </p>
+<p>This matrix is constructed from the ImageOrientationPatient and ImagePositionPatient meta data attributes. See the SetMemoryRowOrder method for additional information. </p>
 
 </div>
 </div>
@@ -1344,31 +1387,9 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the slope and intercept for rescaling the scalar values. These values allow calibration of the data to real values. Use the equation v = u*RescaleSlope + RescaleIntercept. </p>
 
-</div>
-</div>
-<a class="anchor" id="a602f0e7aed0bd3e95c02ade8ffb9c0ac"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int vtkDICOMReader::GetSorting </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>If the files have been pre-sorted, the sorting can be disabled. </p>
+<p>Get the slope and intercept for rescaling the scalar values. </p>
+<p>These values allow calibration of the data to real values. Use the equation v = u*RescaleSlope + RescaleIntercept. </p>
 
 </div>
 </div>
@@ -1392,7 +1413,9 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get a list of the stacks that are present in the input files. A stack is a contiguous array of slices that form a volume. </p>
+
+<p>Get a list of the stacks that are present in the input files. </p>
+<p>A stack is a contiguous array of slices that form a volume. </p>
 
 </div>
 </div>
@@ -1416,31 +1439,9 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Read the time dimension as scalar components (default: Off). If this is on, then each time point will be stored as a scalar component in the image data. If the data has both a time dimension and a vector dimension, then the number of components will be the product of these two dimensions, i.e. the components will store a sequence of vectors, one vector for each time point. </p>
 
-</div>
-</div>
-<a class="anchor" id="a5c8b6ee757ac137ec02b6188c8310d04"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int vtkDICOMReader::GetTimeDimension </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Get the time dimension if the DICOM series has one. </p>
+<p>Read the time dimension as scalar components (default: Off). </p>
+<p>If this is on, then each time point will be stored as a scalar component in the image data. If the data has both a time dimension and a vector dimension, then the number of components will be the product of these two dimensions, i.e. the components will store a sequence of vectors, one vector for each time point. </p>
 
 </div>
 </div>
@@ -1471,417 +1472,6 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 
 </div>
 </div>
-<a class="anchor" id="a9835c02670303cbe1aa3ee9341067b7c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a>* vtkDICOMReader::New </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Static method for construction. </p>
-
-</div>
-</div>
-<a class="anchor" id="a25accaaedc66a143b742dcd5ef773cde"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void vtkDICOMReader::NoSortFiles </td>
-          <td>(</td>
-          <td class="paramtype">vtkIntArray *&#160;</td>
-          <td class="paramname"><em>fileArray</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkIntArray *&#160;</td>
-          <td class="paramname"><em>frameArray</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Do not sort the files, just build the arrays. </p>
-
-</div>
-</div>
-<a class="anchor" id="ac60ea7eb94a7e5cf0c05b21d54b90d5f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void vtkDICOMReader::PrintSelf </td>
-          <td>(</td>
-          <td class="paramtype">ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkIndent&#160;</td>
-          <td class="paramname"><em>indent</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Print information about this object. </p>
-
-<p>Reimplemented from <a class="el" href="classvtk_algorithm.html#a0d96908767dcf284576ebdee795ee23a">vtkAlgorithm</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a05e7529fa7f78428eff9ab7b3b99771c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool vtkDICOMReader::ReadFileDelegated </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>idx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned char *&#160;</td>
-          <td class="paramname"><em>buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkIdType&#160;</td>
-          <td class="paramname"><em>bufferSize</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Read a DICOM file via DCMTK or GDCM. </p>
-
-</div>
-</div>
-<a class="anchor" id="a9ebe0f28a99ecb101459c05333e1e244"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool vtkDICOMReader::ReadFileNative </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>idx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned char *&#160;</td>
-          <td class="paramname"><em>buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkIdType&#160;</td>
-          <td class="paramname"><em>bufferSize</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Read an DICOM file directly. </p>
-
-</div>
-</div>
-<a class="anchor" id="aae132f17eb3bbc754f181d2cc2c3160e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool vtkDICOMReader::ReadOneFile </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>idx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned char *&#160;</td>
-          <td class="paramname"><em>buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkIdType&#160;</td>
-          <td class="paramname"><em>bufferSize</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Read one file. Specify the offset to the PixelData. </p>
-
-</div>
-</div>
-<a class="anchor" id="a4362c72dd9e1525b6992851101488db0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void vtkDICOMReader::RelayError </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvtk_object.html">vtkObject</a> *&#160;</td>
-          <td class="paramname"><em>o</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned long&#160;</td>
-          <td class="paramname"><em>e</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Convert parser errors into reader errors. </p>
-
-</div>
-</div>
-<a class="anchor" id="aafba2d5da6c972d396fd185ac59f4ed0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int vtkDICOMReader::RequestData </td>
-          <td>(</td>
-          <td class="paramtype">vtkInformation *&#160;</td>
-          <td class="paramname"><em>request</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkInformationVector **&#160;</td>
-          <td class="paramname"><em>inputVector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkInformationVector *&#160;</td>
-          <td class="paramname"><em>outputVector</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Read the voxel data. </p>
-
-<p>Reimplemented from <a class="el" href="classvtk_image_algorithm.html#addc9f91ebe9386c31617c3e12166e10e">vtkImageAlgorithm</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a080432d95f7bc2cbca515653813fd01b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int vtkDICOMReader::RequestInformation </td>
-          <td>(</td>
-          <td class="paramtype">vtkInformation *&#160;</td>
-          <td class="paramname"><em>request</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkInformationVector **&#160;</td>
-          <td class="paramname"><em>inputVector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkInformationVector *&#160;</td>
-          <td class="paramname"><em>outputVector</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Read the header information. </p>
-
-<p>Reimplemented from <a class="el" href="classvtk_image_reader2.html">vtkImageReader2</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4e3af334e0f8389d22ff3c01768090d7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void vtkDICOMReader::RescaleBuffer </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>fileIdx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>frameIdx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkIdType&#160;</td>
-          <td class="paramname"><em>bufferSize</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Rescale the data in the buffer. </p>
-
-</div>
-</div>
 <a class="anchor" id="aa8c4f902fe5dcfe1bf0e10c4b71b1d05"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1895,32 +1485,9 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the Stack ID of the stack to load, for named stacks. If the series has multiple stacks, then by default the reader will only load the first stack. This method allows you to select a different stack, if you know the DICOM StackID for the stack. </p>
 
-</div>
-</div>
-<a class="anchor" id="a3a8b3556a098b40fc1abed13f5657449"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void vtkDICOMReader::SetDesiredTimeIndex </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Set the desired time index (set to -1 for all). </p>
+<p>Set the Stack ID of the stack to load, for named stacks. </p>
+<p>If the series has multiple stacks, then by default the reader will only load the first stack. This method allows you to select a different stack, if you know the DICOM StackID for the stack. </p>
 
 </div>
 </div>
@@ -1937,7 +1504,9 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the ordering of the image rows in memory. If the order is BottomUp (which is the default) then the images will be flipped when they are read from disk. The native orientation of DICOM images is top-to-bottom. </p>
+
+<p>Set the ordering of the image rows in memory. </p>
+<p>If the order is BottomUp (which is the default) then the images will be flipped when they are read from disk. The native orientation of DICOM images is top-to-bottom. </p>
 
 </div>
 </div>
@@ -1954,113 +1523,9 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set a custom sorter to be used to sort files and frames into slices. The default sorter uses the attributes "ImagePositionPatient" and "ImageOrientationPatient" to spatially arrange the slices. </p>
 
-</div>
-</div>
-<a class="anchor" id="a23e52a2f940e80b1fb2273ecc091c155"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void vtkDICOMReader::SortFiles </td>
-          <td>(</td>
-          <td class="paramtype">vtkIntArray *&#160;</td>
-          <td class="paramname"><em>fileArray</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkIntArray *&#160;</td>
-          <td class="paramname"><em>frameArray</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Sort the input files, put the sort in the supplied arrays. </p>
-
-</div>
-</div>
-<a class="anchor" id="a41eaaf398cbd9fdcf3d36ddcce7739cd"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void vtkDICOMReader::UnpackBits </td>
-          <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>source</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkIdType&#160;</td>
-          <td class="paramname"><em>bufferSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>bits</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Unpack 1 bit to 8 bits or 12 bits to 16 bits. </p>
-
-</div>
-</div>
-<a class="anchor" id="a166ae74aa498f303046379d11bacaf21"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void vtkDICOMReader::UpdateMedicalImageProperties </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Update the medical image properties; </p>
+<p>Set a custom sorter to be used to sort files and frames into slices. </p>
+<p>The default sorter uses the attributes "ImagePositionPatient" and "ImageOrientationPatient" to spatially arrange the slices. </p>
 
 </div>
 </div>
@@ -2095,179 +1560,13 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Verify that the files can be composed into a volume. This is called after SortFiles has been called. It should invoke an error event and return zero upon failure. </p>
+
+<p>Verify that the files can be composed into a volume. </p>
+<p>This is called after SortFiles has been called. It should invoke an error event and return zero upon failure. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a1b8a445cd18daf939fb0b65342f0803b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char vtkDICOMReader::DesiredStackID[20]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The stack to load. </p>
-
-</div>
-</div>
-<a class="anchor" id="a0fe92515c92e0e93a546bc6b416400fb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkIntArray* vtkDICOMReader::FileIndexArray</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>An array to convert slice indices to input files </p>
-
-</div>
-</div>
-<a class="anchor" id="a224ba3ac24d715dfb73de4e6288b07f6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkTypeInt64Array* vtkDICOMReader::FileOffsetArray</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The offsets to the pixel data in each file. </p>
-
-</div>
-</div>
-<a class="anchor" id="a500ced64b38d6dfad27f4335add48219"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkIntArray* vtkDICOMReader::FrameIndexArray</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>An array to convert slice indices to input frames </p>
-
-</div>
-</div>
-<a class="anchor" id="aa9beca5b23166a25ddc6495d82080f88"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkMedicalImageProperties* vtkDICOMReader::MedicalImageProperties</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The MedicalImageProperties, for compatibility with other readers. </p>
-
-</div>
-</div>
-<a class="anchor" id="a697be818a1ce198a8b76968aea41dbe3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int vtkDICOMReader::MemoryRowOrder</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The row order to use when storing the data in memory. </p>
-
-</div>
-</div>
-<a class="anchor" id="a26fb321168b0b82e563a7126d0bdb2a3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>* vtkDICOMReader::MetaData</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The meta data for the image. </p>
-
-</div>
-</div>
-<a class="anchor" id="a917163b716f4cef772cb9df50628d0bb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int vtkDICOMReader::NeedsRescale</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This indicates that the data must be rescaled. </p>
-
-</div>
-</div>
 <a class="anchor" id="a22098d7c30354a020965452d14337144"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2285,175 +1584,9 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The number of packed pixel components in the input file. This is for packed, rather than planar, components. </p>
 
-</div>
-</div>
-<a class="anchor" id="a321e97b5d997209c88dbd554813d1dc0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int vtkDICOMReader::NumberOfPlanarComponents</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The number of color planes in the file. </p>
-
-</div>
-</div>
-<a class="anchor" id="ac630b32e1434f020bc06c7c1707aa90e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>* vtkDICOMReader::Parser</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The parser that is used to read the file. </p>
-
-</div>
-</div>
-<a class="anchor" id="a5e535ea392ecc5b92820b062cbf42164"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkMatrix4x4* vtkDICOMReader::PatientMatrix</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The orientation matrix for the DICOM file. </p>
-
-</div>
-</div>
-<a class="anchor" id="a5c265c897e0d5c70819ab1c1cf0fa2b3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double vtkDICOMReader::RescaleIntercept</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Information for rescaling data to quantitative units. </p>
-
-</div>
-</div>
-<a class="anchor" id="a1aa1b96a6a1466431101c7fe25d29343"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>* vtkDICOMReader::Sorter</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The sorter that orders the slices within the volume. </p>
-
-</div>
-</div>
-<a class="anchor" id="a53ca548d12d84f57617e6643a97570c9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int vtkDICOMReader::Sorting</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Select whether to sort the files. </p>
-
-</div>
-</div>
-<a class="anchor" id="a6e9803b636ca4dfc6da70e0cf8adc00b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkStringArray* vtkDICOMReader::StackIDs</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>An array that holds the stack IDs. </p>
-
-</div>
-</div>
-<a class="anchor" id="aab7fff12608f9c817598be53eb163804"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int vtkDICOMReader::TimeAsVector</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Time dimension variables. </p>
+<p>The number of packed pixel components in the input file. </p>
+<p>This is for packed, rather than planar, components. </p>
 
 </div>
 </div>
@@ -2463,7 +1596,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 27 2016 21:47:41 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 12 2016 21:55:04 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
