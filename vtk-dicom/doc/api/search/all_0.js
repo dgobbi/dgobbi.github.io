@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['access',['Access',['../classvtk_d_i_c_o_m_file.html#a83fe652b89e57a2ce7fc72ce9a0e2c01',1,'vtkDICOMFile']]],
+  ['access',['Access',['../classvtk_d_i_c_o_m_file.html#a83fe652b89e57a2ce7fc72ce9a0e2c01',1,'vtkDICOMFile::Access()'],['../classvtk_d_i_c_o_m_file_directory.html#adc9b2ec3401c2e35d435ad1fb2be7510',1,'vtkDICOMFileDirectory::Access()']]],
   ['addinput',['AddInput',['../classvtk_image_algorithm.html#a52460aa045057a4e6be265468936bb2d',1,'vtkImageAlgorithm']]],
   ['addinputconnection',['AddInputConnection',['../classvtk_algorithm.html#afea437e12d98e7745874708990d1dee0',1,'vtkAlgorithm']]],
   ['addinputfilenames',['AddInputFileNames',['../classvtk_d_i_c_o_m_directory.html#a2ebbf833cb5a5172584abdfb88218229',1,'vtkDICOMDirectory']]],

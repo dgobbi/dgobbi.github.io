@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.9</span>
+   &#160;<span id="projectnumber">0.7.11</span>
    </div>
   </td>
  </tr>
@@ -89,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="classvtk_d_i_c_o_m_lookup_table-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">vtkDICOMLookupTable Class Reference</div>  </div>
@@ -142,10 +143,10 @@ virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetCl
 <tr class="separator:a920de2e078440b54892f0f6a452051ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cced07b7a1c6501b409dfb4eaa91404"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_lookup_table.html#a0cced07b7a1c6501b409dfb4eaa91404">IsA</a> (const char *type)</td></tr>
 <tr class="separator:a0cced07b7a1c6501b409dfb4eaa91404"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ba8ed019490dba915f675b9e1094c92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ba8ed019490dba915f675b9e1094c92"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_lookup_table.html#a9ba8ed019490dba915f675b9e1094c92">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
-<tr class="memdesc:a9ba8ed019490dba915f675b9e1094c92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object. <br /></td></tr>
-<tr class="separator:a9ba8ed019490dba915f675b9e1094c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9921df1c133502dbbab7433c5190ac8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9921df1c133502dbbab7433c5190ac8c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_lookup_table.html#a9921df1c133502dbbab7433c5190ac8c">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
+<tr class="memdesc:a9921df1c133502dbbab7433c5190ac8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object. <br /></td></tr>
+<tr class="separator:a9921df1c133502dbbab7433c5190ac8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab12fcdc9eb15376d5a369f203ea4da7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_lookup_table.html#ab12fcdc9eb15376d5a369f203ea4da7b">BuildStandardPalette</a> (const char *name)</td></tr>
 <tr class="memdesc:ab12fcdc9eb15376d5a369f203ea4da7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the a standard lookup table, given a code string.  <a href="#ab12fcdc9eb15376d5a369f203ea4da7b">More...</a><br /></td></tr>
 <tr class="separator:ab12fcdc9eb15376d5a369f203ea4da7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -540,6 +541,12 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalWarnin
 <tr class="memitem:a1ad146652efe695e9ace7bc29b3e0f74 inherit pub_static_methods_classvtk_object_base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvtk_object_base.html">vtkObjectBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_object_base.html#a1ad146652efe695e9ace7bc29b3e0f74">New</a> ()</td></tr>
 <tr class="separator:a1ad146652efe695e9ace7bc29b3e0f74 inherit pub_static_methods_classvtk_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:ae7fb56ca472efbb3d1ddcb5fbbf05a60"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_lookup_table.html#ae7fb56ca472efbb3d1ddcb5fbbf05a60">BuildSegmentedLUT</a> (const unsigned short *input, unsigned int n, double divisor, unsigned char *lut, unsigned int stride, unsigned int count)</td></tr>
+<tr class="memdesc:ae7fb56ca472efbb3d1ddcb5fbbf05a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a lookup table from compressed data.  <a href="#ae7fb56ca472efbb3d1ddcb5fbbf05a60">More...</a><br /></td></tr>
+<tr class="separator:ae7fb56ca472efbb3d1ddcb5fbbf05a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classvtk_lookup_table"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classvtk_lookup_table')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classvtk_lookup_table.html">vtkLookupTable</a></td></tr>
@@ -689,6 +696,67 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 
 </div>
 </div>
+<a class="anchor" id="ae7fb56ca472efbb3d1ddcb5fbbf05a60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool vtkDICOMLookupTable::BuildSegmentedLUT </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned short *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>divisor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>lut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>stride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Build a lookup table from compressed data. </p>
+<p>This will decompress a segmented lookup table. </p>
+
+</div>
+</div>
 <a class="anchor" id="ab12fcdc9eb15376d5a369f203ea4da7b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -704,7 +772,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 </div><div class="memdoc">
 
 <p>Build the a standard lookup table, given a code string. </p>
-<p>The supported code strings are HOT_IRON, HOT_METAL_BLUE, PET, and PET_20_STEP. This does not set the range of the table. </p>
+<p>The supported code strings are HOT_IRON, HOT_METAL_BLUE, PET, PET_20_STEP, SPRING, SUMMER, FALL, and WINTER. This does not set the range of the table. </p>
 
 </div>
 </div>
@@ -741,7 +809,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 12 2016 21:55:03 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 11 2017 13:30:18 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

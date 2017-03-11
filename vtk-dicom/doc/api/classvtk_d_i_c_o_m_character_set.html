@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.9</span>
+   &#160;<span id="projectnumber">0.7.11</span>
    </div>
   </td>
  </tr>
@@ -121,12 +121,13 @@ Public Types</h2></td></tr>
 <b>GB18030</b> = 14, 
 <b>GBK</b> = 15, 
 <br />
-&#160;&#160;<b>ISO_2022_IR_58</b> = 16, 
-<b>ISO_2022_IR_87</b> = 32, 
-<b>ISO_2022_IR_159</b> = 64, 
-<b>ISO_2022_IR_149</b> = 128, 
+&#160;&#160;<b>ISO_2022_BASE</b> = 31, 
+<b>ISO_2022</b> = 128, 
+<b>ISO_2022_IR_58</b> = 148, 
+<b>ISO_2022_IR_149</b> = 149, 
 <br />
-&#160;&#160;<b>ISO_2022</b> = 240, 
+&#160;&#160;<b>ISO_2022_IR_87</b> = 160, 
+<b>ISO_2022_IR_159</b> = 192, 
 <b>Unknown</b> = 255
 <br />
  }<tr class="separator:ab48a086c433e697b1c7f10c5470063bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,6 +196,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Character sets. </p>
+<p>This class provides the means to convert the various international text encodings used by DICOM to the popular UTF-8 encoding. It does not at this time provide the means to convert to any encoding other than UTF-8.</p>
+<p>During conversion to UTF-8, any codes in the original encoding that cannot be converted to Unicode are replaced by "REPLACEMENT CHARACTER", which is a question mark in a black diamond. For instance, if the original encoding is ISO_IR_6, any octets with the 8th bit set will be replaced.</p>
 <p>DICOM supports a fairly small number of single-byte and multi-byte character sets. The only VRs that support these character sets are PN, LO, SH, ST, LT, and ST (all other text VRs must be ASCII). In total, there is one 7-bit encoding (ASCII), eleven 8-bit single-byte encodings, three variable-length encodings (UTF-8, GB18030, GBK), and three iso-2022 multi-byte encodings. It is possible to use iso-2022 escape codes to switch between any encodings except for UTF-8 and GB18030/GBK, although only a subset of the iso-2022 escape codes are supported by DICOM. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8164a351dae05a37e7f7277a30602e57"></a>
@@ -306,7 +309,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </div><div class="memdoc">
 
 <p>Convert text from this encoding to UTF-8. </p>
-<p>This will convert text to UTF-8, which is generally a lossless process for western languages but not for the CJK languages. Characters that cannot be mapped to unicode, or whose place in unicode is not known, will be printed as unicode missing-character marks. </p>
+<p>This will convert text to UTF-8, which is generally a lossless process for western languages but not for the CJK languages. Characters that cannot be mapped to unicode, or whose place in unicode is not known, will be printed as unicode U+FFFD which appears as a question mark in a diamond. </p>
 
 </div>
 </div>
@@ -353,7 +356,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </div><div class="memdoc">
 
 <p>Generate SpecificCharacterSet code values (diagnostic only). </p>
-<p>Attempt to generate SpecificCharacterSet code values. If ISO 2022 encoding is not used, then a single code value is returned. If ISO 2022 encoding is used with the single-byte character sets, then only the code value for first character set will be returned (due to limitations in the way this class stores the information). A simple way to check whether such incomplete information will be returned is to check if "((GetKey() &amp; ISO_2022) == ISO_2022)" is true. However, if ISO 2022 encoding is used with one or more multi-byte character sets, the result is a set of backslash-separated code values, where the first value will be empty if the initial coding is ASCII. </p>
+<p>Attempt to generate SpecificCharacterSet code values. If ISO 2022 encoding is not used, then a single code value is returned. If ISO 2022 encoding is used with the single-byte character sets, then only the code value for first character set will be returned (due to limitations in the way this class stores the information). However, if ISO 2022 encoding is used with the multi-byte character sets, the result is a set of backslash-separated code values, where the first value will be empty if the initial coding is ASCII. </p>
 
 </div>
 </div>
@@ -418,7 +421,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 12 2016 21:55:03 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 11 2017 13:30:16 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

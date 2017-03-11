@@ -1,6 +1,7 @@
 var searchData=
 [
   ['da',['DA',['../classvtk_d_i_c_o_m_v_r.html#a40e983ebf7e6d989a33fbc28991c5b54a2033d6a6f9832b71345fab245624bd5a',1,'vtkDICOMVR']]],
+  ['databyteorder',['DataByteOrder',['../classvtk_n_i_f_t_i_writer.html#ae1771e8061ec8a21a2925ec8a84b0f0f',1,'vtkNIFTIWriter']]],
   ['datahasbeengenerated',['DataHasBeenGenerated',['../classvtk_data_object.html#a92b3ba77ee114e9fc5065184ded3d5f6',1,'vtkDataObject']]],
   ['datatypeenum',['DataTypeEnum',['../classvtk_n_i_f_t_i_header.html#a751855c0be13248a7e377ade6158eac9',1,'vtkNIFTIHeader']]],
   ['dc',['DC',['../namespace_d_c.html',1,'']]],

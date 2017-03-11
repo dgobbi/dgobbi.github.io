@@ -4,5 +4,7 @@ var searchData=
   ['breakonerror',['BreakOnError',['../classvtk_object.html#ac9397d61a3771ce2cb7e94f5176ee868',1,'vtkObject']]],
   ['build',['Build',['../classvtk_lookup_table.html#ac5e95e3042eba69c080fa2e2d8e1df0b',1,'vtkLookupTable::Build()'],['../classvtk_scalars_to_colors.html#ab1a0cf934b05c4b288b80adb20c9061f',1,'vtkScalarsToColors::Build()']]],
   ['buildimagepalette',['BuildImagePalette',['../classvtk_d_i_c_o_m_lookup_table.html#ac732fa9e710baee2a888e853b36a3159',1,'vtkDICOMLookupTable']]],
-  ['buildstandardpalette',['BuildStandardPalette',['../classvtk_d_i_c_o_m_lookup_table.html#ab12fcdc9eb15376d5a369f203ea4da7b',1,'vtkDICOMLookupTable']]]
+  ['buildsegmentedlut',['BuildSegmentedLUT',['../classvtk_d_i_c_o_m_lookup_table.html#ae7fb56ca472efbb3d1ddcb5fbbf05a60',1,'vtkDICOMLookupTable']]],
+  ['buildstandardpalette',['BuildStandardPalette',['../classvtk_d_i_c_o_m_lookup_table.html#ab12fcdc9eb15376d5a369f203ea4da7b',1,'vtkDICOMLookupTable']]],
+  ['byteswapheader',['ByteSwapHeader',['../classvtk_n_i_f_t_i_header.html#aecc8dcf8002c4bf16d24134772be3f79',1,'vtkNIFTIHeader']]]
 ];

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.9</span>
+   &#160;<span id="projectnumber">0.7.11</span>
    </div>
   </td>
  </tr>
@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  Program: DICOM for VTK</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  Copyright (c) 2012-2015 David Gobbi</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  Copyright (c) 2012-2017 David Gobbi</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  All rights reserved.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  See Copyright.txt or http://dgobbi.github.io/bsd3.txt for details.</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span></div>
@@ -120,90 +120,100 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_utilities.html#af433c2ef02b27ecd4fef1f78e58d0336">   33</a></span>&#160;  vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>, <a class="code" href="classvtk_object.html">vtkObject</a>);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">PrintSelf</a>(ostream&amp; os, vtkIndent indent);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> SetUIDPrefix(<span class="keyword">const</span> <span class="keywordtype">char</span> *prefix);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetUIDPrefix();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">static</span> std::string GenerateUID(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#ifdef VTK_OVERRIDE</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">PrintSelf</a>(ostream&amp; os, vtkIndent indent) VTK_OVERRIDE;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">PrintSelf</a>(ostream&amp; os, vtkIndent indent);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> SetUIDPrefix(<span class="keyword">const</span> <span class="keywordtype">char</span> *prefix);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetUIDPrefix();</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> GenerateUIDs(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag, vtkStringArray *uids);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> CompareUIDs(<span class="keyword">const</span> <span class="keywordtype">char</span> *u1, <span class="keyword">const</span> <span class="keywordtype">char</span> *u2);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">static</span> std::string GenerateUID(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> GenerateUIDs(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag, vtkStringArray *uids);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">static</span> std::string GenerateDateTime(<span class="keyword">const</span> <span class="keywordtype">char</span> *zone);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">static</span> std::string GenerateDateTime(<span class="keywordtype">long</span> <span class="keywordtype">long</span> microsecs, <span class="keyword">const</span> <span class="keywordtype">char</span> *zone);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> ConvertDateTime(<span class="keyword">const</span> <span class="keywordtype">char</span> *datetime);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> GetUTC(<span class="keywordtype">long</span> <span class="keywordtype">long</span> *offset);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> IsDICOMFile(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetImplementationClassUID();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> CompareUIDs(<span class="keyword">const</span> <span class="keywordtype">char</span> *u1, <span class="keyword">const</span> <span class="keywordtype">char</span> *u2);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">static</span> std::string GenerateDateTime(<span class="keyword">const</span> <span class="keywordtype">char</span> *zone);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">static</span> std::string GenerateDateTime(<span class="keywordtype">long</span> <span class="keywordtype">long</span> microsecs, <span class="keyword">const</span> <span class="keywordtype">char</span> *zone);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> ConvertDateTime(<span class="keyword">const</span> <span class="keywordtype">char</span> *datetime);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> GetUTC(<span class="keywordtype">long</span> <span class="keywordtype">long</span> *offset);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> IsDICOMFile(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> SetImplementationClassUID(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetImplementationVersionName();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> SetImplementationVersionName(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_utilities.html#ae6e5cb3c6e0c8009c1d1d740c365cb12">  149</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html#ae6e5cb3c6e0c8009c1d1d740c365cb12">UnpackUnsignedInt</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp) {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">return</span> cp[0] + (cp[1] &lt;&lt; 8) + (cp[2] &lt;&lt; 16) + (cp[3] &lt;&lt; 24); }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_utilities.html#a43acf23027f948bb0e1d64c8c6657a08">  157</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html#a43acf23027f948bb0e1d64c8c6657a08">PackUnsignedInt</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp) {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    cp[0] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    cp[1] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 8);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    cp[2] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 16);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    cp[3] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 24); }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> PatternMatches(<span class="keyword">const</span> <span class="keywordtype">char</span> *pattern, <span class="keyword">const</span> <span class="keywordtype">char</span> *val);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> PatternMatches(</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *pattern, <span class="keywordtype">size_t</span> pl, <span class="keyword">const</span> <span class="keywordtype">char</span> *val, <span class="keywordtype">size_t</span> vl);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetUIDName(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetImplementationClassUID();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> SetImplementationClassUID(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetImplementationVersionName();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> SetImplementationVersionName(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_utilities.html#ae6e5cb3c6e0c8009c1d1d740c365cb12">  153</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html#ae6e5cb3c6e0c8009c1d1d740c365cb12">UnpackUnsignedInt</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp) {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">return</span> cp[0] + (cp[1] &lt;&lt; 8) + (cp[2] &lt;&lt; 16) + (cp[3] &lt;&lt; 24); }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_utilities.html#a43acf23027f948bb0e1d64c8c6657a08">  161</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html#a43acf23027f948bb0e1d64c8c6657a08">PackUnsignedInt</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp) {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    cp[0] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    cp[1] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 8);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    cp[2] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 16);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    cp[3] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(i &gt;&gt; 24); }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> PatternMatches(<span class="keyword">const</span> <span class="keywordtype">char</span> *pattern, <span class="keyword">const</span> <span class="keywordtype">char</span> *val);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> PatternMatches(</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *pattern, <span class="keywordtype">size_t</span> pl, <span class="keyword">const</span> <span class="keywordtype">char</span> *val, <span class="keywordtype">size_t</span> vl);</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> GetCIDFromUID(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *GetUIDName(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>() {}</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  ~<a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>() {}</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> GetCIDFromUID(<span class="keyword">const</span> <span class="keywordtype">char</span> *uid);</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">char</span> UIDPrefix[64];</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationClassUID[65];</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationVersionName[17];</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>() {}</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  ~<a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>() {}</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>&amp;);  <span class="comment">// Not implemented.</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;};</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMUtilities_h */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_utilities_html_a43acf23027f948bb0e1d64c8c6657a08"><div class="ttname"><a href="classvtk_d_i_c_o_m_utilities.html#a43acf23027f948bb0e1d64c8c6657a08">vtkDICOMUtilities::PackUnsignedInt</a></div><div class="ttdeci">static void PackUnsignedInt(unsigned int i, unsigned char *cp)</div><div class="ttdoc">Pack one little-endian int into a stream of bytes. </div><div class="ttdef"><b>Definition:</b> vtkDICOMUtilities.h:157</div></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">char</span> UIDPrefix[64];</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationClassUID[65];</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">char</span> ImplementationVersionName[17];</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>&amp;) VTK_DELETE_FUNCTION;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keywordtype">void</span> operator=(const <a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>&amp;) VTK_DELETE_FUNCTION;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>&amp;);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a>&amp;);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;};</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMUtilities_h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_utilities_html_a43acf23027f948bb0e1d64c8c6657a08"><div class="ttname"><a href="classvtk_d_i_c_o_m_utilities.html#a43acf23027f948bb0e1d64c8c6657a08">vtkDICOMUtilities::PackUnsignedInt</a></div><div class="ttdeci">static void PackUnsignedInt(unsigned int i, unsigned char *cp)</div><div class="ttdoc">Pack one little-endian int into a stream of bytes. </div><div class="ttdef"><b>Definition:</b> vtkDICOMUtilities.h:161</div></div>
 <div class="ttc" id="classvtk_object_html_a4d5b227267c076d6f9e38483370b6612"><div class="ttname"><a href="classvtk_object.html#a4d5b227267c076d6f9e38483370b6612">vtkObject::New</a></div><div class="ttdeci">static vtkObject * New()</div></div>
 <div class="ttc" id="classvtk_object_html_abf3dbb4154289b56a12483eee3866263"><div class="ttname"><a href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">vtkObject::PrintSelf</a></div><div class="ttdeci">virtual void PrintSelf(ostream &amp;os, vtkIndent indent)</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_tag_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a></div><div class="ttdoc">A (group,element) identifier tag for DICOM attributes. </div><div class="ttdef"><b>Definition:</b> vtkDICOMTag.h:22</div></div>
 <div class="ttc" id="classvtk_object_html"><div class="ttname"><a href="classvtk_object.html">vtkObject</a></div><div class="ttdoc">abstract base class for most VTK objects </div><div class="ttdef"><b>Definition:</b> vtkObject.h:51</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_utilities_html_ae6e5cb3c6e0c8009c1d1d740c365cb12"><div class="ttname"><a href="classvtk_d_i_c_o_m_utilities.html#ae6e5cb3c6e0c8009c1d1d740c365cb12">vtkDICOMUtilities::UnpackUnsignedInt</a></div><div class="ttdeci">static unsigned int UnpackUnsignedInt(const unsigned char *cp)</div><div class="ttdoc">Unpack one little-endian int from a stream of bytes. </div><div class="ttdef"><b>Definition:</b> vtkDICOMUtilities.h:149</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_utilities_html_ae6e5cb3c6e0c8009c1d1d740c365cb12"><div class="ttname"><a href="classvtk_d_i_c_o_m_utilities.html#ae6e5cb3c6e0c8009c1d1d740c365cb12">vtkDICOMUtilities::UnpackUnsignedInt</a></div><div class="ttdeci">static unsigned int UnpackUnsignedInt(const unsigned char *cp)</div><div class="ttdoc">Unpack one little-endian int from a stream of bytes. </div><div class="ttdef"><b>Definition:</b> vtkDICOMUtilities.h:153</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_utilities_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities</a></div><div class="ttdoc">Utility functions for use with DICOM classes. </div><div class="ttdef"><b>Definition:</b> vtkDICOMUtilities.h:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 12 2016 21:55:03 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 11 2017 13:30:14 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

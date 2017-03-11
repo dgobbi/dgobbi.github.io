@@ -2,6 +2,7 @@ var searchData=
 [
   ['encode',['Encode',['../classvtk_d_i_c_o_m_image_codec.html#a238027354e08e91cfdde704adcc09248',1,'vtkDICOMImageCodec']]],
   ['end',['End',['../classvtk_d_i_c_o_m_item.html#a185d883870bf10ad8c844ad551cdfe53',1,'vtkDICOMItem::End()'],['../classvtk_d_i_c_o_m_meta_data.html#a19c506e4a5d0ea4d102e186b5b6a323a',1,'vtkDICOMMetaData::End()']]],
+  ['endianenum',['EndianEnum',['../classvtk_n_i_f_t_i_writer.html#aaa509dda09c80b553f4539134c95e5fd',1,'vtkNIFTIWriter']]],
   ['endoffile',['EndOfFile',['../classvtk_d_i_c_o_m_file.html#acdaa080740b814d25926f50754996343',1,'vtkDICOMFile']]],
   ['entry',['Entry',['../structvtk_d_i_c_o_m_dict_entry_1_1_entry.html',1,'vtkDICOMDictEntry']]],
   ['enumtype',['EnumType',['../classvtk_d_i_c_o_m_v_r.html#a40e983ebf7e6d989a33fbc28991c5b54',1,'vtkDICOMVR']]],

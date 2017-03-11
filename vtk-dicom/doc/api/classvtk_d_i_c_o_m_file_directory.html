@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.9</span>
+   &#160;<span id="projectnumber">0.7.11</span>
    </div>
   </td>
  </tr>
@@ -100,6 +100,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:af9e63a4f3d788b7a238c96432de93027"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9e63a4f3d788b7a238c96432de93027"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#af9e63a4f3d788b7a238c96432de93027">Mode</a> { <b>In</b>, 
+<b>Out</b>
+ }<tr class="memdesc:af9e63a4f3d788b7a238c96432de93027"><td class="mdescLeft">&#160;</td><td class="mdescRight">The access mode (input or output). <br /></td></tr>
+<tr class="separator:af9e63a4f3d788b7a238c96432de93027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
 <tr class="memitem:a229fffcbc02db4f5978220ff4b9c0f55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a229fffcbc02db4f5978220ff4b9c0f55"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#a229fffcbc02db4f5978220ff4b9c0f55">Code</a> { <br />
 &#160;&#160;<b>Good</b>, 
 <b>UnknownError</b>, 
@@ -146,10 +151,17 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#a57e5e017ace3a4efdf49077fd463202f">IsDirectory</a> (int i)</td></tr>
 <tr class="memdesc:a57e5e017ace3a4efdf49077fd463202f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the list entry is a directory. <br /></td></tr>
 <tr class="separator:a57e5e017ace3a4efdf49077fd463202f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a037a372f59d624d8a2837889b2dbb123"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a037a372f59d624d8a2837889b2dbb123"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#a037a372f59d624d8a2837889b2dbb123">IsSpecial</a> (int i)</td></tr>
+<tr class="memdesc:a037a372f59d624d8a2837889b2dbb123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the list entry is special (a device, socket, or pipe). <br /></td></tr>
+<tr class="separator:a037a372f59d624d8a2837889b2dbb123"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23a465083ccd0677c8ed6ae6b2135fa7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23a465083ccd0677c8ed6ae6b2135fa7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#a23a465083ccd0677c8ed6ae6b2135fa7">IsSymlink</a> (int i)</td></tr>
 <tr class="memdesc:a23a465083ccd0677c8ed6ae6b2135fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the list entry is a symbolic link. <br /></td></tr>
 <tr class="separator:a23a465083ccd0677c8ed6ae6b2135fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bf2c97ed6c63e67fe10a880d37fd70e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#a1bf2c97ed6c63e67fe10a880d37fd70e">IsBroken</a> (int i)</td></tr>
+<tr class="memdesc:a1bf2c97ed6c63e67fe10a880d37fd70e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the list entry is a symbolic link that is broken.  <a href="#a1bf2c97ed6c63e67fe10a880d37fd70e">More...</a><br /></td></tr>
+<tr class="separator:a1bf2c97ed6c63e67fe10a880d37fd70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af711e67104f94ed6e3500fc5b4395ba1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af711e67104f94ed6e3500fc5b4395ba1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#af711e67104f94ed6e3500fc5b4395ba1">IsHidden</a> (int i)</td></tr>
 <tr class="memdesc:af711e67104f94ed6e3500fc5b4395ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the list entry has an attribute that marks it as hidden. <br /></td></tr>
@@ -163,8 +175,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:adc9b2ec3401c2e35d435ad1fb2be7510"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#adc9b2ec3401c2e35d435ad1fb2be7510">Access</a> (const char *dirname, <a class="el" href="classvtk_d_i_c_o_m_file_directory.html#af9e63a4f3d788b7a238c96432de93027">Mode</a> mode)</td></tr>
+<tr class="memdesc:adc9b2ec3401c2e35d435ad1fb2be7510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test a directory for accessibility (static method).  <a href="#adc9b2ec3401c2e35d435ad1fb2be7510">More...</a><br /></td></tr>
+<tr class="separator:adc9b2ec3401c2e35d435ad1fb2be7510"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68d6af8ab40ed5d38f5656b0bcb11511"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#a68d6af8ab40ed5d38f5656b0bcb11511">Create</a> (const char *dirname)</td></tr>
-<tr class="memdesc:a68d6af8ab40ed5d38f5656b0bcb11511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new directory with default permissions.  <a href="#a68d6af8ab40ed5d38f5656b0bcb11511">More...</a><br /></td></tr>
+<tr class="memdesc:a68d6af8ab40ed5d38f5656b0bcb11511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new directory with default permissions (static method).  <a href="#a68d6af8ab40ed5d38f5656b0bcb11511">More...</a><br /></td></tr>
 <tr class="separator:a68d6af8ab40ed5d38f5656b0bcb11511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -190,6 +205,43 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="adc9b2ec3401c2e35d435ad1fb2be7510"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int vtkDICOMFileDirectory::Access </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>dirname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#af9e63a4f3d788b7a238c96432de93027">Mode</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test a directory for accessibility (static method). </p>
+<p>The mode should be "In" or "Out" to indicate whether you intend to read from or write to the directory. A return value of zero means the directory can be accessed, otherwise an error code will be returned. </p>
+
+</div>
+</div>
 <a class="anchor" id="a68d6af8ab40ed5d38f5656b0bcb11511"></a>
 <div class="memitem">
 <div class="memproto">
@@ -212,8 +264,27 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Create a new directory with default permissions. </p>
+<p>Create a new directory with default permissions (static method). </p>
 <p>This will create any intermediate directories, as well. The return value is zero for success. Otherwise, one of the error codes is returned. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1bf2c97ed6c63e67fe10a880d37fd70e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vtkDICOMFileDirectory::IsBroken </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the list entry is a symbolic link that is broken. </p>
+<p>A link is broken if it points to a location that does not exist, or to a location that is in a directory that cannot be accessed. <a class="el" href="classvtk_d_i_c_o_m_file_directory.html#a23a465083ccd0677c8ed6ae6b2135fa7" title="Check if the list entry is a symbolic link. ">IsSymlink()</a> will always be true if <a class="el" href="classvtk_d_i_c_o_m_file_directory.html#a1bf2c97ed6c63e67fe10a880d37fd70e" title="Check if the list entry is a symbolic link that is broken. ">IsBroken()</a> is true. </p>
 
 </div>
 </div>
@@ -223,7 +294,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 12 2016 21:55:03 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 11 2017 13:30:17 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

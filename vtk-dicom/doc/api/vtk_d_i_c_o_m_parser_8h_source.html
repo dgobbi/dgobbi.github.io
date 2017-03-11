@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.9</span>
+   &#160;<span id="projectnumber">0.7.11</span>
    </div>
   </td>
  </tr>
@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  Program: DICOM for VTK</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  Copyright (c) 2012-2015 David Gobbi</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  Copyright (c) 2012-2017 David Gobbi</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  All rights reserved.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  See Copyright.txt or http://dgobbi.github.io/bsd3.txt for details.</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span></div>
@@ -124,121 +124,130 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_parser.html#a9aa0a5c4692b873610b9e386fc9c427a">   42</a></span>&#160;  vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>, <a class="code" href="classvtk_object.html">vtkObject</a>);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">PrintSelf</a>(ostream&amp; os, vtkIndent indent);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  vtkSetStringMacro(FileName);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  vtkGetStringMacro(FileName);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> SetMetaData(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *GetMetaData() { <span class="keywordflow">return</span> this-&gt;MetaData; }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  vtkSetMacro(Index, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">int</span> GetIndex() { <span class="keywordflow">return</span> this-&gt;Index; }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">void</span> SetQuery(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *query);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *GetQuery() { <span class="keywordflow">return</span> this-&gt;Query; }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">void</span> SetQueryItem(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a>&amp; query);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">void</span> SetGroups(vtkUnsignedShortArray *groups);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  vtkUnsignedShortArray *GetGroups() { <span class="keywordflow">return</span> this-&gt;Groups; }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">bool</span> GetQueryMatched() { <span class="keywordflow">return</span> this-&gt;QueryMatched; }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#ifdef VTK_OVERRIDE</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">PrintSelf</a>(ostream&amp; os, vtkIndent indent) VTK_OVERRIDE;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">PrintSelf</a>(ostream&amp; os, vtkIndent indent);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  vtkSetStringMacro(FileName);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  vtkGetStringMacro(FileName);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">void</span> SetMetaData(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *GetMetaData() { <span class="keywordflow">return</span> this-&gt;MetaData; }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  vtkSetMacro(Index, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">int</span> GetIndex() { <span class="keywordflow">return</span> this-&gt;Index; }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">void</span> SetQuery(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *query);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *GetQuery() { <span class="keywordflow">return</span> this-&gt;Query; }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">void</span> SetQueryItem(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a>&amp; query);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">void</span> SetGroups(vtkUnsignedShortArray *groups);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  vtkUnsignedShortArray *GetGroups() { <span class="keywordflow">return</span> this-&gt;Groups; }</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_parser.html#a9804112ef6aa24f373fc83127a698c12">  101</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_parser.html#a9804112ef6aa24f373fc83127a698c12">GetPixelDataFound</a>() { <span class="keywordflow">return</span> this-&gt;PixelDataFound; }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_parser.html#a1a98c0b47650cc19f6c1a1573e427071">  104</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_parser.html#a1a98c0b47650cc19f6c1a1573e427071">GetPixelDataVL</a>() { <span class="keywordflow">return</span> this-&gt;PixelDataVL; }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">bool</span> GetQueryMatched() { <span class="keywordflow">return</span> this-&gt;QueryMatched; }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_parser.html#a9804112ef6aa24f373fc83127a698c12">  105</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_parser.html#a9804112ef6aa24f373fc83127a698c12">GetPixelDataFound</a>() { <span class="keywordflow">return</span> this-&gt;PixelDataFound; }</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_parser.html#a5d56adc9dfbdd7996f297c9733e94233">  113</a></span>&#160;  vtkTypeInt64 <a class="code" href="classvtk_d_i_c_o_m_parser.html#a5d56adc9dfbdd7996f297c9733e94233">GetFileOffset</a>() { <span class="keywordflow">return</span> this-&gt;FileOffset; }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_parser.html#a3de770d2d4d53e706a38bafd027df260">  116</a></span>&#160;  vtkTypeInt64 <a class="code" href="classvtk_d_i_c_o_m_parser.html#a3de770d2d4d53e706a38bafd027df260">GetFileSize</a>() { <span class="keywordflow">return</span> this-&gt;FileSize; }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordtype">void</span> SetBufferSize(<span class="keywordtype">int</span> size);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordtype">int</span> GetBufferSize() { <span class="keywordflow">return</span> this-&gt;BufferSize; }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Update();</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_parser.html#a1a98c0b47650cc19f6c1a1573e427071">  108</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_parser.html#a1a98c0b47650cc19f6c1a1573e427071">GetPixelDataVL</a>() { <span class="keywordflow">return</span> this-&gt;PixelDataVL; }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_parser.html#a5d56adc9dfbdd7996f297c9733e94233">  117</a></span>&#160;  vtkTypeInt64 <a class="code" href="classvtk_d_i_c_o_m_parser.html#a5d56adc9dfbdd7996f297c9733e94233">GetFileOffset</a>() { <span class="keywordflow">return</span> this-&gt;FileOffset; }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_parser.html#a3de770d2d4d53e706a38bafd027df260">  120</a></span>&#160;  vtkTypeInt64 <a class="code" href="classvtk_d_i_c_o_m_parser.html#a3de770d2d4d53e706a38bafd027df260">GetFileSize</a>() { <span class="keywordflow">return</span> this-&gt;FileSize; }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">void</span> SetBufferSize(<span class="keywordtype">int</span> size);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">int</span> GetBufferSize() { <span class="keywordflow">return</span> this-&gt;BufferSize; }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_parser.html#a8506cebe743c18c87910bdf33a720e38">  133</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="classvtk_d_i_c_o_m_parser.html#a8506cebe743c18c87910bdf33a720e38">GetErrorCode</a>() { <span class="keywordflow">return</span> this-&gt;ErrorCode; }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Update();</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>();</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  ~<a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>();</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_parser.html#a8506cebe743c18c87910bdf33a720e38">  137</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="classvtk_d_i_c_o_m_parser.html#a8506cebe743c18c87910bdf33a720e38">GetErrorCode</a>() { <span class="keywordflow">return</span> this-&gt;ErrorCode; }</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> FillBuffer(</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* &amp;cp, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* &amp;ep);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keyword">virtual</span> vtkTypeInt64 GetBytesRemaining(</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *ep);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  ~<a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> FillBuffer(</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* &amp;cp, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* &amp;ep);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> ParseError(</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *ep, <span class="keyword">const</span> <span class="keywordtype">char</span> *message);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keyword">virtual</span> vtkTypeInt64 GetBytesRemaining(</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *ep);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_parser.html#abad5ef6f2c15e142df864d96e31489c5">  163</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_parser.html#abad5ef6f2c15e142df864d96e31489c5">SetErrorCode</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> e) { this-&gt;ErrorCode = e; }</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> ReadFile(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *data, <span class="keywordtype">int</span> idx);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keywordtype">bool</span> ReadMetaHeader(</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* &amp;cp, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* &amp;ep,</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *data, <span class="keywordtype">int</span> idx);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keywordtype">bool</span> ReadMetaData(</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* &amp;cp, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* &amp;ep,</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *data, <span class="keywordtype">int</span> idx);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  vtkTypeInt64 GetBytesProcessed(</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* cp, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* ep);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> ParseError(</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cp, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *ep, <span class="keyword">const</span> <span class="keywordtype">char</span> *message);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_parser.html#abad5ef6f2c15e142df864d96e31489c5">  167</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_parser.html#abad5ef6f2c15e142df864d96e31489c5">SetErrorCode</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> e) { this-&gt;ErrorCode = e; }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> ReadFile(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *data, <span class="keywordtype">int</span> idx);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keywordtype">bool</span> ReadMetaHeader(</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* &amp;cp, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* &amp;ep,</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *data, <span class="keywordtype">int</span> idx);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordtype">bool</span> ReadMetaData(</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* &amp;cp, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* &amp;ep,</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *data, <span class="keywordtype">int</span> idx);</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordtype">char</span> *FileName;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  std::string TransferSyntax;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *MetaData;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *Query;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *QueryItem;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  vtkUnsignedShortArray *Groups;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_file.html">vtkDICOMFile</a> *InputFile;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  vtkTypeInt64 BytesRead;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  vtkTypeInt64 FileOffset;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  vtkTypeInt64 FileSize;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *Buffer;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="keywordtype">int</span> BufferSize;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordtype">int</span> ChunkSize;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordtype">int</span> Index;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> PixelDataVL;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordtype">bool</span> PixelDataFound;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">bool</span> QueryMatched;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ErrorCode;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="comment">// used to share FillBuffer with internal classes</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span>vtkDICOMParserInternalFriendship;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>&amp;);  <span class="comment">// Not implemented.</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>&amp;);  <span class="comment">// Not implemented.</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;};</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMParser_h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  vtkTypeInt64 GetBytesProcessed(</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* cp, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* ep);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordtype">char</span> *FileName;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  std::string TransferSyntax;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *MetaData;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *Query;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *QueryItem;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  vtkUnsignedShortArray *Groups;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_file.html">vtkDICOMFile</a> *InputFile;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  vtkTypeInt64 BytesRead;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  vtkTypeInt64 FileOffset;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  vtkTypeInt64 FileSize;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *Buffer;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordtype">int</span> BufferSize;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">int</span> ChunkSize;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordtype">int</span> Index;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> PixelDataVL;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keywordtype">bool</span> PixelDataFound;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keywordtype">bool</span> QueryMatched;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ErrorCode;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="comment">// used to share FillBuffer with internal classes</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span>vtkDICOMParserInternalFriendship;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>&amp;) VTK_DELETE_FUNCTION;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keywordtype">void</span> operator=(const <a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>&amp;) VTK_DELETE_FUNCTION;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>&amp;);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a>&amp;);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;};</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMParser_h */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classvtk_object_html_a4d5b227267c076d6f9e38483370b6612"><div class="ttname"><a href="classvtk_object.html#a4d5b227267c076d6f9e38483370b6612">vtkObject::New</a></div><div class="ttdeci">static vtkObject * New()</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_parser_html_a1a98c0b47650cc19f6c1a1573e427071"><div class="ttname"><a href="classvtk_d_i_c_o_m_parser.html#a1a98c0b47650cc19f6c1a1573e427071">vtkDICOMParser::GetPixelDataVL</a></div><div class="ttdeci">unsigned int GetPixelDataVL()</div><div class="ttdoc">Get the VL for the PixelData, will be 0xffffffff if compressed. </div><div class="ttdef"><b>Definition:</b> vtkDICOMParser.h:104</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_parser_html_a9804112ef6aa24f373fc83127a698c12"><div class="ttname"><a href="classvtk_d_i_c_o_m_parser.html#a9804112ef6aa24f373fc83127a698c12">vtkDICOMParser::GetPixelDataFound</a></div><div class="ttdeci">bool GetPixelDataFound()</div><div class="ttdoc">This is true only if PixelData was found in the file. </div><div class="ttdef"><b>Definition:</b> vtkDICOMParser.h:101</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_parser_html_a1a98c0b47650cc19f6c1a1573e427071"><div class="ttname"><a href="classvtk_d_i_c_o_m_parser.html#a1a98c0b47650cc19f6c1a1573e427071">vtkDICOMParser::GetPixelDataVL</a></div><div class="ttdeci">unsigned int GetPixelDataVL()</div><div class="ttdoc">Get the VL for the PixelData, will be 0xffffffff if compressed. </div><div class="ttdef"><b>Definition:</b> vtkDICOMParser.h:108</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_parser_html_a9804112ef6aa24f373fc83127a698c12"><div class="ttname"><a href="classvtk_d_i_c_o_m_parser.html#a9804112ef6aa24f373fc83127a698c12">vtkDICOMParser::GetPixelDataFound</a></div><div class="ttdeci">bool GetPixelDataFound()</div><div class="ttdoc">This is true only if PixelData was found in the file. </div><div class="ttdef"><b>Definition:</b> vtkDICOMParser.h:105</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_file_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_file.html">vtkDICOMFile</a></div><div class="ttdoc">A class that provides basic input/output operations. </div><div class="ttdef"><b>Definition:</b> vtkDICOMFile.h:32</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_parser_html_a5d56adc9dfbdd7996f297c9733e94233"><div class="ttname"><a href="classvtk_d_i_c_o_m_parser.html#a5d56adc9dfbdd7996f297c9733e94233">vtkDICOMParser::GetFileOffset</a></div><div class="ttdeci">vtkTypeInt64 GetFileOffset()</div><div class="ttdoc">Get the byte offset to the end of the metadata. </div><div class="ttdef"><b>Definition:</b> vtkDICOMParser.h:113</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_parser_html_a5d56adc9dfbdd7996f297c9733e94233"><div class="ttname"><a href="classvtk_d_i_c_o_m_parser.html#a5d56adc9dfbdd7996f297c9733e94233">vtkDICOMParser::GetFileOffset</a></div><div class="ttdeci">vtkTypeInt64 GetFileOffset()</div><div class="ttdoc">Get the byte offset to the end of the metadata. </div><div class="ttdef"><b>Definition:</b> vtkDICOMParser.h:117</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_item_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a></div><div class="ttdoc">An item in a DICOM sequence (type SQ). </div><div class="ttdef"><b>Definition:</b> vtkDICOMItem.h:33</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_parser_html_abad5ef6f2c15e142df864d96e31489c5"><div class="ttname"><a href="classvtk_d_i_c_o_m_parser.html#abad5ef6f2c15e142df864d96e31489c5">vtkDICOMParser::SetErrorCode</a></div><div class="ttdeci">void SetErrorCode(unsigned long e)</div><div class="ttdoc">Set the error code. </div><div class="ttdef"><b>Definition:</b> vtkDICOMParser.h:163</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_parser_html_a3de770d2d4d53e706a38bafd027df260"><div class="ttname"><a href="classvtk_d_i_c_o_m_parser.html#a3de770d2d4d53e706a38bafd027df260">vtkDICOMParser::GetFileSize</a></div><div class="ttdeci">vtkTypeInt64 GetFileSize()</div><div class="ttdoc">Get the total file length (only valid after Update). </div><div class="ttdef"><b>Definition:</b> vtkDICOMParser.h:116</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_parser_html_abad5ef6f2c15e142df864d96e31489c5"><div class="ttname"><a href="classvtk_d_i_c_o_m_parser.html#abad5ef6f2c15e142df864d96e31489c5">vtkDICOMParser::SetErrorCode</a></div><div class="ttdeci">void SetErrorCode(unsigned long e)</div><div class="ttdoc">Set the error code. </div><div class="ttdef"><b>Definition:</b> vtkDICOMParser.h:167</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_parser_html_a3de770d2d4d53e706a38bafd027df260"><div class="ttname"><a href="classvtk_d_i_c_o_m_parser.html#a3de770d2d4d53e706a38bafd027df260">vtkDICOMParser::GetFileSize</a></div><div class="ttdeci">vtkTypeInt64 GetFileSize()</div><div class="ttdoc">Get the total file length (only valid after Update). </div><div class="ttdef"><b>Definition:</b> vtkDICOMParser.h:120</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_meta_data_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></div><div class="ttdoc">A container class for DICOM metadata. </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaData.h:32</div></div>
 <div class="ttc" id="classvtk_object_html_abf3dbb4154289b56a12483eee3866263"><div class="ttname"><a href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">vtkObject::PrintSelf</a></div><div class="ttdeci">virtual void PrintSelf(ostream &amp;os, vtkIndent indent)</div></div>
 <div class="ttc" id="classvtk_object_html"><div class="ttname"><a href="classvtk_object.html">vtkObject</a></div><div class="ttdoc">abstract base class for most VTK objects </div><div class="ttdef"><b>Definition:</b> vtkObject.h:51</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_parser_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_parser.html">vtkDICOMParser</a></div><div class="ttdoc">A meta data reader for DICOM data. </div><div class="ttdef"><b>Definition:</b> vtkDICOMParser.h:35</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_parser_html_a8506cebe743c18c87910bdf33a720e38"><div class="ttname"><a href="classvtk_d_i_c_o_m_parser.html#a8506cebe743c18c87910bdf33a720e38">vtkDICOMParser::GetErrorCode</a></div><div class="ttdeci">unsigned long GetErrorCode()</div><div class="ttdoc">Get the error code. </div><div class="ttdef"><b>Definition:</b> vtkDICOMParser.h:133</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_parser_html_a8506cebe743c18c87910bdf33a720e38"><div class="ttname"><a href="classvtk_d_i_c_o_m_parser.html#a8506cebe743c18c87910bdf33a720e38">vtkDICOMParser::GetErrorCode</a></div><div class="ttdeci">unsigned long GetErrorCode()</div><div class="ttdoc">Get the error code. </div><div class="ttdef"><b>Definition:</b> vtkDICOMParser.h:137</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 12 2016 21:55:03 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 11 2017 13:30:14 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

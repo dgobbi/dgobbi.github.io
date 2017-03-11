@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.9</span>
+   &#160;<span id="projectnumber">0.7.11</span>
    </div>
   </td>
  </tr>
@@ -255,10 +255,10 @@ virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetCl
 <tr class="separator:ad25add19d0761d9aecf91b51b7657061"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad65603e08575b80be747acf0d0128c40"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_header.html#ad65603e08575b80be747acf0d0128c40">IsA</a> (const char *type)</td></tr>
 <tr class="separator:ad65603e08575b80be747acf0d0128c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0787fdae36b1401086104e168cd4bac4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0787fdae36b1401086104e168cd4bac4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_header.html#a0787fdae36b1401086104e168cd4bac4">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
-<tr class="memdesc:a0787fdae36b1401086104e168cd4bac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object. <br /></td></tr>
-<tr class="separator:a0787fdae36b1401086104e168cd4bac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13c49326b6258aceba255e2f061afaba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13c49326b6258aceba255e2f061afaba"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_header.html#a13c49326b6258aceba255e2f061afaba">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
+<tr class="memdesc:a13c49326b6258aceba255e2f061afaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object. <br /></td></tr>
+<tr class="separator:a13c49326b6258aceba255e2f061afaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a6d913a49c9a7a727564f56def7a334a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d913a49c9a7a727564f56def7a334a3"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_header.html#a6d913a49c9a7a727564f56def7a334a3">GetMagic</a> ()</td></tr>
@@ -644,6 +644,14 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>IsTypeOf</b> (c
 <tr class="memitem:a7705a5741ff9335d2ce5d3523e21c886"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7705a5741ff9335d2ce5d3523e21c886"></a>
 static <a class="el" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>SafeDownCast</b> (<a class="el" href="classvtk_object.html">vtkObject</a> *o)</td></tr>
 <tr class="separator:a7705a5741ff9335d2ce5d3523e21c886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:aecc8dcf8002c4bf16d24134772be3f79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecc8dcf8002c4bf16d24134772be3f79"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_header.html#aecc8dcf8002c4bf16d24134772be3f79">ByteSwapHeader</a> (nifti_1_header *hdr)</td></tr>
+<tr class="memdesc:aecc8dcf8002c4bf16d24134772be3f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Byte-swap the nifti header struct. <br /></td></tr>
+<tr class="separator:aecc8dcf8002c4bf16d24134772be3f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72aac2fade60b770ff6b141a6acda082"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72aac2fade60b770ff6b141a6acda082"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ByteSwapHeader</b> (nifti_2_header *hdr)</td></tr>
+<tr class="separator:a72aac2fade60b770ff6b141a6acda082"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classvtk_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classvtk_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classvtk_object.html">vtkObject</a></td></tr>
 <tr class="memitem:ae9548a248bce0f02f73bbcccd0a9489e inherit pub_static_methods_classvtk_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9548a248bce0f02f73bbcccd0a9489e"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><b>IsTypeOf</b> (const char *type)</td></tr>
@@ -1132,7 +1140,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 12 2016 21:55:04 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 11 2017 13:30:23 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

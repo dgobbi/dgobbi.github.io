@@ -16,7 +16,7 @@ var searchData=
   ['memoryroworder',['MemoryRowOrder',['../classvtk_d_i_c_o_m_reader.html#a697be818a1ce198a8b76968aea41dbe3',1,'vtkDICOMReader::MemoryRowOrder()'],['../classvtk_d_i_c_o_m_writer.html#a814536875fae68cc6c31f301c3a8558e',1,'vtkDICOMWriter::MemoryRowOrder()']]],
   ['meta_5fdata',['META_DATA',['../classvtk_d_i_c_o_m_algorithm.html#a06c949127dd79ad704f3be7a6b41f0e1',1,'vtkDICOMAlgorithm']]],
   ['metadata',['MetaData',['../classvtk_d_i_c_o_m_generator.html#a1615278dd6f5696eda49c189f5a2fc47',1,'vtkDICOMGenerator::MetaData()'],['../classvtk_d_i_c_o_m_reader.html#a26fb321168b0b82e563a7126d0bdb2a3',1,'vtkDICOMReader::MetaData()'],['../classvtk_d_i_c_o_m_writer.html#ae1c539f5b1483fa73b4715987edcd95f',1,'vtkDICOMWriter::MetaData()']]],
-  ['mode',['Mode',['../classvtk_d_i_c_o_m_file.html#afa1c612f270f39ea2fc7ec4fa128a915',1,'vtkDICOMFile']]],
+  ['mode',['Mode',['../classvtk_d_i_c_o_m_file.html#afa1c612f270f39ea2fc7ec4fa128a915',1,'vtkDICOMFile::Mode()'],['../classvtk_d_i_c_o_m_file_directory.html#af9e63a4f3d788b7a238c96432de93027',1,'vtkDICOMFileDirectory::Mode()']]],
   ['modified',['Modified',['../classvtk_object.html#a8586479b9d204cf0a45fb693d4281354',1,'vtkObject']]],
   ['modifyrequest',['ModifyRequest',['../classvtk_algorithm.html#a46fd9e0fd66e763aab2be5ded6e38de6',1,'vtkAlgorithm']]],
   ['multiframe',['MultiFrame',['../classvtk_d_i_c_o_m_generator.html#a260c33807bead8e1f9d39309ccc06941',1,'vtkDICOMGenerator']]]
