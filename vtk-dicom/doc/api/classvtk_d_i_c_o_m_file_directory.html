@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.11</span>
+   &#160;<span id="projectnumber">0.8.0</span>
    </div>
   </td>
  </tr>
@@ -139,14 +139,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memdesc:a25207db20f598693596fedcaf1281650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an error indicator (zero if no error). <br /></td></tr>
 <tr class="separator:a25207db20f598693596fedcaf1281650"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a280a6a27e07e79810ad3b1861d15846c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a280a6a27e07e79810ad3b1861d15846c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#a280a6a27e07e79810ad3b1861d15846c">GetNumberOfFiles</a> ()</td></tr>
-<tr class="memdesc:a280a6a27e07e79810ad3b1861d15846c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of files and subdirectories in the directory. <br /></td></tr>
-<tr class="separator:a280a6a27e07e79810ad3b1861d15846c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a203bbadc8090361c68990753b7fd284e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a203bbadc8090361c68990753b7fd284e"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#a203bbadc8090361c68990753b7fd284e">GetFile</a> (int i)</td></tr>
-<tr class="memdesc:a203bbadc8090361c68990753b7fd284e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the ith file or subdirectory. <br /></td></tr>
-<tr class="separator:a203bbadc8090361c68990753b7fd284e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf3381b2916a4f7259b404095e540ea9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf3381b2916a4f7259b404095e540ea9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#adf3381b2916a4f7259b404095e540ea9">GetNumberOfEntries</a> ()</td></tr>
+<tr class="memdesc:adf3381b2916a4f7259b404095e540ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of files and subdirectories in the directory. <br /></td></tr>
+<tr class="separator:adf3381b2916a4f7259b404095e540ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ec86fe98dfb261cb6676d58f02743fe"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#a7ec86fe98dfb261cb6676d58f02743fe">GetEntry</a> (int i)</td></tr>
+<tr class="memdesc:a7ec86fe98dfb261cb6676d58f02743fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the ith file or subdirectory.  <a href="#a7ec86fe98dfb261cb6676d58f02743fe">More...</a><br /></td></tr>
+<tr class="separator:a7ec86fe98dfb261cb6676d58f02743fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57e5e017ace3a4efdf49077fd463202f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57e5e017ace3a4efdf49077fd463202f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_directory.html#a57e5e017ace3a4efdf49077fd463202f">IsDirectory</a> (int i)</td></tr>
 <tr class="memdesc:a57e5e017ace3a4efdf49077fd463202f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the list entry is a directory. <br /></td></tr>
@@ -269,6 +268,25 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7ec86fe98dfb261cb6676d58f02743fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* vtkDICOMFileDirectory::GetEntry </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the name of the ith file or subdirectory. </p>
+<p>The entries do not include "." or "..". </p>
+
+</div>
+</div>
 <a class="anchor" id="a1bf2c97ed6c63e67fe10a880d37fd70e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -294,7 +312,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 11 2017 13:30:17 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 24 2017 22:01:27 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

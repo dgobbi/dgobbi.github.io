@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.11</span>
+   &#160;<span id="projectnumber">0.8.0</span>
    </div>
   </td>
  </tr>
@@ -100,7 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <p>Here is a short example of how to interpret the output of <a class="el" href="classvtk_d_i_c_o_m_reader.html" title="Read DICOM image files. ">vtkDICOMReader</a> for display: </p><div class="fragment"><div class="line">reader-&gt;Update();</div>
 <div class="line"><a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta = reader-&gt;GetMetaData();</div>
-<div class="line"><a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> photometric = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#a23f0032350e10fe80f446f4e3885ffff">GetAttributeValue</a>(DC::PhotometricInterpretation)</div>
+<div class="line"><a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> photometric = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#afabe46f14518d256e1e0efe476da623d">Get</a>(DC::PhotometricInterpretation)</div>
 <div class="line"><span class="keywordflow">if</span> (photometric.<a class="code" href="classvtk_d_i_c_o_m_value.html#ad3e040ab7b4eb75f422411c54b35f94b">Matches</a>(<span class="stringliteral">&quot;MONOCHROME1&quot;</span>))</div>
 <div class="line">{</div>
 <div class="line">  <span class="comment">// display with a lookup table that goes from white to black</span></div>
@@ -149,7 +149,7 @@ else WindowedValue = ((ModalityValue - c)/w + 0.5) * (n - 1)
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 11 2017 13:30:14 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 24 2017 22:01:24 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

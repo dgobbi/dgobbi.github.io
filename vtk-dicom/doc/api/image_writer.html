@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.11</span>
+   &#160;<span id="projectnumber">0.8.0</span>
    </div>
   </td>
  </tr>
@@ -89,11 +89,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">// Create a meta data object with some desired attributes.</span></div>
 <div class="line">vtkNew&lt;vtkDICOMMetaData&gt; meta;</div>
-<div class="line">meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#a8115e49580d8103f42adf0ecffc7c307">SetAttributeValue</a>(DC::PatientName, <span class="stringliteral">&quot;Doe^John&quot;</span>);</div>
-<div class="line">meta-&gt;SetAttributeValue(DC::ScanningSequence, <span class="stringliteral">&quot;GR&quot;</span>); <span class="comment">// Gradient Recalled</span></div>
-<div class="line">meta-&gt;SetAttributeValue(DC::SequenceVatiant, <span class="stringliteral">&quot;SP&quot;</span>); <span class="comment">// Spoiled</span></div>
-<div class="line">meta-&gt;SetAttributeValue(DC::ScanOptions, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">meta-&gt;SetAttributeValue(DC::MRAcquisitionType, <span class="stringliteral">&quot;2D&quot;</span>);</div>
+<div class="line">meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#a2621461b0178bc9cdbe22cc76a447a06">Set</a>(DC::PatientName, <span class="stringliteral">&quot;Doe^John&quot;</span>);</div>
+<div class="line">meta-&gt;Set(DC::ScanningSequence, <span class="stringliteral">&quot;GR&quot;</span>); <span class="comment">// Gradient Recalled</span></div>
+<div class="line">meta-&gt;Set(DC::SequenceVatiant, <span class="stringliteral">&quot;SP&quot;</span>); <span class="comment">// Spoiled</span></div>
+<div class="line">meta-&gt;Set(DC::ScanOptions, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line">meta-&gt;Set(DC::MRAcquisitionType, <span class="stringliteral">&quot;2D&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Plug the generator and meta data into the writer.</span></div>
 <div class="line">vtkNew&lt;vtkDICOMWriter&gt; writer;</div>
@@ -157,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 11 2017 13:30:15 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 24 2017 22:01:24 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

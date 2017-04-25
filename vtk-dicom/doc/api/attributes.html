@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.11</span>
+   &#160;<span id="projectnumber">0.8.0</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><p>Managing DICOM meta data.</p>
 <h2>Overview</h2>
-<p>The meta data can be loaded from a DICOM file in two ways: either via the <a class="el" href="classvtk_d_i_c_o_m_reader.html" title="Read DICOM image files. ">vtkDICOMReader</a> class (which also reads the image data), or via the <a class="el" href="classvtk_d_i_c_o_m_parser.html" title="A meta data reader for DICOM data. ">vtkDICOMParser</a> class (which reads only the meta data). These classes store the meta data in a <a class="el" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata. ">vtkDICOMMetaData</a> object, which provides storage for all of the files in the DICOM series. The GetAttributeValue() method for this class accepts a file index as a parameter, to allow one to choose the file in the series for which to get the attribute.</p>
+<p>The meta data can be loaded from a DICOM file in two ways: either via the <a class="el" href="classvtk_d_i_c_o_m_reader.html" title="Read DICOM image files. ">vtkDICOMReader</a> class (which also reads the image data), or via the <a class="el" href="classvtk_d_i_c_o_m_parser.html" title="A meta data reader for DICOM data. ">vtkDICOMParser</a> class (which reads only the meta data). These classes store the meta data in a <a class="el" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata. ">vtkDICOMMetaData</a> object, which provides storage for all of the files in the DICOM series. The Get() method for this class, which returns the value of a DICOM attribute, accepts a file index as a parameter. This allows one to choose the file in the series for which to get the attribute.</p>
 <div class="fragment"><div class="line"><span class="comment">// Get meta data from a vtkDICOMReader</span></div>
 <div class="line">reader-&gt;UpdateInformation();</div>
 <div class="line"><a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta = reader-&gt;GetMetaData();</div>
@@ -92,18 +92,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="keywordtype">int</span> n = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#ae1c81ebbc7da3d84adafebf0ed43f549">GetNumberOfInstances</a>();</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Get EchoTime attribute for first file in series.</span></div>
-<div class="line"><span class="keywordflow">if</span> (meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#aa1c6577c43a4c68414752cbb48e51f48">HasAttribute</a>(DC::EchoTime))</div>
+<div class="line"><span class="keywordflow">if</span> (meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#a91049abb7a5aee64bd2f687c189e9e94">Has</a>(DC::EchoTime))</div>
 <div class="line">{</div>
 <div class="line">  <span class="keywordtype">int</span> fileIndex = 0;</div>
-<div class="line">  <span class="keywordtype">double</span> t = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#a23f0032350e10fe80f446f4e3885ffff">GetAttributeValue</a>(fileIndex, DC::EchoTime).AsDouble();</div>
+<div class="line">  <span class="keywordtype">double</span> t = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#afabe46f14518d256e1e0efe476da623d">Get</a>(fileIndex, DC::EchoTime).AsDouble();</div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// If fileIndex is not given, attribute is retrieved from first file.</span></div>
-<div class="line">std::string str = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#a23f0032350e10fe80f446f4e3885ffff">GetAttributeValue</a>(DC::SeriesDescription).AsString();</div>
+<div class="line">std::string str = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#afabe46f14518d256e1e0efe476da623d">Get</a>(DC::SeriesDescription).AsString();</div>
 </div><!-- fragment --><p>Attributes are returned as a <a class="el" href="classvtk_d_i_c_o_m_value.html" title="A class to store attribute values for DICOM metadata. ">vtkDICOMValue</a> object, which has methods such as AsDouble(), AsInt() or AsString() that allow conversion of the value to various C++ types. If the DICOM file does not have the requested attribute, then the returned value will be empty and "value.IsValid()" will return "false". Calling AsString() on an invalid value will return the empty string, and likewise calling AsInt() or AsDouble() on an invalid value will return 0.</p>
 <h2>Per-slice meta data</h2>
 <p>As discussed in the Overview, a "file index" can be used when retrieving an attribute from <a class="el" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata. ">vtkDICOMMetaData</a>. It is important to note that this is a file index and not a slice index. The slices are sorted by spatial location, which might be different from the file order. Furthermore, a single DICOM file might actually contain multiple slices, with each slice stored in a different frame within the file.</p>
-<p>The reader provides an array, the FileIndexArray, that can be used to convert a "slice index" to a file index. It also provides a FrameIndexArray that can be used to convert a slice index to a frame number. Together, these can be used regardless of whether the there was one slice per file, or one slice per frame in a multi-frame file: the <a class="el" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata. ">vtkDICOMMetaData</a> object provides a GetAttributeValue() method that takes both a file index and a frame index, along with the tag of the attribute to be inspected.</p>
+<p>The reader provides an array, the FileIndexArray, that can be used to convert a "slice index" to a file index. It also provides a FrameIndexArray that can be used to convert a slice index to a frame number. Together, these can be used regardless of whether the there was one slice per file, or one slice per frame in a multi-frame file: the <a class="el" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata. ">vtkDICOMMetaData</a> object provides a Get() method that takes both a file index and a frame index, along with the tag of the attribute to be inspected.</p>
 <div class="fragment"><div class="line"><span class="comment">// Read the files and get the meta data.</span></div>
 <div class="line">reader-&gt;SetFileNames(fileNameArray);</div>
 <div class="line">reader-&gt;Update();</div>
@@ -119,8 +119,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="keywordtype">int</span> frameIndex = frameMap-&gt;GetComponent(sliceIndex, 0);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Get the position for that slice.</span></div>
-<div class="line"><a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> pv = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#a23f0032350e10fe80f446f4e3885ffff">GetAttributeValue</a>(fileIdx, frameIdx,</div>
-<div class="line">  DC::ImagePositionPatient);</div>
+<div class="line"><a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> pv = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#afabe46f14518d256e1e0efe476da623d">Get</a>(fileIdx, frameIdx, DC::ImagePositionPatient);</div>
 <div class="line"><span class="keywordtype">double</span> position[3] = { 0.0, 0.0, 0.0 };</div>
 <div class="line"><span class="keywordflow">if</span> (pv.<a class="code" href="classvtk_d_i_c_o_m_value.html#a45cc1f8dfc77f00e049a7e076ba0bcdd">IsValid</a>() &amp;&amp; pv.<a class="code" href="classvtk_d_i_c_o_m_value.html#a37239a31f707e39030e3a31317e61fcd">GetNumberOfValues</a>() == 3)</div>
 <div class="line">{</div>
@@ -145,7 +144,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="keywordtype">int</span> frameIndex = frameMap-&gt;GetComponent(sliceIndex, vectorIndex);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Get an attribute from the meta data.</span></div>
-<div class="line"><a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> v = metaData-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#a23f0032350e10fe80f446f4e3885ffff">GetAttributeValue</a>(fileIdx, frameIdx, tag);</div>
+<div class="line"><a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> v = metaData-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#afabe46f14518d256e1e0efe476da623d">Get</a>(fileIdx, frameIdx, tag);</div>
 </div><!-- fragment --><p>If the data has a time dimension and the reader's TimeAsVectorOn() method was called, then the components of each voxel can correspond both to a specific time slot, and to a specific vector component. To make the situation even more complicated, each pixel in the DICOM files might be an RGB pixel and therefore have three components as given by the SamplesPerPixel attribute in the meta data.</p>
 <p>The number of components in the FileIndexArray and FrameIndexArray is equal to the vector dimension, and if TimeAsVectorOn() was called, then the vector dimension will include the time dimension. The FileIndexArray and FrameIndexArray do not have components that correspond to the individual R,G,B components in RGB images, since the R, G, and B components will always have the same meta data because they always come from the same file and frame.</p>
 <p>The following strategy is recommended for accessing per-component meta data in multi-dimensional images:</p>
@@ -182,7 +181,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">{</div>
 <div class="line">  <span class="keywordtype">int</span> fileIndex = fileMap-&gt;GetComponent(sliceIndex, i);</div>
 <div class="line">  <span class="keywordtype">int</span> frameIndex = frameMap-&gt;GetComponent(sliceIndex, i);</div>
-<div class="line">  <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> v = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#a23f0032350e10fe80f446f4e3885ffff">GetAttributeValue</a>(fileIdx, frameIdx, tag);</div>
+<div class="line">  <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> v = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#afabe46f14518d256e1e0efe476da623d">Get</a>(fileIdx, frameIdx, tag);</div>
 <div class="line">  <span class="comment">// print or display the value</span></div>
 <div class="line">}</div>
 <div class="line"></div>
@@ -207,16 +206,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>DICOM meta data can be nested. For example, nesting is used to store per-frame meta data for enhanced multi-frame DICOM files. In order to make it easy to access nested attributes, the <a class="el" href="classvtk_d_i_c_o_m_tag_path.html" title="A tag path for digging values out of sequence items. ">vtkDICOMTagPath</a> class describes the full path to a nested attribute.</p>
 <div class="fragment"><div class="line"><span class="comment">// Get an attribute for frame 3 of a multi-frame file.</span></div>
 <div class="line"><span class="keywordtype">int</span> frameIdx = 3;</div>
-<div class="line"><span class="keywordtype">double</span> echoTime = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#a23f0032350e10fe80f446f4e3885ffff">GetAttributeValue</a>(</div>
+<div class="line"><span class="keywordtype">double</span> echoTime = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#afabe46f14518d256e1e0efe476da623d">Get</a>(</div>
 <div class="line">  <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a>(DC::PerFrameFunctionalGroupSequence, frameIdx,</div>
 <div class="line">                  DC::CardiacSynchronizationSequence, 0,</div>
 <div class="line">                  DC::NominalCardiacTriggerDelayTime)).AsDouble();</div>
-</div><!-- fragment --><p>This is rather verbose, so a more convenient method for accessing per-frame data is provided for enhanced multi-frame files. You can give the frame index after the file index, in which case the GetAttributeValue() method will perform a search for the attribute without requiring a full path.</p>
+</div><!-- fragment --><p>This is rather verbose, so a more convenient method for accessing per-frame data is provided for enhanced multi-frame files. You can give the frame index after the file index, in which case the Get() method will perform a search for the attribute without requiring a full path.</p>
 <div class="fragment"><div class="line"><span class="comment">// Get an attribute for frame 3 of an enhanced multi-frame file.</span></div>
 <div class="line"><span class="keywordtype">int</span> fileIdx = 0;</div>
 <div class="line"><span class="keywordtype">int</span> frameIdx = 3;</div>
-<div class="line"><a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> vw = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#a23f0032350e10fe80f446f4e3885ffff">GetAttributeValue</a>(fileIdx, frameIdx, DC::WindowWidth);</div>
-<div class="line"><a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> vc = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#a23f0032350e10fe80f446f4e3885ffff">GetAttributeValue</a>(fileIdx, frameIdx, DC::WindowCenter);</div>
+<div class="line"><a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> vw = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#afabe46f14518d256e1e0efe476da623d">Get</a>(fileIdx, frameIdx, DC::WindowWidth);</div>
+<div class="line"><a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> vc = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#afabe46f14518d256e1e0efe476da623d">Get</a>(fileIdx, frameIdx, DC::WindowCenter);</div>
 <div class="line"><span class="keywordflow">if</span> (vw.<a class="code" href="classvtk_d_i_c_o_m_value.html#a45cc1f8dfc77f00e049a7e076ba0bcdd">IsValid</a>() &amp;&amp; vc.<a class="code" href="classvtk_d_i_c_o_m_value.html#a45cc1f8dfc77f00e049a7e076ba0bcdd">IsValid</a>())</div>
 <div class="line">{</div>
 <div class="line">  <span class="comment">// set the window for the image</span></div>
@@ -298,12 +297,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="keywordflow">else</span></div>
 <div class="line">{</div>
 <div class="line">  <span class="comment">// ptag will now be 0019,xx04 where &quot;xx&quot; is usually 10 (first block)</span></div>
-<div class="line">  <span class="keywordtype">double</span> spacing = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#a23f0032350e10fe80f446f4e3885ffff">GetAttributeValue</a>(ptag).AsDouble();</div>
+<div class="line">  <span class="keywordtype">double</span> spacing = meta-&gt;<a class="code" href="classvtk_d_i_c_o_m_meta_data.html#afabe46f14518d256e1e0efe476da623d">Get</a>(ptag).AsDouble();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 11 2017 13:30:14 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 24 2017 22:01:24 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

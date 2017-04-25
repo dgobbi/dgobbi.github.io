@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.11</span>
+   &#160;<span id="projectnumber">0.8.0</span>
    </div>
   </td>
  </tr>
@@ -116,10 +116,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">  <span class="comment">// Get information related to the patient study</span></div>
 <div class="line">  <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> patient = dicomdir-&gt;GetPatientRecordForStudy(i);</div>
 <div class="line">  <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> study = dicomdir-&gt;GetStudyRecord(i);</div>
-<div class="line">  std::cout &lt;&lt; patient.<a class="code" href="classvtk_d_i_c_o_m_item.html#a2b389464f62adb2043313d3f3b99216f">GetAttributeValue</a>(DC::PatientName) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line">  std::cout &lt;&lt; patient.<a class="code" href="classvtk_d_i_c_o_m_item.html#a2b389464f62adb2043313d3f3b99216f">GetAttributeValue</a>(DC::PatientID) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line">  std::cout &lt;&lt; study.<a class="code" href="classvtk_d_i_c_o_m_item.html#a2b389464f62adb2043313d3f3b99216f">GetAttributeValue</a>(DC::StudyDate) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line">  std::cout &lt;&lt; study.<a class="code" href="classvtk_d_i_c_o_m_item.html#a2b389464f62adb2043313d3f3b99216f">GetAttributeValue</a>(DC::StudyTime) &lt;&lt; std::endl;</div>
+<div class="line">  std::cout &lt;&lt; patient.<a class="code" href="classvtk_d_i_c_o_m_item.html#af77f1eaa0919164dec8e9e4a17998a8c">Get</a>(DC::PatientName) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line">  std::cout &lt;&lt; patient.<a class="code" href="classvtk_d_i_c_o_m_item.html#af77f1eaa0919164dec8e9e4a17998a8c">Get</a>(DC::PatientID) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line">  std::cout &lt;&lt; study.<a class="code" href="classvtk_d_i_c_o_m_item.html#af77f1eaa0919164dec8e9e4a17998a8c">Get</a>(DC::StudyDate) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line">  std::cout &lt;&lt; study.<a class="code" href="classvtk_d_i_c_o_m_item.html#af77f1eaa0919164dec8e9e4a17998a8c">Get</a>(DC::StudyTime) &lt;&lt; std::endl;</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// Iterate through all of the series in this study.</span></div>
 <div class="line">  <span class="keywordtype">int</span> j1 = dicomdir-&gt;GetFirstSeriesForStudy(i);</div>
@@ -131,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <span class="comment">// get all the files in the series</span></div>
 <div class="line">    vtkStringArray *sortedFiles = dicomdir-&gt;GetFileNamesForSeries(j);</div>
 <div class="line">    std::cout &lt;&lt; sortedFiles.GetNumberOfValues() &lt;&lt; <span class="stringliteral">&quot; files: &quot;</span>;</div>
-<div class="line">    std::cout &lt;&lt; series.<a class="code" href="classvtk_d_i_c_o_m_item.html#a2b389464f62adb2043313d3f3b99216f">GetAttributeValue</a>(DC::SeriesInstanceUID) &lt;&lt; std::endl;</div>
+<div class="line">    std::cout &lt;&lt; series.<a class="code" href="classvtk_d_i_c_o_m_item.html#af77f1eaa0919164dec8e9e4a17998a8c">Get</a>(DC::SeriesInstanceUID) &lt;&lt; std::endl;</div>
 <div class="line">  }</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>The PatientRecord, StudyRecord, and SeriesRecord in the above example contain attributes for the images that were stored in the DICOMDIR index file. At the bare minimum, these will provide the PatientName, PatientID, StudyDate, StudyTime, StudyInstanceUID, and SeriesInstanceUID. Usually the StudyDescription, SeriesDescription and SeriesNumber are also available. Furthermore, the method GetMetaDataForSeries() returns an amalgamation of the Patient, Study, Series, and Image information as a <a class="el" href="classvtk_d_i_c_o_m_meta_data.html" title="A container class for DICOM metadata. ">vtkDICOMMetaData</a> object (though the per-image information is sometimes limited to just the InstanceNumber and the SOPInstanceUID).</p>
@@ -144,12 +144,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">// Make a list of attributes to match, using the utf-8 character set.</span></div>
 <div class="line"><a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> query;</div>
-<div class="line">query.<a class="code" href="classvtk_d_i_c_o_m_item.html#ab06bc968b5f20314fb99ca3db49f1b4b">SetAttributeValue</a>(DC::SpecificCharacterSet, <span class="stringliteral">&quot;ISO_IR 192&quot;</span>);</div>
-<div class="line">query.<a class="code" href="classvtk_d_i_c_o_m_item.html#ab06bc968b5f20314fb99ca3db49f1b4b">SetAttributeValue</a>(DC::PatientName, <span class="stringliteral">&quot;Doe^John&quot;</span>);</div>
-<div class="line">query.<a class="code" href="classvtk_d_i_c_o_m_item.html#ab06bc968b5f20314fb99ca3db49f1b4b">SetAttributeValue</a>(DC::StudyDate, <span class="stringliteral">&quot;2012-2015&quot;</span>);</div>
-<div class="line">query.<a class="code" href="classvtk_d_i_c_o_m_item.html#ab06bc968b5f20314fb99ca3db49f1b4b">SetAttributeValue</a>(DC::Modality, <span class="stringliteral">&quot;MR&quot;</span>);</div>
-<div class="line">query.<a class="code" href="classvtk_d_i_c_o_m_item.html#ab06bc968b5f20314fb99ca3db49f1b4b">SetAttributeValue</a>(DC::ImageType, <span class="stringliteral">&quot;PRIMARY&quot;</span>);</div>
-<div class="line">query.<a class="code" href="classvtk_d_i_c_o_m_item.html#ab06bc968b5f20314fb99ca3db49f1b4b">SetAttributeValue</a>(DC::SeriesDescription, <span class="stringliteral">&quot;*T1w*&quot;</span>);</div>
+<div class="line">query.<a class="code" href="classvtk_d_i_c_o_m_item.html#ada3e1cd2745c15de677c85eaf7053cdb">Set</a>(DC::SpecificCharacterSet, <span class="stringliteral">&quot;ISO_IR 192&quot;</span>);</div>
+<div class="line">query.<a class="code" href="classvtk_d_i_c_o_m_item.html#ada3e1cd2745c15de677c85eaf7053cdb">Set</a>(DC::PatientName, <span class="stringliteral">&quot;Doe^John&quot;</span>);</div>
+<div class="line">query.<a class="code" href="classvtk_d_i_c_o_m_item.html#ada3e1cd2745c15de677c85eaf7053cdb">Set</a>(DC::StudyDate, <span class="stringliteral">&quot;2012-2015&quot;</span>);</div>
+<div class="line">query.<a class="code" href="classvtk_d_i_c_o_m_item.html#ada3e1cd2745c15de677c85eaf7053cdb">Set</a>(DC::Modality, <span class="stringliteral">&quot;MR&quot;</span>);</div>
+<div class="line">query.<a class="code" href="classvtk_d_i_c_o_m_item.html#ada3e1cd2745c15de677c85eaf7053cdb">Set</a>(DC::ImageType, <span class="stringliteral">&quot;PRIMARY&quot;</span>);</div>
+<div class="line">query.<a class="code" href="classvtk_d_i_c_o_m_item.html#ada3e1cd2745c15de677c85eaf7053cdb">Set</a>(DC::SeriesDescription, <span class="stringliteral">&quot;*T1w*&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">vtkNew&lt;vtkDICOMDirectory&gt; dicomdir;</div>
 <div class="line"><span class="comment">// The SetInputFileNames method takes directories, too!</span></div>
@@ -199,7 +199,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 11 2017 13:30:14 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 24 2017 22:01:24 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

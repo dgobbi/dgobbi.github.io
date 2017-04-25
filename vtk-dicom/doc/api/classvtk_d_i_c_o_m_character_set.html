@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.11</span>
+   &#160;<span id="projectnumber">0.8.0</span>
    </div>
   </td>
  </tr>
@@ -116,18 +116,42 @@ Public Types</h2></td></tr>
 <b>ISO_IR_166</b> = 10, 
 <b>ISO_IR_13</b> = 11, 
 <br />
-&#160;&#160;<b>ISO_IR_14</b> = 12, 
+&#160;&#160;<b>X_LATIN9</b> = 12, 
 <b>ISO_IR_192</b> = 13, 
 <b>GB18030</b> = 14, 
 <b>GBK</b> = 15, 
 <br />
-&#160;&#160;<b>ISO_2022_BASE</b> = 31, 
-<b>ISO_2022</b> = 128, 
+&#160;&#160;<b>X_CP1250</b> = 16, 
+<b>X_CP1251</b> = 17, 
+<b>X_CP1253</b> = 18, 
+<b>X_CP1255</b> = 19, 
+<br />
+&#160;&#160;<b>X_GB2312</b> = 20, 
+<b>X_EUCKR</b> = 21, 
+<b>X_BIG5</b> = 22, 
+<b>X_SJIS</b> = 23, 
+<br />
+&#160;&#160;<b>ISO_2022</b> = 128, 
+<b>ISO_2022_IR_6</b> = 128, 
+<b>ISO_2022_IR_100</b> = 129, 
+<b>ISO_2022_IR_101</b> = 130, 
+<br />
+&#160;&#160;<b>ISO_2022_IR_109</b> = 131, 
+<b>ISO_2022_IR_110</b> = 132, 
+<b>ISO_2022_IR_144</b> = 133, 
+<b>ISO_2022_IR_127</b> = 134, 
+<br />
+&#160;&#160;<b>ISO_2022_IR_126</b> = 135, 
+<b>ISO_2022_IR_138</b> = 136, 
+<b>ISO_2022_IR_148</b> = 137, 
+<b>ISO_2022_IR_166</b> = 138, 
+<br />
+&#160;&#160;<b>ISO_2022_IR_13</b> = 139, 
 <b>ISO_2022_IR_58</b> = 148, 
 <b>ISO_2022_IR_149</b> = 149, 
+<b>ISO_2022_IR_87</b> = 160, 
 <br />
-&#160;&#160;<b>ISO_2022_IR_87</b> = 160, 
-<b>ISO_2022_IR_159</b> = 192, 
+&#160;&#160;<b>ISO_2022_IR_159</b> = 192, 
 <b>Unknown</b> = 255
 <br />
  }<tr class="separator:ab48a086c433e697b1c7f10c5470063bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,12 +217,35 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (<a 
 <tr class="memitem:aa203147692a22c186bf24087a410c446"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa203147692a22c186bf24087a410c446"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a) const </td></tr>
 <tr class="separator:aa203147692a22c186bf24087a410c446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ab8711d542ff308dd1f973a921b0618dc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_character_set.html#ab8711d542ff308dd1f973a921b0618dc">SetGlobalDefault</a> (<a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> cs)</td></tr>
+<tr class="memdesc:ab8711d542ff308dd1f973a921b0618dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the character set to use if SpecificCharacterSet is missing.  <a href="#ab8711d542ff308dd1f973a921b0618dc">More...</a><br /></td></tr>
+<tr class="separator:ab8711d542ff308dd1f973a921b0618dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11aac4afacdbf2a746a459747b4ba9bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11aac4afacdbf2a746a459747b4ba9bb"></a>
+static <a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalDefault</b> ()</td></tr>
+<tr class="separator:a11aac4afacdbf2a746a459747b4ba9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9142f0266098ccfeea9df0f32a8c4bc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_character_set.html#ab9142f0266098ccfeea9df0f32a8c4bc">SetGlobalOverride</a> (bool b)</td></tr>
+<tr class="memdesc:ab9142f0266098ccfeea9df0f32a8c4bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override the value stored in SpecificCharacterSet with the default.  <a href="#ab9142f0266098ccfeea9df0f32a8c4bc">More...</a><br /></td></tr>
+<tr class="separator:ab9142f0266098ccfeea9df0f32a8c4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc69388382a59c4dabacee5c947f1c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefc69388382a59c4dabacee5c947f1c8"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>GlobalOverrideOn</b> ()</td></tr>
+<tr class="separator:aefc69388382a59c4dabacee5c947f1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad24af3f45139dae99c1fd74e3b623fe5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad24af3f45139dae99c1fd74e3b623fe5"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>GlobalOverrideOff</b> ()</td></tr>
+<tr class="separator:ad24af3f45139dae99c1fd74e3b623fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a748f3d8a92adde95f6b96e8978b10c86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a748f3d8a92adde95f6b96e8978b10c86"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalOverride</b> ()</td></tr>
+<tr class="separator:a748f3d8a92adde95f6b96e8978b10c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Character sets. </p>
 <p>This class provides the means to convert the various international text encodings used by DICOM to the popular UTF-8 encoding. It does not at this time provide the means to convert to any encoding other than UTF-8.</p>
 <p>During conversion to UTF-8, any codes in the original encoding that cannot be converted to Unicode are replaced by "REPLACEMENT CHARACTER", which is a question mark in a black diamond. For instance, if the original encoding is ISO_IR_6, any octets with the 8th bit set will be replaced.</p>
-<p>DICOM supports a fairly small number of single-byte and multi-byte character sets. The only VRs that support these character sets are PN, LO, SH, ST, LT, and ST (all other text VRs must be ASCII). In total, there is one 7-bit encoding (ASCII), eleven 8-bit single-byte encodings, three variable-length encodings (UTF-8, GB18030, GBK), and three iso-2022 multi-byte encodings. It is possible to use iso-2022 escape codes to switch between any encodings except for UTF-8 and GB18030/GBK, although only a subset of the iso-2022 escape codes are supported by DICOM. </p>
+<p>DICOM supports a fairly small number of single-byte and multi-byte character sets. The only VRs that support these character sets are PN, LO, SH, ST, LT, and ST (all other text VRs must be ASCII). In total, there is one 7-bit encoding (ASCII), eleven 8-bit single-byte encodings, three variable-length encodings (UTF-8, GB18030, GBK), and three iso-2022 multi-byte encodings. It is possible to use iso-2022 escape codes to switch between most of the encodings, with UTF-8 and GB18030/GBK as the most noteworthy exceptions.</p>
+<p>In some DICOM data sets, especially old ones, the SpecificCharacterSet attribute will be missing and it might be necessary to manually specify a character set for the application to use. Use <a class="el" href="classvtk_d_i_c_o_m_character_set.html#ab8711d542ff308dd1f973a921b0618dc" title="Set the character set to use if SpecificCharacterSet is missing. ">SetGlobalDefault()</a> to do so. The <a class="el" href="classvtk_d_i_c_o_m_character_set.html" title="Character sets. ">vtkDICOMCharacterSet</a> constructor can take the desired character encoding as a string, where the following encodings are allowed: 'ascii', 'latin1' (cp1252), 'latin2', 'latin3', 'latin4', 'cyrillic' (iso-8859-5), 'arabic' (iso-8859-6), 'greek' (iso-8859-7), 'hebrew' (iso-8859-8), 'latin5' (cp1254), 'tis-620', 'shift-jis', 'iso-2022-jp', 'korean' (euc-kr), 'chinese' (gbk), 'gb18030', 'big5, 'cp1250', 'cp1251', 'cp1253', 'cp1255', 'latin9', and 'utf-8'. Common aliases of these character sets can also be used. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8164a351dae05a37e7f7277a30602e57"></a>
 <div class="memitem">
@@ -223,7 +270,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 </div><div class="memdoc">
 
 <p>Construct a character set object from a given code. </p>
-<p>The code can be any of the enumerated code values. The ISO 2022 codes are a bitfield and they can be combined with most other codes, but they cannot be combined with ISO_IR_192, GB18030, or GBK. </p>
+<p>The code can be any of the enumerated code values. The ISO_2022 flag can be added to any of the ISO-8859 codes to indicate that the character set allows the use of escape codes. Also note that ISO_2022_IR_87 and ISO_2022_IR_159 are combining codes that can be added to each other and to ISO_IR_13. Specifying any other codes in combination can lead to undefined results, for example "ISO_2022_IR_100 | ISO_2022_IR_101" is not permitted and "ISO_2022_IR_100" must be used instead. </p>
 
 </div>
 </div>
@@ -415,13 +462,67 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a 
 
 </div>
 </div>
+<a class="anchor" id="ab8711d542ff308dd1f973a921b0618dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void vtkDICOMCharacterSet::SetGlobalDefault </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>&#160;</td>
+          <td class="paramname"><em>cs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the character set to use if SpecificCharacterSet is missing. </p>
+<p>Some DICOM files do not list a SpecificCharacterSet attribute, but neverthless use a non-ASCII character encoding. This method can be used to specify the character set in absence of SpecificCharacterSet. If SpecificCharacterSet is present, the default will not override it unless OverrideCharacterSet is true. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab9142f0266098ccfeea9df0f32a8c4bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void vtkDICOMCharacterSet::SetGlobalOverride </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Override the value stored in SpecificCharacterSet with the default. </p>
+<p>This method can be used if the SpecificCharacterSet attribute of a file is incorrect. It forces the use of the character set that was set with SetGlobalDefault. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="vtk_d_i_c_o_m_character_set_8h_source.html">vtkDICOMCharacterSet.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 11 2017 13:30:16 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 24 2017 22:01:26 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

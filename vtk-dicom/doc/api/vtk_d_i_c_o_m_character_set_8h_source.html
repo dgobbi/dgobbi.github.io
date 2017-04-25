@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.11</span>
+   &#160;<span id="projectnumber">0.8.0</span>
    </div>
   </td>
  </tr>
@@ -82,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_298f87db2c1cba43efabc3c5f4fa9ff0.html">Volumes</a></li><li class="navelem"><a class="el" href="dir_9a1ac14f6cbe4757def5b006d05bde9e.html">Work</a></li><li class="navelem"><a class="el" href="dir_f8e7d1e9e56edcba420edb0f04e04f87.html">Kitware</a></li><li class="navelem"><a class="el" href="dir_81275ec48967c19e6966f618a053c4b2.html">vtk-dicom</a></li><li class="navelem"><a class="el" href="dir_bc7a26b5a8c5d0ff42ad01d2f4ba1927.html">VTK-doxygen</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_298f87db2c1cba43efabc3c5f4fa9ff0.html">Volumes</a></li><li class="navelem"><a class="el" href="dir_9a1ac14f6cbe4757def5b006d05bde9e.html">Work</a></li><li class="navelem"><a class="el" href="dir_f8e7d1e9e56edcba420edb0f04e04f87.html">Kitware</a></li><li class="navelem"><a class="el" href="dir_81275ec48967c19e6966f618a053c4b2.html">vtk-dicom</a></li><li class="navelem"><a class="el" href="dir_da5a89bf25bbef3bd47b6c5e1160a37a.html">Source</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -112,95 +112,140 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html">   45</a></span>&#160;<span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">enum</span> EnumType</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    ISO_IR_6   = 0,  <span class="comment">// US_ASCII</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    ISO_IR_100 = 1,  <span class="comment">// ISO-8859-1,  latin1, western europe</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    ISO_IR_101 = 2,  <span class="comment">// ISO-8859-2,  latin2, central europe</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ISO_IR_109 = 3,  <span class="comment">// ISO-8859-3,  latin3, maltese</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ISO_IR_110 = 4,  <span class="comment">// ISO-8859-4,  latin4, baltic</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    ISO_IR_144 = 5,  <span class="comment">// ISO-8859-5,  cyrillic</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    ISO_IR_127 = 6,  <span class="comment">// ISO-8859-6,  arabic</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    ISO_IR_126 = 7,  <span class="comment">// ISO-8859-7,  greek</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    ISO_IR_138 = 8,  <span class="comment">// ISO-8859-8,  hebrew</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ISO_IR_148 = 9,  <span class="comment">// ISO-8859-9,  latin5, turkish</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    ISO_IR_166 = 10, <span class="comment">// ISO-8859-11, thai</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    ISO_IR_13  = 11, <span class="comment">// JIS X 0201,  katakana, japanese</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    ISO_IR_14  = 12, <span class="comment">// JIS X 0201,  romaji, japanese</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    ISO_IR_192 = 13, <span class="comment">// UTF-8,       unicode</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    GB18030    = 14, <span class="comment">// gb18030,     chinese with full unicode mapping</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    GBK        = 15, <span class="comment">// gbk,         chinese</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ISO_2022_BASE = 31,  <span class="comment">// mask to get the initial charset</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ISO_2022      = 128, <span class="comment">// bit that indicates use of ISO-2022 extensions</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    ISO_2022_IR_58  = 148, <span class="comment">// GB2312</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    ISO_2022_IR_149 = 149, <span class="comment">// KS X 1001</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    ISO_2022_IR_87  = 160, <span class="comment">// the JIS X 0208 part of ISO-2022-JP</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    ISO_2022_IR_159 = 192, <span class="comment">// the JIS X 0212 part of ISO-2022-JP2</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Unknown    = 255  <span class="comment">// signifies unknown character set</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  };</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>() : Key(0) {}</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#a8164a351dae05a37e7f7277a30602e57">   85</a></span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_character_set.html#a8164a351dae05a37e7f7277a30602e57">vtkDICOMCharacterSet</a>(<span class="keywordtype">int</span> k) : Key(static_cast&lt;unsigned char&gt;(k)) {}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#a68c32c7b9d47ba8274577bccacb75f9a">   92</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html#a68c32c7b9d47ba8274577bccacb75f9a">vtkDICOMCharacterSet</a>(<span class="keyword">const</span> std::string&amp; name) {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    this-&gt;Key = KeyFromString(name.data(), name.length()); }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">size_t</span> nl) {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    this-&gt;Key = KeyFromString(name, nl); }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  std::string GetCharacterSetString() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">  113</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">GetKey</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;Key; }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  std::string ConvertToUTF8(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  std::string CaseFoldedUTF8(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#a46215dba161c427fb5e95884e694a7ec">  145</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html#a46215dba161c427fb5e95884e694a7ec">IsBiDirectional</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">return</span> (this-&gt;Key == ISO_IR_127 || this-&gt;Key == ISO_IR_138); }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> CountBackslashes(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordtype">size_t</span> NextBackslash(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keyword">const</span> <span class="keywordtype">char</span> *end) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keywordtype">bool</span> operator==(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> b)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key == b.Key); }</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordtype">bool</span> operator!=(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> b)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key != b.Key); }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keywordtype">bool</span> operator&lt;=(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt;= a.Key); }</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordtype">bool</span> operator&gt;=(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt;= a.Key); }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordtype">bool</span> operator&lt;(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt; a.Key); }</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordtype">bool</span> operator&gt;(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt; a.Key); }</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html">   56</a></span>&#160;<span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">enum</span> EnumType</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    ISO_IR_6   = 0,  <span class="comment">// US_ASCII</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    ISO_IR_100 = 1,  <span class="comment">// ISO-8859-1,  latin1, western europe</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    ISO_IR_101 = 2,  <span class="comment">// ISO-8859-2,  latin2, central europe</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    ISO_IR_109 = 3,  <span class="comment">// ISO-8859-3,  latin3, maltese</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    ISO_IR_110 = 4,  <span class="comment">// ISO-8859-4,  latin4, baltic</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ISO_IR_144 = 5,  <span class="comment">// ISO-8859-5,  cyrillic</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ISO_IR_127 = 6,  <span class="comment">// ISO-8859-6,  arabic</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    ISO_IR_126 = 7,  <span class="comment">// ISO-8859-7,  greek</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    ISO_IR_138 = 8,  <span class="comment">// ISO-8859-8,  hebrew</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    ISO_IR_148 = 9,  <span class="comment">// ISO-8859-9,  latin5, turkish</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    ISO_IR_166 = 10, <span class="comment">// ISO-8859-11, thai</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    ISO_IR_13  = 11, <span class="comment">// JIS X 0201,  japanese romaji + katakana</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    X_LATIN9   = 12, <span class="comment">// ISO-8859-15, latin9, western europe</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    ISO_IR_192 = 13, <span class="comment">// UTF-8,       unicode</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    GB18030    = 14, <span class="comment">// gb18030,     chinese with full unicode mapping</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    GBK        = 15, <span class="comment">// gbk,         chinese</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    X_CP1250   = 16, <span class="comment">// cp1250,      central europe</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    X_CP1251   = 17, <span class="comment">// cp1251,      cyrillic</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    X_CP1253   = 18, <span class="comment">// cp1253,      greek</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    X_CP1255   = 19, <span class="comment">// cp1255,      hebrew</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    X_GB2312   = 20, <span class="comment">// reserved     ISO_IR_58 without escape codes</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    X_EUCKR    = 21, <span class="comment">// reserved     ISO_IR_149 without escape codes</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    X_BIG5     = 22, <span class="comment">// big5 + ETEN, traditional chinese</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    X_SJIS     = 23, <span class="comment">// windows-31j, aka shift-jis, code page 932</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// ISO_IR_87  = 32, // reserved, use ISO_2022_IR_87</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// ISO_IR_159 = 64, // reserved, use ISO_2022_IR_159</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    ISO_2022        = 128, <span class="comment">// bit that indicates use of ISO-2022</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    ISO_2022_IR_6   = 128, <span class="comment">// US_ASCII</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    ISO_2022_IR_100 = 129, <span class="comment">// ISO-8859-1,  latin1, western europe</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    ISO_2022_IR_101 = 130, <span class="comment">// ISO-8859-2,  latin2, central europe</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    ISO_2022_IR_109 = 131, <span class="comment">// ISO-8859-3,  latin3, maltese</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    ISO_2022_IR_110 = 132, <span class="comment">// ISO-8859-4,  latin4, baltic</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    ISO_2022_IR_144 = 133, <span class="comment">// ISO-8859-5,  cyrillic</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    ISO_2022_IR_127 = 134, <span class="comment">// ISO-8859-6,  arabic</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    ISO_2022_IR_126 = 135, <span class="comment">// ISO-8859-7,  greek</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    ISO_2022_IR_138 = 136, <span class="comment">// ISO-8859-8,  hebrew</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    ISO_2022_IR_148 = 137, <span class="comment">// ISO-8859-9,  latin5, turkish</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    ISO_2022_IR_166 = 138, <span class="comment">// ISO-8859-11, thai</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    ISO_2022_IR_13  = 139, <span class="comment">// JIS X 0201,  japanese katakana</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    ISO_2022_IR_58  = 148, <span class="comment">// the GB2312 part of ISO-2022-CN</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    ISO_2022_IR_149 = 149, <span class="comment">// the KS X 1001 part of ISO-2022-KR</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    ISO_2022_IR_87  = 160, <span class="comment">// the JIS X 0208 part of ISO-2022-JP</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    ISO_2022_IR_159 = 192, <span class="comment">// the JIS X 0212 part of ISO-2022-JP2</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Unknown    = 255  <span class="comment">// signifies unknown character set</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  };</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>() : Key(0) {}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#a8164a351dae05a37e7f7277a30602e57">  121</a></span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_character_set.html#a8164a351dae05a37e7f7277a30602e57">vtkDICOMCharacterSet</a>(<span class="keywordtype">int</span> k) : Key(static_cast&lt;unsigned char&gt;(k)) {}</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#a68c32c7b9d47ba8274577bccacb75f9a">  128</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html#a68c32c7b9d47ba8274577bccacb75f9a">vtkDICOMCharacterSet</a>(<span class="keyword">const</span> std::string&amp; name) {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    this-&gt;Key = KeyFromString(name.data(), name.length()); }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">size_t</span> nl) {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    this-&gt;Key = KeyFromString(name, nl); }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#ab8711d542ff308dd1f973a921b0618dc">  143</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html#ab8711d542ff308dd1f973a921b0618dc">SetGlobalDefault</a>(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> cs) {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    GlobalDefault = cs.<a class="code" href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">GetKey</a>(); }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keyword">static</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> GetGlobalDefault() {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">return</span> GlobalDefault; }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#ab9142f0266098ccfeea9df0f32a8c4bc">  154</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html#ab9142f0266098ccfeea9df0f32a8c4bc">SetGlobalOverride</a>(<span class="keywordtype">bool</span> b) {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    GlobalOverride = b; }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> GlobalOverrideOn() { GlobalOverride = <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> GlobalOverrideOff() { GlobalOverride = <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> GetGlobalOverride() { <span class="keywordflow">return</span> GlobalOverride; }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  std::string GetCharacterSetString() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordtype">void</span> ISO2022ToUTF8(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l, std::string *s) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> KeyFromString(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">size_t</span> nl);</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">  176</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">GetKey</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;Key; }</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> Key;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;};</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;VTKDICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; o, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>&amp; a);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMCharacterSet_h */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMCharacterSet.h</span></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a7758ac72d406ce04bb28a2519e09f5d3"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">vtkDICOMCharacterSet::GetKey</a></div><div class="ttdeci">unsigned char GetKey() const </div><div class="ttdoc">Get the numerical code for this character set object. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:113</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a></div><div class="ttdoc">Character sets. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:45</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a46215dba161c427fb5e95884e694a7ec"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a46215dba161c427fb5e95884e694a7ec">vtkDICOMCharacterSet::IsBiDirectional</a></div><div class="ttdeci">bool IsBiDirectional() const </div><div class="ttdoc">Check for bidirectional character sets. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:145</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a68c32c7b9d47ba8274577bccacb75f9a"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a68c32c7b9d47ba8274577bccacb75f9a">vtkDICOMCharacterSet::vtkDICOMCharacterSet</a></div><div class="ttdeci">vtkDICOMCharacterSet(const std::string &amp;name)</div><div class="ttdoc">Construct a character set object from a SpecificCharacterSet value. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:92</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a8164a351dae05a37e7f7277a30602e57"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a8164a351dae05a37e7f7277a30602e57">vtkDICOMCharacterSet::vtkDICOMCharacterSet</a></div><div class="ttdeci">vtkDICOMCharacterSet(int k)</div><div class="ttdoc">Construct a character set object from a given code. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:85</div></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  std::string ConvertToUTF8(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  std::string CaseFoldedUTF8(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_character_set.html#a46215dba161c427fb5e95884e694a7ec">  208</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html#a46215dba161c427fb5e95884e694a7ec">IsBiDirectional</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">return</span> (this-&gt;Key == ISO_IR_127 ||</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            this-&gt;Key == ISO_IR_138 ||</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            this-&gt;Key == X_CP1255); }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> CountBackslashes(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordtype">size_t</span> NextBackslash(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keyword">const</span> <span class="keywordtype">char</span> *end) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="keywordtype">bool</span> operator==(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> b)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key == b.Key); }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordtype">bool</span> operator!=(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> b)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key != b.Key); }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="keywordtype">bool</span> operator&lt;=(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt;= a.Key); }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keywordtype">bool</span> operator&gt;=(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt;= a.Key); }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">bool</span> operator&lt;(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &lt; a.Key); }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordtype">bool</span> operator&gt;(<a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;Key &gt; a.Key); }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="keywordtype">void</span> ISO2022ToUTF8(<span class="keyword">const</span> <span class="keywordtype">char</span> *text, <span class="keywordtype">size_t</span> l, std::string *s) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> KeyFromString(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">size_t</span> nl);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> Key;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    ISO_2022_BASE = 31</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  };</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> GlobalDefault;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> GlobalOverride;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;};</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;VTKDICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; o, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>&amp; a);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMCharacterSet_h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMCharacterSet.h</span></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_ab8711d542ff308dd1f973a921b0618dc"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#ab8711d542ff308dd1f973a921b0618dc">vtkDICOMCharacterSet::SetGlobalDefault</a></div><div class="ttdeci">static void SetGlobalDefault(vtkDICOMCharacterSet cs)</div><div class="ttdoc">Set the character set to use if SpecificCharacterSet is missing. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:143</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_ab9142f0266098ccfeea9df0f32a8c4bc"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#ab9142f0266098ccfeea9df0f32a8c4bc">vtkDICOMCharacterSet::SetGlobalOverride</a></div><div class="ttdeci">static void SetGlobalOverride(bool b)</div><div class="ttdoc">Override the value stored in SpecificCharacterSet with the default. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:154</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a7758ac72d406ce04bb28a2519e09f5d3"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a7758ac72d406ce04bb28a2519e09f5d3">vtkDICOMCharacterSet::GetKey</a></div><div class="ttdeci">unsigned char GetKey() const </div><div class="ttdoc">Get the numerical code for this character set object. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:176</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a></div><div class="ttdoc">Character sets. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:56</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a46215dba161c427fb5e95884e694a7ec"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a46215dba161c427fb5e95884e694a7ec">vtkDICOMCharacterSet::IsBiDirectional</a></div><div class="ttdeci">bool IsBiDirectional() const </div><div class="ttdoc">Check for bidirectional character sets. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:208</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a68c32c7b9d47ba8274577bccacb75f9a"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a68c32c7b9d47ba8274577bccacb75f9a">vtkDICOMCharacterSet::vtkDICOMCharacterSet</a></div><div class="ttdeci">vtkDICOMCharacterSet(const std::string &amp;name)</div><div class="ttdoc">Construct a character set object from a SpecificCharacterSet value. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:128</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_character_set_html_a8164a351dae05a37e7f7277a30602e57"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html#a8164a351dae05a37e7f7277a30602e57">vtkDICOMCharacterSet::vtkDICOMCharacterSet</a></div><div class="ttdeci">vtkDICOMCharacterSet(int k)</div><div class="ttdoc">Construct a character set object from a given code. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:121</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 11 2017 13:30:14 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 24 2017 22:01:23 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

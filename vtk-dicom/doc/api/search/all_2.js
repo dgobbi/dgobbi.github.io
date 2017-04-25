@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['canreadfile',['CanReadFile',['../classvtk_d_i_c_o_m_reader.html#ab5554749a8f35c1e74bfccf1337d8571',1,'vtkDICOMReader::CanReadFile()'],['../classvtk_image_reader2.html#a0a647fc647c1eb39ede334c2d2121bbe',1,'vtkImageReader2::CanReadFile()'],['../classvtk_n_i_f_t_i_reader.html#ac678b4c3d8a3ef5b6341c7483c29d10d',1,'vtkNIFTIReader::CanReadFile()'],['../classvtk_scanco_c_t_reader.html#a96ea55c4d2cdd0908de9505185a91e25',1,'vtkScancoCTReader::CanReadFile()']]],
+  ['canreadfile',['CanReadFile',['../classvtk_d_i_c_o_m_reader.html#ab5554749a8f35c1e74bfccf1337d8571',1,'vtkDICOMReader::CanReadFile()'],['../classvtk_n_i_f_t_i_reader.html#ac678b4c3d8a3ef5b6341c7483c29d10d',1,'vtkNIFTIReader::CanReadFile()'],['../classvtk_scanco_c_t_reader.html#a96ea55c4d2cdd0908de9505185a91e25',1,'vtkScancoCTReader::CanReadFile()'],['../classvtk_image_reader2.html#a29feeda76e5434e29936935015bb9d08',1,'vtkImageReader2::CanReadFile()']]],
   ['casefoldedutf8',['CaseFoldedUTF8',['../classvtk_d_i_c_o_m_character_set.html#ac7013877ffdfbefdc96eba999a6c7f38',1,'vtkDICOMCharacterSet']]],
   ['checkanalyzeheader',['CheckAnalyzeHeader',['../classvtk_n_i_f_t_i_reader.html#ac3ad5bafc20f0045a65238aea33e6eb5',1,'vtkNIFTIReader']]],
   ['checkextension',['CheckExtension',['../classvtk_n_i_f_t_i_reader.html#ae646212c9b9e174d7dcac50e639e0d6a',1,'vtkNIFTIReader']]],
@@ -25,6 +25,7 @@ var searchData=
   ['computepixelvaluerange',['ComputePixelValueRange',['../classvtk_d_i_c_o_m_generator.html#ace9daeae46e213bb45a540b62457b2c8',1,'vtkDICOMGenerator']]],
   ['computepositionandorientation',['ComputePositionAndOrientation',['../classvtk_d_i_c_o_m_generator.html#adbab3ef11cf0dc4ff0a94e23061f3e16',1,'vtkDICOMGenerator']]],
   ['computepriority',['ComputePriority',['../classvtk_algorithm.html#a0082c05f864570911f92a82236ae4b08',1,'vtkAlgorithm']]],
+  ['computerescaledscalartype',['ComputeRescaledScalarType',['../classvtk_d_i_c_o_m_reader.html#a9694d8ccd29dc8282e57bbdbcaaaf5f6',1,'vtkDICOMReader']]],
   ['constructionhelper',['ConstructionHelper',['../classvtk_d_i_c_o_m_meta_data_adapter.html#a58d57d41d4abd5f65b608b114680e744',1,'vtkDICOMMetaDataAdapter']]],
   ['convertdatetime',['ConvertDateTime',['../classvtk_d_i_c_o_m_utilities.html#a127e5cb8469ba6c9ebcbb46d6123d509',1,'vtkDICOMUtilities']]],
   ['converttotalinputtoportconnection',['ConvertTotalInputToPortConnection',['../classvtk_algorithm.html#ab16e630b688571869d1d3cf5672d0a13',1,'vtkAlgorithm']]],

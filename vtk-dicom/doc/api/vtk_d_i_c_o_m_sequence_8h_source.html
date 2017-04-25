@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.11</span>
+   &#160;<span id="projectnumber">0.8.0</span>
    </div>
   </td>
  </tr>
@@ -82,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_298f87db2c1cba43efabc3c5f4fa9ff0.html">Volumes</a></li><li class="navelem"><a class="el" href="dir_9a1ac14f6cbe4757def5b006d05bde9e.html">Work</a></li><li class="navelem"><a class="el" href="dir_f8e7d1e9e56edcba420edb0f04e04f87.html">Kitware</a></li><li class="navelem"><a class="el" href="dir_81275ec48967c19e6966f618a053c4b2.html">vtk-dicom</a></li><li class="navelem"><a class="el" href="dir_bc7a26b5a8c5d0ff42ad01d2f4ba1927.html">VTK-doxygen</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_298f87db2c1cba43efabc3c5f4fa9ff0.html">Volumes</a></li><li class="navelem"><a class="el" href="dir_9a1ac14f6cbe4757def5b006d05bde9e.html">Work</a></li><li class="navelem"><a class="el" href="dir_f8e7d1e9e56edcba420edb0f04e04f87.html">Kitware</a></li><li class="navelem"><a class="el" href="dir_81275ec48967c19e6966f618a053c4b2.html">vtk-dicom</a></li><li class="navelem"><a class="el" href="dir_da5a89bf25bbef3bd47b6c5e1160a37a.html">Source</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -122,61 +122,65 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> Clear();</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;GetAttributeValue(</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">size_t</span> i, <a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;Get(<span class="keywordtype">size_t</span> i, <a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;Get(<span class="keywordtype">size_t</span> i, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a> &amp;p) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;GetAttributeValue(</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">size_t</span> i, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a> &amp;p) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">void</span> AddItem(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a>&amp; item);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_sequence.html#aa55e90a4f12da1e12b68208f172d4d0d">   66</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html#aa55e90a4f12da1e12b68208f172d4d0d">GetNumberOfItems</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> this-&gt;V.GetNumberOfValues(); }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">void</span> SetItem(<span class="keywordtype">size_t</span> i, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a>&amp; item);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a>&amp; GetItem(<span class="keywordtype">size_t</span> i) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_sequence.html#aa424363dd7fa2d75f74d02d44ed3a6fd">   82</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *<a class="code" href="classvtk_d_i_c_o_m_sequence.html#aa424363dd7fa2d75f74d02d44ed3a6fd">GetSequenceData</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> this-&gt;V.GetSequenceData(); }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_sequence.html">vtkDICOMSequence</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html">vtkDICOMSequence</a>&amp; o) : V(o.V) {}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">size_t</span> i, <a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> this-&gt;Get(i, tag); }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;GetAttributeValue(</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">size_t</span> i, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a> &amp;p)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> this-&gt;Get(i, p); }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">void</span> AddItem(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a>&amp; item);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_sequence.html#aa55e90a4f12da1e12b68208f172d4d0d">   70</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html#aa55e90a4f12da1e12b68208f172d4d0d">GetNumberOfItems</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">return</span> this-&gt;V.GetNumberOfValues(); }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">void</span> SetItem(<span class="keywordtype">size_t</span> i, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a>&amp; item);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a>&amp; GetItem(<span class="keywordtype">size_t</span> i) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_sequence.html#aa424363dd7fa2d75f74d02d44ed3a6fd">   86</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *<a class="code" href="classvtk_d_i_c_o_m_sequence.html#aa424363dd7fa2d75f74d02d44ed3a6fd">GetSequenceData</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> this-&gt;V.GetSequenceData(); }</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_sequence.html#a681e75e2c8e31f4dc00aecea8827dde1">   91</a></span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_sequence.html#a681e75e2c8e31f4dc00aecea8827dde1">vtkDICOMSequence</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a>&amp; o) : V(o) {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (o.<a class="code" href="classvtk_d_i_c_o_m_value.html#a27fec3da99035be2cda28863d121d7e5">GetVR</a>() != <a class="code" href="classvtk_d_i_c_o_m_v_r.html#a40e983ebf7e6d989a33fbc28991c5b54a50f750e649cfb9ac95c3b0e0fd763f7b">vtkDICOMVR::SQ</a>) { this-&gt;V.Clear(); } }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_sequence.html">vtkDICOMSequence</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html">vtkDICOMSequence</a>&amp; o) : V(o.V) {}</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_sequence.html#a50087df5b219fd4adc4c9c429d0c26cf">   95</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html#a50087df5b219fd4adc4c9c429d0c26cf">IsValid</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> this-&gt;V.IsValid(); }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_sequence.html">vtkDICOMSequence</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html">vtkDICOMSequence</a>&amp; o) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    this-&gt;V = o.V; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_sequence.html#aab099b344e6f8d816c3cca7ee3f87cf2">  105</a></span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_sequence.html">vtkDICOMSequence</a>&amp; <a class="code" href="classvtk_d_i_c_o_m_sequence.html#aab099b344e6f8d816c3cca7ee3f87cf2">operator=</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a>&amp; o) {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span> (o.<a class="code" href="classvtk_d_i_c_o_m_value.html#a27fec3da99035be2cda28863d121d7e5">GetVR</a>() == <a class="code" href="classvtk_d_i_c_o_m_v_r.html#a40e983ebf7e6d989a33fbc28991c5b54a50f750e649cfb9ac95c3b0e0fd763f7b">vtkDICOMVR::SQ</a>) { this-&gt;V = o; }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">else</span> { this-&gt;V.<a class="code" href="classvtk_d_i_c_o_m_value.html#aaee19a00d54536adb0668807e1e86a1a">Clear</a>(); } <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> V;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> InvalidValue;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> EmptyItem;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;};</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;VTKDICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html">vtkDICOMSequence</a>&amp; v);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMSequence_h */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMSequence.h</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_sequence.html#a681e75e2c8e31f4dc00aecea8827dde1">   95</a></span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_sequence.html#a681e75e2c8e31f4dc00aecea8827dde1">vtkDICOMSequence</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a>&amp; o) : V(o) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span> (o.<a class="code" href="classvtk_d_i_c_o_m_value.html#a27fec3da99035be2cda28863d121d7e5">GetVR</a>() != <a class="code" href="classvtk_d_i_c_o_m_v_r.html#a40e983ebf7e6d989a33fbc28991c5b54a50f750e649cfb9ac95c3b0e0fd763f7b">vtkDICOMVR::SQ</a>) { this-&gt;V.Clear(); } }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_sequence.html#a50087df5b219fd4adc4c9c429d0c26cf">   99</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html#a50087df5b219fd4adc4c9c429d0c26cf">IsValid</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> this-&gt;V.IsValid(); }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_sequence.html">vtkDICOMSequence</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html">vtkDICOMSequence</a>&amp; o) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    this-&gt;V = o.V; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_sequence.html#aab099b344e6f8d816c3cca7ee3f87cf2">  109</a></span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_sequence.html">vtkDICOMSequence</a>&amp; <a class="code" href="classvtk_d_i_c_o_m_sequence.html#aab099b344e6f8d816c3cca7ee3f87cf2">operator=</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a>&amp; o) {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">if</span> (o.<a class="code" href="classvtk_d_i_c_o_m_value.html#a27fec3da99035be2cda28863d121d7e5">GetVR</a>() == <a class="code" href="classvtk_d_i_c_o_m_v_r.html#a40e983ebf7e6d989a33fbc28991c5b54a50f750e649cfb9ac95c3b0e0fd763f7b">vtkDICOMVR::SQ</a>) { this-&gt;V = o; }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">else</span> { this-&gt;V.<a class="code" href="classvtk_d_i_c_o_m_value.html#aaee19a00d54536adb0668807e1e86a1a">Clear</a>(); } <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> V;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> InvalidValue;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> EmptyItem;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;};</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;VTKDICOM_EXPORT ostream&amp; operator&lt;&lt;(ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_sequence.html">vtkDICOMSequence</a>&amp; v);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMSequence_h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMSequence.h</span></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_sequence_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_sequence.html">vtkDICOMSequence</a></div><div class="ttdoc">A sequence of items according to the SQ representation. </div><div class="ttdef"><b>Definition:</b> vtkDICOMSequence.h:31</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_sequence_html_aa55e90a4f12da1e12b68208f172d4d0d"><div class="ttname"><a href="classvtk_d_i_c_o_m_sequence.html#aa55e90a4f12da1e12b68208f172d4d0d">vtkDICOMSequence::GetNumberOfItems</a></div><div class="ttdeci">size_t GetNumberOfItems() const </div><div class="ttdoc">Get the number of items in the sequence. </div><div class="ttdef"><b>Definition:</b> vtkDICOMSequence.h:66</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_sequence_html_aab099b344e6f8d816c3cca7ee3f87cf2"><div class="ttname"><a href="classvtk_d_i_c_o_m_sequence.html#aab099b344e6f8d816c3cca7ee3f87cf2">vtkDICOMSequence::operator=</a></div><div class="ttdeci">vtkDICOMSequence &amp; operator=(const vtkDICOMValue &amp;o)</div><div class="ttdoc">Assignment from value to sequence is type checked. </div><div class="ttdef"><b>Definition:</b> vtkDICOMSequence.h:105</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_sequence_html_aa424363dd7fa2d75f74d02d44ed3a6fd"><div class="ttname"><a href="classvtk_d_i_c_o_m_sequence.html#aa424363dd7fa2d75f74d02d44ed3a6fd">vtkDICOMSequence::GetSequenceData</a></div><div class="ttdeci">const vtkDICOMItem * GetSequenceData() const </div><div class="ttdoc">Get a pointer to the items in the sequence. </div><div class="ttdef"><b>Definition:</b> vtkDICOMSequence.h:82</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_sequence_html_a681e75e2c8e31f4dc00aecea8827dde1"><div class="ttname"><a href="classvtk_d_i_c_o_m_sequence.html#a681e75e2c8e31f4dc00aecea8827dde1">vtkDICOMSequence::vtkDICOMSequence</a></div><div class="ttdeci">vtkDICOMSequence(const vtkDICOMValue &amp;o)</div><div class="ttdoc">Conversion from value to sequence is type checked. </div><div class="ttdef"><b>Definition:</b> vtkDICOMSequence.h:91</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_sequence_html_aa55e90a4f12da1e12b68208f172d4d0d"><div class="ttname"><a href="classvtk_d_i_c_o_m_sequence.html#aa55e90a4f12da1e12b68208f172d4d0d">vtkDICOMSequence::GetNumberOfItems</a></div><div class="ttdeci">size_t GetNumberOfItems() const </div><div class="ttdoc">Get the number of items in the sequence. </div><div class="ttdef"><b>Definition:</b> vtkDICOMSequence.h:70</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_sequence_html_aab099b344e6f8d816c3cca7ee3f87cf2"><div class="ttname"><a href="classvtk_d_i_c_o_m_sequence.html#aab099b344e6f8d816c3cca7ee3f87cf2">vtkDICOMSequence::operator=</a></div><div class="ttdeci">vtkDICOMSequence &amp; operator=(const vtkDICOMValue &amp;o)</div><div class="ttdoc">Assignment from value to sequence is type checked. </div><div class="ttdef"><b>Definition:</b> vtkDICOMSequence.h:109</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_sequence_html_aa424363dd7fa2d75f74d02d44ed3a6fd"><div class="ttname"><a href="classvtk_d_i_c_o_m_sequence.html#aa424363dd7fa2d75f74d02d44ed3a6fd">vtkDICOMSequence::GetSequenceData</a></div><div class="ttdeci">const vtkDICOMItem * GetSequenceData() const </div><div class="ttdoc">Get a pointer to the items in the sequence. </div><div class="ttdef"><b>Definition:</b> vtkDICOMSequence.h:86</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_sequence_html_a681e75e2c8e31f4dc00aecea8827dde1"><div class="ttname"><a href="classvtk_d_i_c_o_m_sequence.html#a681e75e2c8e31f4dc00aecea8827dde1">vtkDICOMSequence::vtkDICOMSequence</a></div><div class="ttdeci">vtkDICOMSequence(const vtkDICOMValue &amp;o)</div><div class="ttdoc">Conversion from value to sequence is type checked. </div><div class="ttdef"><b>Definition:</b> vtkDICOMSequence.h:95</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_item_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a></div><div class="ttdoc">An item in a DICOM sequence (type SQ). </div><div class="ttdef"><b>Definition:</b> vtkDICOMItem.h:33</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_value_html_a27fec3da99035be2cda28863d121d7e5"><div class="ttname"><a href="classvtk_d_i_c_o_m_value.html#a27fec3da99035be2cda28863d121d7e5">vtkDICOMValue::GetVR</a></div><div class="ttdeci">vtkDICOMVR GetVR() const </div><div class="ttdoc">Get the VR, the representation of the data values. </div><div class="ttdef"><b>Definition:</b> vtkDICOMValue.h:162</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_sequence_html_a50087df5b219fd4adc4c9c429d0c26cf"><div class="ttname"><a href="classvtk_d_i_c_o_m_sequence.html#a50087df5b219fd4adc4c9c429d0c26cf">vtkDICOMSequence::IsValid</a></div><div class="ttdeci">bool IsValid() const </div><div class="ttdoc">Check that the sequence was constructed from a valid value. </div><div class="ttdef"><b>Definition:</b> vtkDICOMSequence.h:95</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_sequence_html_a50087df5b219fd4adc4c9c429d0c26cf"><div class="ttname"><a href="classvtk_d_i_c_o_m_sequence.html#a50087df5b219fd4adc4c9c429d0c26cf">vtkDICOMSequence::IsValid</a></div><div class="ttdeci">bool IsValid() const </div><div class="ttdoc">Check that the sequence was constructed from a valid value. </div><div class="ttdef"><b>Definition:</b> vtkDICOMSequence.h:99</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_tag_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a></div><div class="ttdoc">A (group,element) identifier tag for DICOM attributes. </div><div class="ttdef"><b>Definition:</b> vtkDICOMTag.h:22</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_value_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a></div><div class="ttdoc">A class to store attribute values for DICOM metadata. </div><div class="ttdef"><b>Definition:</b> vtkDICOMValue.h:50</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_tag_path_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_tag_path.html">vtkDICOMTagPath</a></div><div class="ttdoc">A tag path for digging values out of sequence items. </div><div class="ttdef"><b>Definition:</b> vtkDICOMTagPath.h:27</div></div>
@@ -185,7 +189,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 11 2017 13:30:14 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 24 2017 22:01:24 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

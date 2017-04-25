@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.11</span>
+   &#160;<span id="projectnumber">0.8.0</span>
    </div>
   </td>
  </tr>
@@ -86,7 +86,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
@@ -113,21 +112,8 @@ Inheritance diagram for vtkDICOMFileSorter:</div>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a7bee2650ee1738592f2b5db97f3eb60b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bee2650ee1738592f2b5db97f3eb60b"></a>
-typedef <a class="el" href="classvtk_object.html">vtkObject</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
-<tr class="separator:a7bee2650ee1738592f2b5db97f3eb60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classvtk_object"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classvtk_object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classvtk_object.html">vtkObject</a></td></tr>
-<tr class="memitem:a11429dee69f4b562e03e07b453dae9b5 inherit pub_types_classvtk_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11429dee69f4b562e03e07b453dae9b5"></a>
-typedef <a class="el" href="classvtk_object_base.html">vtkObjectBase</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
-<tr class="separator:a11429dee69f4b562e03e07b453dae9b5 inherit pub_types_classvtk_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af74f6cb8e12b9fa01683c823e81a76fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af74f6cb8e12b9fa01683c823e81a76fa"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetClassName</b> ()</td></tr>
-<tr class="separator:af74f6cb8e12b9fa01683c823e81a76fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f31bac16d4cd794037ae0e9c8a5a1c8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_sorter.html#a6f31bac16d4cd794037ae0e9c8a5a1c8">IsA</a> (const char *type)</td></tr>
 <tr class="separator:a6f31bac16d4cd794037ae0e9c8a5a1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c8e2c9c97afd11144a421aa9e3b1c79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_sorter.html#a6c8e2c9c97afd11144a421aa9e3b1c79">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
@@ -186,9 +172,9 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a9ee2a53f7b0fa7ee53f8baebc0df37fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the filename associated with the error code. <br /></td></tr>
 <tr class="separator:a9ee2a53f7b0fa7ee53f8baebc0df37fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ad9a4a925f9cf66389e635e9f330f0fd9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_sorter.html#ad9a4a925f9cf66389e635e9f330f0fd9">SetRequirePixelData</a> (int)</td></tr>
-<tr class="memdesc:ad9a4a925f9cf66389e635e9f330f0fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this is On, files with no pixel data will be skipped.  <a href="#ad9a4a925f9cf66389e635e9f330f0fd9">More...</a><br /></td></tr>
-<tr class="separator:ad9a4a925f9cf66389e635e9f330f0fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa921dcbe9b3bbec289e3d423b78e1c43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_file_sorter.html#aa921dcbe9b3bbec289e3d423b78e1c43">SetRequirePixelData</a> (int v)</td></tr>
+<tr class="memdesc:aa921dcbe9b3bbec289e3d423b78e1c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this is On, files with no pixel data will be skipped.  <a href="#aa921dcbe9b3bbec289e3d423b78e1c43">More...</a><br /></td></tr>
+<tr class="separator:aa921dcbe9b3bbec289e3d423b78e1c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fa60af1ad1f8e91f153e67090ff6b2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fa60af1ad1f8e91f153e67090ff6b2c"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>RequirePixelDataOn</b> ()</td></tr>
 <tr class="separator:a0fa60af1ad1f8e91f153e67090ff6b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -577,7 +563,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 
 </div>
 </div>
-<a class="anchor" id="ad9a4a925f9cf66389e635e9f330f0fd9"></a>
+<a class="anchor" id="aa921dcbe9b3bbec289e3d423b78e1c43"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -588,7 +574,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
           <td class="memname">virtual void vtkDICOMFileSorter::SetRequirePixelData </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -636,7 +622,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 11 2017 13:30:18 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 24 2017 22:01:27 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

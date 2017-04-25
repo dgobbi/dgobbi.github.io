@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.11</span>
+   &#160;<span id="projectnumber">0.8.0</span>
    </div>
   </td>
  </tr>
@@ -82,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_298f87db2c1cba43efabc3c5f4fa9ff0.html">Volumes</a></li><li class="navelem"><a class="el" href="dir_9a1ac14f6cbe4757def5b006d05bde9e.html">Work</a></li><li class="navelem"><a class="el" href="dir_f8e7d1e9e56edcba420edb0f04e04f87.html">Kitware</a></li><li class="navelem"><a class="el" href="dir_81275ec48967c19e6966f618a053c4b2.html">vtk-dicom</a></li><li class="navelem"><a class="el" href="dir_bc7a26b5a8c5d0ff42ad01d2f4ba1927.html">VTK-doxygen</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_298f87db2c1cba43efabc3c5f4fa9ff0.html">Volumes</a></li><li class="navelem"><a class="el" href="dir_9a1ac14f6cbe4757def5b006d05bde9e.html">Work</a></li><li class="navelem"><a class="el" href="dir_f8e7d1e9e56edcba420edb0f04e04f87.html">Kitware</a></li><li class="navelem"><a class="el" href="dir_81275ec48967c19e6966f618a053c4b2.html">vtk-dicom</a></li><li class="navelem"><a class="el" href="dir_da5a89bf25bbef3bd47b6c5e1160a37a.html">Source</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -103,129 +103,129 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">     PURPOSE.  See the above copyright notice for more information.</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">=========================================================================*/</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifndef vtkDICOMToRAS_h</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define vtkDICOMToRAS_h</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;vtkThreadedImageAlgorithm.h&gt;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span> <span class="comment">// For export macro</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span>vtkMatrix4x4;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_to_r_a_s.html">   35</a></span>&#160;<span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a> : <span class="keyword">public</span> <a class="code" href="classvtk_threaded_image_algorithm.html">vtkThreadedImageAlgorithm</a></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">static</span> <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a> *New();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>, <a class="code" href="classvtk_threaded_image_algorithm.html">vtkThreadedImageAlgorithm</a>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#ifdef VTK_OVERRIDE</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_threaded_image_algorithm.html#a53dc14a03ab6cffae0ca5cadb2c6d172">PrintSelf</a>(ostream&amp; os, vtkIndent indent) VTK_OVERRIDE;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_threaded_image_algorithm.html#a53dc14a03ab6cffae0ca5cadb2c6d172">PrintSelf</a>(ostream&amp; os, vtkIndent indent);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> SetRASToDICOM(<span class="keywordtype">int</span> v);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">void</span> RASToDICOMOn() { this-&gt;SetRASToDICOM(1); }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> RASToDICOMOff() { this-&gt;SetRASToDICOM(0); }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">int</span> GetRASToDICOM() { <span class="keywordflow">return</span> this-&gt;RASToDICOM; }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">void</span> SetPatientMatrix(vtkMatrix4x4 *matrix);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  vtkMatrix4x4 *GetPatientMatrix() { <span class="keywordflow">return</span> this-&gt;PatientMatrix; }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">void</span> SetRASMatrix(vtkMatrix4x4 *matrix);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  vtkMatrix4x4 *GetRASMatrix() { <span class="keywordflow">return</span> this-&gt;RASMatrix; }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">void</span> UpdateMatrix();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">void</span> SetRASMatrixHasPosition(<span class="keywordtype">int</span> v);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">void</span> RASMatrixHasPositionOn() { this-&gt;SetRASMatrixHasPosition(1); }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">void</span> RASMatrixHasPositionOff() { this-&gt;SetRASMatrixHasPosition(0); }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">int</span> GetRASMatrixHasPosition() { <span class="keywordflow">return</span> this-&gt;RASMatrixHasPosition; }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordtype">void</span> SetAllowColumnReordering(<span class="keywordtype">int</span> v);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">void</span> AllowColumnReorderingOn() { this-&gt;SetAllowColumnReordering(1); }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordtype">void</span> AllowColumnReorderingOff() { this-&gt;SetAllowColumnReordering(0); }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">int</span> GetAllowColumnReordering() { <span class="keywordflow">return</span> this-&gt;AllowColumnReordering; }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordtype">void</span> SetAllowRowReordering(<span class="keywordtype">int</span> v);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordtype">void</span> AllowRowReorderingOn() { this-&gt;SetAllowRowReordering(1); }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordtype">void</span> AllowRowReorderingOff() { this-&gt;SetAllowRowReordering(0); }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">int</span> GetAllowRowReordering() { <span class="keywordflow">return</span> this-&gt;AllowRowReordering; }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  ~<a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>();</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordtype">void</span> CheckNeedToReorder();</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">void</span> ComputeMatrix(<span class="keywordtype">int</span> extent[6], <span class="keywordtype">double</span> spacing[3], <span class="keywordtype">double</span> origin[3]);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#ifdef VTK_OVERRIDE</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordtype">int</span> RequestInformation(</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    vtkInformationVector* outputVector) VTK_OVERRIDE;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordtype">int</span> RequestUpdateExtent(</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    vtkInformationVector* outputVector) VTK_OVERRIDE;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_threaded_image_algorithm.html#acb47f24e52706df6a7d2ded8266d2b23">RequestData</a>(</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    vtkInformationVector* outputVector) VTK_OVERRIDE;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_threaded_image_algorithm.html#adda52b8ad4b703ee11c76b916accbb42">ThreadedRequestData</a>(</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    vtkInformation *request, vtkInformationVector **inputVector,</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    vtkInformationVector *outputVector, vtkImageData ***inData,</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    vtkImageData **outData, <span class="keywordtype">int</span> ext[6], <span class="keywordtype">int</span> <span class="keywordtype">id</span>) VTK_OVERRIDE;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordtype">int</span> RequestInformation(</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    vtkInformationVector* outputVector);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keywordtype">int</span> RequestUpdateExtent(</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    vtkInformationVector* outputVector);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_threaded_image_algorithm.html#acb47f24e52706df6a7d2ded8266d2b23">RequestData</a>(</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    vtkInformationVector* outputVector);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_threaded_image_algorithm.html#adda52b8ad4b703ee11c76b916accbb42">ThreadedRequestData</a>(</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    vtkInformation *request, vtkInformationVector **inputVector,</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    vtkInformationVector *outputVector, vtkImageData ***inData,</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    vtkImageData **outData, <span class="keywordtype">int</span> ext[6], <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  vtkMatrix4x4 *PatientMatrix;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  vtkMatrix4x4 *RASMatrix;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keywordtype">int</span> RASToDICOM;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordtype">int</span> AllowColumnReordering;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordtype">int</span> AllowRowReordering;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordtype">int</span> RASMatrixHasPosition;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keywordtype">int</span> ReorderColumns;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keywordtype">int</span> ReorderRows;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordtype">double</span> Matrix[16];</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>&amp;);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>&amp;);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;};</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">#endif // vtkDICOMToRAS_h</span></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_to_r_a_s_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a></div><div class="ttdoc">Convert DICOM orientation to RAS orientation. </div><div class="ttdef"><b>Definition:</b> vtkDICOMToRAS.h:35</div></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifndef vtkDICOMToRAS_h</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define vtkDICOMToRAS_h</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;vtkThreadedImageAlgorithm.h&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span> <span class="comment">// For export macro</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">class </span>vtkMatrix4x4;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_to_r_a_s.html">   36</a></span>&#160;<span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a> : <span class="keyword">public</span> <a class="code" href="classvtk_threaded_image_algorithm.html">vtkThreadedImageAlgorithm</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">static</span> <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a> *New();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>, <a class="code" href="classvtk_threaded_image_algorithm.html">vtkThreadedImageAlgorithm</a>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#ifdef VTK_OVERRIDE</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_threaded_image_algorithm.html#a53dc14a03ab6cffae0ca5cadb2c6d172">PrintSelf</a>(ostream&amp; os, vtkIndent indent) VTK_OVERRIDE;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_threaded_image_algorithm.html#a53dc14a03ab6cffae0ca5cadb2c6d172">PrintSelf</a>(ostream&amp; os, vtkIndent indent);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> SetRASToDICOM(<span class="keywordtype">int</span> v);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> RASToDICOMOn() { this-&gt;SetRASToDICOM(1); }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> RASToDICOMOff() { this-&gt;SetRASToDICOM(0); }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">int</span> GetRASToDICOM() { <span class="keywordflow">return</span> this-&gt;RASToDICOM; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">void</span> SetPatientMatrix(vtkMatrix4x4 *matrix);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  vtkMatrix4x4 *GetPatientMatrix() { <span class="keywordflow">return</span> this-&gt;PatientMatrix; }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> SetRASMatrix(vtkMatrix4x4 *matrix);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  vtkMatrix4x4 *GetRASMatrix() { <span class="keywordflow">return</span> this-&gt;RASMatrix; }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">void</span> UpdateMatrix();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">void</span> SetRASMatrixHasPosition(<span class="keywordtype">int</span> v);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">void</span> RASMatrixHasPositionOn() { this-&gt;SetRASMatrixHasPosition(1); }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">void</span> RASMatrixHasPositionOff() { this-&gt;SetRASMatrixHasPosition(0); }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">int</span> GetRASMatrixHasPosition() { <span class="keywordflow">return</span> this-&gt;RASMatrixHasPosition; }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">void</span> SetAllowColumnReordering(<span class="keywordtype">int</span> v);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordtype">void</span> AllowColumnReorderingOn() { this-&gt;SetAllowColumnReordering(1); }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">void</span> AllowColumnReorderingOff() { this-&gt;SetAllowColumnReordering(0); }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordtype">int</span> GetAllowColumnReordering() { <span class="keywordflow">return</span> this-&gt;AllowColumnReordering; }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordtype">void</span> SetAllowRowReordering(<span class="keywordtype">int</span> v);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordtype">void</span> AllowRowReorderingOn() { this-&gt;SetAllowRowReordering(1); }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">void</span> AllowRowReorderingOff() { this-&gt;SetAllowRowReordering(0); }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">int</span> GetAllowRowReordering() { <span class="keywordflow">return</span> this-&gt;AllowRowReordering; }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  ~<a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordtype">void</span> CheckNeedToReorder();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordtype">void</span> ComputeMatrix(<span class="keywordtype">int</span> extent[6], <span class="keywordtype">double</span> spacing[3], <span class="keywordtype">double</span> origin[3]);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">#ifdef VTK_OVERRIDE</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordtype">int</span> RequestInformation(</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    vtkInformationVector* outputVector) VTK_OVERRIDE;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordtype">int</span> RequestUpdateExtent(</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    vtkInformationVector* outputVector) VTK_OVERRIDE;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_threaded_image_algorithm.html#acb47f24e52706df6a7d2ded8266d2b23">RequestData</a>(</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    vtkInformationVector* outputVector) VTK_OVERRIDE;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_threaded_image_algorithm.html#adda52b8ad4b703ee11c76b916accbb42">ThreadedRequestData</a>(</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    vtkInformation *request, vtkInformationVector **inputVector,</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    vtkInformationVector *outputVector, vtkImageData ***inData,</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    vtkImageData **outData, <span class="keywordtype">int</span> ext[6], <span class="keywordtype">int</span> <span class="keywordtype">id</span>) VTK_OVERRIDE;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordtype">int</span> RequestInformation(</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    vtkInformationVector* outputVector);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordtype">int</span> RequestUpdateExtent(</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    vtkInformationVector* outputVector);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_threaded_image_algorithm.html#acb47f24e52706df6a7d2ded8266d2b23">RequestData</a>(</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    vtkInformationVector* outputVector);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_threaded_image_algorithm.html#adda52b8ad4b703ee11c76b916accbb42">ThreadedRequestData</a>(</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    vtkInformation *request, vtkInformationVector **inputVector,</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    vtkInformationVector *outputVector, vtkImageData ***inData,</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    vtkImageData **outData, <span class="keywordtype">int</span> ext[6], <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  vtkMatrix4x4 *PatientMatrix;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  vtkMatrix4x4 *RASMatrix;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordtype">int</span> RASToDICOM;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordtype">int</span> AllowColumnReordering;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordtype">int</span> AllowRowReordering;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keywordtype">int</span> RASMatrixHasPosition;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keywordtype">int</span> ReorderColumns;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordtype">int</span> ReorderRows;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordtype">double</span> Matrix[16];</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>&amp;) VTK_DELETE_FUNCTION;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>&amp;) VTK_DELETE_FUNCTION;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>&amp;);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a>&amp;);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;};</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">#endif // vtkDICOMToRAS_h</span></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_to_r_a_s_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_to_r_a_s.html">vtkDICOMToRAS</a></div><div class="ttdoc">Convert DICOM orientation to RAS orientation. </div><div class="ttdef"><b>Definition:</b> vtkDICOMToRAS.h:36</div></div>
 <div class="ttc" id="classvtk_threaded_image_algorithm_html"><div class="ttname"><a href="classvtk_threaded_image_algorithm.html">vtkThreadedImageAlgorithm</a></div><div class="ttdoc">Generic filter that has one input.. </div><div class="ttdef"><b>Definition:</b> vtkThreadedImageAlgorithm.h:35</div></div>
 <div class="ttc" id="classvtk_threaded_image_algorithm_html_a53dc14a03ab6cffae0ca5cadb2c6d172"><div class="ttname"><a href="classvtk_threaded_image_algorithm.html#a53dc14a03ab6cffae0ca5cadb2c6d172">vtkThreadedImageAlgorithm::PrintSelf</a></div><div class="ttdeci">void PrintSelf(ostream &amp;os, vtkIndent indent)</div></div>
 <div class="ttc" id="classvtk_threaded_image_algorithm_html_adda52b8ad4b703ee11c76b916accbb42"><div class="ttname"><a href="classvtk_threaded_image_algorithm.html#adda52b8ad4b703ee11c76b916accbb42">vtkThreadedImageAlgorithm::ThreadedRequestData</a></div><div class="ttdeci">virtual void ThreadedRequestData(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector, vtkImageData ***inData, vtkImageData **outData, int extent[6], int threadId)</div></div>
@@ -233,7 +233,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 11 2017 13:30:14 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 24 2017 22:01:24 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

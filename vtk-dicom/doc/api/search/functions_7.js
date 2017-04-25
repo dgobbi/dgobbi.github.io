@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['hasattribute',['HasAttribute',['../classvtk_d_i_c_o_m_meta_data.html#aa1c6577c43a4c68414752cbb48e51f48',1,'vtkDICOMMetaData::HasAttribute()'],['../classvtk_d_i_c_o_m_meta_data_adapter.html#ac4b3c883f2325fba5668537d8bbc817e',1,'vtkDICOMMetaDataAdapter::HasAttribute()']]],
+  ['has',['Has',['../classvtk_d_i_c_o_m_meta_data.html#a91049abb7a5aee64bd2f687c189e9e94',1,'vtkDICOMMetaData::Has()'],['../classvtk_d_i_c_o_m_meta_data_adapter.html#a9e04bf2d9b7527d4f9c64728f5614ce8',1,'vtkDICOMMetaDataAdapter::Has()']]],
   ['hasexecutive',['HasExecutive',['../classvtk_algorithm.html#ae23c4e7904215d278035c9b9f27479f5',1,'vtkAlgorithm']]],
   ['haslongvl',['HasLongVL',['../classvtk_d_i_c_o_m_v_r.html#ac44afad08e78e978f24df81bedc2aecb',1,'vtkDICOMVR']]],
   ['hasnumericvalue',['HasNumericValue',['../classvtk_d_i_c_o_m_v_r.html#aff74c9a4e451f3669d4e2a144a879ba4',1,'vtkDICOMVR']]],

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.7.11</span>
+   &#160;<span id="projectnumber">0.8.0</span>
    </div>
   </td>
  </tr>
@@ -120,19 +120,9 @@ Public Types</h2></td></tr>
 <b>RGBCOLORS</b> =2
  }<tr class="separator:afac0bf29f7299ea31115d0346a6351dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
-<tr class="memitem:a84a3b022b67c2a6b6b615ee83ab6db80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84a3b022b67c2a6b6b615ee83ab6db80"></a>
-typedef <a class="el" href="classvtk_object.html">vtkObject</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
-<tr class="separator:a84a3b022b67c2a6b6b615ee83ab6db80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classvtk_object"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classvtk_object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classvtk_object.html">vtkObject</a></td></tr>
-<tr class="memitem:a11429dee69f4b562e03e07b453dae9b5 inherit pub_types_classvtk_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11429dee69f4b562e03e07b453dae9b5"></a>
-typedef <a class="el" href="classvtk_object_base.html">vtkObjectBase</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Superclass</b></td></tr>
-<tr class="separator:a11429dee69f4b562e03e07b453dae9b5 inherit pub_types_classvtk_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4f3a4971132a993571b76b9237e78776"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f3a4971132a993571b76b9237e78776"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetClassName</b> ()</td></tr>
-<tr class="separator:a4f3a4971132a993571b76b9237e78776"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d2ff18c231216d3126981096f87bba2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_scalars_to_colors.html#a5d2ff18c231216d3126981096f87bba2">IsA</a> (const char *type)</td></tr>
 <tr class="separator:a5d2ff18c231216d3126981096f87bba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8de38746b123107ed4c525f6deebb312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_scalars_to_colors.html#a8de38746b123107ed4c525f6deebb312">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
@@ -177,8 +167,8 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>GetAlpha</b
 <tr class="memitem:a5945270cbafaca66e96a7d5bf4f296a9"><td class="memItemLeft" align="right" valign="top">virtual vtkUnsignedCharArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_scalars_to_colors.html#a5945270cbafaca66e96a7d5bf4f296a9">MapScalars</a> (vtkDataArray *scalars, int colorMode, int component)</td></tr>
 <tr class="separator:a5945270cbafaca66e96a7d5bf4f296a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a8f9902d16313703d5c2307de253e9475"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_scalars_to_colors.html#a8f9902d16313703d5c2307de253e9475">SetVectorMode</a> (int)</td></tr>
-<tr class="separator:a8f9902d16313703d5c2307de253e9475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d009780187e55e0de3778f41ca8deef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_scalars_to_colors.html#a4d009780187e55e0de3778f41ca8deef">SetVectorMode</a> (int v)</td></tr>
+<tr class="separator:a4d009780187e55e0de3778f41ca8deef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a764af3895c7c385c727ecfab634dafc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a764af3895c7c385c727ecfab634dafc3"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetVectorMode</b> ()</td></tr>
 <tr class="separator:a764af3895c7c385c727ecfab634dafc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,14 +182,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetVectorModeToCompon
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetVectorModeToRGBColors</b> ()</td></tr>
 <tr class="separator:afb566d384d360ea9c675448243806dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a84e5bf389c6b97ead8994ad5b3342d39"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_scalars_to_colors.html#a84e5bf389c6b97ead8994ad5b3342d39">SetVectorComponent</a> (int)</td></tr>
-<tr class="separator:a84e5bf389c6b97ead8994ad5b3342d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfc5060cb821711c347fe2d61b686e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_scalars_to_colors.html#a0cfc5060cb821711c347fe2d61b686e7">SetVectorComponent</a> (int v)</td></tr>
+<tr class="separator:a0cfc5060cb821711c347fe2d61b686e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eaabacc7efd0f34c96e4b90cbaaaef5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2eaabacc7efd0f34c96e4b90cbaaaef5"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetVectorComponent</b> ()</td></tr>
 <tr class="separator:a2eaabacc7efd0f34c96e4b90cbaaaef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a43f97d6280802389bf130186b5a30338"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_scalars_to_colors.html#a43f97d6280802389bf130186b5a30338">SetVectorSize</a> (int)</td></tr>
-<tr class="separator:a43f97d6280802389bf130186b5a30338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c4b78c47a94b575bfeacb4e9bc5f8f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_scalars_to_colors.html#a3c4b78c47a94b575bfeacb4e9bc5f8f8">SetVectorSize</a> (int v)</td></tr>
+<tr class="separator:a3c4b78c47a94b575bfeacb4e9bc5f8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad58e965a34c70e245b09f98049af5149"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad58e965a34c70e245b09f98049af5149"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetVectorSize</b> ()</td></tr>
 <tr class="separator:ad58e965a34c70e245b09f98049af5149"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1168,7 +1158,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 
 </div>
 </div>
-<a class="anchor" id="a84e5bf389c6b97ead8994ad5b3342d39"></a>
+<a class="anchor" id="a0cfc5060cb821711c347fe2d61b686e7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1179,7 +1169,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
           <td class="memname">virtual void vtkScalarsToColors::SetVectorComponent </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1193,7 +1183,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 
 </div>
 </div>
-<a class="anchor" id="a8f9902d16313703d5c2307de253e9475"></a>
+<a class="anchor" id="a4d009780187e55e0de3778f41ca8deef"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1204,7 +1194,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
           <td class="memname">virtual void vtkScalarsToColors::SetVectorMode </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1218,7 +1208,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 
 </div>
 </div>
-<a class="anchor" id="a43f97d6280802389bf130186b5a30338"></a>
+<a class="anchor" id="a3c4b78c47a94b575bfeacb4e9bc5f8f8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1229,7 +1219,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
           <td class="memname">virtual void vtkScalarsToColors::SetVectorSize </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1275,7 +1265,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 11 2017 13:30:25 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 24 2017 22:01:34 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
