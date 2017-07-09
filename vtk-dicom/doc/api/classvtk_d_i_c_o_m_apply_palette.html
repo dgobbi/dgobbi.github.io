@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.1</span>
+   &#160;<span id="projectnumber">0.8.3</span>
    </div>
   </td>
  </tr>
@@ -705,7 +705,8 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Apply palette to PALETTE COLOR images. </p>
-<p>If an image contains a palette LUT, then this filter will apply that LUT to the image and produce an RGB image. Images without a palette LUT will pass through unchanged. If the image uses a supplemental palette that only applies to a specific range of pixel values, then pixel values outside of that range will be mapped to greyscale via the WindowWidth and WindowCenter specified in the image. </p>
+<p>If an image contains a palette LUT, then this filter will apply that LUT to the image and produce an RGB image. Images without a palette LUT will pass through unchanged. If the image uses a supplemental palette that only applies to a specific range of pixel values, then pixel values outside of that range will be mapped to greyscale via the WindowWidth and WindowCenter specified in the image.</p>
+<dl class="section warning"><dt>Warning</dt><dd>If this filter is used, then AutoRescaleOff() should be set on the reader to ensure that the reader does not rescale the data. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a69a82ee736d83121e3d63869802e9f0b"></a>
 <div class="memitem">
@@ -850,7 +851,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 13 2017 21:29:02 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 9 2017 16:13:26 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

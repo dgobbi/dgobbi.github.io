@@ -82,11 +82,14 @@ var searchData=
   ['setnumberofinputconnections',['SetNumberOfInputConnections',['../classvtk_algorithm.html#aac170283edeabb4ebf95afbf89dd4cd5',1,'vtkAlgorithm']]],
   ['setnumberofinputports',['SetNumberOfInputPorts',['../classvtk_algorithm.html#ad4a3a7f3327235754adb040753dd2a32',1,'vtkAlgorithm']]],
   ['setnumberofoutputports',['SetNumberOfOutputPorts',['../classvtk_algorithm.html#a1340409c00cd82921d45d7f5fdf50b4c',1,'vtkAlgorithm']]],
+  ['setnumberofoverlays',['SetNumberOfOverlays',['../classvtk_d_i_c_o_m_generator.html#ab8f2c8292f24f04cb7207785967590c9',1,'vtkDICOMGenerator']]],
   ['setnumberofscalarcomponents',['SetNumberOfScalarComponents',['../classvtk_image_reader2.html#aec807c8d1e9438e9935fbd66f0a166dd',1,'vtkImageReader2']]],
   ['setnumberoftablevalues',['SetNumberOfTableValues',['../classvtk_lookup_table.html#a43f6f8e3d8f043a9b491e4fb7abb0ede',1,'vtkLookupTable']]],
   ['setnumberofthreads',['SetNumberOfThreads',['../classvtk_threaded_image_algorithm.html#af73b5668a6e416e62e4b227d2016af8b',1,'vtkThreadedImageAlgorithm']]],
   ['setoriginatbottom',['SetOriginAtBottom',['../classvtk_d_i_c_o_m_generator.html#afae817aab47a00ee6fc42f7d0bb9c862',1,'vtkDICOMGenerator']]],
   ['setoutputscalartype',['SetOutputScalarType',['../classvtk_d_i_c_o_m_apply_rescale.html#abe530505c15b68e75d36681ce05ae068',1,'vtkDICOMApplyRescale::SetOutputScalarType()'],['../classvtk_d_i_c_o_m_reader.html#af514bef46a73dcae80c6f7825b194f52',1,'vtkDICOMReader::SetOutputScalarType()']]],
+  ['setoverlayinputdata',['SetOverlayInputData',['../classvtk_d_i_c_o_m_writer.html#adb9b62441d71aae1c1892f3dcda68b4f',1,'vtkDICOMWriter']]],
+  ['setoverlaytype',['SetOverlayType',['../classvtk_d_i_c_o_m_writer.html#ad5b156d731ccd658d6199da7fc5abc76',1,'vtkDICOMWriter']]],
   ['setoverridecharacterset',['SetOverrideCharacterSet',['../classvtk_d_i_c_o_m_directory.html#ae0fc9826e3a32b0242d91ed4738ded19',1,'vtkDICOMDirectory::SetOverrideCharacterSet()'],['../classvtk_d_i_c_o_m_parser.html#a633d8ba9ab5d4299e5df5f0640e03281',1,'vtkDICOMParser::SetOverrideCharacterSet()'],['../classvtk_d_i_c_o_m_reader.html#ad13ffb730655e5d41cce38b6aad8a144',1,'vtkDICOMReader::SetOverrideCharacterSet()']]],
   ['setpatientmatrix',['SetPatientMatrix',['../classvtk_d_i_c_o_m_generator.html#a35b84ee10c5b7156514363335b4f39a5',1,'vtkDICOMGenerator::SetPatientMatrix()'],['../classvtk_d_i_c_o_m_to_r_a_s.html#abf3b360a5cc0d98f32d9b016717d0ab6',1,'vtkDICOMToRAS::SetPatientMatrix()'],['../classvtk_d_i_c_o_m_writer.html#a880bd3b62641ae6b0560b051a83d109e',1,'vtkDICOMWriter::SetPatientMatrix()']]],
   ['setpixelrestrictions',['SetPixelRestrictions',['../classvtk_d_i_c_o_m_generator.html#ad1353be15d9e22353fbcfbd8e4457eb2',1,'vtkDICOMGenerator']]],
@@ -155,5 +158,7 @@ var searchData=
   ['shouldireleasedata',['ShouldIReleaseData',['../classvtk_data_object.html#aafe595f153759be6c7a195cf6b303fe1',1,'vtkDataObject']]],
   ['sortfiles',['SortFiles',['../classvtk_d_i_c_o_m_directory.html#acfac2838d727a663a3e974928ad4d69b',1,'vtkDICOMDirectory::SortFiles()'],['../classvtk_d_i_c_o_m_file_sorter.html#a2218f9e10d98e63f20f9f59e7eea3e5d',1,'vtkDICOMFileSorter::SortFiles()'],['../classvtk_d_i_c_o_m_reader.html#a23e52a2f940e80b1fb2273ecc091c155',1,'vtkDICOMReader::SortFiles()']]],
   ['splitextent',['SplitExtent',['../classvtk_threaded_image_algorithm.html#ab15aeb7ab76b22b9e780b213efd20265',1,'vtkThreadedImageAlgorithm']]],
+  ['stringtodouble',['StringToDouble',['../classvtk_scanco_c_t_reader.html#a93028d636e653e7485b1a7ed922bdb9d',1,'vtkScancoCTReader']]],
+  ['stringtoint',['StringToInt',['../classvtk_scanco_c_t_reader.html#a4b8d8345958fbaa2e27e2d6092a3d28d',1,'vtkScancoCTReader']]],
   ['stripstring',['StripString',['../classvtk_scanco_c_t_reader.html#a6d2f712eb7a8ddcae349ac65a3618140',1,'vtkScancoCTReader']]]
 ];

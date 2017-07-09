@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.1</span>
+   &#160;<span id="projectnumber">0.8.3</span>
    </div>
   </td>
  </tr>
@@ -183,6 +183,13 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRescaleSlo
 <tr class="memitem:a9834f7f07b2c8c9ed2c03ac2229f92aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9834f7f07b2c8c9ed2c03ac2229f92aa"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>GetRescaleSlope</b> ()</td></tr>
 <tr class="separator:a9834f7f07b2c8c9ed2c03ac2229f92aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ab8f2c8292f24f04cb7207785967590c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#ab8f2c8292f24f04cb7207785967590c9">SetNumberOfOverlays</a> (int v)</td></tr>
+<tr class="memdesc:ab8f2c8292f24f04cb7207785967590c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of overlays to generate.  <a href="#ab8f2c8292f24f04cb7207785967590c9">More...</a><br /></td></tr>
+<tr class="separator:ab8f2c8292f24f04cb7207785967590c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b717c60c575e8359f569365b3508aa1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b717c60c575e8359f569365b3508aa1"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetNumberOfOverlays</b> ()</td></tr>
+<tr class="separator:a9b717c60c575e8359f569365b3508aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a35b84ee10c5b7156514363335b4f39a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#a35b84ee10c5b7156514363335b4f39a5">SetPatientMatrix</a> (vtkMatrix4x4 *)</td></tr>
 <tr class="memdesc:a35b84ee10c5b7156514363335b4f39a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the matrix that places the image in DICOM patient coords.  <a href="#a35b84ee10c5b7156514363335b4f39a5">More...</a><br /></td></tr>
@@ -587,6 +594,10 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr class="memitem:a1d47bde6f0ada9b2c226d7e40ede7042"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d47bde6f0ada9b2c226d7e40ede7042"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>RescaleSlope</b></td></tr>
 <tr class="separator:a1d47bde6f0ada9b2c226d7e40ede7042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e193e2b5145b70a04302a347a18a81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81e193e2b5145b70a04302a347a18a81"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#a81e193e2b5145b70a04302a347a18a81">NumberOfOverlays</a></td></tr>
+<tr class="memdesc:a81e193e2b5145b70a04302a347a18a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of overlays to generate. <br /></td></tr>
+<tr class="separator:a81e193e2b5145b70a04302a347a18a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea8e903c009dca056c61a7d1908dd52c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea8e903c009dca056c61a7d1908dd52c"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#aea8e903c009dca056c61a7d1908dd52c">ScalarType</a></td></tr>
 <tr class="memdesc:aea8e903c009dca056c61a7d1908dd52c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The VTK scalar type of the data, set by <a class="el" href="classvtk_d_i_c_o_m_generator.html#ae731e034be9b807e641c11206b5d2535" title="Initialize the meta data and compute the slice index array. ">InitializeMetaData()</a>. <br /></td></tr>
@@ -1091,6 +1102,33 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 
 </div>
 </div>
+<a class="anchor" id="ab8f2c8292f24f04cb7207785967590c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void vtkDICOMGenerator::SetNumberOfOverlays </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the number of overlays to generate. </p>
+<p>This will cause overlay attributes to be copied from the source meta data to the output meta data. It is up to the writer to ensure that the values are consistent with each other. </p>
+
+</div>
+</div>
 <a class="anchor" id="afae817aab47a00ee6fc42f7d0bb9c862"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1382,7 +1420,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 13 2017 21:29:04 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 9 2017 16:13:28 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

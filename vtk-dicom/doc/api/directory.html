@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.1</span>
+   &#160;<span id="projectnumber">0.8.3</span>
    </div>
   </td>
  </tr>
@@ -158,7 +158,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">dicomdir-&gt;SetFilePattern(<span class="stringliteral">&quot;*.dcm&quot;</span>);</div>
 <div class="line">dicomdir-&gt;SetFindQuery(query);</div>
 <div class="line">dicomdir-&gt;Update();</div>
-</div><!-- fragment --><p>All text attributes except for dates accept the wildcards '*' and '?'. For dates, you can use a hyphen to specify a range of dates. Matching of all text is done by first converting the text to utf-8 for compability, and for patient names the matching is case insensitive. The query <b>PRIMARY</b> will match the multi-valued attribute value <b>ORIGINAL\PRIMARY</b>, since only one value has to match.</p>
+</div><!-- fragment --><p>All text attributes except for dates accept the wildcards '*' and '?'. For dates, you can use a hyphen to specify a range of dates. Matching of all text is done by first converting the text to utf-8 for compatibility, and for patient names the matching is case insensitive. The query <b>PRIMARY</b> will match the multi-valued attribute value <b>ORIGINAL\PRIMARY</b>, since only one value has to match.</p>
 <p>If the query contains any non-ASCII text, you must set the SpecificCharacterSet attribute to whichever character set your program uses internally. This does not have to be the same as the character set used in the files you are searching for. It is recommended to use utf-8 as the character set for the query, regardless of the character set used in the DICOM files.</p>
 <h2>Sorting a list of files</h2>
 <p>The <a class="el" href="classvtk_d_i_c_o_m_file_sorter.html" title="Sort DICOM files and group them by study and series. ">vtkDICOMFileSorter</a> class is obsolete, since its capabilities are eclipsed by the <a class="el" href="classvtk_d_i_c_o_m_directory.html" title="Get information about all DICOM files within a directory. ">vtkDICOMDirectory</a> class, but its use is documented here for historical reasons. It is also worth stating that the "sorting" provided by this class is, in fact, unnecessary: the <a class="el" href="classvtk_d_i_c_o_m_reader.html" title="Read DICOM image files. ">vtkDICOMReader</a> itself is capable of sorting its input files into the correct order.</p>
@@ -199,7 +199,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 13 2017 21:29:01 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 9 2017 16:13:24 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

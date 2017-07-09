@@ -10,6 +10,7 @@ var searchData=
   ['readmetadata',['ReadMetaData',['../classvtk_d_i_c_o_m_parser.html#aed97482b9ce9eb8d67bdb880e244f63e',1,'vtkDICOMParser']]],
   ['readmetaheader',['ReadMetaHeader',['../classvtk_d_i_c_o_m_parser.html#a62272cc85d6396c5ae4ba9236b043dff',1,'vtkDICOMParser']]],
   ['readonefile',['ReadOneFile',['../classvtk_d_i_c_o_m_reader.html#aae132f17eb3bbc754f181d2cc2c3160e',1,'vtkDICOMReader']]],
+  ['readoverlays',['ReadOverlays',['../classvtk_d_i_c_o_m_reader.html#a25ec363cb9c45e5d1fd63f58ebc6f5c6',1,'vtkDICOMReader']]],
   ['reallocateunsignedchardata',['ReallocateUnsignedCharData',['../classvtk_d_i_c_o_m_value.html#ae50506d2d070e62938dc1ac02ede6376',1,'vtkDICOMValue']]],
   ['register',['Register',['../classvtk_algorithm.html#afcae2f95370dd41d3afcda4f5c993ab6',1,'vtkAlgorithm::Register()'],['../classvtk_data_object.html#ae905d3ced06ace1b284f96daf05bd6e9',1,'vtkDataObject::Register()'],['../classvtk_object_base.html#a830c927684d2b23593ec447f1c274f57',1,'vtkObjectBase::Register()']]],
   ['relayerror',['RelayError',['../classvtk_d_i_c_o_m_directory.html#ab88dae84eba95506217858690c05ed17',1,'vtkDICOMDirectory::RelayError()'],['../classvtk_d_i_c_o_m_file_sorter.html#a5a93e4ba5987954f3ed19153fd260647',1,'vtkDICOMFileSorter::RelayError()'],['../classvtk_d_i_c_o_m_reader.html#a4362c72dd9e1525b6992851101488db0',1,'vtkDICOMReader::RelayError()']]],

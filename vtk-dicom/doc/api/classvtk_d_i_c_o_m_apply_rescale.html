@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.1</span>
+   &#160;<span id="projectnumber">0.8.3</span>
    </div>
   </td>
  </tr>
@@ -718,7 +718,8 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Convert pixels to real-world values. </p>
-<p>This filter uses the information in the DICOM meta data to convert the pixel values to real-world values with known units. It uses the DICOM RealWorldValueMapping attributes, if present, otherwise it uses the RescaleSlope and RescaleIntercept. If no mapping information is present, then the pixels are simply converted to floating-point. Note that if this filter is used, then AutoRescaleOff() should be set on the reader to ensure that the reader does not rescale the data. </p>
+<p>This filter uses the information in the DICOM meta data to convert the pixel values to real-world values with known units. It uses the DICOM RealWorldValueMapping attributes, if present, otherwise it uses the RescaleSlope and RescaleIntercept. If no mapping information is present, then the pixels are simply converted to floating-point.</p>
+<dl class="section warning"><dt>Warning</dt><dd>If this filter is used, then AutoRescaleOff() should be set on the reader to ensure that the reader does not rescale the data. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aba936df79b62c16b0e4421e08d0d0fca"></a>
 <div class="memitem">
@@ -863,7 +864,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 13 2017 21:29:03 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 9 2017 16:13:26 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.1</span>
+   &#160;<span id="projectnumber">0.8.3</span>
    </div>
   </td>
  </tr>
@@ -117,7 +117,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><code>Rows</code> and <code>Columns</code> (ditto)</li>
 <li><code>ImagePositionPatient</code> and <code>ImageOrientationPatient</code> (these are set from the PatientMatrix)</li>
 </ol>
-<p>The generator always creates a new <code>SOPInstanceUID</code> for each file and a new <code>SeriesInstanceUID</code> for each series. There is no way to set these UIDs manually. The <code>ImageType</code> is set to <code>DERIVED</code> by default, because an image cannot be considered to be <code>ORIGINAL</code> if it was modifed in any way after its original acquisition. Finally, all information related to the pixel values or the slice geometry is generated from the vtkImageData information and from the PatientMatrix.</p>
+<p>The generator always creates a new <code>SOPInstanceUID</code> for each file and a new <code>SeriesInstanceUID</code> for each series. There is no way to set these UIDs manually. The <code>ImageType</code> is set to <code>DERIVED</code> by default, because an image cannot be considered to be <code>ORIGINAL</code> if it was modified in any way after its original acquisition. Finally, all information related to the pixel values or the slice geometry is generated from the vtkImageData information and from the PatientMatrix.</p>
 <p>The <a class="el" href="classvtk_d_i_c_o_m_writer.html" title="Write DICOM image files. ">vtkDICOMWriter</a> allows several parameters, including <code>ImageType</code>, to be set when writing the file. These are demonstrated in the following example.</p>
 <div class="fragment"><div class="line"><span class="comment">// Plug the generator and meta data into the writer.</span></div>
 <div class="line">vtkNew&lt;vtkDICOMWriter&gt; writer;</div>
@@ -157,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 13 2017 21:29:01 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 9 2017 16:13:24 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

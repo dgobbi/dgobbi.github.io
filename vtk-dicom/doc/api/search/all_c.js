@@ -8,6 +8,7 @@ var searchData=
   ['nosortfiles',['NoSortFiles',['../classvtk_d_i_c_o_m_reader.html#a25accaaedc66a143b742dcd5ef773cde',1,'vtkDICOMReader']]],
   ['numberofcolorcomponents',['NumberOfColorComponents',['../classvtk_d_i_c_o_m_generator.html#ae582701d3e59c72c6377ee6a11b84b21',1,'vtkDICOMGenerator']]],
   ['numberofframes',['NumberOfFrames',['../classvtk_d_i_c_o_m_generator.html#abb867a5b9c718af0832150eaad899036',1,'vtkDICOMGenerator']]],
+  ['numberofoverlays',['NumberOfOverlays',['../classvtk_d_i_c_o_m_generator.html#a81e193e2b5145b70a04302a347a18a81',1,'vtkDICOMGenerator']]],
   ['numberofpackedcomponents',['NumberOfPackedComponents',['../classvtk_d_i_c_o_m_reader.html#a22098d7c30354a020965452d14337144',1,'vtkDICOMReader']]],
   ['numberofplanarcomponents',['NumberOfPlanarComponents',['../classvtk_d_i_c_o_m_reader.html#a321e97b5d997209c88dbd554813d1dc0',1,'vtkDICOMReader']]]
 ];

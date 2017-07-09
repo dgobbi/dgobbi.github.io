@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.1</span>
+   &#160;<span id="projectnumber">0.8.3</span>
    </div>
   </td>
  </tr>
@@ -243,60 +243,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">float</span> DecodeFloat(<span class="keyword">const</span> <span class="keywordtype">void</span> *data);</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">double</span> DecodeDouble(<span class="keyword">const</span> <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">double</span> StringToDouble(<span class="keyword">const</span> <span class="keywordtype">char</span> *cp, <span class="keywordtype">char</span> **cpp=0);</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> StripString(<span class="keywordtype">char</span> *dest, <span class="keyword">const</span> <span class="keywordtype">char</span> *source, <span class="keywordtype">size_t</span> l);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> StringToInt(<span class="keyword">const</span> <span class="keywordtype">char</span> *cp, <span class="keywordtype">char</span> **cpp=0);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">double</span> DecodeDouble(<span class="keyword">const</span> <span class="keywordtype">void</span> *data);</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="comment">// Header information</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="keywordtype">char</span> Version[18];</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keywordtype">char</span> PatientName[42];</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="keywordtype">int</span> PatientIndex;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="keywordtype">int</span> ScannerID;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="keywordtype">char</span> CreationDate[32];</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keywordtype">char</span> ModificationDate[32];</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keywordtype">int</span> ScanDimensionsPixels[3];</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="keywordtype">double</span> ScanDimensionsPhysical[3];</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keywordtype">double</span> SliceThickness;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keywordtype">double</span> SliceIncrement;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="keywordtype">double</span> StartPosition;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordtype">double</span> EndPosition;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordtype">double</span> ZPosition;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="keywordtype">double</span> DataRange[2];</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keywordtype">double</span> MuScaling;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="keywordtype">int</span> NumberOfSamples;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keywordtype">int</span> NumberOfProjections;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="keywordtype">double</span> ScanDistance;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keywordtype">double</span> SampleTime;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keywordtype">int</span> ScannerType;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="keywordtype">int</span> MeasurementIndex;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keywordtype">int</span> Site;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordtype">int</span> ReconstructionAlg;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="keywordtype">double</span> ReferenceLine;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keywordtype">double</span> Energy;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keywordtype">double</span> Intensity;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="keywordtype">int</span> RescaleType;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keywordtype">char</span> RescaleUnits[18];</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keywordtype">char</span> CalibrationData[66];</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordtype">double</span> RescaleSlope;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keywordtype">double</span> RescaleIntercept;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keywordtype">double</span> MuWater;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <span class="keywordtype">char</span> *RawHeader;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="comment">// The compression mode, if any.</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keywordtype">int</span> Compression;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keywordtype">void</span> operator=(const <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;);</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;};</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">#endif // vtkScancoCTReader_h</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> StripString(<span class="keywordtype">char</span> *dest, <span class="keyword">const</span> <span class="keywordtype">char</span> *source, <span class="keywordtype">size_t</span> l);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="comment">// Header information</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keywordtype">char</span> Version[18];</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="keywordtype">char</span> PatientName[42];</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keywordtype">int</span> PatientIndex;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keywordtype">int</span> ScannerID;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="keywordtype">char</span> CreationDate[32];</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordtype">char</span> ModificationDate[32];</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordtype">int</span> ScanDimensionsPixels[3];</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="keywordtype">double</span> ScanDimensionsPhysical[3];</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keywordtype">double</span> SliceThickness;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="keywordtype">double</span> SliceIncrement;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keywordtype">double</span> StartPosition;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="keywordtype">double</span> EndPosition;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keywordtype">double</span> ZPosition;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keywordtype">double</span> DataRange[2];</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="keywordtype">double</span> MuScaling;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keywordtype">int</span> NumberOfSamples;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordtype">int</span> NumberOfProjections;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="keywordtype">double</span> ScanDistance;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keywordtype">double</span> SampleTime;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keywordtype">int</span> ScannerType;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="keywordtype">int</span> MeasurementIndex;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keywordtype">int</span> Site;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keywordtype">int</span> ReconstructionAlg;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordtype">double</span> ReferenceLine;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keywordtype">double</span> Energy;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keywordtype">double</span> Intensity;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <span class="keywordtype">int</span> RescaleType;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="keywordtype">char</span> RescaleUnits[18];</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keywordtype">char</span> CalibrationData[66];</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keywordtype">double</span> RescaleSlope;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <span class="keywordtype">double</span> RescaleIntercept;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="keywordtype">double</span> MuWater;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keywordtype">char</span> *RawHeader;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="comment">// The compression mode, if any.</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="keywordtype">int</span> Compression;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;) VTK_DELETE_FUNCTION;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="keywordtype">void</span> operator=(const <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;) VTK_DELETE_FUNCTION;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;};</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="preprocessor">#endif // vtkScancoCTReader_h</span></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_ab4b7e1ca6196cc567fae7fd02cf78d99"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#ab4b7e1ca6196cc567fae7fd02cf78d99">vtkScancoCTReader::GetMeasurementIndex</a></div><div class="ttdeci">int GetMeasurementIndex()</div><div class="ttdoc">Get the index measurement. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:139</div></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_a33d8764421cd388eb6a611b8e0c02b14"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#a33d8764421cd388eb6a611b8e0c02b14">vtkScancoCTReader::GetScannerType</a></div><div class="ttdeci">int GetScannerType()</div><div class="ttdoc">Get the scanner type, as an integer code. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:133</div></div>
 <div class="ttc" id="classvtk_image_reader2_html_a2846943a7802b3a62df51e0936542abb"><div class="ttname"><a href="classvtk_image_reader2.html#a2846943a7802b3a62df51e0936542abb">vtkImageReader2::GetFileExtensions</a></div><div class="ttdeci">virtual const char * GetFileExtensions()</div><div class="ttdef"><b>Definition:</b> vtkImageReader2.h:233</div></div>
@@ -319,7 +323,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_ab735f75f4ed74c4a1a31faa70f642ae2"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#ab735f75f4ed74c4a1a31faa70f642ae2">vtkScancoCTReader::GetDescriptiveName</a></div><div class="ttdeci">const char * GetDescriptiveName()</div><div class="ttdoc">Return a descriptive name that might be useful in a GUI. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:76</div></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_ac7ebb5909edf979a69a560206e852cda"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#ac7ebb5909edf979a69a560206e852cda">vtkScancoCTReader::GetMuWater</a></div><div class="ttdeci">double GetMuWater()</div><div class="ttdoc">Get the linear attenuation of water, in units of [1/cm]. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:174</div></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_a4edba476dc26c116ca4046811f015439"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#a4edba476dc26c116ca4046811f015439">vtkScancoCTReader::GetSite</a></div><div class="ttdeci">int GetSite()</div><div class="ttdoc">Get an integer value that identifies the site on the body. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:142</div></div>
-<div class="ttc" id="classvtk_scanco_c_t_reader_html_a6cb7dddd261760701edef6e5353f2239"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#a6cb7dddd261760701edef6e5353f2239">vtkScancoCTReader::GetNumberOfProjections</a></div><div class="ttdeci">int GetNumberOfProjections()</div><div class="ttdoc">Get the nubmer of projections. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:127</div></div>
+<div class="ttc" id="classvtk_scanco_c_t_reader_html_a6cb7dddd261760701edef6e5353f2239"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#a6cb7dddd261760701edef6e5353f2239">vtkScancoCTReader::GetNumberOfProjections</a></div><div class="ttdeci">int GetNumberOfProjections()</div><div class="ttdoc">Get the number of projections. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:127</div></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_aa44b589662f3fdaa502ebba1b14cd236"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#aa44b589662f3fdaa502ebba1b14cd236">vtkScancoCTReader::GetIntensity</a></div><div class="ttdeci">double GetIntensity()</div><div class="ttdoc">Get the X-ray intensity (in mA). </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:157</div></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_a609e10c1c506c6112d14acf476fdf591"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#a609e10c1c506c6112d14acf476fdf591">vtkScancoCTReader::GetSampleTime</a></div><div class="ttdeci">double GetSampleTime()</div><div class="ttdoc">Get the sample time (in milliseconds). </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:136</div></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_ad6cdd4ba5493fadf08d66bc441210a68"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#ad6cdd4ba5493fadf08d66bc441210a68">vtkScancoCTReader::GetNumberOfSamples</a></div><div class="ttdeci">int GetNumberOfSamples()</div><div class="ttdoc">Get the number of samples. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:124</div></div>
@@ -336,7 +340,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 13 2017 21:29:01 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 9 2017 16:13:24 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

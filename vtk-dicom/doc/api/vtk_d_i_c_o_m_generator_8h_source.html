@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.1</span>
+   &#160;<span id="projectnumber">0.8.3</span>
    </div>
   </td>
  </tr>
@@ -160,221 +160,228 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  vtkGetMacro(RescaleSlope, <span class="keywordtype">double</span>);</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">void</span> SetPatientMatrix(vtkMatrix4x4 *);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  vtkMatrix4x4 *GetPatientMatrix() { <span class="keywordflow">return</span> this-&gt;PatientMatrix; }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  vtkSetMacro(OriginAtBottom, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  vtkGetMacro(OriginAtBottom, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  vtkSetMacro(ReverseSliceOrder, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  vtkGetMacro(ReverseSliceOrder, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordtype">void</span> SetSourceMetaData(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *GetSourceMetaData();</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordtype">void</span> SetUIDGenerator(<a class="code" href="classvtk_d_i_c_o_m_u_i_d_generator.html">vtkDICOMUIDGenerator</a> *);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_u_i_d_generator.html">vtkDICOMUIDGenerator</a> *GetUIDGenerator();</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a02be8e09e6a84e4aec627cf0a53ee04b">  194</a></span>&#160;  vtkIntArray *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a02be8e09e6a84e4aec627cf0a53ee04b">GetSliceIndexArray</a>() { <span class="keywordflow">return</span> this-&gt;SliceIndexArray; }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a8b16cc3e8e34cdb5981e8cccaa91d344">  203</a></span>&#160;  vtkIntArray *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a8b16cc3e8e34cdb5981e8cccaa91d344">GetComponentIndexArray</a>() { <span class="keywordflow">return</span> this-&gt;ComponentIndexArray; }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keyword">enum</span> {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    RepresentationUnsigned = 1u,</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    RepresentationSigned = 2u,</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    BitsStored1 = 1u,</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    BitsStored6 = (1u &lt;&lt; 5),</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    BitsStored8 = (1u &lt;&lt; 7),</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    BitsStored10 = (1u &lt;&lt; 9),</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    BitsStored12 = (1u &lt;&lt; 11),</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    BitsStored16 = (1u &lt;&lt; 15),</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    BitsStored32 = (1u &lt;&lt; 31)</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  };</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>();</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  ~<a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>();</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">   *  The generator uses the tag as a hint when generating the UIDs,</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">   *  for example the SOPInstanceUID might have a different format from</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">   *  the FrameOfReferenceUID.</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  std::string GenerateUID(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  vtkSetMacro(NumberOfOverlays, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  vtkGetMacro(NumberOfOverlays, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordtype">void</span> SetPatientMatrix(vtkMatrix4x4 *);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  vtkMatrix4x4 *GetPatientMatrix() { <span class="keywordflow">return</span> this-&gt;PatientMatrix; }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  vtkSetMacro(OriginAtBottom, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  vtkGetMacro(OriginAtBottom, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  vtkSetMacro(ReverseSliceOrder, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  vtkGetMacro(ReverseSliceOrder, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordtype">void</span> SetSourceMetaData(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *GetSourceMetaData();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="keywordtype">void</span> SetUIDGenerator(<a class="code" href="classvtk_d_i_c_o_m_u_i_d_generator.html">vtkDICOMUIDGenerator</a> *);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_u_i_d_generator.html">vtkDICOMUIDGenerator</a> *GetUIDGenerator();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a02be8e09e6a84e4aec627cf0a53ee04b">  205</a></span>&#160;  vtkIntArray *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a02be8e09e6a84e4aec627cf0a53ee04b">GetSliceIndexArray</a>() { <span class="keywordflow">return</span> this-&gt;SliceIndexArray; }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a8b16cc3e8e34cdb5981e8cccaa91d344">  214</a></span>&#160;  vtkIntArray *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a8b16cc3e8e34cdb5981e8cccaa91d344">GetComponentIndexArray</a>() { <span class="keywordflow">return</span> this-&gt;ComponentIndexArray; }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    RepresentationUnsigned = 1u,</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    RepresentationSigned = 2u,</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    BitsStored1 = 1u,</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    BitsStored6 = (1u &lt;&lt; 5),</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    BitsStored8 = (1u &lt;&lt; 7),</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    BitsStored10 = (1u &lt;&lt; 9),</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    BitsStored12 = (1u &lt;&lt; 11),</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    BitsStored16 = (1u &lt;&lt; 15),</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    BitsStored32 = (1u &lt;&lt; 31)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  };</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>();</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  ~<a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>();</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="keywordtype">void</span> GenerateUIDs(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag, vtkStringArray *uids);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment">   *  The generator uses the tag as a hint when generating the UIDs,</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment">   *  for example the SOPInstanceUID might have a different format from</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment">   *  the FrameOfReferenceUID.</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  std::string GenerateUID(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag);</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordtype">void</span> SetPixelRestrictions(</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pixelRepresentation, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> bitsStored,</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">int</span> colorComponents);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateSOPCommonModule(</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta, <span class="keyword">const</span> <span class="keywordtype">char</span> *SOPClass);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GeneratePatientModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateClinicalTrialSubjectModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="keywordtype">void</span> GenerateUIDs(<a class="code" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> tag, vtkStringArray *uids);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keywordtype">void</span> SetPixelRestrictions(</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pixelRepresentation, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> bitsStored,</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">int</span> colorComponents);</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateGeneralStudyModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GeneratePatientStudyModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateClinicalTrialStudyModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateGeneralSeriesModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateClinicalTrialSeriesModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateFrameOfReferenceModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateGeneralEquipmentModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateGeneralImageModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateImagePlaneModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateImagePixelModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateContrastBolusModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateMultiFrameModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateDeviceModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateSpecimenModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateOverlayPlaneModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateVOILUTModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> CopyRequiredAttributes(</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keyword">const</span> DC::EnumType *tags, <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> CopyOptionalAttributes(</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keyword">const</span> DC::EnumType *tags, <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> ComputeAspectRatio(<span class="keyword">const</span> <span class="keywordtype">double</span> spacing[2], <span class="keywordtype">int</span> aspect[2]);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateSOPCommonModule(</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta, <span class="keyword">const</span> <span class="keywordtype">char</span> *SOPClass);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GeneratePatientModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateClinicalTrialSubjectModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateGeneralStudyModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GeneratePatientStudyModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateClinicalTrialStudyModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateGeneralSeriesModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateClinicalTrialSeriesModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateFrameOfReferenceModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateGeneralEquipmentModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateGeneralImageModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateImagePlaneModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateImagePixelModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateContrastBolusModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateMultiFrameModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateDeviceModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateSpecimenModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateOverlayPlaneModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> GenerateVOILUTModule(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> CopyRequiredAttributes(</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keyword">const</span> DC::EnumType *tags, <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="keywordtype">void</span> ComputeAdjustedMatrix(</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordtype">double</span> matrix[16], <span class="keywordtype">double</span> origin[3], <span class="keywordtype">double</span> spacing[3]);</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> CopyOptionalAttributes(</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keyword">const</span> DC::EnumType *tags, <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> ComputePositionAndOrientation(</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> origin[3], <span class="keyword">const</span> <span class="keywordtype">double</span> matrix[16],</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">double</span> position[3], <span class="keywordtype">double</span> orientation[6]);</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> ComputeDimensions(</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    vtkInformation *info, <span class="keywordtype">int</span> *nframes, <span class="keywordtype">int</span> dims[5],</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordtype">double</span> spacing[5], <span class="keywordtype">double</span> origin[5]);</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> ComputePixelValueRange(</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    vtkInformation *info, <span class="keywordtype">int</span> seriesRange[2]);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> MatchInstances(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> InitializeMetaData(vtkInformation *info);</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;</div>
-<div class="line"><a name="l00385"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a1615278dd6f5696eda49c189f5a2fc47">  385</a></span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a1615278dd6f5696eda49c189f5a2fc47">MetaData</a>;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> ComputeAspectRatio(<span class="keyword">const</span> <span class="keywordtype">double</span> spacing[2], <span class="keywordtype">int</span> aspect[2]);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  <span class="keywordtype">void</span> ComputeAdjustedMatrix(</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">double</span> matrix[16], <span class="keywordtype">double</span> origin[3], <span class="keywordtype">double</span> spacing[3]);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> ComputePositionAndOrientation(</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> origin[3], <span class="keyword">const</span> <span class="keywordtype">double</span> matrix[16],</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordtype">double</span> position[3], <span class="keywordtype">double</span> orientation[6]);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> ComputeDimensions(</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    vtkInformation *info, <span class="keywordtype">int</span> *nframes, <span class="keywordtype">int</span> dims[5],</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordtype">double</span> spacing[5], <span class="keywordtype">double</span> origin[5]);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> ComputePixelValueRange(</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    vtkInformation *info, <span class="keywordtype">int</span> seriesRange[2]);</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> MatchInstances(<a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *source);</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a50120ac3d84bd94ec6f60d069aa23b17">  388</a></span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a50120ac3d84bd94ec6f60d069aa23b17">SourceMetaData</a>;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
-<div class="line"><a name="l00391"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a0ba64b9a8bf9efac2a12bd2296c4d619">  391</a></span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_u_i_d_generator.html">vtkDICOMUIDGenerator</a> *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a0ba64b9a8bf9efac2a12bd2296c4d619">UIDGenerator</a>;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
-<div class="line"><a name="l00394"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a260c33807bead8e1f9d39309ccc06941">  394</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#a260c33807bead8e1f9d39309ccc06941">MultiFrame</a>;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
-<div class="line"><a name="l00397"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a94ae2ab1ab4b4eb1358f518ae7ee9e6f">  397</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#a94ae2ab1ab4b4eb1358f518ae7ee9e6f">OriginAtBottom</a>;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;</div>
-<div class="line"><a name="l00400"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#aad7340700a18495b2e44c9b2d6c54cc3">  400</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#aad7340700a18495b2e44c9b2d6c54cc3">ReverseSliceOrder</a>;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
-<div class="line"><a name="l00403"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a410f7362e2128f3aac6c95bfa755b747">  403</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#a410f7362e2128f3aac6c95bfa755b747">TimeAsVector</a>;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
-<div class="line"><a name="l00406"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#aa7864aca1d6f2425473b08f252dd9597">  406</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#aa7864aca1d6f2425473b08f252dd9597">TimeDimension</a>;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  <span class="keywordtype">double</span> TimeSpacing;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
-<div class="line"><a name="l00410"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a5f3c2e7d5ab942cf6ecac168983f80c3">  410</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#a5f3c2e7d5ab942cf6ecac168983f80c3">RescaleIntercept</a>;</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  <span class="keywordtype">double</span> RescaleSlope;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> InitializeMetaData(vtkInformation *info);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
+<div class="line"><a name="l00396"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a1615278dd6f5696eda49c189f5a2fc47">  396</a></span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a1615278dd6f5696eda49c189f5a2fc47">MetaData</a>;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
+<div class="line"><a name="l00399"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a50120ac3d84bd94ec6f60d069aa23b17">  399</a></span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a50120ac3d84bd94ec6f60d069aa23b17">SourceMetaData</a>;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
+<div class="line"><a name="l00402"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a0ba64b9a8bf9efac2a12bd2296c4d619">  402</a></span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_u_i_d_generator.html">vtkDICOMUIDGenerator</a> *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a0ba64b9a8bf9efac2a12bd2296c4d619">UIDGenerator</a>;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;</div>
+<div class="line"><a name="l00405"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a260c33807bead8e1f9d39309ccc06941">  405</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#a260c33807bead8e1f9d39309ccc06941">MultiFrame</a>;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
+<div class="line"><a name="l00408"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a94ae2ab1ab4b4eb1358f518ae7ee9e6f">  408</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#a94ae2ab1ab4b4eb1358f518ae7ee9e6f">OriginAtBottom</a>;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
+<div class="line"><a name="l00411"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#aad7340700a18495b2e44c9b2d6c54cc3">  411</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#aad7340700a18495b2e44c9b2d6c54cc3">ReverseSliceOrder</a>;</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
-<div class="line"><a name="l00414"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#aea8e903c009dca056c61a7d1908dd52c">  414</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#aea8e903c009dca056c61a7d1908dd52c">ScalarType</a>;</div>
+<div class="line"><a name="l00414"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a410f7362e2128f3aac6c95bfa755b747">  414</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#a410f7362e2128f3aac6c95bfa755b747">TimeAsVector</a>;</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;</div>
-<div class="line"><a name="l00427"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#ae582701d3e59c72c6377ee6a11b84b21">  427</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#ae582701d3e59c72c6377ee6a11b84b21">NumberOfColorComponents</a>;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
-<div class="line"><a name="l00430"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#aa3da2f9c38451ef57ab85e8db0cb54e7">  430</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#aa3da2f9c38451ef57ab85e8db0cb54e7">AllowedPixelRepresentation</a>;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> AllowedBitsStored;</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;</div>
-<div class="line"><a name="l00440"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#abb867a5b9c718af0832150eaad899036">  440</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#abb867a5b9c718af0832150eaad899036">NumberOfFrames</a>;</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;</div>
-<div class="line"><a name="l00449"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#afebb1c2fa451efba059d39c8e3e8c335">  449</a></span>&#160;  <span class="keywordtype">int</span> Dimensions[5];</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;  <span class="keywordtype">double</span> Spacing[5];</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  <span class="keywordtype">double</span> Origin[5];</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;</div>
-<div class="line"><a name="l00457"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#aeea905c5e14c9681b5e0d957ca9ef8f7">  457</a></span>&#160;  <span class="keywordtype">int</span> PixelValueRange[2];</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
-<div class="line"><a name="l00460"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#af1b1f00f0d63115f83c4917d936f12e1">  460</a></span>&#160;  vtkMatrix4x4 *<a class="code" href="classvtk_d_i_c_o_m_generator.html#af1b1f00f0d63115f83c4917d936f12e1">PatientMatrix</a>;</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;</div>
-<div class="line"><a name="l00463"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a80c73f67d28435de4f94f8077464d4d2">  463</a></span>&#160;  vtkIntArray *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a80c73f67d28435de4f94f8077464d4d2">SliceIndexArray</a>;</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;  vtkIntArray *ComponentIndexArray;</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;</div>
-<div class="line"><a name="l00467"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a8f356f5bc7a325834443f951c47eee61">  467</a></span>&#160;  vtkIntArray *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a8f356f5bc7a325834443f951c47eee61">SourceInstanceArray</a>;</div>
+<div class="line"><a name="l00417"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#aa7864aca1d6f2425473b08f252dd9597">  417</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#aa7864aca1d6f2425473b08f252dd9597">TimeDimension</a>;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  <span class="keywordtype">double</span> TimeSpacing;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
+<div class="line"><a name="l00421"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a5f3c2e7d5ab942cf6ecac168983f80c3">  421</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#a5f3c2e7d5ab942cf6ecac168983f80c3">RescaleIntercept</a>;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  <span class="keywordtype">double</span> RescaleSlope;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;</div>
+<div class="line"><a name="l00425"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a81e193e2b5145b70a04302a347a18a81">  425</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#a81e193e2b5145b70a04302a347a18a81">NumberOfOverlays</a>;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;</div>
+<div class="line"><a name="l00428"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#aea8e903c009dca056c61a7d1908dd52c">  428</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#aea8e903c009dca056c61a7d1908dd52c">ScalarType</a>;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;</div>
+<div class="line"><a name="l00441"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#ae582701d3e59c72c6377ee6a11b84b21">  441</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#ae582701d3e59c72c6377ee6a11b84b21">NumberOfColorComponents</a>;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;</div>
+<div class="line"><a name="l00444"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#aa3da2f9c38451ef57ab85e8db0cb54e7">  444</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#aa3da2f9c38451ef57ab85e8db0cb54e7">AllowedPixelRepresentation</a>;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> AllowedBitsStored;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;</div>
+<div class="line"><a name="l00454"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#abb867a5b9c718af0832150eaad899036">  454</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html#abb867a5b9c718af0832150eaad899036">NumberOfFrames</a>;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;</div>
+<div class="line"><a name="l00463"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#afebb1c2fa451efba059d39c8e3e8c335">  463</a></span>&#160;  <span class="keywordtype">int</span> Dimensions[5];</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;  <span class="keywordtype">double</span> Spacing[5];</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;  <span class="keywordtype">double</span> Origin[5];</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div>
-<div class="line"><a name="l00470"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#ac57b529d22002a8bc3a3b2947cb0e11f">  470</a></span>&#160;  vtkIntArray *<a class="code" href="classvtk_d_i_c_o_m_generator.html#ac57b529d22002a8bc3a3b2947cb0e11f">RangeArray</a>;</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;  <span class="keywordtype">void</span> operator=(const <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>&amp;);</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>&amp;);</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;};</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;<span class="preprocessor">#endif // vtkDICOMGenerator_h</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#aeea905c5e14c9681b5e0d957ca9ef8f7">  471</a></span>&#160;  <span class="keywordtype">int</span> PixelValueRange[2];</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;</div>
+<div class="line"><a name="l00474"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#af1b1f00f0d63115f83c4917d936f12e1">  474</a></span>&#160;  vtkMatrix4x4 *<a class="code" href="classvtk_d_i_c_o_m_generator.html#af1b1f00f0d63115f83c4917d936f12e1">PatientMatrix</a>;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;</div>
+<div class="line"><a name="l00477"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a80c73f67d28435de4f94f8077464d4d2">  477</a></span>&#160;  vtkIntArray *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a80c73f67d28435de4f94f8077464d4d2">SliceIndexArray</a>;</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;  vtkIntArray *ComponentIndexArray;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;</div>
+<div class="line"><a name="l00481"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#a8f356f5bc7a325834443f951c47eee61">  481</a></span>&#160;  vtkIntArray *<a class="code" href="classvtk_d_i_c_o_m_generator.html#a8f356f5bc7a325834443f951c47eee61">SourceInstanceArray</a>;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;</div>
+<div class="line"><a name="l00484"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_generator.html#ac57b529d22002a8bc3a3b2947cb0e11f">  484</a></span>&#160;  vtkIntArray *<a class="code" href="classvtk_d_i_c_o_m_generator.html#ac57b529d22002a8bc3a3b2947cb0e11f">RangeArray</a>;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>&amp;) VTK_DELETE_FUNCTION;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;  <span class="keywordtype">void</span> operator=(const <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>&amp;) VTK_DELETE_FUNCTION;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>&amp;);</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a>&amp;);</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;};</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;<span class="preprocessor">#endif // vtkDICOMGenerator_h</span></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a81e193e2b5145b70a04302a347a18a81"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a81e193e2b5145b70a04302a347a18a81">vtkDICOMGenerator::NumberOfOverlays</a></div><div class="ttdeci">int NumberOfOverlays</div><div class="ttdoc">The number of overlays to generate. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:425</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_generator_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a></div><div class="ttdoc">Generate DICOM data series for specific IOD classes. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:44</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_aa7864aca1d6f2425473b08f252dd9597"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#aa7864aca1d6f2425473b08f252dd9597">vtkDICOMGenerator::TimeDimension</a></div><div class="ttdeci">int TimeDimension</div><div class="ttdoc">Time dimension suggested by the writer. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:406</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_aad7340700a18495b2e44c9b2d6c54cc3"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#aad7340700a18495b2e44c9b2d6c54cc3">vtkDICOMGenerator::ReverseSliceOrder</a></div><div class="ttdeci">int ReverseSliceOrder</div><div class="ttdoc">Whether to reverse the slices as compared to input data. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:400</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_aa3da2f9c38451ef57ab85e8db0cb54e7"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#aa3da2f9c38451ef57ab85e8db0cb54e7">vtkDICOMGenerator::AllowedPixelRepresentation</a></div><div class="ttdeci">unsigned int AllowedPixelRepresentation</div><div class="ttdoc">The permitted pixel representation and bits stored, as bitfields. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:430</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a260c33807bead8e1f9d39309ccc06941"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a260c33807bead8e1f9d39309ccc06941">vtkDICOMGenerator::MultiFrame</a></div><div class="ttdeci">int MultiFrame</div><div class="ttdoc">Whether to prefer multi-frame files over single-frame. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:394</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a1615278dd6f5696eda49c189f5a2fc47"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a1615278dd6f5696eda49c189f5a2fc47">vtkDICOMGenerator::MetaData</a></div><div class="ttdeci">vtkDICOMMetaData * MetaData</div><div class="ttdoc">The generated meta data. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:385</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_af1b1f00f0d63115f83c4917d936f12e1"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#af1b1f00f0d63115f83c4917d936f12e1">vtkDICOMGenerator::PatientMatrix</a></div><div class="ttdeci">vtkMatrix4x4 * PatientMatrix</div><div class="ttdoc">The orientation matrix for the DICOM file. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:460</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_aea8e903c009dca056c61a7d1908dd52c"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#aea8e903c009dca056c61a7d1908dd52c">vtkDICOMGenerator::ScalarType</a></div><div class="ttdeci">int ScalarType</div><div class="ttdoc">The VTK scalar type of the data, set by InitializeMetaData(). </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:414</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_aa7864aca1d6f2425473b08f252dd9597"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#aa7864aca1d6f2425473b08f252dd9597">vtkDICOMGenerator::TimeDimension</a></div><div class="ttdeci">int TimeDimension</div><div class="ttdoc">Time dimension suggested by the writer. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:417</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_aad7340700a18495b2e44c9b2d6c54cc3"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#aad7340700a18495b2e44c9b2d6c54cc3">vtkDICOMGenerator::ReverseSliceOrder</a></div><div class="ttdeci">int ReverseSliceOrder</div><div class="ttdoc">Whether to reverse the slices as compared to input data. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:411</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_aa3da2f9c38451ef57ab85e8db0cb54e7"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#aa3da2f9c38451ef57ab85e8db0cb54e7">vtkDICOMGenerator::AllowedPixelRepresentation</a></div><div class="ttdeci">unsigned int AllowedPixelRepresentation</div><div class="ttdoc">The permitted pixel representation and bits stored, as bitfields. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:444</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a260c33807bead8e1f9d39309ccc06941"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a260c33807bead8e1f9d39309ccc06941">vtkDICOMGenerator::MultiFrame</a></div><div class="ttdeci">int MultiFrame</div><div class="ttdoc">Whether to prefer multi-frame files over single-frame. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:405</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a1615278dd6f5696eda49c189f5a2fc47"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a1615278dd6f5696eda49c189f5a2fc47">vtkDICOMGenerator::MetaData</a></div><div class="ttdeci">vtkDICOMMetaData * MetaData</div><div class="ttdoc">The generated meta data. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:396</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_af1b1f00f0d63115f83c4917d936f12e1"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#af1b1f00f0d63115f83c4917d936f12e1">vtkDICOMGenerator::PatientMatrix</a></div><div class="ttdeci">vtkMatrix4x4 * PatientMatrix</div><div class="ttdoc">The orientation matrix for the DICOM file. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:474</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_aea8e903c009dca056c61a7d1908dd52c"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#aea8e903c009dca056c61a7d1908dd52c">vtkDICOMGenerator::ScalarType</a></div><div class="ttdeci">int ScalarType</div><div class="ttdoc">The VTK scalar type of the data, set by InitializeMetaData(). </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:428</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_item_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a></div><div class="ttdoc">An item in a DICOM sequence (type SQ). </div><div class="ttdef"><b>Definition:</b> vtkDICOMItem.h:33</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a0ba64b9a8bf9efac2a12bd2296c4d619"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a0ba64b9a8bf9efac2a12bd2296c4d619">vtkDICOMGenerator::UIDGenerator</a></div><div class="ttdeci">vtkDICOMUIDGenerator * UIDGenerator</div><div class="ttdoc">The UID generator. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:391</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_ac57b529d22002a8bc3a3b2947cb0e11f"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#ac57b529d22002a8bc3a3b2947cb0e11f">vtkDICOMGenerator::RangeArray</a></div><div class="ttdeci">vtkIntArray * RangeArray</div><div class="ttdoc">Map from frame to image min/max. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:470</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a0ba64b9a8bf9efac2a12bd2296c4d619"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a0ba64b9a8bf9efac2a12bd2296c4d619">vtkDICOMGenerator::UIDGenerator</a></div><div class="ttdeci">vtkDICOMUIDGenerator * UIDGenerator</div><div class="ttdoc">The UID generator. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:402</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_ac57b529d22002a8bc3a3b2947cb0e11f"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#ac57b529d22002a8bc3a3b2947cb0e11f">vtkDICOMGenerator::RangeArray</a></div><div class="ttdeci">vtkIntArray * RangeArray</div><div class="ttdoc">Map from frame to image min/max. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:484</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_meta_data_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></div><div class="ttdoc">A container class for DICOM metadata. </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaData.h:32</div></div>
 <div class="ttc" id="classvtk_object_html_abf3dbb4154289b56a12483eee3866263"><div class="ttname"><a href="classvtk_object.html#abf3dbb4154289b56a12483eee3866263">vtkObject::PrintSelf</a></div><div class="ttdeci">virtual void PrintSelf(ostream &amp;os, vtkIndent indent)</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a5f3c2e7d5ab942cf6ecac168983f80c3"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a5f3c2e7d5ab942cf6ecac168983f80c3">vtkDICOMGenerator::RescaleIntercept</a></div><div class="ttdeci">double RescaleIntercept</div><div class="ttdoc">Data rescaling parameters. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:410</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a8f356f5bc7a325834443f951c47eee61"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a8f356f5bc7a325834443f951c47eee61">vtkDICOMGenerator::SourceInstanceArray</a></div><div class="ttdeci">vtkIntArray * SourceInstanceArray</div><div class="ttdoc">Map from output files to input files. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:467</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a50120ac3d84bd94ec6f60d069aa23b17"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a50120ac3d84bd94ec6f60d069aa23b17">vtkDICOMGenerator::SourceMetaData</a></div><div class="ttdeci">vtkDICOMMetaData * SourceMetaData</div><div class="ttdoc">The source meta data. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:388</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a410f7362e2128f3aac6c95bfa755b747"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a410f7362e2128f3aac6c95bfa755b747">vtkDICOMGenerator::TimeAsVector</a></div><div class="ttdeci">int TimeAsVector</div><div class="ttdoc">Whether time is stored in slices or in scalar components. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:403</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a8b16cc3e8e34cdb5981e8cccaa91d344"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a8b16cc3e8e34cdb5981e8cccaa91d344">vtkDICOMGenerator::GetComponentIndexArray</a></div><div class="ttdeci">vtkIntArray * GetComponentIndexArray()</div><div class="ttdoc">Get an array that maps file and frame to component. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:203</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_ae582701d3e59c72c6377ee6a11b84b21"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#ae582701d3e59c72c6377ee6a11b84b21">vtkDICOMGenerator::NumberOfColorComponents</a></div><div class="ttdeci">int NumberOfColorComponents</div><div class="ttdoc">The number of color components, for color scalars. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:427</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a02be8e09e6a84e4aec627cf0a53ee04b"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a02be8e09e6a84e4aec627cf0a53ee04b">vtkDICOMGenerator::GetSliceIndexArray</a></div><div class="ttdeci">vtkIntArray * GetSliceIndexArray()</div><div class="ttdoc">Get an array that maps file and frame to slice. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:194</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a5f3c2e7d5ab942cf6ecac168983f80c3"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a5f3c2e7d5ab942cf6ecac168983f80c3">vtkDICOMGenerator::RescaleIntercept</a></div><div class="ttdeci">double RescaleIntercept</div><div class="ttdoc">Data rescaling parameters. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:421</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a8f356f5bc7a325834443f951c47eee61"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a8f356f5bc7a325834443f951c47eee61">vtkDICOMGenerator::SourceInstanceArray</a></div><div class="ttdeci">vtkIntArray * SourceInstanceArray</div><div class="ttdoc">Map from output files to input files. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:481</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a50120ac3d84bd94ec6f60d069aa23b17"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a50120ac3d84bd94ec6f60d069aa23b17">vtkDICOMGenerator::SourceMetaData</a></div><div class="ttdeci">vtkDICOMMetaData * SourceMetaData</div><div class="ttdoc">The source meta data. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:399</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a410f7362e2128f3aac6c95bfa755b747"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a410f7362e2128f3aac6c95bfa755b747">vtkDICOMGenerator::TimeAsVector</a></div><div class="ttdeci">int TimeAsVector</div><div class="ttdoc">Whether time is stored in slices or in scalar components. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:414</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a8b16cc3e8e34cdb5981e8cccaa91d344"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a8b16cc3e8e34cdb5981e8cccaa91d344">vtkDICOMGenerator::GetComponentIndexArray</a></div><div class="ttdeci">vtkIntArray * GetComponentIndexArray()</div><div class="ttdoc">Get an array that maps file and frame to component. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:214</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_ae582701d3e59c72c6377ee6a11b84b21"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#ae582701d3e59c72c6377ee6a11b84b21">vtkDICOMGenerator::NumberOfColorComponents</a></div><div class="ttdeci">int NumberOfColorComponents</div><div class="ttdoc">The number of color components, for color scalars. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:441</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a02be8e09e6a84e4aec627cf0a53ee04b"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a02be8e09e6a84e4aec627cf0a53ee04b">vtkDICOMGenerator::GetSliceIndexArray</a></div><div class="ttdeci">vtkIntArray * GetSliceIndexArray()</div><div class="ttdoc">Get an array that maps file and frame to slice. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:205</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_tag_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a></div><div class="ttdoc">A (group,element) identifier tag for DICOM attributes. </div><div class="ttdef"><b>Definition:</b> vtkDICOMTag.h:22</div></div>
 <div class="ttc" id="classvtk_object_html"><div class="ttname"><a href="classvtk_object.html">vtkObject</a></div><div class="ttdoc">abstract base class for most VTK objects </div><div class="ttdef"><b>Definition:</b> vtkObject.h:51</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_abb867a5b9c718af0832150eaad899036"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#abb867a5b9c718af0832150eaad899036">vtkDICOMGenerator::NumberOfFrames</a></div><div class="ttdeci">int NumberOfFrames</div><div class="ttdoc">The number of frames. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:440</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_abb867a5b9c718af0832150eaad899036"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#abb867a5b9c718af0832150eaad899036">vtkDICOMGenerator::NumberOfFrames</a></div><div class="ttdeci">int NumberOfFrames</div><div class="ttdoc">The number of frames. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:454</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_u_i_d_generator_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_u_i_d_generator.html">vtkDICOMUIDGenerator</a></div><div class="ttdoc">Generate UIDs for written DICOM files. </div><div class="ttdef"><b>Definition:</b> vtkDICOMUIDGenerator.h:35</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a80c73f67d28435de4f94f8077464d4d2"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a80c73f67d28435de4f94f8077464d4d2">vtkDICOMGenerator::SliceIndexArray</a></div><div class="ttdeci">vtkIntArray * SliceIndexArray</div><div class="ttdoc">The file-and-frame to slice-and-component maps. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:463</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a94ae2ab1ab4b4eb1358f518ae7ee9e6f"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a94ae2ab1ab4b4eb1358f518ae7ee9e6f">vtkDICOMGenerator::OriginAtBottom</a></div><div class="ttdeci">int OriginAtBottom</div><div class="ttdoc">Whether VTK image data is not top-to-bottom yet. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:397</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a80c73f67d28435de4f94f8077464d4d2"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a80c73f67d28435de4f94f8077464d4d2">vtkDICOMGenerator::SliceIndexArray</a></div><div class="ttdeci">vtkIntArray * SliceIndexArray</div><div class="ttdoc">The file-and-frame to slice-and-component maps. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:477</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_generator_html_a94ae2ab1ab4b4eb1358f518ae7ee9e6f"><div class="ttname"><a href="classvtk_d_i_c_o_m_generator.html#a94ae2ab1ab4b4eb1358f518ae7ee9e6f">vtkDICOMGenerator::OriginAtBottom</a></div><div class="ttdeci">int OriginAtBottom</div><div class="ttdoc">Whether VTK image data is not top-to-bottom yet. </div><div class="ttdef"><b>Definition:</b> vtkDICOMGenerator.h:408</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 13 2017 21:29:00 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 9 2017 16:13:24 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
