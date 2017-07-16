@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.3</span>
+   &#160;<span id="projectnumber">0.8.4</span>
    </div>
   </td>
  </tr>
@@ -285,10 +285,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOverlayOutput</b> 
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a1663e75f5484355db26bea48682b9a11">HasOverlay</a> ()</td></tr>
 <tr class="memdesc:a1663e75f5484355db26bea48682b9a11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if any overlays are present. <br /></td></tr>
 <tr class="separator:a1663e75f5484355db26bea48682b9a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1752d320f3dfb0451eca873906cbdb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1752d320f3dfb0451eca873906cbdb0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#ac1752d320f3dfb0451eca873906cbdb0">GetOverlayBitfield</a> ()</td></tr>
-<tr class="memdesc:ac1752d320f3dfb0451eca873906cbdb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bitfield that indicates which overlays are present. <br /></td></tr>
-<tr class="separator:ac1752d320f3dfb0451eca873906cbdb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb752a237d582941c8e59e2886293b25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb752a237d582941c8e59e2886293b25"></a>
+unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#abb752a237d582941c8e59e2886293b25">GetOverlayBitfield</a> ()</td></tr>
+<tr class="memdesc:abb752a237d582941c8e59e2886293b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bitfield that indicates which overlays are present. <br /></td></tr>
+<tr class="separator:abb752a237d582941c8e59e2886293b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:aefd549842f49ddaa9889c4e50cb7e1c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefd549842f49ddaa9889c4e50cb7e1c7"></a>
 vtkMedicalImageProperties *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aefd549842f49ddaa9889c4e50cb7e1c7">GetMedicalImageProperties</a> ()</td></tr>
@@ -885,6 +885,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aae132f17eb3bbc754f181d2cc2c3160e">ReadOneFile</a> (const char *filename, int idx, unsigned char *buffer, vtkIdType bufferSize)</td></tr>
 <tr class="memdesc:aae132f17eb3bbc754f181d2cc2c3160e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read one file. Specify the offset to the PixelData. <br /></td></tr>
 <tr class="separator:aae132f17eb3bbc754f181d2cc2c3160e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01079d01cbc0571fab8b2f00e931c260"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01079d01cbc0571fab8b2f00e931c260"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a01079d01cbc0571fab8b2f00e931c260">MaskBits</a> (void *buffer, vtkIdType bufferSize, int scalarSize, int bitsStored, int pixelRepresentation)</td></tr>
+<tr class="memdesc:a01079d01cbc0571fab8b2f00e931c260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear or sign-extend any bits beyond BitsStored. <br /></td></tr>
+<tr class="separator:a01079d01cbc0571fab8b2f00e931c260"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41eaaf398cbd9fdcf3d36ddcce7739cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41eaaf398cbd9fdcf3d36ddcce7739cd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a41eaaf398cbd9fdcf3d36ddcce7739cd">UnpackBits</a> (const void *source, void *buffer, vtkIdType bufferSize, int bits)</td></tr>
 <tr class="memdesc:a41eaaf398cbd9fdcf3d36ddcce7739cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpack 1 bit to 8 bits or 12 bits to 16 bits. <br /></td></tr>
@@ -1159,10 +1163,10 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>TimeSpacing</b></td
 char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a1b8a445cd18daf939fb0b65342f0803b">DesiredStackID</a> [20]</td></tr>
 <tr class="memdesc:a1b8a445cd18daf939fb0b65342f0803b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The stack to load. <br /></td></tr>
 <tr class="separator:a1b8a445cd18daf939fb0b65342f0803b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2ca58590dd7572c354d12f99895ebba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2ca58590dd7572c354d12f99895ebba"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#aa2ca58590dd7572c354d12f99895ebba">OverlayBitfield</a></td></tr>
-<tr class="memdesc:aa2ca58590dd7572c354d12f99895ebba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitfield that says what overlays are present. <br /></td></tr>
-<tr class="separator:aa2ca58590dd7572c354d12f99895ebba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a025c1226c15b176a0e44624f9309bf90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a025c1226c15b176a0e44624f9309bf90"></a>
+unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_reader.html#a025c1226c15b176a0e44624f9309bf90">OverlayBitfield</a></td></tr>
+<tr class="memdesc:a025c1226c15b176a0e44624f9309bf90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitfield that says what overlays are present. <br /></td></tr>
+<tr class="separator:a025c1226c15b176a0e44624f9309bf90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a409e8d9dc7f2c6632e37a80088cf1ad8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a409e8d9dc7f2c6632e37a80088cf1ad8"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateOverlayFlag</b></td></tr>
 <tr class="separator:a409e8d9dc7f2c6632e37a80088cf1ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1751,7 +1755,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 9 2017 16:13:30 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 16 2017 14:52:49 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

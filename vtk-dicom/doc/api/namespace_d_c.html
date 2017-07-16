@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.3</span>
+   &#160;<span id="projectnumber">0.8.4</span>
    </div>
   </td>
  </tr>
@@ -5898,100 +5898,175 @@ Enumerations</h2></td></tr>
 &#160;&#160;<b>OverlayLabel</b> = 0x60001500, 
 <b>OverlayData</b> = 0x60003000, 
 <b>OverlayComments</b> = 0x60004000, 
-<b>OverlayRepeatInterval2</b> = 0x60020068, 
+<b>OverlayRows2</b> = 0x60020010, 
 <br />
-&#160;&#160;<b>OverlayBitsGrouped2</b> = 0x60020069, 
-<b>OverlayBitsAllocated2</b> = 0x60020100, 
+&#160;&#160;<b>OverlayColumns2</b> = 0x60020011, 
+<b>OverlayPlanes2</b> = 0x60020012, 
+<b>NumberOfFramesInOverlay2</b> = 0x60020015, 
+<b>OverlayDescription2</b> = 0x60020022, 
+<br />
+&#160;&#160;<b>OverlayType2</b> = 0x60020040, 
+<b>OverlaySubtype2</b> = 0x60020045, 
+<b>OverlayOrigin2</b> = 0x60020050, 
+<b>ImageFrameOrigin2</b> = 0x60020051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin2</b> = 0x60020052, 
+<b>OverlayCompressionCode2</b> = 0x60020060, 
+<b>OverlayCompressionOriginator2</b> = 0x60020061, 
+<b>OverlayCompressionLabel2</b> = 0x60020062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription2</b> = 0x60020063, 
+<b>OverlayCompressionStepPointers2</b> = 0x60020066, 
+<b>OverlayRepeatInterval2</b> = 0x60020068, 
+<b>OverlayBitsGrouped2</b> = 0x60020069, 
+<br />
+&#160;&#160;<b>OverlayBitsAllocated2</b> = 0x60020100, 
 <b>OverlayBitPosition2</b> = 0x60020102, 
 <b>OverlayFormat2</b> = 0x60020110, 
+<b>OverlayLocation2</b> = 0x60020200, 
 <br />
-&#160;&#160;<b>OverlayLocation2</b> = 0x60020200, 
-<b>OverlayCodeLabel2</b> = 0x60020800, 
+&#160;&#160;<b>OverlayCodeLabel2</b> = 0x60020800, 
 <b>OverlayNumberOfTables2</b> = 0x60020802, 
 <b>OverlayCodeTableLocation2</b> = 0x60020803, 
+<b>OverlayBitsForCodeWord2</b> = 0x60020804, 
 <br />
-&#160;&#160;<b>OverlayBitsForCodeWord2</b> = 0x60020804, 
-<b>OverlayActivationLayer2</b> = 0x60021001, 
+&#160;&#160;<b>OverlayActivationLayer2</b> = 0x60021001, 
 <b>OverlayDescriptorGray2</b> = 0x60021100, 
 <b>OverlayDescriptorRed2</b> = 0x60021101, 
+<b>OverlayDescriptorGreen2</b> = 0x60021102, 
 <br />
-&#160;&#160;<b>OverlayDescriptorGreen2</b> = 0x60021102, 
-<b>OverlayDescriptorBlue2</b> = 0x60021103, 
+&#160;&#160;<b>OverlayDescriptorBlue2</b> = 0x60021103, 
 <b>OverlaysGray2</b> = 0x60021200, 
 <b>OverlaysRed2</b> = 0x60021201, 
+<b>OverlaysGreen2</b> = 0x60021202, 
 <br />
-&#160;&#160;<b>OverlaysGreen2</b> = 0x60021202, 
-<b>OverlaysBlue2</b> = 0x60021203, 
+&#160;&#160;<b>OverlaysBlue2</b> = 0x60021203, 
 <b>ROIArea2</b> = 0x60021301, 
 <b>ROIMean2</b> = 0x60021302, 
+<b>ROIStandardDeviation2</b> = 0x60021303, 
 <br />
-&#160;&#160;<b>ROIStandardDeviation2</b> = 0x60021303, 
-<b>OverlayLabel2</b> = 0x60021500, 
+&#160;&#160;<b>OverlayLabel2</b> = 0x60021500, 
 <b>OverlayData2</b> = 0x60023000, 
 <b>OverlayComments2</b> = 0x60024000, 
+<b>OverlayRows3</b> = 0x60040010, 
 <br />
-&#160;&#160;<b>OverlayRepeatInterval3</b> = 0x60040068, 
+&#160;&#160;<b>OverlayColumns3</b> = 0x60040011, 
+<b>OverlayPlanes3</b> = 0x60040012, 
+<b>NumberOfFramesInOverlay3</b> = 0x60040015, 
+<b>OverlayDescription3</b> = 0x60040022, 
+<br />
+&#160;&#160;<b>OverlayType3</b> = 0x60040040, 
+<b>OverlaySubtype3</b> = 0x60040045, 
+<b>OverlayOrigin3</b> = 0x60040050, 
+<b>ImageFrameOrigin3</b> = 0x60040051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin3</b> = 0x60040052, 
+<b>OverlayCompressionCode3</b> = 0x60040060, 
+<b>OverlayCompressionOriginator3</b> = 0x60040061, 
+<b>OverlayCompressionLabel3</b> = 0x60040062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription3</b> = 0x60040063, 
+<b>OverlayCompressionStepPointers3</b> = 0x60040066, 
+<b>OverlayRepeatInterval3</b> = 0x60040068, 
 <b>OverlayBitsGrouped3</b> = 0x60040069, 
-<b>OverlayBitsAllocated3</b> = 0x60040100, 
+<br />
+&#160;&#160;<b>OverlayBitsAllocated3</b> = 0x60040100, 
 <b>OverlayBitPosition3</b> = 0x60040102, 
-<br />
-&#160;&#160;<b>OverlayFormat3</b> = 0x60040110, 
+<b>OverlayFormat3</b> = 0x60040110, 
 <b>OverlayLocation3</b> = 0x60040200, 
-<b>OverlayCodeLabel3</b> = 0x60040800, 
+<br />
+&#160;&#160;<b>OverlayCodeLabel3</b> = 0x60040800, 
 <b>OverlayNumberOfTables3</b> = 0x60040802, 
-<br />
-&#160;&#160;<b>OverlayCodeTableLocation3</b> = 0x60040803, 
+<b>OverlayCodeTableLocation3</b> = 0x60040803, 
 <b>OverlayBitsForCodeWord3</b> = 0x60040804, 
-<b>OverlayActivationLayer3</b> = 0x60041001, 
+<br />
+&#160;&#160;<b>OverlayActivationLayer3</b> = 0x60041001, 
 <b>OverlayDescriptorGray3</b> = 0x60041100, 
-<br />
-&#160;&#160;<b>OverlayDescriptorRed3</b> = 0x60041101, 
+<b>OverlayDescriptorRed3</b> = 0x60041101, 
 <b>OverlayDescriptorGreen3</b> = 0x60041102, 
-<b>OverlayDescriptorBlue3</b> = 0x60041103, 
+<br />
+&#160;&#160;<b>OverlayDescriptorBlue3</b> = 0x60041103, 
 <b>OverlaysGray3</b> = 0x60041200, 
-<br />
-&#160;&#160;<b>OverlaysRed3</b> = 0x60041201, 
+<b>OverlaysRed3</b> = 0x60041201, 
 <b>OverlaysGreen3</b> = 0x60041202, 
-<b>OverlaysBlue3</b> = 0x60041203, 
+<br />
+&#160;&#160;<b>OverlaysBlue3</b> = 0x60041203, 
 <b>ROIArea3</b> = 0x60041301, 
-<br />
-&#160;&#160;<b>ROIMean3</b> = 0x60041302, 
+<b>ROIMean3</b> = 0x60041302, 
 <b>ROIStandardDeviation3</b> = 0x60041303, 
-<b>OverlayLabel3</b> = 0x60041500, 
-<b>OverlayData3</b> = 0x60043000, 
 <br />
-&#160;&#160;<b>OverlayComments3</b> = 0x60044000, 
+&#160;&#160;<b>OverlayLabel3</b> = 0x60041500, 
+<b>OverlayData3</b> = 0x60043000, 
+<b>OverlayComments3</b> = 0x60044000, 
+<b>OverlayRows4</b> = 0x60060010, 
+<br />
+&#160;&#160;<b>OverlayColumns4</b> = 0x60060011, 
+<b>OverlayPlanes4</b> = 0x60060012, 
+<b>NumberOfFramesInOverlay4</b> = 0x60060015, 
+<b>OverlayDescription4</b> = 0x60060022, 
+<br />
+&#160;&#160;<b>OverlayType4</b> = 0x60060040, 
+<b>OverlaySubtype4</b> = 0x60060045, 
+<b>OverlayOrigin4</b> = 0x60060050, 
+<b>ImageFrameOrigin4</b> = 0x60060051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin4</b> = 0x60060052, 
+<b>OverlayCompressionCode4</b> = 0x60060060, 
+<b>OverlayCompressionOriginator4</b> = 0x60060061, 
+<b>OverlayCompressionLabel4</b> = 0x60060062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription4</b> = 0x60060063, 
+<b>OverlayCompressionStepPointers4</b> = 0x60060066, 
 <b>OverlayRepeatInterval4</b> = 0x60060068, 
 <b>OverlayBitsGrouped4</b> = 0x60060069, 
-<b>OverlayBitsAllocated4</b> = 0x60060100, 
 <br />
-&#160;&#160;<b>OverlayBitPosition4</b> = 0x60060102, 
+&#160;&#160;<b>OverlayBitsAllocated4</b> = 0x60060100, 
+<b>OverlayBitPosition4</b> = 0x60060102, 
 <b>OverlayFormat4</b> = 0x60060110, 
 <b>OverlayLocation4</b> = 0x60060200, 
-<b>OverlayCodeLabel4</b> = 0x60060800, 
 <br />
-&#160;&#160;<b>OverlayNumberOfTables4</b> = 0x60060802, 
+&#160;&#160;<b>OverlayCodeLabel4</b> = 0x60060800, 
+<b>OverlayNumberOfTables4</b> = 0x60060802, 
 <b>OverlayCodeTableLocation4</b> = 0x60060803, 
 <b>OverlayBitsForCodeWord4</b> = 0x60060804, 
-<b>OverlayActivationLayer4</b> = 0x60061001, 
 <br />
-&#160;&#160;<b>OverlayDescriptorGray4</b> = 0x60061100, 
+&#160;&#160;<b>OverlayActivationLayer4</b> = 0x60061001, 
+<b>OverlayDescriptorGray4</b> = 0x60061100, 
 <b>OverlayDescriptorRed4</b> = 0x60061101, 
 <b>OverlayDescriptorGreen4</b> = 0x60061102, 
-<b>OverlayDescriptorBlue4</b> = 0x60061103, 
 <br />
-&#160;&#160;<b>OverlaysGray4</b> = 0x60061200, 
+&#160;&#160;<b>OverlayDescriptorBlue4</b> = 0x60061103, 
+<b>OverlaysGray4</b> = 0x60061200, 
 <b>OverlaysRed4</b> = 0x60061201, 
 <b>OverlaysGreen4</b> = 0x60061202, 
-<b>OverlaysBlue4</b> = 0x60061203, 
 <br />
-&#160;&#160;<b>ROIArea4</b> = 0x60061301, 
+&#160;&#160;<b>OverlaysBlue4</b> = 0x60061203, 
+<b>ROIArea4</b> = 0x60061301, 
 <b>ROIMean4</b> = 0x60061302, 
 <b>ROIStandardDeviation4</b> = 0x60061303, 
-<b>OverlayLabel4</b> = 0x60061500, 
 <br />
-&#160;&#160;<b>OverlayData4</b> = 0x60063000, 
+&#160;&#160;<b>OverlayLabel4</b> = 0x60061500, 
+<b>OverlayData4</b> = 0x60063000, 
 <b>OverlayComments4</b> = 0x60064000, 
+<b>OverlayRows5</b> = 0x60080010, 
+<br />
+&#160;&#160;<b>OverlayColumns5</b> = 0x60080011, 
+<b>OverlayPlanes5</b> = 0x60080012, 
+<b>NumberOfFramesInOverlay5</b> = 0x60080015, 
+<b>OverlayDescription5</b> = 0x60080022, 
+<br />
+&#160;&#160;<b>OverlayType5</b> = 0x60080040, 
+<b>OverlaySubtype5</b> = 0x60080045, 
+<b>OverlayOrigin5</b> = 0x60080050, 
+<b>ImageFrameOrigin5</b> = 0x60080051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin5</b> = 0x60080052, 
+<b>OverlayCompressionCode5</b> = 0x60080060, 
+<b>OverlayCompressionOriginator5</b> = 0x60080061, 
+<b>OverlayCompressionLabel5</b> = 0x60080062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription5</b> = 0x60080063, 
+<b>OverlayCompressionStepPointers5</b> = 0x60080066, 
 <b>OverlayRepeatInterval5</b> = 0x60080068, 
 <b>OverlayBitsGrouped5</b> = 0x60080069, 
 <br />
@@ -6023,100 +6098,175 @@ Enumerations</h2></td></tr>
 &#160;&#160;<b>OverlayLabel5</b> = 0x60081500, 
 <b>OverlayData5</b> = 0x60083000, 
 <b>OverlayComments5</b> = 0x60084000, 
-<b>OverlayRepeatInterval6</b> = 0x600A0068, 
+<b>OverlayRows6</b> = 0x600A0010, 
 <br />
-&#160;&#160;<b>OverlayBitsGrouped6</b> = 0x600A0069, 
-<b>OverlayBitsAllocated6</b> = 0x600A0100, 
+&#160;&#160;<b>OverlayColumns6</b> = 0x600A0011, 
+<b>OverlayPlanes6</b> = 0x600A0012, 
+<b>NumberOfFramesInOverlay6</b> = 0x600A0015, 
+<b>OverlayDescription6</b> = 0x600A0022, 
+<br />
+&#160;&#160;<b>OverlayType6</b> = 0x600A0040, 
+<b>OverlaySubtype6</b> = 0x600A0045, 
+<b>OverlayOrigin6</b> = 0x600A0050, 
+<b>ImageFrameOrigin6</b> = 0x600A0051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin6</b> = 0x600A0052, 
+<b>OverlayCompressionCode6</b> = 0x600A0060, 
+<b>OverlayCompressionOriginator6</b> = 0x600A0061, 
+<b>OverlayCompressionLabel6</b> = 0x600A0062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription6</b> = 0x600A0063, 
+<b>OverlayCompressionStepPointers6</b> = 0x600A0066, 
+<b>OverlayRepeatInterval6</b> = 0x600A0068, 
+<b>OverlayBitsGrouped6</b> = 0x600A0069, 
+<br />
+&#160;&#160;<b>OverlayBitsAllocated6</b> = 0x600A0100, 
 <b>OverlayBitPosition6</b> = 0x600A0102, 
 <b>OverlayFormat6</b> = 0x600A0110, 
+<b>OverlayLocation6</b> = 0x600A0200, 
 <br />
-&#160;&#160;<b>OverlayLocation6</b> = 0x600A0200, 
-<b>OverlayCodeLabel6</b> = 0x600A0800, 
+&#160;&#160;<b>OverlayCodeLabel6</b> = 0x600A0800, 
 <b>OverlayNumberOfTables6</b> = 0x600A0802, 
 <b>OverlayCodeTableLocation6</b> = 0x600A0803, 
+<b>OverlayBitsForCodeWord6</b> = 0x600A0804, 
 <br />
-&#160;&#160;<b>OverlayBitsForCodeWord6</b> = 0x600A0804, 
-<b>OverlayActivationLayer6</b> = 0x600A1001, 
+&#160;&#160;<b>OverlayActivationLayer6</b> = 0x600A1001, 
 <b>OverlayDescriptorGray6</b> = 0x600A1100, 
 <b>OverlayDescriptorRed6</b> = 0x600A1101, 
+<b>OverlayDescriptorGreen6</b> = 0x600A1102, 
 <br />
-&#160;&#160;<b>OverlayDescriptorGreen6</b> = 0x600A1102, 
-<b>OverlayDescriptorBlue6</b> = 0x600A1103, 
+&#160;&#160;<b>OverlayDescriptorBlue6</b> = 0x600A1103, 
 <b>OverlaysGray6</b> = 0x600A1200, 
 <b>OverlaysRed6</b> = 0x600A1201, 
+<b>OverlaysGreen6</b> = 0x600A1202, 
 <br />
-&#160;&#160;<b>OverlaysGreen6</b> = 0x600A1202, 
-<b>OverlaysBlue6</b> = 0x600A1203, 
+&#160;&#160;<b>OverlaysBlue6</b> = 0x600A1203, 
 <b>ROIArea6</b> = 0x600A1301, 
 <b>ROIMean6</b> = 0x600A1302, 
+<b>ROIStandardDeviation6</b> = 0x600A1303, 
 <br />
-&#160;&#160;<b>ROIStandardDeviation6</b> = 0x600A1303, 
-<b>OverlayLabel6</b> = 0x600A1500, 
+&#160;&#160;<b>OverlayLabel6</b> = 0x600A1500, 
 <b>OverlayData6</b> = 0x600A3000, 
 <b>OverlayComments6</b> = 0x600A4000, 
+<b>OverlayRows7</b> = 0x600C0010, 
 <br />
-&#160;&#160;<b>OverlayRepeatInterval7</b> = 0x600C0068, 
+&#160;&#160;<b>OverlayColumns7</b> = 0x600C0011, 
+<b>OverlayPlanes7</b> = 0x600C0012, 
+<b>NumberOfFramesInOverlay7</b> = 0x600C0015, 
+<b>OverlayDescription7</b> = 0x600C0022, 
+<br />
+&#160;&#160;<b>OverlayType7</b> = 0x600C0040, 
+<b>OverlaySubtype7</b> = 0x600C0045, 
+<b>OverlayOrigin7</b> = 0x600C0050, 
+<b>ImageFrameOrigin7</b> = 0x600C0051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin7</b> = 0x600C0052, 
+<b>OverlayCompressionCode7</b> = 0x600C0060, 
+<b>OverlayCompressionOriginator7</b> = 0x600C0061, 
+<b>OverlayCompressionLabel7</b> = 0x600C0062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription7</b> = 0x600C0063, 
+<b>OverlayCompressionStepPointers7</b> = 0x600C0066, 
+<b>OverlayRepeatInterval7</b> = 0x600C0068, 
 <b>OverlayBitsGrouped7</b> = 0x600C0069, 
-<b>OverlayBitsAllocated7</b> = 0x600C0100, 
+<br />
+&#160;&#160;<b>OverlayBitsAllocated7</b> = 0x600C0100, 
 <b>OverlayBitPosition7</b> = 0x600C0102, 
-<br />
-&#160;&#160;<b>OverlayFormat7</b> = 0x600C0110, 
+<b>OverlayFormat7</b> = 0x600C0110, 
 <b>OverlayLocation7</b> = 0x600C0200, 
-<b>OverlayCodeLabel7</b> = 0x600C0800, 
+<br />
+&#160;&#160;<b>OverlayCodeLabel7</b> = 0x600C0800, 
 <b>OverlayNumberOfTables7</b> = 0x600C0802, 
-<br />
-&#160;&#160;<b>OverlayCodeTableLocation7</b> = 0x600C0803, 
+<b>OverlayCodeTableLocation7</b> = 0x600C0803, 
 <b>OverlayBitsForCodeWord7</b> = 0x600C0804, 
-<b>OverlayActivationLayer7</b> = 0x600C1001, 
+<br />
+&#160;&#160;<b>OverlayActivationLayer7</b> = 0x600C1001, 
 <b>OverlayDescriptorGray7</b> = 0x600C1100, 
-<br />
-&#160;&#160;<b>OverlayDescriptorRed7</b> = 0x600C1101, 
+<b>OverlayDescriptorRed7</b> = 0x600C1101, 
 <b>OverlayDescriptorGreen7</b> = 0x600C1102, 
-<b>OverlayDescriptorBlue7</b> = 0x600C1103, 
+<br />
+&#160;&#160;<b>OverlayDescriptorBlue7</b> = 0x600C1103, 
 <b>OverlaysGray7</b> = 0x600C1200, 
-<br />
-&#160;&#160;<b>OverlaysRed7</b> = 0x600C1201, 
+<b>OverlaysRed7</b> = 0x600C1201, 
 <b>OverlaysGreen7</b> = 0x600C1202, 
-<b>OverlaysBlue7</b> = 0x600C1203, 
+<br />
+&#160;&#160;<b>OverlaysBlue7</b> = 0x600C1203, 
 <b>ROIArea7</b> = 0x600C1301, 
-<br />
-&#160;&#160;<b>ROIMean7</b> = 0x600C1302, 
+<b>ROIMean7</b> = 0x600C1302, 
 <b>ROIStandardDeviation7</b> = 0x600C1303, 
-<b>OverlayLabel7</b> = 0x600C1500, 
-<b>OverlayData7</b> = 0x600C3000, 
 <br />
-&#160;&#160;<b>OverlayComments7</b> = 0x600C4000, 
+&#160;&#160;<b>OverlayLabel7</b> = 0x600C1500, 
+<b>OverlayData7</b> = 0x600C3000, 
+<b>OverlayComments7</b> = 0x600C4000, 
+<b>OverlayRows8</b> = 0x600E0010, 
+<br />
+&#160;&#160;<b>OverlayColumns8</b> = 0x600E0011, 
+<b>OverlayPlanes8</b> = 0x600E0012, 
+<b>NumberOfFramesInOverlay8</b> = 0x600E0015, 
+<b>OverlayDescription8</b> = 0x600E0022, 
+<br />
+&#160;&#160;<b>OverlayType8</b> = 0x600E0040, 
+<b>OverlaySubtype8</b> = 0x600E0045, 
+<b>OverlayOrigin8</b> = 0x600E0050, 
+<b>ImageFrameOrigin8</b> = 0x600E0051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin8</b> = 0x600E0052, 
+<b>OverlayCompressionCode8</b> = 0x600E0060, 
+<b>OverlayCompressionOriginator8</b> = 0x600E0061, 
+<b>OverlayCompressionLabel8</b> = 0x600E0062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription8</b> = 0x600E0063, 
+<b>OverlayCompressionStepPointers8</b> = 0x600E0066, 
 <b>OverlayRepeatInterval8</b> = 0x600E0068, 
 <b>OverlayBitsGrouped8</b> = 0x600E0069, 
-<b>OverlayBitsAllocated8</b> = 0x600E0100, 
 <br />
-&#160;&#160;<b>OverlayBitPosition8</b> = 0x600E0102, 
+&#160;&#160;<b>OverlayBitsAllocated8</b> = 0x600E0100, 
+<b>OverlayBitPosition8</b> = 0x600E0102, 
 <b>OverlayFormat8</b> = 0x600E0110, 
 <b>OverlayLocation8</b> = 0x600E0200, 
-<b>OverlayCodeLabel8</b> = 0x600E0800, 
 <br />
-&#160;&#160;<b>OverlayNumberOfTables8</b> = 0x600E0802, 
+&#160;&#160;<b>OverlayCodeLabel8</b> = 0x600E0800, 
+<b>OverlayNumberOfTables8</b> = 0x600E0802, 
 <b>OverlayCodeTableLocation8</b> = 0x600E0803, 
 <b>OverlayBitsForCodeWord8</b> = 0x600E0804, 
-<b>OverlayActivationLayer8</b> = 0x600E1001, 
 <br />
-&#160;&#160;<b>OverlayDescriptorGray8</b> = 0x600E1100, 
+&#160;&#160;<b>OverlayActivationLayer8</b> = 0x600E1001, 
+<b>OverlayDescriptorGray8</b> = 0x600E1100, 
 <b>OverlayDescriptorRed8</b> = 0x600E1101, 
 <b>OverlayDescriptorGreen8</b> = 0x600E1102, 
-<b>OverlayDescriptorBlue8</b> = 0x600E1103, 
 <br />
-&#160;&#160;<b>OverlaysGray8</b> = 0x600E1200, 
+&#160;&#160;<b>OverlayDescriptorBlue8</b> = 0x600E1103, 
+<b>OverlaysGray8</b> = 0x600E1200, 
 <b>OverlaysRed8</b> = 0x600E1201, 
 <b>OverlaysGreen8</b> = 0x600E1202, 
-<b>OverlaysBlue8</b> = 0x600E1203, 
 <br />
-&#160;&#160;<b>ROIArea8</b> = 0x600E1301, 
+&#160;&#160;<b>OverlaysBlue8</b> = 0x600E1203, 
+<b>ROIArea8</b> = 0x600E1301, 
 <b>ROIMean8</b> = 0x600E1302, 
 <b>ROIStandardDeviation8</b> = 0x600E1303, 
-<b>OverlayLabel8</b> = 0x600E1500, 
 <br />
-&#160;&#160;<b>OverlayData8</b> = 0x600E3000, 
+&#160;&#160;<b>OverlayLabel8</b> = 0x600E1500, 
+<b>OverlayData8</b> = 0x600E3000, 
 <b>OverlayComments8</b> = 0x600E4000, 
+<b>OverlayRows9</b> = 0x60100010, 
+<br />
+&#160;&#160;<b>OverlayColumns9</b> = 0x60100011, 
+<b>OverlayPlanes9</b> = 0x60100012, 
+<b>NumberOfFramesInOverlay9</b> = 0x60100015, 
+<b>OverlayDescription9</b> = 0x60100022, 
+<br />
+&#160;&#160;<b>OverlayType9</b> = 0x60100040, 
+<b>OverlaySubtype9</b> = 0x60100045, 
+<b>OverlayOrigin9</b> = 0x60100050, 
+<b>ImageFrameOrigin9</b> = 0x60100051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin9</b> = 0x60100052, 
+<b>OverlayCompressionCode9</b> = 0x60100060, 
+<b>OverlayCompressionOriginator9</b> = 0x60100061, 
+<b>OverlayCompressionLabel9</b> = 0x60100062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription9</b> = 0x60100063, 
+<b>OverlayCompressionStepPointers9</b> = 0x60100066, 
 <b>OverlayRepeatInterval9</b> = 0x60100068, 
 <b>OverlayBitsGrouped9</b> = 0x60100069, 
 <br />
@@ -6148,100 +6298,175 @@ Enumerations</h2></td></tr>
 &#160;&#160;<b>OverlayLabel9</b> = 0x60101500, 
 <b>OverlayData9</b> = 0x60103000, 
 <b>OverlayComments9</b> = 0x60104000, 
-<b>OverlayRepeatInterval10</b> = 0x60120068, 
+<b>OverlayRows10</b> = 0x60120010, 
 <br />
-&#160;&#160;<b>OverlayBitsGrouped10</b> = 0x60120069, 
-<b>OverlayBitsAllocated10</b> = 0x60120100, 
+&#160;&#160;<b>OverlayColumns10</b> = 0x60120011, 
+<b>OverlayPlanes10</b> = 0x60120012, 
+<b>NumberOfFramesInOverlay10</b> = 0x60120015, 
+<b>OverlayDescription10</b> = 0x60120022, 
+<br />
+&#160;&#160;<b>OverlayType10</b> = 0x60120040, 
+<b>OverlaySubtype10</b> = 0x60120045, 
+<b>OverlayOrigin10</b> = 0x60120050, 
+<b>ImageFrameOrigin10</b> = 0x60120051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin10</b> = 0x60120052, 
+<b>OverlayCompressionCode10</b> = 0x60120060, 
+<b>OverlayCompressionOriginator10</b> = 0x60120061, 
+<b>OverlayCompressionLabel10</b> = 0x60120062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription10</b> = 0x60120063, 
+<b>OverlayCompressionStepPointers10</b> = 0x60120066, 
+<b>OverlayRepeatInterval10</b> = 0x60120068, 
+<b>OverlayBitsGrouped10</b> = 0x60120069, 
+<br />
+&#160;&#160;<b>OverlayBitsAllocated10</b> = 0x60120100, 
 <b>OverlayBitPosition10</b> = 0x60120102, 
 <b>OverlayFormat10</b> = 0x60120110, 
+<b>OverlayLocation10</b> = 0x60120200, 
 <br />
-&#160;&#160;<b>OverlayLocation10</b> = 0x60120200, 
-<b>OverlayCodeLabel10</b> = 0x60120800, 
+&#160;&#160;<b>OverlayCodeLabel10</b> = 0x60120800, 
 <b>OverlayNumberOfTables10</b> = 0x60120802, 
 <b>OverlayCodeTableLocation10</b> = 0x60120803, 
+<b>OverlayBitsForCodeWord10</b> = 0x60120804, 
 <br />
-&#160;&#160;<b>OverlayBitsForCodeWord10</b> = 0x60120804, 
-<b>OverlayActivationLayer10</b> = 0x60121001, 
+&#160;&#160;<b>OverlayActivationLayer10</b> = 0x60121001, 
 <b>OverlayDescriptorGray10</b> = 0x60121100, 
 <b>OverlayDescriptorRed10</b> = 0x60121101, 
+<b>OverlayDescriptorGreen10</b> = 0x60121102, 
 <br />
-&#160;&#160;<b>OverlayDescriptorGreen10</b> = 0x60121102, 
-<b>OverlayDescriptorBlue10</b> = 0x60121103, 
+&#160;&#160;<b>OverlayDescriptorBlue10</b> = 0x60121103, 
 <b>OverlaysGray10</b> = 0x60121200, 
 <b>OverlaysRed10</b> = 0x60121201, 
+<b>OverlaysGreen10</b> = 0x60121202, 
 <br />
-&#160;&#160;<b>OverlaysGreen10</b> = 0x60121202, 
-<b>OverlaysBlue10</b> = 0x60121203, 
+&#160;&#160;<b>OverlaysBlue10</b> = 0x60121203, 
 <b>ROIArea10</b> = 0x60121301, 
 <b>ROIMean10</b> = 0x60121302, 
+<b>ROIStandardDeviation10</b> = 0x60121303, 
 <br />
-&#160;&#160;<b>ROIStandardDeviation10</b> = 0x60121303, 
-<b>OverlayLabel10</b> = 0x60121500, 
+&#160;&#160;<b>OverlayLabel10</b> = 0x60121500, 
 <b>OverlayData10</b> = 0x60123000, 
 <b>OverlayComments10</b> = 0x60124000, 
+<b>OverlayRows11</b> = 0x60140010, 
 <br />
-&#160;&#160;<b>OverlayRepeatInterval11</b> = 0x60140068, 
+&#160;&#160;<b>OverlayColumns11</b> = 0x60140011, 
+<b>OverlayPlanes11</b> = 0x60140012, 
+<b>NumberOfFramesInOverlay11</b> = 0x60140015, 
+<b>OverlayDescription11</b> = 0x60140022, 
+<br />
+&#160;&#160;<b>OverlayType11</b> = 0x60140040, 
+<b>OverlaySubtype11</b> = 0x60140045, 
+<b>OverlayOrigin11</b> = 0x60140050, 
+<b>ImageFrameOrigin11</b> = 0x60140051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin11</b> = 0x60140052, 
+<b>OverlayCompressionCode11</b> = 0x60140060, 
+<b>OverlayCompressionOriginator11</b> = 0x60140061, 
+<b>OverlayCompressionLabel11</b> = 0x60140062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription11</b> = 0x60140063, 
+<b>OverlayCompressionStepPointers11</b> = 0x60140066, 
+<b>OverlayRepeatInterval11</b> = 0x60140068, 
 <b>OverlayBitsGrouped11</b> = 0x60140069, 
-<b>OverlayBitsAllocated11</b> = 0x60140100, 
+<br />
+&#160;&#160;<b>OverlayBitsAllocated11</b> = 0x60140100, 
 <b>OverlayBitPosition11</b> = 0x60140102, 
-<br />
-&#160;&#160;<b>OverlayFormat11</b> = 0x60140110, 
+<b>OverlayFormat11</b> = 0x60140110, 
 <b>OverlayLocation11</b> = 0x60140200, 
-<b>OverlayCodeLabel11</b> = 0x60140800, 
+<br />
+&#160;&#160;<b>OverlayCodeLabel11</b> = 0x60140800, 
 <b>OverlayNumberOfTables11</b> = 0x60140802, 
-<br />
-&#160;&#160;<b>OverlayCodeTableLocation11</b> = 0x60140803, 
+<b>OverlayCodeTableLocation11</b> = 0x60140803, 
 <b>OverlayBitsForCodeWord11</b> = 0x60140804, 
-<b>OverlayActivationLayer11</b> = 0x60141001, 
+<br />
+&#160;&#160;<b>OverlayActivationLayer11</b> = 0x60141001, 
 <b>OverlayDescriptorGray11</b> = 0x60141100, 
-<br />
-&#160;&#160;<b>OverlayDescriptorRed11</b> = 0x60141101, 
+<b>OverlayDescriptorRed11</b> = 0x60141101, 
 <b>OverlayDescriptorGreen11</b> = 0x60141102, 
-<b>OverlayDescriptorBlue11</b> = 0x60141103, 
+<br />
+&#160;&#160;<b>OverlayDescriptorBlue11</b> = 0x60141103, 
 <b>OverlaysGray11</b> = 0x60141200, 
-<br />
-&#160;&#160;<b>OverlaysRed11</b> = 0x60141201, 
+<b>OverlaysRed11</b> = 0x60141201, 
 <b>OverlaysGreen11</b> = 0x60141202, 
-<b>OverlaysBlue11</b> = 0x60141203, 
+<br />
+&#160;&#160;<b>OverlaysBlue11</b> = 0x60141203, 
 <b>ROIArea11</b> = 0x60141301, 
-<br />
-&#160;&#160;<b>ROIMean11</b> = 0x60141302, 
+<b>ROIMean11</b> = 0x60141302, 
 <b>ROIStandardDeviation11</b> = 0x60141303, 
-<b>OverlayLabel11</b> = 0x60141500, 
-<b>OverlayData11</b> = 0x60143000, 
 <br />
-&#160;&#160;<b>OverlayComments11</b> = 0x60144000, 
+&#160;&#160;<b>OverlayLabel11</b> = 0x60141500, 
+<b>OverlayData11</b> = 0x60143000, 
+<b>OverlayComments11</b> = 0x60144000, 
+<b>OverlayRows12</b> = 0x60160010, 
+<br />
+&#160;&#160;<b>OverlayColumns12</b> = 0x60160011, 
+<b>OverlayPlanes12</b> = 0x60160012, 
+<b>NumberOfFramesInOverlay12</b> = 0x60160015, 
+<b>OverlayDescription12</b> = 0x60160022, 
+<br />
+&#160;&#160;<b>OverlayType12</b> = 0x60160040, 
+<b>OverlaySubtype12</b> = 0x60160045, 
+<b>OverlayOrigin12</b> = 0x60160050, 
+<b>ImageFrameOrigin12</b> = 0x60160051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin12</b> = 0x60160052, 
+<b>OverlayCompressionCode12</b> = 0x60160060, 
+<b>OverlayCompressionOriginator12</b> = 0x60160061, 
+<b>OverlayCompressionLabel12</b> = 0x60160062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription12</b> = 0x60160063, 
+<b>OverlayCompressionStepPointers12</b> = 0x60160066, 
 <b>OverlayRepeatInterval12</b> = 0x60160068, 
 <b>OverlayBitsGrouped12</b> = 0x60160069, 
-<b>OverlayBitsAllocated12</b> = 0x60160100, 
 <br />
-&#160;&#160;<b>OverlayBitPosition12</b> = 0x60160102, 
+&#160;&#160;<b>OverlayBitsAllocated12</b> = 0x60160100, 
+<b>OverlayBitPosition12</b> = 0x60160102, 
 <b>OverlayFormat12</b> = 0x60160110, 
 <b>OverlayLocation12</b> = 0x60160200, 
-<b>OverlayCodeLabel12</b> = 0x60160800, 
 <br />
-&#160;&#160;<b>OverlayNumberOfTables12</b> = 0x60160802, 
+&#160;&#160;<b>OverlayCodeLabel12</b> = 0x60160800, 
+<b>OverlayNumberOfTables12</b> = 0x60160802, 
 <b>OverlayCodeTableLocation12</b> = 0x60160803, 
 <b>OverlayBitsForCodeWord12</b> = 0x60160804, 
-<b>OverlayActivationLayer12</b> = 0x60161001, 
 <br />
-&#160;&#160;<b>OverlayDescriptorGray12</b> = 0x60161100, 
+&#160;&#160;<b>OverlayActivationLayer12</b> = 0x60161001, 
+<b>OverlayDescriptorGray12</b> = 0x60161100, 
 <b>OverlayDescriptorRed12</b> = 0x60161101, 
 <b>OverlayDescriptorGreen12</b> = 0x60161102, 
-<b>OverlayDescriptorBlue12</b> = 0x60161103, 
 <br />
-&#160;&#160;<b>OverlaysGray12</b> = 0x60161200, 
+&#160;&#160;<b>OverlayDescriptorBlue12</b> = 0x60161103, 
+<b>OverlaysGray12</b> = 0x60161200, 
 <b>OverlaysRed12</b> = 0x60161201, 
 <b>OverlaysGreen12</b> = 0x60161202, 
-<b>OverlaysBlue12</b> = 0x60161203, 
 <br />
-&#160;&#160;<b>ROIArea12</b> = 0x60161301, 
+&#160;&#160;<b>OverlaysBlue12</b> = 0x60161203, 
+<b>ROIArea12</b> = 0x60161301, 
 <b>ROIMean12</b> = 0x60161302, 
 <b>ROIStandardDeviation12</b> = 0x60161303, 
-<b>OverlayLabel12</b> = 0x60161500, 
 <br />
-&#160;&#160;<b>OverlayData12</b> = 0x60163000, 
+&#160;&#160;<b>OverlayLabel12</b> = 0x60161500, 
+<b>OverlayData12</b> = 0x60163000, 
 <b>OverlayComments12</b> = 0x60164000, 
+<b>OverlayRows13</b> = 0x60180010, 
+<br />
+&#160;&#160;<b>OverlayColumns13</b> = 0x60180011, 
+<b>OverlayPlanes13</b> = 0x60180012, 
+<b>NumberOfFramesInOverlay13</b> = 0x60180015, 
+<b>OverlayDescription13</b> = 0x60180022, 
+<br />
+&#160;&#160;<b>OverlayType13</b> = 0x60180040, 
+<b>OverlaySubtype13</b> = 0x60180045, 
+<b>OverlayOrigin13</b> = 0x60180050, 
+<b>ImageFrameOrigin13</b> = 0x60180051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin13</b> = 0x60180052, 
+<b>OverlayCompressionCode13</b> = 0x60180060, 
+<b>OverlayCompressionOriginator13</b> = 0x60180061, 
+<b>OverlayCompressionLabel13</b> = 0x60180062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription13</b> = 0x60180063, 
+<b>OverlayCompressionStepPointers13</b> = 0x60180066, 
 <b>OverlayRepeatInterval13</b> = 0x60180068, 
 <b>OverlayBitsGrouped13</b> = 0x60180069, 
 <br />
@@ -6273,119 +6498,175 @@ Enumerations</h2></td></tr>
 &#160;&#160;<b>OverlayLabel13</b> = 0x60181500, 
 <b>OverlayData13</b> = 0x60183000, 
 <b>OverlayComments13</b> = 0x60184000, 
-<b>OverlayRepeatInterval14</b> = 0x601A0068, 
+<b>OverlayRows14</b> = 0x601A0010, 
 <br />
-&#160;&#160;<b>OverlayBitsGrouped14</b> = 0x601A0069, 
-<b>OverlayBitsAllocated14</b> = 0x601A0100, 
+&#160;&#160;<b>OverlayColumns14</b> = 0x601A0011, 
+<b>OverlayPlanes14</b> = 0x601A0012, 
+<b>NumberOfFramesInOverlay14</b> = 0x601A0015, 
+<b>OverlayDescription14</b> = 0x601A0022, 
+<br />
+&#160;&#160;<b>OverlayType14</b> = 0x601A0040, 
+<b>OverlaySubtype14</b> = 0x601A0045, 
+<b>OverlayOrigin14</b> = 0x601A0050, 
+<b>ImageFrameOrigin14</b> = 0x601A0051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin14</b> = 0x601A0052, 
+<b>OverlayCompressionCode14</b> = 0x601A0060, 
+<b>OverlayCompressionOriginator14</b> = 0x601A0061, 
+<b>OverlayCompressionLabel14</b> = 0x601A0062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription14</b> = 0x601A0063, 
+<b>OverlayCompressionStepPointers14</b> = 0x601A0066, 
+<b>OverlayRepeatInterval14</b> = 0x601A0068, 
+<b>OverlayBitsGrouped14</b> = 0x601A0069, 
+<br />
+&#160;&#160;<b>OverlayBitsAllocated14</b> = 0x601A0100, 
 <b>OverlayBitPosition14</b> = 0x601A0102, 
 <b>OverlayFormat14</b> = 0x601A0110, 
+<b>OverlayLocation14</b> = 0x601A0200, 
 <br />
-&#160;&#160;<b>OverlayLocation14</b> = 0x601A0200, 
-<b>OverlayCodeLabel14</b> = 0x601A0800, 
+&#160;&#160;<b>OverlayCodeLabel14</b> = 0x601A0800, 
 <b>OverlayNumberOfTables14</b> = 0x601A0802, 
 <b>OverlayCodeTableLocation14</b> = 0x601A0803, 
+<b>OverlayBitsForCodeWord14</b> = 0x601A0804, 
 <br />
-&#160;&#160;<b>OverlayBitsForCodeWord14</b> = 0x601A0804, 
-<b>OverlayActivationLayer14</b> = 0x601A1001, 
+&#160;&#160;<b>OverlayActivationLayer14</b> = 0x601A1001, 
 <b>OverlayDescriptorGray14</b> = 0x601A1100, 
 <b>OverlayDescriptorRed14</b> = 0x601A1101, 
+<b>OverlayDescriptorGreen14</b> = 0x601A1102, 
 <br />
-&#160;&#160;<b>OverlayDescriptorGreen14</b> = 0x601A1102, 
-<b>OverlayDescriptorBlue14</b> = 0x601A1103, 
+&#160;&#160;<b>OverlayDescriptorBlue14</b> = 0x601A1103, 
 <b>OverlaysGray14</b> = 0x601A1200, 
 <b>OverlaysRed14</b> = 0x601A1201, 
+<b>OverlaysGreen14</b> = 0x601A1202, 
 <br />
-&#160;&#160;<b>OverlaysGreen14</b> = 0x601A1202, 
-<b>OverlaysBlue14</b> = 0x601A1203, 
+&#160;&#160;<b>OverlaysBlue14</b> = 0x601A1203, 
 <b>ROIArea14</b> = 0x601A1301, 
 <b>ROIMean14</b> = 0x601A1302, 
+<b>ROIStandardDeviation14</b> = 0x601A1303, 
 <br />
-&#160;&#160;<b>ROIStandardDeviation14</b> = 0x601A1303, 
-<b>OverlayLabel14</b> = 0x601A1500, 
+&#160;&#160;<b>OverlayLabel14</b> = 0x601A1500, 
 <b>OverlayData14</b> = 0x601A3000, 
 <b>OverlayComments14</b> = 0x601A4000, 
+<b>OverlayRows15</b> = 0x601C0010, 
 <br />
-&#160;&#160;<b>OverlayRepeatInterval15</b> = 0x601C0068, 
+&#160;&#160;<b>OverlayColumns15</b> = 0x601C0011, 
+<b>OverlayPlanes15</b> = 0x601C0012, 
+<b>NumberOfFramesInOverlay15</b> = 0x601C0015, 
+<b>OverlayDescription15</b> = 0x601C0022, 
+<br />
+&#160;&#160;<b>OverlayType15</b> = 0x601C0040, 
+<b>OverlaySubtype15</b> = 0x601C0045, 
+<b>OverlayOrigin15</b> = 0x601C0050, 
+<b>ImageFrameOrigin15</b> = 0x601C0051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin15</b> = 0x601C0052, 
+<b>OverlayCompressionCode15</b> = 0x601C0060, 
+<b>OverlayCompressionOriginator15</b> = 0x601C0061, 
+<b>OverlayCompressionLabel15</b> = 0x601C0062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription15</b> = 0x601C0063, 
+<b>OverlayCompressionStepPointers15</b> = 0x601C0066, 
+<b>OverlayRepeatInterval15</b> = 0x601C0068, 
 <b>OverlayBitsGrouped15</b> = 0x601C0069, 
-<b>OverlayBitsAllocated15</b> = 0x601C0100, 
+<br />
+&#160;&#160;<b>OverlayBitsAllocated15</b> = 0x601C0100, 
 <b>OverlayBitPosition15</b> = 0x601C0102, 
-<br />
-&#160;&#160;<b>OverlayFormat15</b> = 0x601C0110, 
+<b>OverlayFormat15</b> = 0x601C0110, 
 <b>OverlayLocation15</b> = 0x601C0200, 
-<b>OverlayCodeLabel15</b> = 0x601C0800, 
+<br />
+&#160;&#160;<b>OverlayCodeLabel15</b> = 0x601C0800, 
 <b>OverlayNumberOfTables15</b> = 0x601C0802, 
-<br />
-&#160;&#160;<b>OverlayCodeTableLocation15</b> = 0x601C0803, 
+<b>OverlayCodeTableLocation15</b> = 0x601C0803, 
 <b>OverlayBitsForCodeWord15</b> = 0x601C0804, 
-<b>OverlayActivationLayer15</b> = 0x601C1001, 
+<br />
+&#160;&#160;<b>OverlayActivationLayer15</b> = 0x601C1001, 
 <b>OverlayDescriptorGray15</b> = 0x601C1100, 
-<br />
-&#160;&#160;<b>OverlayDescriptorRed15</b> = 0x601C1101, 
+<b>OverlayDescriptorRed15</b> = 0x601C1101, 
 <b>OverlayDescriptorGreen15</b> = 0x601C1102, 
-<b>OverlayDescriptorBlue15</b> = 0x601C1103, 
+<br />
+&#160;&#160;<b>OverlayDescriptorBlue15</b> = 0x601C1103, 
 <b>OverlaysGray15</b> = 0x601C1200, 
-<br />
-&#160;&#160;<b>OverlaysRed15</b> = 0x601C1201, 
+<b>OverlaysRed15</b> = 0x601C1201, 
 <b>OverlaysGreen15</b> = 0x601C1202, 
-<b>OverlaysBlue15</b> = 0x601C1203, 
+<br />
+&#160;&#160;<b>OverlaysBlue15</b> = 0x601C1203, 
 <b>ROIArea15</b> = 0x601C1301, 
-<br />
-&#160;&#160;<b>ROIMean15</b> = 0x601C1302, 
+<b>ROIMean15</b> = 0x601C1302, 
 <b>ROIStandardDeviation15</b> = 0x601C1303, 
-<b>OverlayLabel15</b> = 0x601C1500, 
-<b>OverlayData15</b> = 0x601C3000, 
 <br />
-&#160;&#160;<b>OverlayComments15</b> = 0x601C4000, 
+&#160;&#160;<b>OverlayLabel15</b> = 0x601C1500, 
+<b>OverlayData15</b> = 0x601C3000, 
+<b>OverlayComments15</b> = 0x601C4000, 
+<b>OverlayRows16</b> = 0x601E0010, 
+<br />
+&#160;&#160;<b>OverlayColumns16</b> = 0x601E0011, 
+<b>OverlayPlanes16</b> = 0x601E0012, 
+<b>NumberOfFramesInOverlay16</b> = 0x601E0015, 
+<b>OverlayDescription16</b> = 0x601E0022, 
+<br />
+&#160;&#160;<b>OverlayType16</b> = 0x601E0040, 
+<b>OverlaySubtype16</b> = 0x601E0045, 
+<b>OverlayOrigin16</b> = 0x601E0050, 
+<b>ImageFrameOrigin16</b> = 0x601E0051, 
+<br />
+&#160;&#160;<b>OverlayPlaneOrigin16</b> = 0x601E0052, 
+<b>OverlayCompressionCode16</b> = 0x601E0060, 
+<b>OverlayCompressionOriginator16</b> = 0x601E0061, 
+<b>OverlayCompressionLabel16</b> = 0x601E0062, 
+<br />
+&#160;&#160;<b>OverlayCompressionDescription16</b> = 0x601E0063, 
+<b>OverlayCompressionStepPointers16</b> = 0x601E0066, 
 <b>OverlayRepeatInterval16</b> = 0x601E0068, 
 <b>OverlayBitsGrouped16</b> = 0x601E0069, 
-<b>OverlayBitsAllocated16</b> = 0x601E0100, 
 <br />
-&#160;&#160;<b>OverlayBitPosition16</b> = 0x601E0102, 
+&#160;&#160;<b>OverlayBitsAllocated16</b> = 0x601E0100, 
+<b>OverlayBitPosition16</b> = 0x601E0102, 
 <b>OverlayFormat16</b> = 0x601E0110, 
 <b>OverlayLocation16</b> = 0x601E0200, 
-<b>OverlayCodeLabel16</b> = 0x601E0800, 
 <br />
-&#160;&#160;<b>OverlayNumberOfTables16</b> = 0x601E0802, 
+&#160;&#160;<b>OverlayCodeLabel16</b> = 0x601E0800, 
+<b>OverlayNumberOfTables16</b> = 0x601E0802, 
 <b>OverlayCodeTableLocation16</b> = 0x601E0803, 
 <b>OverlayBitsForCodeWord16</b> = 0x601E0804, 
-<b>OverlayActivationLayer16</b> = 0x601E1001, 
 <br />
-&#160;&#160;<b>OverlayDescriptorGray16</b> = 0x601E1100, 
+&#160;&#160;<b>OverlayActivationLayer16</b> = 0x601E1001, 
+<b>OverlayDescriptorGray16</b> = 0x601E1100, 
 <b>OverlayDescriptorRed16</b> = 0x601E1101, 
 <b>OverlayDescriptorGreen16</b> = 0x601E1102, 
-<b>OverlayDescriptorBlue16</b> = 0x601E1103, 
 <br />
-&#160;&#160;<b>OverlaysGray16</b> = 0x601E1200, 
+&#160;&#160;<b>OverlayDescriptorBlue16</b> = 0x601E1103, 
+<b>OverlaysGray16</b> = 0x601E1200, 
 <b>OverlaysRed16</b> = 0x601E1201, 
 <b>OverlaysGreen16</b> = 0x601E1202, 
-<b>OverlaysBlue16</b> = 0x601E1203, 
 <br />
-&#160;&#160;<b>ROIArea16</b> = 0x601E1301, 
+&#160;&#160;<b>OverlaysBlue16</b> = 0x601E1203, 
+<b>ROIArea16</b> = 0x601E1301, 
 <b>ROIMean16</b> = 0x601E1302, 
 <b>ROIStandardDeviation16</b> = 0x601E1303, 
-<b>OverlayLabel16</b> = 0x601E1500, 
 <br />
-&#160;&#160;<b>OverlayData16</b> = 0x601E3000, 
+&#160;&#160;<b>OverlayLabel16</b> = 0x601E1500, 
+<b>OverlayData16</b> = 0x601E3000, 
 <b>OverlayComments16</b> = 0x601E4000, 
 <b>FloatPixelData</b> = 0x7FE00008, 
-<b>DoubleFloatPixelData</b> = 0x7FE00009, 
 <br />
-&#160;&#160;<b>PixelData</b> = 0x7FE00010, 
+&#160;&#160;<b>DoubleFloatPixelData</b> = 0x7FE00009, 
+<b>PixelData</b> = 0x7FE00010, 
 <b>CoefficientsSDVN</b> = 0x7FE00020, 
 <b>CoefficientsSDHN</b> = 0x7FE00030, 
-<b>CoefficientsSDDN</b> = 0x7FE00040, 
 <br />
-&#160;&#160;<b>VariablePixelData</b> = 0x7F000010, 
+&#160;&#160;<b>CoefficientsSDDN</b> = 0x7FE00040, 
+<b>VariablePixelData</b> = 0x7F000010, 
 <b>VariableNextDataGroup</b> = 0x7F000011, 
 <b>VariableCoefficientsSDVN</b> = 0x7F000020, 
-<b>VariableCoefficientsSDHN</b> = 0x7F000030, 
 <br />
-&#160;&#160;<b>VariableCoefficientsSDDN</b> = 0x7F000040, 
+&#160;&#160;<b>VariableCoefficientsSDHN</b> = 0x7F000030, 
+<b>VariableCoefficientsSDDN</b> = 0x7F000040, 
 <b>DigitalSignaturesSequence</b> = 0xFFFAFFFA, 
 <b>DataSetTrailingPadding</b> = 0xFFFCFFFC, 
-<b>Item</b> = 0xFFFEE000, 
 <br />
-&#160;&#160;<b>ItemDelimitationItem</b> = 0xFFFEE00D, 
+&#160;&#160;<b>Item</b> = 0xFFFEE000, 
+<b>ItemDelimitationItem</b> = 0xFFFEE00D, 
 <b>SequenceDelimitationItem</b> = 0xFFFEE0DD
 <br />
  }<tr class="separator:a95789a3d4f7736c16b725d560c0c959d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6396,7 +6677,7 @@ Enumerations</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 9 2017 16:13:37 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 16 2017 14:52:55 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
