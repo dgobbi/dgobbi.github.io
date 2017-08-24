@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.4</span>
+   &#160;<span id="projectnumber">0.8.5</span>
    </div>
   </td>
  </tr>
@@ -415,6 +415,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> &amp;o) const </td></tr>
 <tr class="separator:a14dcfd7a96899e233c51318bb273211c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a5128eab5e68b80b87ae088e411039488"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_value.html#a5128eab5e68b80b87ae088e411039488">FromUTF8String</a> (<a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a> vr, <a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a> cs, const std::string &amp;v)</td></tr>
+<tr class="memdesc:a5128eab5e68b80b87ae088e411039488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a value from a UTF8-encoded string.  <a href="#a5128eab5e68b80b87ae088e411039488">More...</a><br /></td></tr>
+<tr class="separator:a5128eab5e68b80b87ae088e411039488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a86a31efad1225c2c0a1449770f9250fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86a31efad1225c2c0a1449770f9250fb"></a>
@@ -590,6 +597,49 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValueFriendM
 
 <p>Compute the number of backslash-separated string values. </p>
 <p>After calling AllocateCharData and writing text into the allocated space, this must be called to set the NumberOfValues according to the number of backslash-separated string values that are present. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5128eab5e68b80b87ae088e411039488"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classvtk_d_i_c_o_m_value.html">vtkDICOMValue</a> vtkDICOMValue::FromUTF8String </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_v_r.html">vtkDICOMVR</a>&#160;</td>
+          <td class="paramname"><em>vr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a>&#160;</td>
+          <td class="paramname"><em>cs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a value from a UTF8-encoded string. </p>
+<p>This will convert a UTF-8 string to the target encoding and store the result in a new value. If the target encoding is ISO 2022, then escape codes will be added before and after delimeters as necessary (the delimiters are 'backslash' for multi-valued VRs, and '^', '=' for PN). </p>
 
 </div>
 </div>
@@ -806,7 +856,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMValueFriendM
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 16 2017 14:52:51 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 23 2017 22:21:04 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

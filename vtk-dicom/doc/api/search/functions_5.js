@@ -20,5 +20,7 @@ var searchData=
   ['flushbuffer',['FlushBuffer',['../classvtk_d_i_c_o_m_compiler.html#a3f8cd40370435ef0b09c68eac6c76224',1,'vtkDICOMCompiler']]],
   ['forcebuild',['ForceBuild',['../classvtk_lookup_table.html#a0ab1e76909ca6485807db5316b9fa037',1,'vtkLookupTable']]],
   ['freefragments',['FreeFragments',['../classvtk_d_i_c_o_m_compiler.html#ac32aca4e8d6f49fec26acb2f80e89a20',1,'vtkDICOMCompiler']]],
-  ['freeinternalfilename',['FreeInternalFileName',['../classvtk_d_i_c_o_m_writer.html#a0f707e5609adacbcde863cca36b5aaf9',1,'vtkDICOMWriter']]]
+  ['freeinternalfilename',['FreeInternalFileName',['../classvtk_d_i_c_o_m_writer.html#a0f707e5609adacbcde863cca36b5aaf9',1,'vtkDICOMWriter']]],
+  ['fromutf8',['FromUTF8',['../classvtk_d_i_c_o_m_character_set.html#a6eb4a67d713854050acc4ed041a9df16',1,'vtkDICOMCharacterSet']]],
+  ['fromutf8string',['FromUTF8String',['../classvtk_d_i_c_o_m_value.html#a5128eab5e68b80b87ae088e411039488',1,'vtkDICOMValue']]]
 ];

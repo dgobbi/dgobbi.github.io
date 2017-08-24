@@ -15,6 +15,7 @@ var searchData=
   ['isempty',['IsEmpty',['../classvtk_d_i_c_o_m_file_path.html#a6a6e0a5e903f4c66b92fdc0c99eb26ee',1,'vtkDICOMFilePath::IsEmpty()'],['../classvtk_d_i_c_o_m_item.html#aa5cf7d80a40cd4570798dbf45e634ba5',1,'vtkDICOMItem::IsEmpty()']]],
   ['ishidden',['IsHidden',['../classvtk_d_i_c_o_m_file_directory.html#af711e67104f94ed6e3500fc5b4395ba1',1,'vtkDICOMFileDirectory']]],
   ['isiso2022',['IsISO2022',['../classvtk_d_i_c_o_m_character_set.html#a65dba9e155ce3e135434c1279693e11d',1,'vtkDICOMCharacterSet']]],
+  ['isiso8859',['IsISO8859',['../classvtk_d_i_c_o_m_character_set.html#aa00aa80f0792992c338b00f15aa1634e',1,'vtkDICOMCharacterSet']]],
   ['isopaque',['IsOpaque',['../classvtk_lookup_table.html#a9ba4c95a9bebb020b7f1ef68234140ac',1,'vtkLookupTable::IsOpaque()'],['../classvtk_scalars_to_colors.html#a1a819c8c26b126029a7a9eb00540f045',1,'vtkScalarsToColors::IsOpaque()']]],
   ['isperinstance',['IsPerInstance',['../classvtk_d_i_c_o_m_data_element.html#a67b483c46cffb258d00dc8380942af62',1,'vtkDICOMDataElement']]],
   ['isretired',['IsRetired',['../classvtk_d_i_c_o_m_dict_entry.html#a4782e0bfb791e1506d6ecdbd533f171e',1,'vtkDICOMDictEntry']]],

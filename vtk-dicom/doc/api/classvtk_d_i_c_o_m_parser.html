@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.4</span>
+   &#160;<span id="projectnumber">0.8.5</span>
    </div>
   </td>
  </tr>
@@ -364,6 +364,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ad1d4e47808644473c3af50a693cd0291"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#ad1d4e47808644473c3af50a693cd0291">FillBuffer</a> (const unsigned char *&amp;cp, const unsigned char *&amp;ep)</td></tr>
 <tr class="memdesc:ad1d4e47808644473c3af50a693cd0291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method for filling the buffer.  <a href="#ad1d4e47808644473c3af50a693cd0291">More...</a><br /></td></tr>
 <tr class="separator:ad1d4e47808644473c3af50a693cd0291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51dd81596e56545443d53a86deb721d6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#a51dd81596e56545443d53a86deb721d6">SeekBuffer</a> (const unsigned char *&amp;cp, const unsigned char *&amp;ep, vtkTypeInt64 offset)</td></tr>
+<tr class="memdesc:a51dd81596e56545443d53a86deb721d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method to advance the buffer to a new file position.  <a href="#a51dd81596e56545443d53a86deb721d6">More...</a><br /></td></tr>
+<tr class="separator:a51dd81596e56545443d53a86deb721d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1662f3a84f51f8ca0f77bbb0ef8bab9a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#a1662f3a84f51f8ca0f77bbb0ef8bab9a">SkipValue</a> (const unsigned char *&amp;cp, const unsigned char *&amp;ep, unsigned int vl)</td></tr>
+<tr class="memdesc:a1662f3a84f51f8ca0f77bbb0ef8bab9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method for skipping over a value.  <a href="#a1662f3a84f51f8ca0f77bbb0ef8bab9a">More...</a><br /></td></tr>
+<tr class="separator:a1662f3a84f51f8ca0f77bbb0ef8bab9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa53f4413bbc3cacf2fc2c2cd36512931"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa53f4413bbc3cacf2fc2c2cd36512931"></a>
 virtual vtkTypeInt64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_parser.html#aa53f4413bbc3cacf2fc2c2cd36512931">GetBytesRemaining</a> (const unsigned char *cp, const unsigned char *ep)</td></tr>
 <tr class="memdesc:aa53f4413bbc3cacf2fc2c2cd36512931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bytes remaining in the file. <br /></td></tr>
@@ -598,6 +604,49 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMParserIntern
 
 </div>
 </div>
+<a class="anchor" id="a51dd81596e56545443d53a86deb721d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool vtkDICOMParser::SeekBuffer </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char *&amp;&#160;</td>
+          <td class="paramname"><em>cp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&amp;&#160;</td>
+          <td class="paramname"><em>ep</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vtkTypeInt64&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal method to advance the buffer to a new file position. </p>
+<p>This will move to a new position within the file. </p>
+
+</div>
+</div>
 <a class="anchor" id="a388ff56b2c3d70c1024a09c9eb544d59"></a>
 <div class="memitem">
 <div class="memproto">
@@ -712,13 +761,56 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>vtkDICOMParserIntern
 
 </div>
 </div>
+<a class="anchor" id="a1662f3a84f51f8ca0f77bbb0ef8bab9a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool vtkDICOMParser::SkipValue </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char *&amp;&#160;</td>
+          <td class="paramname"><em>cp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&amp;&#160;</td>
+          <td class="paramname"><em>ep</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>vl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal method for skipping over a value. </p>
+<p>This is for skipping over bulk data (such as PixelData). If vl is 0xffffffff, then the value will be assumed to be delimited (e.g. encapsulated pixel data). </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="vtk_d_i_c_o_m_parser_8h_source.html">vtkDICOMParser.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 16 2017 14:52:49 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 23 2017 22:21:02 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -5,5 +5,6 @@ var searchData=
   ['_7evtkdicomfilepath',['~vtkDICOMFilePath',['../classvtk_d_i_c_o_m_file_path.html#ac54fa67e50114eb829d6952674c4ef4a',1,'vtkDICOMFilePath']]],
   ['_7evtkdicomitem',['~vtkDICOMItem',['../classvtk_d_i_c_o_m_item.html#ae05d3be732c22bcad8d38f51e478ae85',1,'vtkDICOMItem']]],
   ['_7evtkdicommetadataadapter',['~vtkDICOMMetaDataAdapter',['../classvtk_d_i_c_o_m_meta_data_adapter.html#a5ca4fd99242b6e3fedf0354cdbeabef1',1,'vtkDICOMMetaDataAdapter']]],
+  ['_7evtkdicomtagpath',['~vtkDICOMTagPath',['../classvtk_d_i_c_o_m_tag_path.html#a7a918a97fc7113625ea98f8c4586488e',1,'vtkDICOMTagPath']]],
   ['_7evtkdicomvalue',['~vtkDICOMValue',['../classvtk_d_i_c_o_m_value.html#aea3a40f65c7cbe32aff7408ec4a3cca7',1,'vtkDICOMValue']]]
 ];

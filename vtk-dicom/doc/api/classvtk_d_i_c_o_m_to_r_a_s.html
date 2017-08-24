@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.4</span>
+   &#160;<span id="projectnumber">0.8.5</span>
    </div>
   </td>
  </tr>
@@ -125,7 +125,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a839be686c912ce563271a2077e83f537"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a839be686c912ce563271a2077e83f537"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a839be686c912ce563271a2077e83f537">SetRASToDICOM</a> (int v)</td></tr>
-<tr class="memdesc:a839be686c912ce563271a2077e83f537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform RAS to DICOM instead of DICOM to RAS. <br /></td></tr>
+<tr class="memdesc:a839be686c912ce563271a2077e83f537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse the filter: do RAS to DICOM instead of DICOM to RAS. <br /></td></tr>
 <tr class="separator:a839be686c912ce563271a2077e83f537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a625a2c743ed49d6fe2a19ca53de9d3f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a625a2c743ed49d6fe2a19ca53de9d3f2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RASToDICOMOn</b> ()</td></tr>
@@ -138,25 +138,25 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>GetRASToDICOM</b> ()</
 <tr class="separator:a36d477b7f294e2149040dd1ff637deb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:abf3b360a5cc0d98f32d9b016717d0ab6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#abf3b360a5cc0d98f32d9b016717d0ab6">SetPatientMatrix</a> (vtkMatrix4x4 *matrix)</td></tr>
-<tr class="memdesc:abf3b360a5cc0d98f32d9b016717d0ab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a matrix to place the image within DICOM patient coords.  <a href="#abf3b360a5cc0d98f32d9b016717d0ab6">More...</a><br /></td></tr>
+<tr class="memdesc:abf3b360a5cc0d98f32d9b016717d0ab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a matrix that places the image in DICOM patient coords.  <a href="#abf3b360a5cc0d98f32d9b016717d0ab6">More...</a><br /></td></tr>
 <tr class="separator:abf3b360a5cc0d98f32d9b016717d0ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95eafbef077c481dcb8d9a7fd2cf6eae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95eafbef077c481dcb8d9a7fd2cf6eae"></a>
 vtkMatrix4x4 *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPatientMatrix</b> ()</td></tr>
 <tr class="separator:a95eafbef077c481dcb8d9a7fd2cf6eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a30fb2ab9d129befb6da4ba99e957c47b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a30fb2ab9d129befb6da4ba99e957c47b">SetRASMatrix</a> (vtkMatrix4x4 *matrix)</td></tr>
-<tr class="memdesc:a30fb2ab9d129befb6da4ba99e957c47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a matrix that follows the RAS convention that can be used.  <a href="#a30fb2ab9d129befb6da4ba99e957c47b">More...</a><br /></td></tr>
-<tr class="separator:a30fb2ab9d129befb6da4ba99e957c47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ebcbb163b3db1a29e839a1dc027680a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ebcbb163b3db1a29e839a1dc027680a"></a>
-vtkMatrix4x4 *&#160;</td><td class="memItemRight" valign="bottom"><b>GetRASMatrix</b> ()</td></tr>
+<tr class="memitem:a5ebcbb163b3db1a29e839a1dc027680a"><td class="memItemLeft" align="right" valign="top">vtkMatrix4x4 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a5ebcbb163b3db1a29e839a1dc027680a">GetRASMatrix</a> ()</td></tr>
+<tr class="memdesc:a5ebcbb163b3db1a29e839a1dc027680a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a matrix that places the image in RAS coordinates.  <a href="#a5ebcbb163b3db1a29e839a1dc027680a">More...</a><br /></td></tr>
 <tr class="separator:a5ebcbb163b3db1a29e839a1dc027680a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30fb2ab9d129befb6da4ba99e957c47b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30fb2ab9d129befb6da4ba99e957c47b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRASMatrix</b> (vtkMatrix4x4 *matrix)</td></tr>
+<tr class="separator:a30fb2ab9d129befb6da4ba99e957c47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a4bb7a00efd76a79d50fba0a91b0a5b35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a4bb7a00efd76a79d50fba0a91b0a5b35">UpdateMatrix</a> ()</td></tr>
-<tr class="memdesc:a4bb7a00efd76a79d50fba0a91b0a5b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the RAS matrix without updating the output data.  <a href="#a4bb7a00efd76a79d50fba0a91b0a5b35">More...</a><br /></td></tr>
+<tr class="memdesc:a4bb7a00efd76a79d50fba0a91b0a5b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the matrix without updating the output data.  <a href="#a4bb7a00efd76a79d50fba0a91b0a5b35">More...</a><br /></td></tr>
 <tr class="separator:a4bb7a00efd76a79d50fba0a91b0a5b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ab5d6d6f09715161b37d6101cde205681"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#ab5d6d6f09715161b37d6101cde205681">SetRASMatrixHasPosition</a> (int v)</td></tr>
-<tr class="memdesc:ab5d6d6f09715161b37d6101cde205681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify whether the RAS matrix should include the position in its.  <a href="#ab5d6d6f09715161b37d6101cde205681">More...</a><br /></td></tr>
+<tr class="memdesc:ab5d6d6f09715161b37d6101cde205681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the RAS matrix should hava a non-zero final column.  <a href="#ab5d6d6f09715161b37d6101cde205681">More...</a><br /></td></tr>
 <tr class="separator:ab5d6d6f09715161b37d6101cde205681"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a520af31c8cadb80d474b67aaacf31f90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a520af31c8cadb80d474b67aaacf31f90"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RASMatrixHasPositionOn</b> ()</td></tr>
@@ -169,7 +169,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>GetRASMatrixHasPositio
 <tr class="separator:a430537f9765d6753082e74347147dffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a5b779aa23c034a1cb2988342a8e7fe26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a5b779aa23c034a1cb2988342a8e7fe26">SetAllowColumnReordering</a> (int v)</td></tr>
-<tr class="memdesc:a5b779aa23c034a1cb2988342a8e7fe26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow the columns to be reordered so that columns with higher indices.  <a href="#a5b779aa23c034a1cb2988342a8e7fe26">More...</a><br /></td></tr>
+<tr class="memdesc:a5b779aa23c034a1cb2988342a8e7fe26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow the columns of the image to be reordered.  <a href="#a5b779aa23c034a1cb2988342a8e7fe26">More...</a><br /></td></tr>
 <tr class="separator:a5b779aa23c034a1cb2988342a8e7fe26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a460d855b4374b6af3c7c68352b96c35d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a460d855b4374b6af3c7c68352b96c35d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>AllowColumnReorderingOn</b> ()</td></tr>
@@ -182,7 +182,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>GetAllowColumnReorderi
 <tr class="separator:a46c38766b1d5183719b29eb80beadc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a731b5d408cc8a3ebd600b3154faf2a00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a731b5d408cc8a3ebd600b3154faf2a00">SetAllowRowReordering</a> (int v)</td></tr>
-<tr class="memdesc:a731b5d408cc8a3ebd600b3154faf2a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow the rows to be reordered so that rows with higher indices.  <a href="#a731b5d408cc8a3ebd600b3154faf2a00">More...</a><br /></td></tr>
+<tr class="memdesc:a731b5d408cc8a3ebd600b3154faf2a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow the rows of the image to be reordered.  <a href="#a731b5d408cc8a3ebd600b3154faf2a00">More...</a><br /></td></tr>
 <tr class="separator:a731b5d408cc8a3ebd600b3154faf2a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef8fd4f1e702bae967147a32b85b17c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef8fd4f1e702bae967147a32b85b17c3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>AllowRowReorderingOn</b> ()</td></tr>
@@ -816,6 +816,32 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 
 </div>
 </div>
+<a class="anchor" id="a5ebcbb163b3db1a29e839a1dc027680a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vtkMatrix4x4* vtkDICOMToRAS::GetRASMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a matrix that places the image in RAS coordinates. </p>
+<p>This matrix is meant to be used with the output image (unless the method RASToDICOMOn() has been called to reverse the operation of the filter). </p>
+
+</div>
+</div>
 <a class="anchor" id="adea9cc10aa877095b0a52bbb2f8b6fc9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -900,8 +926,8 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
       </table>
 </div><div class="memdoc">
 
-<p>Allow the columns to be reordered so that columns with higher indices. </p>
-<p>are further to the right or further anterior. Note that if you turn this option on, then you are implicitly allowing slice reordering to occur as well. If you turn both ColumnReordering and SliceReordering off, then the input data will be directly passed to the output. </p>
+<p>Allow the columns of the image to be reordered. </p>
+<p>The columns can be reordered so that columns with higher indices are further to the right or further anterior. Note that if you turn this option on, then you are implicitly allowing slice reordering to occur as well. If you turn both ColumnReordering and SliceReordering off, then the input data will be directly passed to the output. </p>
 
 </div>
 </div>
@@ -919,8 +945,8 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
       </table>
 </div><div class="memdoc">
 
-<p>Allow the rows to be reordered so that rows with higher indices. </p>
-<p>are further superior or further anterior. Note that if you turn this option on, then you are implicitly allowing slice reordering to occur as well. If you turn both ColumnReordering and SliceReordering off, then the input data will be directly passed to the output. </p>
+<p>Allow the rows of the image to be reordered. </p>
+<p>The rows can be reordered so that rows with higher indices are further superior or further anterior. Note that if you turn this option on, then you are implicitly allowing slice reordering to occur as well. If you turn both ColumnReordering and SliceReordering off, then the input data will be directly passed to the output. </p>
 
 </div>
 </div>
@@ -938,27 +964,8 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
       </table>
 </div><div class="memdoc">
 
-<p>Get a matrix to place the image within DICOM patient coords. </p>
+<p>Set a matrix that places the image in DICOM patient coords. </p>
 <p>This matrix is constructed from the ImageOrientationPatient and ImagePositionPatient meta data attributes. See the SetMemoryRowOrder method for additional information. </p>
-
-</div>
-</div>
-<a class="anchor" id="a30fb2ab9d129befb6da4ba99e957c47b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void vtkDICOMToRAS::SetRASMatrix </td>
-          <td>(</td>
-          <td class="paramtype">vtkMatrix4x4 *&#160;</td>
-          <td class="paramname"><em>matrix</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get a matrix that follows the RAS convention that can be used. </p>
-<p>with the output image. This matrix is only valid for the output image, it is not valid for the input image. </p>
 
 </div>
 </div>
@@ -976,8 +983,8 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
       </table>
 </div><div class="memdoc">
 
-<p>Specify whether the RAS matrix should include the position in its. </p>
-<p>final column (NIFTI style), or whether the final column should be zero and the position instead used to compute a new Origin for the output image. If this option is On, then the Origin of the output image will be (0,0,0), and if it is Off, then the position stored the matrix will be (0,0,0). </p>
+<p>Set whether the RAS matrix should hava a non-zero final column. </p>
+<p>By default, the RAS matrix produced by this filter will have a position coordinate in its final column (NIfTI style). Alternatively, this filter can set the final column to zero and use the position to compute a new Origin for the output image. If this option is On, then the Origin of the output image will be (0,0,0), and if it is Off, then the final column of the matrix will be (0,0,0). </p>
 
 </div>
 </div>
@@ -1061,7 +1068,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
       </table>
 </div><div class="memdoc">
 
-<p>Update the RAS matrix without updating the output data. </p>
+<p>Update the matrix without updating the output data. </p>
 <p>This requires that an input has been set, because the origin, spacing, and extent of the input data must be known in order to compute the matrix. </p>
 
 </div>
@@ -1072,7 +1079,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 16 2017 14:52:50 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 23 2017 22:21:04 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
