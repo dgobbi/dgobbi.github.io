@@ -1,191 +1,356 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Home - dgobbi</title>
+        <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/base.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-<html>
-<head>
-  <title>vtk-dicom</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+         
+    </head>
 
-<body bgcolor="#ffffff">
+    <body>
 
-<h1 class="title">DICOM for VTK</h1>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
 
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">dgobbi</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Vtk dicom <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li class="active">
+                            <a href="./">Home</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#dicom-for-vtk">DICOM for VTK</a></li>
+        
+            <li><a href="#useful-links">Useful Links:</a></li>
+        
+            <li><a href="#feature-table">Feature Table:</a></li>
+        
+            <li><a href="#q-and-a-summary">Q and A Summary:</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="dicom-for-vtk">DICOM for VTK</h1>
 <p>The vtk-dicom project started in 2012 in response to the need for DICOM readers and writers for VTK that:</p>
-<ol>
+<ul>
 <li>Provide easy access to all of the per-slice DICOM meta data</li>
 <li>Generate VTK data sets with complete geometric fidelity</li>
-</ol>
-<p>This was achieved through the creation of three core C++ classes: a <a href="doc/api/classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a>, a <a href="doc/api/classvtk_d_i_c_o_m_writer.html">vtkDICOMWriter</a>, and a <a href="doc/api/classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> class that provides full access to the meta data.  The meta data and the DICOM dictionaries (standard and private) are stored in hash tables for efficient access.</p>
-
-<h2>Useful Links:</h2>
+</ul>
+<p>This was achieved through the creation of three core C++ classes: a <a href="./doc/api/classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a>, a <a href="./doc/api/classvtk_d_i_c_o_m_writer.html">vtkDICOMWriter</a>, and a <a href="./doc/api/classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> class that provides full access to the meta data.  The meta data and the DICOM dictionaries (standard and private) are stored in hash tables for efficient access.</p>
+<h2 id="useful-links">Useful Links:</h2>
 <ul>
 <li><a href="http://github.com/dgobbi/vtk-dicom/">Source code repository (Github)</a></li>
-<li><a href="doc/tools/index.html">Command-line DICOM tools</a></li>
-<li><a href="doc/api/index.html">API documentation (Doxygen)</a></li>
-<li><a href="doc/vtk-dicom.pdf" type="application/pdf">PDF documentation (LaTeX)</a></li>
+<li><a href="./doc/tools/index.html">Command-line DICOM tools</a></li>
+<li><a href="./doc/api/index.html">API documentation (Doxygen)</a></li>
+<li><a href="./doc/vtk-dicom.pdf">PDF documentation (LaTeX)</a></li>
 <li><a href="http://my.cdash.org/index.php?project=vtk-dicom">Testing dashboard (CDash)</a></li>
 </ul>
-
-<h2>Feature Table:</h2>
-
-<table width="689" border="1" cellspacing="0">
+<h2 id="feature-table">Feature Table:</h2>
+<table>
+<thead>
+<tr>
+<th>DICOM Feature</th>
+<th>Read</th>
+<th>Write</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<th bgcolor="#efefef">DICOM Feature</th>
-<th bgcolor="#efefef">Read</th>
-<th bgcolor="#efefef">Write</th>
+<td>Secondary Capture</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>Secondary Capture</td> <td>Yes</td> <td>Yes</td>
+<td>Enhanced Secondary Capture</td>
+<td>Yes</td>
+<td>Soon</td>
 </tr>
 <tr>
-<td>Enhanced Secondary Capture</td> <td>Yes</td> <td>Soon</td>
+<td>Parametric Maps (float, double)</td>
+<td>Yes</td>
+<td>Soon</td>
 </tr>
 <tr>
-<td>Parametric Maps (float, double)</td> <td>Yes</td> <td>Soon</td>
+<td>MR</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>MR</td> <td>Yes</td> <td>Yes</td>
+<td>Enhanced MR</td>
+<td>Yes</td>
+<td>Soon</td>
 </tr>
 <tr>
-<td>Enhanced MR</td> <td>Yes</td> <td>Soon</td>
+<td>CT</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>CT</td> <td>Yes</td> <td>Yes</td>
+<td>Enhanced CT</td>
+<td>Yes</td>
+<td>Soon</td>
 </tr>
 <tr>
-<td>Enhanced CT</td> <td>Yes</td> <td>Soon</td>
+<td>PET</td>
+<td>Yes</td>
+<td>No</td>
 </tr>
 <tr>
-<td>PET</td> <td>Yes</td> <td>No</td>
+<td>Enhanced PET</td>
+<td>Yes</td>
+<td>No</td>
 </tr>
 <tr>
-<td>Enhanced PET</td> <td>Yes</td> <td>No</td>
+<td>Ultrasound</td>
+<td>Yes</td>
+<td>No</td>
 </tr>
 <tr>
-<td>Ultrasound</td> <td>Yes</td> <td>No</td>
+<td>Radiography</td>
+<td>Yes</td>
+<td>No</td>
 </tr>
 <tr>
-<td>Radiography</td> <td>Yes</td> <td>No</td>
+<td>Nuclear Medicine</td>
+<td>Yes</td>
+<td>No</td>
 </tr>
 <tr>
-<td>Nuclear Medicine</td> <td>Yes</td> <td>No</td>
+<td>Radiotherapy</td>
+<td>Partial</td>
+<td>No</td>
 </tr>
 <tr>
-<td>Radiotherapy</td> <td>Partial</td> <td>No</td>
+<td>Multi-Frame</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>Multi-Frame</td> <td>Yes</td> <td>Yes</td>
+<td>CINE</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>CINE</td> <td>Yes</td> <td>Yes</td>
+<td>Cardiac</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>Cardiac</td> <td>Yes</td> <td>Yes</td>
+<td>Orientation/Position</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>Orientation/Position</td> <td>Yes</td> <td>Yes</td>
+<td>Lookup Tables</td>
+<td>Yes</td>
+<td>Soon</td>
 </tr>
 <tr>
-<td>Lookup Tables</td> <td>Yes</td> <td>Soon</td>
+<td>Overlays</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>Overlays</td> <td>Yes</td> <td>Yes</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
 </tr>
 <tr>
-<td colspan="3"></td>
+<td>DICOM 2017c Dictionary</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>DICOM 2017c Dictionary</td> <td>Yes</td> <td>Yes</td>
+<td>Private Dictionaries</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>Private Dictionaries</td> <td>Yes</td> <td>Yes</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
 </tr>
 <tr>
-<td colspan="3"></td>
+<td>DICOMDIR</td>
+<td>Yes</td>
+<td>No</td>
 </tr>
 <tr>
-<td>DICOMDIR</td> <td>Yes</td> <td>No</td>
+<td>RLE Compression</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>RLE Compression</td> <td>Yes</td> <td>Yes</td>
+<td>JPEG Compression</td>
+<td>Via GDCM/DCMTK</td>
+<td>No</td>
 </tr>
 <tr>
-<td>JPEG Compression</td> <td>Via GDCM/DCMTK</td> <td>No</td>
+<td>JPEG-LS Compression</td>
+<td>Via GDCM/DCMTK</td>
+<td>No</td>
 </tr>
 <tr>
-<td>JPEG-LS Compression</td> <td>Via GDCM/DCMTK</td> <td>No</td>
+<td>JPEG 2000</td>
+<td>Via GDCM</td>
+<td>No</td>
 </tr>
 <tr>
-<td>JPEG 2000</td> <td>Via GDCM</td> <td>No</td>
+<td>ISO-8859 Character Sets (1,2,3,4,5,6,7,8,9,11)</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>ISO-8859 Character Sets (1,2,3,4,5,6,7,8,9,11) </td> <td>Yes</td> <td>Yes</td>
+<td>JIS X 0201 (Japanese)</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>JIS X 0201 (Japanese) </td> <td>Yes</td> <td>Yes</td>
+<td>JIS X 0208 (Japanese)</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>JIS X 0208 (Japanese) </td> <td>Yes</td> <td>Yes</td>
+<td>JIS X 0212 (Japanese)</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>JIS X 0212 (Japanese) </td> <td>Yes</td> <td>Yes</td>
+<td>KS X 1001 (Korean)</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>KS X 1001 (Korean) </td> <td>Yes</td> <td>Yes</td>
+<td>GB2312 (Chinese)</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>GB2312 (Chinese)</td> <td>Yes</td> <td>Yes</td>
+<td>GBK (Chinese)</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>GBK (Chinese)</td> <td>Yes</td> <td>Yes</td>
+<td>GB18030 (Chinese)</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>GB18030 (Chinese)</td> <td>Yes</td> <td>Yes</td>
+<td>UTF-8 (Unicode)</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>UTF-8 (Unicode)</td> <td>Yes</td> <td>Yes</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
 </tr>
 <tr>
-<td colspan="3"></td>
+<td>UUID Generation</td>
+<td>N/A</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>UUID Generation</td> <td>N/A</td> <td>Yes</td>
+<td>UID From Prefix</td>
+<td>N/A</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>UID From Prefix</td> <td>N/A</td> <td>Yes</td>
-</tr>
-<tr>
-<td>Anonymization</td> <td>N/A</td> <td>No</td>
+<td>Anonymization</td>
+<td>N/A</td>
+<td>No</td>
 </tr>
 </tbody>
 </table>
-
-<h2>Q and A Summary:</h2>
-
-<h3>What modalities are supported?</h3>
+<h2 id="q-and-a-summary">Q and A Summary:</h2>
+<h3 id="what-modalities-are-supported">What modalities are supported?</h3>
 <p>All modalities can be read. Writing is currently limitied to CT, MR, and secondary capture.</p>
-<h3>Why is writing limited to MR, CT, and Secondary Capture?</h3>
+<h3 id="why-is-writing-limited-to-mr-ct-and-secondary-capture">Why is writing limited to MR, CT, and Secondary Capture?</h3>
 <p>The DICOM standard has very strict rules for both the structure and the content of DICOM files, and many of the rules are modality-specific.  We therefore decided to focus our initial efforts CT and MR.  Support for additional modalities will be added in the future.</p>
-<h3>Are compressed files supported?</h3>
+<h3 id="are-compressed-files-supported">Are compressed files supported?</h3>
 <p>Yes, but only for reading, not for writing.</p>
-<h3>Is floating-poing data supported?</h3>
+<h3 id="is-floating-poing-data-supported">Is floating-poing data supported?</h3>
 <p>Yes, FloatPixelData and DoubleFloatPixelData can be read. But not written (yet).</p>
-<h3>What is per-slice meta-data?</h3>
+<h3 id="what-is-per-slice-meta-data">What is per-slice meta-data?</h3>
 <p>DICOM data is usually stored as one file per slice, and each file has specific information relating to position, time, etc.  The vtkDICOMMetaData class makes it easy to access the meta data for each individual slice.</p>
-<h3>What is per-frame meta-data?</h3>
+<h3 id="what-is-per-frame-meta-data">What is per-frame meta-data?</h3>
 <p>The DICOM 2004 standard introduced enhanced multi-frame data sets, which allow multiple slices CT or MR to be stored in a single file.</p>
-<h3>Are enhanced multi-frame files supported?</h3>
+<h3 id="are-enhanced-multi-frame-files-supported">Are enhanced multi-frame files supported?</h3>
 <p>They can be read, but cannot yet be written.</p>
-<h3>Is internationalization supported?</h3>
+<h3 id="is-internationalization-supported">Is internationalization supported?</h3>
 <p>Yes.  All text encodings listed in the DICOM standard are handled, and are converted to utf-8 on demand.</p>
-<h3>Are DICOMDIR files supported?</h3>
-<p>They can be read via the <a href="doc/api/classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a> class.  They cannot yet be written.</p>
-<h3>What wrapper languages are supported?</h3>
+<h3 id="are-dicomdir-files-supported">Are DICOMDIR files supported?</h3>
+<p>They can be read via the <a href="./doc/api/classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a> class.  They cannot yet be written.</p>
+<h3 id="what-wrapper-languages-are-supported">What wrapper languages are supported?</h3>
 <p>Python and Java. Only the reader and writer are fully wrapped in Java, so access to meta-data is limited. Python wrapping is complete.</p>
-<h3>What DICOM libraries are used?</h3>
-<p>The vtk-dicom library has its own native code for parsing DICOM files.  For compressed files, GDCM and DCMTK are used to perform the decompression.</p>
+<h3 id="what-dicom-libraries-are-used">What DICOM libraries are used?</h3>
+<p>The vtk-dicom library has its own native code for parsing DICOM files.  For compressed files, GDCM and DCMTK are used to perform the decompression.</p></div>
+        </div>
 
-</body>
-
+    <footer class="col-md-12">
+        <hr>
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+    </footer>
+        <script src="../js/base.js"></script>
+    </body>
 </html>

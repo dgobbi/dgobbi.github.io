@@ -1,0 +1,84 @@
+{
+    "docs": [
+        {
+            "location": "/vtk-dicom/",
+            "text": "DICOM for VTK\n\n\nThe vtk-dicom project started in 2012 in response to the need for DICOM readers and writers for VTK that:\n\n\n\n\nProvide easy access to all of the per-slice DICOM meta data\n\n\nGenerate VTK data sets with complete geometric fidelity\n\n\n\n\nThis was achieved through the creation of three core C++ classes: a \nvtkDICOMReader\n, a \nvtkDICOMWriter\n, and a \nvtkDICOMMetaData\n class that provides full access to the meta data.  The meta data and the DICOM dictionaries (standard and private) are stored in hash tables for efficient access.\n\n\nUseful Links:\n\n\n\n\nSource code repository (Github)\n\n\nCommand-line DICOM tools\n\n\nAPI documentation (Doxygen)\n\n\nPDF documentation (LaTeX)\n\n\nTesting dashboard (CDash)\n\n\n\n\nFeature Table:\n\n\n\n\n\n\n\n\nDICOM Feature\n\n\nRead\n\n\nWrite\n\n\n\n\n\n\n\n\n\n\nSecondary Capture\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nEnhanced Secondary Capture\n\n\nYes\n\n\nSoon\n\n\n\n\n\n\nParametric Maps (float, double)\n\n\nYes\n\n\nSoon\n\n\n\n\n\n\nMR\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nEnhanced MR\n\n\nYes\n\n\nSoon\n\n\n\n\n\n\nCT\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nEnhanced CT\n\n\nYes\n\n\nSoon\n\n\n\n\n\n\nPET\n\n\nYes\n\n\nNo\n\n\n\n\n\n\nEnhanced PET\n\n\nYes\n\n\nNo\n\n\n\n\n\n\nUltrasound\n\n\nYes\n\n\nNo\n\n\n\n\n\n\nRadiography\n\n\nYes\n\n\nNo\n\n\n\n\n\n\nNuclear Medicine\n\n\nYes\n\n\nNo\n\n\n\n\n\n\nRadiotherapy\n\n\nPartial\n\n\nNo\n\n\n\n\n\n\nMulti-Frame\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nCINE\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nCardiac\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nOrientation/Position\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nLookup Tables\n\n\nYes\n\n\nSoon\n\n\n\n\n\n\nOverlays\n\n\nYes\n\n\nYes\n\n\n\n\n\n\n---\n\n\n---\n\n\n---\n\n\n\n\n\n\nDICOM 2017c Dictionary\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nPrivate Dictionaries\n\n\nYes\n\n\nYes\n\n\n\n\n\n\n---\n\n\n---\n\n\n---\n\n\n\n\n\n\nDICOMDIR\n\n\nYes\n\n\nNo\n\n\n\n\n\n\nRLE Compression\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nJPEG Compression\n\n\nVia GDCM/DCMTK\n\n\nNo\n\n\n\n\n\n\nJPEG-LS Compression\n\n\nVia GDCM/DCMTK\n\n\nNo\n\n\n\n\n\n\nJPEG 2000\n\n\nVia GDCM\n\n\nNo\n\n\n\n\n\n\nISO-8859 Character Sets (1,2,3,4,5,6,7,8,9,11)\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nJIS X 0201 (Japanese)\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nJIS X 0208 (Japanese)\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nJIS X 0212 (Japanese)\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nKS X 1001 (Korean)\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nGB2312 (Chinese)\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nGBK (Chinese)\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nGB18030 (Chinese)\n\n\nYes\n\n\nYes\n\n\n\n\n\n\nUTF-8 (Unicode)\n\n\nYes\n\n\nYes\n\n\n\n\n\n\n---\n\n\n---\n\n\n---\n\n\n\n\n\n\nUUID Generation\n\n\nN/A\n\n\nYes\n\n\n\n\n\n\nUID From Prefix\n\n\nN/A\n\n\nYes\n\n\n\n\n\n\nAnonymization\n\n\nN/A\n\n\nNo\n\n\n\n\n\n\n\n\nQ and A Summary:\n\n\nWhat modalities are supported?\n\n\nAll modalities can be read. Writing is currently limitied to CT, MR, and secondary capture.\n\n\nWhy is writing limited to MR, CT, and Secondary Capture?\n\n\nThe DICOM standard has very strict rules for both the structure and the content of DICOM files, and many of the rules are modality-specific.  We therefore decided to focus our initial efforts CT and MR.  Support for additional modalities will be added in the future.\n\n\nAre compressed files supported?\n\n\nYes, but only for reading, not for writing.\n\n\nIs floating-poing data supported?\n\n\nYes, FloatPixelData and DoubleFloatPixelData can be read. But not written (yet).\n\n\nWhat is per-slice meta-data?\n\n\nDICOM data is usually stored as one file per slice, and each file has specific information relating to position, time, etc.  The vtkDICOMMetaData class makes it easy to access the meta data for each individual slice.\n\n\nWhat is per-frame meta-data?\n\n\nThe DICOM 2004 standard introduced enhanced multi-frame data sets, which allow multiple slices CT or MR to be stored in a single file.\n\n\nAre enhanced multi-frame files supported?\n\n\nThey can be read, but cannot yet be written.\n\n\nIs internationalization supported?\n\n\nYes.  All text encodings listed in the DICOM standard are handled, and are converted to utf-8 on demand.\n\n\nAre DICOMDIR files supported?\n\n\nThey can be read via the \nvtkDICOMDirectory\n class.  They cannot yet be written.\n\n\nWhat wrapper languages are supported?\n\n\nPython and Java. Only the reader and writer are fully wrapped in Java, so access to meta-data is limited. Python wrapping is complete.\n\n\nWhat DICOM libraries are used?\n\n\nThe vtk-dicom library has its own native code for parsing DICOM files.  For compressed files, GDCM and DCMTK are used to perform the decompression.",
+            "title": "Home"
+        },
+        {
+            "location": "/vtk-dicom/#dicom-for-vtk",
+            "text": "The vtk-dicom project started in 2012 in response to the need for DICOM readers and writers for VTK that:   Provide easy access to all of the per-slice DICOM meta data  Generate VTK data sets with complete geometric fidelity   This was achieved through the creation of three core C++ classes: a  vtkDICOMReader , a  vtkDICOMWriter , and a  vtkDICOMMetaData  class that provides full access to the meta data.  The meta data and the DICOM dictionaries (standard and private) are stored in hash tables for efficient access.",
+            "title": "DICOM for VTK"
+        },
+        {
+            "location": "/vtk-dicom/#useful-links",
+            "text": "Source code repository (Github)  Command-line DICOM tools  API documentation (Doxygen)  PDF documentation (LaTeX)  Testing dashboard (CDash)",
+            "title": "Useful Links:"
+        },
+        {
+            "location": "/vtk-dicom/#feature-table",
+            "text": "DICOM Feature  Read  Write      Secondary Capture  Yes  Yes    Enhanced Secondary Capture  Yes  Soon    Parametric Maps (float, double)  Yes  Soon    MR  Yes  Yes    Enhanced MR  Yes  Soon    CT  Yes  Yes    Enhanced CT  Yes  Soon    PET  Yes  No    Enhanced PET  Yes  No    Ultrasound  Yes  No    Radiography  Yes  No    Nuclear Medicine  Yes  No    Radiotherapy  Partial  No    Multi-Frame  Yes  Yes    CINE  Yes  Yes    Cardiac  Yes  Yes    Orientation/Position  Yes  Yes    Lookup Tables  Yes  Soon    Overlays  Yes  Yes    ---  ---  ---    DICOM 2017c Dictionary  Yes  Yes    Private Dictionaries  Yes  Yes    ---  ---  ---    DICOMDIR  Yes  No    RLE Compression  Yes  Yes    JPEG Compression  Via GDCM/DCMTK  No    JPEG-LS Compression  Via GDCM/DCMTK  No    JPEG 2000  Via GDCM  No    ISO-8859 Character Sets (1,2,3,4,5,6,7,8,9,11)  Yes  Yes    JIS X 0201 (Japanese)  Yes  Yes    JIS X 0208 (Japanese)  Yes  Yes    JIS X 0212 (Japanese)  Yes  Yes    KS X 1001 (Korean)  Yes  Yes    GB2312 (Chinese)  Yes  Yes    GBK (Chinese)  Yes  Yes    GB18030 (Chinese)  Yes  Yes    UTF-8 (Unicode)  Yes  Yes    ---  ---  ---    UUID Generation  N/A  Yes    UID From Prefix  N/A  Yes    Anonymization  N/A  No",
+            "title": "Feature Table:"
+        },
+        {
+            "location": "/vtk-dicom/#q-and-a-summary",
+            "text": "",
+            "title": "Q and A Summary:"
+        },
+        {
+            "location": "/vtk-dicom/#what-modalities-are-supported",
+            "text": "All modalities can be read. Writing is currently limitied to CT, MR, and secondary capture.",
+            "title": "What modalities are supported?"
+        },
+        {
+            "location": "/vtk-dicom/#why-is-writing-limited-to-mr-ct-and-secondary-capture",
+            "text": "The DICOM standard has very strict rules for both the structure and the content of DICOM files, and many of the rules are modality-specific.  We therefore decided to focus our initial efforts CT and MR.  Support for additional modalities will be added in the future.",
+            "title": "Why is writing limited to MR, CT, and Secondary Capture?"
+        },
+        {
+            "location": "/vtk-dicom/#are-compressed-files-supported",
+            "text": "Yes, but only for reading, not for writing.",
+            "title": "Are compressed files supported?"
+        },
+        {
+            "location": "/vtk-dicom/#is-floating-poing-data-supported",
+            "text": "Yes, FloatPixelData and DoubleFloatPixelData can be read. But not written (yet).",
+            "title": "Is floating-poing data supported?"
+        },
+        {
+            "location": "/vtk-dicom/#what-is-per-slice-meta-data",
+            "text": "DICOM data is usually stored as one file per slice, and each file has specific information relating to position, time, etc.  The vtkDICOMMetaData class makes it easy to access the meta data for each individual slice.",
+            "title": "What is per-slice meta-data?"
+        },
+        {
+            "location": "/vtk-dicom/#what-is-per-frame-meta-data",
+            "text": "The DICOM 2004 standard introduced enhanced multi-frame data sets, which allow multiple slices CT or MR to be stored in a single file.",
+            "title": "What is per-frame meta-data?"
+        },
+        {
+            "location": "/vtk-dicom/#are-enhanced-multi-frame-files-supported",
+            "text": "They can be read, but cannot yet be written.",
+            "title": "Are enhanced multi-frame files supported?"
+        },
+        {
+            "location": "/vtk-dicom/#is-internationalization-supported",
+            "text": "Yes.  All text encodings listed in the DICOM standard are handled, and are converted to utf-8 on demand.",
+            "title": "Is internationalization supported?"
+        },
+        {
+            "location": "/vtk-dicom/#are-dicomdir-files-supported",
+            "text": "They can be read via the  vtkDICOMDirectory  class.  They cannot yet be written.",
+            "title": "Are DICOMDIR files supported?"
+        },
+        {
+            "location": "/vtk-dicom/#what-wrapper-languages-are-supported",
+            "text": "Python and Java. Only the reader and writer are fully wrapped in Java, so access to meta-data is limited. Python wrapping is complete.",
+            "title": "What wrapper languages are supported?"
+        },
+        {
+            "location": "/vtk-dicom/#what-dicom-libraries-are-used",
+            "text": "The vtk-dicom library has its own native code for parsing DICOM files.  For compressed files, GDCM and DCMTK are used to perform the decompression.",
+            "title": "What DICOM libraries are used?"
+        }
+    ]
+}
