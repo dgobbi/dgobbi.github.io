@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.5</span>
+   &#160;<span id="projectnumber">0.8.6</span>
    </div>
   </td>
  </tr>
@@ -120,9 +120,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  vtkTypeMacro(<a class="code" href="classvtk_d_i_c_o_m_apply_palette.html">vtkDICOMApplyPalette</a>, <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#ifdef VTK_OVERRIDE</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html#a618746b19cb68a24e41ce791c3e1313f">PrintSelf</a>(ostream&amp; os, vtkIndent indent) VTK_OVERRIDE;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html#a67feb0a36921e0e57effec0400b8c350">PrintSelf</a>(ostream&amp; os, vtkIndent indent) VTK_OVERRIDE;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html#a618746b19cb68a24e41ce791c3e1313f">PrintSelf</a>(ostream&amp; os, vtkIndent indent);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html#a67feb0a36921e0e57effec0400b8c350">PrintSelf</a>(ostream&amp; os, vtkIndent indent);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">protected</span>:</div>
@@ -134,11 +134,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    vtkInformationVector* outputVector) VTK_OVERRIDE;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html#a5578818e1172c2f9cb7d559b3b81e6a3">RequestData</a>(</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html#a353150129a0819e81916c96cc026217b">RequestData</a>(</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    vtkInformationVector* outputVector) VTK_OVERRIDE;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html#ac79abf5208778df0b46ff2df55397850">ThreadedRequestData</a>(</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html#a63215da6960b194fd8db87fdc1d5fb2e">ThreadedRequestData</a>(</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    vtkInformation *request, vtkInformationVector **inputVector,</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    vtkInformationVector *outputVector, vtkImageData ***inData,</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    vtkImageData **outData, <span class="keywordtype">int</span> ext[6], <span class="keywordtype">int</span> <span class="keywordtype">id</span>) VTK_OVERRIDE;</div>
@@ -147,11 +147,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    vtkInformationVector* outputVector);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html#a5578818e1172c2f9cb7d559b3b81e6a3">RequestData</a>(</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html#a353150129a0819e81916c96cc026217b">RequestData</a>(</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    vtkInformation* request, vtkInformationVector** inputVector,</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    vtkInformationVector* outputVector);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html#ac79abf5208778df0b46ff2df55397850">ThreadedRequestData</a>(</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html#a63215da6960b194fd8db87fdc1d5fb2e">ThreadedRequestData</a>(</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    vtkInformation *request, vtkInformationVector **inputVector,</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    vtkInformationVector *outputVector, vtkImageData ***inData,</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    vtkImageData **outData, <span class="keywordtype">int</span> ext[6], <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
@@ -172,19 +172,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif // vtkDICOMApplyPalette_h</span></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_algorithm_html_a618746b19cb68a24e41ce791c3e1313f"><div class="ttname"><a href="classvtk_d_i_c_o_m_algorithm.html#a618746b19cb68a24e41ce791c3e1313f">vtkDICOMAlgorithm::PrintSelf</a></div><div class="ttdeci">void PrintSelf(ostream &amp;os, vtkIndent indent)</div><div class="ttdoc">Print information about this object. </div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_algorithm_html_a63215da6960b194fd8db87fdc1d5fb2e"><div class="ttname"><a href="classvtk_d_i_c_o_m_algorithm.html#a63215da6960b194fd8db87fdc1d5fb2e">vtkDICOMAlgorithm::ThreadedRequestData</a></div><div class="ttdeci">void ThreadedRequestData(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector, vtkImageData ***inData, vtkImageData **outData, int ext[6], int id) override</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_algorithm_html_a67feb0a36921e0e57effec0400b8c350"><div class="ttname"><a href="classvtk_d_i_c_o_m_algorithm.html#a67feb0a36921e0e57effec0400b8c350">vtkDICOMAlgorithm::PrintSelf</a></div><div class="ttdeci">void PrintSelf(ostream &amp;os, vtkIndent indent) override</div><div class="ttdoc">Print information about this object. </div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_meta_data_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></div><div class="ttdoc">A container class for DICOM metadata. </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaData.h:32</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_algorithm_html_a96ebe31ff8cbe5dd86303883d83380ac"><div class="ttname"><a href="classvtk_d_i_c_o_m_algorithm.html#a96ebe31ff8cbe5dd86303883d83380ac">vtkDICOMAlgorithm::New</a></div><div class="ttdeci">static vtkDICOMAlgorithm * New()</div><div class="ttdoc">Static method for construction. </div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_algorithm_html_ac79abf5208778df0b46ff2df55397850"><div class="ttname"><a href="classvtk_d_i_c_o_m_algorithm.html#ac79abf5208778df0b46ff2df55397850">vtkDICOMAlgorithm::ThreadedRequestData</a></div><div class="ttdeci">void ThreadedRequestData(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector, vtkImageData ***inData, vtkImageData **outData, int ext[6], int id)</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_apply_palette_html_abba8c97a9a224af3d4b6f427a8800d64"><div class="ttname"><a href="classvtk_d_i_c_o_m_apply_palette.html#abba8c97a9a224af3d4b6f427a8800d64">vtkDICOMApplyPalette::Palette</a></div><div class="ttdeci">vtkDICOMPerFilePalette * Palette</div><div class="ttdoc">Container for the lookup tables used. </div><div class="ttdef"><b>Definition:</b> vtkDICOMApplyPalette.h:85</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_algorithm_html_a5578818e1172c2f9cb7d559b3b81e6a3"><div class="ttname"><a href="classvtk_d_i_c_o_m_algorithm.html#a5578818e1172c2f9cb7d559b3b81e6a3">vtkDICOMAlgorithm::RequestData</a></div><div class="ttdeci">int RequestData(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_apply_palette_html_adb8d43ba34fb2d16b165d70a97bb5a31"><div class="ttname"><a href="classvtk_d_i_c_o_m_apply_palette.html#adb8d43ba34fb2d16b165d70a97bb5a31">vtkDICOMApplyPalette::IsSupplemental</a></div><div class="ttdeci">bool IsSupplemental</div><div class="ttdoc">True if palette is supplemental. </div><div class="ttdef"><b>Definition:</b> vtkDICOMApplyPalette.h:88</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_apply_palette_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_apply_palette.html">vtkDICOMApplyPalette</a></div><div class="ttdoc">Apply palette to PALETTE COLOR images. </div><div class="ttdef"><b>Definition:</b> vtkDICOMApplyPalette.h:39</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_algorithm_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a></div><div class="ttdoc">Superclass for DICOM image filters. </div><div class="ttdef"><b>Definition:</b> vtkDICOMAlgorithm.h:37</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_algorithm_html_a353150129a0819e81916c96cc026217b"><div class="ttname"><a href="classvtk_d_i_c_o_m_algorithm.html#a353150129a0819e81916c96cc026217b">vtkDICOMAlgorithm::RequestData</a></div><div class="ttdeci">int RequestData(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector) override</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 23 2017 22:20:57 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 2 2017 20:09:27 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

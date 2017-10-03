@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.5</span>
+   &#160;<span id="projectnumber">0.8.6</span>
    </div>
   </td>
  </tr>
@@ -118,10 +118,10 @@ Inheritance diagram for vtkDICOMToRAS:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adea9cc10aa877095b0a52bbb2f8b6fc9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#adea9cc10aa877095b0a52bbb2f8b6fc9">IsA</a> (const char *type)</td></tr>
 <tr class="separator:adea9cc10aa877095b0a52bbb2f8b6fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56feb80037e3a3b60e830c25ffc3bfde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56feb80037e3a3b60e830c25ffc3bfde"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a56feb80037e3a3b60e830c25ffc3bfde">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
-<tr class="memdesc:a56feb80037e3a3b60e830c25ffc3bfde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object. <br /></td></tr>
-<tr class="separator:a56feb80037e3a3b60e830c25ffc3bfde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc57e64fc49f2768c6ffc8f835e09120"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc57e64fc49f2768c6ffc8f835e09120"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#adc57e64fc49f2768c6ffc8f835e09120">PrintSelf</a> (ostream &amp;os, vtkIndent indent) override</td></tr>
+<tr class="memdesc:adc57e64fc49f2768c6ffc8f835e09120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object. <br /></td></tr>
+<tr class="separator:adc57e64fc49f2768c6ffc8f835e09120"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a839be686c912ce563271a2077e83f537"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a839be686c912ce563271a2077e83f537"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a839be686c912ce563271a2077e83f537">SetRASToDICOM</a> (int v)</td></tr>
@@ -568,16 +568,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a782b8771c3a3947c99c03e2b092af855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a782b8771c3a3947c99c03e2b092af855">ComputeMatrix</a> (int extent[6], double spacing[3], double origin[3])</td></tr>
 <tr class="memdesc:a782b8771c3a3947c99c03e2b092af855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the RAS matrix and store it in this-&gt;Matrix.  <a href="#a782b8771c3a3947c99c03e2b092af855">More...</a><br /></td></tr>
 <tr class="separator:a782b8771c3a3947c99c03e2b092af855"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6441e4e51d16e8cbd1c6a70ef85e9997"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6441e4e51d16e8cbd1c6a70ef85e9997"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>RequestInformation</b> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
-<tr class="separator:a6441e4e51d16e8cbd1c6a70ef85e9997"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae049d26788d9d6bdbdbebbcd8ea5b4f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae049d26788d9d6bdbdbebbcd8ea5b4f1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>RequestUpdateExtent</b> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
-<tr class="separator:ae049d26788d9d6bdbdbebbcd8ea5b4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ab9ee3abe3612fe2d22de84acca8025"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a4ab9ee3abe3612fe2d22de84acca8025">RequestData</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
-<tr class="separator:a4ab9ee3abe3612fe2d22de84acca8025"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ce7fc64280a18488658eb2cfb95dd5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a1ce7fc64280a18488658eb2cfb95dd5d">ThreadedRequestData</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector, vtkImageData ***inData, vtkImageData **outData, int ext[6], int id)</td></tr>
-<tr class="separator:a1ce7fc64280a18488658eb2cfb95dd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31d39a296f703dc37323aac0db993002"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31d39a296f703dc37323aac0db993002"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>RequestInformation</b> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector) override</td></tr>
+<tr class="separator:a31d39a296f703dc37323aac0db993002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af83569f051757b2f1feaf93bdc00a38d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af83569f051757b2f1feaf93bdc00a38d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>RequestUpdateExtent</b> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector) override</td></tr>
+<tr class="separator:af83569f051757b2f1feaf93bdc00a38d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7881eaa1a71923ac3cfcbeb7ccc15022"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#a7881eaa1a71923ac3cfcbeb7ccc15022">RequestData</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector) override</td></tr>
+<tr class="separator:a7881eaa1a71923ac3cfcbeb7ccc15022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af527bb383669802729a0471157a9946c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_to_r_a_s.html#af527bb383669802729a0471157a9946c">ThreadedRequestData</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector, vtkImageData ***inData, vtkImageData **outData, int ext[6], int id) override</td></tr>
+<tr class="separator:af527bb383669802729a0471157a9946c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="inherit_header pro_methods_classvtk_image_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classvtk_image_algorithm')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a></td></tr>
 <tr class="memitem:a53fac1695894dafe2b5a50311c9791d2 inherit pro_methods_classvtk_image_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53fac1695894dafe2b5a50311c9791d2"></a>
@@ -869,7 +869,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 
 </div>
 </div>
-<a class="anchor" id="a4ab9ee3abe3612fe2d22de84acca8025"></a>
+<a class="anchor" id="a7881eaa1a71923ac3cfcbeb7ccc15022"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -902,7 +902,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -988,7 +988,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 
 </div>
 </div>
-<a class="anchor" id="a1ce7fc64280a18488658eb2cfb95dd5d"></a>
+<a class="anchor" id="af527bb383669802729a0471157a9946c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1045,7 +1045,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1079,7 +1079,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 23 2017 22:21:04 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 2 2017 20:09:34 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

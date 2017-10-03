@@ -13,6 +13,7 @@ var searchData=
   ['allocate',['Allocate',['../classvtk_lookup_table.html#a60b7ec3cd36b94a67915cae2a6687bab',1,'vtkLookupTable']]],
   ['allocatechardata',['AllocateCharData',['../classvtk_d_i_c_o_m_value.html#a3b5ab85fb43febe0c4acced5adc45c06',1,'vtkDICOMValue']]],
   ['allowedpixelrepresentation',['AllowedPixelRepresentation',['../classvtk_d_i_c_o_m_generator.html#aa3da2f9c38451ef57ab85e8db0cb54e7',1,'vtkDICOMGenerator']]],
+  ['appendvaluetosafeutf8string',['AppendValueToSafeUTF8String',['../classvtk_d_i_c_o_m_value.html#a84ab0a95753e0ec9fadd1aec1c8da212',1,'vtkDICOMValue']]],
   ['appendvaluetostring',['AppendValueToString',['../classvtk_d_i_c_o_m_value.html#a89a93f77023c1c24243b37d1eaf7522e',1,'vtkDICOMValue']]],
   ['appendvaluetoutf8string',['AppendValueToUTF8String',['../classvtk_d_i_c_o_m_value.html#a270aa4624f48b8af255d6f493f72dec5',1,'vtkDICOMValue']]],
   ['applylogscale',['ApplyLogScale',['../classvtk_lookup_table.html#ad65b4b7693dc6e039abe1863641f81da',1,'vtkLookupTable']]],

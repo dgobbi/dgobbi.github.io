@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['write',['Write',['../classvtk_d_i_c_o_m_file.html#ade2ad87a54299d30bf953380aa20ad6f',1,'vtkDICOMFile::Write()'],['../classvtk_d_i_c_o_m_writer.html#a2e273cbfd25a57656c5d9791d3ae0dcc',1,'vtkDICOMWriter::Write()'],['../classvtk_image_writer.html#aa506c6123cfc0f77b425dd269fcefeea',1,'vtkImageWriter::Write()']]],
+  ['write',['Write',['../classvtk_d_i_c_o_m_file.html#ade2ad87a54299d30bf953380aa20ad6f',1,'vtkDICOMFile::Write()'],['../classvtk_d_i_c_o_m_writer.html#a849c94bac85ced1bc29f8423a6126f8b',1,'vtkDICOMWriter::Write()'],['../classvtk_image_writer.html#aa506c6123cfc0f77b425dd269fcefeea',1,'vtkImageWriter::Write()']]],
   ['writefile',['WriteFile',['../classvtk_d_i_c_o_m_compiler.html#a2a682bcbce401c13139367aa9d7524c2',1,'vtkDICOMCompiler']]],
   ['writefragments',['WriteFragments',['../classvtk_d_i_c_o_m_compiler.html#ad2d28e0b0bdaac2f6e383cf79d859fc5',1,'vtkDICOMCompiler']]],
   ['writeframe',['WriteFrame',['../classvtk_d_i_c_o_m_compiler.html#a0e6c570507d184c1b48934c948e6a0e5',1,'vtkDICOMCompiler']]],

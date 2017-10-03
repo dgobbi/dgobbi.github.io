@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.5</span>
+   &#160;<span id="projectnumber">0.8.6</span>
    </div>
   </td>
  </tr>
@@ -106,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifndef vtkDICOMReader_h</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define vtkDICOMReader_h</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;vtkImageReader2.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;vtkImageReader2.h&quot;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span> <span class="comment">// For export macro</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;vtkDICOMCharacterSet.h&quot;</span> <span class="comment">// For character sets</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
@@ -138,7 +138,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_image_reader2.html#a2846943a7802b3a62df51e0936542abb">GetFileExtensions</a>() VTK_OVERRIDE {</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;.dcm .dc&quot;</span>; }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_image_reader2.html#ae83ebabf18c670a314bb32eb50371f61">GetDescriptiveName</a>() VTK_OVERRIDE {</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_reader.html#aa94a96f70486aa515ee5452e4751476f">   61</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_d_i_c_o_m_reader.html#aa94a96f70486aa515ee5452e4751476f">GetDescriptiveName</a>() VTK_OVERRIDE {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;DICOM&quot;</span>; }</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_image_reader2.html#a29feeda76e5434e29936935015bb9d08">CanReadFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename) VTK_OVERRIDE;</div>
@@ -147,7 +147,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_image_reader2.html#a2846943a7802b3a62df51e0936542abb">GetFileExtensions</a>() {</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;.dcm .dc&quot;</span>; }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classvtk_d_i_c_o_m_reader.html#a464f76e05e4608d7600f69bb7dfa5bda">   74</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_d_i_c_o_m_reader.html#a464f76e05e4608d7600f69bb7dfa5bda">GetDescriptiveName</a>() {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_image_reader2.html#ae83ebabf18c670a314bb32eb50371f61">GetDescriptiveName</a>() {</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;DICOM&quot;</span>; }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_image_reader2.html#a29feeda76e5434e29936935015bb9d08">CanReadFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
@@ -423,7 +423,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classvtk_image_reader2_html_a29feeda76e5434e29936935015bb9d08"><div class="ttname"><a href="classvtk_image_reader2.html#a29feeda76e5434e29936935015bb9d08">vtkImageReader2::CanReadFile</a></div><div class="ttdeci">virtual int CanReadFile(const char *fname)</div><div class="ttdef"><b>Definition:</b> vtkImageReader2.h:224</div></div>
 <div class="ttc" id="classvtk_image_algorithm_html_addc9f91ebe9386c31617c3e12166e10e"><div class="ttname"><a href="classvtk_image_algorithm.html#addc9f91ebe9386c31617c3e12166e10e">vtkImageAlgorithm::RequestData</a></div><div class="ttdeci">virtual int RequestData(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_reader_html_ab803c1b7b32b95d546eee90064faa2b6"><div class="ttname"><a href="classvtk_d_i_c_o_m_reader.html#ab803c1b7b32b95d546eee90064faa2b6">vtkDICOMReader::NeedsYBRToRGB</a></div><div class="ttdeci">int NeedsYBRToRGB</div><div class="ttdoc">This indicates that the data must be converted to RGB. </div><div class="ttdef"><b>Definition:</b> vtkDICOMReader.h:503</div></div>
-<div class="ttc" id="classvtk_d_i_c_o_m_reader_html_a464f76e05e4608d7600f69bb7dfa5bda"><div class="ttname"><a href="classvtk_d_i_c_o_m_reader.html#a464f76e05e4608d7600f69bb7dfa5bda">vtkDICOMReader::GetDescriptiveName</a></div><div class="ttdeci">const char * GetDescriptiveName()</div><div class="ttdoc">Return a descriptive name that might be useful in a GUI. </div><div class="ttdef"><b>Definition:</b> vtkDICOMReader.h:74</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_character_set_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_character_set.html">vtkDICOMCharacterSet</a></div><div class="ttdoc">Character sets. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:57</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_reader_html_a0fe92515c92e0e93a546bc6b416400fb"><div class="ttname"><a href="classvtk_d_i_c_o_m_reader.html#a0fe92515c92e0e93a546bc6b416400fb">vtkDICOMReader::FileIndexArray</a></div><div class="ttdeci">vtkIntArray * FileIndexArray</div><div class="ttdoc">An array to convert slice indices to input files. </div><div class="ttdef"><b>Definition:</b> vtkDICOMReader.h:485</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_reader_html_aa9beca5b23166a25ddc6495d82080f88"><div class="ttname"><a href="classvtk_d_i_c_o_m_reader.html#aa9beca5b23166a25ddc6495d82080f88">vtkDICOMReader::MedicalImageProperties</a></div><div class="ttdeci">vtkMedicalImageProperties * MedicalImageProperties</div><div class="ttdoc">The MedicalImageProperties, for compatibility with other readers. </div><div class="ttdef"><b>Definition:</b> vtkDICOMReader.h:467</div></div>
@@ -438,6 +437,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classvtk_d_i_c_o_m_reader_html_a580bac9e57ef1f445a223df9023c5483"><div class="ttname"><a href="classvtk_d_i_c_o_m_reader.html#a580bac9e57ef1f445a223df9023c5483">vtkDICOMReader::OverrideCharacterSet</a></div><div class="ttdeci">bool OverrideCharacterSet</div><div class="ttdoc">Whether the default should override SpecificCharacterSet. </div><div class="ttdef"><b>Definition:</b> vtkDICOMReader.h:473</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_reader_html_aedb7a78d4131ab1a23f4c54b2da1b993"><div class="ttname"><a href="classvtk_d_i_c_o_m_reader.html#aedb7a78d4131ab1a23f4c54b2da1b993">vtkDICOMReader::RowOrder</a></div><div class="ttdeci">RowOrder</div><div class="ttdoc">Enumeration for top-down vs. bottom-up ordering. </div><div class="ttdef"><b>Definition:</b> vtkDICOMReader.h:286</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_reader_html_a26fb321168b0b82e563a7126d0bdb2a3"><div class="ttname"><a href="classvtk_d_i_c_o_m_reader.html#a26fb321168b0b82e563a7126d0bdb2a3">vtkDICOMReader::MetaData</a></div><div class="ttdeci">vtkDICOMMetaData * MetaData</div><div class="ttdoc">The meta data for the image. </div><div class="ttdef"><b>Definition:</b> vtkDICOMReader.h:464</div></div>
+<div class="ttc" id="classvtk_d_i_c_o_m_reader_html_aa94a96f70486aa515ee5452e4751476f"><div class="ttname"><a href="classvtk_d_i_c_o_m_reader.html#aa94a96f70486aa515ee5452e4751476f">vtkDICOMReader::GetDescriptiveName</a></div><div class="ttdeci">const char * GetDescriptiveName() override</div><div class="ttdoc">Return a descriptive name that might be useful in a GUI. </div><div class="ttdef"><b>Definition:</b> vtkDICOMReader.h:61</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_reader_html_a500ced64b38d6dfad27f4335add48219"><div class="ttname"><a href="classvtk_d_i_c_o_m_reader.html#a500ced64b38d6dfad27f4335add48219">vtkDICOMReader::FrameIndexArray</a></div><div class="ttdeci">vtkIntArray * FrameIndexArray</div><div class="ttdoc">An array to convert slice indices to input frames. </div><div class="ttdef"><b>Definition:</b> vtkDICOMReader.h:488</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_reader_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_reader.html">vtkDICOMReader</a></div><div class="ttdoc">Read DICOM image files. </div><div class="ttdef"><b>Definition:</b> vtkDICOMReader.h:39</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_reader_html_a025c1226c15b176a0e44624f9309bf90"><div class="ttname"><a href="classvtk_d_i_c_o_m_reader.html#a025c1226c15b176a0e44624f9309bf90">vtkDICOMReader::OverlayBitfield</a></div><div class="ttdeci">unsigned short OverlayBitfield</div><div class="ttdoc">Bitfield that says what overlays are present. </div><div class="ttdef"><b>Definition:</b> vtkDICOMReader.h:525</div></div>
@@ -447,7 +447,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 23 2017 22:20:57 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 2 2017 20:09:27 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.5</span>
+   &#160;<span id="projectnumber">0.8.6</span>
    </div>
   </td>
  </tr>
@@ -115,13 +115,13 @@ Inheritance diagram for vtkDICOMMRGenerator:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aaf8ff35e9c84cd848cfb431122360839"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_m_r_generator.html#aaf8ff35e9c84cd848cfb431122360839">IsA</a> (const char *type)</td></tr>
 <tr class="separator:aaf8ff35e9c84cd848cfb431122360839"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7c82e590a5ca8bd6cd45f3804eae217"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7c82e590a5ca8bd6cd45f3804eae217"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_m_r_generator.html#af7c82e590a5ca8bd6cd45f3804eae217">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
-<tr class="memdesc:af7c82e590a5ca8bd6cd45f3804eae217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object. <br /></td></tr>
-<tr class="separator:af7c82e590a5ca8bd6cd45f3804eae217"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a87c9b4619dfa498a853d7b32308a17"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_m_r_generator.html#a2a87c9b4619dfa498a853d7b32308a17">GenerateInstance</a> (vtkInformation *info)</td></tr>
-<tr class="memdesc:a2a87c9b4619dfa498a853d7b32308a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate an instance of one of the supported classes.  <a href="#a2a87c9b4619dfa498a853d7b32308a17">More...</a><br /></td></tr>
-<tr class="separator:a2a87c9b4619dfa498a853d7b32308a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bcfe216f3f4981eae47d17c6cedcb4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bcfe216f3f4981eae47d17c6cedcb4f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_m_r_generator.html#a7bcfe216f3f4981eae47d17c6cedcb4f">PrintSelf</a> (ostream &amp;os, vtkIndent indent) override</td></tr>
+<tr class="memdesc:a7bcfe216f3f4981eae47d17c6cedcb4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object. <br /></td></tr>
+<tr class="separator:a7bcfe216f3f4981eae47d17c6cedcb4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7270bc28bfc23dd4e33fcbbad0228bd9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_m_r_generator.html#a7270bc28bfc23dd4e33fcbbad0228bd9">GenerateInstance</a> (vtkInformation *info) override</td></tr>
+<tr class="memdesc:a7270bc28bfc23dd4e33fcbbad0228bd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate an instance of one of the supported classes.  <a href="#a7270bc28bfc23dd4e33fcbbad0228bd9">More...</a><br /></td></tr>
+<tr class="separator:a7270bc28bfc23dd4e33fcbbad0228bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvtk_d_i_c_o_m_generator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvtk_d_i_c_o_m_generator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvtk_d_i_c_o_m_generator.html">vtkDICOMGenerator</a></td></tr>
 <tr class="memitem:a3f7494b40d3ec038c1589c477396be15 inherit pub_methods_classvtk_d_i_c_o_m_generator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_generator.html#a3f7494b40d3ec038c1589c477396be15">GetMetaData</a> ()</td></tr>
 <tr class="memdesc:a3f7494b40d3ec038c1589c477396be15 inherit pub_methods_classvtk_d_i_c_o_m_generator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the generated meta data.  <a href="#a3f7494b40d3ec038c1589c477396be15">More...</a><br /></td></tr>
@@ -666,7 +666,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 <li>MR Image, 1.2.840.10008.5.1.4.1.1.4 </li>
 </ul>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a2a87c9b4619dfa498a853d7b32308a17"></a>
+<a class="anchor" id="a7270bc28bfc23dd4e33fcbbad0228bd9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -683,7 +683,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -728,7 +728,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 23 2017 22:21:02 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 2 2017 20:09:32 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.5</span>
+   &#160;<span id="projectnumber">0.8.6</span>
    </div>
   </td>
  </tr>
@@ -493,13 +493,13 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalWarnin
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a97e32dc7156e70d9c99e02d1911d030f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97e32dc7156e70d9c99e02d1911d030f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>RequestInformation</b> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
-<tr class="separator:a97e32dc7156e70d9c99e02d1911d030f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5578818e1172c2f9cb7d559b3b81e6a3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a5578818e1172c2f9cb7d559b3b81e6a3">RequestData</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
-<tr class="separator:a5578818e1172c2f9cb7d559b3b81e6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac79abf5208778df0b46ff2df55397850"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#ac79abf5208778df0b46ff2df55397850">ThreadedRequestData</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector, vtkImageData ***inData, vtkImageData **outData, int ext[6], int id)</td></tr>
-<tr class="separator:ac79abf5208778df0b46ff2df55397850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf4f6bc87646b48b9822676e41e6ee5b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf4f6bc87646b48b9822676e41e6ee5b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>RequestInformation</b> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector) override</td></tr>
+<tr class="separator:abf4f6bc87646b48b9822676e41e6ee5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a353150129a0819e81916c96cc026217b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a353150129a0819e81916c96cc026217b">RequestData</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector) override</td></tr>
+<tr class="separator:a353150129a0819e81916c96cc026217b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63215da6960b194fd8db87fdc1d5fb2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a63215da6960b194fd8db87fdc1d5fb2e">ThreadedRequestData</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector, vtkImageData ***inData, vtkImageData **outData, int ext[6], int id) override</td></tr>
+<tr class="separator:a63215da6960b194fd8db87fdc1d5fb2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a51aee3e5074f395388c91a700c396b71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51aee3e5074f395388c91a700c396b71"></a>
 vtkInformation *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a51aee3e5074f395388c91a700c396b71">GetMetaDataInformation</a> (vtkInformationVector **inputVector, int inputPort, int inputConnection)</td></tr>
@@ -626,10 +626,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 static <a class="el" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a96ebe31ff8cbe5dd86303883d83380ac">New</a> ()</td></tr>
 <tr class="memdesc:a96ebe31ff8cbe5dd86303883d83380ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static method for construction. <br /></td></tr>
 <tr class="separator:a96ebe31ff8cbe5dd86303883d83380ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a618746b19cb68a24e41ce791c3e1313f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a618746b19cb68a24e41ce791c3e1313f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a618746b19cb68a24e41ce791c3e1313f">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
-<tr class="memdesc:a618746b19cb68a24e41ce791c3e1313f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object. <br /></td></tr>
-<tr class="separator:a618746b19cb68a24e41ce791c3e1313f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67feb0a36921e0e57effec0400b8c350"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67feb0a36921e0e57effec0400b8c350"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_algorithm.html#a67feb0a36921e0e57effec0400b8c350">PrintSelf</a> (ostream &amp;os, vtkIndent indent) override</td></tr>
+<tr class="memdesc:a67feb0a36921e0e57effec0400b8c350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object. <br /></td></tr>
+<tr class="separator:a67feb0a36921e0e57effec0400b8c350"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -808,7 +808,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 
 </div>
 </div>
-<a class="anchor" id="a5578818e1172c2f9cb7d559b3b81e6a3"></a>
+<a class="anchor" id="a353150129a0819e81916c96cc026217b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -841,7 +841,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -849,11 +849,11 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 
 <p>Reimplemented from <a class="el" href="classvtk_threaded_image_algorithm.html#acb47f24e52706df6a7d2ded8266d2b23">vtkThreadedImageAlgorithm</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#a497fa00b4f82c426fe54346081dc16d3">vtkDICOMCTRectifier</a>, <a class="el" href="classvtk_d_i_c_o_m_apply_rescale.html#a6478e3446136c6885f819e029137a9ea">vtkDICOMApplyRescale</a>, and <a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#a7d9911a7f89e0ba9b55898ea194bf3a0">vtkDICOMApplyPalette</a>.</p>
+<p>Reimplemented in <a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#a820ff86c27461bc4da348b8a5c8b3be5">vtkDICOMCTRectifier</a>, <a class="el" href="classvtk_d_i_c_o_m_apply_rescale.html#aaa9a317552aa628f784c0c1a78db2553">vtkDICOMApplyRescale</a>, and <a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#abd8abcb46122126ea70197d214e17eaa">vtkDICOMApplyPalette</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac79abf5208778df0b46ff2df55397850"></a>
+<a class="anchor" id="a63215da6960b194fd8db87fdc1d5fb2e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -910,7 +910,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -918,7 +918,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 
 <p>Reimplemented from <a class="el" href="classvtk_threaded_image_algorithm.html#adda52b8ad4b703ee11c76b916accbb42">vtkThreadedImageAlgorithm</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#a68a1eca6f2f97a00bf3b1dc981b2cdd1">vtkDICOMCTRectifier</a>, <a class="el" href="classvtk_d_i_c_o_m_apply_rescale.html#ac5970f9d97d1074e978790b63d5a2425">vtkDICOMApplyRescale</a>, and <a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#aab93851d51fed9e7e3ea64ffdf39efe9">vtkDICOMApplyPalette</a>.</p>
+<p>Reimplemented in <a class="el" href="classvtk_d_i_c_o_m_c_t_rectifier.html#a6fab2d0a790d350db05e1054e7b9513f">vtkDICOMCTRectifier</a>, <a class="el" href="classvtk_d_i_c_o_m_apply_rescale.html#a33f86969c64024ec463489c06acc3bc4">vtkDICOMApplyRescale</a>, and <a class="el" href="classvtk_d_i_c_o_m_apply_palette.html#aa67ef9a51d7aea370475ea46dd7d45bb">vtkDICOMApplyPalette</a>.</p>
 
 </div>
 </div>
@@ -928,7 +928,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 23 2017 22:20:59 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 2 2017 20:09:29 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

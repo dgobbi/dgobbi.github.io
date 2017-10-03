@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.5</span>
+   &#160;<span id="projectnumber">0.8.6</span>
    </div>
   </td>
  </tr>
@@ -251,7 +251,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr class="even"><td class="entry"><a class="el" href="classvtk_object_base.html#aedadf6378465fd81c2592ef64262e2a5">Print</a>(ostream &amp;os)</td><td class="entry"><a class="el" href="classvtk_object_base.html">vtkObjectBase</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>PrintHeader</b>(ostream &amp;os, vtkIndent indent) (defined in <a class="el" href="classvtk_object_base.html">vtkObjectBase</a>)</td><td class="entry"><a class="el" href="classvtk_object_base.html">vtkObjectBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classvtk_object_base.html#a463ec1662e991be10e81eab5b08f97a3">PrintRevisions</a>(ostream &amp;os)</td><td class="entry"><a class="el" href="classvtk_object_base.html">vtkObjectBase</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classvtk_n_i_f_t_i_writer.html#a4101f8033bfb3dda694731e4608344c4">PrintSelf</a>(ostream &amp;os, vtkIndent indent)</td><td class="entry"><a class="el" href="classvtk_n_i_f_t_i_writer.html">vtkNIFTIWriter</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classvtk_n_i_f_t_i_writer.html#a1acc4d2d0070f5fbd2f3e8d9e2cc3b42">PrintSelf</a>(ostream &amp;os, vtkIndent indent) override</td><td class="entry"><a class="el" href="classvtk_n_i_f_t_i_writer.html">vtkNIFTIWriter</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PrintTrailer</b>(ostream &amp;os, vtkIndent indent) (defined in <a class="el" href="classvtk_object_base.html">vtkObjectBase</a>)</td><td class="entry"><a class="el" href="classvtk_object_base.html">vtkObjectBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classvtk_image_algorithm.html#ac11b54dc03a47a1eac8e5513b5159793">ProcessRequest</a>(vtkInformation *, vtkInformationVector **, vtkInformationVector *)</td><td class="entry"><a class="el" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Progress</b> (defined in <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a>)</td><td class="entry"><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
@@ -276,7 +276,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr bgcolor="#f0f0f0"><td class="entry"><b>RemoveObservers</b>(const char *event) (defined in <a class="el" href="classvtk_object.html">vtkObject</a>)</td><td class="entry"><a class="el" href="classvtk_object.html">vtkObject</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classvtk_n_i_f_t_i_writer.html#a844b891d386fe1ccfbcaa24badbce383">ReplaceExtension</a>(const char *fname, const char *ext1, const char *ext2)</td><td class="entry"><a class="el" href="classvtk_n_i_f_t_i_writer.html">vtkNIFTIWriter</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">static</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>ReportReferences</b>(vtkGarbageCollector *) (defined in <a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a>)</td><td class="entry"><a class="el" href="classvtk_algorithm.html">vtkAlgorithm</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classvtk_n_i_f_t_i_writer.html#abe03859833949b27fa34e2d0fff62f27">RequestData</a>(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td><td class="entry"><a class="el" href="classvtk_n_i_f_t_i_writer.html">vtkNIFTIWriter</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classvtk_n_i_f_t_i_writer.html#a18740fc886a8e12b40cc4a597aa72293">RequestData</a>(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector) override</td><td class="entry"><a class="el" href="classvtk_n_i_f_t_i_writer.html">vtkNIFTIWriter</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>RequestInformation</b>(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector) (defined in <a class="el" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a>)</td><td class="entry"><a class="el" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>RequestUpdateExtent</b>(vtkInformation *, vtkInformationVector **, vtkInformationVector *) (defined in <a class="el" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a>)</td><td class="entry"><a class="el" href="classvtk_image_algorithm.html">vtkImageAlgorithm</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classvtk_n_i_f_t_i_writer.html#ad715047ba4a25b9930064623ade654b2">RescaleIntercept</a></td><td class="entry"><a class="el" href="classvtk_n_i_f_t_i_writer.html">vtkNIFTIWriter</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
@@ -357,7 +357,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 23 2017 22:21:07 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 2 2017 20:09:37 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

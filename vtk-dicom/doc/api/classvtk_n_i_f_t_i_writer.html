@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.5</span>
+   &#160;<span id="projectnumber">0.8.6</span>
    </div>
   </td>
  </tr>
@@ -128,10 +128,10 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae09b7625f67ae7e045d29ad4237040fe"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#ae09b7625f67ae7e045d29ad4237040fe">IsA</a> (const char *type)</td></tr>
 <tr class="separator:ae09b7625f67ae7e045d29ad4237040fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4101f8033bfb3dda694731e4608344c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4101f8033bfb3dda694731e4608344c4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#a4101f8033bfb3dda694731e4608344c4">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
-<tr class="memdesc:a4101f8033bfb3dda694731e4608344c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object. <br /></td></tr>
-<tr class="separator:a4101f8033bfb3dda694731e4608344c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1acc4d2d0070f5fbd2f3e8d9e2cc3b42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1acc4d2d0070f5fbd2f3e8d9e2cc3b42"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#a1acc4d2d0070f5fbd2f3e8d9e2cc3b42">PrintSelf</a> (ostream &amp;os, vtkIndent indent) override</td></tr>
+<tr class="memdesc:a1acc4d2d0070f5fbd2f3e8d9e2cc3b42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object. <br /></td></tr>
+<tr class="separator:a1acc4d2d0070f5fbd2f3e8d9e2cc3b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:afdc4313e7bf2eac9439cf7a1554b74de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#afdc4313e7bf2eac9439cf7a1554b74de">SetNIFTIVersion</a> (int v)</td></tr>
 <tr class="memdesc:afdc4313e7bf2eac9439cf7a1554b74de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the version number for the NIfTI file format to use.  <a href="#afdc4313e7bf2eac9439cf7a1554b74de">More...</a><br /></td></tr>
@@ -619,10 +619,10 @@ Protected Member Functions</h2></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#aef551942d548644f2a3f0a4924763490">GenerateHeader</a> (vtkInformation *info, bool singleFile)</td></tr>
 <tr class="memdesc:aef551942d548644f2a3f0a4924763490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the header information for the file. <br /></td></tr>
 <tr class="separator:aef551942d548644f2a3f0a4924763490"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe03859833949b27fa34e2d0fff62f27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe03859833949b27fa34e2d0fff62f27"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#abe03859833949b27fa34e2d0fff62f27">RequestData</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</td></tr>
-<tr class="memdesc:abe03859833949b27fa34e2d0fff62f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main execution method, which writes the file. <br /></td></tr>
-<tr class="separator:abe03859833949b27fa34e2d0fff62f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18740fc886a8e12b40cc4a597aa72293"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18740fc886a8e12b40cc4a597aa72293"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_n_i_f_t_i_writer.html#a18740fc886a8e12b40cc4a597aa72293">RequestData</a> (vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector) override</td></tr>
+<tr class="memdesc:a18740fc886a8e12b40cc4a597aa72293"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main execution method, which writes the file. <br /></td></tr>
+<tr class="separator:a18740fc886a8e12b40cc4a597aa72293"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classvtk_image_writer"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classvtk_image_writer')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classvtk_image_writer.html">vtkImageWriter</a></td></tr>
 <tr class="memitem:a97a30fe0603c99a5c11385a29a134a57 inherit pro_methods_classvtk_image_writer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97a30fe0603c99a5c11385a29a134a57"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>RecursiveWrite</b> (int dim, vtkImageData *region, ofstream *file)</td></tr>
@@ -1184,7 +1184,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 23 2017 22:21:07 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 2 2017 20:09:37 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

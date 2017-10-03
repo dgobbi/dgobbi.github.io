@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.5</span>
+   &#160;<span id="projectnumber">0.8.6</span>
    </div>
   </td>
  </tr>
@@ -211,6 +211,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ToUTF8</b> (co
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_character_set.html#a048b2be7f1c8cc757d0db38c53c895b9">ConvertToUTF8</a> (const char *text, size_t l) const </td></tr>
 <tr class="memdesc:a048b2be7f1c8cc757d0db38c53c895b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete method for converting to UTF8. <br /></td></tr>
 <tr class="separator:a048b2be7f1c8cc757d0db38c53c895b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed9188ad62b47d7b69cdae766674bbec"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_character_set.html#aed9188ad62b47d7b69cdae766674bbec">ToSafeUTF8</a> (const char *text, size_t l) const </td></tr>
+<tr class="memdesc:aed9188ad62b47d7b69cdae766674bbec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert text to UTF-8 that is safe to print to the console.  <a href="#aed9188ad62b47d7b69cdae766674bbec">More...</a><br /></td></tr>
+<tr class="separator:aed9188ad62b47d7b69cdae766674bbec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6241bb93189f94bda332dc4d4974bff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6241bb93189f94bda332dc4d4974bff"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ToSafeUTF8</b> (const std::string &amp;text) const </td></tr>
+<tr class="separator:ab6241bb93189f94bda332dc4d4974bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7013877ffdfbefdc96eba999a6c7f38"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_character_set.html#ac7013877ffdfbefdc96eba999a6c7f38">CaseFoldedUTF8</a> (const char *text, size_t l) const </td></tr>
 <tr class="memdesc:ac7013877ffdfbefdc96eba999a6c7f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert text into a form suitable for case-insensitive matching.  <a href="#ac7013877ffdfbefdc96eba999a6c7f38">More...</a><br /></td></tr>
 <tr class="separator:ac7013877ffdfbefdc96eba999a6c7f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -593,6 +599,35 @@ static const unsigned short *&#160;</td><td class="memItemRight" valign="bottom"
 
 </div>
 </div>
+<a class="anchor" id="aed9188ad62b47d7b69cdae766674bbec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string vtkDICOMCharacterSet::ToSafeUTF8 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>l</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert text to UTF-8 that is safe to print to the console. </p>
+<p>All control characters or unconvertible characters will be replaced by four-byte octal codes, e.g. '\033'. Backslashes will be replaced by '\134' to avoid any potential ambiguity. </p>
+
+</div>
+</div>
 <a class="anchor" id="a49f5afb632b1e0bcb5231e699b712b20"></a>
 <div class="memitem">
 <div class="memproto">
@@ -634,7 +669,7 @@ static const unsigned short *&#160;</td><td class="memItemRight" valign="bottom"
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 23 2017 22:20:59 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 2 2017 20:09:29 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

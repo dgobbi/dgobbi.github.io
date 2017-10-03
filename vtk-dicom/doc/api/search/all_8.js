@@ -6,7 +6,7 @@ var searchData=
   ['image_20reader',['Image Reader',['../image_reader.html',1,'']]],
   ['imagetype',['ImageType',['../classvtk_d_i_c_o_m_writer.html#a8f14de5b6a2d4f9dffc434a9ee0d3cac',1,'vtkDICOMWriter']]],
   ['image_20writer',['Image Writer',['../image_writer.html',1,'']]],
-  ['initialize',['Initialize',['../classvtk_d_i_c_o_m_meta_data.html#aab252ee5431bca4a70965cb8f4c2aa78',1,'vtkDICOMMetaData::Initialize()'],['../classvtk_n_i_f_t_i_header.html#a03df8870b0159223bff52f3caad5a968',1,'vtkNIFTIHeader::Initialize()'],['../classvtk_data_object.html#a125a61962658df7dd87d0c5755c06193',1,'vtkDataObject::Initialize()']]],
+  ['initialize',['Initialize',['../classvtk_d_i_c_o_m_meta_data.html#a6e2ce2c1ca728dafe8ff6580d14de410',1,'vtkDICOMMetaData::Initialize()'],['../classvtk_n_i_f_t_i_header.html#a03df8870b0159223bff52f3caad5a968',1,'vtkNIFTIHeader::Initialize()'],['../classvtk_data_object.html#a125a61962658df7dd87d0c5755c06193',1,'vtkDataObject::Initialize()']]],
   ['initializeheader',['InitializeHeader',['../classvtk_scanco_c_t_reader.html#a1e6654af1c7b12842af92d677f52f729',1,'vtkScancoCTReader']]],
   ['initializemetadata',['InitializeMetaData',['../classvtk_d_i_c_o_m_generator.html#ae731e034be9b807e641c11206b5d2535',1,'vtkDICOMGenerator']]],
   ['input_5fis_5foptional',['INPUT_IS_OPTIONAL',['../classvtk_algorithm.html#a2b45e1a940a5d223abe9f6f471639629',1,'vtkAlgorithm']]],

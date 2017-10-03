@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.5</span>
+   &#160;<span id="projectnumber">0.8.6</span>
    </div>
   </td>
  </tr>
@@ -106,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#ifndef vtkScancoCTReader_h</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define vtkScancoCTReader_h</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;vtkImageReader2.h&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;vtkImageReader2.h&quot;</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span> <span class="comment">// For export macro</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//----------------------------------------------------------------------------</span></div>
@@ -122,7 +122,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_image_reader2.html#a2846943a7802b3a62df51e0936542abb">GetFileExtensions</a>() VTK_OVERRIDE {</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;.isq .rsq .rad .aim&quot;</span> ; }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_image_reader2.html#ae83ebabf18c670a314bb32eb50371f61">GetDescriptiveName</a>() VTK_OVERRIDE {</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classvtk_scanco_c_t_reader.html#abc062e1bb13a8a6353451add3004389c">   58</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_scanco_c_t_reader.html#abc062e1bb13a8a6353451add3004389c">GetDescriptiveName</a>() VTK_OVERRIDE {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;SCANCO MicroCT&quot;</span>; }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_image_reader2.html#a29feeda76e5434e29936935015bb9d08">CanReadFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename) VTK_OVERRIDE;</div>
@@ -132,7 +132,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_image_reader2.html#a2846943a7802b3a62df51e0936542abb">GetFileExtensions</a>() {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;.isq .rsq .rad .aim&quot;</span> ; }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classvtk_scanco_c_t_reader.html#ab735f75f4ed74c4a1a31faa70f642ae2">   76</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_scanco_c_t_reader.html#ab735f75f4ed74c4a1a31faa70f642ae2">GetDescriptiveName</a>() {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_image_reader2.html#ae83ebabf18c670a314bb32eb50371f61">GetDescriptiveName</a>() {</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;SCANCO MicroCT&quot;</span>; }</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_image_reader2.html#a29feeda76e5434e29936935015bb9d08">CanReadFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
@@ -305,6 +305,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_a33d8764421cd388eb6a611b8e0c02b14"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#a33d8764421cd388eb6a611b8e0c02b14">vtkScancoCTReader::GetScannerType</a></div><div class="ttdeci">int GetScannerType()</div><div class="ttdoc">Get the scanner type, as an integer code. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:133</div></div>
 <div class="ttc" id="classvtk_image_reader2_html_a2846943a7802b3a62df51e0936542abb"><div class="ttname"><a href="classvtk_image_reader2.html#a2846943a7802b3a62df51e0936542abb">vtkImageReader2::GetFileExtensions</a></div><div class="ttdeci">virtual const char * GetFileExtensions()</div><div class="ttdef"><b>Definition:</b> vtkImageReader2.h:233</div></div>
 <div class="ttc" id="classvtk_image_reader2_html_a75a81a26827763bb51f81dbc643da687"><div class="ttname"><a href="classvtk_image_reader2.html#a75a81a26827763bb51f81dbc643da687">vtkImageReader2::PrintSelf</a></div><div class="ttdeci">void PrintSelf(ostream &amp;os, vtkIndent indent)</div></div>
+<div class="ttc" id="classvtk_scanco_c_t_reader_html_abc062e1bb13a8a6353451add3004389c"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#abc062e1bb13a8a6353451add3004389c">vtkScancoCTReader::GetDescriptiveName</a></div><div class="ttdeci">const char * GetDescriptiveName() override</div><div class="ttdoc">Return a descriptive name that might be useful in a GUI. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:58</div></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_a6b4184c98a51bea80dc01a81be28435b"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#a6b4184c98a51bea80dc01a81be28435b">vtkScancoCTReader::GetPatientName</a></div><div class="ttdeci">const char * GetPatientName()</div><div class="ttdoc">Get a descriptive name for this scan. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:151</div></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_a290174f3daf05a008a9d76f33586e65d"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#a290174f3daf05a008a9d76f33586e65d">vtkScancoCTReader::GetReferenceLine</a></div><div class="ttdeci">double GetReferenceLine()</div><div class="ttdoc">Get the reference line (in millimeters). </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:145</div></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_a91a97bfb871c18fe9c993fed9373fc7a"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#a91a97bfb871c18fe9c993fed9373fc7a">vtkScancoCTReader::GetCalibrationData</a></div><div class="ttdeci">const char * GetCalibrationData()</div><div class="ttdoc">Get the calibration data (energy, filtration, etc.) </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:177</div></div>
@@ -320,7 +321,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_a40521a31f14ccbf1cf71309ce036127f"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#a40521a31f14ccbf1cf71309ce036127f">vtkScancoCTReader::GetScanDistance</a></div><div class="ttdeci">double GetScanDistance()</div><div class="ttdoc">Get the scan distance (in millimeters). </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:130</div></div>
 <div class="ttc" id="classvtk_image_reader2_html_a29feeda76e5434e29936935015bb9d08"><div class="ttname"><a href="classvtk_image_reader2.html#a29feeda76e5434e29936935015bb9d08">vtkImageReader2::CanReadFile</a></div><div class="ttdeci">virtual int CanReadFile(const char *fname)</div><div class="ttdef"><b>Definition:</b> vtkImageReader2.h:224</div></div>
 <div class="ttc" id="classvtk_image_algorithm_html_addc9f91ebe9386c31617c3e12166e10e"><div class="ttname"><a href="classvtk_image_algorithm.html#addc9f91ebe9386c31617c3e12166e10e">vtkImageAlgorithm::RequestData</a></div><div class="ttdeci">virtual int RequestData(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</div></div>
-<div class="ttc" id="classvtk_scanco_c_t_reader_html_ab735f75f4ed74c4a1a31faa70f642ae2"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#ab735f75f4ed74c4a1a31faa70f642ae2">vtkScancoCTReader::GetDescriptiveName</a></div><div class="ttdeci">const char * GetDescriptiveName()</div><div class="ttdoc">Return a descriptive name that might be useful in a GUI. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:76</div></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_ac7ebb5909edf979a69a560206e852cda"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#ac7ebb5909edf979a69a560206e852cda">vtkScancoCTReader::GetMuWater</a></div><div class="ttdeci">double GetMuWater()</div><div class="ttdoc">Get the linear attenuation of water, in units of [1/cm]. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:174</div></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_a4edba476dc26c116ca4046811f015439"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#a4edba476dc26c116ca4046811f015439">vtkScancoCTReader::GetSite</a></div><div class="ttdeci">int GetSite()</div><div class="ttdoc">Get an integer value that identifies the site on the body. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:142</div></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_a6cb7dddd261760701edef6e5353f2239"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#a6cb7dddd261760701edef6e5353f2239">vtkScancoCTReader::GetNumberOfProjections</a></div><div class="ttdeci">int GetNumberOfProjections()</div><div class="ttdoc">Get the number of projections. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:127</div></div>
@@ -340,7 +340,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 23 2017 22:20:57 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 2 2017 20:09:28 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

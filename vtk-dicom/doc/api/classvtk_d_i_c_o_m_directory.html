@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.5</span>
+   &#160;<span id="projectnumber">0.8.6</span>
    </div>
   </td>
  </tr>
@@ -131,8 +131,23 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a144b151649df288f3ed0f20479946702"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a144b151649df288f3ed0f20479946702">IsA</a> (const char *type)</td></tr>
 <tr class="separator:a144b151649df288f3ed0f20479946702"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a891fe222fbbe15bb5c252050dc6120b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a891fe222fbbe15bb5c252050dc6120b1">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
-<tr class="separator:a891fe222fbbe15bb5c252050dc6120b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a958bc5a3bcef14f5888e62e7d87371e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a958bc5a3bcef14f5888e62e7d87371e6">PrintSelf</a> (ostream &amp;os, vtkIndent indent) override</td></tr>
+<tr class="separator:a958bc5a3bcef14f5888e62e7d87371e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a304896e3d6fee0ef842b6facd5f98d7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a304896e3d6fee0ef842b6facd5f98d7a">SetQueryFilesToAlways</a> ()</td></tr>
+<tr class="memdesc:a304896e3d6fee0ef842b6facd5f98d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set when to query the files, rather than just the DICOMDIR index.  <a href="#a304896e3d6fee0ef842b6facd5f98d7a">More...</a><br /></td></tr>
+<tr class="separator:a304896e3d6fee0ef842b6facd5f98d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace540677a55ebff12b967361b1458355"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace540677a55ebff12b967361b1458355"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetQueryFilesToNever</b> ()</td></tr>
+<tr class="separator:ace540677a55ebff12b967361b1458355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a6ce977b59f21ccfb162c3c442ff24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6a6ce977b59f21ccfb162c3c442ff24"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetQueryFilesToDefault</b> ()</td></tr>
+<tr class="separator:af6a6ce977b59f21ccfb162c3c442ff24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0032f0530dae03a9bb814f6af71eb0d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0032f0530dae03a9bb814f6af71eb0d2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetQueryFiles</b> (int v)</td></tr>
+<tr class="separator:a0032f0530dae03a9bb814f6af71eb0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c4701ff83daba184135d2b893dc2ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05c4701ff83daba184135d2b893dc2ec"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetQueryFiles</b> ()</td></tr>
+<tr class="separator:a05c4701ff83daba184135d2b893dc2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ae9846c44efbc8ef69b1bd049ba65f70b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#ae9846c44efbc8ef69b1bd049ba65f70b">SetDirectoryName</a> (const char *name)</td></tr>
 <tr class="memdesc:ae9846c44efbc8ef69b1bd049ba65f70b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the input directory.  <a href="#ae9846c44efbc8ef69b1bd049ba65f70b">More...</a><br /></td></tr>
@@ -183,12 +198,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetFindLevelToSeries<
 int&#160;</td><td class="memItemRight" valign="bottom"><b>GetFindLevel</b> ()</td></tr>
 <tr class="separator:a323a32d8622054399c6091ef385fd2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a324431095b4d4a35dde70919440542e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a324431095b4d4a35dde70919440542e8">Update</a> ()</td></tr>
-<tr class="memdesc:a324431095b4d4a35dde70919440542e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the information about the files.  <a href="#a324431095b4d4a35dde70919440542e8">More...</a><br /></td></tr>
-<tr class="separator:a324431095b4d4a35dde70919440542e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a065419a756cf309ceb58820f57a68ff9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a065419a756cf309ceb58820f57a68ff9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (int)</td></tr>
-<tr class="separator:a065419a756cf309ceb58820f57a68ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04ef8987de235496da3e5281666cfee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#aa04ef8987de235496da3e5281666cfee">Update</a> () override</td></tr>
+<tr class="memdesc:aa04ef8987de235496da3e5281666cfee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the information about the files.  <a href="#aa04ef8987de235496da3e5281666cfee">More...</a><br /></td></tr>
+<tr class="separator:aa04ef8987de235496da3e5281666cfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3a6b4120ece46c092466d64599c777"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed3a6b4120ece46c092466d64599c777"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (int) override</td></tr>
+<tr class="separator:aed3a6b4120ece46c092466d64599c777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a0c4fd3ed24389b419cb1c7c84e93093f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c4fd3ed24389b419cb1c7c84e93093f"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a0c4fd3ed24389b419cb1c7c84e93093f">GetNumberOfSeries</a> ()</td></tr>
@@ -635,10 +650,10 @@ Protected Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a3d48a5bd7729ef9e962789c933cb9a56">Execute</a> ()</td></tr>
 <tr class="memdesc:a3d48a5bd7729ef9e962789c933cb9a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the output filename array. <br /></td></tr>
 <tr class="separator:a3d48a5bd7729ef9e962789c933cb9a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bffad555f3821decc914dd696475e91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bffad555f3821decc914dd696475e91"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a0bffad555f3821decc914dd696475e91">FillImageRecord</a> (<a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *item, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
-<tr class="memdesc:a0bffad555f3821decc914dd696475e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill image info from image metadata. <br /></td></tr>
-<tr class="separator:a0bffad555f3821decc914dd696475e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef22bd29a3973840e971a8c36e6335e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef22bd29a3973840e971a8c36e6335e1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#aef22bd29a3973840e971a8c36e6335e1">FillImageRecord</a> (<a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *item, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta, const <a class="el" href="classvtk_d_i_c_o_m_tag.html">vtkDICOMTag</a> *skip, size_t nskip)</td></tr>
+<tr class="memdesc:aef22bd29a3973840e971a8c36e6335e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill image info from image metadata. <br /></td></tr>
+<tr class="separator:aef22bd29a3973840e971a8c36e6335e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad71116c4c85626cd0157cb79168d7d44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad71116c4c85626cd0157cb79168d7d44"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#ad71116c4c85626cd0157cb79168d7d44">FillSeriesRecord</a> (<a class="el" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *item, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
 <tr class="memdesc:ad71116c4c85626cd0157cb79168d7d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill series info from image metadata. <br /></td></tr>
@@ -676,10 +691,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a4b0b7a97ba2264f02459a3e647a1a2df">SetInternalFileName</a> (const char *fname)</td></tr>
 <tr class="memdesc:a4b0b7a97ba2264f02459a3e647a1a2df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name of the file currently being operated on. <br /></td></tr>
 <tr class="separator:a4b0b7a97ba2264f02459a3e647a1a2df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c696f37e4ee08f632fc1913c22e6ebc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c696f37e4ee08f632fc1913c22e6ebc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a4c696f37e4ee08f632fc1913c22e6ebc">SetErrorCode</a> (unsigned long e)</td></tr>
-<tr class="memdesc:a4c696f37e4ee08f632fc1913c22e6ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the error code. <br /></td></tr>
-<tr class="separator:a4c696f37e4ee08f632fc1913c22e6ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e3cdc2e65b54da949e049b82bc51fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47e3cdc2e65b54da949e049b82bc51fd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a47e3cdc2e65b54da949e049b82bc51fd">SetErrorCode</a> (unsigned long e) override</td></tr>
+<tr class="memdesc:a47e3cdc2e65b54da949e049b82bc51fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the error code. <br /></td></tr>
+<tr class="separator:a47e3cdc2e65b54da949e049b82bc51fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b07b94e194d1373a0d3aebc14759b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_directory.html#a97b07b94e194d1373a0d3aebc14759b1">ProcessDirectoryFile</a> (const char *dirname, <a class="el" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a> *meta)</td></tr>
 <tr class="memdesc:a97b07b94e194d1373a0d3aebc14759b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all of the series listed in a DICOMDIR file.  <a href="#a97b07b94e194d1373a0d3aebc14759b1">More...</a><br /></td></tr>
 <tr class="separator:a97b07b94e194d1373a0d3aebc14759b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -794,6 +809,9 @@ vtkStringArray *&#160;</td><td class="memItemRight" valign="bottom"><b>InputFile
 <tr class="memitem:aac03f6e005dcc0a305118a7880216e95"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac03f6e005dcc0a305118a7880216e95"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>FilePattern</b></td></tr>
 <tr class="separator:aac03f6e005dcc0a305118a7880216e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ee343b6badcd9b17eef2e1efeeaa31"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91ee343b6badcd9b17eef2e1efeeaa31"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>QueryFiles</b></td></tr>
+<tr class="separator:a91ee343b6badcd9b17eef2e1efeeaa31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a426c7c1f0f4442a90c84876162ec9dac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a426c7c1f0f4442a90c84876162ec9dac"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>IgnoreDicomdir</b></td></tr>
 <tr class="separator:a426c7c1f0f4442a90c84876162ec9dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1096,7 +1114,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 
 </div>
 </div>
-<a class="anchor" id="a891fe222fbbe15bb5c252050dc6120b1"></a>
+<a class="anchor" id="a958bc5a3bcef14f5888e62e7d87371e6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1123,7 +1141,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1319,6 +1337,32 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 
 </div>
 </div>
+<a class="anchor" id="a304896e3d6fee0ef842b6facd5f98d7a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vtkDICOMDirectory::SetQueryFilesToAlways </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set when to query the files, rather than just the DICOMDIR index. </p>
+<p>If a DICOMDIR file is present, the default behavior is to only query the other files in the directory if the Query contains elements that cannot be elucidated from the DICOMDIR file. For Always, the data returned by <a class="el" href="classvtk_d_i_c_o_m_directory.html#a5f3ef401f853ef95944e9a7aba42e37c" title="Get the meta data for a specific series. ">GetMetaDataForSeries()</a> will always be data from the file, not the DICOMDIR (though the data returned by <a class="el" href="classvtk_d_i_c_o_m_directory.html#ad4bcc4d2b12d5cd5dfa3a9f5aae38e4e" title="Get the directory attributes for a series. ">GetSeriesRecord()</a> etc. will be from DICOMDIR). For Never, the files will never be scanned if a DICOMDIR is present, which means that any Query that is applied can only check attributes that are present in the DICOMDIR. </p>
+
+</div>
+</div>
 <a class="anchor" id="ab3d8f61dadcd4fd2793a8efb1527cb81"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1400,7 +1444,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 
 </div>
 </div>
-<a class="anchor" id="a324431095b4d4a35dde70919440542e8"></a>
+<a class="anchor" id="aa04ef8987de235496da3e5281666cfee"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1416,7 +1460,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1434,7 +1478,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 23 2017 22:21:00 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 2 2017 20:09:31 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

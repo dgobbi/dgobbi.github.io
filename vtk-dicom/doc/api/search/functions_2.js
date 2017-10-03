@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['canreadfile',['CanReadFile',['../classvtk_d_i_c_o_m_reader.html#ab5554749a8f35c1e74bfccf1337d8571',1,'vtkDICOMReader::CanReadFile()'],['../classvtk_n_i_f_t_i_reader.html#ac678b4c3d8a3ef5b6341c7483c29d10d',1,'vtkNIFTIReader::CanReadFile()'],['../classvtk_scanco_c_t_reader.html#a96ea55c4d2cdd0908de9505185a91e25',1,'vtkScancoCTReader::CanReadFile()'],['../classvtk_image_reader2.html#a29feeda76e5434e29936935015bb9d08',1,'vtkImageReader2::CanReadFile()']]],
+  ['canreadfile',['CanReadFile',['../classvtk_d_i_c_o_m_reader.html#a3a0544ca0a182ef04646e9537ffcf802',1,'vtkDICOMReader::CanReadFile()'],['../classvtk_n_i_f_t_i_reader.html#a658cb41453ff85c6ce35eefc3469141e',1,'vtkNIFTIReader::CanReadFile()'],['../classvtk_scanco_c_t_reader.html#aef4db65e3273e3201d911d733e5edc1e',1,'vtkScancoCTReader::CanReadFile()'],['../classvtk_image_reader2.html#a29feeda76e5434e29936935015bb9d08',1,'vtkImageReader2::CanReadFile()']]],
   ['casefoldedutf8',['CaseFoldedUTF8',['../classvtk_d_i_c_o_m_character_set.html#ac7013877ffdfbefdc96eba999a6c7f38',1,'vtkDICOMCharacterSet']]],
   ['checkanalyzeheader',['CheckAnalyzeHeader',['../classvtk_n_i_f_t_i_reader.html#ac3ad5bafc20f0045a65238aea33e6eb5',1,'vtkNIFTIReader']]],
   ['checkextension',['CheckExtension',['../classvtk_n_i_f_t_i_reader.html#ae646212c9b9e174d7dcac50e639e0d6a',1,'vtkNIFTIReader']]],

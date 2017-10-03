@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.5</span>
+   &#160;<span id="projectnumber">0.8.6</span>
    </div>
   </td>
  </tr>
@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifndef vtkNIFTIReader_h</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define vtkNIFTIReader_h</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;vtkImageReader2.h&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;vtkImageReader2.h&quot;</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span> <span class="comment">// For export macro</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span><a class="code" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a>;</div>
@@ -133,7 +133,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_image_reader2.html#a2846943a7802b3a62df51e0936542abb">GetFileExtensions</a>() VTK_OVERRIDE {</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;.nii .nii.gz .img .img.gz .hdr .hdr.gz&quot;</span>; }</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_image_reader2.html#ae83ebabf18c670a314bb32eb50371f61">GetDescriptiveName</a>() VTK_OVERRIDE {</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classvtk_n_i_f_t_i_reader.html#ada6210c4c7b7d229ddd542d2536f3211">   68</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_n_i_f_t_i_reader.html#ada6210c4c7b7d229ddd542d2536f3211">GetDescriptiveName</a>() VTK_OVERRIDE {</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;NIfTI&quot;</span>; }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_image_reader2.html#a29feeda76e5434e29936935015bb9d08">CanReadFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename) VTK_OVERRIDE;</div>
@@ -142,7 +142,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_image_reader2.html#a2846943a7802b3a62df51e0936542abb">GetFileExtensions</a>() {</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;.nii .nii.gz .img .img.gz .hdr .hdr.gz&quot;</span>; }</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classvtk_n_i_f_t_i_reader.html#a1a54e8047dc29c8685c0b1481c56d85c">   81</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_n_i_f_t_i_reader.html#a1a54e8047dc29c8685c0b1481c56d85c">GetDescriptiveName</a>() {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classvtk_image_reader2.html#ae83ebabf18c670a314bb32eb50371f61">GetDescriptiveName</a>() {</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;NIfTI&quot;</span>; }</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classvtk_image_reader2.html#a29feeda76e5434e29936935015bb9d08">CanReadFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
@@ -250,7 +250,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classvtk_image_algorithm_html_addc9f91ebe9386c31617c3e12166e10e"><div class="ttname"><a href="classvtk_image_algorithm.html#addc9f91ebe9386c31617c3e12166e10e">vtkImageAlgorithm::RequestData</a></div><div class="ttdeci">virtual int RequestData(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector)</div></div>
 <div class="ttc" id="classvtk_n_i_f_t_i_header_html"><div class="ttname"><a href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a></div><div class="ttdoc">Store NIfTI header information. </div><div class="ttdef"><b>Definition:</b> vtkNIFTIHeader.h:46</div></div>
 <div class="ttc" id="classvtk_n_i_f_t_i_reader_html_af801b19bd3485aa90fe57ce8aa801433"><div class="ttname"><a href="classvtk_n_i_f_t_i_reader.html#af801b19bd3485aa90fe57ce8aa801433">vtkNIFTIReader::TimeAsVector</a></div><div class="ttdeci">int TimeAsVector</div><div class="ttdoc">Read the time dimension as if it was a vector dimension. </div><div class="ttdef"><b>Definition:</b> vtkNIFTIReader.h:235</div></div>
-<div class="ttc" id="classvtk_n_i_f_t_i_reader_html_a1a54e8047dc29c8685c0b1481c56d85c"><div class="ttname"><a href="classvtk_n_i_f_t_i_reader.html#a1a54e8047dc29c8685c0b1481c56d85c">vtkNIFTIReader::GetDescriptiveName</a></div><div class="ttdeci">const char * GetDescriptiveName()</div><div class="ttdoc">Return a descriptive name that might be useful in a GUI. </div><div class="ttdef"><b>Definition:</b> vtkNIFTIReader.h:81</div></div>
+<div class="ttc" id="classvtk_n_i_f_t_i_reader_html_ada6210c4c7b7d229ddd542d2536f3211"><div class="ttname"><a href="classvtk_n_i_f_t_i_reader.html#ada6210c4c7b7d229ddd542d2536f3211">vtkNIFTIReader::GetDescriptiveName</a></div><div class="ttdeci">const char * GetDescriptiveName() override</div><div class="ttdoc">Return a descriptive name that might be useful in a GUI. </div><div class="ttdef"><b>Definition:</b> vtkNIFTIReader.h:68</div></div>
 <div class="ttc" id="classvtk_n_i_f_t_i_reader_html_a6ac16e7ca664499d386fda231fd004b5"><div class="ttname"><a href="classvtk_n_i_f_t_i_reader.html#a6ac16e7ca664499d386fda231fd004b5">vtkNIFTIReader::QFac</a></div><div class="ttdeci">double QFac</div><div class="ttdoc">Set to -1 when VTK slice order is opposite to NIFTI slice order. </div><div class="ttdef"><b>Definition:</b> vtkNIFTIReader.h:242</div></div>
 <div class="ttc" id="classvtk_n_i_f_t_i_reader_html_af2a9341ab7c929dcab4616dd0ea5dd9f"><div class="ttname"><a href="classvtk_n_i_f_t_i_reader.html#af2a9341ab7c929dcab4616dd0ea5dd9f">vtkNIFTIReader::GetSFormMatrix</a></div><div class="ttdeci">vtkMatrix4x4 * GetSFormMatrix()</div><div class="ttdoc">Get a matrix that gives the "sform" orientation and offset for the data. </div><div class="ttdef"><b>Definition:</b> vtkNIFTIReader.h:176</div></div>
 <div class="ttc" id="classvtk_image_reader2_html_ae83ebabf18c670a314bb32eb50371f61"><div class="ttname"><a href="classvtk_image_reader2.html#ae83ebabf18c670a314bb32eb50371f61">vtkImageReader2::GetDescriptiveName</a></div><div class="ttdeci">virtual const char * GetDescriptiveName()</div><div class="ttdef"><b>Definition:</b> vtkImageReader2.h:240</div></div>
@@ -260,7 +260,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 23 2017 22:20:57 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 2 2017 20:09:27 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.5</span>
+   &#160;<span id="projectnumber">0.8.6</span>
    </div>
   </td>
  </tr>
@@ -86,6 +86,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classvtk_d_i_c_o_m_utilities-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -110,6 +112,10 @@ Inheritance diagram for vtkDICOMUtilities:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ad9e2475e8fa0b143b9903b7ae159db20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9e2475e8fa0b143b9903b7ae159db20"></a>
+static long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#ad9e2475e8fa0b143b9903b7ae159db20">GetUTC</a> (long long *offset)</td></tr>
+<tr class="memdesc:ad9e2475e8fa0b143b9903b7ae159db20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deprecated method, do not use. <br /></td></tr>
+<tr class="separator:ad9e2475e8fa0b143b9903b7ae159db20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a72df4ba84aa87c437f9a32f3240a9cd4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a72df4ba84aa87c437f9a32f3240a9cd4">SetUIDPrefix</a> (const char *prefix)</td></tr>
 <tr class="memdesc:a72df4ba84aa87c437f9a32f3240a9cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a UID prefix to use when generating UIDs.  <a href="#a72df4ba84aa87c437f9a32f3240a9cd4">More...</a><br /></td></tr>
@@ -139,9 +145,9 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <tr class="memitem:a127e5cb8469ba6c9ebcbb46d6123d509"><td class="memItemLeft" align="right" valign="top">static long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a127e5cb8469ba6c9ebcbb46d6123d509">ConvertDateTime</a> (const char *datetime)</td></tr>
 <tr class="memdesc:a127e5cb8469ba6c9ebcbb46d6123d509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a DICOM data time string into a long integer.  <a href="#a127e5cb8469ba6c9ebcbb46d6123d509">More...</a><br /></td></tr>
 <tr class="separator:a127e5cb8469ba6c9ebcbb46d6123d509"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9e2475e8fa0b143b9903b7ae159db20"><td class="memItemLeft" align="right" valign="top">static long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#ad9e2475e8fa0b143b9903b7ae159db20">GetUTC</a> (long long *offset)</td></tr>
-<tr class="memdesc:ad9e2475e8fa0b143b9903b7ae159db20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current UTC time in microseconds and an offset to localtime.  <a href="#ad9e2475e8fa0b143b9903b7ae159db20">More...</a><br /></td></tr>
-<tr class="separator:ad9e2475e8fa0b143b9903b7ae159db20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac78bda4fddbf738fbf79006bcdac5cf"><td class="memItemLeft" align="right" valign="top">static long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#aac78bda4fddbf738fbf79006bcdac5cf">GetUniversalTime</a> ()</td></tr>
+<tr class="memdesc:aac78bda4fddbf738fbf79006bcdac5cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current time in microseconds.  <a href="#aac78bda4fddbf738fbf79006bcdac5cf">More...</a><br /></td></tr>
+<tr class="separator:aac78bda4fddbf738fbf79006bcdac5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a64dd7b8583e564152067a70325c041a6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a64dd7b8583e564152067a70325c041a6">IsDICOMFile</a> (const char *filename)</td></tr>
 <tr class="memdesc:a64dd7b8583e564152067a70325c041a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the specified file is a DICOM file.  <a href="#a64dd7b8583e564152067a70325c041a6">More...</a><br /></td></tr>
@@ -204,6 +210,12 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalWarnin
 <tr class="memitem:a1ad146652efe695e9ace7bc29b3e0f74 inherit pub_static_methods_classvtk_object_base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvtk_object_base.html">vtkObjectBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_object_base.html#a1ad146652efe695e9ace7bc29b3e0f74">New</a> ()</td></tr>
 <tr class="separator:a1ad146652efe695e9ace7bc29b3e0f74 inherit pub_static_methods_classvtk_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a461fa1aba73125457553d9181090518a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a461fa1aba73125457553d9181090518a"></a>
+static long long&#160;</td><td class="memItemRight" valign="bottom"><b>GetLocalOffset</b> (long long t)</td></tr>
+<tr class="separator:a461fa1aba73125457553d9181090518a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
 <tr class="memitem:a091ee885ffe2d5e265a173e92b9ac94b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a091ee885ffe2d5e265a173e92b9ac94b"></a>
@@ -228,10 +240,10 @@ static <a class="el" href="classvtk_d_i_c_o_m_utilities.html">vtkDICOMUtilities<
 <tr class="separator:a09e4b169ca2c12c398d4c925899de667"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7afbc11cddb6de14840d499ec9f64de2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a7afbc11cddb6de14840d499ec9f64de2">IsA</a> (const char *type)</td></tr>
 <tr class="separator:a7afbc11cddb6de14840d499ec9f64de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c0178519124e6426fb2f643a26e7dba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c0178519124e6426fb2f643a26e7dba"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a1c0178519124e6426fb2f643a26e7dba">PrintSelf</a> (ostream &amp;os, vtkIndent indent)</td></tr>
-<tr class="memdesc:a1c0178519124e6426fb2f643a26e7dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a summary of the contents of this object. <br /></td></tr>
-<tr class="separator:a1c0178519124e6426fb2f643a26e7dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf9046a6cc0015573df33fee93c8ce9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf9046a6cc0015573df33fee93c8ce9a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#aaf9046a6cc0015573df33fee93c8ce9a">PrintSelf</a> (ostream &amp;os, vtkIndent indent) override</td></tr>
+<tr class="memdesc:aaf9046a6cc0015573df33fee93c8ce9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a summary of the contents of this object. <br /></td></tr>
+<tr class="separator:aaf9046a6cc0015573df33fee93c8ce9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d1efbf622e2b2c28a3182176e919d4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d1efbf622e2b2c28a3182176e919d4f"></a>
 static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a5d1efbf622e2b2c28a3182176e919d4f">GetUIDName</a> (const char *uid)</td></tr>
 <tr class="memdesc:a5d1efbf622e2b2c28a3182176e919d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name associated with the given UID. <br /></td></tr>
@@ -517,7 +529,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 
 </div>
 </div>
-<a class="anchor" id="ad9e2475e8fa0b143b9903b7ae159db20"></a>
+<a class="anchor" id="aac78bda4fddbf738fbf79006bcdac5cf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -525,10 +537,9 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static long long vtkDICOMUtilities::GetUTC </td>
+          <td class="memname">static long long vtkDICOMUtilities::GetUniversalTime </td>
           <td>(</td>
-          <td class="paramtype">long long *&#160;</td>
-          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -539,8 +550,8 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 </table>
 </div><div class="memdoc">
 
-<p>Get the current UTC time in microseconds and an offset to localtime. </p>
-<p>The time is in microseconds since the UNIX epoch (00:00:00 UTC on 1 Jan 1970). The offset can be added to the returned UTC time in order to get the local time. If you do not need the offset, you can pass a null pointer. </p>
+<p>Get the current time in microseconds. </p>
+<p>The time is in microseconds since the UNIX epoch (00:00:00 UTC on 1 Jan 1970). </p>
 
 </div>
 </div>
@@ -786,7 +797,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 23 2017 22:21:04 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 2 2017 20:09:34 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
