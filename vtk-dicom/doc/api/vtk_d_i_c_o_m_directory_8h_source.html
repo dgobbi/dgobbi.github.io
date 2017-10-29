@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.6</span>
+   &#160;<span id="projectnumber">0.8.7</span>
    </div>
   </td>
  </tr>
@@ -328,40 +328,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a>&amp;) VTK_DELETE_FUNCTION;</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  <span class="keywordtype">void</span> operator=(const <a class="code" href="classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a>&amp;);</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a>&amp;);</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  <span class="keyword">struct </span>SeriesItem;</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="keyword">struct </span>StudyItem;</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  <span class="keyword">struct </span>PatientItem;</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  <span class="keyword">class </span>SeriesVector;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  <span class="keyword">class </span>StudyVector;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  <span class="keyword">class </span>PatientVector;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  <span class="keyword">struct </span>FileInfo;</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <span class="keyword">struct </span>SeriesInfo;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="keyword">class </span>SeriesInfoList;</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  <span class="keyword">class </span>VisitedVector;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *Query;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  <span class="keywordtype">int</span> FindLevel;</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  SeriesVector *Series;</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  StudyVector *Studies;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  PatientVector *Patients;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  VisitedVector *Visited;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  <span class="keywordtype">char</span> *FileSetID;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  <span class="keywordtype">bool</span> UsingOsirixDatabase;</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *CurrentPatientRecord;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *CurrentStudyRecord;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *CurrentSeriesRecord;</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *CurrentImageRecord;</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> CompareInstance(<span class="keyword">const</span> FileInfo &amp;fi1, <span class="keyword">const</span> FileInfo &amp;fi2);</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;};</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="preprocessor">#elif __cplusplus &gt;= 201103L</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a>&amp;);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a>&amp;);</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  <span class="keyword">struct </span>SeriesItem;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  <span class="keyword">struct </span>StudyItem;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  <span class="keyword">struct </span>PatientItem;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  <span class="keyword">class </span>SeriesVector;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <span class="keyword">class </span>StudyVector;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="keyword">class </span>PatientVector;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  <span class="keyword">struct </span>FileInfo;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  <span class="keyword">struct </span>SeriesInfo;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  <span class="keyword">class </span>SeriesInfoList;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  <span class="keyword">class </span>VisitedVector;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *Query;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  <span class="keywordtype">int</span> FindLevel;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  SeriesVector *Series;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  StudyVector *Studies;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  PatientVector *Patients;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  VisitedVector *Visited;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  <span class="keywordtype">char</span> *FileSetID;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <span class="keywordtype">bool</span> UsingOsirixDatabase;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *CurrentPatientRecord;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *CurrentStudyRecord;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *CurrentSeriesRecord;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  <span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_item.html">vtkDICOMItem</a> *CurrentImageRecord;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> CompareInstance(<span class="keyword">const</span> FileInfo &amp;fi1, <span class="keyword">const</span> FileInfo &amp;fi2);</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;};</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_directory_html_a304896e3d6fee0ef842b6facd5f98d7a"><div class="ttname"><a href="classvtk_d_i_c_o_m_directory.html#a304896e3d6fee0ef842b6facd5f98d7a">vtkDICOMDirectory::SetQueryFilesToAlways</a></div><div class="ttdeci">void SetQueryFilesToAlways()</div><div class="ttdoc">Set when to query the files, rather than just the DICOMDIR index. </div><div class="ttdef"><b>Definition:</b> vtkDICOMDirectory.h:211</div></div>
 <div class="ttc" id="classvtk_algorithm_html"><div class="ttname"><a href="classvtk_algorithm.html">vtkAlgorithm</a></div><div class="ttdoc">Superclass for all sources, filters, and sinks in VTK. </div><div class="ttdef"><b>Definition:</b> vtkAlgorithm.h:50</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_directory_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_directory.html">vtkDICOMDirectory</a></div><div class="ttdoc">Get information about all DICOM files within a directory. </div><div class="ttdef"><b>Definition:</b> vtkDICOMDirectory.h:34</div></div>
@@ -378,7 +381,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 2 2017 20:09:27 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 28 2017 22:41:39 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.6</span>
+   &#160;<span id="projectnumber">0.8.7</span>
    </div>
   </td>
  </tr>
@@ -231,13 +231,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <a class="code" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>&amp;) VTK_DELETE_FUNCTION;</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordtype">void</span> operator=(const <a class="code" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <a class="code" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>&amp;);</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>&amp;);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;};</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">#endif // vtkNIFTIReader_h</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">#elif __cplusplus &gt;= 201103L</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <a class="code" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <a class="code" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>&amp;);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_reader.html">vtkNIFTIReader</a>&amp;);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;};</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">#endif // vtkNIFTIReader_h</span></div>
 <div class="ttc" id="classvtk_n_i_f_t_i_reader_html_a78bd8ca621289c27a948573f282fdfc3"><div class="ttname"><a href="classvtk_n_i_f_t_i_reader.html#a78bd8ca621289c27a948573f282fdfc3">vtkNIFTIReader::PlanarRGB</a></div><div class="ttdeci">bool PlanarRGB</div><div class="ttdoc">Use planar RGB instead of the default (packed). </div><div class="ttdef"><b>Definition:</b> vtkNIFTIReader.h:258</div></div>
 <div class="ttc" id="classvtk_image_reader2_html_a2846943a7802b3a62df51e0936542abb"><div class="ttname"><a href="classvtk_image_reader2.html#a2846943a7802b3a62df51e0936542abb">vtkImageReader2::GetFileExtensions</a></div><div class="ttdeci">virtual const char * GetFileExtensions()</div><div class="ttdef"><b>Definition:</b> vtkImageReader2.h:233</div></div>
 <div class="ttc" id="classvtk_n_i_f_t_i_reader_html_a57b806c8cd0c924db8f0c1aa518c1f23"><div class="ttname"><a href="classvtk_n_i_f_t_i_reader.html#a57b806c8cd0c924db8f0c1aa518c1f23">vtkNIFTIReader::NIFTIHeader</a></div><div class="ttdeci">vtkNIFTIHeader * NIFTIHeader</div><div class="ttdoc">A copy of the header from the file that was most recently read. </div><div class="ttdef"><b>Definition:</b> vtkNIFTIReader.h:255</div></div>
@@ -260,7 +263,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 2 2017 20:09:27 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 28 2017 22:41:39 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

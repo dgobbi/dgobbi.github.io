@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.6</span>
+   &#160;<span id="projectnumber">0.8.7</span>
    </div>
   </td>
  </tr>
@@ -182,6 +182,10 @@ static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#ab529b9919e14784c5fc744972b15f288">PatternMatches</a> (const char *pattern, size_t pl, const char *val, size_t vl)</td></tr>
 <tr class="memdesc:ab529b9919e14784c5fc744972b15f288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match patterns on non-terminated strings. <br /></td></tr>
 <tr class="separator:ab529b9919e14784c5fc744972b15f288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a17e6d8ada86047cededdac4500793226"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtk_d_i_c_o_m_utilities.html#a17e6d8ada86047cededdac4500793226">IsValidUTF8</a> (const char *text, size_t l)</td></tr>
+<tr class="memdesc:a17e6d8ada86047cededdac4500793226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that a string is valid utf-8.  <a href="#a17e6d8ada86047cededdac4500793226">More...</a><br /></td></tr>
+<tr class="separator:a17e6d8ada86047cededdac4500793226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classvtk_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classvtk_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classvtk_object.html">vtkObject</a></td></tr>
 <tr class="memitem:ae9548a248bce0f02f73bbcccd0a9489e inherit pub_static_methods_classvtk_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9548a248bce0f02f73bbcccd0a9489e"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><b>IsTypeOf</b> (const char *type)</td></tr>
@@ -609,6 +613,43 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 
 </div>
 </div>
+<a class="anchor" id="a17e6d8ada86047cededdac4500793226"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool vtkDICOMUtilities::IsValidUTF8 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>l</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check that a string is valid utf-8. </p>
+<p>The string is valid if it contains no NULL bytes and if it contains only valid 1-byte, 2-byte, 3-byte, or 4-byte utf-8 sequences. Any overlength sequences or sequences that encode values above U+10FFFF or between U+D800 and U+DFFF are considered invalid. </p>
+
+</div>
+</div>
 <a class="anchor" id="a43acf23027f948bb0e1d64c8c6657a08"></a>
 <div class="memitem">
 <div class="memproto">
@@ -797,7 +838,7 @@ vtkWeakPointerBase **&#160;</td><td class="memItemRight" valign="bottom"><b>Weak
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 2 2017 20:09:34 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 28 2017 22:41:46 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

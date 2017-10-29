@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.6</span>
+   &#160;<span id="projectnumber">0.8.7</span>
    </div>
   </td>
  </tr>
@@ -294,13 +294,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;) VTK_DELETE_FUNCTION;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="keywordtype">void</span> operator=(const <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;);</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;};</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="preprocessor">#endif // vtkScancoCTReader_h</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">#elif __cplusplus &gt;= 201103L</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_scanco_c_t_reader.html">vtkScancoCTReader</a>&amp;);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;};</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">#endif // vtkScancoCTReader_h</span></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_ab4b7e1ca6196cc567fae7fd02cf78d99"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#ab4b7e1ca6196cc567fae7fd02cf78d99">vtkScancoCTReader::GetMeasurementIndex</a></div><div class="ttdeci">int GetMeasurementIndex()</div><div class="ttdoc">Get the index measurement. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:139</div></div>
 <div class="ttc" id="classvtk_scanco_c_t_reader_html_a33d8764421cd388eb6a611b8e0c02b14"><div class="ttname"><a href="classvtk_scanco_c_t_reader.html#a33d8764421cd388eb6a611b8e0c02b14">vtkScancoCTReader::GetScannerType</a></div><div class="ttdeci">int GetScannerType()</div><div class="ttdoc">Get the scanner type, as an integer code. </div><div class="ttdef"><b>Definition:</b> vtkScancoCTReader.h:133</div></div>
 <div class="ttc" id="classvtk_image_reader2_html_a2846943a7802b3a62df51e0936542abb"><div class="ttname"><a href="classvtk_image_reader2.html#a2846943a7802b3a62df51e0936542abb">vtkImageReader2::GetFileExtensions</a></div><div class="ttdeci">virtual const char * GetFileExtensions()</div><div class="ttdef"><b>Definition:</b> vtkImageReader2.h:233</div></div>
@@ -340,7 +343,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 2 2017 20:09:28 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 28 2017 22:41:39 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

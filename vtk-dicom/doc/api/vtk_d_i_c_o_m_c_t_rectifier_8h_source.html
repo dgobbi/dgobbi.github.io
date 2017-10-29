@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.6</span>
+   &#160;<span id="projectnumber">0.8.7</span>
    </div>
   </td>
  </tr>
@@ -197,13 +197,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a>&amp;) VTK_DELETE_FUNCTION;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">void</span> operator=(const <a class="code" href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a>&amp;);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a>&amp;);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;};</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#endif // vtkDICOMCTRectifier_h</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">#elif __cplusplus &gt;= 201103L</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a>&amp;);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a>&amp;);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;};</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#endif // vtkDICOMCTRectifier_h</span></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_c_t_rectifier_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_c_t_rectifier.html">vtkDICOMCTRectifier</a></div><div class="ttdoc">Prepare a CT for 3D processing. </div><div class="ttdef"><b>Definition:</b> vtkDICOMCTRectifier.h:32</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_algorithm_html_a63215da6960b194fd8db87fdc1d5fb2e"><div class="ttname"><a href="classvtk_d_i_c_o_m_algorithm.html#a63215da6960b194fd8db87fdc1d5fb2e">vtkDICOMAlgorithm::ThreadedRequestData</a></div><div class="ttdeci">void ThreadedRequestData(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector, vtkImageData ***inData, vtkImageData **outData, int ext[6], int id) override</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_algorithm_html_a67feb0a36921e0e57effec0400b8c350"><div class="ttname"><a href="classvtk_d_i_c_o_m_algorithm.html#a67feb0a36921e0e57effec0400b8c350">vtkDICOMAlgorithm::PrintSelf</a></div><div class="ttdeci">void PrintSelf(ostream &amp;os, vtkIndent indent) override</div><div class="ttdoc">Print information about this object. </div></div>
@@ -214,7 +217,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 2 2017 20:09:27 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 28 2017 22:41:39 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

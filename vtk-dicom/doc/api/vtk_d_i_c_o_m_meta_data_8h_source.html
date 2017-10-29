@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.6</span>
+   &#160;<span id="projectnumber">0.8.7</span>
    </div>
   </td>
  </tr>
@@ -316,13 +316,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>&amp;) VTK_DELETE_FUNCTION;</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  <span class="keywordtype">void</span> operator=(const <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>&amp;);</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>&amp;);</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;};</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMMetaData_h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="preprocessor">#elif __cplusplus &gt;= 201103L</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>&amp;);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a>&amp;);</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;};</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMMetaData_h */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_meta_data_html_ae075ebd9b64eac1099dd3689a9c9e6a0"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data.html#ae075ebd9b64eac1099dd3689a9c9e6a0">vtkDICOMMetaData::Begin</a></div><div class="ttdeci">vtkDICOMDataElementIterator Begin()</div><div class="ttdoc">Get an iterator for the list of data elements. </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaData.h:79</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_meta_data_html_a82a038e0770cf0e3b65a0d8e6d85c5dc"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data.html#a82a038e0770cf0e3b65a0d8e6d85c5dc">vtkDICOMMetaData::Find</a></div><div class="ttdeci">vtkDICOMDataElementIterator Find(vtkDICOMTag tag)</div><div class="ttdoc">Get the iterator for a specific data element. </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaData.h:92</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_meta_data_html_ae1c81ebbc7da3d84adafebf0ed43f549"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data.html#ae1c81ebbc7da3d84adafebf0ed43f549">vtkDICOMMetaData::GetNumberOfInstances</a></div><div class="ttdeci">int GetNumberOfInstances()</div><div class="ttdoc">Get the number of instances (i.e. files). </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaData.h:57</div></div>
@@ -343,7 +346,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 2 2017 20:09:27 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 28 2017 22:41:39 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

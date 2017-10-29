@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.6</span>
+   &#160;<span id="projectnumber">0.8.7</span>
    </div>
   </td>
  </tr>
@@ -206,13 +206,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>&amp;) VTK_DELETE_FUNCTION;</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordtype">void</span> operator=(const <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>&amp;);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>&amp;);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;};</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">#elif __cplusplus &gt;= 201103L</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>&amp;);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_slice_sorter.html">vtkDICOMSliceSorter</a>&amp;);</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;};</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classvtk_object_html_a4d5b227267c076d6f9e38483370b6612"><div class="ttname"><a href="classvtk_object.html#a4d5b227267c076d6f9e38483370b6612">vtkObject::New</a></div><div class="ttdeci">static vtkObject * New()</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_slice_sorter_html_a21f64d6026ec81ee7cb3d1e959b35f95"><div class="ttname"><a href="classvtk_d_i_c_o_m_slice_sorter.html#a21f64d6026ec81ee7cb3d1e959b35f95">vtkDICOMSliceSorter::GetFrameIndexArray</a></div><div class="ttdeci">vtkIntArray * GetFrameIndexArray()</div><div class="ttdoc">Get an array that converts slice index to frame index. </div><div class="ttdef"><b>Definition:</b> vtkDICOMSliceSorter.h:78</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_slice_sorter_html_ab97a628f6df50a71422cfaa1b797f998"><div class="ttname"><a href="classvtk_d_i_c_o_m_slice_sorter.html#ab97a628f6df50a71422cfaa1b797f998">vtkDICOMSliceSorter::GetFileIndexArray</a></div><div class="ttdeci">vtkIntArray * GetFileIndexArray()</div><div class="ttdoc">Get an array that converts slice index to input file index. </div><div class="ttdef"><b>Definition:</b> vtkDICOMSliceSorter.h:69</div></div>
@@ -224,7 +227,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 2 2017 20:09:27 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 28 2017 22:41:39 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.6</span>
+   &#160;<span id="projectnumber">0.8.7</span>
    </div>
   </td>
  </tr>
@@ -182,13 +182,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>&amp;) VTK_DELETE_FUNCTION;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>&amp;);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>&amp;);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif // vtkDICOMAlgorithm_h</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#elif __cplusplus &gt;= 201103L</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>&amp;);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_algorithm.html">vtkDICOMAlgorithm</a>&amp;);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;};</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#endif // vtkDICOMAlgorithm_h</span></div>
 <div class="ttc" id="classvtk_threaded_image_algorithm_html"><div class="ttname"><a href="classvtk_threaded_image_algorithm.html">vtkThreadedImageAlgorithm</a></div><div class="ttdoc">Generic filter that has one input.. </div><div class="ttdef"><b>Definition:</b> vtkThreadedImageAlgorithm.h:35</div></div>
 <div class="ttc" id="classvtk_threaded_image_algorithm_html_a53dc14a03ab6cffae0ca5cadb2c6d172"><div class="ttname"><a href="classvtk_threaded_image_algorithm.html#a53dc14a03ab6cffae0ca5cadb2c6d172">vtkThreadedImageAlgorithm::PrintSelf</a></div><div class="ttdeci">void PrintSelf(ostream &amp;os, vtkIndent indent)</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_meta_data_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></div><div class="ttdoc">A container class for DICOM metadata. </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaData.h:32</div></div>
@@ -200,7 +203,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 2 2017 20:09:27 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 28 2017 22:41:39 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.6</span>
+   &#160;<span id="projectnumber">0.8.7</span>
    </div>
   </td>
  </tr>
@@ -382,13 +382,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  <a class="code" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a>&amp;) VTK_DELETE_FUNCTION;</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  <span class="keywordtype">void</span> operator=(const <a class="code" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <a class="code" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a>&amp;);</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a>&amp;);</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;};</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="preprocessor">#endif // vtkNIFTIHeader_h</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="preprocessor">#elif __cplusplus &gt;= 201103L</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <a class="code" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  <a class="code" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a>(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a>&amp;);</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_n_i_f_t_i_header.html">vtkNIFTIHeader</a>&amp;);</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;};</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;<span class="preprocessor">#endif // vtkNIFTIHeader_h</span></div>
 <div class="ttc" id="classvtk_n_i_f_t_i_header_html_ab0da525aa073b93f115b122f3cf866e0"><div class="ttname"><a href="classvtk_n_i_f_t_i_header.html#ab0da525aa073b93f115b122f3cf866e0">vtkNIFTIHeader::UnitsXYZTEnum</a></div><div class="ttdeci">UnitsXYZTEnum</div><div class="ttdoc">NIFTI unit codes. </div><div class="ttdef"><b>Definition:</b> vtkNIFTIHeader.h:115</div></div>
 <div class="ttc" id="classvtk_object_html_a4d5b227267c076d6f9e38483370b6612"><div class="ttname"><a href="classvtk_object.html#a4d5b227267c076d6f9e38483370b6612">vtkObject::New</a></div><div class="ttdeci">static vtkObject * New()</div></div>
 <div class="ttc" id="classvtk_n_i_f_t_i_header_html_ac5f1c07b4d1987714ab04b36cbfcaa99"><div class="ttname"><a href="classvtk_n_i_f_t_i_header.html#ac5f1c07b4d1987714ab04b36cbfcaa99">vtkNIFTIHeader::SliceCodeEnum</a></div><div class="ttdeci">SliceCodeEnum</div><div class="ttdoc">NIFTI slice codes. </div><div class="ttdef"><b>Definition:</b> vtkNIFTIHeader.h:104</div></div>
@@ -407,7 +410,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 2 2017 20:09:27 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 28 2017 22:41:39 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

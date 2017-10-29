@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.6</span>
+   &#160;<span id="projectnumber">0.8.7</span>
    </div>
   </td>
  </tr>
@@ -143,13 +143,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#ifdef VTK_DELETE_FUNCTION</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>&amp;) VTK_DELETE_FUNCTION;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>&amp;) VTK_DELETE_FUNCTION;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>&amp;);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>&amp;);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif // vtkDICOMLookupTable_h</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#elif __cplusplus &gt;= 201103L</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>&amp;);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a>&amp;);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif // vtkDICOMLookupTable_h</span></div>
 <div class="ttc" id="classvtk_lookup_table_html_a1eea7c622851eac321b3b6bc4e7adb77"><div class="ttname"><a href="classvtk_lookup_table.html#a1eea7c622851eac321b3b6bc4e7adb77">vtkLookupTable::New</a></div><div class="ttdeci">static vtkLookupTable * New()</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_meta_data_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_meta_data.html">vtkDICOMMetaData</a></div><div class="ttdoc">A container class for DICOM metadata. </div><div class="ttdef"><b>Definition:</b> vtkDICOMMetaData.h:32</div></div>
 <div class="ttc" id="classvtk_d_i_c_o_m_lookup_table_html"><div class="ttname"><a href="classvtk_d_i_c_o_m_lookup_table.html">vtkDICOMLookupTable</a></div><div class="ttdoc">Lookup tables from DICOM data. </div><div class="ttdef"><b>Definition:</b> vtkDICOMLookupTable.h:32</div></div>
@@ -158,7 +161,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 2 2017 20:09:27 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 28 2017 22:41:39 for vtk-dicom by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
