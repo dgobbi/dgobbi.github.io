@@ -1,0 +1,8 @@
+<map id="vtkDICOMCompiler" name="vtkDICOMCompiler">
+<area shape="rect" id="node1" title="A writer for DICOM meta data." alt="" coords="113,171,260,197"/>
+<area shape="rect" id="node2" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="21,81,107,108"/>
+<area shape="rect" id="node3" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node4" href="$classvtkDICOMFile.html" title="A class that provides basic input/output operations." alt="" coords="131,81,242,108"/>
+<area shape="rect" id="node5" href="$classvtkDICOMMetaData.html" title="A container class for DICOM metadata." alt="" coords="267,81,419,108"/>
+<area shape="rect" id="node6" title=" " alt="" coords="285,5,401,32"/>
+</map>

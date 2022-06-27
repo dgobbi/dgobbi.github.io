@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['datatypeenum',['DataTypeEnum',['../classvtk_n_i_f_t_i_header.html#a751855c0be13248a7e377ade6158eac9',1,'vtkNIFTIHeader']]]
+  ['endianenum_1566',['EndianEnum',['../classvtkNIFTIWriter.html#aaa509dda09c80b553f4539134c95e5fd',1,'vtkNIFTIWriter']]],
+  ['enumtype_1567',['EnumType',['../classvtkDICOMVR.html#a40e983ebf7e6d989a33fbc28991c5b54',1,'vtkDICOMVR']]]
 ];

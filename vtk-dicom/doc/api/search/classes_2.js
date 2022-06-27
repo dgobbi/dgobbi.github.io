@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imageformat',['ImageFormat',['../structvtk_d_i_c_o_m_image_codec_1_1_image_format.html',1,'vtkDICOMImageCodec']]]
+  ['imageformat_806',['ImageFormat',['../structvtkDICOMImageCodec_1_1ImageFormat.html',1,'vtkDICOMImageCodec']]]
 ];

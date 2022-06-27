@@ -1,0 +1,12 @@
+<map id="vtkDICOMWriter" name="vtkDICOMWriter">
+<area shape="rect" id="node1" title="Write DICOM image files." alt="" coords="172,441,300,468"/>
+<area shape="rect" id="node2" href="$classvtkImageWriter.html" title="Writes images to files." alt="" coords="339,365,463,392"/>
+<area shape="rect" id="node3" href="$classvtkImageAlgorithm.html" title="Generic algorithm superclass for image algs." alt="" coords="353,261,501,288"/>
+<area shape="rect" id="node4" href="$classvtkAlgorithm.html" title="Superclass for all sources, filters, and sinks in VTK." alt="" coords="553,157,660,184"/>
+<area shape="rect" id="node5" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="320,81,405,108"/>
+<area shape="rect" id="node7" href="$classvtkDICOMGenerator.html" title="Generate DICOM data series for specific IOD classes." alt="" coords="159,261,313,288"/>
+<area shape="rect" id="node8" href="$classvtkDICOMUIDGenerator.html" title="Generate UIDs for written DICOM files." alt="" coords="274,157,451,184"/>
+<area shape="rect" id="node6" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="304,5,421,32"/>
+<area shape="rect" id="node9" href="$classvtkDICOMMetaData.html" title="A container class for DICOM metadata." alt="" coords="5,157,157,184"/>
+<area shape="rect" id="node10" title=" " alt="" coords="23,81,139,108"/>
+</map>

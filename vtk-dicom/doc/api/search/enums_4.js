@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['fieldassociations',['FieldAssociations',['../classvtk_data_object.html#a54fdf8345a01c89e618feca3c10002b1',1,'vtkDataObject']]],
-  ['fieldoperations',['FieldOperations',['../classvtk_data_object.html#a3377a86792eadd28a6baf49797101273',1,'vtkDataObject']]]
+  ['intentcodeenum_1569',['IntentCodeEnum',['../classvtkNIFTIHeader.html#abca0012de76963c8fcf088437d684ae2',1,'vtkNIFTIHeader']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['originatbottom',['OriginAtBottom',['../classvtk_d_i_c_o_m_generator.html#a94ae2ab1ab4b4eb1358f518ae7ee9e6f',1,'vtkDICOMGenerator']]],
-  ['overlaybitfield',['OverlayBitfield',['../classvtk_d_i_c_o_m_reader.html#a025c1226c15b176a0e44624f9309bf90',1,'vtkDICOMReader']]],
-  ['overlaytype',['OverlayType',['../classvtk_d_i_c_o_m_writer.html#ae62f4e2fbec1164d03011fb5487f9a6d',1,'vtkDICOMWriter']]],
-  ['overridecharacterset',['OverrideCharacterSet',['../classvtk_d_i_c_o_m_reader.html#a580bac9e57ef1f445a223df9023c5483',1,'vtkDICOMReader']]]
+  ['medicalimageproperties_1521',['MedicalImageProperties',['../classvtkDICOMReader.html#aa9beca5b23166a25ddc6495d82080f88',1,'vtkDICOMReader']]],
+  ['memoryroworder_1522',['MemoryRowOrder',['../classvtkDICOMReader.html#a697be818a1ce198a8b76968aea41dbe3',1,'vtkDICOMReader::MemoryRowOrder()'],['../classvtkDICOMWriter.html#a814536875fae68cc6c31f301c3a8558e',1,'vtkDICOMWriter::MemoryRowOrder()']]],
+  ['metadata_1523',['MetaData',['../classvtkDICOMGenerator.html#a1615278dd6f5696eda49c189f5a2fc47',1,'vtkDICOMGenerator::MetaData()'],['../classvtkDICOMReader.html#a26fb321168b0b82e563a7126d0bdb2a3',1,'vtkDICOMReader::MetaData()'],['../classvtkDICOMWriter.html#ae1c539f5b1483fa73b4715987edcd95f',1,'vtkDICOMWriter::MetaData()']]],
+  ['multiframe_1524',['MultiFrame',['../classvtkDICOMGenerator.html#a260c33807bead8e1f9d39309ccc06941',1,'vtkDICOMGenerator']]]
 ];

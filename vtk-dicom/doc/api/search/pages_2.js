@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['image_20display',['Image Display',['../image_display.html',1,'']]],
-  ['image_20orientation',['Image Orientation',['../image_orientation.html',1,'']]],
-  ['image_20reader',['Image Reader',['../image_reader.html',1,'']]],
-  ['image_20writer',['Image Writer',['../image_writer.html',1,'']]],
-  ['installation',['Installation',['../installation.html',1,'']]]
+  ['directories_1615',['Directories',['../directory.html',1,'']]],
+  ['dicom_20for_20vtk_1616',['DICOM for VTK',['../index.html',1,'']]]
 ];

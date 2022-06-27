@@ -1,0 +1,9 @@
+<map id="vtkImageWriter" name="vtkImageWriter">
+<area shape="rect" id="node1" title="Writes images to files." alt="" coords="81,304,205,331"/>
+<area shape="rect" id="node6" href="$classvtkDICOMWriter.html" title="Write DICOM image files." alt="" coords="5,379,133,405"/>
+<area shape="rect" id="node7" href="$classvtkNIFTIWriter.html" title="Write NIfTI&#45;1 and NIfTI&#45;2 medical image files." alt="" coords="157,379,275,405"/>
+<area shape="rect" id="node2" href="$classvtkImageAlgorithm.html" title="Generic algorithm superclass for image algs." alt="" coords="69,229,217,256"/>
+<area shape="rect" id="node3" href="$classvtkAlgorithm.html" title="Superclass for all sources, filters, and sinks in VTK." alt="" coords="89,155,196,181"/>
+<area shape="rect" id="node4" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="100,80,185,107"/>
+<area shape="rect" id="node5" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="84,5,201,32"/>
+</map>

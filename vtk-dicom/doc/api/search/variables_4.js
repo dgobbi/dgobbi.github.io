@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['imagetype',['ImageType',['../classvtk_d_i_c_o_m_writer.html#a8f14de5b6a2d4f9dffc434a9ee0d3cac',1,'vtkDICOMWriter']]],
-  ['issupplemental',['IsSupplemental',['../classvtk_d_i_c_o_m_apply_palette.html#adb8d43ba34fb2d16b165d70a97bb5a31',1,'vtkDICOMApplyPalette']]]
+  ['fileindexarray_1513',['FileIndexArray',['../classvtkDICOMReader.html#a0fe92515c92e0e93a546bc6b416400fb',1,'vtkDICOMReader']]],
+  ['fileoffsetarray_1514',['FileOffsetArray',['../classvtkDICOMReader.html#a224ba3ac24d715dfb73de4e6288b07f6',1,'vtkDICOMReader']]],
+  ['filesliceorder_1515',['FileSliceOrder',['../classvtkDICOMWriter.html#ab0d92d4d5419610591c43626fb5f75ee',1,'vtkDICOMWriter']]],
+  ['frameindexarray_1516',['FrameIndexArray',['../classvtkDICOMReader.html#a500ced64b38d6dfad27f4335add48219',1,'vtkDICOMReader']]]
 ];

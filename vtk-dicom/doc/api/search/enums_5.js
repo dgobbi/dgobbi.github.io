@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['headersizeenum',['HeaderSizeEnum',['../classvtk_n_i_f_t_i_header.html#aa6d951e64d9302bade2dc645dc9cbf1f',1,'vtkNIFTIHeader']]]
+  ['mode_1570',['Mode',['../classvtkDICOMFile.html#afa1c612f270f39ea2fc7ec4fa128a915',1,'vtkDICOMFile::Mode()'],['../classvtkDICOMFileDirectory.html#af9e63a4f3d788b7a238c96432de93027',1,'vtkDICOMFileDirectory::Mode()']]]
 ];

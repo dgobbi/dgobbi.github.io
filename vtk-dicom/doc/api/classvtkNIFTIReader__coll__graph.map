@@ -1,0 +1,9 @@
+<map id="vtkNIFTIReader" name="vtkNIFTIReader">
+<area shape="rect" id="node1" title="Read NIfTI&#45;1 and NIfTI&#45;2 medical image files." alt="" coords="77,424,199,451"/>
+<area shape="rect" id="node2" href="$classvtkImageReader2.html" title="Superclass of binary file readers." alt="" coords="14,348,153,375"/>
+<area shape="rect" id="node3" href="$classvtkImageAlgorithm.html" title="Generic algorithm superclass for image algs." alt="" coords="5,259,153,285"/>
+<area shape="rect" id="node4" href="$classvtkAlgorithm.html" title="Superclass for all sources, filters, and sinks in VTK." alt="" coords="42,157,149,184"/>
+<area shape="rect" id="node5" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="99,81,185,108"/>
+<area shape="rect" id="node7" href="$classvtkNIFTIHeader.html" title="Store NIfTI header information." alt="" coords="128,208,252,235"/>
+<area shape="rect" id="node6" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="83,5,201,32"/>
+</map>

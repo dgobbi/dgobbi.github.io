@@ -1,0 +1,4 @@
+<map id="vtkDICOMDictionary::Dict" name="vtkDICOMDictionary::Dict">
+<area shape="rect" id="node1" title="A struct to store a DICOM dictionary hash table." alt="" coords="5,109,160,151"/>
+<area shape="rect" id="node2" href="$structvtkDICOMDictEntry_1_1Entry.html" title="A struct to statically store DICOM dictionary entries." alt="" coords="5,5,160,47"/>
+</map>

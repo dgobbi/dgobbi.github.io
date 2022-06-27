@@ -1,0 +1,6 @@
+<map id="vtkDICOMMRGenerator" name="vtkDICOMMRGenerator">
+<area shape="rect" id="node1" title="Generate DICOM data objects for MR images." alt="" coords="5,229,180,256"/>
+<area shape="rect" id="node2" href="$classvtkDICOMGenerator.html" title="Generate DICOM data series for specific IOD classes." alt="" coords="16,155,169,181"/>
+<area shape="rect" id="node3" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="50,80,135,107"/>
+<area shape="rect" id="node4" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="34,5,151,32"/>
+</map>

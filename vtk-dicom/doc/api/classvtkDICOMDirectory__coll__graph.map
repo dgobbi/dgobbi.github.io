@@ -1,0 +1,7 @@
+<map id="vtkDICOMDirectory" name="vtkDICOMDirectory">
+<area shape="rect" id="node1" title="Get information about all DICOM files within a directory." alt="" coords="71,247,219,273"/>
+<area shape="rect" id="node2" href="$classvtkAlgorithm.html" title="Superclass for all sources, filters, and sinks in VTK." alt="" coords="11,157,117,184"/>
+<area shape="rect" id="node3" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="21,81,107,108"/>
+<area shape="rect" id="node4" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node5" href="$classvtkDICOMCharacterSet.html" title="Character sets." alt="" coords="142,157,314,184"/>
+</map>

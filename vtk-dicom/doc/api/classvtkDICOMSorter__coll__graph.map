@@ -1,0 +1,6 @@
+<map id="vtkDICOMSorter" name="vtkDICOMSorter">
+<area shape="rect" id="node1" title="Deprecated class, please use vtkDICOMFileSorter instead." alt="" coords="17,229,143,256"/>
+<area shape="rect" id="node2" href="$classvtkDICOMFileSorter.html" title="Sort DICOM files and group them by study and series." alt="" coords="5,155,155,181"/>
+<area shape="rect" id="node3" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="37,80,123,107"/>
+<area shape="rect" id="node4" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="21,5,139,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="vtkDICOMUtilities" name="vtkDICOMUtilities">
+<area shape="rect" id="node1" title="Utility functions for use with DICOM classes." alt="" coords="5,155,144,181"/>
+<area shape="rect" id="node2" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="32,80,117,107"/>
+<area shape="rect" id="node3" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="16,5,133,32"/>
+</map>

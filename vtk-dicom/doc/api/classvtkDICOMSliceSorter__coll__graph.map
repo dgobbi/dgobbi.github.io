@@ -1,0 +1,8 @@
+<map id="vtkDICOMSliceSorter" name="vtkDICOMSliceSorter">
+<area shape="rect" id="node1" title="Index a DICOM series to allow proper dimensional ordering." alt="" coords="127,185,286,212"/>
+<area shape="rect" id="node2" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="21,81,107,108"/>
+<area shape="rect" id="node3" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node4" href="$classvtkDICOMMetaData.html" title="A container class for DICOM metadata." alt="" coords="131,81,283,108"/>
+<area shape="rect" id="node5" title=" " alt="" coords="149,5,265,32"/>
+<area shape="rect" id="node6" href="$classvtkDICOMTag.html" title="A (group,element) identifier tag for DICOM attributes." alt="" coords="307,81,418,108"/>
+</map>

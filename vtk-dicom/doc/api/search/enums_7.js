@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mode',['Mode',['../classvtk_d_i_c_o_m_file.html#afa1c612f270f39ea2fc7ec4fa128a915',1,'vtkDICOMFile::Mode()'],['../classvtk_d_i_c_o_m_file_directory.html#af9e63a4f3d788b7a238c96432de93027',1,'vtkDICOMFileDirectory::Mode()']]]
+  ['slicecodeenum_1572',['SliceCodeEnum',['../classvtkNIFTIHeader.html#ac5f1c07b4d1987714ab04b36cbfcaa99',1,'vtkNIFTIHeader']]],
+  ['sliceorder_1573',['SliceOrder',['../classvtkDICOMWriter.html#ad82363f9569123ee046cb32d391bd09b',1,'vtkDICOMWriter']]]
 ];

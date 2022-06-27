@@ -1,0 +1,5 @@
+<map id="vtkNIFTIHeader" name="vtkNIFTIHeader">
+<area shape="rect" id="node1" title="Store NIfTI header information." alt="" coords="5,155,129,181"/>
+<area shape="rect" id="node2" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="25,80,110,107"/>
+<area shape="rect" id="node3" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="9,5,126,32"/>
+</map>

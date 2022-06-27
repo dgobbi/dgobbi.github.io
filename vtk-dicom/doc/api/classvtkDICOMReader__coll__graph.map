@@ -1,0 +1,16 @@
+<map id="vtkDICOMReader" name="vtkDICOMReader">
+<area shape="rect" id="node1" title="Read DICOM image files." alt="" coords="1081,260,1216,287"/>
+<area shape="rect" id="node2" href="$classvtkImageReader2.html" title="Superclass of binary file readers." alt="" coords="839,456,978,483"/>
+<area shape="rect" id="node3" href="$classvtkImageAlgorithm.html" title="Generic algorithm superclass for image algs." alt="" coords="484,433,632,460"/>
+<area shape="rect" id="node4" href="$classvtkAlgorithm.html" title="Superclass for all sources, filters, and sinks in VTK." alt="" coords="311,308,418,335"/>
+<area shape="rect" id="node5" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="172,217,257,244"/>
+<area shape="rect" id="node7" href="$classvtkDICOMParser.html" title="A meta data reader for DICOM data." alt="" coords="844,260,973,287"/>
+<area shape="rect" id="node13" href="$classvtkDICOMSliceSorter.html" title="Index a DICOM series to allow proper dimensional ordering." alt="" coords="829,61,988,88"/>
+<area shape="rect" id="node6" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="5,217,123,244"/>
+<area shape="rect" id="node8" href="$classvtkDICOMFile.html" title="A class that provides basic input/output operations." alt="" coords="503,268,613,295"/>
+<area shape="rect" id="node9" href="$classvtkDICOMItem.html" title="An item in a DICOM sequence (type SQ)." alt="" coords="499,319,617,345"/>
+<area shape="rect" id="node10" href="$classvtkDICOMMetaData.html" title="A container class for DICOM metadata." alt="" coords="482,132,634,159"/>
+<area shape="rect" id="node11" title=" " alt="" coords="307,132,423,159"/>
+<area shape="rect" id="node12" href="$classvtkDICOMCharacterSet.html" title="Character sets." alt="" coords="472,376,644,403"/>
+<area shape="rect" id="node14" href="$classvtkDICOMTag.html" title="A (group,element) identifier tag for DICOM attributes." alt="" coords="503,44,613,71"/>
+</map>

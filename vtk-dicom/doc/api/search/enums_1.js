@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['code',['Code',['../classvtk_d_i_c_o_m_file.html#a593dde9104005d032a74ca1b857356df',1,'vtkDICOMFile::Code()'],['../classvtk_d_i_c_o_m_file_directory.html#a229fffcbc02db4f5978220ff4b9c0f55',1,'vtkDICOMFileDirectory::Code()']]]
+  ['datatypeenum_1564',['DataTypeEnum',['../classvtkNIFTIHeader.html#a751855c0be13248a7e377ade6158eac9',1,'vtkNIFTIHeader']]],
+  ['desiredoutputprecision_1565',['DesiredOutputPrecision',['../classvtkAlgorithm.html#ac2bf3c779aa60908da5bc3df9b066db6',1,'vtkAlgorithm']]]
 ];

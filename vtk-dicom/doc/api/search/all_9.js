@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['join',['Join',['../classvtk_d_i_c_o_m_file_path.html#a004fe364d48c1fb45f099f706eca56a3',1,'vtkDICOMFilePath']]]
+  ['join_410',['Join',['../classvtkDICOMFilePath.html#aa0fb3fe342f71b7fe8d3a0eefb963630',1,'vtkDICOMFilePath']]]
 ];

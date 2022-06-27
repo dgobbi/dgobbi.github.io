@@ -1,0 +1,7 @@
+<map id="vtkImageReader2" name="vtkImageReader2">
+<area shape="rect" id="node1" title="Superclass of binary file readers." alt="" coords="10,304,149,331"/>
+<area shape="rect" id="node2" href="$classvtkImageAlgorithm.html" title="Generic algorithm superclass for image algs." alt="" coords="5,229,153,256"/>
+<area shape="rect" id="node3" href="$classvtkAlgorithm.html" title="Superclass for all sources, filters, and sinks in VTK." alt="" coords="26,155,133,181"/>
+<area shape="rect" id="node4" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="37,80,122,107"/>
+<area shape="rect" id="node5" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="21,5,138,32"/>
+</map>

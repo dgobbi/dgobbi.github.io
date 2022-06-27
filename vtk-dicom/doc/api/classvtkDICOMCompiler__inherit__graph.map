@@ -1,0 +1,5 @@
+<map id="vtkDICOMCompiler" name="vtkDICOMCompiler">
+<area shape="rect" id="node1" title="A writer for DICOM meta data." alt="" coords="5,155,152,181"/>
+<area shape="rect" id="node2" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="36,80,121,107"/>
+<area shape="rect" id="node3" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="20,5,137,32"/>
+</map>

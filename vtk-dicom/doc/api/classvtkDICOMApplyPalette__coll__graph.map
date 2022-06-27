@@ -1,0 +1,9 @@
+<map id="vtkDICOMApplyPalette" name="vtkDICOMApplyPalette">
+<area shape="rect" id="node1" title="Apply palette to PALETTE COLOR images." alt="" coords="25,453,195,480"/>
+<area shape="rect" id="node2" href="$classvtkDICOMAlgorithm.html" title="Superclass for DICOM image filters." alt="" coords="34,379,186,405"/>
+<area shape="rect" id="node3" href="$classvtkThreadedImageAlgorithm.html" title="Generic filter that has one input.." alt="" coords="5,304,215,331"/>
+<area shape="rect" id="node4" href="$classvtkImageAlgorithm.html" title="Generic algorithm superclass for image algs." alt="" coords="36,229,184,256"/>
+<area shape="rect" id="node5" href="$classvtkAlgorithm.html" title="Superclass for all sources, filters, and sinks in VTK." alt="" coords="57,155,163,181"/>
+<area shape="rect" id="node6" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="67,80,153,107"/>
+<area shape="rect" id="node7" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="51,5,169,32"/>
+</map>

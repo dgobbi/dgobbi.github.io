@@ -1,0 +1,12 @@
+<map id="vtkThreadedImageAlgorithm" name="vtkThreadedImageAlgorithm">
+<area shape="rect" id="node1" title="Generic filter that has one input.." alt="" coords="265,304,474,331"/>
+<area shape="rect" id="node6" href="$classvtkDICOMAlgorithm.html" title="Superclass for DICOM image filters." alt="" coords="212,379,364,405"/>
+<area shape="rect" id="node10" href="$classvtkDICOMToRAS.html" title="Convert DICOM orientation to RAS orientation." alt="" coords="388,379,516,405"/>
+<area shape="rect" id="node2" href="$classvtkImageAlgorithm.html" title="Generic algorithm superclass for image algs." alt="" coords="295,229,443,256"/>
+<area shape="rect" id="node3" href="$classvtkAlgorithm.html" title="Superclass for all sources, filters, and sinks in VTK." alt="" coords="316,155,423,181"/>
+<area shape="rect" id="node4" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="327,80,412,107"/>
+<area shape="rect" id="node5" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="311,5,428,32"/>
+<area shape="rect" id="node7" href="$classvtkDICOMApplyPalette.html" title="Apply palette to PALETTE COLOR images." alt="" coords="5,453,176,480"/>
+<area shape="rect" id="node8" href="$classvtkDICOMApplyRescale.html" title="Convert pixels to real&#45;world values." alt="" coords="200,453,376,480"/>
+<area shape="rect" id="node9" href="$classvtkDICOMCTRectifier.html" title="Prepare a CT for 3D processing." alt="" coords="400,453,560,480"/>
+</map>

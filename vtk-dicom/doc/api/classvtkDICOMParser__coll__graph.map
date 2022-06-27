@@ -1,0 +1,10 @@
+<map id="vtkDICOMParser" name="vtkDICOMParser">
+<area shape="rect" id="node1" title="A meta data reader for DICOM data." alt="" coords="261,185,390,212"/>
+<area shape="rect" id="node2" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="21,81,107,108"/>
+<area shape="rect" id="node3" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node4" href="$classvtkDICOMFile.html" title="A class that provides basic input/output operations." alt="" coords="131,81,242,108"/>
+<area shape="rect" id="node5" href="$classvtkDICOMItem.html" title="An item in a DICOM sequence (type SQ)." alt="" coords="266,81,385,108"/>
+<area shape="rect" id="node6" href="$classvtkDICOMMetaData.html" title="A container class for DICOM metadata." alt="" coords="409,81,561,108"/>
+<area shape="rect" id="node7" title=" " alt="" coords="427,5,543,32"/>
+<area shape="rect" id="node8" href="$classvtkDICOMCharacterSet.html" title="Character sets." alt="" coords="586,81,758,108"/>
+</map>

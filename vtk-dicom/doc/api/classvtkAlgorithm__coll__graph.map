@@ -1,0 +1,5 @@
+<map id="vtkAlgorithm" name="vtkAlgorithm">
+<area shape="rect" id="node1" title="Superclass for all sources, filters, and sinks in VTK." alt="" coords="11,155,117,181"/>
+<area shape="rect" id="node2" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="21,80,107,107"/>
+<area shape="rect" id="node3" href="$classvtkObjectBase.html" title="abstract base class for most VTK objects" alt="" coords="5,5,123,32"/>
+</map>

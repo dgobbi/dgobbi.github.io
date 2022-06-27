@@ -1,0 +1,33 @@
+<map id="vtkObjectBase" name="vtkObjectBase">
+<area shape="rect" id="node1" title="abstract base class for most VTK objects" alt="" coords="5,423,123,449"/>
+<area shape="rect" id="node2" href="$classvtkObject.html" title="abstract base class for most VTK objects" alt="" coords="171,423,256,449"/>
+<area shape="rect" id="node3" href="$classvtkAlgorithm.html" title="Superclass for all sources, filters, and sinks in VTK." alt="" coords="339,220,446,247"/>
+<area shape="rect" id="node20" href="$classvtkDICOMCompiler.html" title="A writer for DICOM meta data." alt="" coords="319,271,466,297"/>
+<area shape="rect" id="node21" href="$classvtkDICOMFileSorter.html" title="Sort DICOM files and group them by study and series." alt="" coords="318,321,467,348"/>
+<area shape="rect" id="node23" href="$classvtkDICOMGenerator.html" title="Generate DICOM data series for specific IOD classes." alt="" coords="316,372,469,399"/>
+<area shape="rect" id="node27" href="$classvtkDICOMParser.html" title="A meta data reader for DICOM data." alt="" coords="328,423,457,449"/>
+<area shape="rect" id="node28" href="$classvtkDICOMSliceSorter.html" title="Index a DICOM series to allow proper dimensional ordering." alt="" coords="313,473,472,500"/>
+<area shape="rect" id="node29" href="$classvtkDICOMUIDGenerator.html" title="Generate UIDs for written DICOM files." alt="" coords="304,524,481,551"/>
+<area shape="rect" id="node30" href="$classvtkDICOMUtilities.html" title="Utility functions for use with DICOM classes." alt="" coords="323,575,462,601"/>
+<area shape="rect" id="node31" href="$classvtkNIFTIHeader.html" title="Store NIfTI header information." alt="" coords="331,625,455,652"/>
+<area shape="rect" id="node4" href="$classvtkDICOMDirectory.html" title="Get information about all DICOM files within a directory." alt="" coords="543,183,691,209"/>
+<area shape="rect" id="node5" href="$classvtkImageAlgorithm.html" title="Generic algorithm superclass for image algs." alt="" coords="543,233,691,260"/>
+<area shape="rect" id="node6" href="$classvtkImageReader2.html" title="Superclass of binary file readers." alt="" coords="787,107,926,133"/>
+<area shape="rect" id="node11" href="$classvtkImageWriter.html" title="Writes images to files." alt="" coords="795,233,919,260"/>
+<area shape="rect" id="node14" href="$classvtkThreadedImageAlgorithm.html" title="Generic filter that has one input.." alt="" coords="752,309,961,336"/>
+<area shape="rect" id="node7" href="$classvtkDICOMReader.html" title="Read DICOM image files." alt="" coords="1018,5,1153,32"/>
+<area shape="rect" id="node8" href="$classvtkImageReader.html" title="Superclass of transformable binary file readers." alt="" coords="1020,56,1151,83"/>
+<area shape="rect" id="node9" href="$classvtkNIFTIReader.html" title="Read NIfTI&#45;1 and NIfTI&#45;2 medical image files." alt="" coords="1024,107,1147,133"/>
+<area shape="rect" id="node10" href="$classvtkScancoCTReader.html" title="Read SCANCO ISQ and AIM medical image files." alt="" coords="1009,157,1161,184"/>
+<area shape="rect" id="node12" href="$classvtkDICOMWriter.html" title="Write DICOM image files." alt="" coords="1021,208,1149,235"/>
+<area shape="rect" id="node13" href="$classvtkNIFTIWriter.html" title="Write NIfTI&#45;1 and NIfTI&#45;2 medical image files." alt="" coords="1027,259,1144,285"/>
+<area shape="rect" id="node15" href="$classvtkDICOMAlgorithm.html" title="Superclass for DICOM image filters." alt="" coords="1009,309,1161,336"/>
+<area shape="rect" id="node19" href="$classvtkDICOMToRAS.html" title="Convert DICOM orientation to RAS orientation." alt="" coords="1021,360,1149,387"/>
+<area shape="rect" id="node16" href="$classvtkDICOMApplyPalette.html" title="Apply palette to PALETTE COLOR images." alt="" coords="1212,259,1383,285"/>
+<area shape="rect" id="node17" href="$classvtkDICOMApplyRescale.html" title="Convert pixels to real&#45;world values." alt="" coords="1209,309,1385,336"/>
+<area shape="rect" id="node18" href="$classvtkDICOMCTRectifier.html" title="Prepare a CT for 3D processing." alt="" coords="1217,360,1377,387"/>
+<area shape="rect" id="node22" href="$classvtkDICOMSorter.html" title="Deprecated class, please use vtkDICOMFileSorter instead." alt="" coords="553,296,680,323"/>
+<area shape="rect" id="node24" href="$classvtkDICOMCTGenerator.html" title="Generate DICOM data objects for CT images." alt="" coords="531,347,702,373"/>
+<area shape="rect" id="node25" href="$classvtkDICOMMRGenerator.html" title="Generate DICOM data objects for MR images." alt="" coords="529,397,704,424"/>
+<area shape="rect" id="node26" href="$classvtkDICOMSCGenerator.html" title="Generate DICOM data objects for Secondary Capture images." alt="" coords="531,448,702,475"/>
+</map>
