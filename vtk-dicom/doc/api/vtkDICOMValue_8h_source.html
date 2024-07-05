@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.14</span>
+   &#160;<span id="projectnumber">0.8.16</span>
    </div>
   </td>
  </tr>
@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  Program: DICOM for VTK</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  Copyright (c) 2012-2022 David Gobbi</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  Copyright (c) 2012-2024 David Gobbi</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  All rights reserved.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  See Copyright.txt or http://dgobbi.github.io/bsd3.txt for details.</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
@@ -196,7 +196,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
 <div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classvtkDICOMValue.html#a2e71021fa0bc532c4ca53eb1ebe82185">  140</a></span>&#160;  <a class="code" href="classvtkDICOMValue.html#a2e71021fa0bc532c4ca53eb1ebe82185">vtkDICOMValue</a>(<span class="keyword">const</span> <a class="code" href="classvtkDICOMSequence.html">vtkDICOMSequence</a> &amp;v);</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <a class="code" href="classvtkDICOMValue.html">vtkDICOMValue</a>() : V(0) {}</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <a class="code" href="classvtkDICOMValue.html">vtkDICOMValue</a>() : V(nullptr) {}</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
 <div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classvtkDICOMValue.html#aea3a40f65c7cbe32aff7408ec4a3cca7">  148</a></span>&#160;  <a class="code" href="classvtkDICOMValue.html#aea3a40f65c7cbe32aff7408ec4a3cca7">~vtkDICOMValue</a>() { this-&gt;Clear(); }</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
@@ -207,9 +207,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordtype">void</span> Clear() {</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">if</span> (this-&gt;V &amp;&amp; --(this-&gt;V-&gt;ReferenceCount) == 0) {</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      this-&gt;FreeValue(this-&gt;V); }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    this-&gt;V = 0; }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    this-&gt;V = <span class="keyword">nullptr</span>; }</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classvtkDICOMValue.html#a042bf6e802263a9e522414be246c99fe">  172</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classvtkDICOMValue.html#a042bf6e802263a9e522414be246c99fe">IsValid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;V != 0); }</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classvtkDICOMValue.html#a042bf6e802263a9e522414be246c99fe">  172</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classvtkDICOMValue.html#a042bf6e802263a9e522414be246c99fe">IsValid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;V != <span class="keyword">nullptr</span>); }</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <a class="code" href="classvtkDICOMVR.html">vtkDICOMVR</a> GetVR()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;V ? this-&gt;V-&gt;VR : <a class="code" href="classvtkDICOMVR.html">vtkDICOMVR</a>()); }</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
@@ -456,7 +456,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 22 2023 11:22:43 for vtk-dicom by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jul 4 2024 20:30:16 for vtk-dicom by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

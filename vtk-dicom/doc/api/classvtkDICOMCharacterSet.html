@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.14</span>
+   &#160;<span id="projectnumber">0.8.16</span>
    </div>
   </td>
  </tr>
@@ -126,16 +126,21 @@ Public Types</h2></td></tr>
 &#160;&#160;<b>ISO_IR_166</b> = 18
 , <b>X_LATIN7</b> = 19
 , <b>X_LATIN8</b> = 20
-, <b>X_LATIN9</b> = 21
+, <b>ISO_IR_203</b> = 21
 , <br />
-&#160;&#160;<b>X_LATIN10</b> = 22
+&#160;&#160;<b>X_LATIN9</b> = 21
+, <b>X_LATIN10</b> = 22
 , <b>X_EUCKR</b> = 24
 , <b>X_GB2312</b> = 25
-, <b>ISO_2022_IR_6</b> = 32
 , <br />
-&#160;&#160;<b>ISO_2022_IR_13</b> = 33
+&#160;&#160;<b>ISO_2022_IR_6</b> = 32
+, <b>ISO_2022_IR_13</b> = 33
 , <b>ISO_2022_IR_87</b> = 34
-, <b>ISO_2022_IR_159</b> = 36
+, <b>ISO_2022_IR_13_87</b> = 35
+, <br />
+&#160;&#160;<b>ISO_2022_IR_159</b> = 36
+, <b>ISO_2022_IR_87_159</b> = 38
+, <b>ISO_2022_IR_13_87_159</b> = 39
 , <b>ISO_2022_IR_100</b> = 40
 , <br />
 &#160;&#160;<b>ISO_2022_IR_101</b> = 41
@@ -149,28 +154,36 @@ Public Types</h2></td></tr>
 , <b>ISO_2022_IR_148</b> = 48
 , <br />
 &#160;&#160;<b>ISO_2022_IR_166</b> = 50
+, <b>ISO_2022_IR_203</b> = 53
 , <b>ISO_2022_IR_149</b> = 56
 , <b>ISO_2022_IR_58</b> = 57
-, <b>ISO_IR_192</b> = 64
 , <br />
-&#160;&#160;<b>GB18030</b> = 65
+&#160;&#160;<b>X_ISO_2022_JP</b> = 58
+, <b>X_ISO_2022_JP_1</b> = 59
+, <b>X_ISO_2022_JP_2</b> = 60
+, <b>X_ISO_2022_JP_EXT</b> = 61
+, <br />
+&#160;&#160;<b>ISO_IR_192</b> = 64
+, <b>GB18030</b> = 65
 , <b>GBK</b> = 66
 , <b>X_BIG5</b> = 67
-, <b>X_EUCJP</b> = 69
 , <br />
-&#160;&#160;<b>X_SJIS</b> = 70
+&#160;&#160;<b>X_EUCJP</b> = 69
+, <b>X_SJIS</b> = 70
 , <b>X_CP874</b> = 76
 , <b>X_CP1250</b> = 80
-, <b>X_CP1251</b> = 81
 , <br />
-&#160;&#160;<b>X_CP1252</b> = 82
+&#160;&#160;<b>X_CP1251</b> = 81
+, <b>X_CP1252</b> = 82
 , <b>X_CP1253</b> = 83
 , <b>X_CP1254</b> = 84
-, <b>X_CP1255</b> = 85
 , <br />
-&#160;&#160;<b>X_CP1256</b> = 86
+&#160;&#160;<b>X_CP1255</b> = 85
+, <b>X_CP1256</b> = 86
 , <b>X_CP1257</b> = 87
-, <b>X_KOI8</b> = 90
+, <b>X_CP1258</b> = 88
+, <br />
+&#160;&#160;<b>X_KOI8</b> = 90
 , <b>Unknown</b> = 255
 <br />
  }</td></tr>
@@ -194,19 +207,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7f11a07f4e098739ee3379f64da3792c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtkDICOMCharacterSet.html#a7f11a07f4e098739ee3379f64da3792c">GetCharacterSetString</a> () const</td></tr>
 <tr class="memdesc:a7f11a07f4e098739ee3379f64da3792c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate SpecificCharacterSet code values (diagnostic only).  <a href="classvtkDICOMCharacterSet.html#a7f11a07f4e098739ee3379f64da3792c">More...</a><br /></td></tr>
 <tr class="separator:a7f11a07f4e098739ee3379f64da3792c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d32495bc708b48ceca834ca375fffb0"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtkDICOMCharacterSet.html#a8d32495bc708b48ceca834ca375fffb0">GetDefinedTerm</a> () const</td></tr>
+<tr class="memdesc:a8d32495bc708b48ceca834ca375fffb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the defined term (possible multi-valued) for this character set.  <a href="classvtkDICOMCharacterSet.html#a8d32495bc708b48ceca834ca375fffb0">More...</a><br /></td></tr>
+<tr class="separator:a8d32495bc708b48ceca834ca375fffb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab015484aa87e55651e9d3b3de1366153"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtkDICOMCharacterSet.html#ab015484aa87e55651e9d3b3de1366153">GetMIMEName</a> () const</td></tr>
+<tr class="memdesc:ab015484aa87e55651e9d3b3de1366153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the internet MIME name for this character set.  <a href="classvtkDICOMCharacterSet.html#ab015484aa87e55651e9d3b3de1366153">More...</a><br /></td></tr>
+<tr class="separator:ab015484aa87e55651e9d3b3de1366153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aabaf96ae6e19f979e8428da601b154"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtkDICOMCharacterSet.html#a5aabaf96ae6e19f979e8428da601b154">GetName</a> () const</td></tr>
+<tr class="memdesc:a5aabaf96ae6e19f979e8428da601b154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a name that identifies this character set.  <a href="classvtkDICOMCharacterSet.html#a5aabaf96ae6e19f979e8428da601b154">More...</a><br /></td></tr>
+<tr class="separator:a5aabaf96ae6e19f979e8428da601b154"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e30651f5dda860d18cb753314453462"><td class="memItemLeft" align="right" valign="top"><a id="a9e30651f5dda860d18cb753314453462"></a>
 unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtkDICOMCharacterSet.html#a9e30651f5dda860d18cb753314453462">GetKey</a> () const</td></tr>
 <tr class="memdesc:a9e30651f5dda860d18cb753314453462"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the numerical code for this character set object. <br /></td></tr>
 <tr class="separator:a9e30651f5dda860d18cb753314453462"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a5b804c2eb6121377127aaeb1e8a785"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtkDICOMCharacterSet.html#a9a5b804c2eb6121377127aaeb1e8a785">FromUTF8</a> (const char *text, size_t l, size_t *lp=0) const</td></tr>
-<tr class="memdesc:a9a5b804c2eb6121377127aaeb1e8a785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert text from UTF-8 to this encoding.  <a href="classvtkDICOMCharacterSet.html#a9a5b804c2eb6121377127aaeb1e8a785">More...</a><br /></td></tr>
-<tr class="separator:a9a5b804c2eb6121377127aaeb1e8a785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae09e8374203c072e8a0044e0f8de842a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtkDICOMCharacterSet.html#ae09e8374203c072e8a0044e0f8de842a">FromUTF8</a> (const char *text, size_t l, size_t *lp=nullptr) const</td></tr>
+<tr class="memdesc:ae09e8374203c072e8a0044e0f8de842a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert text from UTF-8 to this encoding.  <a href="classvtkDICOMCharacterSet.html#ae09e8374203c072e8a0044e0f8de842a">More...</a><br /></td></tr>
+<tr class="separator:ae09e8374203c072e8a0044e0f8de842a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e621aba2ffe453bf903bd568add50e4"><td class="memItemLeft" align="right" valign="top"><a id="a6e621aba2ffe453bf903bd568add50e4"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>FromUTF8</b> (const std::string &amp;text) const</td></tr>
 <tr class="separator:a6e621aba2ffe453bf903bd568add50e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b299bc89521bae63427ab038fe39c8b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtkDICOMCharacterSet.html#a6b299bc89521bae63427ab038fe39c8b">ToUTF8</a> (const char *text, size_t l, size_t *lp=0) const</td></tr>
-<tr class="memdesc:a6b299bc89521bae63427ab038fe39c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert text from this encoding to UTF-8.  <a href="classvtkDICOMCharacterSet.html#a6b299bc89521bae63427ab038fe39c8b">More...</a><br /></td></tr>
-<tr class="separator:a6b299bc89521bae63427ab038fe39c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1da8f5c233a739f6e00508fc2a00d8fa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtkDICOMCharacterSet.html#a1da8f5c233a739f6e00508fc2a00d8fa">ToUTF8</a> (const char *text, size_t l, size_t *lp=nullptr) const</td></tr>
+<tr class="memdesc:a1da8f5c233a739f6e00508fc2a00d8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert text from this encoding to UTF-8.  <a href="classvtkDICOMCharacterSet.html#a1da8f5c233a739f6e00508fc2a00d8fa">More...</a><br /></td></tr>
+<tr class="separator:a1da8f5c233a739f6e00508fc2a00d8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7306afdbc26456c2b4c0ea25562e4d18"><td class="memItemLeft" align="right" valign="top"><a id="a7306afdbc26456c2b4c0ea25562e4d18"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ToUTF8</b> (const std::string &amp;text) const</td></tr>
 <tr class="separator:a7306afdbc26456c2b4c0ea25562e4d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,9 +307,9 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalOverr
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Character sets. </p>
 <p>This class provides the means to convert the various international text encodings used by DICOM to UTF-8 and back again.</p>
-<p>During conversion to UTF-8, any codes the original encoding that can't be converted are replaced by Unicode's "REPLACEMENT CHARACTER", which is a question mark in a black diamond. For instance, if the original encoding is ISO_IR_6 (ASCII), any octets outside of the valid ASCII range of 0 to 127 will become "REPLACEMENT CHARACTER".</p>
-<p>DICOM supports a fairly small number of single-byte and multi-byte character sets. The only VRs that support these character sets are PN, LO, SH, ST, LT, and ST (all other text VRs must be ASCII). In addition to ASCII, there are eleven 8-bit single-byte encodings, three iso-2022 multi-byte encodings, and three variable-length encodings (UTF-8, GB18030, GBK).</p>
-<p>In some DICOM data sets, especially old ones, the SpecificCharacterSet attribute will be missing and it might be necessary to manually specify a character set for the application to use. Use <a class="el" href="classvtkDICOMCharacterSet.html#ab8711d542ff308dd1f973a921b0618dc" title="Set the character set to use if SpecificCharacterSet is missing.">SetGlobalDefault()</a> to do so. The <a class="el" href="classvtkDICOMCharacterSet.html" title="Character sets.">vtkDICOMCharacterSet</a> constructor can take the desired character encoding as a string, where the following encodings are allowed: 'ascii', 'latin1', 'latin2', 'latin3', 'latin4', 'latin5' 'latin7', 'latin9', 'cyrillic' (iso-8859-5), 'arabic' (iso-8859-6), 'greek' (iso-8859-7), 'hebrew' (iso-8859-8), 'tis-620', 'shift-jis', 'euc-jp', 'iso-2022-jp', 'korean' (euc-kr), 'chinese' (gbk), 'gb18030', 'big5', 'cp1250', 'cp1251', 'cp1252', 'cp1253', 'cp1254', 'cp1255', 'cp1256', 'cp1257', and 'utf-8'. Common aliases of these character sets can also be used. </p>
+<p>During conversion to UTF-8, any codes from the original encoding that can't be converted are replaced by Unicode's "REPLACEMENT CHARACTER", which is a question mark in a black diamond. For instance, if the original encoding is ISO_IR_6 (ASCII), any octets outside of the valid ASCII range of 0 to 127 will become "REPLACEMENT CHARACTER".</p>
+<p>DICOM supports a fairly small number of single-byte and multi-byte character sets. The only VRs that support these character sets are PN, LO, SH, ST, LT, and ST (all other text VRs must be ASCII). In addition to ASCII, there are twelve 8-bit single-byte encodings, three iso-2022 multi-byte encodings, and three variable-length encodings (UTF-8, GB18030, GBK).</p>
+<p>In some DICOM data sets, especially old ones, the SpecificCharacterSet attribute will be missing and it might be necessary to manually specify a character set for the application to use. Use <a class="el" href="classvtkDICOMCharacterSet.html#ab8711d542ff308dd1f973a921b0618dc" title="Set the character set to use if SpecificCharacterSet is missing.">SetGlobalDefault()</a> to do so. The <a class="el" href="classvtkDICOMCharacterSet.html" title="Character sets.">vtkDICOMCharacterSet</a> constructor can take the desired character encoding as a string, where the following encodings are allowed: 'ascii', 'latin1', 'latin2', 'latin3', 'latin4', 'latin5' 'latin7', 'latin9', 'cyrillic' (iso-8859-5), 'arabic' (iso-8859-6), 'greek' (iso-8859-7), 'hebrew' (iso-8859-8), 'tis-620', 'shift-jis', 'euc-jp', 'iso-2022-jp', 'korean' (euc-kr), 'chinese' (gb2312), 'gbk', 'gb18030', 'big5', 'cp1250', 'cp1251', 'cp1252', 'cp1253', 'cp1254', 'cp1255', 'cp1256', 'cp1257', 'cp1258', and 'utf-8'. Common aliases of these character sets can also be used. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8164a351dae05a37e7f7277a30602e57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8164a351dae05a37e7f7277a30602e57">&#9670;&nbsp;</a></span>vtkDICOMCharacterSet() <span class="overload">[1/2]</span></h2>
@@ -410,8 +432,8 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalOverr
 
 </div>
 </div>
-<a id="a9a5b804c2eb6121377127aaeb1e8a785"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a5b804c2eb6121377127aaeb1e8a785">&#9670;&nbsp;</a></span>FromUTF8()</h2>
+<a id="ae09e8374203c072e8a0044e0f8de842a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae09e8374203c072e8a0044e0f8de842a">&#9670;&nbsp;</a></span>FromUTF8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -432,7 +454,7 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalOverr
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t *&#160;</td>
-          <td class="paramname"><em>lp</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>lp</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -443,7 +465,7 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalOverr
 </div><div class="memdoc">
 
 <p>Convert text from UTF-8 to this encoding. </p>
-<p>Attempt to convert from UTF-8 to this character set. Every non-convertible character will be replaced with '?'. If you pass a non-null value for the "lp" parameter, it will return the position in the input UTF-8 string where the first conversion error occurred. If a successful conversion was returned, then lp will be set to the length of the input string. </p>
+<p>Attempt to convert from UTF-8 to this character set. Every non-convertible character will be replaced with '?'. If you pass a non-null value for the "lp" parameter, then "lp" will be set to the position in the input UTF-8 string where the first conversion error occurred, and the unconverted character will be output as &lt;U+XXXX&gt; instead of '?'. If the conversion was error-free, then "lp" will be set to the length of the input string. </p>
 
 </div>
 </div>
@@ -463,7 +485,67 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalOverr
 </div><div class="memdoc">
 
 <p>Generate SpecificCharacterSet code values (diagnostic only). </p>
-<p>Attempt to generate SpecificCharacterSet code values. If ISO 2022 encoding is not used, then a single code value is returned. If ISO 2022 encoding is used with the single-byte character sets, then only the code value for first character set will be returned (due to limitations in the way this class stores the information). However, if ISO 2022 encoding is used with the multi-byte character sets, the result is a set of backslash-separated code values, where the first value will be empty if the initial coding is ASCII. </p>
+<p>This will return the same value as <a class="el" href="classvtkDICOMCharacterSet.html#a8d32495bc708b48ceca834ca375fffb0" title="Get the defined term (possible multi-valued) for this character set.">GetDefinedTerm()</a> is a defined term exists, otherwise it return the same value as <a class="el" href="classvtkDICOMCharacterSet.html#a5aabaf96ae6e19f979e8428da601b154" title="Get a name that identifies this character set.">GetName()</a> if the character set has a name, with a final fallback to the number returned by <a class="el" href="classvtkDICOMCharacterSet.html#a9e30651f5dda860d18cb753314453462" title="Get the numerical code for this character set object.">GetKey()</a> converted to a string. </p>
+
+</div>
+</div>
+<a id="a8d32495bc708b48ceca834ca375fffb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d32495bc708b48ceca834ca375fffb0">&#9670;&nbsp;</a></span>GetDefinedTerm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* vtkDICOMCharacterSet::GetDefinedTerm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the defined term (possible multi-valued) for this character set. </p>
+<p>If the character set permitted by the DICOM standard, this will return the defined term, otherwise the returned value will be NULL. An empty string is returned for the default character set (ISO_IR 6). Multiple values will be separated by backslashes, e.g. "\\ISO 2022 IR 58" or "ISO 2022 IR 13\\ISO 2022 IR 87". </p>
+
+</div>
+</div>
+<a id="ab015484aa87e55651e9d3b3de1366153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab015484aa87e55651e9d3b3de1366153">&#9670;&nbsp;</a></span>GetMIMEName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* vtkDICOMCharacterSet::GetMIMEName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the internet MIME name for this character set. </p>
+<p>The return value will be NULL if there isn't a good match between this character set and one of the MIME character sets in common use on the internet. So conversion may be necessary, either to UTF-8 or to a different encoding with a similar character repertoire. For example, "ISO 2022 IR 149" can be converted to "EUC-KR", "ISO 2022 IR 58" can can be converted to "GBK", and "ISO 2022 IR 13\\ISO 2022 IR 87" can be converted to "Shift_JIS". Note that "ISO-2022-JP" is not equivalent to DICOM's Japanese encodings since it does not allow half-width katakana or the "ISO 2022 IR 159" characters. </p>
+
+</div>
+</div>
+<a id="a5aabaf96ae6e19f979e8428da601b154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aabaf96ae6e19f979e8428da601b154">&#9670;&nbsp;</a></span>GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* vtkDICOMCharacterSet::GetName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a name that identifies this character set. </p>
+<p>For DICOM character sets, the name is based on the defined term, and for other character sets, the common name is used. If no name exists, then "Unknown" will be returned. </p>
 
 </div>
 </div>
@@ -643,8 +725,8 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalOverr
 
 </div>
 </div>
-<a id="a6b299bc89521bae63427ab038fe39c8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b299bc89521bae63427ab038fe39c8b">&#9670;&nbsp;</a></span>ToUTF8()</h2>
+<a id="a1da8f5c233a739f6e00508fc2a00d8fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1da8f5c233a739f6e00508fc2a00d8fa">&#9670;&nbsp;</a></span>ToUTF8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -665,7 +747,7 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalOverr
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t *&#160;</td>
-          <td class="paramname"><em>lp</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>lp</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -676,7 +758,7 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalOverr
 </div><div class="memdoc">
 
 <p>Convert text from this encoding to UTF-8. </p>
-<p>This will convert text to UTF-8, which is generally a lossless process for western languages but not for the CJK languages. Characters that cannot be mapped to unicode, or whose place in unicode is not known, will be printed as unicode U+FFFD which appears as a question mark in a diamond. If you pass a non-null value for the "lp" parameter, it will return the position in the input string where the first conversion error occurred. If a successful conversion was returned, then lp will be set to the length of the input string. </p>
+<p>This will convert text to UTF-8, which is generally a lossless process for western languages but not for the CJK languages. Characters that cannot be mapped to unicode, or whose place in unicode is not known, will be printed as unicode U+FFFD which appears as a question mark in a diamond. If you pass a non-null value for the "lp" parameter, then "lp" will be set the position in the input string where the first conversion error occurred, and each unconverted byte will be output as &lt;XX&gt; (a hexadecimal code in angle brackets). If an error-free conversion was returned, then "lp" will be set to the length of the input string. </p>
 
 </div>
 </div>
@@ -686,7 +768,7 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalOverr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 22 2023 11:22:43 for vtk-dicom by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jul 4 2024 20:30:16 for vtk-dicom by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

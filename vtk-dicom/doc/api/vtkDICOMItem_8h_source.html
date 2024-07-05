@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.14</span>
+   &#160;<span id="projectnumber">0.8.16</span>
    </div>
   </td>
  </tr>
@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  Program: DICOM for VTK</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  Copyright (c) 2012-2022 David Gobbi</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  Copyright (c) 2012-2024 David Gobbi</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  All rights reserved.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  See Copyright.txt or http://dgobbi.github.io/bsd3.txt for details.</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
@@ -135,7 +135,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classvtkDICOMVR.html">vtkDICOMVR</a> VRForXS;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    List() : Head(), Tail(), ReferenceCount(1),</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;             NumberOfDataElements(0), DataElements(0),</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;             NumberOfDataElements(0), DataElements(<span class="keyword">nullptr</span>),</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;             ByteOffset(0), Delimited(<span class="keyword">false</span>),</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;             CharacterSet(vtkDICOMCharacterSet::ISO_IR_6),</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;             VRForXS(<a class="code" href="classvtkDICOMVR.html#a40e983ebf7e6d989a33fbc28991c5b54aa84f57cb548cc046dace5ad57c7ebe69">vtkDICOMVR::US</a>) {}</div>
@@ -143,7 +143,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classvtkDICOMItem.html">vtkDICOMItem</a>() : L(0) {}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classvtkDICOMItem.html">vtkDICOMItem</a>() : L(<span class="keyword">nullptr</span>) {}</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classvtkDICOMItem.html#ac28022361244939a39b430d990a67c07">   71</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classvtkDICOMItem.html#ac28022361244939a39b430d990a67c07">vtkDICOMItem</a>(<a class="code" href="classvtkDICOMMetaData.html">vtkDICOMMetaData</a> *meta);</div>
@@ -160,12 +160,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">void</span> Clear() {</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">if</span> (this-&gt;L &amp;&amp; --(this-&gt;L-&gt;ReferenceCount) == 0) { this-&gt;FreeList(); }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">else</span> { this-&gt;L = 0; } }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">else</span> { this-&gt;L = <span class="keyword">nullptr</span>; } }</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classvtkDICOMItem.html#a52022cd66cc5da1bb9cbbefb288ef5a9">   98</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classvtkDICOMItem.html#a52022cd66cc5da1bb9cbbefb288ef5a9">IsEmpty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;L == 0); }</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classvtkDICOMItem.html#a52022cd66cc5da1bb9cbbefb288ef5a9">   98</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classvtkDICOMItem.html#a52022cd66cc5da1bb9cbbefb288ef5a9">IsEmpty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;L == <span class="keyword">nullptr</span>); }</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classvtkDICOMItem.html#acaccb74547746fbc8144ef5db323aa41">  101</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classvtkDICOMItem.html#acaccb74547746fbc8144ef5db323aa41">IsDelimited</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> (this-&gt;L == 0 || this-&gt;L-&gt;Delimited != 0); }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> (this-&gt;L == <span class="keyword">nullptr</span> || this-&gt;L-&gt;Delimited != 0); }</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
 <div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classvtkDICOMItem.html#ada3e1cd2745c15de677c85eaf7053cdb">  111</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classvtkDICOMItem.html#ada3e1cd2745c15de677c85eaf7053cdb">Set</a>(<a class="code" href="classvtkDICOMTag.html">vtkDICOMTag</a> tag, <span class="keyword">const</span> <a class="code" href="classvtkDICOMValue.html">vtkDICOMValue</a>&amp; v);</div>
@@ -198,16 +198,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
 <div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classvtkDICOMItem.html#ad3d196e15c9c588d67eb1ff5f8841722">  158</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classvtkDICOMItem.html#ad3d196e15c9c588d67eb1ff5f8841722">GetByteOffset</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> (this-&gt;L == 0 ? 0 : this-&gt;L-&gt;ByteOffset); }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> (this-&gt;L == <span class="keyword">nullptr</span> ? 0 : this-&gt;L-&gt;ByteOffset); }</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordtype">int</span> GetNumberOfDataElements()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> (this-&gt;L ? this-&gt;L-&gt;NumberOfDataElements : 0); }</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
 <div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="classvtkDICOMItem.html#a65eeebf2750c3360c5fb8b4d766885e1">  168</a></span>&#160;  <a class="code" href="classvtkDICOMDataElementIterator.html">vtkDICOMDataElementIterator</a> <a class="code" href="classvtkDICOMItem.html#a65eeebf2750c3360c5fb8b4d766885e1">Begin</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">return</span> (this-&gt;L ? this-&gt;L-&gt;Head.Next : 0); }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">return</span> (this-&gt;L ? this-&gt;L-&gt;Head.Next : <span class="keyword">nullptr</span>); }</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
 <div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classvtkDICOMItem.html#a2dd49abed1430d5fc7fe434537a34467">  172</a></span>&#160;  <a class="code" href="classvtkDICOMDataElementIterator.html">vtkDICOMDataElementIterator</a> <a class="code" href="classvtkDICOMItem.html#a2dd49abed1430d5fc7fe434537a34467">End</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">return</span> (this-&gt;L ? &amp;this-&gt;L-&gt;Tail : 0); }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">return</span> (this-&gt;L ? &amp;this-&gt;L-&gt;Tail : <span class="keyword">nullptr</span>); }</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 <div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="classvtkDICOMItem.html#ad38ef4e3ebc9c45b3838d57422e70f96">  187</a></span>&#160;  <a class="code" href="classvtkDICOMTag.html">vtkDICOMTag</a> <a class="code" href="classvtkDICOMItem.html#ad38ef4e3ebc9c45b3838d57422e70f96">ResolvePrivateTag</a>(</div>
@@ -254,7 +254,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* vtkDICOMItem_h */</span><span class="preprocessor"></span></div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment">// VTK-HeaderTest-Exclude: vtkDICOMItem.h</span></div>
 <div class="ttc" id="aclassvtkDICOMCharacterSet_html"><div class="ttname"><a href="classvtkDICOMCharacterSet.html">vtkDICOMCharacterSet</a></div><div class="ttdoc">Character sets.</div><div class="ttdef"><b>Definition:</b> vtkDICOMCharacterSet.h:55</div></div>
-<div class="ttc" id="aclassvtkDICOMDataElementIterator_html"><div class="ttname"><a href="classvtkDICOMDataElementIterator.html">vtkDICOMDataElementIterator</a></div><div class="ttdoc">A const iterator for a vtkDataElement list.</div><div class="ttdef"><b>Definition:</b> vtkDICOMDataElement.h:87</div></div>
+<div class="ttc" id="aclassvtkDICOMDataElementIterator_html"><div class="ttname"><a href="classvtkDICOMDataElementIterator.html">vtkDICOMDataElementIterator</a></div><div class="ttdoc">A const iterator for a vtkDataElement list.</div><div class="ttdef"><b>Definition:</b> vtkDICOMDataElement.h:88</div></div>
 <div class="ttc" id="aclassvtkDICOMDataElement_html"><div class="ttname"><a href="classvtkDICOMDataElement.html">vtkDICOMDataElement</a></div><div class="ttdoc">A data element in a DICOM data set.</div><div class="ttdef"><b>Definition:</b> vtkDICOMDataElement.h:30</div></div>
 <div class="ttc" id="aclassvtkDICOMDictEntry_html"><div class="ttname"><a href="classvtkDICOMDictEntry.html">vtkDICOMDictEntry</a></div><div class="ttdoc">An entry in the DICOM dictionary.</div><div class="ttdef"><b>Definition:</b> vtkDICOMDictEntry.h:24</div></div>
 <div class="ttc" id="aclassvtkDICOMItem_html"><div class="ttname"><a href="classvtkDICOMItem.html">vtkDICOMItem</a></div><div class="ttdoc">An item in a DICOM sequence (type SQ).</div><div class="ttdef"><b>Definition:</b> vtkDICOMItem.h:34</div></div>
@@ -282,7 +282,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 22 2023 11:22:43 for vtk-dicom by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jul 4 2024 20:30:16 for vtk-dicom by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
