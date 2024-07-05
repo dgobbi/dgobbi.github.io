@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
-        
     <url>
-     <loc>/vtk-dicom/</loc>
-     <lastmod>2017-09-02</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://dgobbi.github.io/</loc>
+         <lastmod>2024-07-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-        
-    
-
+    <url>
+         <loc>https://dgobbi.github.io/vtk-dicom/</loc>
+         <lastmod>2024-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
