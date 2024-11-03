@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.16</span>
+   &#160;<span id="projectnumber">0.8.17</span>
    </div>
   </td>
  </tr>
@@ -45,6 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -112,8 +113,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;vtkDICOMModule.h&quot;</span> <span class="comment">// For export macro</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;vtkDICOMConfig.h&quot;</span> <span class="comment">// For configuration details</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">struct </span>nifti_1_header;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">struct </span>nifti_2_header;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">struct </span><a class="code" href="structnifti__1__header.html">nifti_1_header</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">struct </span><a class="code" href="structnifti__2__header.html">nifti_2_header</a>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//----------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classvtkNIFTIHeader.html">   47</a></span>&#160;<span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtkNIFTIHeader.html">vtkNIFTIHeader</a> : <span class="keyword">public</span> <a class="code" href="classvtkObject.html">vtkObject</a></div>
@@ -327,13 +328,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  <span class="keywordtype">void</span> DeepCopy(<a class="code" href="classvtkNIFTIHeader.html">vtkNIFTIHeader</a> *o);</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  <span class="keywordtype">void</span> SetHeader(<span class="keyword">const</span> nifti_1_header *hdr);</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <span class="keywordtype">void</span> GetHeader(nifti_1_header *hdr);</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  <span class="keywordtype">void</span> SetHeader(<span class="keyword">const</span> nifti_2_header *hdr);</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keywordtype">void</span> GetHeader(nifti_2_header *hdr);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  <span class="keywordtype">void</span> SetHeader(<span class="keyword">const</span> <a class="code" href="structnifti__1__header.html">nifti_1_header</a> *hdr);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <span class="keywordtype">void</span> GetHeader(<a class="code" href="structnifti__1__header.html">nifti_1_header</a> *hdr);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  <span class="keywordtype">void</span> SetHeader(<span class="keyword">const</span> <a class="code" href="structnifti__2__header.html">nifti_2_header</a> *hdr);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keywordtype">void</span> GetHeader(<a class="code" href="structnifti__2__header.html">nifti_2_header</a> *hdr);</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> ByteSwapHeader(nifti_1_header *hdr);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> ByteSwapHeader(nifti_2_header *hdr);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> ByteSwapHeader(<a class="code" href="structnifti__1__header.html">nifti_1_header</a> *hdr);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> ByteSwapHeader(<a class="code" href="structnifti__2__header.html">nifti_2_header</a> *hdr);</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  <a class="code" href="classvtkNIFTIHeader.html">vtkNIFTIHeader</a>();</div>
@@ -405,10 +406,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="ttc" id="aclassvtkNIFTIHeader_html_ac4b95a92b78ee1531d60bc7a574b5cdd"><div class="ttname"><a href="classvtkNIFTIHeader.html#ac4b95a92b78ee1531d60bc7a574b5cdd">vtkNIFTIHeader::GetBitPix</a></div><div class="ttdeci">int GetBitPix()</div><div class="ttdoc">Get the number of bits per pixel.</div><div class="ttdef"><b>Definition:</b> vtkNIFTIHeader.h:181</div></div>
 <div class="ttc" id="aclassvtkNIFTIHeader_html_ac5f1c07b4d1987714ab04b36cbfcaa99"><div class="ttname"><a href="classvtkNIFTIHeader.html#ac5f1c07b4d1987714ab04b36cbfcaa99">vtkNIFTIHeader::SliceCodeEnum</a></div><div class="ttdeci">SliceCodeEnum</div><div class="ttdoc">NIFTI slice codes.</div><div class="ttdef"><b>Definition:</b> vtkNIFTIHeader.h:106</div></div>
 <div class="ttc" id="aclassvtkObject_html"><div class="ttname"><a href="classvtkObject.html">vtkObject</a></div><div class="ttdoc">abstract base class for most VTK objects</div><div class="ttdef"><b>Definition:</b> vtkObject.h:54</div></div>
+<div class="ttc" id="astructnifti__1__header_html"><div class="ttname"><a href="structnifti__1__header.html">nifti_1_header</a></div><div class="ttdoc">Data structure defining the fields in the nifti1 header. This binary header should be found at the be...</div><div class="ttdef"><b>Definition:</b> vtkNIFTIPrivate.h:36</div></div>
+<div class="ttc" id="astructnifti__2__header_html"><div class="ttname"><a href="structnifti__2__header.html">nifti_2_header</a></div><div class="ttdoc">Data structure defining the fields in the nifti2 header. This binary header should be found at the be...</div><div class="ttdef"><b>Definition:</b> vtkNIFTIPrivate.h:227</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 4 2024 20:30:16 for vtk-dicom by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Nov 3 2024 05:59:20 for vtk-dicom by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

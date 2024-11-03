@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['needsrescale_1529',['NeedsRescale',['../classvtkDICOMReader.html#a917163b716f4cef772cb9df50628d0bb',1,'vtkDICOMReader']]],
-  ['needsybrtorgb_1530',['NeedsYBRToRGB',['../classvtkDICOMReader.html#ab803c1b7b32b95d546eee90064faa2b6',1,'vtkDICOMReader']]],
-  ['niftiheader_1531',['NIFTIHeader',['../classvtkNIFTIReader.html#a57b806c8cd0c924db8f0c1aa518c1f23',1,'vtkNIFTIReader::NIFTIHeader()'],['../classvtkNIFTIWriter.html#acea188ef5d9815fa819b8ddbb86ec9bc',1,'vtkNIFTIWriter::NIFTIHeader()']]],
-  ['numberofcolorcomponents_1532',['NumberOfColorComponents',['../classvtkDICOMGenerator.html#ae582701d3e59c72c6377ee6a11b84b21',1,'vtkDICOMGenerator']]],
-  ['numberofframes_1533',['NumberOfFrames',['../classvtkDICOMGenerator.html#abb867a5b9c718af0832150eaad899036',1,'vtkDICOMGenerator']]],
-  ['numberofoverlays_1534',['NumberOfOverlays',['../classvtkDICOMGenerator.html#a81e193e2b5145b70a04302a347a18a81',1,'vtkDICOMGenerator']]],
-  ['numberofpackedcomponents_1535',['NumberOfPackedComponents',['../classvtkDICOMReader.html#a22098d7c30354a020965452d14337144',1,'vtkDICOMReader']]],
-  ['numberofplanarcomponents_1536',['NumberOfPlanarComponents',['../classvtkDICOMReader.html#a321e97b5d997209c88dbd554813d1dc0',1,'vtkDICOMReader']]]
+  ['magic_1615',['magic',['../group__NIFTI1__DATATYPE__ALIASES.html#ga5c7eff0d659a6a1f69f576d40cf4d3ed',1,'nifti_1_header::magic()'],['../group__NIFTI1__DATATYPE__ALIASES.html#ga889c9294f023fcd62a1925dcf3b4c69d',1,'nifti_2_header::magic()']]],
+  ['medicalimageproperties_1616',['MedicalImageProperties',['../classvtkDICOMReader.html#aa9beca5b23166a25ddc6495d82080f88',1,'vtkDICOMReader']]],
+  ['memoryroworder_1617',['MemoryRowOrder',['../classvtkDICOMReader.html#a697be818a1ce198a8b76968aea41dbe3',1,'vtkDICOMReader::MemoryRowOrder()'],['../classvtkDICOMWriter.html#a814536875fae68cc6c31f301c3a8558e',1,'vtkDICOMWriter::MemoryRowOrder()']]],
+  ['metadata_1618',['MetaData',['../classvtkDICOMGenerator.html#a1615278dd6f5696eda49c189f5a2fc47',1,'vtkDICOMGenerator::MetaData()'],['../classvtkDICOMReader.html#a26fb321168b0b82e563a7126d0bdb2a3',1,'vtkDICOMReader::MetaData()'],['../classvtkDICOMWriter.html#ae1c539f5b1483fa73b4715987edcd95f',1,'vtkDICOMWriter::MetaData()']]],
+  ['multiframe_1619',['MultiFrame',['../classvtkDICOMGenerator.html#a260c33807bead8e1f9d39309ccc06941',1,'vtkDICOMGenerator']]]
 ];

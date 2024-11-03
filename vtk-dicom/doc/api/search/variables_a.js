@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['palette_1541',['Palette',['../classvtkDICOMApplyPalette.html#abba8c97a9a224af3d4b6f427a8800d64',1,'vtkDICOMApplyPalette']]],
-  ['parser_1542',['Parser',['../classvtkDICOMReader.html#ac630b32e1434f020bc06c7c1707aa90e',1,'vtkDICOMReader']]],
-  ['patientmatrix_1543',['PatientMatrix',['../classvtkDICOMGenerator.html#af1b1f00f0d63115f83c4917d936f12e1',1,'vtkDICOMGenerator::PatientMatrix()'],['../classvtkDICOMReader.html#a5e535ea392ecc5b92820b062cbf42164',1,'vtkDICOMReader::PatientMatrix()'],['../classvtkDICOMWriter.html#a98323f7eeb7077e931ee525656c13aa8',1,'vtkDICOMWriter::PatientMatrix()']]],
-  ['pixdim_1544',['PixDim',['../classvtkNIFTIReader.html#ad9bcaea082976cd19f51894e79179f9f',1,'vtkNIFTIReader']]],
-  ['pixelvaluerange_1545',['PixelValueRange',['../classvtkDICOMGenerator.html#aeea905c5e14c9681b5e0d957ca9ef8f7',1,'vtkDICOMGenerator']]],
-  ['planarrgb_1546',['PlanarRGB',['../classvtkNIFTIReader.html#a78bd8ca621289c27a948573f282fdfc3',1,'vtkNIFTIReader::PlanarRGB()'],['../classvtkNIFTIWriter.html#a4c9dc1cca9cedb05dba2c9f7f7bf027a',1,'vtkNIFTIWriter::PlanarRGB()']]]
+  ['originatbottom_1628',['OriginAtBottom',['../classvtkDICOMGenerator.html#a94ae2ab1ab4b4eb1358f518ae7ee9e6f',1,'vtkDICOMGenerator']]],
+  ['overlaybitfield_1629',['OverlayBitfield',['../classvtkDICOMReader.html#a025c1226c15b176a0e44624f9309bf90',1,'vtkDICOMReader']]],
+  ['overlaytype_1630',['OverlayType',['../classvtkDICOMWriter.html#ae62f4e2fbec1164d03011fb5487f9a6d',1,'vtkDICOMWriter']]],
+  ['overridecharacterset_1631',['OverrideCharacterSet',['../classvtkDICOMReader.html#a580bac9e57ef1f445a223df9023c5483',1,'vtkDICOMReader']]]
 ];

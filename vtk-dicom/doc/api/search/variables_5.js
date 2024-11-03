@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['generatedmetadata_1521',['GeneratedMetaData',['../classvtkDICOMWriter.html#acb09226ec00ede9db7b5a723ccf18596',1,'vtkDICOMWriter']]],
-  ['generator_1522',['Generator',['../classvtkDICOMWriter.html#ad4cb6a444aebfc79094529d70f5958ca',1,'vtkDICOMWriter']]]
+  ['fileindexarray_1600',['FileIndexArray',['../classvtkDICOMReader.html#a0fe92515c92e0e93a546bc6b416400fb',1,'vtkDICOMReader']]],
+  ['fileoffsetarray_1601',['FileOffsetArray',['../classvtkDICOMReader.html#a224ba3ac24d715dfb73de4e6288b07f6',1,'vtkDICOMReader']]],
+  ['filesliceorder_1602',['FileSliceOrder',['../classvtkDICOMWriter.html#ab0d92d4d5419610591c43626fb5f75ee',1,'vtkDICOMWriter']]],
+  ['frameindexarray_1603',['FrameIndexArray',['../classvtkDICOMReader.html#a500ced64b38d6dfad27f4335add48219',1,'vtkDICOMReader']]]
 ];

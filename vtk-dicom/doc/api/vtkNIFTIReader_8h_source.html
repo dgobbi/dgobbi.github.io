@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.16</span>
+   &#160;<span id="projectnumber">0.8.17</span>
    </div>
   </td>
  </tr>
@@ -45,6 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -125,7 +126,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">class </span><a class="code" href="classvtkNIFTIHeader.html">vtkNIFTIHeader</a>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">struct </span>nifti_1_header;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">struct </span><a class="code" href="structnifti__1__header.html">nifti_1_header</a>;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//----------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classvtkNIFTIReader.html">   58</a></span>&#160;<span class="keyword">class </span>VTKDICOM_EXPORT <a class="code" href="classvtkNIFTIReader.html">vtkNIFTIReader</a> : <span class="keyword">public</span> <a class="code" href="classvtkImageReader2.html">vtkImageReader2</a></div>
@@ -191,9 +192,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classvtkNIFTIReader.html#a0fb72839b9fa0b6e6499d9e4b18645e3">  205</a></span>&#160;  static <span class="keywordtype">char</span> *ReplaceExtension(</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    const <span class="keywordtype">char</span> *fname, const <span class="keywordtype">char</span> *ext1, const <span class="keywordtype">char</span> *ext2);</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="classvtkNIFTIReader.html#a26dc9f1f493359c4af7bcf425f63bea7">  209</a></span>&#160;  static <span class="keywordtype">int</span> CheckNIFTIVersion(const nifti_1_header *hdr);</div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="classvtkNIFTIReader.html#a26dc9f1f493359c4af7bcf425f63bea7">  209</a></span>&#160;  static <span class="keywordtype">int</span> CheckNIFTIVersion(const <a class="code" href="structnifti__1__header.html">nifti_1_header</a> *hdr);</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="classvtkNIFTIReader.html#ac3ad5bafc20f0045a65238aea33e6eb5">  212</a></span>&#160;  static <span class="keywordtype">bool</span> CheckAnalyzeHeader(const nifti_1_header *hdr);</div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="classvtkNIFTIReader.html#ac3ad5bafc20f0045a65238aea33e6eb5">  212</a></span>&#160;  static <span class="keywordtype">bool</span> CheckAnalyzeHeader(const <a class="code" href="structnifti__1__header.html">nifti_1_header</a> *hdr);</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
 <div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classvtkNIFTIReader.html#af801b19bd3485aa90fe57ce8aa801433">  215</a></span>&#160;  <span class="keywordtype">int</span> TimeAsVector;</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
@@ -236,10 +237,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 <div class="ttc" id="aclassvtkNIFTIReader_html_a8fdc8108080fba73dd919029c0d8b085"><div class="ttname"><a href="classvtkNIFTIReader.html#a8fdc8108080fba73dd919029c0d8b085">vtkNIFTIReader::GetQFormMatrix</a></div><div class="ttdeci">vtkMatrix4x4 * GetQFormMatrix()</div><div class="ttdoc">Get a matrix that gives the &quot;qform&quot; orientation and offset for the data.</div><div class="ttdef"><b>Definition:</b> vtkNIFTIReader.h:152</div></div>
 <div class="ttc" id="aclassvtkNIFTIReader_html_abf615a9769ad1d7b772f830e69fc6a98"><div class="ttname"><a href="classvtkNIFTIReader.html#abf615a9769ad1d7b772f830e69fc6a98">vtkNIFTIReader::CanReadFile</a></div><div class="ttdeci">int CanReadFile(const char *filename) VTK_DICOM_OVERRIDE</div><div class="ttdoc">Return true if this reader can read the given file.</div></div>
 <div class="ttc" id="aclassvtkNIFTIReader_html_af2a9341ab7c929dcab4616dd0ea5dd9f"><div class="ttname"><a href="classvtkNIFTIReader.html#af2a9341ab7c929dcab4616dd0ea5dd9f">vtkNIFTIReader::GetSFormMatrix</a></div><div class="ttdeci">vtkMatrix4x4 * GetSFormMatrix()</div><div class="ttdoc">Get a matrix that gives the &quot;sform&quot; orientation and offset for the data.</div><div class="ttdef"><b>Definition:</b> vtkNIFTIReader.h:168</div></div>
+<div class="ttc" id="astructnifti__1__header_html"><div class="ttname"><a href="structnifti__1__header.html">nifti_1_header</a></div><div class="ttdoc">Data structure defining the fields in the nifti1 header. This binary header should be found at the be...</div><div class="ttdef"><b>Definition:</b> vtkNIFTIPrivate.h:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 4 2024 20:30:16 for vtk-dicom by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Nov 3 2024 05:59:20 for vtk-dicom by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

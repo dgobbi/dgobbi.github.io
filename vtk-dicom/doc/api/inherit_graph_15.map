@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classvtkDICOMSequence.html" title="A sequence of items according to the SQ representation." alt="" coords="5,5,156,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,121,32"/>
+<area shape="rect" id="node2" href="$classvtkDICOMMetaData.html" title="A container class for DICOM metadata." alt="" coords="169,5,321,32"/>
 </map>

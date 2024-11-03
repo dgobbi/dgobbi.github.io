@@ -23,5 +23,6 @@ var searchData=
   ['asstring_20',['AsString',['../classvtkDICOMFilePath.html#ad30f96a2b81954e9dfc7f2e58dcc9d7f',1,'vtkDICOMFilePath']]],
   ['asutf8string_21',['AsUTF8String',['../classvtkDICOMValue.html#adb8d6c4ba95a64603872b6cb81f931f5',1,'vtkDICOMValue']]],
   ['at_22',['AT',['../classvtkDICOMVR.html#a40e983ebf7e6d989a33fbc28991c5b54a6ea9945b851f70750fe177c79653d021',1,'vtkDICOMVR']]],
-  ['attributes_23',['Attributes',['../attributes.html',1,'']]]
+  ['attributes_23',['Attributes',['../attributes.html',1,'']]],
+  ['aux_5ffile_24',['aux_file',['../group__NIFTI1__DATATYPE__ALIASES.html#ga93e288bd39c44188304677f6bdc96a6b',1,'nifti_1_header::aux_file()'],['../group__NIFTI1__DATATYPE__ALIASES.html#gae22195ad58d7661795643a935db97d15',1,'nifti_2_header::aux_file()']]]
 ];

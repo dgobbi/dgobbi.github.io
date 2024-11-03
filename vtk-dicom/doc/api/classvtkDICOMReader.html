@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vtk-dicom
-   &#160;<span id="projectnumber">0.8.16</span>
+   &#160;<span id="projectnumber">0.8.17</span>
    </div>
   </td>
  </tr>
@@ -45,6 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -917,6 +918,12 @@ static <a class="el" href="classvtkDICOMReader.html">vtkDICOMReader</a> *&#160;<
 static <a class="el" href="classvtkDICOMReader.html">vtkDICOMReader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtkDICOMReader.html#a9835c02670303cbe1aa3ee9341067b7c">New</a> ()</td></tr>
 <tr class="memdesc:a9835c02670303cbe1aa3ee9341067b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static method for construction. <br /></td></tr>
 <tr class="separator:a9835c02670303cbe1aa3ee9341067b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31aa13cc2017d936f5a9ca5160d9a873"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvtkDICOMReader.html#a31aa13cc2017d936f5a9ca5160d9a873">RegisterCodecs</a> ()</td></tr>
+<tr class="memdesc:a31aa13cc2017d936f5a9ca5160d9a873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control registration of image codecs (DCMTK-specific).  <a href="classvtkDICOMReader.html#a31aa13cc2017d936f5a9ca5160d9a873">More...</a><br /></td></tr>
+<tr class="separator:a31aa13cc2017d936f5a9ca5160d9a873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab479ef04f962cc2d20b5a18bdb6bc4c3"><td class="memItemLeft" align="right" valign="top"><a id="ab479ef04f962cc2d20b5a18bdb6bc4c3"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>UnRegisterCodecs</b> ()</td></tr>
+<tr class="separator:ab479ef04f962cc2d20b5a18bdb6bc4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classvtkImageReader2"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classvtkImageReader2')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classvtkImageReader2.html">vtkImageReader2</a></td></tr>
 <tr class="memitem:a25a0c83fabafbf8a658f7373ee84986b inherit pub_static_methods_classvtkImageReader2"><td class="memItemLeft" align="right" valign="top"><a id="a25a0c83fabafbf8a658f7373ee84986b"></a>
 static <a class="el" href="classvtkImageReader2.html">vtkImageReader2</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>New</b> ()</td></tr>
@@ -1724,6 +1731,34 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 
 </div>
 </div>
+<a id="a31aa13cc2017d936f5a9ca5160d9a873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31aa13cc2017d936f5a9ca5160d9a873">&#9670;&nbsp;</a></span>RegisterCodecs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void vtkDICOMReader::RegisterCodecs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Control registration of image codecs (DCMTK-specific). </p>
+<p>If the reader has been compiled with DCMTK support, <a class="el" href="classvtkDICOMReader.html#a31aa13cc2017d936f5a9ca5160d9a873" title="Control registration of image codecs (DCMTK-specific).">RegisterCodecs()</a> allows manual registration of the DCMTK codecs by the application. If you do not call this method, the reader will automatically register the codecs when it is instantiated. The registration is internally guarded by a refererence count, and every <a class="el" href="classvtkDICOMReader.html#a31aa13cc2017d936f5a9ca5160d9a873" title="Control registration of image codecs (DCMTK-specific).">RegisterCodecs()</a> call must eventually be matched by an UnRegisterCodecs() call. </p>
+
+</div>
+</div>
 <a id="a22db61cf743a45e31a7737e2b7c14f34"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a22db61cf743a45e31a7737e2b7c14f34">&#9670;&nbsp;</a></span>SetDefaultCharacterSet()</h2>
 
@@ -1937,7 +1972,7 @@ static vtkExecutive *&#160;</td><td class="memItemRight" valign="bottom"><b>Defa
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 4 2024 20:30:16 for vtk-dicom by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Nov 3 2024 05:59:20 for vtk-dicom by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

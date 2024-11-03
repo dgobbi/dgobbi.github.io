@@ -1,5 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,151,32"/>
-<area shape="rect" id="node2" href="$classvtkLookupTable.html" title="map scalar values into colors via a lookup table" alt="" coords="199,5,323,32"/>
-<area shape="rect" id="node3" href="$classvtkDICOMLookupTable.html" title="Lookup tables from DICOM data." alt="" coords="371,5,540,32"/>
+<area shape="rect" id="node1" href="$classvtkDICOMValue.html" title="A class to store attribute values for DICOM metadata." alt="" coords="5,5,131,32"/>
 </map>
